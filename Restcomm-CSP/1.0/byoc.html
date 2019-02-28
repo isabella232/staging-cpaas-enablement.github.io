@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bring Your Own Carrier :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://github.com/RestComm/staging-cpaas-enablement.github.io/Restcomm-CSP/1.0/byoc.html">
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/byoc.html">
+    <meta name="description" content="Restcomm’s Bring Your Own Carrier (BYOC) feature lets Communication Service Providers (CSP) connect their network infrastructure to Restcomm and enable enterprise customers to leverage prior investments in PSTN assets. BYOC enables service providers to layer the value of a modern CPaaS on top of their existing PSTN investment from day one.">
+    <meta name="keywords" content="bring your own carrier, restcomm byoc, byoc, carrier for sms, carrier for voice, set up your own carrier, byoc setup, restcomm byoc setup, getting started with byoc">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -20,11 +22,11 @@
   <nav class="navbar">
     <div class="navbar-brand">
 <!--
-      <a class="navbar-item" href="https://github.com/RestComm/staging-cpaas-enablement.github.io"><img width="140px" src="../../_/img/restcomm-logo-white.svg"></a>
+      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com"><img width="140px" src="../../_/img/restcomm-logo-white.svg"></a>
 -->
-      <a class="navbar-item header-logo-link" href="https://github.com/RestComm/staging-cpaas-enablement.github.io"></a>
+      <a class="navbar-item header-logo-link" href="https://staging-cpaas-enablement-docs.restcomm.com"></a>
 <!--
-      <a class="navbar-item" href="https://github.com/RestComm/staging-cpaas-enablement.github.io">Restcomm CPaaS Enablement Docs</a>
+      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com">Restcomm CPaaS Enablement Docs</a>
 -->
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -141,6 +143,18 @@
 </div>
 <div class="paragraph">
 <p>In order to enable your custom domain to receive SIP traffic from your carrier, you need to make sure your equipment can resolve Restcomm DNS SRV Records for your organization. Your SBC will need to resolve the provided hostname as explained in <a href="https://www.ietf.org/rfc/rfc3263.txt">RFC 3263</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Restcomm will try to locate the target Organization for an inbound call by looking at the domain from <code>Request URI</code>, and <code>To</code> header as fallback, in case Request URI domain does not match any Organization in the provisioning store. For <code>REFER</code> method, <code>Refer-To</code> header will be used as last fallback. The source Organization will be retrieved from <code>From</code> header user domain. In case the incoming call needs to be proxied out (in case no <code>IncomingPhoneNumber</code>, or <code>Client</code> matched), the <code>To</code> header domain needs to be resolvable into an existing IP address for routing.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>To be able to receive SIP registration and voice traffic from SIP or WebRTC Endpoints to Restcomm numbers, you will need to configure <a href="https://www.restcomm.com/docs/connect/api/clients-api.html#clients">Restcomm SIP Clients</a> with a username and password that should be used on the SIP Client for SIP Digest Authentication.</p>
@@ -404,7 +418,7 @@ Currently the Voice Origination and Phone Number Providers are tied together so 
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
-        <p><a href="https://github.com/RestComm/staging-cpaas-enablement.github.io">Documentation</a></p>
+        <p><a href="https://staging-cpaas-enablement-docs.restcomm.com">Documentation</a></p>
         <p><a href="https://www.restcomm.com/blog/">Blog</a></p>
         <p><a href="support.html">Terms And Conditions</a></p>
       </div>
