@@ -157,7 +157,7 @@
   </ul>
 </nav>
 </div>
-<article class="doc">
+<article class="doc ">
   <h1>SMS</h1>
 <div id="preamble">
 <div class="sectionbody">
@@ -311,7 +311,7 @@
         <button class="w3-bar-item w3-button" onclick="openLanguage('Python', 2)">Python</button>
       </div>
       <div id="Curl-2" class="sample-language-2">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/' + account_sid + '/SMS/Messages.json \
    -d 'From=19876543212' \
    -d 'To=13216549878' \
    -d 'Body=Test SMS from Restcomm' \
@@ -326,20 +326,28 @@ import java.io.*;
 import java.util.Base64;
 
 public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcomm_domain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String account_sid = "YourAccountSid";
+   public static final String auth_token = "YourAuthToken";
+
    public static void main(String[] args) throws Exception {
-     // Provide your Account Sid and Auth Token that can be found in your Console Account page
-     String userAndPass = "YourAccountSid:YourAuthToken";
+     String userAndPass = account_sid + ':' + auth_token;
      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-     // Change 'RestcommCloudDomain' to your Restcomm Cloud Domain and YourAccountSid to your Account Sid
-     URL url = new URL("https://RestcommCloudDomain/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json");
+     URL url = new URL(("https://" + restcomm_domain + "/restcomm/2012-04-24/Accounts/' + account_sid + '/SMS/Messages.json");
      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
      conn.setRequestProperty("Authorization", "Basic " + encoded);
      conn.setRequestMethod("POST");
      conn.setDoOutput(true);
-
      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-     os.writeBytes("From=19876543212&To=13216549878&Body=Test SMS from Restcomm&StatusCallback=http://status.callback.url");
+
+     // Update POST parameters accordingly
+     os.writeBytes("From=19876543212&" +
+        "To=13216549878&" +
+        "Body=Test SMS from Restcomm&" +
+        "StatusCallback=http://status.callback.url");
      os.close();
 
      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -356,12 +364,18 @@ public class JavaSampleClass {
 from base64 import b64encode
 from urllib.parse import urlencode
 
-# Provide your Account Sid and Auth Token that can be found in your Console Account page
-userAndPass = b64encode(b"YourAccountSid:YourAuthToken").decode("ascii")
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass,
             'Content-type': 'application/x-www-form-urlencoded',
             'Accept': 'text/plain' }
 
+# Update POST parameters accordingly
 params = urlencode({
    'From': '19876543212',
    'To': '13216549878',
@@ -369,10 +383,9 @@ params = urlencode({
    'StatusCallback': 'http://status.callback.url'
 })
 
-# Change 'RestcommCloudDomain' to your Restcomm Cloud Domain
-conn = HTTPSConnection("RestcommCloudDomain")
-# Update YourAccountSid with your Account Sid
-conn.request("POST", '/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json', headers=headers)
+conn = HTTPSConnection(restcomm_domain)
+conn.request("POST", '/restcomm/2012-04-24/Accounts/' + account_sid + '/SMS/Messages.json',
+      params, headers=headers)
 res = conn.getresponse()
 
 print(res.status, res.reason)
@@ -416,7 +429,7 @@ conn.close()
         <button class="w3-bar-item w3-button" onclick="openLanguage('Python', 3)">Python</button>
       </div>
       <div id="Curl-3" class="sample-language-3">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json \
    -d 'From=19876543212' \
    -d 'To=client:alice' \
    -d 'Body=Test SIP message from Restcomm' \
@@ -431,20 +444,28 @@ import java.io.*;
 import java.util.Base64;
 
 public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcomm_domain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String account_sid = "YourAccountSid";
+   public static final String auth_token = "YourAuthToken";
+
    public static void main(String[] args) throws Exception {
-     // Provide your Account Sid and Auth Token that can be found in your Console Account page
-     String userAndPass = "YourAccountSid:YourAuthToken";
+     String userAndPass = account_sid + ':' + auth_token;
      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-     // Change 'RestcommCloudDomain' to your Restcomm Cloud Domain and YourAccountSid to your Account Sid
-     URL url = new URL("https://RestcommCloudDomain/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json");
+     URL url = new URL(("https://" + restcomm_domain + "/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json");
      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
      conn.setRequestProperty("Authorization", "Basic " + encoded);
      conn.setRequestMethod("POST");
      conn.setDoOutput(true);
-
      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-     os.writeBytes("From=19876543212&To=client:alice&Body=Test SIP message from Restcomm&StatusCallback=http://status.callback.url");
+
+     // Update POST parameters accordingly
+     os.writeBytes("From=19876543212&" +
+        "To=client:alice&" +
+        "Body=Test SIP message from Restcomm&" +
+        "StatusCallback=http://status.callback.url");
      os.close();
 
      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -461,12 +482,18 @@ public class JavaSampleClass {
 from base64 import b64encode
 from urllib.parse import urlencode
 
-# Provide your Account Sid and Auth Token that can be found in your Console Account page
-userAndPass = b64encode(b"YourAccountSid:YourAuthToken").decode("ascii")
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass,
             'Content-type': 'application/x-www-form-urlencoded',
             'Accept': 'text/plain' }
 
+# Update POST parameters accordingly
 params = urlencode({
    'From': '19876543212',
    'To': 'client:alice',
@@ -474,10 +501,9 @@ params = urlencode({
    'StatusCallback': 'http://status.callback.url'
 })
 
-# Change 'RestcommCloudDomain' to your Restcomm Cloud Domain
-conn = HTTPSConnection("RestcommCloudDomain")
-# Update YourAccountSid with your Account Sid
-conn.request("POST", '/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json', headers=headers)
+conn = HTTPSConnection(restcomm_domain)
+conn.request("POST", '/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json',
+      params, headers=headers)
 res = conn.getresponse()
 
 print(res.status, res.reason)
@@ -651,7 +677,7 @@ conn.close()
         <button class="w3-bar-item w3-button" onclick="openLanguage('Python', 4)">Python</button>
       </div>
       <div id="Curl-4" class="sample-language-4">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
@@ -662,22 +688,26 @@ import java.io.*;
 import java.util.Base64;
 
 public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcomm_domain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String account_sid = "YourAccountSid";
+   public static final String auth_token = "YourAuthToken";
+
    public static void main(String[] args) throws Exception {
-     // Provide your Account Sid and Auth Token that can be found in your Console Account page
-     String userAndPass = "YourAccountSid:YourAuthToken";
-     String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+      String userAndPass = account_sid + ':' + auth_token;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-     // Change RestcommCloudDomain to your Restcomm Cloud Domain and YourAccountSid to your Account Sid
-     URL url = new URL("https://RestcommCloudDomain/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc");
-     HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-     conn.setRequestProperty("Authorization", "Basic " + encoded);
-     conn.setRequestMethod("GET");
+      URL url = new URL("https://" + restcomm_domain + "/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
 
-     BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-     String inputLine;
-     while ((inputLine = in.readLine()) != null)
-        System.out.println(inputLine);
-     in.close();
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
   }
 }
 </code></pre>
@@ -686,14 +716,18 @@ public class JavaSampleClass {
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
-# Provide your Account Sid and Auth Token that can be found in your Console Account page
-userAndPass = b64encode(b"YourAccountSid:YourAuthToken").decode("ascii")
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass }
 
-# Change 'RestcommCloudDomain' to the domain of the Point of Presence you signed up on
-conn = HTTPSConnection("RestcommCloudDomain")
-# Update YourAccountSid with your Account Sid
-conn.request("GET", '/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc', headers=headers)
+conn = HTTPSConnection(restcomm_domain)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc',
+      headers=headers)
 res = conn.getresponse()
 
 print(res.status, res.reason)
@@ -760,7 +794,7 @@ conn.close()
         <button class="w3-bar-item w3-button" onclick="openLanguage('Python', 5)">Python</button>
       </div>
       <div id="Curl-5" class="sample-language-5">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
@@ -771,22 +805,26 @@ import java.io.*;
 import java.util.Base64;
 
 public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcomm_domain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String account_sid = "YourAccountSid";
+   public static final String auth_token = "YourAuthToken";
+
    public static void main(String[] args) throws Exception {
-     // Provide your Account Sid and Auth Token that can be found in your Console Account page
-     String userAndPass = "YourAccountSid:YourAuthToken";
-     String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+      String userAndPass = account_sid + ':' + auth_token;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-     // Change RestcommCloudDomain to your Restcomm Cloud Domain and YourAccountSid to your Account Sid
-     URL url = new URL("https://RestcommCloudDomain/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json");
-     HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-     conn.setRequestProperty("Authorization", "Basic " + encoded);
-     conn.setRequestMethod("GET");
+      URL url = new URL("https://" + restcomm_domain + "/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
 
-     BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-     String inputLine;
-     while ((inputLine = in.readLine()) != null)
-        System.out.println(inputLine);
-     in.close();
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
   }
 }
 </code></pre>
@@ -795,14 +833,18 @@ public class JavaSampleClass {
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
-# Provide your Account Sid and Auth Token that can be found in your Console Account page
-userAndPass = b64encode(b"YourAccountSid:YourAuthToken").decode("ascii")
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass }
 
-# Change 'RestcommCloudDomain' to the domain of the Point of Presence you signed up on
-conn = HTTPSConnection("RestcommCloudDomain")
-# Update YourAccountSid with your Account Sid
-conn.request("GET", '/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json', headers=headers)
+conn = HTTPSConnection(restcomm_domain)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json',
+      headers=headers)
 res = conn.getresponse()
 
 print(res.status, res.reason)
@@ -1086,7 +1128,7 @@ conn.close()
     Countly.q = Countly.q || []
 
     // provide countly initialization parameters
-    Countly.app_key = '56bdc77c4c53e32ebd439e2586dd4ee22b3d3ad0'
+    Countly.app_key = '078fe985e67633be9b5569e0de287850d9194ca7'
     Countly.url = 'https://restcomm.count.ly'
 
     Countly.q.push(['track_sessions'])
