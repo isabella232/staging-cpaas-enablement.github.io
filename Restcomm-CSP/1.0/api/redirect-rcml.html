@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/recordings.html">
+    <title>Restcomm RCML – Redirect :: Restcomm CPaaS Enablement Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/redirect-rcml.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -162,10 +162,72 @@
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></li>
+    <li class="crumb"><a href="redirect-rcml.html">Restcomm RCML – Redirect</a></li>
+  </ul>
 </nav>
 </div>
 <article class="doc ">
-
+  <h1>Restcomm RCML – Redirect</h1>
+<div class="sect1">
+<h2 id="_redirect"><a class="anchor" href="#_redirect"></a>Redirect</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>&lt;Redirect&gt;</strong> verb transfers control of a call to the RCML at a different URL. All verbs after <strong>&lt;Redirect&gt;</strong> are unreachable and ignored.</p>
+</div>
+<div class="sect2">
+<h3 id="_redirect_attributes"><a class="anchor" href="#_redirect_attributes"></a>Redirect Attributes</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Allowed Values</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET, POST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POST</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>method.</strong> The 'method' attribute takes the value 'GET' or 'POST'. This tells RestComm whether to request the URL via HTTP GET or POST.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nesting"><a class="anchor" href="#_nesting"></a>Nesting</h3>
+<div class="paragraph">
+<p>The <strong>&lt;Redirect&gt;</strong> verb can not have any other verbs or nouns nested.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>For an example of how to use the &lt;Redirect&gt; verb see below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+    &lt;Redirect&gt;http://foobar.com/instructions&lt;/Redirect&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
   </main>
 </div>

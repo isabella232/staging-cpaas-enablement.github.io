@@ -63,16 +63,22 @@
     <a class="nav-link" href="voice-category.html">Voice</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="calls.html">Calls</a>
+    <a class="nav-link" href="calls-api.html">Calls</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="calls.html">Recordings</a>
+    <a class="nav-link" href="recordings-api.html">Recordings</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="calls.html">Conferences</a>
+    <a class="nav-link" href="clients-api.html">Client</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="numbers.html">Numbers</a>
+    <a class="nav-link" href="conferences-api.html">Conference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="participants-api.html">Participants</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
   </li>
 </ul>
   </li>
@@ -111,10 +117,16 @@
     <a class="nav-link" href="dial.html">Dial</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="numbers.html">Number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="gather.html">SIP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="gather.html">Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="say.html">Say</a>
+    <a class="nav-link" href="#">say.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="play.html">Play</a>
@@ -158,26 +170,8 @@
 </div>
 <article class="doc ">
   <h1>Restcomm API – Applications</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel2">
-<li><a href="#_applications_resource_uri">Applications Resource URI</a></li>
-<li><a href="#_resource_properties">Resource Properties</a></li>
-<li><a href="#_supported_operations">Supported Operations</a></li>
-<li><a href="#_applications_list">Applications List</a>
-<ul class="sectlevel2">
-<li><a href="#_applications_list_resource_uri">Applications List Resource URI</a></li>
-<li><a href="#_supported_operations_2">Supported Operations</a></li>
-<li><a href="#_required_parameters">Required Parameters</a></li>
-<li><a href="#_optional_parameters">Optional Parameters</a></li>
-</ul>
-</li>
-<li><a href="#_create_an_application">Create an Application</a></li>
-<li><a href="#_update_a_application">Update a Application</a></li>
-<li><a href="#_delete_a_application">Delete a Application</a></li>
-</ul>
-</div>
-<div id="preamble">
+<div class="sect1">
+<h2 id="_applications"><a class="anchor" href="#_applications"></a>Applications</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An Application instance resource represents a RCML set of instructions used by a RestComm interpreter to process an on-going call, SMS or USSD.</p>
@@ -190,8 +184,6 @@
 </div>
 <div class="paragraph">
 <p>Considering the access control executed by multi-tenancy, each Application can be created, read, updated or deleted by its owner solely. Any attempt of access to an Application using an account different than its owner will be denied.</p>
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_applications_resource_uri"><a class="anchor" href="#_applications_resource_uri"></a>Applications Resource URI</h3>
@@ -257,10 +249,12 @@
 <div class="sect2">
 <h3 id="_supported_operations"><a class="anchor" href="#_supported_operations"></a>Supported Operations</h3>
 <div class="paragraph">
-<p><strong>HTTP GET</strong> Returns the representation of an Application resource, including the properties described on the table "Resource Properties".</p>
+<p><strong>HTTP GET</strong>
+Returns the representation of an Application resource, including the properties described on the table "Resource Properties".</p>
 </div>
 <div class="paragraph">
-<p><strong>HTTP POST and PUT</strong>   Modifies an Application resource and returns the representation, including the properties described on the table "Resource Properties". The table below describes a list of optional parameters.</p>
+<p><strong>HTTP POST and PUT</strong>
+Modifies an Application resource and returns the representation, including the properties described on the table "Resource Properties". The table below describes a list of optional parameters.</p>
 </div>
 <div class="sect3">
 <h4 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h4>
@@ -300,6 +294,8 @@
 </div>
 <div class="paragraph">
 <p>Remove the Application from RestComm&#8217;s database. This Application will not be displayed anymore at the list of available applications while using AdminUI, consequently, not possible to be assigned to a RestComm Number or Client. If successful, returns an HTTP 204 response with no body.</p>
+</div>
+</div>
 </div>
 </div>
 </div>

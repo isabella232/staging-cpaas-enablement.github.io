@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/recordings.html">
+    <title>Restcomm RCML – SMS :: Restcomm CPaaS Enablement Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/sms-rcml.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -162,10 +162,132 @@
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></li>
+    <li class="crumb"><a href="sms-rcml.html">Restcomm RCML – SMS</a></li>
+  </ul>
 </nav>
 </div>
 <article class="doc ">
-
+  <h1>Restcomm RCML – SMS</h1>
+<div class="sect1">
+<h2 id="_sms"><a class="anchor" href="#_sms"></a>SMS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>&lt;Sms&gt;</strong> verb sends an SMS message to a phone number during a phone call.</p>
+</div>
+<div class="sect2">
+<h3 id="_sms_attributes"><a class="anchor" href="#_sms_attributes"></a>Sms Attributes</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Allowed Values</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">phone number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">phone number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">relative or absolute URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET, POST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POST</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_to"><a class="anchor" href="#_to"></a>to</h4>
+<div class="paragraph">
+<p>The 'to' attribute takes a valid E.164 phone number as a value. RestComm will send an SMS message to this number. When sending an SMS during an incoming call, 'to' defaults to the caller. When sending an SMS during an outgoing call, 'to' defaults to the called party. The value of 'to' must be a valid phone number.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_from"><a class="anchor" href="#_from"></a>from</h4>
+<div class="paragraph">
+<p>The 'from' attribute takes a valid E.164 phone number as an argument. When sending an SMS during an incoming call, 'from' defaults to the calling party. When sending an SMS during an outgoing call, 'from' defaults to the called party.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_action"><a class="anchor" href="#_action"></a>action</h4>
+<div class="paragraph">
+<p>The 'action' attribute takes a URL as an argument. After processing the &lt;Sms&gt; verb, RestComm will make a GET or POST request to this URL with the form parameters 'SmsStatus' and 'SmsSid'. Using an 'action' URL, your application can receive synchronous notification that the message was successfully enqueued or not.</p>
+</div>
+<div class="paragraph">
+<p>If you provide an 'action' URL, RestComm will use the RCML received in your response to the 'action' URL request to continue the current call. Any RCML verbs occuring after an &lt;Sms&gt; which specifies an 'action' attribute are unreachable. If no 'action' is provided, &lt;Sms&gt; will finish and RestComm will move on to the next RCML verb in the document. If there is no next verb, RestComm will end the phone call.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_method"><a class="anchor" href="#_method"></a>method</h4>
+<div class="paragraph">
+<p>The 'method' attribute takes the value 'GET' or 'POST'. This tells RestComm whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute.</p>
+</div>
+<div class="sect4">
+<h5 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SmsSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Sid for the Sms message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SmsStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current status of the Sms message. Currently the status will be <code>Queued</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nesting"><a class="anchor" href="#_nesting"></a>Nesting</h3>
+<div class="paragraph">
+<p>The <strong>&lt;Sms&gt;</strong> verb can not have any other verbs or nouns nested.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>For an example of how to use the &lt;Sms&gt; verb see below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+    &lt;Sms&gt;Hello World!&lt;/Sms&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
   </main>
 </div>

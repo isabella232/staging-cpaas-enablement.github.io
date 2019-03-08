@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/recordings.html">
+    <title>Restcomm RCML – Say :: Restcomm CPaaS Enablement Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/say-rcml.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -162,10 +162,111 @@
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></li>
+    <li class="crumb"><a href="say-rcml.html">Restcomm RCML – Say</a></li>
+  </ul>
 </nav>
 </div>
 <article class="doc ">
-
+  <h1>Restcomm RCML – Say</h1>
+<div class="sect1">
+<h2 id="_say"><a class="anchor" href="#_say"></a>Say</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>&lt;Say&gt;</strong> verb is used to synthesize text to speech and play it to the remote party. The voices supported depends on the TTS Service provider plug-in. Below are the voices for our default TTS service provider plug-in which uses Acapela Voice and <strong>VoiceRSS</strong> (default) as a Service.</p>
+</div>
+<div class="sect2">
+<h3 id="_say_attributes"><a class="anchor" href="#_say_attributes"></a>Say Attributes</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Allowed Values</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">voice</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">man, woman</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">man</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bf, bp, en, en-gb,cf, cs, dan, fi es, fr, de, el, it, nl, no, pl, pt, ru, ar, ca, sv, tr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">en</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">loop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer &gt; 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>voice.</strong> The 'voice' attribute allows you to select the gender of the voice used to synthesize the text to speech for playback.</p>
+</li>
+<li>
+<p><strong>language.</strong> The 'language' attribute allows you pick a specific language for speech synthesis. RestComm currently supports languages 'bf' (Belgium-French), 'bp' (Brazilian-Portugues), 'en' (English), 'en-gb' (British-English), 'cf' (Canadian-French), 'cs' (Czech), 'dan' (Dannish), 'fi' (Finnish), 'es' (Spanish), 'fr' (French), 'de' (German), 'el' (Greek), 'it' (Italian), 'nl' (Netherlands-Dutch), 'no' (Norwegian), 'pl' (Polish), 'pt' (Portuguese), 'ru' (Russian), 'ar' (Saudi-Arabia Arabic), 'ca' (Spain Catalan), 'sv' (Swedish), and 'tr' (Turkish).</p>
+</li>
+<li>
+<p><strong>loop.</strong> The 'loop' attribute specifies how many times you&#8217;d like the text repeated. Specifying '0' will cause the the &lt;Say&gt; verb to loop until the call is hung up.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nesting"><a class="anchor" href="#_nesting"></a>Nesting</h3>
+<div class="paragraph">
+<p>The <strong>&lt;Say&gt;</strong> verb can not have any other verbs or nouns nested. Only text.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>For an example of how to use the &lt;Say&gt; verb see below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+    &lt;Say&gt;Hello World&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The example below shows how you can set the language, voice and loop parameters of the Say Verb</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+        &lt;Say voice="woman" language="fr" loop="3"&gt;Bienvenue à RestComm un projet parrainé par TeleStax&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_useful_information"><a class="anchor" href="#_useful_information"></a>Useful Information</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>When translating text to speech, the Say verb will make assumptions about how to pronounce numbers, dates, times, amounts of money and other abbreviations.</p>
+</li>
+<li>
+<p>When saying numbers, '12345' will be spoken as "twelve thousand three hundred forty-five." Whereas '1 2 3 4 5' will be spoken as "one two three four five."</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </article>
   </main>
 </div>

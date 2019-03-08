@@ -63,16 +63,22 @@
     <a class="nav-link" href="voice-category.html">Voice</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="calls.html">Calls</a>
+    <a class="nav-link" href="calls-api.html">Calls</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="calls.html">Recordings</a>
+    <a class="nav-link" href="recordings-api.html">Recordings</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="calls.html">Conferences</a>
+    <a class="nav-link" href="clients-api.html">Client</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="numbers.html">Numbers</a>
+    <a class="nav-link" href="conferences-api.html">Conference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="participants-api.html">Participants</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
   </li>
 </ul>
   </li>
@@ -111,10 +117,16 @@
     <a class="nav-link" href="dial.html">Dial</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="numbers.html">Number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="gather.html">SIP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="gather.html">Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="say.html">Say</a>
+    <a class="nav-link" href="#">say.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="play.html">Play</a>
@@ -158,39 +170,11 @@
 </div>
 <article class="doc ">
   <h1>Restcomm API – Account</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel2">
-<li><a href="#_account_resource_uri">Account Resource URI</a></li>
-<li><a href="#_resource_properties">Resource Properties</a></li>
-<li><a href="#_supported_operations">Supported Operations</a></li>
-<li><a href="#_account_status_transitions">Account Status transitions</a></li>
-<li><a href="#_uninitialized_account_status">Uninitialized Account Status</a></li>
-<li><a href="#_active_account_status">Active Account Status</a></li>
-<li><a href="#_suspended_account_status">Suspended Account Status</a></li>
-<li><a href="#_closed_account_status">Closed Account Status</a></li>
-<li><a href="#_account_migration_to_new_organization">Account Migration to new Organization</a></li>
-<li><a href="#Accounts_List">Account List Resource</a>
-<ul class="sectlevel2">
-<li><a href="#_supported_operations_2">Supported Operations</a></li>
-</ul>
-</li>
-<li><a href="#sub-accounts">Sub-Accounts</a>
-<ul class="sectlevel2">
-<li><a href="#_get_a_list_of_all_current_accounts">Get a list of all current accounts</a></li>
-<li><a href="#_supported_operations_3">Supported Operations</a></li>
-<li><a href="#close-sub-accounts">Close Sub-Accounts</a></li>
-<li><a href="#delete-sub-accounts">Delete Sub-Accounts (deprecated)</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div id="preamble">
+<div class="sect1">
+<h2 id="_accounts"><a class="anchor" href="#_accounts"></a>Accounts</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Accounts and sub-accounts are useful for things like segmenting phone numbers and usage data for your users and controlling access to data.</p>
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_account_resource_uri"><a class="anchor" href="#_account_resource_uri"></a>Account Resource URI</h3>
@@ -645,6 +629,8 @@ The above command uses the Account SID of the requestor, and the one below uses 
       &lt;Transcriptions&gt;/2012-04-24/Accounts/&lt;secondaryAccountSid&gt;/Transcriptions&lt;/Transcriptions&gt;
     &lt;/SubresourceUris&gt;
   &lt;/Account&gt;</pre>
+</div>
+</div>
 </div>
 </div>
 </div>

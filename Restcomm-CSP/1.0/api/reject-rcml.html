@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/recordings.html">
+    <title>Restcomm RCML – Reject :: Restcomm CPaaS Enablement Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/reject-rcml.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -162,10 +162,72 @@
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></li>
+    <li class="crumb"><a href="reject-rcml.html">Restcomm RCML – Reject</a></li>
+  </ul>
 </nav>
 </div>
 <article class="doc ">
-
+  <h1>Restcomm RCML – Reject</h1>
+<div class="sect1">
+<h2 id="_reject"><a class="anchor" href="#_reject"></a>Reject</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>&lt;Reject&gt;</strong> verb rejects an incoming call to your Restcomm endpoint. This is useful for blocking unwanted calls. If the first verb in a RCML response is <strong>&lt;Reject&gt;</strong>, Restcomm will not pick up the call. The call ends with a status of 'busy' or 'no-answer', depending on the verb&#8217;s 'reason' attribute. Any verbs after <strong>&lt;Reject&gt;</strong> are unreachable and ignored.</p>
+</div>
+<div class="sect2">
+<h3 id="_reject_attributes"><a class="anchor" href="#_reject_attributes"></a>Reject Attributes</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Allowed Values</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reason</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rejected, busy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rejected</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>reason.</strong> The reason attribute takes the values "rejected" and "busy." This tells RestComm what message to play when rejecting a call. Selecting "busy" will play a busy signal to the caller, while selecting "rejected" will play a standard not-in-service response.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nesting"><a class="anchor" href="#_nesting"></a>Nesting</h3>
+<div class="paragraph">
+<p>The <strong>&lt;Reject&gt;</strong> verb can not have any other verbs or nouns nested.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>For an example of how to use the &lt;Reject&gt; verb see below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+    &lt;Reject reason="busy"/&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
   </main>
 </div>

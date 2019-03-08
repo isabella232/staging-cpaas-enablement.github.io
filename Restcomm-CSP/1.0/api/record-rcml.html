@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm API – Conferences :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/conferences-api.html">
+    <title>Restcomm RCML – Record :: Restcomm CPaaS Enablement Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/record-rcml.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -71,7 +71,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="clients-api.html">Client</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="conferences-api.html">Conference</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -164,29 +164,103 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></li>
-    <li class="crumb"><a href="voice-category.html">Voice</a></li>
-    <li class="crumb"><a href="conferences-api.html">Conference</a></li>
+    <li class="crumb"><a href="record-rcml.html">Restcomm RCML – Record</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc ">
-  <h1>Restcomm API – Conferences</h1>
+  <h1>Restcomm RCML – Record</h1>
 <div class="sect1">
-<h2 id="_conference"><a class="anchor" href="#_conference"></a>Conference</h2>
+<h2 id="_record"><a class="anchor" href="#_record"></a>Record</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The &lt;Conference&gt; represents a single conference originated and terminated from an account.</p>
+<p>The <strong>&lt;Record&gt;</strong> verb records the caller&#8217;s audio and video*, returning the URL of a file containing the audio and/or video* recording.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+* Video is supported only when Restcomm is configured to use Dialogic&#8217;s PowerMedia XMS media server.
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
-<h3 id="_conference_resource_uri"><a class="anchor" href="#_conference_resource_uri"></a>Conference Resource URI</h3>
-<div class="literalblock">
-<div class="content">
-<pre>/2012-04-24/Accounts/{AccountSid}/Conferences/{ConferenceSid}</pre>
-</div>
+<h3 id="_record_attributes"><a class="anchor" href="#_record_attributes"></a>Record Attributes</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Allowed Values</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">relative or absolute URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">current document URL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET, POST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POST</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">timeout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">positive integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">finishOnKey</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">any digit, #, * or -1 to disable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">#</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxLength</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer greater than 1 with the number of seconds to wait</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3600 (1 hour)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">transcribe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true, false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">transcribeCallback</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">relative or absolute URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">playBeep</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true, false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">media</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">audio_only, video_only, audio_video</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">audio_only</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>action.</strong> The 'action' attribute takes an absolute or relative URL as a value. When recording is finished RestComm will make a GET or POST request to this URL including the parameters below. If no 'action' is provided, &lt;Record&gt; will default to requesting the current document&#8217;s URL. After making this request, RestComm will continue the current call using the RCML received in your response. Any RCML verbs occuring after a &lt;Record&gt; are unreachable. There is one exception: if RestComm receives an empty recording, it will not make a request to the 'action' URL. The current call flow will continue with the next verb in the current RCML document.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_resource_properties"><a class="anchor" href="#_resource_properties"></a>Resource Properties</h3>
+<h3 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -194,108 +268,121 @@
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Parameter</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A string that uniquely identifies this conference.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RecordingUrl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URL of the recorded audio.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FriendlyName</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A user provided string that identifies this conference room.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RecordingDuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The time duration of the recorded audio.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A string representing the status of the conference. Possible values are RUNNING_MODERATOR_PRESENT, RUNNING_MODERATOR_ABSENT and COMPLETED.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DateCreated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date that this conference was created.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DateUpdated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date that this conference was last updated.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AccountSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The unique id of the Account that created this conference.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ApiVersion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Displays the current API version</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this account, relative to <a href="https://localhost:port/restcomm" class="bare">https://localhost:port/restcomm</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Digits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The digits the caller pressed, excluding the finishOnKey digit.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>method.</strong> The 'method' attribute takes the value 'GET' or 'POST'. This tells RestComm whether to request the URL via HTTP GET or POST.</p>
+</li>
+<li>
+<p><strong>timeout.</strong> The 'timeout' attribute tells RestComm to end the recording after a number of seconds of silence has passed.</p>
+</li>
+<li>
+<p><strong>finishOnKey.</strong> The 'finishOnKey' attribute lets you choose a set of digits that end the recording when entered. For example, if you set 'finishOnKey' to '#' and the caller presses '#', RestComm will immediately stop recording and submit 'RecordingUrl', 'RecordingDuration', and the '#' as parameters in a request to the 'action' URL. The allowed values are the digits 0-9, '#', '*' and '-1'. The default value is '1234567890*#' which means that any key will end the recording. The value '-1' is a special value that can be used to disable finishOnKey and never stop recording on a DTMF. Unlike &lt;Gather&gt;, you may specify more than one character as a 'finishOnKey' value but '-1' must be used alone.</p>
+</li>
+<li>
+<p><strong>maxLength.</strong> The 'maxLength' attribute lets you set the maximum length for the recording in seconds.</p>
+</li>
+<li>
+<p><strong>transcribe.</strong> The 'transcribe' attribute tells RestComm that you would like a text representation of the audio of the recording.</p>
+</li>
+<li>
+<p><strong>transcribeCallback.</strong> The 'transcribeCallback' attribute is used in conjunction with the 'transcribe' attribute. It allows you to specify a URL to which RestComm will make an asynchronous POST request when the transcription is complete. This is not a request for RCML and the response will not change call flow, but the request will contain the standard RCML request parameters as well as 'TranscriptionStatus', 'TranscriptionText', 'TranscriptionUrl' and 'RecordingUrl'. If 'transcribeCallback' is specified, then there is no need to specify 'transcribe=true'. It is implied. If you specify 'transcribe=true' without a 'transcribeCallback', the completed transcription will be stored for you to retrieve later (see the REST API Transcriptions section), but RestComm will not asynchronously notify your application.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== Request Parameters</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TranscriptionText</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the text of the transcription.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TranscriptionStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The status of the transcription attempt: either 'completed' or 'failed'.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TranscriptionUrl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URL for the transcription&#8217;s REST API resource.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RecordingUrl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URL for the transcription&#8217;s source recording resource.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>playBeep.</strong> The 'playBeep' attribute allows you to toggle between playing a sound before the start of a recording.</p>
+</li>
+<li>
+<p><strong>media.</strong> The 'media' attribute defines the which kind of information will be stored. Choose 'audio_only' so store a WAV file containing audio; 'video_only' to store a MP4 file containing vide; 'audio_video' to store a MP4 file containing audio and video*.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+* Video is supported only when Restcomm is configured to use Dialogic&#8217;s PowerMedia XMS media server.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Nesting.</strong> The &lt;Record&gt; verb can not have any other verbs or nouns nested.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_supported_operations"><a class="anchor" href="#_supported_operations"></a>Supported Operations</h3>
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
 <div class="paragraph">
-<p><strong>HTTP GET</strong>. Returns the representation of a Conference resource, including the properties above.</p>
+<p>For an example of how to use the &lt;Record&gt; verb see below.</p>
 </div>
-<div class="sect3">
-<h4 id="_example_get_conference_by_conferencesid"><a class="anchor" href="#_example_get_conference_by_conferencesid"></a>Example: Get Conference by ConferenceSid</h4>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>curl -H "Authorization: Basic &lt;MY_ENCODED_CREDENTIALS&gt;" https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/{AccountSid}/Conferences/{ConferenceSid}</pre>
+<pre>&lt;Response&gt;
+ &lt;Record maxLength="30"/&gt;
+&lt;/Response&gt;</pre>
 </div>
-</div>
-<div class="paragraph">
-<p><strong>HTTP POST</strong>
-Not supported</p>
-</div>
-<div class="paragraph">
-<p><strong>HTTP PUT</strong>
-Not supported</p>
-</div>
-<div class="paragraph">
-<p><strong>HTTP DELETE</strong>
-Not supported</p>
-</div>
-<div class="paragraph">
-<p><strong>Conference Subresources</strong>
-&lt;Participants&gt; represent set/list of in-progress calls in a running conference room.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/2012-04-24/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_conference_list_resource_uri"><a class="anchor" href="#_conference_list_resource_uri"></a>Conference List Resource URI</h2>
-<div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>/2012-04-24/Accounts/AccountSid}/Conferences</pre>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_supported_operations_2"><a class="anchor" href="#_supported_operations_2"></a>Supported Operations</h3>
-<div class="paragraph">
-<p><strong>*HTTP GET</strong>
-Returns the list representation of all the Conference resources for this Account, including the properties above.</p>
-</div>
-<div class="paragraph">
-<p><strong>HTTP POST</strong>
-Not supported</p>
-</div>
-<div class="paragraph">
-<p><strong>HTTP PUT</strong>
-Not supported</p>
-</div>
-<div class="paragraph">
-<p><strong>HTTP DELETE</strong>
-Not supported</p>
 </div>
 </div>
 </div>

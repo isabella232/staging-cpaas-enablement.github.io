@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/recordings.html">
+    <title>Restcomm RCML – Pause :: Restcomm CPaaS Enablement Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/pause-rcml.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -162,10 +162,88 @@
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></li>
+    <li class="crumb"><a href="pause-rcml.html">Restcomm RCML – Pause</a></li>
+  </ul>
 </nav>
 </div>
 <article class="doc ">
-
+  <h1>Restcomm RCML – Pause</h1>
+<div class="sect1">
+<h2 id="_pause"><a class="anchor" href="#_pause"></a>Pause</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>&lt;Pause&gt;</strong> verb waits silently for a specific number of seconds. If &lt;Pause&gt; is the first verb in a RCML response, RestComm will wait the specified number of seconds before picking up the call.</p>
+</div>
+<div class="sect2">
+<h3 id="_pause_attributes"><a class="anchor" href="#_pause_attributes"></a>Pause Attributes</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Allowed Values</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">length</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer &gt; 0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 second</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>length.</strong> The 'length' attribute specifies how many seconds RestComm will wait silently before continuing on.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nesting"><a class="anchor" href="#_nesting"></a>Nesting</h3>
+<div class="paragraph">
+<p>The &lt;Pause&gt; verb can not have any other verbs or nouns nested.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>For an example of how to use the <strong>&lt;Pause&gt;</strong> verb see below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+    &lt;Pause length="5"/&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_delayed_pickup"><a class="anchor" href="#_delayed_pickup"></a>Delayed pickup</h4>
+<div class="paragraph">
+<p>This example demonstrates using <code>&lt;Pause&gt;</code> to wait between two <code>&lt;Say&gt;</code> verbs.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;Response&gt;
+    &lt;Say&gt;I will pause 10 seconds starting now!&lt;/Say&gt;
+    &lt;Pause length="10"/&gt;
+    &lt;Say&gt;I just paused 10 seconds&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
   </main>
 </div>
