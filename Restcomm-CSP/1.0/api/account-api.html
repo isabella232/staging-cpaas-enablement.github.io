@@ -705,53 +705,6 @@ In the process, all child accounts will also be migrated.</p>
 <div class="paragraph">
 <p><strong>Get information about the default account.</strong></p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X GET  https://&lt;primaryAccountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;secondaryAccountSid&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Change default account password(AuthToken).</strong></p>
-</div>
-<div class="paragraph">
-<p>To update an account you need to provide the SID of the account or the email address of the account (make sure you url escape the @ sign of the email address)</p>
-</div>
-<div class="paragraph">
-<p>For example, update password using account sid:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X PUT https://&lt;primaryAccountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;secondaryAccountSid&gt; -d "Password=NewPassword"</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And update password using email address of the account:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X PUT https://&lt;primaryAccountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/administrator%40company.com -d "Password=NewPassword"</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The above command uses the Account SID of the requestor, and the one below uses the Email Account. Note the administrator%40company.com is used instead of <a href="mailto:administrator@company.com">administrator@company.com</a> . This is because using curl on the bash terminal doesn&#8217;t parse the @ correctlyl. If you were to running on a browser, you can safely use the @ as the web browser will correctly handle it.
-</td>
-</tr>
-</table>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X GET  https://administrator%40company.com:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;secondaryAccountSid&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The above commands will print an output similar to the one below:</p>
-</div>
 <script>
       function openLanguage(language, index) {
         const sampleClasses = document.getElementsByClassName("sample-language-" + index);
@@ -761,47 +714,33 @@ The above command uses the Account SID of the requestor, and the one below uses 
         document.getElementById(language + '-' + index).style.display = "block";
       }
       </script>
-      <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-
-      <div class="w3-bar w3-black">
-        <button class="w3-bar-item w3-button" onclick="openLanguage('Curl', 2)">Curl</button>
-        <button class="w3-bar-item w3-button" onclick="openLanguage('Java', 2)">Java</button>
-        <button class="w3-bar-item w3-button" onclick="openLanguage('Python', 2)">Python</button>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 2)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 2)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 2)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 2)">Java</button>
       </div>
       <div id="Curl-2" class="sample-language-2">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/#(account_sid).json \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Java-2" class="sample-language-2" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
+      <div id="Nodejs-2" class="sample-language-2" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
-public class JavaSampleClass {
-   // Change 'mycompany' to the desired restcomm organization
-   public static final String restcomm_domain = "mycompany.restcomm.com";
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String account_sid = "YourAccountSid";
-   public static final String auth_token = "YourAuthToken";
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
 
-   public static void main(String[] args) throws Exception {
-      String userAndPass = account_sid + ':' + auth_token;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL("https://" + restcomm_domain + "/restcomm/2012-04-24/Accounts/#(account_sid).json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("GET");
-
-      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-      String inputLine;
-      while ((inputLine = in.readLine()) != null)
-         System.out.println(inputLine);
-      in.close();
-  }
-}
+request({
+      method: 'GET',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '.xml',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
 </code></pre>
       </div>
       <div id="Python-2" class="sample-language-2" style="display:none">
@@ -818,7 +757,7 @@ userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("
 headers = { 'Authorization' : 'Basic %s' %  userAndPass }
 
 conn = HTTPSConnection(restcomm_domain)
-conn.request("GET", '/restcomm/2012-04-24/Accounts/#(account_sid).json',
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + account_sid + '.xml',
       headers=headers)
 res = conn.getresponse()
 
@@ -830,6 +769,167 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
+      <div id="Java-2" class="sample-language-2" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + ".xml");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
+<div class="paragraph">
+<p><strong>Change default account password(AuthToken).</strong></p>
+</div>
+<div class="paragraph">
+<p>To update an account you need to provide the SID of the account or the email address of the account (make sure you url escape the @ sign of the email address)</p>
+</div>
+<div class="paragraph">
+<p>For example, update password using account sid:</p>
+</div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 3)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 3)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 3)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 3)">Java</button>
+      </div>
+      <div id="Curl-3" class="sample-language-3">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X PUT https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid.xml \
+   -d 'Password=NewPassword' \
+   -u 'YourAccountSid:YourAuthToken'
+</code></pre>
+      </div>
+      <div id="Nodejs-3" class="sample-language-3" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request.({
+      method: 'PUT',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/SMS/Messages.json',
+      auth: { 'user': accountSid, 'pass': authToken },
+      form: {
+         'Password': 'NewPassword'
+      }
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+});
+</code></pre>
+      </div>
+      <div id="Python-3" class="sample-language-3" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+from urllib.parse import urlencode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass,
+            'Content-type': 'application/x-www-form-urlencoded',
+            'Accept': 'text/plain' }
+
+# Update POST parameters accordingly
+params = urlencode({
+   'Password': 'NewPassword'
+})
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("PUT", '/restcomm/2012-04-24/Accounts/' + account_sid + '.xml',
+      params, headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-3" class="sample-language-3" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL(("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + ".xml");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("PUT");
+      conn.setDoOutput(true);
+      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
+
+      // Update POST parameters accordingly
+      os.writeBytes("Password=NewPassword");
+      os.close();
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
+<div class="paragraph">
+<p>And update password using email address of the account:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The above command uses the Account SID of the requester, and the one below uses the Email Account. Note the administrator%40company.com is used instead of <a href="mailto:administrator@company.com">administrator@company.com</a> . This is because using curl on the bash terminal doesn&#8217;t parse the @ correctlyl. If you were to running on a browser, you can safely use the @ as the web browser will correctly handle it.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The above commands will print an output similar to the one below:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre>&lt;RestcommResponse&gt;
@@ -931,33 +1031,13 @@ conn.close()
 <div class="paragraph">
 <p>You can read more about Sub-Accounts and Multi-tenancy <a href="http://docs.telestax.com/restcomm-multi-tenancy-and-managing-sub-accounts/">HERE</a></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>curl -X GET https://&lt;primaryAccountSid&gt;:&lt;AuthToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;secondaryAccountSid&gt;/</pre>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_get_a_list_of_all_current_accounts"><a class="anchor" href="#_get_a_list_of_all_current_accounts"></a>Get a list of all current accounts</h3>
-<div class="listingblock">
-<div class="content">
-<pre>curl -X GET https://&lt;primaryAccountSid&gt;:&lt;AuthToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/</pre>
-</div>
-</div>
 <div class="paragraph">
 <p>Here is an example of how to create a <strong>sub-account</strong>. The sub-account will inherit the same permissions has the Administrator&#8217;s account.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X POST https://administrator%40company.com:&lt;AuthToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ -d "FriendlyName=MySubAccount" -d "EmailAddress=test@telestax.com" -d "Password=restcomm"</pre>
-</div>
-</div>
 <div class="paragraph">
 <p>Here is an example of creating an account under a specific organization.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X POST https://&lt;Sid&gt;:&lt;authToken&gt;@&lt;restcommAdress&gt;/restcomm/2012-04-24/Accounts/ -d "FriendlyName=MySubAccount" -d "EmailAddress=test@telestax.com" -d "Password=restcomm" -d "OrganizationSid=&lt;OrganizationSid&gt;"</pre>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -1004,36 +1084,12 @@ the <strong>SID</strong>, Email and the <strong>AuthToken</strong> (see output b
 </div>
 <div class="sect2">
 <h3 id="_close_sub_accounts"><a class="anchor" href="#_close_sub_accounts"></a>Close Sub-Accounts</h3>
-<div class="listingblock">
-<div class="title">JSON Account Closing</div>
-<div class="content">
-<pre>curl -X PUT https://&lt;secondaryAccountSid&gt;:PWD@cloud.restcomm.com/restcomm/2012-04-24/Accounts.json/&lt;subAccountSid&gt; -d "Status=closed"</pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">XML Account Closing</div>
-<div class="content">
-<pre>curl -X PUT https://&lt;secondaryAccountSid&gt;:PWD@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;subAccountSid&gt; -d "Status=closed"</pre>
-</div>
-</div>
 <div class="paragraph">
 <p>The command above will close an account permanently. When an account is closed access to the system through it is revoked and most of its resources are deleted. The actual account entity will remain present though.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_delete_sub_accounts_deprecated"><a class="anchor" href="#_delete_sub_accounts_deprecated"></a>Delete Sub-Accounts (deprecated)</h3>
-<div class="listingblock">
-<div class="title">XML Account Deletion</div>
-<div class="content">
-<pre>curl -X DELETE https://&lt;secondaryAccountSid&gt;:PWD@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;Sub-Account-SID&gt;</pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">JSON Account Deletion</div>
-<div class="content">
-<pre>curl -X DELETE https://&lt;secondaryAccountSid&gt;:PWD@cloud.restcomm.com/restcomm/2012-04-24/Accounts.json/&lt;Sub-Account-SID&gt;.json</pre>
-</div>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
