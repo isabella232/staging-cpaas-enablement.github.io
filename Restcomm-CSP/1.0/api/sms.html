@@ -463,12 +463,12 @@
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 4)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 4)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 4)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 4)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 12)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 12)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 12)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 12)">Java</button>
       </div>
-      <div id="Curl-4" class="sample-language-4">
+      <div id="Curl-12" class="sample-language-12">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json \
    -d 'From=19876543212' \
    -d 'To=13216549878' \
@@ -477,7 +477,7 @@
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-4" class="sample-language-4" style="display:none">
+      <div id="Nodejs-12" class="sample-language-12" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -500,7 +500,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-4" class="sample-language-4" style="display:none">
+      <div id="Python-12" class="sample-language-12" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -537,7 +537,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-4" class="sample-language-4" style="display:none">
+      <div id="Java-12" class="sample-language-12" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -603,12 +603,12 @@ public class JavaSampleClass {
 <p>Send a (SIP) message from 19876543212 to Restcomm Client <code>alice</code>. Notice the <code>client:</code> prefix in the <code>To</code> (remember that this client needs to be registered):</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 5)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 5)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 5)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 5)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 13)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 13)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 13)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 13)">Java</button>
       </div>
-      <div id="Curl-5" class="sample-language-5">
+      <div id="Curl-13" class="sample-language-13">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json \
    -d 'From=19876543212' \
    -d 'To=client:alice' \
@@ -617,7 +617,7 @@ public class JavaSampleClass {
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-5" class="sample-language-5" style="display:none">
+      <div id="Nodejs-13" class="sample-language-13" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -640,7 +640,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-5" class="sample-language-5" style="display:none">
+      <div id="Python-13" class="sample-language-13" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -677,7 +677,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-5" class="sample-language-5" style="display:none">
+      <div id="Java-13" class="sample-language-13" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -873,17 +873,17 @@ public class JavaSampleClass {
 <p>The command below will return the first page of SMS records corresponding to SMS messages sent from '19876543212' to '13216549878' between 2018-05-30 and 2018-06-09, sorted by the creation date in ascending order:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 6)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 6)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 6)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 6)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 14)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 14)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 14)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 14)">Java</button>
       </div>
-      <div id="Curl-6" class="sample-language-6">
+      <div id="Curl-14" class="sample-language-14">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-6" class="sample-language-6" style="display:none">
+      <div id="Nodejs-14" class="sample-language-14" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -901,7 +901,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-6" class="sample-language-6" style="display:none">
+      <div id="Python-14" class="sample-language-14" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -927,7 +927,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-6" class="sample-language-6" style="display:none">
+      <div id="Java-14" class="sample-language-14" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1007,17 +1007,17 @@ public class JavaSampleClass {
 <p>Retrieve the information of the SMS record with Sid SM55ce5cf07b9649c283cbacab4dae56a9:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 7)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 7)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 7)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 7)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 15)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 15)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 15)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 15)">Java</button>
       </div>
-      <div id="Curl-7" class="sample-language-7">
+      <div id="Curl-15" class="sample-language-15">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-7" class="sample-language-7" style="display:none">
+      <div id="Nodejs-15" class="sample-language-15" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -1035,7 +1035,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-7" class="sample-language-7" style="display:none">
+      <div id="Python-15" class="sample-language-15" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1061,7 +1061,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-7" class="sample-language-7" style="display:none">
+      <div id="Java-15" class="sample-language-15" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
