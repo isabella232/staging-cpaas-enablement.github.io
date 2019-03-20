@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/sms-api.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
-    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -19,18 +19,14 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com"><img width="140px" src="../../../_/img/restcomm-logo-white.svg"></a>
--->
       <a class="navbar-item header-logo-link" href="https://staging-cpaas-enablement-docs.restcomm.com"></a>
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com">Restcomm CPaaS Enablement Docs</a>
--->
+      <!--
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      -->
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -46,6 +42,20 @@
       </div>
     </div>
   </nav>
+  <!-- TODO: need to improve the variable used to decide displaying this nav -->
+  <nav class="navbar-enterprise">
+    <div class="navbar-enterprise-button-container">
+      <button class="navigation-toggle">
+      </button>
+      <button class="navbar-enterprise-burger">
+      </button>
+    </div>
+    <div class="navbar-enterprise-container">
+        <a class="navbar-enterprise-item active-tab" href="#">API Reference</a>
+        <a class="navbar-enterprise-item" href="#">Tutorials</a>
+        <a class="navbar-enterprise-item" href="#">Visual Designer</a>
+    </div>
+  </nav>
 </header>
 
 <div class="main-wrapper">
@@ -54,7 +64,9 @@
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <!-- Not applicable to our Enterprise docs
     <h3 class="title"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></h3>
+    -->
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -305,7 +317,10 @@
   </aside>
 </div>
   <main class="main">
-<div class="toolbar" role="navigation">
+<!--
+
+-->
+<div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
@@ -315,7 +330,7 @@
   </ul>
 </nav>
 </div>
-<article class="doc ">
+<article class="doc fix-anchor-links-position">
   <h1>Restcomm API – SMS</h1>
 <div class="sect1">
 <h2 id="_sms"><a class="anchor" href="#_sms"></a>SMS</h2>
@@ -453,10 +468,8 @@
 <div class="paragraph">
 <p>Send an SMS message from 19876543212 to 13216549878 and also use a status callback URL so that you are notified of the SMS delivery status in the provided callback URL. Make sure that the provided callback URL is reachable from the internet:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>$ curl -X POST https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;accountSid&gt;/SMS/Messages -d "From=19876543212" -d "To=13216549878" -d "Body=Test SMS from Restcomm" -d "StatusCallback=http://status.callback.url"</pre>
-</div>
+<div class="paragraph">
+<p>samplecode::[httpMethod="POST",urlSuffix="Accounts/#(account_sid)/SMS/Messages.json",bodyParameters="From=19876543212&amp;To=13216549878&amp;Body=Test SMS from Restcomm&amp;StatusCallback=http://status.callback.url"</p>
 </div>
 <div class="paragraph">
 <p>Example response:</p>
@@ -483,10 +496,8 @@
 <div class="paragraph">
 <p>Send a (SIP) message from 19876543212 to Restcomm Client <code>alice</code>. Notice the <code>client:</code> prefix in the <code>To</code> (remember that this client needs to be registered):</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>$ curl -X POST https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;accountSid&gt;/SMS/Messages -d "From=19876543212" -d "To=client:alice" -d "Body=Test SIP message from Restcomm" -d "StatusCallback=http://status.callback.url"</pre>
-</div>
+<div class="paragraph">
+<p>samplecode::[httpMethod="POST",urlSuffix="Accounts/#(account_sid)/SMS/Messages.json",bodyParameters="From=19876543212&amp;To=client:alice8&amp;Body=Test SIP message from Restcomm&amp;StatusCallback=http://status.callback.url"</p>
 </div>
 <div class="paragraph">
 <p>Example response:</p>
@@ -649,11 +660,101 @@
 <div class="paragraph">
 <p>The command below will return the first page of SMS records corresponding to SMS messages sent from '19876543212' to '13216549878' between 2018-05-30 and 2018-06-09, sorted by the creation date in ascending order:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>$ curl -X GET  https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;accountSid&gt;/SMS/Messages.json?From=19876543212&amp;To=13216549878&amp;StartTime=2018-05-30&amp;EndTime=2018-06-09&amp;Page=0&amp;PageSize=10&amp;SortBy=DateCreated:asc</pre>
-</div>
-</div>
+<script>
+      function openLanguage(language, index) {
+        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
+        for (const sampleClass of sampleClasses) {
+          sampleClass.style.display = "none";
+        }
+        document.getElementById(language + '-' + index).style.display = "block";
+      }
+      </script>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 35)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 35)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 35)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 35)">Java</button>
+      </div>
+      <div id="Curl-35" class="sample-language-35">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-35" class="sample-language-35" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request({
+      method: 'GET',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-35" class="sample-language-35" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + account_sid + '/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc',
+      headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-35" class="sample-language-35" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>Example response:</p>
 </div>
@@ -702,10 +803,8 @@
 <div class="paragraph">
 <p>Retrieve the information of the SMS record with Sid SM55ce5cf07b9649c283cbacab4dae56a9:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>$ curl -X GET https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;accountSid&gt;/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json</pre>
-</div>
+<div class="paragraph">
+<p>samplecode::[httpMethod="GET",urlSuffix="Accounts/<mark>(account_sid)/SMS/Messages/</mark>(message_sid).json"</p>
 </div>
 <div class="paragraph">
 <p>Example response:</p>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/organization-api.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
-    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -19,18 +19,14 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com"><img width="140px" src="../../../_/img/restcomm-logo-white.svg"></a>
--->
       <a class="navbar-item header-logo-link" href="https://staging-cpaas-enablement-docs.restcomm.com"></a>
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com">Restcomm CPaaS Enablement Docs</a>
--->
+      <!--
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      -->
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -46,6 +42,20 @@
       </div>
     </div>
   </nav>
+  <!-- TODO: need to improve the variable used to decide displaying this nav -->
+  <nav class="navbar-enterprise">
+    <div class="navbar-enterprise-button-container">
+      <button class="navigation-toggle">
+      </button>
+      <button class="navbar-enterprise-burger">
+      </button>
+    </div>
+    <div class="navbar-enterprise-container">
+        <a class="navbar-enterprise-item active-tab" href="#">API Reference</a>
+        <a class="navbar-enterprise-item" href="#">Tutorials</a>
+        <a class="navbar-enterprise-item" href="#">Visual Designer</a>
+    </div>
+  </nav>
 </header>
 
 <div class="main-wrapper">
@@ -54,7 +64,9 @@
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <!-- Not applicable to our Enterprise docs
     <h3 class="title"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></h3>
+    -->
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -305,7 +317,10 @@
   </aside>
 </div>
   <main class="main">
-<div class="toolbar" role="navigation">
+<!--
+
+-->
+<div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
@@ -316,7 +331,7 @@
   </ul>
 </nav>
 </div>
-<article class="doc ">
+<article class="doc fix-anchor-links-position">
   <h1>Restcomm API – Organizations</h1>
 <div class="sect1">
 <h2 id="_organizations"><a class="anchor" href="#_organizations"></a>Organizations</h2>
@@ -400,12 +415,14 @@
 </tr>
 </tbody>
 </table>
-<div class="exampleblock">
-<div class="title">Example 1. Add new organization with domain name "test" - Example</div>
+<div class="literalblock">
+<div class="title">Add new organization with domain name "test" - Example</div>
 <div class="content">
-<div class="paragraph">
-<p>curl -X PUT "https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Organizations/test"</p>
+<pre>curl -X PUT "https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Organizations/test"</pre>
 </div>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre>&lt;Organization&gt;
@@ -438,12 +455,14 @@
 </tr>
 </tbody>
 </table>
-<div class="exampleblock">
-<div class="title">Example 2. Add new organization with domain name "test" under a specific hosted zone - Example</div>
+<div class="literalblock">
+<div class="title">Add new organization with domain name "test" under a specific hosted zone - Example</div>
 <div class="content">
-<div class="paragraph">
-<p>curl -X PUT "https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Organizations/test" -d "HostedZoneId=&lt;myHostedZoneId&gt;"</p>
+<pre>curl -X PUT "https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Organizations/test" -d "HostedZoneId=&lt;myHostedZoneId&gt;"</pre>
 </div>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre>&lt;Organization&gt;
@@ -497,12 +516,14 @@
 </tr>
 </tbody>
 </table>
-<div class="exampleblock">
-<div class="title">Example 3. Read Organization Example</div>
+<div class="literalblock">
+<div class="title">Read Organization Example</div>
 <div class="content">
-<div class="paragraph">
-<p>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}"</p>
+<pre>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}"</pre>
 </div>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre>&lt;Organization&gt;
@@ -516,12 +537,10 @@
 </div>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 4. Read Organization Json Example</div>
+<div class="literalblock">
+<div class="title">Read Organization Json Example</div>
 <div class="content">
-<div class="paragraph">
-<p>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations.json/{OrganizationSid}"</p>
-</div>
+<pre>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations.json/{OrganizationSid}"</pre>
 </div>
 </div>
 </div>
@@ -561,12 +580,10 @@
 </tr>
 </tbody>
 </table>
-<div class="exampleblock">
-<div class="title">Example 5. Read Organization List with filter Example</div>
+<div class="literalblock">
+<div class="title">Read Organization List with filter Example</div>
 <div class="content">
-<div class="paragraph">
-<p>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}.json" -d "Status=active"</p>
-</div>
+<pre>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}.json" -d "Status=active"</pre>
 </div>
 </div>
 </div>
@@ -621,12 +638,10 @@ At this moment, the target algorithm is hardcoded to MD5.</p>
 <div class="paragraph">
 <p>HTTP PUT to above Uri will encrypt all Client passwords and returns a list of Clients migrated.</p>
 </div>
-<div class="exampleblock">
-<div class="title">Example 6. Migrate Organization Example</div>
+<div class="literalblock">
+<div class="title">Migrate Organization Example</div>
 <div class="content">
-<div class="paragraph">
-<p>curl -X PUT "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}.json/Migrate"</p>
-</div>
+<pre>curl -X PUT "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}.json/Migrate"</pre>
 </div>
 </div>
 </div>

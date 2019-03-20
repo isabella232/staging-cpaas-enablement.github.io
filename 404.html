@@ -10,18 +10,14 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com"><img width="140px" src="/_/img/restcomm-logo-white.svg"></a>
--->
       <a class="navbar-item header-logo-link" href="https://staging-cpaas-enablement-docs.restcomm.com"></a>
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com">Restcomm CPaaS Enablement Docs</a>
--->
+      <!--
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      -->
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -35,6 +31,20 @@
           </span>
         </div>
       </div>
+    </div>
+  </nav>
+  <!-- TODO: need to improve the variable used to decide displaying this nav -->
+  <nav class="navbar-enterprise">
+    <div class="navbar-enterprise-button-container">
+      <button class="navigation-toggle">
+      </button>
+      <button class="navbar-enterprise-burger">
+      </button>
+    </div>
+    <div class="navbar-enterprise-container">
+        <a class="navbar-enterprise-item active-tab" href="#">API Reference</a>
+        <a class="navbar-enterprise-item" href="#">Tutorials</a>
+        <a class="navbar-enterprise-item" href="#">Visual Designer</a>
     </div>
   </nav>
 </header>
@@ -59,13 +69,16 @@
   </aside>
 </div>
   <main class="main">
-<div class="toolbar" role="navigation">
+<!--
+
+-->
+<div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
   <a href="/Restcomm-CSP/1.0/index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
 </nav>
 </div>
-<article class="doc ">
+<article class="doc fix-anchor-links-position">
 <h1>Page Not Found</h1>
 <div class="paragraph">
 <p>The page you're looking for does not exist. It may have been moved.</p>

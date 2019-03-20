@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/applications-api.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
-    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -19,18 +19,14 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com"><img width="140px" src="../../../_/img/restcomm-logo-white.svg"></a>
--->
       <a class="navbar-item header-logo-link" href="https://staging-cpaas-enablement-docs.restcomm.com"></a>
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com">Restcomm CPaaS Enablement Docs</a>
--->
+      <!--
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      -->
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -46,6 +42,20 @@
       </div>
     </div>
   </nav>
+  <!-- TODO: need to improve the variable used to decide displaying this nav -->
+  <nav class="navbar-enterprise">
+    <div class="navbar-enterprise-button-container">
+      <button class="navigation-toggle">
+      </button>
+      <button class="navbar-enterprise-burger">
+      </button>
+    </div>
+    <div class="navbar-enterprise-container">
+        <a class="navbar-enterprise-item active-tab" href="#">API Reference</a>
+        <a class="navbar-enterprise-item" href="#">Tutorials</a>
+        <a class="navbar-enterprise-item" href="#">Visual Designer</a>
+    </div>
+  </nav>
 </header>
 
 <div class="main-wrapper">
@@ -54,7 +64,9 @@
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <!-- Not applicable to our Enterprise docs
     <h3 class="title"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></h3>
+    -->
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -305,7 +317,10 @@
   </aside>
 </div>
   <main class="main">
-<div class="toolbar" role="navigation">
+<!--
+
+-->
+<div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
@@ -316,7 +331,7 @@
   </ul>
 </nav>
 </div>
-<article class="doc ">
+<article class="doc fix-anchor-links-position">
   <h1>Restcomm API – Applications</h1>
 <div class="sect1">
 <h2 id="_applications"><a class="anchor" href="#_applications"></a>Applications</h2>
@@ -535,11 +550,134 @@ Modifies an Application resource and returns the representation, including the p
 <div class="sect1">
 <h2 id="_create_an_application"><a class="anchor" href="#_create_an_application"></a>Create an Application</h2>
 <div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>curl -X POST http://ACae6e420f425248d6a26948c17a9e2acf:f8b593f84593130c39700c11ee996c0e@127.0.0.1:8080/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Applications -d "FriendlyName=Application FooBar" -d "ApiVersion=2012-04-24" -d "HasVoiceCallerIdLookup=false" -d "RcmlUrl=http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller" -d "Kind=voice"</pre>
-</div>
-</div>
+<script>
+      function openLanguage(language, index) {
+        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
+        for (const sampleClass of sampleClasses) {
+          sampleClass.style.display = "none";
+        }
+        document.getElementById(language + '-' + index).style.display = "block";
+      }
+      </script>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 11)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 11)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 11)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 11)">Java</button>
+      </div>
+      <div id="Curl-11" class="sample-language-11">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Applications.xml \
+   -d 'FriendlyName=ApplicationFooBar' \
+   -d 'ApiVersion=2012-04-24' \
+   -d 'HasVoiceCallerIdLookup=false' \
+   -d 'RcmlUrl=http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller' \
+   -d 'Kind=voice' \
+   -u 'YourAccountSid:YourAuthToken'
+</code></pre>
+      </div>
+      <div id="Nodejs-11" class="sample-language-11" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request.({
+      method: 'POST',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/SMS/Messages.json',
+      auth: { 'user': accountSid, 'pass': authToken },
+      form: {
+         'FriendlyName': 'ApplicationFooBar',
+         'ApiVersion': '2012-04-24',
+         'HasVoiceCallerIdLookup': 'false',
+         'RcmlUrl': 'http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller',
+         'Kind': 'voice'
+      }
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+});
+</code></pre>
+      </div>
+      <div id="Python-11" class="sample-language-11" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+from urllib.parse import urlencode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass,
+            'Content-type': 'application/x-www-form-urlencoded',
+            'Accept': 'text/plain' }
+
+# Update POST parameters accordingly
+params = urlencode({
+   'FriendlyName': 'ApplicationFooBar',
+   'ApiVersion': '2012-04-24',
+   'HasVoiceCallerIdLookup': 'false',
+   'RcmlUrl': 'http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller',
+   'Kind': 'voice'
+})
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("POST", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Applications.xml',
+      params, headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-11" class="sample-language-11" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL(("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Applications.xml");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("POST");
+      conn.setDoOutput(true);
+      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
+
+      // Update POST parameters accordingly
+      os.writeBytes("FriendlyName=ApplicationFooBar&" +
+        "ApiVersion=2012-04-24&" +
+        "HasVoiceCallerIdLookup=false&" +
+        "RcmlUrl=http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller&" +
+        "Kind=voice");
+      os.close();
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>The output of the command will be similar to the one below</p>
 </div>
@@ -566,11 +704,109 @@ Modifies an Application resource and returns the representation, including the p
 <div class="sect1">
 <h2 id="_update_a_application"><a class="anchor" href="#_update_a_application"></a>Update a Application</h2>
 <div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>curl -X POST https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Applications/APdc46145309d14e97b62230cd3f269ed4 -d "FriendlyName=Application X"</pre>
-</div>
-</div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 12)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 12)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 12)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 12)">Java</button>
+      </div>
+      <div id="Curl-12" class="sample-language-12">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Applications/#(application_sid).xml \
+   -d 'FriendlyName=Application X' \
+   -u 'YourAccountSid:YourAuthToken'
+</code></pre>
+      </div>
+      <div id="Nodejs-12" class="sample-language-12" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request.({
+      method: 'POST',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/SMS/Messages.json',
+      auth: { 'user': accountSid, 'pass': authToken },
+      form: {
+         'FriendlyName': 'Application X'
+      }
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+});
+</code></pre>
+      </div>
+      <div id="Python-12" class="sample-language-12" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+from urllib.parse import urlencode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass,
+            'Content-type': 'application/x-www-form-urlencoded',
+            'Accept': 'text/plain' }
+
+# Update POST parameters accordingly
+params = urlencode({
+   'FriendlyName': 'Application X'
+})
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("POST", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Applications/#(application_sid).xml',
+      params, headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-12" class="sample-language-12" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL(("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Applications/#(application_sid).xml");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("POST");
+      conn.setDoOutput(true);
+      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
+
+      // Update POST parameters accordingly
+      os.writeBytes("FriendlyName=Application X");
+      os.close();
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>The output of the command will be similar to the one below</p>
 </div>
@@ -597,17 +833,184 @@ Modifies an Application resource and returns the representation, including the p
 <div class="sect1">
 <h2 id="_delete_a_application"><a class="anchor" href="#_delete_a_application"></a>Delete a Application</h2>
 <div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>curl -X DELETE https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Applications/APdc46145309d14e97b62230cd3f269ed4</pre>
-</div>
-</div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 13)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 13)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 13)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 13)">Java</button>
+      </div>
+      <div id="Curl-13" class="sample-language-13">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X DELETE https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Applications/#(account_sid)/Applications/#(application_sid).xml \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-13" class="sample-language-13" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request({
+      method: 'DELETE',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/Applications/#(account_sid)/Applications/#(application_sid).xml',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-13" class="sample-language-13" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("DELETE", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Applications/#(account_sid)/Applications/#(application_sid).xml',
+      headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-13" class="sample-language-13" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Applications/#(account_sid)/Applications/#(application_sid).xml");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("DELETE");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>No output for DELETE operation.</p>
 </div>
 <div class="paragraph">
 <p>Get a List of available Applications</p>
 </div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 14)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 14)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 14)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 14)">Java</button>
+      </div>
+      <div id="Curl-14" class="sample-language-14">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Applications.xml \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-14" class="sample-language-14" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request({
+      method: 'GET',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/Applications.xml',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-14" class="sample-language-14" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Applications.xml',
+      headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-14" class="sample-language-14" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Applications.xml");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>The output of the command will be similar to the one below</p>
 </div>

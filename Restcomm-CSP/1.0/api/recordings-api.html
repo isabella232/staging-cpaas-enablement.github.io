@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/recordings-api.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
-    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -19,18 +19,14 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com"><img width="140px" src="../../../_/img/restcomm-logo-white.svg"></a>
--->
       <a class="navbar-item header-logo-link" href="https://staging-cpaas-enablement-docs.restcomm.com"></a>
-<!--
-      <a class="navbar-item" href="https://staging-cpaas-enablement-docs.restcomm.com">Restcomm CPaaS Enablement Docs</a>
--->
+      <!--
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      -->
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -46,6 +42,20 @@
       </div>
     </div>
   </nav>
+  <!-- TODO: need to improve the variable used to decide displaying this nav -->
+  <nav class="navbar-enterprise">
+    <div class="navbar-enterprise-button-container">
+      <button class="navigation-toggle">
+      </button>
+      <button class="navbar-enterprise-burger">
+      </button>
+    </div>
+    <div class="navbar-enterprise-container">
+        <a class="navbar-enterprise-item active-tab" href="#">API Reference</a>
+        <a class="navbar-enterprise-item" href="#">Tutorials</a>
+        <a class="navbar-enterprise-item" href="#">Visual Designer</a>
+    </div>
+  </nav>
 </header>
 
 <div class="main-wrapper">
@@ -54,7 +64,9 @@
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <!-- Not applicable to our Enterprise docs
     <h3 class="title"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></h3>
+    -->
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -305,7 +317,10 @@
   </aside>
 </div>
   <main class="main">
-<div class="toolbar" role="navigation">
+<!--
+
+-->
+<div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
@@ -315,7 +330,7 @@
   </ul>
 </nav>
 </div>
-<article class="doc ">
+<article class="doc fix-anchor-links-position">
   <h1>Restcomm API – Recordings</h1>
 <div class="sect1">
 <h2 id="_recordings"><a class="anchor" href="#_recordings"></a>Recordings</h2>
@@ -477,11 +492,101 @@ Unlike the Recording instance resource described above, the list of recordings I
 <div class="paragraph">
 <p>From the bash terminal, you can run the command below:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X GET  https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Recordings.json</pre>
-</div>
-</div>
+<script>
+      function openLanguage(language, index) {
+        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
+        for (const sampleClass of sampleClasses) {
+          sampleClass.style.display = "none";
+        }
+        document.getElementById(language + '-' + index).style.display = "block";
+      }
+      </script>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 30)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 30)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 30)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 30)">Java</button>
+      </div>
+      <div id="Curl-30" class="sample-language-30">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Recordings.json \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-30" class="sample-language-30" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request({
+      method: 'GET',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/Recordings.json',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-30" class="sample-language-30" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Recordings.json',
+      headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-30" class="sample-language-30" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Recordings.json");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>The response will be similar to the one below.</p>
 </div>
@@ -566,11 +671,92 @@ Here is how to access the file using http <strong><a href="https://cloud.restcom
 <div class="paragraph">
 <p>The example below will only return Recordings that has been started from this CallSid</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> curl -X GET  https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Recordings.json?CallSid=CAfe9ce46f104f5beeb10c83a5dad2be66</pre>
-</div>
-</div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 31)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 31)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 31)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 31)">Java</button>
+      </div>
+      <div id="Curl-31" class="sample-language-31">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Recordings.json?CallSid=CAfe9ce46f104f5beeb10c83a5dad2be66 \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-31" class="sample-language-31" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request({
+      method: 'GET',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/Recordings.json?CallSid=CAfe9ce46f104f5beeb10c83a5dad2be66',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-31" class="sample-language-31" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Recordings.json?CallSid=CAfe9ce46f104f5beeb10c83a5dad2be66',
+      headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-31" class="sample-language-31" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Recordings.json?CallSid=CAfe9ce46f104f5beeb10c83a5dad2be66");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>The result will be similar to the one below</p>
 </div>
@@ -649,11 +835,92 @@ Here is how to access the file using http <strong><a href="https://cloud.restcom
 <div class="paragraph">
 <p>The command below will return a single item from the list of recordings using the PageSize parameter</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X GET  https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Recordings.json?PageSize=1</pre>
-</div>
-</div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 32)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 32)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 32)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 32)">Java</button>
+      </div>
+      <div id="Curl-32" class="sample-language-32">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Recordings.json?PageSize=1 \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-32" class="sample-language-32" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request({
+      method: 'GET',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/Recordings.json?PageSize=1',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-32" class="sample-language-32" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Recordings.json?PageSize=1',
+      headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-32" class="sample-language-32" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Recordings.json?PageSize=1");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>The result of the <strong>PageSize</strong> parameter</p>
 </div>
@@ -764,11 +1031,92 @@ Here is how to access the file using http <strong><a href="https://cloud.restcom
 <div class="paragraph">
 <p>The command below will return recordings sorted by the creation date in ascending order using SortBy parameter:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X GET  https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;accountSid&gt;/Recordings?SortBy=DateCreated:asc</pre>
-</div>
-</div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 33)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 33)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 33)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 33)">Java</button>
+      </div>
+      <div id="Curl-33" class="sample-language-33">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/"Accounts/YourAccountSid/Recordings.xml?SortBy=DateCreated:asc' \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-33" class="sample-language-33" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request({
+      method: 'GET',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/"Accounts/' + accountSid + '/Recordings.xml?SortBy=DateCreated:asc'',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-33" class="sample-language-33" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("GET", '/restcomm/2012-04-24/"Accounts/' + account_sid + '/Recordings.xml?SortBy=DateCreated:asc'',
+      headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-33" class="sample-language-33" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/"Accounts/" + accountSid + "/Recordings.xml?SortBy=DateCreated:asc'");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>The result of the <strong>SortBy</strong> parameter:</p>
 </div>
@@ -822,11 +1170,92 @@ Here is how to access the file using http <strong><a href="https://cloud.restcom
 <div class="paragraph">
 <p>From the bash terminal, you can run the command below:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -X DELETE  https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Recordings/RE10000000000000000000000000000032</pre>
-</div>
-</div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 34)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 34)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 34)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 34)">Java</button>
+      </div>
+      <div id="Curl-34" class="sample-language-34">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X DELETE https://cloud.restcomm.com/restcomm/2012-04-24/"Accounts/YourAccountSid/Recordings/RE10000000000000000000000000000032' \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-34" class="sample-language-34" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request({
+      method: 'DELETE',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/"Accounts/' + accountSid + '/Recordings/RE10000000000000000000000000000032'',
+      auth: { 'user': accountSid, 'pass': authToken },
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-34" class="sample-language-34" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("DELETE", '/restcomm/2012-04-24/"Accounts/' + account_sid + '/Recordings/RE10000000000000000000000000000032'',
+      headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-34" class="sample-language-34" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/"Accounts/" + accountSid + "/Recordings/RE10000000000000000000000000000032'");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("DELETE");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
 </div>
 </div>
 </div>
