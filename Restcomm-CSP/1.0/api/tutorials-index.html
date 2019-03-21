@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm RCML – Email :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/email-rcml.html">
+    <title>Tutorials :: Restcomm CPaaS Enablement Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/tutorials-index.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -59,7 +59,7 @@
 </header>
 
 <div class="main-wrapper">
-<div class="navigation-container" data-component="Restcomm-CSP" data-version="1.0" >
+<div class="navigation-container" data-component="Restcomm-CSP" data-version="1.0"  style="display: none;">
   <aside class="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
@@ -326,93 +326,73 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">Restcomm CPaaS Enablement Docs</a></li>
-    <li class="crumb"><a href="email-rcml.html">Restcomm RCML – Email</a></li>
+    <li class="crumb"><a href="tutorials-index.html">Tutorials</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm RCML – Email</h1>
-<div class="sect1">
-<h2 id="_email"><a class="anchor" href="#_email"></a>Email</h2>
-<div class="sectionbody">
+  <h1>Tutorials</h1>
 <div class="paragraph">
-<p>The &lt;Email&gt; verb sends an Email message, during a phone call. Email Attributes:</p>
+<p>Explore our step by step Developer tutorials and start<br>
+building your communication solutions with Restcomm.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Allowed Values</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default Value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">State</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Email address of  receiver</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">obligatory</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple Email addresses</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">optional</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bcc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple Email addresses</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">optional</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Email address of sender</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">None *</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">obligatory</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Subject</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text of the subject</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“Restcomm Email Service”</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">optional</p></td>
-</tr>
-</tbody>
-</table>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>to</strong> The ‘to’ attribute takes a valid email address as a value. RestComm will send an EMAIL message to this address. There is not a default value at the moment. If “to” is not set, an exception will be thrown, there is not a default value.</p>
-</li>
-<li>
-<p><strong>cc</strong> The ‘cc’ attribute permits to send multiple emails to various email addresses as CC. RestComm will send an EMAIL message to each address. The 'cc' attribute is optional. Using cc, displays the email addresses of the various recipients. Example: <strong>"<a href="mailto:someone2@localhost.com">someone2@localhost.com</a>, <a href="mailto:test@localhost.com">test@localhost.com</a>, <a href="mailto:test3@localhost.com">test3@localhost.com</a>"</strong></p>
-</li>
-<li>
-<p><strong>Bcc</strong> The ‘Bcc’ attribute permits to send multiple emails to various email addresses as BCC. RestComm will send an EMAIL message to each address. The 'Bcc' attribute is optional. Using Bcc, hides the email addresses of the various recipients. Example: <strong>"<a href="mailto:someone2@localhost.com">someone2@localhost.com</a>, <a href="mailto:test@localhost.com">test@localhost.com</a>, <a href="mailto:test3@localhost.com">test3@localhost.com</a>"</strong></p>
-</li>
-<li>
-<p><strong>from</strong> The ‘from’ attribute takes a valid Email address.  Restcomm, uses this attribute to set the “from” argument for the email session used to send the email. In some email services (e.g. Mailgun - <a href="http://www.mailgun.com/" class="bare">http://www.mailgun.com/</a>)  is possible to associate various email addresses to the same service account. This attribute is used to annotate which address to use  for the “from” email session. If “from” is not set, an exception will be thrown, there is not a default value.</p>
-</li>
-<li>
-<p><strong>Nesting</strong> The &lt;Email&gt; verb can not have any other verbs or nouns nested. RCML Example, of how to use the &lt;Email&gt; verb, see below:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;Response&gt;
-&lt;Email from=“****@gmail.com” to=“****@hotmail.com” cc=“someone2@localhost.com, test@localhost.com, test3@localhost.com” subject=“This is the subject”&gt;
-        This is the body!!
-&lt;/Email&gt;
-&lt;/Response&gt;</pre>
-</div>
-</div>
-</div>
+<div class="category-container">
+  <div class="category-item">
+    <h4 class="category-title">
+        <div class="category-box-icon"></div>
+        <a class="category-link" href="api/sms-category.html">Tutorial 1</a>
+    </h4>
+    <p class="category-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="category-item">
+    <h4 class="category-title">
+        <div class="category-box-icon"></div>
+        <a class="category-link" href="api/voice-category.html">Tutorial 2</a>
+    </h4>
+    <p class="category-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="category-item">
+    <h4 class="category-title">
+        <a href="api/visual-designer.html">Tutorial 3</a>
+    </h4>
+    <p class="category-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  </div>
+  <div class="category-item">
+    <h4 class="category-title">
+        <a href="api/apis-howto.html">Tutorial 4</a>
+    </h4>
+    <p class="category-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+  </div>
+  <div class="category-item">
+    <h4 class="category-title">
+        <a href="api/tutorial1.html">Tutorial 5</a>
+    </h4>
+    <p class="category-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="category-item">
+    <h4 class="category-title">
+        <a href="api/tutorial2.html">Tutorial 6</a>
+    </h4>
+    <p class="category-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+  </div>
+  <div class="category-item">
+    <h4 class="category-title">
+        <a href="api/apis-howto.html">Tutorial 7</a>
+    </h4>
+    <p class="category-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+  </div>
+  <div class="category-item">
+    <h4 class="category-title">
+        <a href="api/tutorial1.html">Tutorial 8</a>
+    </h4>
+    <p class="category-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="category-item">
+    <h4 class="category-title">
+        <a href="api/tutorial2.html">Tutorial 9</a>
+    </h4>
+    <p class="category-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+  </div>
 </div>
 </article>
   </main>

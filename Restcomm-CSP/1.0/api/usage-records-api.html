@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="enterprise-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,9 +51,9 @@
       </button>
     </div>
     <div class="navbar-enterprise-container">
-        <a class="navbar-enterprise-item active-tab" href="#">API Reference</a>
-        <a class="navbar-enterprise-item" href="#">Tutorials</a>
-        <a class="navbar-enterprise-item" href="#">Visual Designer</a>
+        <a class="navbar-enterprise-item active-tab" href="voice-category.html">API Reference</a>
+        <a class="navbar-enterprise-item" href="tutorials-index.html">Tutorials</a>
+        <a class="navbar-enterprise-item" href="rvd-index.html">Visual Designer</a>
     </div>
   </nav>
 </header>
@@ -181,19 +181,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <button class="nav-toggle"></button>
-    <a class="nav-link" href="sms.html">Messages</a>
+    <a class="nav-link" href="#">sms.adoc</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sms.html#_send_sms">Send SMS</a>
+    <a class="nav-link" href="#">sms.adoc#_send_sms</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sms.html#_get_sms_list">Get SMS List</a>
+    <a class="nav-link" href="#">sms.adoc#_get_sms_list</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sms.html#_get_single_sms_information">Get single SMS Information</a>
+    <a class="nav-link" href="#">sms.adoc#_get_single_sms_information</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sms.html#_sms_attributes">SMS Attributes</a>
+    <a class="nav-link" href="#">sms.adoc#_sms_attributes</a>
   </li>
 </ul>
   </li>
@@ -740,17 +740,17 @@
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 40)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 40)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 40)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 40)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 36)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 36)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 36)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 36)">Java</button>
       </div>
-      <div id="Curl-40" class="sample-language-40">
+      <div id="Curl-36" class="sample-language-36">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/"Accounts/YourAccountSid/Usage/Records/Daily.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-40" class="sample-language-40" style="display:none">
+      <div id="Nodejs-36" class="sample-language-36" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -768,7 +768,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-40" class="sample-language-40" style="display:none">
+      <div id="Python-36" class="sample-language-36" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -794,7 +794,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-40" class="sample-language-40" style="display:none">
+      <div id="Java-36" class="sample-language-36" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;

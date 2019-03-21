@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="enterprise-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,9 +51,9 @@
       </button>
     </div>
     <div class="navbar-enterprise-container">
-        <a class="navbar-enterprise-item active-tab" href="#">API Reference</a>
-        <a class="navbar-enterprise-item" href="#">Tutorials</a>
-        <a class="navbar-enterprise-item" href="#">Visual Designer</a>
+        <a class="navbar-enterprise-item active-tab" href="voice-category.html">API Reference</a>
+        <a class="navbar-enterprise-item" href="tutorials-index.html">Tutorials</a>
+        <a class="navbar-enterprise-item" href="rvd-index.html">Visual Designer</a>
     </div>
   </nav>
 </header>
@@ -181,19 +181,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <button class="nav-toggle"></button>
-    <a class="nav-link" href="sms.html">Messages</a>
+    <a class="nav-link" href="#">sms.adoc</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sms.html#_send_sms">Send SMS</a>
+    <a class="nav-link" href="#">sms.adoc#_send_sms</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sms.html#_get_sms_list">Get SMS List</a>
+    <a class="nav-link" href="#">sms.adoc#_get_sms_list</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sms.html#_get_single_sms_information">Get single SMS Information</a>
+    <a class="nav-link" href="#">sms.adoc#_get_single_sms_information</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sms.html#_sms_attributes">SMS Attributes</a>
+    <a class="nav-link" href="#">sms.adoc#_sms_attributes</a>
   </li>
 </ul>
   </li>
@@ -337,7 +337,26 @@
 <h2 id="_clients"><a class="anchor" href="#_clients"></a>Clients</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>An Client instance resource represents a user agent registered with RestComm.</p>
+<p>A <strong>Client</strong> represents a user agent that can make and receive calls as well as send and receive text messages using the Restcomm Cloud. This means that you can configure any software or hardware VoIP phone with the Client Username and Password in order to register with Restcomm Cloud. Once you do that you will be able to do things like:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Call or text any Restcomm Number to trigger the associated Voice or SMS Application. Notice that you first need to setup the Application with the logic you want and associate it with a Restcomm Number. For more information please check here.</p>
+</li>
+<li>
+<p>Call out to any PSTN number</p>
+</li>
+<li>
+<p>Send SMS to any mobile number</p>
+</li>
+<li>
+<p>Call or text any other registered Client</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Client can also be associated with a Restcomm Application, either in the form of Visual Designer Application or externally hosted. If that is the case then this application will be called no matter what digits the user of the VoIP phone dials</p>
 </div>
 <div class="sect2">
 <h3 id="_client_resource_uri"><a class="anchor" href="#_client_resource_uri"></a>Client Resource URI</h3>
