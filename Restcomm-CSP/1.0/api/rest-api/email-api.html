@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm API – Email :: Restcomm CPaaS Enablement Docs</title>
+    <title>Email :: Restcomm CPaaS Enablement Docs</title>
     <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/rest-api/email-api.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
@@ -849,12 +849,12 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">Restcomm CPaaS Enablement Docs</a></li>
-    <li class="crumb"><a href="email-api.html">Restcomm API – Email</a></li>
+    <li class="crumb"><a href="email-api.html">Email</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm API – Email</h1>
+  <h1>Email</h1>
 <div class="sect1">
 <h2 id="_email"><a class="anchor" href="#_email"></a>Email</h2>
 <div class="sectionbody">
@@ -868,50 +868,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_resource_properties"><a class="anchor" href="#_resource_properties"></a>Resource Properties</h3>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DateSent</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date that this Email Message was send.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AccountSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The unique id of the Account that sent this Email message.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">From</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Email address that initiated the message.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Email address of the recipient.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Body</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The text body of the email message.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Subject</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The subject of the email message.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_supported_operations"><a class="anchor" href="#_supported_operations"></a>Supported Operations</h3>
+<h3 id="_send_a_new_email_and_get_email_details"><a class="anchor" href="#_send_a_new_email_and_get_email_details"></a>Send a new email and get email details</h3>
 <div class="paragraph">
-<p><strong>HTTP POST.</strong> Sends a new Email  message and returns the representation of the Email message resource, including the properties above. Below you will find a list of required and optional parameters.</p>
+<p><strong>HTTP POST.</strong> Sends a new Email message and returns the representation of the Email message resource, including the properties above. Below you will find a list of required and optional parameters.</p>
 </div>
 </div>
 <div class="sect2">
@@ -959,19 +918,8 @@
 </tbody>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_email"><a class="anchor" href="#_using_email"></a>Using Email</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You need to configure Restcomm to send Email messages. For the necessary configuration please refer to this <a href="http://docs.telestax.com/restcomm-sending-email-via-restcomm-email-verb/">post</a></p>
-</div>
 <div class="sect2">
-<h3 id="_send_email_messages"><a class="anchor" href="#_send_email_messages"></a>Send Email Messages</h3>
-<div class="paragraph">
-<p>From a bash terminal, you can run the command below:</p>
-</div>
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
 <script>
       function openLanguage(language, index) {
         const sampleClasses = document.getElementsByClassName("sample-language-" + index);
@@ -1100,7 +1048,15 @@ public class JavaSampleClass {
 </div>
 </div>
 <div class="sect1">
-<h2 id="example-post-response---xml-and-json"><a class="anchor" href="#example-post-response---xml-and-json"></a>Example POST Response - XML and JSON</h2>
+<h2 id="_using_email"><a class="anchor" href="#_using_email"></a>Using Email</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You need to configure Restcomm to send Email messages. For the necessary configuration please refer to this <a href="http://docs.telestax.com/restcomm-sending-email-via-restcomm-email-verb/">post</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_post_response_xml_and_json"><a class="anchor" href="#_example_post_response_xml_and_json"></a>Example POST Response - XML and JSON</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -1371,6 +1327,49 @@ public class JavaSampleClass {
 }</pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_email_attributes"><a class="anchor" href="#_email_attributes"></a>Email Attributes</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DateSent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The date that this Email Message was send.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AccountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The unique id of the Account that sent this Email message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">From</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Email address that initiated the message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Email address of the recipient.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The text body of the email message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subject</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The subject of the email message.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </article>

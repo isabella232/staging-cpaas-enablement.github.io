@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm API – Applications :: Restcomm CPaaS Enablement Docs</title>
+    <title>Applications :: Restcomm CPaaS Enablement Docs</title>
     <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/rest-api/applications-api.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
@@ -855,7 +855,7 @@
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm API – Applications</h1>
+  <h1>Applications</h1>
 <div class="sect1">
 <h2 id="_applications"><a class="anchor" href="#_applications"></a>Applications</h2>
 <div class="sectionbody">
@@ -876,61 +876,6 @@
 <div class="paragraph">
 <p><strong>2012-04-24/Accounts/{AccountSid}/Applications/{ApplicationSid}</strong></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_resource_properties"><a class="anchor" href="#_resource_properties"></a>Resource Properties</h3>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PROPERTY</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DESCRIPTION</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A string that uniquely identifies this Application.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DateCreated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date when this Application was created.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DateUpdated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date wher this Application was last updated.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FriendlyName</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A friendly name for this Application.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AccountSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The unique ID of the Account that owns this Application.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ApiVersion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Version of the API applied to this Application.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HasVoiceCallerIdLookup</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Look up the caller’s caller-ID name from the CNAM database. Either true or false.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this Application, relative to <a href="https://localhost:port/restcomm" class="bare">https://localhost:port/restcomm</a>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RcmlUrl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP address that RestComm will use to get the RCML of this Application.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kind</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The kind of this Application. (Supported values: voice, sms or ussd)</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="sect2">
 <h3 id="_supported_operations"><a class="anchor" href="#_supported_operations"></a>Supported Operations</h3>
@@ -1566,6 +1511,61 @@ public class JavaSampleClass {
   }
  ]</pre>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_applications_attributes"><a class="anchor" href="#_applications_attributes"></a>Applications Attributes</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PROPERTY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DESCRIPTION</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A string that uniquely identifies this Application.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The date when this Application was created.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The date wher this Application was last updated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FriendlyName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A friendly name for this Application.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AccountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The unique ID of the Account that owns this Application.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ApiVersion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version of the API applied to this Application.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HasVoiceCallerIdLookup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Look up the caller’s caller-ID name from the CNAM database. Either true or false.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this Application, relative to <a href="https://localhost:port/restcomm" class="bare">https://localhost:port/restcomm</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RcmlUrl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP address that RestComm will use to get the RCML of this Application.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kind</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The kind of this Application. (Supported values: voice, sms or ussd)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
