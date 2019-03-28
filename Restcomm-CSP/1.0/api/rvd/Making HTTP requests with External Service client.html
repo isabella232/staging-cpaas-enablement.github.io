@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="enterprise-persona">
+<html lang="en" class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm RCML – Pause :: Restcomm CPaaS Enablement Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/rcml/pause-rcml.html">
+    <title>Accessing HTTP resources with External Service element :: Restcomm CPaaS Enablement Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api/rvd/Making HTTP requests with External Service client.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -546,7 +546,7 @@
               nav-icon-rcml
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="rcml-category.html">RCML</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/rcml-category.html">RCML</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -559,7 +559,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="dial.html">Dial</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/dial.html">Dial</a>
               
             </span>
           </div>
@@ -585,7 +585,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="number-rcml.html">Number</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/number-rcml.html">Number</a>
               
             </span>
           </div>
@@ -598,7 +598,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="gather.html">SIP</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/gather.html">SIP</a>
               
             </span>
           </div>
@@ -611,7 +611,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="gather.html">Gather</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/gather.html">Gather</a>
               
             </span>
           </div>
@@ -624,7 +624,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="say-rcml.html">Say</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/say-rcml.html">Say</a>
               
             </span>
           </div>
@@ -637,7 +637,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="play-rcml.html">Play</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/play-rcml.html">Play</a>
               
             </span>
           </div>
@@ -650,7 +650,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="sms-rcml.html">SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/sms-rcml.html">SMS</a>
               
             </span>
           </div>
@@ -663,20 +663,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="hangup-rcml.html">Hangup</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item is-current-page" data-depth="2">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="pause-rcml.html">Pause</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/hangup-rcml.html">Hangup</a>
               
             </span>
           </div>
@@ -689,7 +676,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="redirect-rcml.html">Redirect</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/pause-rcml.html">Pause</a>
               
             </span>
           </div>
@@ -702,7 +689,20 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="record-rcml.html">Record</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/redirect-rcml.html">Redirect</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="2">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../rcml/record-rcml.html">Record</a>
               
             </span>
           </div>
@@ -849,81 +849,209 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">Restcomm CPaaS Enablement Docs</a></li>
-    <li class="crumb"><a href="rcml-category.html">RCML</a></li>
-    <li class="crumb"><a href="pause-rcml.html">Pause</a></li>
+    <li class="crumb"><a href="Making HTTP requests with External Service client.html">Accessing HTTP resources with External Service element</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm RCML – Pause</h1>
-<div class="sect1">
-<h2 id="_pause"><a class="anchor" href="#_pause"></a>Pause</h2>
+  <h1>Accessing HTTP resources with External Service element</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <strong>&lt;Pause&gt;</strong> verb waits silently for a specific number of seconds. If &lt;Pause&gt; is the first verb in a RCML response, RestComm will wait the specified number of seconds before picking up the call.</p>
+<p>Restcomm Visual Designer’s External Service element is a tool for making HTTP requests to external services and processessing their responses. This document focuses on the former. It explains its capabilities and describes how it can be used from RVD’s UI. Currently ES client supports:</p>
 </div>
-<div class="sect2">
-<h3 id="_pause_attributes"><a class="anchor" href="#_pause_attributes"></a>Pause Attributes</h3>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Allowed Values</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">length</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">integer &gt; 0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1 second</p></td>
-</tr>
-</tbody>
-</table>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>length.</strong> The 'length' attribute specifies how many seconds RestComm will wait silently before continuing on.</p>
+<p>GET or POST request methods</p>
+</li>
+<li>
+<p>JSON or web form content types</p>
+</li>
+<li>
+<p>HTTP or HTTPS schemes</p>
+</li>
+<li>
+<p>basic HTTP authentication</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_nesting"><a class="anchor" href="#_nesting"></a>Nesting</h3>
+</div>
+<div class="sect1">
+<h2 id="_a_simple_get_request"><a class="anchor" href="#_a_simple_get_request"></a>A Simple GET request</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The &lt;Pause&gt; verb can not have any other verbs or nouns nested.</p>
+<p>Here is a simple GET request with parameters:</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
-<div class="paragraph">
-<p>For an example of how to use the <strong>&lt;Pause&gt;</strong> verb see below.</p>
-</div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>&lt;Response&gt;
-    &lt;Pause length="5"/&gt;
-&lt;/Response&gt;</pre>
+<img src="../_images/Selection_069.png" alt="Selection_069" width="916" height="227">
+</div>
+</div>
+<div class="paragraph">
+<p>By default, all requests use GET method. Note that name-value parameter is user defined. Such parameters are appended in the query when the request is made. It’s a good practice to keep parameters in their own fields and avoid putting them directly in the Service Url field. Here is what the actual data on the wire:</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<div class="paragraph">
+<p>GET /services/simpleGetRequest.php?name=foo HTTP/1.1</p>
+</div>
+<div class="paragraph">
+<p>Host: localhost</p>
+</div>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="paragraph">
+<p>HTTP/1.1 200 OK</p>
+</div>
+<div class="sect2">
+<h3 id="_a_note_on_em_variable_expansion_em"><a class="anchor" href="#_a_note_on_em_variable_expansion_em"></a>A note on <em>Variable expansion</em></h3>
+<div class="paragraph">
+<p>Both Service Url and Value fields support <em>variable expansion</em>. That means that all $variables and references in them will be replaced by their actual value before the request is being made.</p>
+</div>
+<div class="paragraph">
+<p><strong>For example:</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_071.png" alt="Selection_071" width="918" height="232">
+</div>
+</div>
+<div class="paragraph">
+<p>Here $firstname variable will be expanded to its actual content.</p>
+</div>
+<div class="paragraph">
+<p>$firstname → name</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_posting_web_forms"><a class="anchor" href="#_posting_web_forms"></a>POSTing web forms</h3>
+<div class="paragraph">
+<p>Here is a simple POST request:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_073.png" alt="post request" width="908" height="333">
+</div>
+</div>
+<div class="paragraph">
+<p>In order to access the advances features of the ES client you will need to click on the <em>gear</em> icon. Also notice the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can switch the HTTP method used by using the Method drop down menu. Default is GET.</p>
+</li>
+<li>
+<p>Either www form or json content types are supported. For common url-encoded request use www form.</p>
+</li>
+<li>
+<p>Manually building the body of the request with ‘&amp;’ and ‘=’ can often be a daunting and error-prone task. Check Automatically populate from service parameters to let RVD build the request body from the Name/Value pairs you have defined.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Let’s see it in action:</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<div class="paragraph">
+<p>POST /services/simplePostRequest.php HTTP/1.1</p>
+</div>
+<div class="paragraph">
+<p>Content-Length: 21</p>
+</div>
+<div class="paragraph">
+<p>Content-Type: application/x-www-form-urlencoded</p>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>name=foo&amp;lastname=bar</p>
+</div>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="paragraph">
+<p>HTTP/1.1 200 OK</p>
+</div>
+<div class="sect3">
+<h4 id="_provide_post_body_manually"><a class="anchor" href="#_provide_post_body_manually"></a>Provide POST body manually</h4>
+<div class="paragraph">
+<p>You can also provide the POST body manually if you want. For example:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_074.png" alt="provide POST body manually" width="910" height="287">
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how we have removed the service parameters and provided the url-encoded body instead. In case the service parameters were still there, they would be ignored.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_delayed_pickup"><a class="anchor" href="#_delayed_pickup"></a>Delayed pickup</h4>
+<h4 id="_posting_json"><a class="anchor" href="#_posting_json"></a>POSTing json</h4>
 <div class="paragraph">
-<p>This example demonstrates using <code>&lt;Pause&gt;</code> to wait between two <code>&lt;Say&gt;</code> verbs.</p>
+<p>Using a JSON request body is not much different:</p>
 </div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;Response&gt;
-    &lt;Say&gt;I will pause 10 seconds starting now!&lt;/Say&gt;
-    &lt;Pause length="10"/&gt;
-    &lt;Say&gt;I just paused 10 seconds&lt;/Say&gt;
-&lt;/Response&gt;</pre>
+<img src="../_images/Selection_075.png" alt="Selection_075" width="914" height="268">
+</div>
+</div>
+<div class="paragraph">
+<p>POSTing JSON can only be done by manually providing the JSON expression. You will just need to set the <em>Content type</em> to json and type the JSON expression.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example of JSON expression:</p>
+</div>
+<div class="paragraph">
+<p>{"name":<strong>"$firstname"</strong>,"lastname":"bar"}</p>
+</div>
+<div class="paragraph">
+<p>Note that double quotes are being used in the JSON expression. RVD does not know about the json syntax and its types. It will just go for a search‘n’replace. You will need to make sure that a valid json expression will result at the end.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="using-basic-http-authentication"><a class="anchor" href="#using-basic-http-authentication"></a>Using basic HTTP authentication</h4>
+<div class="paragraph">
+<p>For services that are protected with basic http authentication the user credentials need also to be provided: <strong>image::Selection_076.png[Selection_076,width=915,height=262]</strong></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="handling-service-http-errors"><a class="anchor" href="#handling-service-http-errors"></a>Handling service HTTP errors</h4>
+<div class="paragraph">
+<p>In case the external service fails with an HTTP error code a handler can be used. In order to set up the handler you will need to:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>create a handler RVD module</p>
+</li>
+<li>
+<p>bind the ES component to this handler using ‘On Remote Error’ drop down menu</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Here is a sample handler module labeled ‘Error announcement’:</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_077.png" alt="Selection_077" width="937" height="371">
+</div>
+</div>
+<div class="paragraph">
+<p>You can find the ‘On Remote Error’ drop down menu at the bottom of the ES component. Here is how it should look like after binding it to the handler module:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_078.png" alt="Selection_078" width="464" height="49">
 </div>
 </div>
 </div>

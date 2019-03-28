@@ -19,14 +19,9 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item header-logo-link" href="https://staging-cpaas-enablement-docs.restcomm.com"></a>
-      <!--
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      -->
+      <a class="navbar-item header-logo-link" href="
+        https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api
+      "></a>
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -51,18 +46,15 @@
       </button>
     </div>
     <div class="navbar-enterprise-container">
-<!--
-        <a class="navbar-enterprise-item active-tab" href="voice-category.html">API Reference</a>
-        <a class="navbar-enterprise-item" href="tutorials-index.html">Tutorials</a>
-        <a class="navbar-enterprise-item" href="rvd/rvd-index.html">Visual Designer</a>
--->
-        <a class="navbar-enterprise-item active-tab" href="/Restcomm-CSP/1.0/api/voice-category.html">API Reference</a>
-        <a class="navbar-enterprise-item" href="/Restcomm-CSP/1.0/api/tutorials-index.html">Tutorials</a>
-        <a class="navbar-enterprise-item" href="/Restcomm-CSP/1.0/api/rvd/rvd-index.html">Visual Designer</a>
+
+      <a class="navbar-enterprise-item active-tab" href="/Restcomm-CSP/1.0/api/voice-category.html">API Reference</a>
+      <a class="navbar-enterprise-item" href="/Restcomm-CSP/1.0/api/tutorials-index.html">Tutorials</a>
+      <a class="navbar-enterprise-item" href="/Restcomm-CSP/1.0/api/rvd/rvd-index.html">Visual Designer</a>
+
+
     </div>
   </nav>
 </header>
-
 <div class="main-wrapper">
 <div class="navigation-container" data-component="Restcomm-CSP" data-version="1.0" >
   <aside class="navigation">
@@ -790,7 +782,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="organization-api.html">Organization API</a>
+              <a class="nav-link nav-flex-item-text" href="#">rest-api/organization-api.adoc</a>
               
             </span>
           </div>
@@ -990,134 +982,6 @@
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 20)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 20)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 20)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 20)">Java</button>
-      </div>
-      <div id="Curl-20" class="sample-language-20">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Email/Messages.xml \
-   -d 'To=email@hotmail.com' \
-   -d 'From=email@gmail.com' \
-   -d 'Body=This is a test from RestComm' \
-   -d 'Subject=Test Email' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-20" class="sample-language-20" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
-
-const restcommDomain = 'mycompany.restcomm.com';
-const accountSid = 'YourAccountSid';
-const authToken = 'YourAuthToken';
-
-request.({
-      method: 'POST',
-      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/SMS/Messages.json',
-      auth: { 'user': accountSid, 'pass': authToken },
-      form: {
-         'To': 'email@hotmail.com',
-         'From': 'email@gmail.com',
-         'Body': 'This is a test from RestComm',
-         'Subject': 'Test Email'
-      }
-   },
-   function (error, response, body) {
-      console.log("Status code: " + response.statusCode + "\nBody: " + body);
-});
-</code></pre>
-      </div>
-      <div id="Python-20" class="sample-language-20" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Change 'mycompany' to the desired restcomm organization
-restcomm_domain = 'mycompany.restcomm.com'
-# Provide your Account Sid and Auth Token from your Console Account page
-account_sid = 'YourAccountSid'
-auth_token = 'YourAuthToken'
-
-userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-            'Content-type': 'application/x-www-form-urlencoded',
-            'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'To': 'email@hotmail.com',
-   'From': 'email@gmail.com',
-   'Body': 'This is a test from RestComm',
-   'Subject': 'Test Email'
-})
-
-conn = HTTPSConnection(restcomm_domain)
-conn.request("POST", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Email/Messages.xml',
-      params, headers=headers)
-res = conn.getresponse()
-
-print(res.status, res.reason)
-
-# Response text
-data = res.read()
-
-conn.close()
-</code></pre>
-      </div>
-      <div id="Java-20" class="sample-language-20" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Change 'mycompany' to the desired restcomm organization
-   public static final String restcommDomain = "mycompany.restcomm.com";
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String accountSid = "YourAccountSid";
-   public static final String authToken = "YourAuthToken";
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = accountSid + ':' + authToken;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Email/Messages.xml");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("To=email@hotmail.com&" +
-        "From=email@gmail.com&" +
-        "Body=This is a test from RestComm&" +
-        "Subject=Test Email");
-      os.close();
-
-      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-      String inputLine;
-      while ((inputLine = in.readLine()) != null)
-         System.out.println(inputLine);
-      in.close();
-  }
-}
-</code></pre>
-      </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="example-post-response---xml-and-json"><a class="anchor" href="#example-post-response---xml-and-json"></a>Example POST Response - XML and JSON</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>XML POST Response</p>
-</li>
-</ul>
-</div>
-      <div class="sample-code-bar">
         <button class="sample-code-button" onclick="openLanguage('Curl', 21)">Curl</button>
         <button class="sample-code-button" onclick="openLanguage('Nodejs', 21)">Nodejs</button>
         <button class="sample-code-button" onclick="openLanguage('Python', 21)">Python</button>
@@ -1232,23 +1096,16 @@ public class JavaSampleClass {
 }
 </code></pre>
       </div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;RestcommResponse&gt;
-  &lt;EmailMessage&gt;
-    &lt;DateSent&gt;2016-02-07T23:43:03.910Z&lt;/DateSent&gt;
-    &lt;AccountSid&gt;ACae6e420f425248d6a26948c17a9e2acf&lt;/AccountSid&gt;
-    &lt;From&gt;email@gmail.com&lt;/From&gt;
-    &lt;To&gt;email@hotmail.com&lt;/To&gt;
-    &lt;Body&gt;This is a test from RestComm&lt;/Body&gt;
-    &lt;Subject&gt;Test Email&lt;/Subject&gt;
-  &lt;/EmailMessage&gt;</pre>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="example-post-response---xml-and-json"><a class="anchor" href="#example-post-response---xml-and-json"></a>Example POST Response - XML and JSON</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>JSON POST Response</p>
+<p>XML POST Response</p>
 </li>
 </ul>
 </div>
@@ -1259,7 +1116,7 @@ public class JavaSampleClass {
         <button class="sample-code-button" onclick="openLanguage('Java', 22)">Java</button>
       </div>
       <div id="Curl-22" class="sample-language-22">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Email/Messages.json \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Email/Messages.xml \
    -d 'To=email@hotmail.com' \
    -d 'From=email@gmail.com' \
    -d 'Body=This is a test from RestComm' \
@@ -1315,7 +1172,7 @@ params = urlencode({
 })
 
 conn = HTTPSConnection(restcomm_domain)
-conn.request("POST", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Email/Messages.json',
+conn.request("POST", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Email/Messages.xml',
       params, headers=headers)
 res = conn.getresponse()
 
@@ -1328,6 +1185,141 @@ conn.close()
 </code></pre>
       </div>
       <div id="Java-22" class="sample-language-22" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String restcommDomain = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String accountSid = "YourAccountSid";
+   public static final String authToken = "YourAuthToken";
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = accountSid + ':' + authToken;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL(("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Email/Messages.xml");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("POST");
+      conn.setDoOutput(true);
+      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
+
+      // Update POST parameters accordingly
+      os.writeBytes("To=email@hotmail.com&" +
+        "From=email@gmail.com&" +
+        "Body=This is a test from RestComm&" +
+        "Subject=Test Email");
+      os.close();
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+         System.out.println(inputLine);
+      in.close();
+  }
+}
+</code></pre>
+      </div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;RestcommResponse&gt;
+  &lt;EmailMessage&gt;
+    &lt;DateSent&gt;2016-02-07T23:43:03.910Z&lt;/DateSent&gt;
+    &lt;AccountSid&gt;ACae6e420f425248d6a26948c17a9e2acf&lt;/AccountSid&gt;
+    &lt;From&gt;email@gmail.com&lt;/From&gt;
+    &lt;To&gt;email@hotmail.com&lt;/To&gt;
+    &lt;Body&gt;This is a test from RestComm&lt;/Body&gt;
+    &lt;Subject&gt;Test Email&lt;/Subject&gt;
+  &lt;/EmailMessage&gt;</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>JSON POST Response</p>
+</li>
+</ul>
+</div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button" onclick="openLanguage('Curl', 23)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 23)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 23)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 23)">Java</button>
+      </div>
+      <div id="Curl-23" class="sample-language-23">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Email/Messages.json \
+   -d 'To=email@hotmail.com' \
+   -d 'From=email@gmail.com' \
+   -d 'Body=This is a test from RestComm' \
+   -d 'Subject=Test Email' \
+   -u 'YourAccountSid:YourAuthToken'
+</code></pre>
+      </div>
+      <div id="Nodejs-23" class="sample-language-23" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+const restcommDomain = 'mycompany.restcomm.com';
+const accountSid = 'YourAccountSid';
+const authToken = 'YourAuthToken';
+
+request.({
+      method: 'POST',
+      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/SMS/Messages.json',
+      auth: { 'user': accountSid, 'pass': authToken },
+      form: {
+         'To': 'email@hotmail.com',
+         'From': 'email@gmail.com',
+         'Body': 'This is a test from RestComm',
+         'Subject': 'Test Email'
+      }
+   },
+   function (error, response, body) {
+      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+});
+</code></pre>
+      </div>
+      <div id="Python-23" class="sample-language-23" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+from urllib.parse import urlencode
+
+# Change 'mycompany' to the desired restcomm organization
+restcomm_domain = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+account_sid = 'YourAccountSid'
+auth_token = 'YourAuthToken'
+
+userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass,
+            'Content-type': 'application/x-www-form-urlencoded',
+            'Accept': 'text/plain' }
+
+# Update POST parameters accordingly
+params = urlencode({
+   'To': 'email@hotmail.com',
+   'From': 'email@gmail.com',
+   'Body': 'This is a test from RestComm',
+   'Subject': 'Test Email'
+})
+
+conn = HTTPSConnection(restcomm_domain)
+conn.request("POST", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Email/Messages.json',
+      params, headers=headers)
+res = conn.getresponse()
+
+print(res.status, res.reason)
+
+# Response text
+data = res.read()
+
+conn.close()
+</code></pre>
+      </div>
+      <div id="Java-23" class="sample-language-23" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1391,7 +1383,6 @@ public class JavaSampleClass {
         <h5 class="footer-column-title">Products</h5>
         <p><a href="programmable.html#_getting_started_with_programmable_voice">Programmable Voice</a></p>
         <p><a href="programmable.html#_getting_started_with_programmable_sms">Programmable SMS</a></p>
-        <p><a href="message-exchange.html">Message Exchange</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use cases</h5>
@@ -1401,7 +1392,6 @@ public class JavaSampleClass {
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
-        <p><a href="https://staging-cpaas-enablement-docs.restcomm.com">Documentation</a></p>
         <p><a href="https://www.restcomm.com/blog/">Blog</a></p>
         <p><a href="support.html">Terms And Conditions</a></p>
       </div>
@@ -1416,14 +1406,6 @@ public class JavaSampleClass {
           <span><a href="https://plus.google.com/+Restcomm"><i class="fab fa-google-plus-g"></i></a></span>
           <span><a href="https://www.restcomm.com/blog/"><i class="fas fa-rss"></i></a></span>
         </p>
-      </div>
-    </div>
-    <div class="footer-bottom-container">
-      <div class="footer-logo">
-        <a class="footer-logo-link" href="https://telestax.com"></a>
-      </div>
-      <div class="footer-copyright">
-        <p class="footer-copyright-paragraph">COPYRIGHT © 2018, TELESTAX INC., ALL RIGHTS RESERVED.</p>
       </div>
     </div>
   </div>

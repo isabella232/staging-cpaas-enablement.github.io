@@ -19,14 +19,9 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item header-logo-link" href="https://staging-cpaas-enablement-docs.restcomm.com"></a>
-      <!--
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      -->
+      <a class="navbar-item header-logo-link" href="
+        https://staging-cpaas-enablement-docs.restcomm.com/Restcomm-CSP/1.0/api
+      "></a>
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -51,18 +46,15 @@
       </button>
     </div>
     <div class="navbar-enterprise-container">
-<!--
-        <a class="navbar-enterprise-item active-tab" href="voice-category.html">API Reference</a>
-        <a class="navbar-enterprise-item" href="tutorials-index.html">Tutorials</a>
-        <a class="navbar-enterprise-item" href="rvd/rvd-index.html">Visual Designer</a>
--->
-        <a class="navbar-enterprise-item active-tab" href="/Restcomm-CSP/1.0/api/voice-category.html">API Reference</a>
-        <a class="navbar-enterprise-item" href="/Restcomm-CSP/1.0/api/tutorials-index.html">Tutorials</a>
-        <a class="navbar-enterprise-item" href="/Restcomm-CSP/1.0/api/rvd/rvd-index.html">Visual Designer</a>
+
+      <a class="navbar-enterprise-item active-tab" href="/Restcomm-CSP/1.0/api/voice-category.html">API Reference</a>
+      <a class="navbar-enterprise-item" href="/Restcomm-CSP/1.0/api/tutorials-index.html">Tutorials</a>
+      <a class="navbar-enterprise-item" href="/Restcomm-CSP/1.0/api/rvd/rvd-index.html">Visual Designer</a>
+
+
     </div>
   </nav>
 </header>
-
 <div class="main-wrapper">
 <div class="navigation-container" data-component="Restcomm-CSP" data-version="1.0" >
   <aside class="navigation">
@@ -790,7 +782,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="organization-api.html">Organization API</a>
+              <a class="nav-link nav-flex-item-text" href="#">rest-api/organization-api.adoc</a>
               
             </span>
           </div>
@@ -997,17 +989,17 @@
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 23)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 23)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 23)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 23)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 24)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 24)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 24)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 24)">Java</button>
       </div>
-      <div id="Curl-23" class="sample-language-23">
+      <div id="Curl-24" class="sample-language-24">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Notifications.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-23" class="sample-language-23" style="display:none">
+      <div id="Nodejs-24" class="sample-language-24" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -1025,7 +1017,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-23" class="sample-language-23" style="display:none">
+      <div id="Python-24" class="sample-language-24" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1051,7 +1043,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-23" class="sample-language-23" style="display:none">
+      <div id="Java-24" class="sample-language-24" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1090,17 +1082,17 @@ public class JavaSampleClass {
 <div class="sect2">
 <h3 id="_json_get_response"><a class="anchor" href="#_json_get_response"></a>JSON GET Response</h3>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 24)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 24)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 24)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 24)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 25)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 25)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 25)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 25)">Java</button>
       </div>
-      <div id="Curl-24" class="sample-language-24">
+      <div id="Curl-25" class="sample-language-25">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Notifications.json \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-24" class="sample-language-24" style="display:none">
+      <div id="Nodejs-25" class="sample-language-25" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -1118,7 +1110,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-24" class="sample-language-24" style="display:none">
+      <div id="Python-25" class="sample-language-25" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1144,7 +1136,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-24" class="sample-language-24" style="display:none">
+      <div id="Java-25" class="sample-language-25" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1253,17 +1245,17 @@ public class JavaSampleClass {
 <p>The example below will only return Messages sent from client Alice</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 25)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 25)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 25)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 25)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 26)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 26)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 26)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 26)">Java</button>
       </div>
-      <div id="Curl-25" class="sample-language-25">
+      <div id="Curl-26" class="sample-language-26">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Notifications.json?ErrorCode=1 \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-25" class="sample-language-25" style="display:none">
+      <div id="Nodejs-26" class="sample-language-26" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -1281,7 +1273,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-25" class="sample-language-25" style="display:none">
+      <div id="Python-26" class="sample-language-26" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1307,7 +1299,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-25" class="sample-language-25" style="display:none">
+      <div id="Java-26" class="sample-language-26" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1423,17 +1415,17 @@ public class JavaSampleClass {
 <p>The command below will return a single item from the list of notifications using the PageSize parameter</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 26)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 26)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 26)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 26)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 27)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 27)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 27)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 27)">Java</button>
       </div>
-      <div id="Curl-26" class="sample-language-26">
+      <div id="Curl-27" class="sample-language-27">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Notifications.json?PageSize=1 \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-26" class="sample-language-26" style="display:none">
+      <div id="Nodejs-27" class="sample-language-27" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -1451,7 +1443,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-26" class="sample-language-26" style="display:none">
+      <div id="Python-27" class="sample-language-27" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1477,7 +1469,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-26" class="sample-language-26" style="display:none">
+      <div id="Java-27" class="sample-language-27" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1633,17 +1625,17 @@ public class JavaSampleClass {
 <p>The command below will return notifications sorted by the creation date in ascending order using SortBy parameter:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 27)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 27)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 27)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 27)">Java</button>
+        <button class="sample-code-button" onclick="openLanguage('Curl', 28)">Curl</button>
+        <button class="sample-code-button" onclick="openLanguage('Nodejs', 28)">Nodejs</button>
+        <button class="sample-code-button" onclick="openLanguage('Python', 28)">Python</button>
+        <button class="sample-code-button" onclick="openLanguage('Java', 28)">Java</button>
       </div>
-      <div id="Curl-27" class="sample-language-27">
+      <div id="Curl-28" class="sample-language-28">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/"Accounts/YourAccountSid/Notifications.json?SortBy=DateCreated:asc \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-27" class="sample-language-27" style="display:none">
+      <div id="Nodejs-28" class="sample-language-28" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 const restcommDomain = 'mycompany.restcomm.com';
@@ -1661,7 +1653,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-27" class="sample-language-27" style="display:none">
+      <div id="Python-28" class="sample-language-28" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1687,7 +1679,7 @@ data = res.read()
 conn.close()
 </code></pre>
       </div>
-      <div id="Java-27" class="sample-language-27" style="display:none">
+      <div id="Java-28" class="sample-language-28" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1761,7 +1753,6 @@ public class JavaSampleClass {
         <h5 class="footer-column-title">Products</h5>
         <p><a href="programmable.html#_getting_started_with_programmable_voice">Programmable Voice</a></p>
         <p><a href="programmable.html#_getting_started_with_programmable_sms">Programmable SMS</a></p>
-        <p><a href="message-exchange.html">Message Exchange</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use cases</h5>
@@ -1771,7 +1762,6 @@ public class JavaSampleClass {
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
-        <p><a href="https://staging-cpaas-enablement-docs.restcomm.com">Documentation</a></p>
         <p><a href="https://www.restcomm.com/blog/">Blog</a></p>
         <p><a href="support.html">Terms And Conditions</a></p>
       </div>
@@ -1786,14 +1776,6 @@ public class JavaSampleClass {
           <span><a href="https://plus.google.com/+Restcomm"><i class="fab fa-google-plus-g"></i></a></span>
           <span><a href="https://www.restcomm.com/blog/"><i class="fas fa-rss"></i></a></span>
         </p>
-      </div>
-    </div>
-    <div class="footer-bottom-container">
-      <div class="footer-logo">
-        <a class="footer-logo-link" href="https://telestax.com"></a>
-      </div>
-      <div class="footer-copyright">
-        <p class="footer-copyright-paragraph">COPYRIGHT © 2018, TELESTAX INC., ALL RIGHTS RESERVED.</p>
       </div>
     </div>
   </div>
