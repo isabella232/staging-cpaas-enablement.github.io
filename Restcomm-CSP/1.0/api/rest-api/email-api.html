@@ -927,13 +927,26 @@
           sampleClass.style.display = "none";
         }
         document.getElementById(language + '-' + index).style.display = "block";
+
+        // first, disable the previously selected tab title
+        //const currentButtons = document.getElementsByClassName('scsIndex-' + index + '.is-active')
+        //if (currentButtons.length > 0) {
+        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
+        if (previouslyActive.length > 0) {
+          previouslyActive[0].classList.toggle('is-active')
+        }
+        //}
+
+        // then, enable the newly selected title
+        event.target.classList.toggle('is-active')
+
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 21)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 21)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 21)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 21)">Java</button>
+        <button class="sample-code-button scsIndex-21 is-active" onclick="openLanguage('Curl', 21)">Curl</button>
+        <button class="sample-code-button scsIndex-21" onclick="openLanguage('Nodejs', 21)">Nodejs</button>
+        <button class="sample-code-button scsIndex-21" onclick="openLanguage('Python', 21)">Python</button>
+        <button class="sample-code-button scsIndex-21" onclick="openLanguage('Java', 21)">Java</button>
       </div>
       <div id="Curl-21" class="sample-language-21">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Email/Messages.xml \
@@ -1066,10 +1079,10 @@ public class JavaSampleClass {
 </ul>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 22)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 22)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 22)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 22)">Java</button>
+        <button class="sample-code-button scsIndex-22 is-active" onclick="openLanguage('Curl', 22)">Curl</button>
+        <button class="sample-code-button scsIndex-22" onclick="openLanguage('Nodejs', 22)">Nodejs</button>
+        <button class="sample-code-button scsIndex-22" onclick="openLanguage('Python', 22)">Python</button>
+        <button class="sample-code-button scsIndex-22" onclick="openLanguage('Java', 22)">Java</button>
       </div>
       <div id="Curl-22" class="sample-language-22">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Email/Messages.xml \
@@ -1201,10 +1214,10 @@ public class JavaSampleClass {
 </ul>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 23)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 23)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 23)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 23)">Java</button>
+        <button class="sample-code-button scsIndex-23 is-active" onclick="openLanguage('Curl', 23)">Curl</button>
+        <button class="sample-code-button scsIndex-23" onclick="openLanguage('Nodejs', 23)">Nodejs</button>
+        <button class="sample-code-button scsIndex-23" onclick="openLanguage('Python', 23)">Python</button>
+        <button class="sample-code-button scsIndex-23" onclick="openLanguage('Java', 23)">Java</button>
       </div>
       <div id="Curl-23" class="sample-language-23">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Email/Messages.json \

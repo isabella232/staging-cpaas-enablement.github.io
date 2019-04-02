@@ -1025,13 +1025,26 @@ Modifies an Application resource and returns the representation, including the p
           sampleClass.style.display = "none";
         }
         document.getElementById(language + '-' + index).style.display = "block";
+
+        // first, disable the previously selected tab title
+        //const currentButtons = document.getElementsByClassName('scsIndex-' + index + '.is-active')
+        //if (currentButtons.length > 0) {
+        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
+        if (previouslyActive.length > 0) {
+          previouslyActive[0].classList.toggle('is-active')
+        }
+        //}
+
+        // then, enable the newly selected title
+        event.target.classList.toggle('is-active')
+
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 12)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 12)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 12)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 12)">Java</button>
+        <button class="sample-code-button scsIndex-12 is-active" onclick="openLanguage('Curl', 12)">Curl</button>
+        <button class="sample-code-button scsIndex-12" onclick="openLanguage('Nodejs', 12)">Nodejs</button>
+        <button class="sample-code-button scsIndex-12" onclick="openLanguage('Python', 12)">Python</button>
+        <button class="sample-code-button scsIndex-12" onclick="openLanguage('Java', 12)">Java</button>
       </div>
       <div id="Curl-12" class="sample-language-12">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Applications.xml \
@@ -1173,10 +1186,10 @@ public class JavaSampleClass {
 <h2 id="_update_a_application"><a class="anchor" href="#_update_a_application"></a>Update a Application</h2>
 <div class="sectionbody">
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 13)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 13)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 13)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 13)">Java</button>
+        <button class="sample-code-button scsIndex-13 is-active" onclick="openLanguage('Curl', 13)">Curl</button>
+        <button class="sample-code-button scsIndex-13" onclick="openLanguage('Nodejs', 13)">Nodejs</button>
+        <button class="sample-code-button scsIndex-13" onclick="openLanguage('Python', 13)">Python</button>
+        <button class="sample-code-button scsIndex-13" onclick="openLanguage('Java', 13)">Java</button>
       </div>
       <div id="Curl-13" class="sample-language-13">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Applications/#(application_sid).xml \
@@ -1302,10 +1315,10 @@ public class JavaSampleClass {
 <h2 id="_delete_a_application"><a class="anchor" href="#_delete_a_application"></a>Delete a Application</h2>
 <div class="sectionbody">
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 14)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 14)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 14)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 14)">Java</button>
+        <button class="sample-code-button scsIndex-14 is-active" onclick="openLanguage('Curl', 14)">Curl</button>
+        <button class="sample-code-button scsIndex-14" onclick="openLanguage('Nodejs', 14)">Nodejs</button>
+        <button class="sample-code-button scsIndex-14" onclick="openLanguage('Python', 14)">Python</button>
+        <button class="sample-code-button scsIndex-14" onclick="openLanguage('Java', 14)">Java</button>
       </div>
       <div id="Curl-14" class="sample-language-14">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X DELETE https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Applications/#(account_sid)/Applications/#(application_sid).xml \
@@ -1394,10 +1407,10 @@ public class JavaSampleClass {
 <p>Get a List of available Applications</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 15)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 15)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 15)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 15)">Java</button>
+        <button class="sample-code-button scsIndex-15 is-active" onclick="openLanguage('Curl', 15)">Curl</button>
+        <button class="sample-code-button scsIndex-15" onclick="openLanguage('Nodejs', 15)">Nodejs</button>
+        <button class="sample-code-button scsIndex-15" onclick="openLanguage('Python', 15)">Python</button>
+        <button class="sample-code-button scsIndex-15" onclick="openLanguage('Java', 15)">Java</button>
       </div>
       <div id="Curl-15" class="sample-language-15">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Applications.xml \

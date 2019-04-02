@@ -949,13 +949,26 @@
           sampleClass.style.display = "none";
         }
         document.getElementById(language + '-' + index).style.display = "block";
+
+        // first, disable the previously selected tab title
+        //const currentButtons = document.getElementsByClassName('scsIndex-' + index + '.is-active')
+        //if (currentButtons.length > 0) {
+        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
+        if (previouslyActive.length > 0) {
+          previouslyActive[0].classList.toggle('is-active')
+        }
+        //}
+
+        // then, enable the newly selected title
+        event.target.classList.toggle('is-active')
+
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button" onclick="openLanguage('Curl', 11)">Curl</button>
-        <button class="sample-code-button" onclick="openLanguage('Nodejs', 11)">Nodejs</button>
-        <button class="sample-code-button" onclick="openLanguage('Python', 11)">Python</button>
-        <button class="sample-code-button" onclick="openLanguage('Java', 11)">Java</button>
+        <button class="sample-code-button scsIndex-11 is-active" onclick="openLanguage('Curl', 11)">Curl</button>
+        <button class="sample-code-button scsIndex-11" onclick="openLanguage('Nodejs', 11)">Nodejs</button>
+        <button class="sample-code-button scsIndex-11" onclick="openLanguage('Python', 11)">Python</button>
+        <button class="sample-code-button scsIndex-11" onclick="openLanguage('Java', 11)">Java</button>
       </div>
       <div id="Curl-11" class="sample-language-11">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid.xml \
