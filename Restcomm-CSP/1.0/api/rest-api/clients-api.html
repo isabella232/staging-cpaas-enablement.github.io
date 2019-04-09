@@ -1131,17 +1131,13 @@ Restcomm has a new implied behavior when VoiceUrl is not provided for a Client a
         document.getElementById(language + '-' + index).style.display = "block";
 
         // first, disable the previously selected tab title
-        //const currentButtons = document.getElementsByClassName('scsIndex-' + index + '.is-active')
-        //if (currentButtons.length > 0) {
         const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
         if (previouslyActive.length > 0) {
           previouslyActive[0].classList.toggle('is-active')
         }
-        //}
 
         // then, enable the newly selected title
         event.target.classList.toggle('is-active')
-
       }
       </script>
       <div class="sample-code-bar">
@@ -1151,7 +1147,7 @@ Restcomm has a new implied behavior when VoiceUrl is not provided for a Client a
         <button class="sample-code-button scsIndex-16" onclick="openLanguage('Java', 16)">Java</button>
       </div>
       <div id="Curl-16" class="sample-language-16">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Clients.json \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Clients.json \
    -d 'Login=alice' \
    -d 'Password=test' \
    -u 'YourAccountSid:YourAuthToken'
@@ -1160,21 +1156,23 @@ Restcomm has a new implied behavior when VoiceUrl is not provided for a Client a
       <div id="Nodejs-16" class="sample-language-16" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
-const restcommDomain = 'mycompany.restcomm.com';
-const accountSid = 'YourAccountSid';
-const authToken = 'YourAuthToken';
+// Change 'mycompany' to the desired restcomm organization
+const RESTCOMM_DOMAIN = 'mycompany.restcomm.com';
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
 
 request.({
       method: 'POST',
-      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/SMS/Messages.json',
-      auth: { 'user': accountSid, 'pass': authToken },
+      url: 'https://' + RESTCOMM_DOMAIN + '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients.json',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       form: {
          'Login': 'alice',
          'Password': 'test'
       }
    },
    function (error, response, body) {
-      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
 });
 </code></pre>
       </div>
@@ -1184,12 +1182,12 @@ from base64 import b64encode
 from urllib.parse import urlencode
 
 # Change 'mycompany' to the desired restcomm organization
-restcomm_domain = 'mycompany.restcomm.com'
+RESTCOMM_DOMAIN = 'mycompany.restcomm.com'
 # Provide your Account Sid and Auth Token from your Console Account page
-account_sid = 'YourAccountSid'
-auth_token = 'YourAuthToken'
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
 
-userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass,
             'Content-type': 'application/x-www-form-urlencoded',
             'Accept': 'text/plain' }
@@ -1200,17 +1198,13 @@ params = urlencode({
    'Password': 'test'
 })
 
-conn = HTTPSConnection(restcomm_domain)
-conn.request("POST", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Clients.json',
+conn = HTTPSConnection(RESTCOMM_DOMAIN)
+conn.request("POST", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients.json',
       params, headers=headers)
 res = conn.getresponse()
 
-print(res.status, res.reason)
-
-# Response text
-data = res.read()
-
-conn.close()
+// Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
 </code></pre>
       </div>
       <div id="Java-16" class="sample-language-16" style="display:none">
@@ -1221,16 +1215,17 @@ import java.util.Base64;
 
 public class JavaSampleClass {
    // Change 'mycompany' to the desired restcomm organization
-   public static final String restcommDomain = "mycompany.restcomm.com";
+   public static final String RESTCOMM_DOMAIN = "mycompany.restcomm.com";
    // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String accountSid = "YourAccountSid";
-   public static final String authToken = "YourAuthToken";
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+
 
    public static void main(String[] args) throws Exception {
-      String userAndPass = accountSid + ':' + authToken;
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
       String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-      URL url = new URL(("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Clients.json");
+      URL url = new URL(("https://" + RESTCOMM_DOMAIN + "/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Clients.json");
       HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
       conn.setRequestProperty("Authorization", "Basic " + encoded);
       conn.setRequestMethod("POST");
@@ -1242,11 +1237,8 @@ public class JavaSampleClass {
         "Password=test");
       os.close();
 
-      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-      String inputLine;
-      while ((inputLine = in.readLine()) != null)
-         System.out.println(inputLine);
-      in.close();
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
   }
 }
 </code></pre>
@@ -1286,24 +1278,28 @@ public class JavaSampleClass {
         <button class="sample-code-button scsIndex-17" onclick="openLanguage('Java', 17)">Java</button>
       </div>
       <div id="Curl-17" class="sample-language-17">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X DELETE https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Clients/#(client_sid).xml \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X DELETE https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Clients/CLIENT_SID.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
       <div id="Nodejs-17" class="sample-language-17" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
-const restcommDomain = 'mycompany.restcomm.com';
-const accountSid = 'YourAccountSid';
-const authToken = 'YourAuthToken';
+// Change 'mycompany' to the desired restcomm organization
+const RESTCOMM_DOMAIN = 'mycompany.restcomm.com';
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
+// Provide additional path parameters if applicable
+const CLIENT_SID = 'my_CLIENT_SID'
 
 request({
       method: 'DELETE',
-      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/Clients/#(client_sid).xml',
-      auth: { 'user': accountSid, 'pass': authToken },
+      url: 'https://' + RESTCOMM_DOMAIN + '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients/' + CLIENT_SID + '.xml',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
    },
    function (error, response, body) {
-      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
    }
 );
 </code></pre>
@@ -1313,25 +1309,23 @@ request({
 from base64 import b64encode
 
 # Change 'mycompany' to the desired restcomm organization
-restcomm_domain = 'mycompany.restcomm.com'
+RESTCOMM_DOMAIN = 'mycompany.restcomm.com'
 # Provide your Account Sid and Auth Token from your Console Account page
-account_sid = 'YourAccountSid'
-auth_token = 'YourAuthToken'
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
+// Provide additional path parameters if applicable
+CLIENT_SID = 'my_CLIENT_SID'
 
-userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass }
 
-conn = HTTPSConnection(restcomm_domain)
-conn.request("DELETE", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Clients/#(client_sid).xml',
+conn = HTTPSConnection(RESTCOMM_DOMAIN)
+conn.request("DELETE", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients/' + CLIENT_SID + '.xml',
       headers=headers)
 res = conn.getresponse()
 
-print(res.status, res.reason)
-
-# Response text
-data = res.read()
-
-conn.close()
+// Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
 </code></pre>
       </div>
       <div id="Java-17" class="sample-language-17" style="display:none">
@@ -1342,25 +1336,24 @@ import java.util.Base64;
 
 public class JavaSampleClass {
    // Change 'mycompany' to the desired restcomm organization
-   public static final String restcommDomain = "mycompany.restcomm.com";
+   public static final String RESTCOMM_DOMAIN = "mycompany.restcomm.com";
    // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String accountSid = "YourAccountSid";
-   public static final String authToken = "YourAuthToken";
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+   // Provide additional path parameters if applicable
+   public static final String CLIENT_SID = "my_CLIENT_SID"
 
    public static void main(String[] args) throws Exception {
-      String userAndPass = accountSid + ':' + authToken;
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
       String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Clients/#(client_sid).xml");
+      URL url = new URL("https://" + RESTCOMM_DOMAIN + "/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Clients/" + CLIENT_SID + ".xml");
       HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
       conn.setRequestProperty("Authorization", "Basic " + encoded);
       conn.setRequestMethod("DELETE");
 
-      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-      String inputLine;
-      while ((inputLine = in.readLine()) != null)
-         System.out.println(inputLine);
-      in.close();
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
   }
 }
 </code></pre>
@@ -1380,7 +1373,7 @@ public class JavaSampleClass {
         <button class="sample-code-button scsIndex-18" onclick="openLanguage('Java', 18)">Java</button>
       </div>
       <div id="Curl-18" class="sample-language-18">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X PUT https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Clients/#(client_sid).xml \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X PUT https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Clients/CLIENT_SID.xml \
    -d 'Password=NewPassword' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
@@ -1388,20 +1381,24 @@ public class JavaSampleClass {
       <div id="Nodejs-18" class="sample-language-18" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
-const restcommDomain = 'mycompany.restcomm.com';
-const accountSid = 'YourAccountSid';
-const authToken = 'YourAuthToken';
+// Change 'mycompany' to the desired restcomm organization
+const RESTCOMM_DOMAIN = 'mycompany.restcomm.com';
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
+// Provide additional path parameters if applicable
+const CLIENT_SID = 'my_CLIENT_SID'
 
 request.({
       method: 'PUT',
-      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/SMS/Messages.json',
-      auth: { 'user': accountSid, 'pass': authToken },
+      url: 'https://' + RESTCOMM_DOMAIN + '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients/' + CLIENT_SID + '.xml',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       form: {
          'Password': 'NewPassword'
       }
    },
    function (error, response, body) {
-      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
 });
 </code></pre>
       </div>
@@ -1411,12 +1408,14 @@ from base64 import b64encode
 from urllib.parse import urlencode
 
 # Change 'mycompany' to the desired restcomm organization
-restcomm_domain = 'mycompany.restcomm.com'
+RESTCOMM_DOMAIN = 'mycompany.restcomm.com'
 # Provide your Account Sid and Auth Token from your Console Account page
-account_sid = 'YourAccountSid'
-auth_token = 'YourAuthToken'
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
+// Provide additional path parameters if applicable
+CLIENT_SID = 'my_CLIENT_SID'
 
-userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass,
             'Content-type': 'application/x-www-form-urlencoded',
             'Accept': 'text/plain' }
@@ -1426,17 +1425,13 @@ params = urlencode({
    'Password': 'NewPassword'
 })
 
-conn = HTTPSConnection(restcomm_domain)
-conn.request("PUT", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Clients/#(client_sid).xml',
+conn = HTTPSConnection(RESTCOMM_DOMAIN)
+conn.request("PUT", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients/' + CLIENT_SID + '.xml',
       params, headers=headers)
 res = conn.getresponse()
 
-print(res.status, res.reason)
-
-# Response text
-data = res.read()
-
-conn.close()
+// Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
 </code></pre>
       </div>
       <div id="Java-18" class="sample-language-18" style="display:none">
@@ -1447,16 +1442,18 @@ import java.util.Base64;
 
 public class JavaSampleClass {
    // Change 'mycompany' to the desired restcomm organization
-   public static final String restcommDomain = "mycompany.restcomm.com";
+   public static final String RESTCOMM_DOMAIN = "mycompany.restcomm.com";
    // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String accountSid = "YourAccountSid";
-   public static final String authToken = "YourAuthToken";
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+   // Provide additional path parameters if applicable
+   public static final String CLIENT_SID = "my_CLIENT_SID"
 
    public static void main(String[] args) throws Exception {
-      String userAndPass = accountSid + ':' + authToken;
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
       String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-      URL url = new URL(("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Clients/#(client_sid).xml");
+      URL url = new URL(("https://" + RESTCOMM_DOMAIN + "/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Clients/" + CLIENT_SID + ".xml");
       HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
       conn.setRequestProperty("Authorization", "Basic " + encoded);
       conn.setRequestMethod("PUT");
@@ -1467,11 +1464,8 @@ public class JavaSampleClass {
       os.writeBytes("Password=NewPassword");
       os.close();
 
-      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-      String inputLine;
-      while ((inputLine = in.readLine()) != null)
-         System.out.println(inputLine);
-      in.close();
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
   }
 }
 </code></pre>
@@ -1491,24 +1485,26 @@ public class JavaSampleClass {
         <button class="sample-code-button scsIndex-19" onclick="openLanguage('Java', 19)">Java</button>
       </div>
       <div id="Curl-19" class="sample-language-19">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Clients.xml \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Clients.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
       <div id="Nodejs-19" class="sample-language-19" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
-const restcommDomain = 'mycompany.restcomm.com';
-const accountSid = 'YourAccountSid';
-const authToken = 'YourAuthToken';
+// Change 'mycompany' to the desired restcomm organization
+const RESTCOMM_DOMAIN = 'mycompany.restcomm.com';
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
 
 request({
       method: 'GET',
-      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/Clients.xml',
-      auth: { 'user': accountSid, 'pass': authToken },
+      url: 'https://' + RESTCOMM_DOMAIN + '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients.xml',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
    },
    function (error, response, body) {
-      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
    }
 );
 </code></pre>
@@ -1518,25 +1514,21 @@ request({
 from base64 import b64encode
 
 # Change 'mycompany' to the desired restcomm organization
-restcomm_domain = 'mycompany.restcomm.com'
+RESTCOMM_DOMAIN = 'mycompany.restcomm.com'
 # Provide your Account Sid and Auth Token from your Console Account page
-account_sid = 'YourAccountSid'
-auth_token = 'YourAuthToken'
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
 
-userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass }
 
-conn = HTTPSConnection(restcomm_domain)
-conn.request("GET", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Clients.xml',
+conn = HTTPSConnection(RESTCOMM_DOMAIN)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients.xml',
       headers=headers)
 res = conn.getresponse()
 
-print(res.status, res.reason)
-
-# Response text
-data = res.read()
-
-conn.close()
+// Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
 </code></pre>
       </div>
       <div id="Java-19" class="sample-language-19" style="display:none">
@@ -1547,25 +1539,23 @@ import java.util.Base64;
 
 public class JavaSampleClass {
    // Change 'mycompany' to the desired restcomm organization
-   public static final String restcommDomain = "mycompany.restcomm.com";
+   public static final String RESTCOMM_DOMAIN = "mycompany.restcomm.com";
    // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String accountSid = "YourAccountSid";
-   public static final String authToken = "YourAuthToken";
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+
 
    public static void main(String[] args) throws Exception {
-      String userAndPass = accountSid + ':' + authToken;
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
       String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Clients.xml");
+      URL url = new URL("https://" + RESTCOMM_DOMAIN + "/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Clients.xml");
       HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
       conn.setRequestProperty("Authorization", "Basic " + encoded);
       conn.setRequestMethod("GET");
 
-      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-      String inputLine;
-      while ((inputLine = in.readLine()) != null)
-         System.out.println(inputLine);
-      in.close();
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
   }
 }
 </code></pre>
@@ -1616,24 +1606,26 @@ public class JavaSampleClass {
         <button class="sample-code-button scsIndex-20" onclick="openLanguage('Java', 20)">Java</button>
       </div>
       <div id="Curl-20" class="sample-language-20">
-        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://cloud.restcomm.com/restcomm/2012-04-24/Accounts/YourAccountSid/Clients.json \
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Clients.json \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
       <div id="Nodejs-20" class="sample-language-20" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
-const restcommDomain = 'mycompany.restcomm.com';
-const accountSid = 'YourAccountSid';
-const authToken = 'YourAuthToken';
+// Change 'mycompany' to the desired restcomm organization
+const RESTCOMM_DOMAIN = 'mycompany.restcomm.com';
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
 
 request({
       method: 'GET',
-      url: 'https://' + restcommDomain + '/restcomm/2012-04-24/Accounts/' + accountSid + '/Clients.json',
-      auth: { 'user': accountSid, 'pass': authToken },
+      url: 'https://' + RESTCOMM_DOMAIN + '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients.json',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
    },
    function (error, response, body) {
-      console.log("Status code: " + response.statusCode + "\nBody: " + body);
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
    }
 );
 </code></pre>
@@ -1643,25 +1635,21 @@ request({
 from base64 import b64encode
 
 # Change 'mycompany' to the desired restcomm organization
-restcomm_domain = 'mycompany.restcomm.com'
+RESTCOMM_DOMAIN = 'mycompany.restcomm.com'
 # Provide your Account Sid and Auth Token from your Console Account page
-account_sid = 'YourAccountSid'
-auth_token = 'YourAuthToken'
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
 
-userAndPass = b64encode(bytes(account_sid + ':' + auth_token, 'utf-8')).decode("ascii")
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass }
 
-conn = HTTPSConnection(restcomm_domain)
-conn.request("GET", '/restcomm/2012-04-24/Accounts/' + account_sid + '/Clients.json',
+conn = HTTPSConnection(RESTCOMM_DOMAIN)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Clients.json',
       headers=headers)
 res = conn.getresponse()
 
-print(res.status, res.reason)
-
-# Response text
-data = res.read()
-
-conn.close()
+// Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
 </code></pre>
       </div>
       <div id="Java-20" class="sample-language-20" style="display:none">
@@ -1672,25 +1660,23 @@ import java.util.Base64;
 
 public class JavaSampleClass {
    // Change 'mycompany' to the desired restcomm organization
-   public static final String restcommDomain = "mycompany.restcomm.com";
+   public static final String RESTCOMM_DOMAIN = "mycompany.restcomm.com";
    // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String accountSid = "YourAccountSid";
-   public static final String authToken = "YourAuthToken";
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+
 
    public static void main(String[] args) throws Exception {
-      String userAndPass = accountSid + ':' + authToken;
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
       String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
 
-      URL url = new URL("https://" + restcommDomain + "/restcomm/2012-04-24/Accounts/" + accountSid + "/Clients.json");
+      URL url = new URL("https://" + RESTCOMM_DOMAIN + "/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Clients.json");
       HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
       conn.setRequestProperty("Authorization", "Basic " + encoded);
       conn.setRequestMethod("GET");
 
-      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-      String inputLine;
-      while ((inputLine = in.readLine()) != null)
-         System.out.println(inputLine);
-      in.close();
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
   }
 }
 </code></pre>
