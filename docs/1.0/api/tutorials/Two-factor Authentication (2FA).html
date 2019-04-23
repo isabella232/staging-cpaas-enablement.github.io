@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="csp-persona">
+<html lang="en" class="enterprise-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bring Your Own Carrier - Restcomm Docs</title>
-    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/docs/1.0/byoc.html">
-    <meta name="description" content="Restcomm’s Bring Your Own Carrier (BYOC) feature lets Communication Service Providers (CSP) connect their network infrastructure to Restcomm and enable enterprise customers to leverage prior investments in PSTN assets. BYOC enables service providers to layer the value of a modern CPaaS on top of their existing PSTN investment from day one.">
-    <meta name="keywords" content="bring your own carrier, restcomm byoc, byoc, carrier for sms, carrier for voice, set up your own carrier, byoc setup, restcomm byoc setup, getting started with byoc">
+    <title>Two-Factor Authentication (2FA) Overview - Restcomm Docs</title>
+    <link rel="canonical" href="https://staging-cpaas-enablement-docs.restcomm.com/docs/1.0/api/tutorials/Two-factor Authentication (2FA).html">
     <meta name="generator" content="Antora 1.1.1">
-    <link rel="icon" type="image/png" href="../../_/img/favicon.png"/>
-    <link rel="stylesheet" href="../../_/css/site.css" title="antora-stylesheet">
+    <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
+    <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -22,7 +20,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item header-logo-link" href="
-        https://staging-cpaas-enablement-docs.restcomm.com
+        https://staging-cpaas-enablement-docs.restcomm.com/docs/1.0/api
         ">
       </a>
     </div>
@@ -41,31 +39,31 @@
     </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
-  <nav class="navbar-enterprise" style="display: none;">
+  <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle" style="visibility: hidden;">
+      <button class="navigation-toggle">
       </button>
       <button class="navbar-enterprise-burger">
       </button>
     </div>
     <div class="navbar-enterprise-container">
 
-      <a class="navbar-enterprise-item" href="/docs/1.0/ROOT/overview.html">API Reference</a>
-      <a class="navbar-enterprise-item" href="/docs/1.0/ROOT/tutorials-index.html">Tutorials</a>
-      <a class="navbar-enterprise-item" href="/docs/1.0/ROOT/rvd/rvd-index.html">Visual Designer</a>
+      <a class="navbar-enterprise-item" href="/docs/1.0/api/overview.html">API Reference</a>
+      <a class="navbar-enterprise-item" href="/docs/1.0/api/tutorials-index.html">Tutorials</a>
+      <a class="navbar-enterprise-item" href="/docs/1.0/api/rvd/rvd-index.html">Visual Designer</a>
 
 
     </div>
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <!-- Not applicable to our Enterprise docs
-    <h3 class="title"><a href="index.html">docs</a></h3>
+    <h3 class="title"><a href="../../index.html">docs</a></h3>
     -->
   <ul class="nav-list">
       <li class="nav-item" data-depth="0">
@@ -78,7 +76,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/overview.html">Overview</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html">Overview</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -91,7 +89,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/overview.html#_api_endpoint">API Endpoint</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_api_endpoint">API Endpoint</a>
               
             </span>
           </div>
@@ -104,7 +102,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/overview.html#_authentication">Authentication</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_authentication">Authentication</a>
               
             </span>
           </div>
@@ -117,7 +115,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/overview.html#_requests">Requests</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_requests">Requests</a>
               
             </span>
           </div>
@@ -130,7 +128,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/overview.html#_responses">Responses</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_responses">Responses</a>
               
             </span>
           </div>
@@ -143,7 +141,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/overview.html#_paging">Paging</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_paging">Paging</a>
               
             </span>
           </div>
@@ -158,7 +156,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/voice-category.html">Voice</a>
+              <a class="nav-link nav-flex-item-text" href="../voice-category.html">Voice</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -171,7 +169,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/available-phone-numbers-api.html">Available Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/available-phone-numbers-api.html">Available Phone Numbers</a>
               
             </span>
           </div>
@@ -184,7 +182,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/calls-api.html">Calls</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/calls-api.html">Calls</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -197,7 +195,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
               
             </span>
           </div>
@@ -210,7 +208,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
               
             </span>
           </div>
@@ -223,7 +221,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
               
             </span>
           </div>
@@ -236,7 +234,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/calls-api.html#examples">Examples</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/calls-api.html#examples">Examples</a>
               
             </span>
           </div>
@@ -249,7 +247,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/calls-api.html#_list_filter">List Filter</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/calls-api.html#_list_filter">List Filter</a>
               
             </span>
           </div>
@@ -262,7 +260,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/calls-api.html#_paging_information">Paging Information</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/calls-api.html#_paging_information">Paging Information</a>
               
             </span>
           </div>
@@ -277,7 +275,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/clients-api.html">Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/clients-api.html">Clients</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -290,7 +288,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/clients-api.html#_create_a_client">Create a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/clients-api.html#_create_a_client">Create a Client</a>
               
             </span>
           </div>
@@ -303,7 +301,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/clients-api.html#_delete_a_client">Delete a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/clients-api.html#_delete_a_client">Delete a Client</a>
               
             </span>
           </div>
@@ -316,7 +314,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
               
             </span>
           </div>
@@ -329,7 +327,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
               
             </span>
           </div>
@@ -344,7 +342,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/conferences-api.html">Conference Management</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/conferences-api.html">Conference Management</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -357,7 +355,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/conferences-api.html#_supported_operations">Supported Operations</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/conferences-api.html#_supported_operations">Supported Operations</a>
               
             </span>
           </div>
@@ -370,7 +368,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
               
             </span>
           </div>
@@ -385,7 +383,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/participants-api.html">Conference Participants Management</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/participants-api.html">Conference Participants Management</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -398,7 +396,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
               
             </span>
           </div>
@@ -413,7 +411,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -426,7 +424,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
               
             </span>
           </div>
@@ -439,7 +437,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
               
             </span>
           </div>
@@ -452,7 +450,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
               
             </span>
           </div>
@@ -465,7 +463,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
               
             </span>
           </div>
@@ -478,7 +476,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
               
             </span>
           </div>
@@ -491,7 +489,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
               
             </span>
           </div>
@@ -504,7 +502,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
               
             </span>
           </div>
@@ -517,7 +515,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
               
             </span>
           </div>
@@ -530,7 +528,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
               
             </span>
           </div>
@@ -547,7 +545,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/sms-category.html">SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../sms-category.html">SMS</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -560,7 +558,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/sms-api.html">Messages</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/sms-api.html">Messages</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -573,7 +571,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/sms-api.html#_send_sms">Send SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/sms-api.html#_send_sms">Send SMS</a>
               
             </span>
           </div>
@@ -586,7 +584,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/sms-api.html#_get_sms_list">Get SMS List</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/sms-api.html#_get_sms_list">Get SMS List</a>
               
             </span>
           </div>
@@ -599,7 +597,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
               
             </span>
           </div>
@@ -612,7 +610,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/sms-api.html#_sms_attributes">SMS Attributes</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/sms-api.html#_sms_attributes">SMS Attributes</a>
               
             </span>
           </div>
@@ -629,7 +627,7 @@
               nav-icon-rcml
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/rcml-category.html">RCML</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/rcml-category.html">RCML</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -642,7 +640,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/dial.html">Dial</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/dial.html">Dial</a>
               
             </span>
           </div>
@@ -668,7 +666,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/number-rcml.html">Number</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/number-rcml.html">Number</a>
               
             </span>
           </div>
@@ -681,7 +679,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/gather.html">SIP</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/gather.html">SIP</a>
               
             </span>
           </div>
@@ -694,7 +692,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/gather.html">Gather</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/gather.html">Gather</a>
               
             </span>
           </div>
@@ -707,7 +705,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/say-rcml.html">Say</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/say-rcml.html">Say</a>
               
             </span>
           </div>
@@ -720,7 +718,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/play-rcml.html">Play</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/play-rcml.html">Play</a>
               
             </span>
           </div>
@@ -733,7 +731,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/sms-rcml.html">SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/sms-rcml.html">SMS</a>
               
             </span>
           </div>
@@ -746,7 +744,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/hangup-rcml.html">Hangup</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/hangup-rcml.html">Hangup</a>
               
             </span>
           </div>
@@ -759,7 +757,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/pause-rcml.html">Pause</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/pause-rcml.html">Pause</a>
               
             </span>
           </div>
@@ -772,7 +770,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/redirect-rcml.html">Redirect</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/redirect-rcml.html">Redirect</a>
               
             </span>
           </div>
@@ -785,7 +783,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rcml/record-rcml.html">Record</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/record-rcml.html">Record</a>
               
             </span>
           </div>
@@ -800,7 +798,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/overview.html">REST API Reference</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html">REST API Reference</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -813,7 +811,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/account-api.html">Account API</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/account-api.html">Account API</a>
               
             </span>
           </div>
@@ -826,7 +824,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/applications-api.html">Applications API</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/applications-api.html">Applications API</a>
               
             </span>
           </div>
@@ -852,7 +850,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/notifications-api.html">Notifications API</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/notifications-api.html">Notifications API</a>
               
             </span>
           </div>
@@ -891,7 +889,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="api/rest-api/usage-records-api.html">Usage Records API</a>
+              <a class="nav-link nav-flex-item-text" href="../rest-api/usage-records-api.html">Usage Records API</a>
               
             </span>
           </div>
@@ -913,7 +911,7 @@
       <span class="title">docs</span>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">1.0</a>
+          <a href="../../index.html">1.0</a>
         </li>
       </ul>
     </li>
@@ -928,322 +926,218 @@
 -->
 <div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="../../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
-    <li class="crumb"><a href="index.html">docs</a></li>
-    <li class="crumb"><a href="byoc.html">Bring Your Own Carrier</a></li>
+    <li class="crumb"><a href="../../index.html">docs</a></li>
+    <li class="crumb"><a href="Two-factor Authentication (2FA).html">Two-Factor Authentication (2FA) Overview</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Bring Your Own Carrier</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_overview">Overview</a>
-<ul class="sectlevel2">
-<li><a href="#_bring_your_own_carrier_byoc_summary">Bring Your Own Carrier (BYOC)  Summary</a></li>
-</ul>
-</li>
-<li><a href="#_configuring_your_own_carrier">Configuring your own carrier</a>
-<ul class="sectlevel2">
-<li><a href="#_setting_up_your_carrier_for_voice_traffic">Setting up your carrier for voice traffic</a></li>
-<li><a href="#_setting_up_your_carrier_for_sms_traffic">Setting up your carrier for SMS traffic</a></li>
-</ul>
-</li>
-<li><a href="#_getting_started_with_restcomm_s_bring_your_own_carrier_byoc_feature">Getting started with Restcomm’s Bring Your Own Carrier (BYOC) feature</a></li>
-</ul>
-</div>
-<div class="sect1">
-<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+  <h1>Two-Factor Authentication (2FA) Overview</h1>
+<div id="preamble">
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_bring_your_own_carrier_byoc_summary"><a class="anchor" href="#_bring_your_own_carrier_byoc_summary"></a>Bring Your Own Carrier (BYOC)  Summary</h3>
 <div class="paragraph">
-<p>Restcomm’s Bring Your Own Carrier (BYOC) feature lets Communication Service Providers (CSP) connect their network infrastructure to Restcomm and enable enterprise customers to leverage prior investments in PSTN assets .</p>
+<p>This tutorial will walk you through the steps of setting up your own <a href="https://www.restcomm.com/use-cases/two-factor-authentication-2fa/">two-factor authentication service</a>.</p>
 </div>
 <div class="paragraph">
-<p>BYOC enables service providers to layer the value of a modern CPaaS on top of their existing PSTN investment from day one.</p>
+<p><strong>User enters your application</strong></p>
 </div>
+<div class="paragraph">
+<p>User visits your website or mobile app and attempts to log into his account, authorize a transaction, or perform another action that requires two-factor authentication from a new device.</p>
+</div>
+<div class="paragraph">
+<p><strong>User is prompted to enter his phone number</strong></p>
+</div>
+<div class="paragraph">
+<p>Restcomm receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
+</div>
+<div class="paragraph">
+<p><strong>PIN code is sent to the user via SMS</strong></p>
+</div>
+<div class="paragraph">
+<p>Once the user enters a valid phone number, from your application you will need to ask Restcomm to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
+</div>
+<div class="paragraph">
+<p>Sending a verification code requires basic authorization that includes your <a href="#">/docs/connect/admin/console-overview.html.adoc#restcomm-account-settings</a>. Below is the format you have to use in order to send a verification code to the user&#8217;s phone number.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuring_your_own_carrier"><a class="anchor" href="#_configuring_your_own_carrier"></a>Configuring your own carrier</h2>
+<h2 id="_sending_one_time_passwords_api_reference"><a class="anchor" href="#_sending_one_time_passwords_api_reference"></a>Sending One-Time Passwords - API Reference</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Voice calls origination and termination concept</strong></p>
+<p><strong>Base Resource URI</strong></p>
 </div>
 <div class="paragraph">
-<div class="title">Origination</div>
-<p>Origination is an incoming calling. The name refers to the act of handling the originating call and delivering it to you. Because your number sits with your provider, the call comes to them first, and is then routed on to you. You need a phone number to receive origination service.</p>
+<p>https://{your_organization}.restcomm.com</p>
 </div>
 <div class="paragraph">
-<div class="title">Termination</div>
-<p>Termination refers to the procedures used for routing telephone calls from one provider/carrier to another until the call has been received by the recipient. You don’t always need a phone number to terminate (send) calls.</p>
-</div>
-<div class="sect2">
-<h3 id="_setting_up_your_carrier_for_voice_traffic"><a class="anchor" href="#_setting_up_your_carrier_for_voice_traffic"></a>Setting up your carrier for voice traffic</h3>
-<div class="paragraph">
-<div class="title">Voice origination</div>
-<p>Restcomm’s Programmable Voice enables you to initiate SIP sessions from a PSTN Carrier (via SIP SBC) to the Restcomm Cloud and use the Restcomm Visual Designer (RVD),
- <a href="https://www.restcomm.com/docs/connect/rcml/index.html">RCML</a> or the <a href="https://www.restcomm.com/docs/connect/api/index.html">REST APIs</a> to create advanced voice applications.</p>
+<p><strong>Verification Code Resource URI</strong></p>
 </div>
 <div class="paragraph">
-<p>When you sign up for a Restcomm Service Provider account, you are assigned a virtual <a href="https://www.restcomm.com/docs/connect/api/organization-api.html#organization">Organization</a> which provides a custom DNS hostname, in the form of &lt;organization_name&gt;.restcomm.com, which terminates SIP traffic from your network.</p>
+<p>/2fa/send</p>
 </div>
 <div class="paragraph">
-<p>In order to enable your custom domain to receive SIP traffic from your carrier, you need to make sure your equipment can resolve Restcomm DNS SRV Records for your organization. Your SBC will need to resolve the provided hostname as explained in <a href="https://www.ietf.org/rfc/rfc3263.txt">RFC 3263</a>.</p>
+<p><strong>Supported Operations</strong></p>
 </div>
-<div class="admonitionblock note">
-<table>
+<div class="paragraph">
+<p>HTTP POST: Send a verification code through SMS to the specified Phone Number</p>
+</div>
+<div class="paragraph">
+<p><strong>Request Parameters</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Restcomm will try to locate the target Organization for an inbound call by looking at the domain from <code>Request URI</code>, and <code>To</code> header as fallback, in case Request URI domain does not match any Organization in the provisioning store. For <code>REFER</code> method, <code>Refer-To</code> header will be used as last fallback. The source Organization will be retrieved from <code>From</code> header user domain. In case the incoming call needs to be proxied out (in case no <code>IncomingPhoneNumber</code>, or <code>Client</code> matched), the <code>To</code> header domain needs to be resolvable into an existing IP address for routing.
-</td>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
 </tr>
-</table>
-</div>
-<div class="paragraph">
-<p>To be able to receive SIP registration and voice traffic from SIP or WebRTC Endpoints to Restcomm numbers, you will need to configure <a href="https://www.restcomm.com/docs/connect/api/clients-api.html#clients">Restcomm SIP Clients</a> with a username and password that should be used on the SIP Client for SIP Digest Authentication.</p>
-</div>
-<div class="imageblock maxwidth-image">
-<div class="content">
-<img src="_images/byoc/voice-call-origination.png" alt="Voice call origination image">
-</div>
-</div>
-<div class="paragraph">
-<div class="title">Voice termination</div>
-<p>Restcomm’s Programmable Voice enables your applications to initiate SIP sessions from Restcomm to your existing PSTN Carrier or SIP/WebRTC communications infrastructure using <a href="https://www.restcomm.com/docs/connect/rcml/index.html">RCML</a> and/or the <a href="https://www.restcomm.com/docs/connect/api/index.html">REST APIs</a>.</p>
-</div>
-<div class="paragraph">
-<p>There are multiple ways in Restcomm to route termination traffic using the Dial Verb:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Making calls to SIP/WebRTC or other carriers using <a href="https://www.restcomm.com/docs/connect/rcml/sip-rcml.html#sip">Dial SIP</a>; The &lt;Sip&gt; noun specifies a SIP URI to dial. This doesn’t require any settings change in order to connect to another SIP infrastructure,</p>
-</li>
-<li>
-<p>Making calls to the default PSTN carrier configured for your account using the following Restcomm capabilities.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.restcomm.com/docs/connect/rcml/number-rcml.html#number">Dial Number</a> should be used in Restcomm Visual Designer (RVD) or RCML</p>
-</li>
-<li>
-<p>WebRTC demo can initiate a call to a PSTN Number directly</p>
-</li>
-<li>
-<p>HTTP Call via the <a href="https://www.restcomm.com/docs/connect/api/calls-api.html#calling-a-did-number">Call API</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
+</thead>
+<tbody>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Currently the Voice Origination and Phone Number Providers are tied together so if you configure the Voice Origination Providers, you won’t be able to register Provider Numbers.
-</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of your service</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Phone number that is sending the SMS containing the verification code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Phone number to send the SMS containing the verification code to.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The content of the SMS. Use {code} as a placeholder for the location of the verification code in your SMS content. This {code} will be replaced automatically with a random code generated by the system</p></td>
+</tr>
+</tbody>
 </table>
+<div class="paragraph">
+<p>Example:</p>
 </div>
-<div class="imageblock maxwidth-image">
+<div class="listingblock">
 <div class="content">
-<img src="_images/byoc/voice-call-termination.png" alt="Voice call termination image">
-</div>
-</div>
-<div class="ulist">
-<div class="title">To set up Voice Termination with your own carrier for your Organization, please follow the steps below:</div>
-<ul>
-<li>
-<p>Log in to your Restcomm cloud account and navigate to <strong>your profile &#8594; Settings &#8594; Bring Your Own Carrier</strong></p>
-</li>
-<li>
-<p>Choose to edit the <strong>Voice Termination</strong> settings</p>
-</li>
-<li>
-<p>Specify your <strong>provider’s name</strong></p>
-</li>
-<li>
-<p>Set signaling <strong>IP address</strong></p>
-</li>
-<li>
-<p>Enter desired <strong>SIP Port</strong> or leave it blank if you are planning to use the default one</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/byoc/voice-termination-configuration.png" alt="Voice termination configuration">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If you are an advanced user, you may want to set authentication parameters and additional headers, using the <strong>Advanced</strong> settings.</p>
-</li>
-<li>
-<p>Make sure to <strong>Submit</strong> your settings when finished.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/byoc/voice-termination-configuration-2.png" alt="Voice termination configuration">
+<pre>{
+    "service" : "Restcomm", // the name of your service
+    "from" : "+XXXXXXXXX", // the SMS sender phone number
+    "to" : "+XXXXXXXXXX", // the SMS recepient phone number
+    "body": "Your verification code is: \{code}" // SMS body, containing the verification code
+}</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also reset your voice termination settings to default values, by clicking on the <strong>Reset</strong> link on the bring your own carrier page. You will be then prompted to confirm the reset.</p>
+<p>From the bash terminal you can run the command below:</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="_images/byoc/voice-termination-default.png" alt="Voice termination configuration">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/byoc/prompt-voice-termination.png" alt="Voice termination configuration">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_setting_up_your_carrier_for_sms_traffic"><a class="anchor" href="#_setting_up_your_carrier_for_sms_traffic"></a>Setting up your carrier for SMS traffic</h3>
-<div class="paragraph">
-<div class="title">SMS Origination</div>
-<p>Restcomm’s Programmable SMS product enables you to terminate SMS traffic through SMPP from your existing PSTN Carrier infrastructure to Restcomm Cloud and use Restcomm Visual Designer (RVD), <a href="https://www.restcomm.com/docs/connect/rcml/index.html">RCML</a> and/or the <a href="https://www.restcomm.com/docs/connect/api/index.html">REST APIs</a> to create advanced SMS applications that will digest the incoming SMS traffic.</p>
-</div>
-<div class="imageblock maxwidth-image">
-<div class="content">
-<img src="_images/byoc/sms-origination.png" alt="SMS origination configuration">
+<pre>curl -X POST \
+  https://{your_organization}.restcomm.com/2fa/send \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "service" : "Restcomm",
+    "from" : "+13216549878",
+    "to" : "+13216549879",
+    "body": "Your verification code is: \{code}"
+}</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>To setup SMS origination with your own carrier for your Organization, please follow the steps below:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Navigate back to <strong>Your profile  &#8594; Settings &#8594; Bring Your Own Carrier</strong></p>
-</li>
-<li>
-<p>Choose to configure the <strong>SMS Origination</strong> settings</p>
-</li>
-<li>
-<p>Specify your <strong>provider’s name</strong></p>
-</li>
-<li>
-<p>Set your provider’s <strong>IP address</strong></p>
-</li>
-<li>
-<p>Enter the <strong>Port</strong> provided by your carrier</p>
-</li>
-<li>
-<p>Select the <strong>SMPP</strong> version of you carrier</p>
-</li>
-<li>
-<p>Set a <strong>Systemid</strong> and <strong>password</strong>  used to bind</p>
-</li>
-<li>
-<p>Check the box below if you want to use the same provider for both SMS origination and termination.</p>
-</li>
-<li>
-<p><strong>Submit</strong> your settings.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/byoc/sms-origination-configuration.png" alt="SMS origination configuration">
-</div>
+<p><strong>User enters the PIN to complete app activation</strong></p>
 </div>
 <div class="paragraph">
-<div class="title">SMS termination</div>
-<p>Restcomm’s Programmable SMS product enables your advanced SMS applications to initiate SMS traffic from the Restcomm Cloud to your existing PSTN Carrier infrastructure through SMPP using <a href="https://www.restcomm.com/docs/connect/rcml/index.html">RCML</a> and/or the <a href="https://www.restcomm.com/docs/connect/api/index.html">REST APIs</a>.</p>
-</div>
-<div class="imageblock maxwidth-image">
-<div class="content">
-<img src="_images/byoc/sms-termination.png" alt="SMS origination configuration">
-</div>
-</div>
-<div class="paragraph">
-<p>To set up SMS Termination with your own carrier for your organization, please follow the steps below:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>To configure your SMS termination provider, go to <strong>your profile  &#8594; Settings &#8594; Bring Your Own Carrier</strong></p>
-</li>
-<li>
-<p>Choose to configure the <strong>SMS Termination</strong> settings</p>
-</li>
-<li>
-<p>Specify your <strong>provider’s name</strong></p>
-</li>
-<li>
-<p>Set your provider’s <strong>IP address</strong></p>
-</li>
-<li>
-<p>Enter the <strong>Port</strong> provided by your carrier</p>
-</li>
-<li>
-<p>Select the <strong>SMPP</strong> version of you carrier</p>
-</li>
-<li>
-<p>Set a <strong>Systemid</strong> and <strong>password</strong> used to bind</p>
-</li>
-<li>
-<p>Check the box below if you want to use the same provider for both SMS origination and termination.</p>
-</li>
-<li>
-<p><strong>Submit</strong> your settings.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>You may want to reset your SMS origination settings to default values by clicking on the <strong>Reset</strong> link beside them on the Bring Your Own Carrier page. You will then be prompted to confirm the reset.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/byoc/sms-origination-default.png" alt="SMS termination configuration">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/byoc/prompt-sms-origination.png" alt="SMS origination configuration">
-</div>
-</div>
-<div class="paragraph">
-<p>Reset of configuration settings is also available for SMS termination:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/byoc/sms-termination-default.png" alt="SMS origination configuration">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/byoc/prompt-sms-termination.png" alt="SMS origination configuration">
-</div>
-</div>
+<p>User receives the one-time PIN code via SMS, gets back to your application and enters it in order to complete the verification process. Verifying the code is simple and requires basic authorization that includes your account SID and auth token.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_getting_started_with_restcomm_s_bring_your_own_carrier_byoc_feature"><a class="anchor" href="#_getting_started_with_restcomm_s_bring_your_own_carrier_byoc_feature"></a>Getting started with Restcomm’s Bring Your Own Carrier (BYOC) feature</h2>
+<h2 id="_verifying_one_time_passwords_api_reference"><a class="anchor" href="#_verifying_one_time_passwords_api_reference"></a>Verifying One-Time Passwords - API Reference</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Bring your own carrier (BYOC) is available to anyone who registers for a Restcomm Cloud account. <a href="https://www.restcomm.com/contact/">Contact us</a> to learn more about it!</p>
+<p><strong>Base Resource URI</strong></p>
+</div>
+<div class="paragraph">
+<p>https://{your_organization}.restcomm.com</p>
+</div>
+<div class="paragraph">
+<p><strong>Verification Code Resource URI</strong></p>
+</div>
+<div class="paragraph">
+<p>\/2fa/verify</p>
+</div>
+<div class="paragraph">
+<p><strong>Supported Operations</strong></p>
+</div>
+<div class="paragraph">
+<p>HTTP Method: POST: Verify the code that was sent through SMS to the Phone Number</p>
+</div>
+<div class="paragraph">
+<p><strong>Request Parameters</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of your service</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Phone number where the SMS containing the verification code was sent to.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The verification code that was sent to the user through SMS.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "service" : "Restcomm", // the name of your service
+    "number" : "+XXXXXXXXXX",  // the phone number of the SMS recepient
+    "code": "XXXXX" // the verification code
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  https://{your_company}.restcomm.com/2fa/verify \
+  --user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "service" : "Restcomm",
+    "number" : "+13216549879",
+    "code": "294228"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also test your service using <a href="https://www.getpostman.com/">Postman</a> or any other alike client.</p>
 </div>
 </div>
 </div>
@@ -1257,7 +1151,6 @@ Currently the Voice Origination and Phone Number Providers are tied together so 
         <h5 class="footer-column-title">Products</h5>
         <p><a href="programmable.html#_getting_started_with_programmable_voice">Programmable Voice</a></p>
         <p><a href="programmable.html#_getting_started_with_programmable_sms">Programmable SMS</a></p>
-        <p><a href="message-exchange.html">Message Exchange</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use cases</h5>
@@ -1283,18 +1176,10 @@ Currently the Voice Origination and Phone Number Providers are tied together so 
         </p>
       </div>
     </div>
-    <div class="footer-bottom-container">
-      <div class="footer-logo">
-        <a class="footer-logo-link" href="https://telestax.com"></a>
-      </div>
-      <div class="footer-copyright">
-        <p class="footer-copyright-paragraph">COPYRIGHT © 2018, TELESTAX INC., ALL RIGHTS RESERVED.</p>
-      </div>
-    </div>
   </div>
 </footer>
-<script src="../../_/js/site.js"></script>
-<script src="../../_/js/vendor/highlight.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script src="../../../../_/js/vendor/highlight.js"></script>
 <script>hljs.initHighlighting()</script>
 <!--
   Tried to get this chunk into js/05-countly.js but it has some issues with the async loading so fell back to putting it here
