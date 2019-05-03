@@ -339,6 +339,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Also, only apply WL settings for enterprise persona.
   if (((window.location.hostname !== 'restcomm.com' &&
     window.location.hostname !== 'www.restcomm.com' &&
+    window.location.hostname !== 'staging-restcomm.com' &&
+    window.location.hostname !== 'www.staging-restcomm.com' &&
     window.location.hostname !== 'staging-cpaas-enablement-docs.restcomm.com' &&
     window.location.hostname !== 'cpaas-enablement-docs.restcomm.com' &&
     window.location.hostname !== 'localhost') || window.sessionStorage.getItem(WL_DOMAIN)) &&
