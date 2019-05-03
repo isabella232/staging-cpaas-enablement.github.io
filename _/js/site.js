@@ -312,6 +312,12 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 
+  document.querySelector('.navigation-menu').addEventListener('mouseenter', function (e) {
+    if (e.target.classList.contains('is-active')) {
+      e.target.focus()
+    }
+  })
+
   const is404 = document.getElementsByTagName('body')[0].classList.contains('status-404')
   if (is404) {
     // TODO: Add handling for WL once the organization is clear
