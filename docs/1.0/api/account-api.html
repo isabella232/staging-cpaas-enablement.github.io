@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account - Restcomm Docs</title>
-    <link rel="canonical" href="https://staging-restcomm.com/docs/1.0/api/account-api.html">
+    <link rel="canonical" href="https://staging-restcomm.com/docs/docs/1.0/api/account-api.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -20,7 +20,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item header-logo-link" href="
-        https://staging-restcomm.com
+        https://staging-restcomm.com/docs
         ">
       </a>
     </div>
@@ -1478,17 +1478,17 @@ In the process, all child accounts will also be migrated.</p>
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-32 is-active" onclick="openLanguage('Curl', 32)">Curl</button>
-        <button class="sample-code-button scsIndex-32" onclick="openLanguage('Nodejs', 32)">Nodejs</button>
-        <button class="sample-code-button scsIndex-32" onclick="openLanguage('Python', 32)">Python</button>
-        <button class="sample-code-button scsIndex-32" onclick="openLanguage('Java', 32)">Java</button>
+        <button class="sample-code-button scsIndex-2 is-active" onclick="openLanguage('Curl', 2)">Curl</button>
+        <button class="sample-code-button scsIndex-2" onclick="openLanguage('Nodejs', 2)">Nodejs</button>
+        <button class="sample-code-button scsIndex-2" onclick="openLanguage('Python', 2)">Python</button>
+        <button class="sample-code-button scsIndex-2" onclick="openLanguage('Java', 2)">Java</button>
       </div>
-      <div id="Curl-32" class="sample-language-32">
+      <div id="Curl-2" class="sample-language-2">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-32" class="sample-language-32" style="display:none">
+      <div id="Nodejs-2" class="sample-language-2" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -1509,7 +1509,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-32" class="sample-language-32" style="display:none">
+      <div id="Python-2" class="sample-language-2" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1531,7 +1531,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-32" class="sample-language-32" style="display:none">
+      <div id="Java-2" class="sample-language-2" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1570,18 +1570,18 @@ public class JavaSampleClass {
 <p>For example, update password using account sid:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-33 is-active" onclick="openLanguage('Curl', 33)">Curl</button>
-        <button class="sample-code-button scsIndex-33" onclick="openLanguage('Nodejs', 33)">Nodejs</button>
-        <button class="sample-code-button scsIndex-33" onclick="openLanguage('Python', 33)">Python</button>
-        <button class="sample-code-button scsIndex-33" onclick="openLanguage('Java', 33)">Java</button>
+        <button class="sample-code-button scsIndex-3 is-active" onclick="openLanguage('Curl', 3)">Curl</button>
+        <button class="sample-code-button scsIndex-3" onclick="openLanguage('Nodejs', 3)">Nodejs</button>
+        <button class="sample-code-button scsIndex-3" onclick="openLanguage('Python', 3)">Python</button>
+        <button class="sample-code-button scsIndex-3" onclick="openLanguage('Java', 3)">Java</button>
       </div>
-      <div id="Curl-33" class="sample-language-33">
+      <div id="Curl-3" class="sample-language-3">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X PUT https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -d 'Password=NewPassword' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-33" class="sample-language-33" style="display:none">
+      <div id="Nodejs-3" class="sample-language-3" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -1604,7 +1604,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-33" class="sample-language-33" style="display:none">
+      <div id="Python-3" class="sample-language-3" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -1634,7 +1634,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-33" class="sample-language-33" style="display:none">
+      <div id="Java-3" class="sample-language-3" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1673,18 +1673,18 @@ public class JavaSampleClass {
 <p>And update password using email address of the account:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-34 is-active" onclick="openLanguage('Curl', 34)">Curl</button>
-        <button class="sample-code-button scsIndex-34" onclick="openLanguage('Nodejs', 34)">Nodejs</button>
-        <button class="sample-code-button scsIndex-34" onclick="openLanguage('Python', 34)">Python</button>
-        <button class="sample-code-button scsIndex-34" onclick="openLanguage('Java', 34)">Java</button>
+        <button class="sample-code-button scsIndex-4 is-active" onclick="openLanguage('Curl', 4)">Curl</button>
+        <button class="sample-code-button scsIndex-4" onclick="openLanguage('Nodejs', 4)">Nodejs</button>
+        <button class="sample-code-button scsIndex-4" onclick="openLanguage('Python', 4)">Python</button>
+        <button class="sample-code-button scsIndex-4" onclick="openLanguage('Java', 4)">Java</button>
       </div>
-      <div id="Curl-34" class="sample-language-34">
+      <div id="Curl-4" class="sample-language-4">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X PUT https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/#(administrator%40company.com).xml \
    -d 'Password=NewPassword' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-34" class="sample-language-34" style="display:none">
+      <div id="Nodejs-4" class="sample-language-4" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -1707,7 +1707,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-34" class="sample-language-34" style="display:none">
+      <div id="Python-4" class="sample-language-4" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -1737,7 +1737,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-34" class="sample-language-34" style="display:none">
+      <div id="Java-4" class="sample-language-4" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1788,17 +1788,17 @@ The above command uses the Account SID of the requester, and the one below uses 
 <p>The above commands will print an output similar to the one below:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-35 is-active" onclick="openLanguage('Curl', 35)">Curl</button>
-        <button class="sample-code-button scsIndex-35" onclick="openLanguage('Nodejs', 35)">Nodejs</button>
-        <button class="sample-code-button scsIndex-35" onclick="openLanguage('Python', 35)">Python</button>
-        <button class="sample-code-button scsIndex-35" onclick="openLanguage('Java', 35)">Java</button>
+        <button class="sample-code-button scsIndex-5 is-active" onclick="openLanguage('Curl', 5)">Curl</button>
+        <button class="sample-code-button scsIndex-5" onclick="openLanguage('Nodejs', 5)">Nodejs</button>
+        <button class="sample-code-button scsIndex-5" onclick="openLanguage('Python', 5)">Python</button>
+        <button class="sample-code-button scsIndex-5" onclick="openLanguage('Java', 5)">Java</button>
       </div>
-      <div id="Curl-35" class="sample-language-35">
+      <div id="Curl-5" class="sample-language-5">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-35" class="sample-language-35" style="display:none">
+      <div id="Nodejs-5" class="sample-language-5" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -1819,7 +1819,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-35" class="sample-language-35" style="display:none">
+      <div id="Python-5" class="sample-language-5" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1841,7 +1841,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-35" class="sample-language-35" style="display:none">
+      <div id="Java-5" class="sample-language-5" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1974,17 +1974,17 @@ public class JavaSampleClass {
 <p>You can read more about Sub-Accounts and Multi-tenancy <a href="http://docs.telestax.com/restcomm-multi-tenancy-and-managing-sub-accounts/">HERE</a></p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-36 is-active" onclick="openLanguage('Curl', 36)">Curl</button>
-        <button class="sample-code-button scsIndex-36" onclick="openLanguage('Nodejs', 36)">Nodejs</button>
-        <button class="sample-code-button scsIndex-36" onclick="openLanguage('Python', 36)">Python</button>
-        <button class="sample-code-button scsIndex-36" onclick="openLanguage('Java', 36)">Java</button>
+        <button class="sample-code-button scsIndex-6 is-active" onclick="openLanguage('Curl', 6)">Curl</button>
+        <button class="sample-code-button scsIndex-6" onclick="openLanguage('Nodejs', 6)">Nodejs</button>
+        <button class="sample-code-button scsIndex-6" onclick="openLanguage('Python', 6)">Python</button>
+        <button class="sample-code-button scsIndex-6" onclick="openLanguage('Java', 6)">Java</button>
       </div>
-      <div id="Curl-36" class="sample-language-36">
+      <div id="Curl-6" class="sample-language-6">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-36" class="sample-language-36" style="display:none">
+      <div id="Nodejs-6" class="sample-language-6" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -2005,7 +2005,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-36" class="sample-language-36" style="display:none">
+      <div id="Python-6" class="sample-language-6" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2027,7 +2027,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-36" class="sample-language-36" style="display:none">
+      <div id="Java-6" class="sample-language-6" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2063,17 +2063,17 @@ public class JavaSampleClass {
 <div class="sect2">
 <h3 id="_get_a_list_of_all_current_accounts"><a class="anchor" href="#_get_a_list_of_all_current_accounts"></a>Get a list of all current accounts</h3>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-37 is-active" onclick="openLanguage('Curl', 37)">Curl</button>
-        <button class="sample-code-button scsIndex-37" onclick="openLanguage('Nodejs', 37)">Nodejs</button>
-        <button class="sample-code-button scsIndex-37" onclick="openLanguage('Python', 37)">Python</button>
-        <button class="sample-code-button scsIndex-37" onclick="openLanguage('Java', 37)">Java</button>
+        <button class="sample-code-button scsIndex-7 is-active" onclick="openLanguage('Curl', 7)">Curl</button>
+        <button class="sample-code-button scsIndex-7" onclick="openLanguage('Nodejs', 7)">Nodejs</button>
+        <button class="sample-code-button scsIndex-7" onclick="openLanguage('Python', 7)">Python</button>
+        <button class="sample-code-button scsIndex-7" onclick="openLanguage('Java', 7)">Java</button>
       </div>
-      <div id="Curl-37" class="sample-language-37">
+      <div id="Curl-7" class="sample-language-7">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts.xml \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-37" class="sample-language-37" style="display:none">
+      <div id="Nodejs-7" class="sample-language-7" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -2094,7 +2094,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-37" class="sample-language-37" style="display:none">
+      <div id="Python-7" class="sample-language-7" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2116,7 +2116,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-37" class="sample-language-37" style="display:none">
+      <div id="Java-7" class="sample-language-7" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2149,12 +2149,12 @@ public class JavaSampleClass {
 <p>Here is an example of how to create a <strong>sub-account</strong>. The sub-account will inherit the same permissions has the Administrator&#8217;s account.</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-38 is-active" onclick="openLanguage('Curl', 38)">Curl</button>
-        <button class="sample-code-button scsIndex-38" onclick="openLanguage('Nodejs', 38)">Nodejs</button>
-        <button class="sample-code-button scsIndex-38" onclick="openLanguage('Python', 38)">Python</button>
-        <button class="sample-code-button scsIndex-38" onclick="openLanguage('Java', 38)">Java</button>
+        <button class="sample-code-button scsIndex-8 is-active" onclick="openLanguage('Curl', 8)">Curl</button>
+        <button class="sample-code-button scsIndex-8" onclick="openLanguage('Nodejs', 8)">Nodejs</button>
+        <button class="sample-code-button scsIndex-8" onclick="openLanguage('Python', 8)">Python</button>
+        <button class="sample-code-button scsIndex-8" onclick="openLanguage('Java', 8)">Java</button>
       </div>
-      <div id="Curl-38" class="sample-language-38">
+      <div id="Curl-8" class="sample-language-8">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -d 'FriendlyName=MySubAccount' \
    -d 'EmailAddress=test@telestax.com' \
@@ -2162,7 +2162,7 @@ public class JavaSampleClass {
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-38" class="sample-language-38" style="display:none">
+      <div id="Nodejs-8" class="sample-language-8" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -2187,7 +2187,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-38" class="sample-language-38" style="display:none">
+      <div id="Python-8" class="sample-language-8" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -2219,7 +2219,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-38" class="sample-language-38" style="display:none">
+      <div id="Java-8" class="sample-language-8" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2260,12 +2260,12 @@ public class JavaSampleClass {
 <p>Here is an example of creating an account under a specific organization.</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-39 is-active" onclick="openLanguage('Curl', 39)">Curl</button>
-        <button class="sample-code-button scsIndex-39" onclick="openLanguage('Nodejs', 39)">Nodejs</button>
-        <button class="sample-code-button scsIndex-39" onclick="openLanguage('Python', 39)">Python</button>
-        <button class="sample-code-button scsIndex-39" onclick="openLanguage('Java', 39)">Java</button>
+        <button class="sample-code-button scsIndex-9 is-active" onclick="openLanguage('Curl', 9)">Curl</button>
+        <button class="sample-code-button scsIndex-9" onclick="openLanguage('Nodejs', 9)">Nodejs</button>
+        <button class="sample-code-button scsIndex-9" onclick="openLanguage('Python', 9)">Python</button>
+        <button class="sample-code-button scsIndex-9" onclick="openLanguage('Java', 9)">Java</button>
       </div>
-      <div id="Curl-39" class="sample-language-39">
+      <div id="Curl-9" class="sample-language-9">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -d 'FriendlyName=MySubAccount' \
    -d 'EmailAddress=test@telestax.com' \
@@ -2274,7 +2274,7 @@ public class JavaSampleClass {
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-39" class="sample-language-39" style="display:none">
+      <div id="Nodejs-9" class="sample-language-9" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -2300,7 +2300,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-39" class="sample-language-39" style="display:none">
+      <div id="Python-9" class="sample-language-9" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -2333,7 +2333,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-39" class="sample-language-39" style="display:none">
+      <div id="Java-9" class="sample-language-9" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2426,18 +2426,18 @@ the <strong>SID</strong>, Email and the <strong>AuthToken</strong> of the sub-ac
 <div class="sect2">
 <h3 id="_examples_3"><a class="anchor" href="#_examples_3"></a>Examples</h3>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-40 is-active" onclick="openLanguage('Curl', 40)">Curl</button>
-        <button class="sample-code-button scsIndex-40" onclick="openLanguage('Nodejs', 40)">Nodejs</button>
-        <button class="sample-code-button scsIndex-40" onclick="openLanguage('Python', 40)">Python</button>
-        <button class="sample-code-button scsIndex-40" onclick="openLanguage('Java', 40)">Java</button>
+        <button class="sample-code-button scsIndex-10 is-active" onclick="openLanguage('Curl', 10)">Curl</button>
+        <button class="sample-code-button scsIndex-10" onclick="openLanguage('Nodejs', 10)">Nodejs</button>
+        <button class="sample-code-button scsIndex-10" onclick="openLanguage('Python', 10)">Python</button>
+        <button class="sample-code-button scsIndex-10" onclick="openLanguage('Java', 10)">Java</button>
       </div>
-      <div id="Curl-40" class="sample-language-40">
+      <div id="Curl-10" class="sample-language-10">
         <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X PUT https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -d 'Status=closed' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-40" class="sample-language-40" style="display:none">
+      <div id="Nodejs-10" class="sample-language-10" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
 
 // Change 'mycompany' to the desired restcomm organization
@@ -2460,7 +2460,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-40" class="sample-language-40" style="display:none">
+      <div id="Python-10" class="sample-language-10" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -2490,7 +2490,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-40" class="sample-language-40" style="display:none">
+      <div id="Java-10" class="sample-language-10" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
