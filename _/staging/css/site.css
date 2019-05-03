@@ -1673,7 +1673,7 @@ footer.footer {
   --rc-link-color: #1ea5db;  /* --link-text-color */
   --rc-secondary-nav-link-color: #1ea5db; /* N/A, but we can use --link-text-color */
   --rc-heading-color: #1ea5db;  /* N/A, we can use same as what we use for --rc-button-bg-color */
-  --rc-logo-img: url(/_/img/restcomm-logo-white-enterprise.svg);  /* logo, works on all browsers */
+  --rc-logo-img: url(/_/staging/img/restcomm-logo-white-enterprise.svg);  /* logo, works on all browsers */
   /* --rc-logo-img: url(../../../_/img/restcomm-logo-white-enterprise.svg); works in all browsers but complicated; keeping for documentation purposes */
   /* --rc-logo-img: url(../img/restcomm-logo-white-enterprise.svg); /* orig, works in Chrome and Firefox but not Safari; keeping for documentation purposes */
   --rc-border-radius: 5px;  /* input_border_radius */
