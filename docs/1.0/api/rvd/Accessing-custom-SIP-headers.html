@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm Visual Designer - Restcomm Docs</title>
-    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/rvd/rvd-index.html">
+    <title>Accessing custom SIP headers from an RCML or RVD application - Restcomm Docs</title>
+    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/rvd/Accessing-custom-SIP-headers.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/staging/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/staging/css/site.css" title="antora-stylesheet">
@@ -41,7 +41,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle" style="visibility: hidden;">
+      <button class="navigation-toggle">
       </button>
       <button class="navbar-enterprise-burger">
       </button>
@@ -57,7 +57,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
@@ -1116,58 +1116,69 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="rvd-index.html">Restcomm Visual Designer</a></li>
+    <li class="crumb"><a href="Accessing-custom-SIP-headers.html">Accessing custom SIP headers from an RCML or RVD application</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm Visual Designer</h1>
+  <h1>Accessing custom SIP headers from an RCML or RVD application</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or
-no programming knowledge. You can find all you need to get started here.</p>
-</div>
-<div class="paragraph">
-<p>If you&#8217;re new to Restcomm, we recommend looking at the <a href="RVD-Quick-Start-Guide.adoc">Quick Start Guide</a>. For more in-depth
-overview, check out the <a href="Tutorial.doc">Visual Designer Tutorial</a>. Below you will find a list with popular Visual Designer how-tos.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-We&#8217;re reworking this section of the documentation. Stay tuned for new updates comming up soon. You can find the old list of how-to articles <a href="#">index-old.adoc</a>.
-</td>
-</tr>
-</table>
+<p>Restcomm provides an additional interface to communicate with an RCML/RVD application by means of custom SIP headers. The idea is that all custom SIP headers in a SIP message are detected and converted to HTTP parameters in the request to the RCML application using a convention. The RCML application can consume this parameters. Furthermore, RVD converts these parameters to RVD variables and makes them available to its modules.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_s"><a class="anchor" href="#_how_to_s"></a>How To&#8217;s</h2>
+<h2 id="_rcml_applications"><a class="anchor" href="#_rcml_applications"></a>RCML applications</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The following conventions are followed:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Making-decisions-with-control-element.adoc">Making decisions with Control element</a></p>
+<p>Any SIP header starting with <strong>X-</strong> prefix is custom.</p>
 </li>
 <li>
-<p><a href="Making-HTTP-requests-with-external-service-client.adoc">Making HTTP requests with the External Service client</a></p>
+<p>HTTP parameters are created out of each custom SIP header by adding the <strong>SipHeader_</strong> prefix to its name.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example mappings from SIP header names to HTTP parameter names:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">X-My-Header -&gt; SipHeader_X-My-Header</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Thus the SipHeader_X-My-Header will be available as typical GET or POST parameter in the RCML application.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_restcomm_visual_designer_rvd_applications"><a class="anchor" href="#_restcomm_visual_designer_rvd_applications"></a>Restcomm Visual Designer (RVD) applications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>RVD will take the previous convention one step further and create an RVD variable out of the parameter. Thus, the mapping from a custom SIP header to an RVD variable will be the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">X-My-Header -&gt; $core_x_my_header</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So, if <strong>X-My-Header</strong> SIP header arrives at Restcomm, RVD will have a variable named <strong>$core_x_my_header</strong> available in its modules. Note the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All characters are converted to lower case. This happens because although SIP headers are  not case insesitive while RVD variables are.</p>
 </li>
 <li>
-<p><a href="Using-web-trigger.adoc">Using Web Trigger</a></p>
-</li>
-<li>
-<p><a href="Diagrams.adoc">Restcomm Visual Designer Diagrams</a></p>
-</li>
-<li>
-<p><a href="Application-log.adoc">Restcomm Visual Designer Aipplication Log</a></p>
-</li>
-<li>
-<p><a href="Accessing-custom-SIP-headers.adoc">Accessing custom SIP headers from an RCML or RVD application</a></p>
+<p>All non alpha numeric characters i.e.<strong> [^A-Za-z0-9_]</strong>,  are converted to `_'  (underscore). That happens because RVD has some additional restrictions for naming variables. Here is the regular expression that is used for invalid characters to underscore:</p>
 </li>
 </ul>
 </div>

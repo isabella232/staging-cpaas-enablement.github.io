@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm Visual Designer - Restcomm Docs</title>
-    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/rvd/rvd-index.html">
+    <title>IVR with Restcomm Visual Designer - Restcomm Docs</title>
+    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/tutorials/IVR-with-Restcomm-Visual-Designer.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/staging/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/staging/css/site.css" title="antora-stylesheet">
@@ -41,7 +41,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle" style="visibility: hidden;">
+      <button class="navigation-toggle">
       </button>
       <button class="navbar-enterprise-burger">
       </button>
@@ -57,7 +57,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
@@ -1116,30 +1116,25 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="rvd-index.html">Restcomm Visual Designer</a></li>
+    <li class="crumb"><a href="IVR-with-Restcomm-Visual-Designer.html">IVR with Restcomm Visual Designer</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm Visual Designer</h1>
+  <h1>IVR with Restcomm Visual Designer</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or
-no programming knowledge. You can find all you need to get started here.</p>
+<p>This tutorial will help you create an Interactive Voice Response application using the Restcomm Visual Designer. It is assumed that you are running Restcomm on a local server. Open your web browser and go the following url.</p>
 </div>
-<div class="paragraph">
-<p>If you&#8217;re new to Restcomm, we recommend looking at the <a href="RVD-Quick-Start-Guide.adoc">Quick Start Guide</a>. For more in-depth
-overview, check out the <a href="Tutorial.doc">Visual Designer Tutorial</a>. Below you will find a list with popular Visual Designer how-tos.</p>
-</div>
-<div class="admonitionblock important">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-important" title="Important"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-We&#8217;re reworking this section of the documentation. Stay tuned for new updates comming up soon. You can find the old list of how-to articles <a href="#">index-old.adoc</a>.
+It is assumed you are running Restcomm on your local installation using the default 127.0.0.1 interface
 </td>
 </tr>
 </table>
@@ -1147,29 +1142,237 @@ We&#8217;re reworking this section of the documentation. Stay tuned for new upda
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_s"><a class="anchor" href="#_how_to_s"></a>How To&#8217;s</h2>
+<h2 id="_step_1"><a class="anchor" href="#_step_1"></a>Step 1</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Making-decisions-with-control-element.adoc">Making decisions with Control element</a></p>
+<p>go to the link <strong><a href="http://127.0.0.1:8080/visual-designer/" class="bare">http://127.0.0.1:8080/visual-designer/</a></strong></p>
 </li>
 <li>
-<p><a href="Making-HTTP-requests-with-external-service-client.adoc">Making HTTP requests with the External Service client</a></p>
-</li>
-<li>
-<p><a href="Using-web-trigger.adoc">Using Web Trigger</a></p>
-</li>
-<li>
-<p><a href="Diagrams.adoc">Restcomm Visual Designer Diagrams</a></p>
-</li>
-<li>
-<p><a href="Application-log.adoc">Restcomm Visual Designer Aipplication Log</a></p>
-</li>
-<li>
-<p><a href="Accessing-custom-SIP-headers.adoc">Accessing custom SIP headers from an RCML or RVD application</a></p>
+<p>Enter a name for your new project (Demo1 is used in this tutorial) and press the button <strong>"Create"</strong></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>In the main dashboard of the RVD, you will see the default module "Welcome":</p>
+</div>
+<div class="paragraph">
+<p>In the Welcome tab</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Change the default text to the following:</p>
+</li>
+<li>
+<p>Welcome to Telestax,</p>
+</li>
+<li>
+<p>Click the "Collect" verb and drag it onto the module window below the "Say" verb.</p>
+</li>
+<li>
+<p>Click and drag another <strong>"Say"</strong> onto the <strong>"Collect"</strong> verb so that it appears below the <strong>"Prompt"</strong></p>
+</li>
+<li>
+<p>In the text area of the new <strong>"Say"</strong> verb, add the following texts:</p>
+</li>
+<li>
+<p>For Opening hours press 1, for Technical Support press 2, for Sales Support press 3</p>
+</li>
+<li>
+<p>Click on the options button at the bottom of the "Collect" verb window and set <strong>"Number of Digits" to 1</strong></p>
+</li>
+<li>
+<p>The <strong>Number of Digits</strong> tells the media server to process the request after receiving only a single digit.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See screenshot below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/rvd-ivr-tutorial1.png" alt="rvd-ivr-tutorial1" width="549" height="235"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the Save button to update your changes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>At the top of the page, create a new module by clicking on <strong>"New Module"</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A new tab called <strong>"Untitled module"</strong> will appear beside the <strong>"Welcome"</strong> tab</p>
+</li>
+<li>
+<p>Click on the title of the new module and change the name to "Opening Hours"</p>
+</li>
+<li>
+<p>Create another module and change the name to "Technical Support"</p>
+</li>
+<li>
+<p>Create a third module and change the name to "Sales Support"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You should now have 4 tabs with the following names</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Welcome</p>
+</li>
+<li>
+<p>Opening Hours</p>
+</li>
+<li>
+<p>Technical Support</p>
+</li>
+<li>
+<p>Sales Support</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See the screenshot below</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/rvd-ivr-tutorial.png" alt="rvd-ivr-tutorial" width="555" height="295"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Click on the Openining Hours tab</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>    Click the Say verb and drag it to the module window. Type the following text in the text area.</p>
+</li>
+<li>
+<p>    Welcome to Telestax, our openining hours are from 8 AM to 8 PM Mondays to Friday.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Click on the Technical Support tab</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>    Click the Say verb and drag it to the module window. Type the following text in the text area.</p>
+</li>
+<li>
+<p>    Welcome to Telestax Technical Support, all our engineers are please at the moment please hold the line.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Click on the Sales Support tab</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the Say verb and drag it to the module window. Type the following text in the text area.</p>
+</li>
+<li>
+<p><strong>Welcome to Telestax Sales Support, all our sales engineers are busy counting their huge bonuses, please call back at a better time.</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click on the <strong>Save</strong> button to update your changes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_in_the_welcome_tab"><a class="anchor" href="#_in_the_welcome_tab"></a>In the "Welcome" Tab</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the "Collect" verb window, click on the "Add Mapping" three times. In the target option,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>link digit 1 to target : "Opening Hours"</p>
+</li>
+<li>
+<p>link digit 2 to target : "Technical Support"</p>
+</li>
+<li>
+<p>link digit 3 to target : "Sales Support"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Save</strong> your application. In this tutorial, the project is called Demo1.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_restcomm_managment_user_interface"><a class="anchor" href="#_restcomm_managment_user_interface"></a>Restcomm Managment User Interface</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next you need to link the Demo1 project to a phone number so that you can test the application. In another internet browser window, open the following <strong>url <a href="http://127.0.0.1:8080/" class="bare">http://127.0.0.1:8080/</a></strong></p>
+</div>
+<div class="paragraph">
+<p>Login and click on the menu "Numbers"</p>
+</div>
+<div class="paragraph">
+<p>Click on the button "+Register Number"</p>
+</div>
+<div class="paragraph">
+<p>In the "Register Number" window click on "Optional Parameters" to reveal the full options</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fill out the window as follows:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Phone number: <strong>4444</strong></p>
+</li>
+<li>
+<p>Voice Request Url: <strong>Demo1</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Demo1 is the name of the project you created using the RVD</p>
+</div>
+<div class="paragraph">
+<p>Leave the rest of the fields as default and press <strong>"Register"</strong></p>
+</div>
+<div class="paragraph">
+<p>If the register is successful, you will see the new number you have just linked to the Demo1 project in the list of numbers as show in the screenshot below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/rvd-ivr-tutorial3.png" alt="rvd-ivr-tutorial3" width="638" height="404"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_calling_and_testing_your_demo1"><a class="anchor" href="#_calling_and_testing_your_demo1"></a>Calling and Testing your Demo1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can now make a SIP call to your application using any SIP phone. In this tutorial, we shall configure Sflphone to connect to Restcomm and make a call to number <strong>4444</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Use the following settings to connect your SIP client Sflphone to Restcomm.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/rvd-ivr-tutorial4.png" alt="rvd-ivr-tutorial4" width="480" height="583"></span></p>
+</div>
+<div class="paragraph">
+<p>Make a call to number <strong>4444</strong> and follow the menu instruction. With this tutorial, you can see how easy and quick it is to create an Interactive Voice Response application using Restcomm.</p>
 </div>
 </div>
 </div>

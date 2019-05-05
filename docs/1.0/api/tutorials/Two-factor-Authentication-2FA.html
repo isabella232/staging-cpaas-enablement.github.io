@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm Visual Designer - Restcomm Docs</title>
-    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/rvd/rvd-index.html">
+    <title>Two-Factor Authentication (2FA) - Restcomm Docs</title>
+    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/tutorials/Two-factor-Authentication-2FA.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/staging/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/staging/css/site.css" title="antora-stylesheet">
@@ -41,7 +41,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle" style="visibility: hidden;">
+      <button class="navigation-toggle">
       </button>
       <button class="navbar-enterprise-burger">
       </button>
@@ -57,7 +57,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
@@ -1116,60 +1116,214 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="rvd-index.html">Restcomm Visual Designer</a></li>
+    <li class="crumb"><a href="Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm Visual Designer</h1>
+  <h1>Two-Factor Authentication (2FA)</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or
-no programming knowledge. You can find all you need to get started here.</p>
+<p>This tutorial will walk you through the steps of setting up your own <a href="https://www.restcomm.com/use-cases/two-factor-authentication-2fa/">two-factor authentication service</a>.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;re new to Restcomm, we recommend looking at the <a href="RVD-Quick-Start-Guide.adoc">Quick Start Guide</a>. For more in-depth
-overview, check out the <a href="Tutorial.doc">Visual Designer Tutorial</a>. Below you will find a list with popular Visual Designer how-tos.</p>
+<p><strong>User enters your application</strong></p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-We&#8217;re reworking this section of the documentation. Stay tuned for new updates comming up soon. You can find the old list of how-to articles <a href="#">index-old.adoc</a>.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>User visits your website or mobile app and attempts to log into his account, authorize a transaction, or perform another action that requires two-factor authentication from a new device.</p>
+</div>
+<div class="paragraph">
+<p><strong>User is prompted to enter his phone number</strong></p>
+</div>
+<div class="paragraph">
+<p>Restcomm receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
+</div>
+<div class="paragraph">
+<p><strong>PIN code is sent to the user via SMS</strong></p>
+</div>
+<div class="paragraph">
+<p>Once the user enters a valid phone number, from your application you will need to ask Restcomm to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
+</div>
+<div class="paragraph">
+<p>Sending a verification code requires basic authorization that includes your <a href="#">/docs/connect/admin/console-overview.html.adoc#restcomm-account-settings</a>. Below is the format you have to use in order to send a verification code to the user&#8217;s phone number.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_s"><a class="anchor" href="#_how_to_s"></a>How To&#8217;s</h2>
+<h2 id="_sending_one_time_passwords_api_reference"><a class="anchor" href="#_sending_one_time_passwords_api_reference"></a>Sending One-Time Passwords - API Reference</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="Making-decisions-with-control-element.adoc">Making decisions with Control element</a></p>
-</li>
-<li>
-<p><a href="Making-HTTP-requests-with-external-service-client.adoc">Making HTTP requests with the External Service client</a></p>
-</li>
-<li>
-<p><a href="Using-web-trigger.adoc">Using Web Trigger</a></p>
-</li>
-<li>
-<p><a href="Diagrams.adoc">Restcomm Visual Designer Diagrams</a></p>
-</li>
-<li>
-<p><a href="Application-log.adoc">Restcomm Visual Designer Aipplication Log</a></p>
-</li>
-<li>
-<p><a href="Accessing-custom-SIP-headers.adoc">Accessing custom SIP headers from an RCML or RVD application</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p><strong>Base Resource URI</strong></p>
+</div>
+<div class="paragraph">
+<p>https://{your_organization}.restcomm.com</p>
+</div>
+<div class="paragraph">
+<p><strong>Verification Code Resource URI</strong></p>
+</div>
+<div class="paragraph">
+<p>/2fa/send</p>
+</div>
+<div class="paragraph">
+<p><strong>Supported Operations</strong></p>
+</div>
+<div class="paragraph">
+<p>HTTP POST: Send a verification code through SMS to the specified Phone Number</p>
+</div>
+<div class="paragraph">
+<p><strong>Request Parameters</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of your service</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Phone number that is sending the SMS containing the verification code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Phone number to send the SMS containing the verification code to.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The content of the SMS. Use {code} as a placeholder for the location of the verification code in your SMS content. This {code} will be replaced automatically with a random code generated by the system</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "service" : "Restcomm", // the name of your service
+    "from" : "+XXXXXXXXX", // the SMS sender phone number
+    "to" : "+XXXXXXXXXX", // the SMS recepient phone number
+    "body": "Your verification code is: \{code}" // SMS body, containing the verification code
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  https://{your_organization}.restcomm.com/2fa/send \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "service" : "Restcomm",
+    "from" : "+13216549878",
+    "to" : "+13216549879",
+    "body": "Your verification code is: \{code}"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>User enters the PIN to complete app activation</strong></p>
+</div>
+<div class="paragraph">
+<p>User receives the one-time PIN code via SMS, gets back to your application and enters it in order to complete the verification process. Verifying the code is simple and requires basic authorization that includes your account SID and auth token.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verifying_one_time_passwords_api_reference"><a class="anchor" href="#_verifying_one_time_passwords_api_reference"></a>Verifying One-Time Passwords - API Reference</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Base Resource URI</strong></p>
+</div>
+<div class="paragraph">
+<p>https://{your_organization}.restcomm.com</p>
+</div>
+<div class="paragraph">
+<p><strong>Verification Code Resource URI</strong></p>
+</div>
+<div class="paragraph">
+<p>\/2fa/verify</p>
+</div>
+<div class="paragraph">
+<p><strong>Supported Operations</strong></p>
+</div>
+<div class="paragraph">
+<p>HTTP Method: POST: Verify the code that was sent through SMS to the Phone Number</p>
+</div>
+<div class="paragraph">
+<p><strong>Request Parameters</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of your service</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Phone number where the SMS containing the verification code was sent to.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The verification code that was sent to the user through SMS.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "service" : "Restcomm", // the name of your service
+    "number" : "+XXXXXXXXXX",  // the phone number of the SMS recepient
+    "code": "XXXXX" // the verification code
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  https://{your_company}.restcomm.com/2fa/verify \
+  --user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "service" : "Restcomm",
+    "number" : "+13216549879",
+    "code": "294228"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also test your service using <a href="https://www.getpostman.com/">Postman</a> or any other alike client.</p>
 </div>
 </div>
 </div>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm Visual Designer - Restcomm Docs</title>
-    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/rvd/rvd-index.html">
+    <title>How to use the WebRTC Demo with Restcomm* - Restcomm Docs</title>
+    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/tutorials/How-to-use-the-Restcomm-WebRTC-Demo.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/staging/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/staging/css/site.css" title="antora-stylesheet">
@@ -41,7 +41,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle" style="visibility: hidden;">
+      <button class="navigation-toggle">
       </button>
       <button class="navbar-enterprise-burger">
       </button>
@@ -57,7 +57,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
@@ -1116,60 +1116,141 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="rvd-index.html">Restcomm Visual Designer</a></li>
+    <li class="crumb"><a href="How-to-use-the-Restcomm-WebRTC-Demo.html">How to use the WebRTC Demo with Restcomm*</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm Visual Designer</h1>
+  <h1>How to use the WebRTC Demo with Restcomm*</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or
-no programming knowledge. You can find all you need to get started here.</p>
+<p>Restcomm WebRTC Demo enables fast and convenient set up of Restcomm platform over web interface. With Restcomm&#8217;s WebRTC Demo, Restcomm has evolved from its previous client, described here <a href="http://url">telestax.com/livechat-and-video-call-with-restcomm/</a>.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;re new to Restcomm, we recommend looking at the <a href="RVD-Quick-Start-Guide.adoc">Quick Start Guide</a>. For more in-depth
-overview, check out the <a href="Tutorial.doc">Visual Designer Tutorial</a>. Below you will find a list with popular Visual Designer how-tos.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-We&#8217;re reworking this section of the documentation. Stay tuned for new updates comming up soon. You can find the old list of how-to articles <a href="#">index-old.adoc</a>.
-</td>
-</tr>
-</table>
+<p>This tutorial will show you how to use the new Restcomm WebRTC Demo to take advantage of Restcomm’s telephony features.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_s"><a class="anchor" href="#_how_to_s"></a>How To&#8217;s</h2>
+<h2 id="_pre_requisites"><a class="anchor" href="#_pre_requisites"></a>Pre-requisites</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>A valid account on restcomm.com. if you don&#8217;t have one, <a href="https://www.restcomm.com/sign-up">Signup</a> for an account or login to an existing one.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_calling_restcomm_with_webrtc"><a class="anchor" href="#_calling_restcomm_with_webrtc"></a>Calling Restcomm with WebRTC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, let’s see how we can make a call to Restcomm and hear a simple announcement</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Making-decisions-with-control-element.adoc">Making decisions with Control element</a></p>
+<p>Open a browser to <code><a href="https://{yourdomain}.restcomm.com/login" class="bare">https://{yourdomain}.restcomm.com/login</a></code> and Sign in with your credentials</p>
 </li>
 <li>
-<p><a href="Making-HTTP-requests-with-external-service-client.adoc">Making HTTP requests with the External Service client</a></p>
+<p>Click on your Username at the top right of the screen and click on WebRTC Demo</p>
 </li>
 <li>
-<p><a href="Using-web-trigger.adoc">Using Web Trigger</a></p>
+<p>WebRTC demo will ask you to login with your default client. The password is the same that you used to login to your main Restcomm account.</p>
 </li>
 <li>
-<p><a href="Diagrams.adoc">Restcomm Visual Designer Diagrams</a></p>
+<p>When the main screen is presented:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on the <em>Contacts</em> icon</p>
 </li>
 <li>
-<p><a href="Application-log.adoc">Restcomm Visual Designer Aipplication Log</a></p>
+<p>Click on number <em>‘1235’</em></p>
 </li>
 <li>
-<p><a href="Accessing-custom-SIP-headers.adoc">Accessing custom SIP headers from an RCML or RVD application</a></p>
+<p>Click <em>dial</em> to make a call to Restcomm and hear the announcement associated with ‘1235’</p>
+</li>
+<li>
+<p>WebRTC Demo will request access to Microphone and Camera and then will present the main screen</p>
+</li>
+</ol>
+</div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>You could follow these steps to call any Restcomm number by either selecting a number from the list or adding a new one in contacts.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_call_from_another_restcomm_client"><a class="anchor" href="#_call_from_another_restcomm_client"></a>Call from another Restcomm Client</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to test Peer to Peer WebRTC Calls, please follow the steps below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First, create a new Restcomm client from the Restcomm Console under the Clients Tab. For more information, please read <a href="#">../admin/console-overview.adoc#restcomm-clients</a></p>
+</li>
+<li>
+<p>Use a separate tab to login to Restcomm WebRTC Demo as described before but this time Sign in with the new Restcomm Client you just created</p>
+</li>
+<li>
+<p>After you sign in:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on the Contacts icon</p>
+</li>
+<li>
+<p>Click on the <code>+</code> icon to add a new contact</p>
+</li>
+<li>
+<p>Enter the username of the new Restcomm Client you just created.</p>
+</li>
+<li>
+<p>Click on the new contact you just created</p>
+</li>
+<li>
+<p>Click on the video call icon</p>
+</li>
+<li>
+<p>WebRTC Demo may request access to Microphone and Camera and then will present the main screen</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>At this time, Restcomm WebRTC Demo will start to ring in the other Client&#8217;s window:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pick up from the other tab and you are ready to talk!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_chatting_with_another_restcomm_client"><a class="anchor" href="#_chatting_with_another_restcomm_client"></a>Chatting with another Restcomm Client</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on the Contacts icon</p>
+</li>
+<li>
+<p>Click on the new contact you just created or called before</p>
+</li>
+<li>
+<p>Click on the chat text field, enter your message and press Return to send your message ot the other Restcomm Client</p>
+</li>
+</ol>
 </div>
 </div>
 </div>

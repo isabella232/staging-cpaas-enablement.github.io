@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restcomm Visual Designer - Restcomm Docs</title>
-    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/rvd/rvd-index.html">
+    <title>Restcomm Visual Designer Application Log Overview - Restcomm Docs</title>
+    <link rel="canonical" href="https://www.restcomm.com/staging-docs/docs/1.0/api/rvd/Application-log.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/staging/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/staging/css/site.css" title="antora-stylesheet">
@@ -41,7 +41,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle" style="visibility: hidden;">
+      <button class="navigation-toggle">
       </button>
       <button class="navbar-enterprise-burger">
       </button>
@@ -57,7 +57,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
@@ -1116,60 +1116,95 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="rvd-index.html">Restcomm Visual Designer</a></li>
+    <li class="crumb"><a href="Application-log.html">Restcomm Visual Designer Application Log Overview</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm Visual Designer</h1>
+  <h1>Restcomm Visual Designer Application Log Overview</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or
-no programming knowledge. You can find all you need to get started here.</p>
-</div>
-<div class="paragraph">
-<p>If you&#8217;re new to Restcomm, we recommend looking at the <a href="RVD-Quick-Start-Guide.adoc">Quick Start Guide</a>. For more in-depth
-overview, check out the <a href="Tutorial.doc">Visual Designer Tutorial</a>. Below you will find a list with popular Visual Designer how-tos.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-We&#8217;re reworking this section of the documentation. Stay tuned for new updates comming up soon. You can find the old list of how-to articles <a href="#">index-old.adoc</a>.
-</td>
-</tr>
-</table>
+<p>Application Logging is designed to help users troubleshoot their applications.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_s"><a class="anchor" href="#_how_to_s"></a>How To&#8217;s</h2>
+<h2 id="_accessing_application_log"><a class="anchor" href="#_accessing_application_log"></a>Accessing Application Log</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Making-decisions-with-control-element.adoc">Making decisions with Control element</a></p>
+<p>Go to RestComm Visual Designer</p>
 </li>
 <li>
-<p><a href="Making-HTTP-requests-with-external-service-client.adoc">Making HTTP requests with the External Service client</a></p>
+<p>Open the application you wish to enable logging for</p>
 </li>
 <li>
-<p><a href="Using-web-trigger.adoc">Using Web Trigger</a></p>
+<p>On the top of the application screen click on the <em>Settings</em> icon</p>
 </li>
 <li>
-<p><a href="Diagrams.adoc">Restcomm Visual Designer Diagrams</a></p>
-</li>
-<li>
-<p><a href="Application-log.adoc">Restcomm Visual Designer Aipplication Log</a></p>
-</li>
-<li>
-<p><a href="Accessing-custom-SIP-headers.adoc">Accessing custom SIP headers from an RCML or RVD application</a></p>
+<p>Select <em>Project Settings</em></p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_096.png" alt="Project Settings" width="763" height="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Application Logging</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_098.png" alt="enable app logging" width="519" height="177">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make a test call to your application</p>
+</li>
+<li>
+<p>After the test call click on the <em>Settings</em> button again and and open <em>Application log</em></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_095.png" alt="enable application logging" width="767" height="114">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If your application is working properly you should see a screen similar to the one below.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_102.png" alt="application log screen" width="1056" height="399">
+</div>
+</div>
+</li>
+<li>
+<p>If there are some issues with the external service you are using or any other part of your application you should see similar log screen:</p>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Selection_101.png" alt="application log screen with an exception" width="1059" height="409">
+</div>
+</div>
+</li>
+<li>
+<p>In this case an EXCEPTION has been thrown. The error relates to the external service used in the application.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enabling Application log can help you easily find and troubleshoot issues related with your application while you are still developing it. If you want to clear the application log just click on the Reset button. Reload your application log screen each time you are testing your application in order to view new logs.</p>
 </div>
 </div>
 </div>
