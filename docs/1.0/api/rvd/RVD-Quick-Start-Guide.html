@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Designer Quick Start guide - Restcomm Docs</title>
+    <title>Visual Designer Quick Start Guide - Restcomm Docs</title>
     <link rel="canonical" href="https://usstaging.restcomm.com/docs/docs/1.0/api/rvd/RVD-Quick-Start-Guide.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
@@ -1116,12 +1116,12 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="RVD-Quick-Start-Guide.html">Visual Designer Quick Start guide</a></li>
+    <li class="crumb"><a href="RVD-Quick-Start-Guide.html">Visual Designer Quick Start Guide</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Visual Designer Quick Start guide</h1>
+  <h1>Visual Designer Quick Start Guide</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -1135,13 +1135,15 @@
 <div class="sect2">
 <h3 id="_create_the_application"><a class="anchor" href="#_create_the_application"></a>Create the Application</h3>
 <div class="paragraph">
-<p>New applications are easily created from within the <a href="#">../admin/console-overview.html.adoc#restcomm-applications</a>.</p>
+<p>New applications are easily created from within the Restcomm Console.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/console-14.png" alt="console-14">
+</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../admin/images/console-14.png" alt="console-14"></span></p>
-</div>
-<div class="paragraph">
-<p>In order to create an <a href="#">../admin/console-overview.html.adoc#restcomm-applications</a>:</p>
+<p>In order to create a Restcomm Application:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1179,24 +1181,24 @@ Choose <code>voice</code>.</p>
 </div>
 <div class="paragraph">
 <p>You&#8217;re almost there. Your application has been created and is ready to greet you with the default message when called.
-You do need a way to reach it though. To do that, you&#8217;ll have to attach it to a <a href="#">../admin/console-overview.html.adoc#restcomm-numbers</a> and finally make a call to it.</p>
+You do need a way to reach it though. To do that, you&#8217;ll have to attach it to a Restcomm Number and finally make a call to it.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_attach_your_application_to_a_restcomm_number"><a class="anchor" href="#_attach_your_application_to_a_restcomm_number"></a>Attach your Application to a Restcomm number</h3>
 <div class="paragraph">
-<p>You&#8217;ve just created a <em>voice</em> application. Such applications are executed when an incoming voice call is made to a <a href="#">../admin/console-overview.html.adoc#restcomm-numbers</a>.
+<p>You&#8217;ve just created a <em>voice</em> application. Such applications are executed when an incoming voice call is made to a Restcomm Number.
 We will register a SIP Number which is a number that can be called via a SIP or WebRTC Client</p>
 </div>
 <div class="paragraph">
-<p>In <a href="#">../admin/console-overview.html.adoc</a>, click on the <code>Numbers</code> Tab and follow the steps below:</p>
+<p>In the Restcomm Console, click on the <code>Numbers</code> Tab and follow the steps below:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>At the top of the screen, provide a value for <code>SIP Address</code> and <code>Friendly Name</code> such as 5555 by example.
 Remember, what you define as SIP Address is the number you will call to test your application.
-Click <code>Register</code> to register this number and start the wizard for linking a <a href="#">../admin/console-overview.html.adoc#restcomm-numbers</a> to your newly created application.
+Click <code>Register</code> to register this number and start the wizard for linking a Restcomm Number to your newly created application.
 The operation will fail if the number has already been registered.</p>
 </li>
 <li>
@@ -1224,16 +1226,20 @@ see an entry named <code>greeting-app</code>. Select it.</p>
 <div class="sect2">
 <h3 id="_call_the_application"><a class="anchor" href="#_call_the_application"></a>Call the Application</h3>
 <div class="paragraph">
-<p>It&#8217;s now time to test the application. Voice applications are executed when an incoming voice call is made to the <a href="#">../admin/console-overview.html.adoc#restcomm-numbers</a> you just registered.
+<p>It&#8217;s now time to test the application. Voice applications are executed when an incoming voice call is made to the Restcomm Number you just registered.
 We will use the WebRTC Demo client that is available in your Restcomm account for testing purposes.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Start WebRTC Demo client. Please use the same password that you used to create your Restcomm Account, unless you changed it in the <a href="#">../admin/console-overview.html.adoc#restcomm-client</a> Tab
-image::WebRTCDemo.png[WebRTCDemo]</p>
+<p>Start WebRTC Demo client. Please use the same password that you used to create your Restcomm Account, unless you changed it in the Restcomm Clients Tab</p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/WebRTCDemo.png" alt="WebRTCDemo">
+</div>
 </div>
 <div class="paragraph">
 <p>From WebRTC Demo client</p>
@@ -1241,9 +1247,17 @@ image::WebRTCDemo.png[WebRTCDemo]</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Create a new Contact named after the number you created. In our case this is 5555.
-image::WebRTCDemo-add-contact.png[WebRTCDemo-add-contact]</p>
+<p>Create a new Contact named after the number you created. In our case this is 5555.</p>
 </li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/WebRTCDemo-add-contact.png" alt="WebRTCDemo-add-contact">
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Place your call and make sure your sound output device is active.
 <span class="image"><img src="https://www.restcomm.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-02-16-55-39.png" alt="Greeting app demo call"></span></p>
@@ -1263,7 +1277,7 @@ image::WebRTCDemo-add-contact.png[WebRTCDemo-add-contact]</p>
 <h2 id="_visual_designer_concepts"><a class="anchor" href="#_visual_designer_concepts"></a>Visual Designer Concepts</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Now that the base application has been created, linked to a <a href="#">../admin/console-overview.html.adoc#restcomm-numbers</a> and tested through the WebRTC Demo Client, you can go ahead and tweak your application with more useful and interesting features.  Let&#8217;s switch back to Visual Designer tab and introduce some basic concepts.</p>
+<p>Now that the base application has been created, linked to a Restcomm Number and tested through the WebRTC Demo Client, you can go ahead and tweak your application with more useful and interesting features.  Let&#8217;s switch back to Visual Designer tab and introduce some basic concepts.</p>
 </div>
 <div class="sect2">
 <h3 id="_elements"><a class="anchor" href="#_elements"></a>Elements</h3>
@@ -1342,10 +1356,10 @@ and you&#8217;re allowed to switch between them. When done, you just close what 
 This is not required but will result in a cleaner and faster workflow.</p>
 </div>
 <div class="paragraph">
-<p>Continue to <a href="#">Restcomm Visual Designer Tutorial.adoc</a></p>
+<p>Continue to <a href="Tutorial.html">Visual Designer Tutorial</a></p>
 </div>
 <div class="paragraph">
-<p>Back to   <a href="#">rvd-index.adoc</a></p>
+<p>Back to <a href="rvd-index.html">Visual Designer documentation home</a></p>
 </div>
 </div>
 </div>
