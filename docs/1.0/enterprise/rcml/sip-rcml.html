@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="csp-persona">
+<html lang="en" class="enterprise-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizations - Restcomm Docs</title>
-    <link rel="canonical" href="https://dev.restcomm.com/docs/docs/1.0/api/organization-api.html">
+    <title>SIP - Restcomm Docs</title>
+    <link rel="canonical" href="https://dev.restcomm.com/docs/docs/1.0/enterprise/rcml/sip-rcml.html">
+    <meta name="description" content="The &amp;lt;Sip&amp;gt; noun specifies a SIP URI to dial. You can use multiple &amp;lt;Sip&amp;gt; nouns within a &amp;lt;Dial&amp;gt; verb to simultaneously attempt a connection with many user agents at once. The first user agent to accept the incoming connection is connected to the call and the other connection attempts are canceled.">
+    <meta name="keywords" content="restcomm sip, sip rcml, sip dial, dial a number, dial many users, dial numbers">
     <meta name="generator" content="Antora 1.1.1">
-    <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
-    <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
+    <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
+    <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -20,7 +22,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item header-logo-link" href="
-        https://dev.restcomm.com/docs
+        https://dev.restcomm.com/docs/1.0/enterprise
         ">
       </a>
     </div>
@@ -48,9 +50,9 @@
     </div>
     <div class="navbar-enterprise-container">
 
-      <a class="navbar-enterprise-item" href="/docs/1.0/ROOT/api/overview.html">Reference</a>
-      <a class="navbar-enterprise-item" href="/docs/1.0/ROOT/tutorials/index.html">Tutorials</a>
-      <a class="navbar-enterprise-item" href="/docs/1.0/ROOT/rvd/index.html">Visual Designer</a>
+      <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/api/overview.html">Reference</a>
+      <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/tutorials/index.html">Tutorials</a>
+      <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/rvd/index.html">Visual Designer</a>
 
 
     </div>
@@ -63,7 +65,7 @@
 <div class="navigation-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <!-- Not applicable to our Enterprise docs
-    <h3 class="title"><a href="../index.html">docs</a></h3>
+    <h3 class="title"><a href="../../index.html">docs</a></h3>
     -->
   <ul class="nav-list">
       <li class="nav-item" data-depth="0">
@@ -76,7 +78,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/overview.html">REST API</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html">REST API</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -89,7 +91,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/overview.html">Overview</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html">Overview</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -102,7 +104,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/overview.html#_api_endpoint">API Endpoint</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_api_endpoint">API Endpoint</a>
               
             </span>
           </div>
@@ -115,7 +117,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/overview.html#_authentication">Authentication</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_authentication">Authentication</a>
               
             </span>
           </div>
@@ -128,7 +130,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/overview.html#_requests">Requests</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_requests">Requests</a>
               
             </span>
           </div>
@@ -141,7 +143,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/overview.html#_responses">Responses</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_responses">Responses</a>
               
             </span>
           </div>
@@ -154,409 +156,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/overview.html#_paging">Paging</a>
-              
-            </span>
-          </div>
-              </li>
-  </ul>
-      </li>
-      <li class="nav-item" data-depth="2">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/voice-category.html">Voice</a>
-              <button class="nav-toggle"></button>
-            </span>
-          </div>
-          <ul class="nav-list">
-      <li class="nav-item" data-depth="3">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/available-phone-numbers-api.html">Available Phone Numbers</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="3">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html">Calls</a>
-              <button class="nav-toggle"></button>
-            </span>
-          </div>
-          <ul class="nav-list">
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#examples">Examples</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_list_filter">List Filter</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_paging_information">Paging Information</a>
-              
-            </span>
-          </div>
-              </li>
-  </ul>
-      </li>
-      <li class="nav-item" data-depth="3">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html">Clients</a>
-              <button class="nav-toggle"></button>
-            </span>
-          </div>
-          <ul class="nav-list">
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_create_a_client">Create a Client</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_delete_a_client">Delete a Client</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
-              
-            </span>
-          </div>
-              </li>
-  </ul>
-      </li>
-      <li class="nav-item" data-depth="3">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/conferences-api.html">Conference Management</a>
-              <button class="nav-toggle"></button>
-            </span>
-          </div>
-          <ul class="nav-list">
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/conferences-api.html#_supported_operations">Supported Operations</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
-              
-            </span>
-          </div>
-              </li>
-  </ul>
-      </li>
-      <li class="nav-item" data-depth="3">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/participants-api.html">Conference Participants Management</a>
-              <button class="nav-toggle"></button>
-            </span>
-          </div>
-          <ul class="nav-list">
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
-              
-            </span>
-          </div>
-              </li>
-  </ul>
-      </li>
-      <li class="nav-item" data-depth="3">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
-              <button class="nav-toggle"></button>
-            </span>
-          </div>
-          <ul class="nav-list">
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
-              
-            </span>
-          </div>
-              </li>
-  </ul>
-      </li>
-      <li class="nav-item" data-depth="3">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/recordings-api.html">Recordings</a>
+              <a class="nav-link nav-flex-item-text" href="../overview.html#_paging">Paging</a>
               
             </span>
           </div>
@@ -571,7 +171,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/sms-category.html">SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../voice-category.html">Voice</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -584,7 +184,20 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html">Messages</a>
+              <a class="nav-link nav-flex-item-text" href="../api/available-phone-numbers-api.html">Available Phone Numbers</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="3">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html">Calls</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -597,7 +210,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html#_send_sms">Send SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
               
             </span>
           </div>
@@ -610,7 +223,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html#_get_sms_list">Get SMS List</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
               
             </span>
           </div>
@@ -623,7 +236,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
               
             </span>
           </div>
@@ -636,7 +249,33 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html#_sms_attributes">SMS Attributes</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#examples">Examples</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_list_filter">List Filter</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_paging_information">Paging Information</a>
               
             </span>
           </div>
@@ -651,7 +290,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html">Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -664,7 +303,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_create_a_client">Create a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_create_a_client">Create a Client</a>
               
             </span>
           </div>
@@ -677,7 +316,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_delete_a_client">Delete a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
               
             </span>
           </div>
@@ -690,7 +329,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
               
             </span>
           </div>
@@ -703,7 +342,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
               
             </span>
           </div>
@@ -718,7 +357,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html">Conference Management</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -731,7 +370,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_supported_operations">Supported Operations</a>
               
             </span>
           </div>
@@ -744,98 +383,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="4">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
               
             </span>
           </div>
@@ -850,7 +398,167 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/available-phone-numbers-api.html">Available Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../api/participants-api.html">Conference Participants Management</a>
+              <button class="nav-toggle"></button>
+            </span>
+          </div>
+          <ul class="nav-list">
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
+              
+            </span>
+          </div>
+              </li>
+  </ul>
+      </li>
+      <li class="nav-item" data-depth="3">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <button class="nav-toggle"></button>
+            </span>
+          </div>
+          <ul class="nav-list">
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              
+            </span>
+          </div>
+              </li>
+  </ul>
+      </li>
+      <li class="nav-item" data-depth="3">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/recordings-api.html">Recordings</a>
               
             </span>
           </div>
@@ -865,7 +573,301 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/account-api.html">Accounts</a>
+              <a class="nav-link nav-flex-item-text" href="../sms-category.html">SMS</a>
+              <button class="nav-toggle"></button>
+            </span>
+          </div>
+          <ul class="nav-list">
+      <li class="nav-item" data-depth="3">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html">Messages</a>
+              <button class="nav-toggle"></button>
+            </span>
+          </div>
+          <ul class="nav-list">
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_send_sms">Send SMS</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_sms_list">Get SMS List</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_sms_attributes">SMS Attributes</a>
+              
+            </span>
+          </div>
+              </li>
+  </ul>
+      </li>
+      <li class="nav-item" data-depth="3">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
+              <button class="nav-toggle"></button>
+            </span>
+          </div>
+          <ul class="nav-list">
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_create_a_client">Create a Client</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              
+            </span>
+          </div>
+              </li>
+  </ul>
+      </li>
+      <li class="nav-item" data-depth="3">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <button class="nav-toggle"></button>
+            </span>
+          </div>
+          <ul class="nav-list">
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              
+            </span>
+          </div>
+              </li>
+      <li class="nav-item" data-depth="4">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              
+            </span>
+          </div>
+              </li>
+  </ul>
+      </li>
+      <li class="nav-item" data-depth="3">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/available-phone-numbers-api.html">Available Phone Numbers</a>
+              
+            </span>
+          </div>
+              </li>
+  </ul>
+      </li>
+      <li class="nav-item" data-depth="2">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html">Accounts</a>
               
             </span>
           </div>
@@ -878,7 +880,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/applications-api.html">Applications</a>
+              <a class="nav-link nav-flex-item-text" href="../api/applications-api.html">Applications</a>
               
             </span>
           </div>
@@ -891,7 +893,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/notifications-api.html">Notifications</a>
+              <a class="nav-link nav-flex-item-text" href="../api/notifications-api.html">Notifications</a>
               
             </span>
           </div>
@@ -906,7 +908,7 @@
               nav-icon-rcml
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/restcomm-markup-language-rcml.html">RCML</a>
+              <a class="nav-link nav-flex-item-text" href="restcomm-markup-language-rcml.html">RCML</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -919,7 +921,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/dial-rcml.html">Dial</a>
+              <a class="nav-link nav-flex-item-text" href="dial-rcml.html">Dial</a>
               <button class="nav-toggle"></button>
             </span>
           </div>
@@ -932,7 +934,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/client-rcml.html">Client</a>
+              <a class="nav-link nav-flex-item-text" href="client-rcml.html">Client</a>
               
             </span>
           </div>
@@ -945,7 +947,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/conference-rcml.html">Conference</a>
+              <a class="nav-link nav-flex-item-text" href="conference-rcml.html">Conference</a>
               
             </span>
           </div>
@@ -958,12 +960,12 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/number-rcml.html">Number</a>
+              <a class="nav-link nav-flex-item-text" href="number-rcml.html">Number</a>
               
             </span>
           </div>
               </li>
-      <li class="nav-item" data-depth="3">
+      <li class="nav-item is-current-page" data-depth="3">
           <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -971,7 +973,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/sip-rcml.html">SIP</a>
+              <a class="nav-link nav-flex-item-text" href="sip-rcml.html">SIP</a>
               
             </span>
           </div>
@@ -986,7 +988,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/gather-rcml.html">Gather</a>
+              <a class="nav-link nav-flex-item-text" href="gather-rcml.html">Gather</a>
               
             </span>
           </div>
@@ -999,7 +1001,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/say-rcml.html">Say</a>
+              <a class="nav-link nav-flex-item-text" href="say-rcml.html">Say</a>
               
             </span>
           </div>
@@ -1012,7 +1014,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/play-rcml.html">Play</a>
+              <a class="nav-link nav-flex-item-text" href="play-rcml.html">Play</a>
               
             </span>
           </div>
@@ -1025,7 +1027,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/sms-rcml.html">SMS</a>
+              <a class="nav-link nav-flex-item-text" href="sms-rcml.html">SMS</a>
               
             </span>
           </div>
@@ -1038,7 +1040,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/hangup-rcml.html">Hangup</a>
+              <a class="nav-link nav-flex-item-text" href="hangup-rcml.html">Hangup</a>
               
             </span>
           </div>
@@ -1051,7 +1053,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/pause-rcml.html">Pause</a>
+              <a class="nav-link nav-flex-item-text" href="pause-rcml.html">Pause</a>
               
             </span>
           </div>
@@ -1064,7 +1066,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/redirect-rcml.html">Redirect</a>
+              <a class="nav-link nav-flex-item-text" href="redirect-rcml.html">Redirect</a>
               
             </span>
           </div>
@@ -1077,7 +1079,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/record-rcml.html">Record</a>
+              <a class="nav-link nav-flex-item-text" href="record-rcml.html">Record</a>
               
             </span>
           </div>
@@ -1090,7 +1092,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/request-rcml.html">Request</a>
+              <a class="nav-link nav-flex-item-text" href="request-rcml.html">Request</a>
               
             </span>
           </div>
@@ -1103,7 +1105,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/response-rcml.html">Response</a>
+              <a class="nav-link nav-flex-item-text" href="response-rcml.html">Response</a>
               
             </span>
           </div>
@@ -1125,7 +1127,7 @@
       <span class="title">docs</span>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">1.0</a>
+          <a href="../../index.html">1.0</a>
         </li>
       </ul>
     </li>
@@ -1140,181 +1142,137 @@
 -->
 <div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
-  <a href="../index.html" class="home-link"></a>
+  <a href="../../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
-    <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="organization-api.html">Organizations</a></li>
+    <li class="crumb"><a href="../../index.html">docs</a></li>
+    <li class="crumb"><a href="restcomm-markup-language-rcml.html">RCML</a></li>
+    <li class="crumb"><a href="dial-rcml.html">Dial</a></li>
+    <li class="crumb"><a href="sip-rcml.html">SIP</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Organizations</h1>
+  <h1>SIP</h1>
 <div class="sect1">
-<h2 id="_organizations"><a class="anchor" href="#_organizations"></a>Organizations</h2>
+<h2 id="_sip"><a class="anchor" href="#_sip"></a>SIP</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Organization are useful for segmenting accounts and providing restcomm functionalities on custom domain name.</p>
+<p>The <strong>&lt;Sip&gt;</strong> noun specifies a SIP URI to dial. You can use multiple &lt;Sip&gt; nouns within a &lt;Dial&gt; verb to simultaneously attempt a connection with many user agents at once. The first user agent to accept the incoming connection is connected to the call and the other connection attempts are canceled.</p>
+</div>
+<div class="paragraph">
+<p>The Dial verb&#8217;s Sip noun lets you set up VoIP sessions by using SIP&#8201;&#8212;&#8201;Session Initiation Protocol. With this feature, you can send a call to any SIP endpoint. Set up your RCML to use the Sip noun within the Dial verb.</p>
+</div>
+<div class="paragraph">
+<p>Currently, only one Sip noun may be specified per Dial, and the INVITE message may be sent to only one SIP endpoint. Also, you cannot add any other nouns (eg Number, Client) in the same Dial as the SIP. If you want to use another noun, set up a callback on the Dial to use alternate methods .</p>
 </div>
 <div class="sect2">
-<h3 id="_organization_api"><a class="anchor" href="#_organization_api"></a>Organization Api</h3>
+<h3 id="_noun_attributes"><a class="anchor" href="#_noun_attributes"></a>Noun Attributes</h3>
 <div class="paragraph">
-<p>Organization api will provide functionality to perform CRUD (create, read, update and delete) operations for organizations. Api is mainly responsible for communicating with configureable DNS hosting service provider (for example Route-53 or others) for making changes in record sets.</p>
+<p>The <code>&lt;Sip&gt;</code> noun supports the following attributes that modify its behavior:</p>
 </div>
-<div class="sect3">
-<h4 id="_organization_entity"><a class="anchor" href="#_organization_entity"></a>Organization Entity</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute Name</th>
+<th class="tableblock halign-left valign-top">Allowed Values</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A string that uniquely identifies this organization.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">any url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">domain_name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A custom DNS hostname that you create on Restcomm Cloud. It can accept traffic for an account. If anyone makes a SIP/HTTP request using that domain, say the SIP URI sip:alice@cloud.restcomm.com, it will route to Restcomm.</p>
-<p class="tableblock">Total Length of domain_name can be upto 255 Characters. It can contain only letters, number and “-” aka hyphen sign.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GET</code>, <code>POST</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>POST</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date_created</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date that this organization was created.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">statusCallbackEvent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>initiated</code>, <code>ringing</code>, <code>answered</code>, <code>completed</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date_updated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date that this organization was last updated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">statusCallback</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">any url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Active or Closed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">statusCallbackMethod</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GET</code>, <code>POST</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>POST</code></p></td>
 </tr>
 </tbody>
 </table>
-</div>
 <div class="sect3">
-<h4 id="_create_new_organization"><a class="anchor" href="#_create_new_organization"></a>Create new organization</h4>
-<div class="sect4">
-<h5 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h5>
+<h4 id="_name"><a class="anchor" href="#_name"></a>name</h4>
 <div class="paragraph">
-<p>Rational to create a new organization pretty simple and described already, we want to onboard a new customer and provide them with their own domain and account on the platform.</p>
+<p>The 'name' attribute allows you to inform the SIP URI who will answer to a video call. This attribute should be used only when <code>&lt;Video&gt;</code> noun is nested, otherwise the SIP URI should be informed as value of the tag <code>&lt;Sip&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Sip URI (name) without <code>&lt;Video&gt;</code> noun nesting.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>/{Version}/Organizations/{domainName}</code></pre>
+<pre>&lt;Sip&gt;sip:alice@127.0.0.1:5080&lt;/Sip&gt;</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>HTTP PUT to above Uri will create a new organization and returns the representation of the organization resource, including the properties above.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_uri_parameters"><a class="anchor" href="#_uri_parameters"></a>Uri Parameters</h5>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">domainName</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A custom DNS hostname that you create on Restcomm Cloud. It can accept traffic for an account. If anyone makes a SIP/HTTP request using that domain, say the SIP URI sip:alice@cloud.restcomm.com, it will route to Restcomm.</p>
-<p class="tableblock">Total Length of domain_name can be upto 255 Characters. It can contain only letters, number and “-” aka hyphen sign.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="literalblock">
-<div class="title">Add new organization with domain name "test" - Example</div>
-<div class="content">
-<pre>curl -X PUT "https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Organizations/test"</pre>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="literalblock">
-<div class="content">
-<pre>&lt;Organization&gt;
-  &lt;Sid&gt;OR905d1b4e9d3045acb268f8d0fdf259ac&lt;/Sid&gt;
-  &lt;DomainName&gt;test.restcomm.com.&lt;/DomainName&gt;
-  &lt;Status&gt;active&lt;/Status&gt;
-  &lt;DateCreated&gt;Thu, 28 Sep 2017 16:11:39 +0000&lt;/DateCreated&gt;
-  &lt;DateUpdated&gt;Thu, 28 Sep 2017 16:11:39 +0000&lt;/DateUpdated&gt;
-&lt;/Organization&gt;</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_optional_request_parameters"><a class="anchor" href="#_optional_request_parameters"></a>Optional Request Parameters</h5>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HostedZoneId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ID of hosted zone on your DNS server, under which you want to create above domainName, if not provided system will use default configured one.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="literalblock">
-<div class="title">Add new organization with domain name "test" under a specific hosted zone - Example</div>
-<div class="content">
-<pre>curl -X PUT "https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Organizations/test" -d "HostedZoneId=&lt;myHostedZoneId&gt;"</pre>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="literalblock">
-<div class="content">
-<pre>&lt;Organization&gt;
-  &lt;Sid&gt;OR905d1b4e9d3045acb268f8d0fdf259ac&lt;/Sid&gt;
-  &lt;DomainName&gt;test.restcomm.com.&lt;/DomainName&gt;
-  &lt;Status&gt;active&lt;/Status&gt;
-  &lt;DateCreated&gt;Thu, 28 Sep 2017 16:11:39 +0000&lt;/DateCreated&gt;
-  &lt;DateUpdated&gt;Thu, 28 Sep 2017 16:11:39 +0000&lt;/DateUpdated&gt;
-&lt;/Organization&gt;</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_read_organization"><a class="anchor" href="#_read_organization"></a>Read organization</h4>
-<div class="paragraph">
-<p>An account can read organization details if it belongs to that particular organization. Super admins can read all organizations.</p>
-</div>
-<div class="paragraph">
-<p>Read organization resource will return organization entity provided above.</p>
-</div>
-<div class="sect4">
-<h5 id="_single_resource_uri"><a class="anchor" href="#_single_resource_uri"></a>Single Resource URI</h5>
-<div class="paragraph">
-<p>Will return single organization resource</p>
+<p>Sip URI (name) with <code>&lt;Video&gt;</code> noun nesting.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>/{Version}/Organizations(.json)/\{OrganizationSid}</code></pre>
+<pre>&lt;Sip name="sip:alice@127.0.0.1:5080"&gt;&lt;Video enable=”true”&gt;&lt;/Video&gt;&lt;/Sip&gt;</pre>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_response_headers"><a class="anchor" href="#_response_headers"></a>Response Headers</h6>
+<div class="paragraph">
+<p>For more information, please read <a href="#">video-rcml.adoc#video</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_url"><a class="anchor" href="#_url"></a>url</h4>
+<div class="paragraph">
+<p>The 'url' attribute allows you to specify a url for a RCML document that will run on the called party&#8217;s end, after she answers, but before the parties are connected. You can use this RCML to privately play or say information to the called party, or provide a chance to decline the phone call using &lt;Gather&gt; and &lt;Hangup&gt;. The current caller will continue to hear ringing while the RCML document executes on the other end. RCML documents executed in this manner are not allowed to contain the &lt;Dial&gt; verb. method</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_method"><a class="anchor" href="#_method"></a>method</h4>
+<div class="paragraph">
+<p>The 'method' attribute allows you to specify which HTTP method Restcomm should use when requesting the URL in the 'url' attribute. The default is POST.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_statuscallbackevent"><a class="anchor" href="#_statuscallbackevent"></a>statusCallbackEvent</h4>
+<div class="paragraph">
+<p>When dialing out to a SIP URI using &lt;Dial&gt;, an outbound call is initiated. The call transitions from the initiated state to the ringing state when the phone starts ringing. It transitions to the answered state when the call is picked up, and finally to the completed state when the call is over. With <strong>statusCallbackEvent</strong>, you can subscribe to receive webhooks for the different call progress events: initiated, ringing, answered, or completed for a given call.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>statusCallbackEvent</strong> attribute allows you to specify which events Restcomm should webhook on. To specify multiple events separate them with a comma: <code>initiated,ringing,answered,completed</code>. If a statusCallback is provided and no status callback events are specified the completed event will be sent by default.</p>
+</div>
+<div class="paragraph">
+<p>As opposed to creating an outbound call via the API, outbound calls created using &lt;Dial&gt; are initiated right away and never queued. The following shows a timeline of possible call events that can be returned and the different call statuses that a &lt;Dial&gt; leg may experience:</p>
+</div>
+<div class="paragraph">
+<p>The <strong>&lt;Sip&gt;</strong> noun specifies a sip uri to dial. You can use multiple <strong>&lt;Sip&gt;</strong> nouns within a <strong>&lt;Dial&gt;</strong> verb to simultaneously attempt a connection with many sip uris at once. The first sip uri to accept the incoming connection is connected to the call and the other connection attempts are canceled.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/status-callback-events-dial.png" alt="Outbound Dial call events diagram">
+</div>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1322,144 +1280,319 @@
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Header</th>
+<th class="tableblock halign-left valign-top">Event</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Link</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">a link to the effective Profile document with attribute "rel" set to "related"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">initiated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>initiated</code> event is fired when Restcomm starts dialing the call.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ringing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>ringing</code> event is fired when the call starts ringing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">answered</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>answered</code> event is fired when the call is answered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">completed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>completed</code> event is fired when the call is completed regardless of the termination status: <code>busy</code>, <code>canceled</code>, <code>completed</code>, <code>failed</code>, or <code>no-answer</code>. If no <code>statusCallbackEvent</code> is specified, <code>completed</code> will be fired by default.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="literalblock">
-<div class="title">Read Organization Example</div>
-<div class="content">
-<pre>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}"</pre>
 </div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="literalblock">
-<div class="content">
-<pre>&lt;Organization&gt;
-  &lt;Sid&gt;OR905d1b4e9d3045acb268f8d0fdf259ac&lt;/Sid&gt;
-  &lt;DomainName&gt;test.restcomm.com.&lt;/DomainName&gt;
-  &lt;Status&gt;active&lt;/Status&gt;
-  &lt;DateCreated&gt;Thu, 28 Sep 2017 16:11:39 +0000&lt;/DateCreated&gt;
-  &lt;DateUpdated&gt;Thu, 28 Sep 2017 16:11:39 +0000&lt;/DateUpdated&gt;
-&lt;/Organization&gt;</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="literalblock">
-<div class="title">Read Organization Json Example</div>
-<div class="content">
-<pre>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations.json/{OrganizationSid}"</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_list_resource_uri"><a class="anchor" href="#_list_resource_uri"></a>List Resource URI</h5>
+<div class="sect3">
+<h4 id="_statuscallback"><a class="anchor" href="#_statuscallback"></a>statusCallback</h4>
 <div class="paragraph">
-<p>Will return list of organizations</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code>/{Version}/Organizations(.json)</code></pre>
+<p>The <strong>statusCallback</strong> attribute allows you to specify a URL for Restcomm to send webhook requests to on each event specified in the statusCallbackEvent attribute.</p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_list_filter"><a class="anchor" href="#_list_filter"></a>List Filter</h5>
+<div class="sect3">
+<h4 id="_statuscallbackmethod"><a class="anchor" href="#_statuscallbackmethod"></a>statusCallbackMethod</h4>
 <div class="paragraph">
-<p>You can filter an organization list resource by providing following parameters.</p>
+<p>The <strong>statusCallbackMethod</strong> attribute allows you to specify which HTTP method Restcomm should use when requesting the URL in the statusCallback attribute. The default is POST.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h5>
+<div class="sect3">
+<h4 id="_status_callback_http_parameters"><a class="anchor" href="#_status_callback_http_parameters"></a>Status Callback HTTP Parameters</h4>
+<div class="paragraph">
+<p>The parameters Restcomm passes to your application in its asynchronous request to the StatusCallback URL include all parameters passed in a synchronous request to retrieve RCML when Restcomm receives a call to one of your Restcomm numbers. The full list of parameters and descriptions of each are in the RCML Voice Request documentation.</p>
+</div>
+<div class="paragraph">
+<p>When the call progress events are fired, the Status Callback request also passes these additional parameters:</p>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A unique identifier for this call, generated by Restcomm. You can use the <code>CallSid</code> to modify the child call by POSTing to Calls/{CallSid} with a new RCML URL.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Active or Closed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A descriptive status for the call. The value is one of <strong><code>queued</code></strong>, <strong><code>initiated</code></strong>, <strong><code>ringing</code></strong>, <strong><code>in-progress</code></strong>, <strong><code>busy</code></strong>, <strong><code>failed</code></strong>, or <strong><code>no-answer</code></strong>. See the CallStatus section for more details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallDuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The duration in seconds of the just-completed call. Only present in the <code>completed</code> event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The timestamp when the event was fired, given as UTC in <a href="http://php.net/manual/en/class.datetime.php#datetime.constants.rfc2822">RFC 2822</a> format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallbackSource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A string that describes the source of the webhook. This is provided to help disambiguate why the webhook was made. On Status Callbacks, this value is always <strong><code>call-progress-events</code>.</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SequenceNumber</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The order in which the events were fired, starting from <code>0</code>. Although events are fired in order, they are made as separate HTTP requests and there is no guarantee they will arrive in the same order.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="literalblock">
-<div class="title">Read Organization List with filter Example</div>
-<div class="content">
-<pre>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}.json" -d "Status=active"</pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_delete_organization"><a class="anchor" href="#_delete_organization"></a>Delete Organization</h4>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
 <div class="paragraph">
-<p>An existing Organization can be deleted using the REST API.
-Actually the Delete request will set the Organization to state <code>Closed</code></p>
+<p>For an example of how to use the &lt;Sip&gt; noun see below.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>/{Version}/Organizations/\{organizationSid}</code></pre>
+<pre>&lt;Response&gt;
+    &lt;Dial&gt;
+    &lt;Sip&gt;sip:alice@127.0.0.1:5080&lt;/Sip&gt;
+    &lt;/Dial&gt;
+&lt;/Response&gt;</pre>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_authentication"><a class="anchor" href="#_authentication"></a>Authentication</h3>
 <div class="paragraph">
-<p>HTTP DELETE to above Uri will delete an existing organization and will return the representation of the organization resource.</p>
+<p>Send username and password attributes for authentication to your SIP infrastructure as attributes on the Sip noun.</p>
 </div>
-<div class="sect4">
-<h5 id="_uri_parameters_2"><a class="anchor" href="#_uri_parameters_2"></a>Uri Parameters</h5>
+<div class="sect3">
+<h4 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute Name</th>
+<th class="tableblock halign-left valign-top">Values</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">username</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Username for SIP authentication.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">organizationSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A string that uniquely identifies this organization.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password for SIP authentication</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_authentication_example"><a class="anchor" href="#_authentication_example"></a>Authentication Example</h3>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+    &lt;Dial&gt;
+    &lt;Sip username="alice" password="secret"&gt;sip:alice@example.com&lt;/Sip&gt;
+    &lt;/Dial&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_custom_headers"><a class="anchor" href="#_custom_headers"></a>Custom headers</h3>
+<div class="paragraph">
+<p>Send custom headers by appending them to the SIP URI&#8201;&#8212;&#8201;just as you&#8217;d pass headers in a URI over HTTP. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Response&gt;
+    &lt;Dial&gt;
+        &lt;Sip&gt;
+        sip:alice@example.com?mycustomheader=tata&amp;myotherheader=toto
+        &lt;/Sip&gt;
+    &lt;/Dial&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_character_limit"><a class="anchor" href="#_character_limit"></a>Character Limit</h3>
+<div class="paragraph">
+<p>While the SIP URI itself must be under 255 chars, the headers must be under 1024 characters.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transport"><a class="anchor" href="#_transport"></a>Transport</h3>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Response&gt;
+    &lt;Dial&gt;
+        &lt;Sip&gt;
+        sip:alice@example.com;transport=tcp
+        &lt;/Sip&gt;
+    &lt;/Dial&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set a parameter on your SIP URI to specify what transport protocol you want to use. Currently, this is limited to TCP and UDP. By default, Restcomm sends your SIP INVITE over UDP. Change this by using the transport parameter:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_attributes"><a class="anchor" href="#_attributes"></a>Attributes</h3>
+<div class="sect3">
+<h4 id="_request_parameters_2"><a class="anchor" href="#_request_parameters_2"></a>Request Parameters</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute Name</th>
+<th class="tableblock halign-left valign-top">Allowed Values</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">call screening url.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET, POST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POST</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The url attribute allows you to specify a url for a RCML document that runs on the called party&#8217;s end, after they answer, but before the two parties are connected. You can use this RCML to privately Play or Say information to the called party, or provide a chance to decline the phone call using Gather and Hangup. The current caller continues to hear ringing while the RCML document executes on the other end. RCML documents executed in this manner cannot contain the Dial verb.</p>
+</div>
+<div class="sect4">
+<h5 id="_method_2"><a class="anchor" href="#_method_2"></a>method</h5>
+<div class="paragraph">
+<p>The method attribute allows you to specify which HTTP method Restcomm should use when requesting the URL specified in the url attribute. The default is POST.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_call_screening_http_parameters"><a class="anchor" href="#_call_screening_http_parameters"></a>Call Screening HTTP parameters</h5>
+<div class="paragraph">
+<p>When a call is answered, Restcomm passes the following parameters with its request to your screening URL (in addition to the standard RCML Voice request parameters):</p>
+</div>
+<div class="sect5">
+<h6 id="_request_parameters_3"><a class="anchor" href="#_request_parameters_3"></a>Request Parameters</h6>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute Name</th>
+<th class="tableblock halign-left valign-top">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SipCallId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The SIP call ID header of the request made to the remote SIP infrastructure.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SipHeader</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name/value of any X-headers returned in the 200 response to the SIP INVITE request.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dial_action_http_parameters"><a class="anchor" href="#_dial_action_http_parameters"></a>Dial Action HTTP parameters</h4>
+<div class="paragraph">
+<p>Use the action callback parameters to modify your application based on the results of the SIP dial attempt:</p>
+</div>
+<div class="sect4">
+<h5 id="_request_parameters_4"><a class="anchor" href="#_request_parameters_4"></a>Request Parameters</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute Name</th>
+<th class="tableblock halign-left valign-top">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DialSipCallId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The SIP call ID header of the request made to the remote SIP infrastructure.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DialSipResponseCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The SIP response code as a result of the INVITE attempt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DialSipHeader_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name/value of any X-headers returned in the final response to the SIP INVITE request.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_migrate_client_passwords"><a class="anchor" href="#_migrate_client_passwords"></a>Migrate Client Passwords</h4>
-<div class="sect4">
-<h5 id="_rationale_2"><a class="anchor" href="#_rationale_2"></a>Rationale</h5>
+<h4 id="_dial_with_multiple_examples"><a class="anchor" href="#_dial_with_multiple_examples"></a>Dial with Multiple Examples.</h4>
 <div class="paragraph">
-<p>This will encrypt all associated Clients passwords to a given encryption algorithm.
-At this moment, the target algorithm is hardcoded to MD5.</p>
+<p>A more complex Dial, specifying custom settings as attributes on Dial, including call screening and setting the protocol to TCP.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>/\{Version}/Organizations/\{OrganizationSid}/Migrate</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>HTTP PUT to above Uri will encrypt all Client passwords and returns a list of Clients migrated.</p>
-</div>
-<div class="literalblock">
-<div class="title">Migrate Organization Example</div>
-<div class="content">
-<pre>curl -X PUT "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}.json/Migrate"</pre>
-</div>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Response&gt;
+    &lt;Dial
+        record="true"
+        timeout="10"
+        hangupOnStar="true"
+        callerId="bob"
+        method="POST"
+        action="/handle_post_dial"&gt;
+            &lt;Sip
+                method="POST"
+                url="/handle_screening_on_answer"&gt;
+                sip:alice@example.com?customheader=foo
+            &lt;/Sip&gt;
+    &lt;/Dial&gt;
+&lt;/Response&gt;</pre>
 </div>
 </div>
 </div>
@@ -1476,7 +1609,6 @@ At this moment, the target algorithm is hardcoded to MD5.</p>
         <h5 class="footer-column-title">Products</h5>
         <p><a href="programmable.html#_getting_started_with_programmable_voice">Programmable Voice</a></p>
         <p><a href="programmable.html#_getting_started_with_programmable_sms">Programmable SMS</a></p>
-        <p><a href="message-exchange.html">Message Exchange</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use cases</h5>
@@ -1502,18 +1634,10 @@ At this moment, the target algorithm is hardcoded to MD5.</p>
         </p>
       </div>
     </div>
-    <div class="footer-bottom-container">
-      <div class="footer-logo">
-        <a class="footer-logo-link" href="https://telestax.com"></a>
-      </div>
-      <div class="footer-copyright">
-        <p class="footer-copyright-paragraph">COPYRIGHT © 2018, TELESTAX INC., ALL RIGHTS RESERVED.</p>
-      </div>
-    </div>
   </div>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script src="../../../../_/js/vendor/highlight.js"></script>
 <script>hljs.initHighlighting()</script>
 <!--
   Tried to get this chunk into js/05-countly.js but it has some issues with the async loading so fell back to putting it here
