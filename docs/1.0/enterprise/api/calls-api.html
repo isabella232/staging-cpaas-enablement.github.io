@@ -1476,7 +1476,7 @@ included in the outgoing INVITE message.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also provide a list of events you are interested in getting notified on and provide a URL to receive them at. Here&#8217;s an example for receiving <code>answered</code> and <code>completed</code> events. The callbacks will be made at <code><a href="http://status.callback.url" class="bare">http://status.callback.url</a></code></p>
+<p>You can also provide a list of events you are interested in getting notified on and provide a URL to receive them at. Here&#8217;s an example for receiving <code>answered</code> and <code>completed</code> events. The callbacks will be made at <code>http://status.callback.url</code></p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1680,7 +1680,7 @@ included in the outgoing INVITE message.</p>
 <p>Bob wants to transfer the call to Alice and sends the request to Controller (application server)</p>
 </li>
 <li>
-<p>Application server: - Prepares new RCML with a given URL: <a href="http://app.server/CallToAlice" class="bare">http://app.server/CallToAlice</a> that using Dial will dial to Alice - Uses Live Call Modification prepares a new POST request: <a href="http://RESTCOMM_IP:8080/restcomm/2012­04­24/Accounts/\{AccountSid/Calls/YOUR_CALL_SID" class="bare">http://RESTCOMM_IP:8080/restcomm/2012­04­24/Accounts/\{AccountSid/Calls/YOUR_CALL_SID</a> - in the POST requests adds the following parameters: Url=http://app.server/CallToAlice</p>
+<p>Application server: - Prepares new RCML with a given URL: http://app.server/CallToAlice that using Dial will dial to Alice - Uses Live Call Modification prepares a new POST request: http://RESTCOMM_IP:8080/restcomm/2012­04­24/Accounts/\{AccountSid/Calls/YOUR_CALL_SID - in the POST requests adds the following parameters: Url=http://app.server/CallToAlice</p>
 </li>
 <li>
 <p>Restcomm process this Live Call Modification request and redirects the incoming call to the new RCML application (to the new URL)</p>
@@ -1702,7 +1702,7 @@ included in the outgoing INVITE message.</p>
 <p>Will prepare new POST Live Call Modification request for the incoming call to be connected to the new url (that will dial to the conference)</p>
 </li>
 <li>
-<p>Will then prepare new outgoing call request, using the Calls Rest API that will connect Bob to the conference application URL: - <a href="http://RESTCOMM_IP:8080/restcomm/2012­04­24/Accounts/{AccountSid}/Calls" class="bare">http://RESTCOMM_IP:8080/restcomm/2012­04­24/Accounts/{AccountSid}/Calls</a> - will pass the following parameters: <strong>From</strong>=INCOMING_CALL_ID <strong>To</strong>=client:bob <strong>Url</strong>=CONFERENCE_APPLICATION_URL</p>
+<p>Will then prepare new outgoing call request, using the Calls Rest API that will connect Bob to the conference application URL: - <code>http://RESTCOMM_IP:8080/restcomm/2012­04­24/Accounts/{AccountSid}/Calls</code> - will pass the following parameters: <strong>From</strong>=INCOMING_CALL_ID <strong>To</strong>=client:bob <strong>Url</strong>=CONFERENCE_APPLICATION_URL</p>
 </li>
 <li>
 <p>Later application server can create more outgoing call requests, similar to the one above, to invite other clients or sip URLs or PSTN numbers to this conference call</p>
@@ -1719,7 +1719,7 @@ included in the outgoing INVITE message.</p>
 <div class="sect2">
 <h3 id="_redirect_call_to_a_new_rcml"><a class="anchor" href="#_redirect_call_to_a_new_rcml"></a>Redirect Call to a new RCML</h3>
 <div class="paragraph">
-<p>Live Call Modification POST request URL : <strong><a href="https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAd62f17e7c7f149ac8095f7574495d988" class="bare">https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAd62f17e7c7f149ac8095f7574495d988</a></strong></p>
+<p>Live Call Modification POST request URL : <strong>https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAd62f17e7c7f149ac8095f7574495d988</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters:</h4>
@@ -1738,7 +1738,7 @@ https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­0
 <div class="sect2">
 <h3 id="_redirect_call_to_a_new_rcml_and_connect_both_call_legs"><a class="anchor" href="#_redirect_call_to_a_new_rcml_and_connect_both_call_legs"></a>Redirect Call to a new RCML and connect both call legs</h3>
 <div class="paragraph">
-<p>Live Call Modification POST request URL: <strong><a href="https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAd62f17e7c7f149ac8095f7574495d988" class="bare">https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAd62f17e7c7f149ac8095f7574495d988</a></strong></p>
+<p>Live Call Modification POST request URL: <strong>https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAd62f17e7c7f149ac8095f7574495d988</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_parameters_2"><a class="anchor" href="#_parameters_2"></a>Parameters</h4>
@@ -1758,7 +1758,7 @@ https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­0
 <div class="sect2">
 <h3 id="_terminate_in_progress_call"><a class="anchor" href="#_terminate_in_progress_call"></a>Terminate In Progress call</h3>
 <div class="paragraph">
-<p>Live Call Modification POST request URL: <strong><a href="https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAe29bf33b54ba43dc952f0d3eb331567c" class="bare">https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAe29bf33b54ba43dc952f0d3eb331567c</a></strong></p>
+<p>Live Call Modification POST request URL: <strong>https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CAe29bf33b54ba43dc952f0d3eb331567c</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_parameters_3"><a class="anchor" href="#_parameters_3"></a>Parameters:</h4>
@@ -1770,7 +1770,7 @@ https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­0
 <div class="sect2">
 <h3 id="_terminate_ringing_call"><a class="anchor" href="#_terminate_ringing_call"></a>Terminate Ringing call</h3>
 <div class="paragraph">
-<p>Live Call Modification POST request URL: <strong><a href="https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CA312824ebd262419dbd4c00b057448d57" class="bare">https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CA312824ebd262419dbd4c00b057448d57</a></strong></p>
+<p>Live Call Modification POST request URL: <strong>https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­04­24/Accounts/&lt;accountSid&gt;/Calls.json/CA312824ebd262419dbd4c00b057448d57</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_parameters_4"><a class="anchor" href="#_parameters_4"></a>Parameters:</h4>
@@ -1811,7 +1811,7 @@ https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012­0
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>curl -X POST https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;accountSid&gt;/Calls.json -d "From=+16175551212" -d "To=sip:alice@127.0.0.1:5061" -d "Url=https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/demos/hello-play.xml"</pre>
+<pre>curl -X POST \https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/&lt;accountSid&gt;/Calls.json -d "From=+16175551212" -d "To=sip:alice@127.0.0.1:5061" -d "Url=https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/demos/hello-play.xml"</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1930,7 +1930,7 @@ The call will now be redirected to the Url specified(hello-world.xml)</p>
 <div class="title">Example 1. Mute a Participant</div>
 <div class="content">
 <div class="paragraph">
-<p>curl -X POST <a href="http://&lt;AccountSid&gt;:&lt;AutheToken&gt;@&lt;Domain&gt;/restcomm/2012-04-24/Accounts/&lt;AccountSid&gt;/Conferences/&lt;ConferenceSid&gt;/Participants/&lt;CallSid&gt" class="bare">http://&lt;AccountSid&gt;:&lt;AutheToken&gt;@&lt;Domain&gt;/restcomm/2012-04-24/Accounts/&lt;AccountSid&gt;/Conferences/&lt;ConferenceSid&gt;/Participants/&lt;CallSid&gt</a>; -d "Mute=true"</p>
+<p>curl -X POST http://&lt;AccountSid&gt;:&lt;AutheToken&gt;@&lt;Domain&gt;/restcomm/2012-04-24/Accounts/&lt;AccountSid&gt;/Conferences/&lt;ConferenceSid&gt;/Participants/&lt;CallSid&gt; -d "Mute=true"</p>
 </div>
 </div>
 </div>
@@ -1959,7 +1959,7 @@ The call will now be redirected to the Url specified(hello-world.xml)</p>
 <div class="title">Example 2. unMute a Muted Participant</div>
 <div class="content">
 <div class="paragraph">
-<p>curl -X POST <a href="http://&lt;AccountSid&gt;:&lt;AutheToken&gt;@&lt;Domain&gt;/restcomm/2012-04-24/Accounts/&lt;AccountSid&gt;/Conferences/&lt;ConferenceSid&gt;/Participants/&lt;CallSid&gt" class="bare">http://&lt;AccountSid&gt;:&lt;AutheToken&gt;@&lt;Domain&gt;/restcomm/2012-04-24/Accounts/&lt;AccountSid&gt;/Conferences/&lt;ConferenceSid&gt;/Participants/&lt;CallSid&gt</a>; -d "Mute=false"</p>
+<p>curl -X POST http://&lt;AccountSid&gt;:&lt;AutheToken&gt;@&lt;Domain&gt;/restcomm/2012-04-24/Accounts/&lt;AccountSid&gt;/Conferences/&lt;ConferenceSid&gt;/Participants/&lt;CallSid&gt; -d "Mute=false"</p>
 </div>
 </div>
 </div>
