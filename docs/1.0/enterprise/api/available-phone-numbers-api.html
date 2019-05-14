@@ -1549,9 +1549,9 @@
 <div class="paragraph">
 <p>Returns the representation of an <strong>AvailablePhoneNumber</strong> resource, including the properties above.</p>
 </div>
-<div class="paragraph">
-<p>===== Request Parameters</p>
 </div>
+<div class="sect3">
+<h4 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1592,11 +1592,107 @@ You need to be using Restcomm Cloud or setup the DID Provider in Restcomm in ord
 <div class="paragraph">
 <p>Here is an example, the <strong>AreaCode</strong> is any valid United States Code</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>curl -G https://&lt;accountSid&gt;:&lt;authToken&gt;@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/AvailablePhoneNumbers/US/Local -d "AreaCode=305"</pre>
-</div>
-</div>
+<script>
+      function openLanguage(language, index) {
+        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
+        for (const sampleClass of sampleClasses) {
+          sampleClass.style.display = "none";
+        }
+        document.getElementById(language + '-' + index).style.display = "block";
+
+        // first, disable the previously selected tab title
+        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
+        if (previouslyActive.length > 0) {
+          previouslyActive[0].classList.toggle('is-active')
+        }
+
+        // then, enable the newly selected title
+        event.target.classList.toggle('is-active')
+      }
+      </script>
+      <div class="sample-code-bar">
+        <button class="sample-code-button scsIndex-16 is-active" onclick="openLanguage('Curl', 16)">Curl</button>
+        <button class="sample-code-button scsIndex-16" onclick="openLanguage('Nodejs', 16)">Nodejs</button>
+        <button class="sample-code-button scsIndex-16" onclick="openLanguage('Python', 16)">Python</button>
+        <button class="sample-code-button scsIndex-16" onclick="openLanguage('Java', 16)">Java</button>
+      </div>
+      <div id="Curl-16" class="sample-language-16">
+        <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/AvailablePhoneNumbers/US/Local.json?AreaCode=305 \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-16" class="sample-language-16" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const request = require('request');
+
+// Change 'mycompany' to the desired restcomm organization
+const RESTCOMM_DOMAIN = 'mycompany.restcomm.com';
+// Provide your Account Sid and Auth Token from your Console Account page
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
+
+request({
+      method: 'GET',
+      url: 'https://' + RESTCOMM_DOMAIN + '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/AvailablePhoneNumbers/US/Local.json?AreaCode=305',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
+   },
+   function (error, response, body) {
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-16" class="sample-language-16" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Change 'mycompany' to the desired restcomm organization
+RESTCOMM_DOMAIN = 'mycompany.restcomm.com'
+# Provide your Account Sid and Auth Token from your Console Account page
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
+
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection(RESTCOMM_DOMAIN)
+conn.request("GET", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/AvailablePhoneNumbers/US/Local.json?AreaCode=305',
+      headers=headers)
+res = conn.getresponse()
+
+// Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
+</code></pre>
+      </div>
+      <div id="Java-16" class="sample-language-16" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Change 'mycompany' to the desired restcomm organization
+   public static final String RESTCOMM_DOMAIN = "mycompany.restcomm.com";
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://" + RESTCOMM_DOMAIN + "/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/AvailablePhoneNumbers/US/Local.json?AreaCode=305");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
+  }
+}
+</code></pre>
+      </div>
 <div class="paragraph">
 <p>The <strong>AvailablePhoneNumbers</strong> subresources let you search for incoming local and toll-free phone numbers that are available for you to purchase from a Telestax partner.</p>
 </div>
@@ -1619,7 +1715,7 @@ You need to be using Restcomm Cloud or setup the DID Provider in Restcomm in ord
 </div>
 </div>
 <div class="sect3">
-<h4 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h4>
+<h4 id="_request_parameters_2"><a class="anchor" href="#_request_parameters_2"></a>Request Parameters</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
