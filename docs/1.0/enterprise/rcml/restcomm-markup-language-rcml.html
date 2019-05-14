@@ -1160,34 +1160,6 @@
             </span>
           </div>
               </li>
-      <li class="nav-item" data-depth="2">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="request-rcml.html">Request</a>
-              
-            </span>
-          </div>
-              </li>
-      <li class="nav-item" data-depth="2">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="response-rcml.html">Response</a>
-              
-            </span>
-          </div>
-              </li>
   </ul>
       </li>
   </ul>
@@ -1317,15 +1289,122 @@
 <div class="sect1">
 <h2 id="_how_restcomm_interacts_with_your_application"><a class="anchor" href="#_how_restcomm_interacts_with_your_application"></a>How Restcomm  Interacts with Your Application</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="request-rcml.html">Requests</a></p>
-</li>
-<li>
-<p><a href="response-rcml.html">Responses</a></p>
-</li>
-</ul>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_restcomm_request"><a class="anchor" href="#_restcomm_request"></a>Restcomm Request</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_restcomm_request_2"><a class="anchor" href="#_restcomm_request_2"></a>Restcomm Request</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>How Restcomm Passes Data to Your Application. The way Restcomm passes data to you application depends on the request method for the given <strong>UR</strong>I. If the request method is <strong>GET</strong> then the data is passed in the query string or the part after the question mark. If the request method is <strong>POST</strong> then the data is sent a multi-part form data just like when a browser submits a form.</p>
+</div>
+<div class="paragraph">
+<p>Restcomm Voice Request. Any time Restcomm makes a request to you applications it will include the following data as request parameters.</p>
+</div>
+<div class="sect2">
+<h3 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The unique identifier for this call.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AccountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Your account id.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">From</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The phone number of the originator of the call.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The phone number of the call recipient.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The status of the call. The possible values are queued, ringing, in-progress, completed, busy, failed, and no-answer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ApiVersion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the Restcomm API used to handle this call.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The direction of the call. The possible values are inbound and outbound-dial.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The caller ID for the caller in the case of inbound calls.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_restcomm_response"><a class="anchor" href="#_restcomm_response"></a>Restcomm Response</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_restcomm_response_2"><a class="anchor" href="#_restcomm_response_2"></a>Restcomm Response</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In your response to the request from Restcomm you want to provide RCML that will instruct Restcomm on how to handle the current call.</p>
+</div>
+<div class="paragraph">
+<p><strong>MIME Types. </strong>Restcomm supports the MIME types described in the table below.</p>
+</div>
+<div class="sect2">
+<h3 id="_supported_mime_types"><a class="anchor" href="#_supported_mime_types"></a>Supported MIME Types</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text/xml, application/xml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm interprets the returned document as an XML instruction set.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When your application returns the RCML document the root element of the document must always be &lt;Response&gt; or the parser will complain.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
