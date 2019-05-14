@@ -1249,7 +1249,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm Visual Designer (RVD) is an intuitive web interface designed by Telestax to help developers build  communication applications rapidly. In this tutorial, you will learn how to create a voicemail application without writing a single line of programming language code. The voice message can then be emailed to your desired address.</p>
+<p>Restcomm Visual Designer (RVD) is an intuitive web interface designed by Telestax to help developers build communication applications rapidly. In this tutorial, you will learn how to create a voicemail application without writing a single line of code. The voice message can then be emailed to a desired email address.</p>
 </div>
 <div class="paragraph">
 <p>Use case scenarios:</p>
@@ -1257,13 +1257,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Voicemail directly to your email,</p>
+<p>Voicemail directly to your email</p>
 </li>
 <li>
 <p>Voicemail to a third party (Assistant) for further processing</p>
 </li>
 <li>
-<p>Access email where voicemail server is not available.</p>
+<p>Access email where voicemail server is not available</p>
 </li>
 </ul>
 </div>
@@ -1286,48 +1286,60 @@
 <h2 id="_step_1"><a class="anchor" href="#_step_1"></a>Step 1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You must create an RVD project.</p>
+<p>You must create a Restomm Visual Designer project.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Log into RVD on your Restcomm installation. <strong><code>http\://IP_ADDRESS:8080/</code></strong> Please go to this link under step 4 and see how to link your RVD post to a Restcomm number. Then use a sip phone to call that number and an email will be sent to <code>your_email@company.com</code> <a href="/?p=2486"><a href="http://www.telestax.com/telephone-survey-with-restcomm-visual-designer/" class="bare">http://www.telestax.com/telephone-survey-with-restcomm-visual-designer/</a></a></p>
+<p>Log into the <a href="https://cloud.restcomm.com/#/login"><strong>Restcomm Console</strong></a> and navigate to <strong>Applications</strong>.</p>
 </li>
 <li>
-<p>Go to Restcomm Visual Designer, Voice and create new project. In this example we will name the project "Voicemail To Email".</p>
+<p>Click on the <strong>Add New App</strong> button. Choose to <strong>Create a Visual Designer Application</strong>.</p>
+</li>
+<li>
+<p>Next, select to use an a <strong>Blank</strong> application template.</p>
+</li>
+<li>
+<p>Give your application a name. In this example we named ours "Voicemail To Email".</p>
+</li>
+<li>
+<p>Set the application type to <strong>Voice</strong> and click on the <strong>Create</strong> button.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/NewProjectVoicemailTOEmail-845x674.png" alt="NewProjectVoicemailTOEmail"></span></p>
+<p><span class="image"><img src="../_images/Create_Voicemail_to_Email_app.png" alt="Create Voicemail to Email App"></span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>You need to create two modules, <strong>Welcome</strong> module and <strong>Send email</strong> module.</p>
+<p>You need to have two modules, <strong>Welcome</strong> module and <strong>Send email</strong> module.</p>
 </li>
 <li>
-<p>For the Welcome module, in the <strong>Say</strong> verb text area, enter your welcome message. In the screenshot below the text is "Welcome to record and email application. Please leave a message.".</p>
+<p>The <strong>Welcome</strong> module is created by default. Navigate to it.</p>
 </li>
 <li>
-<p>Drag and drop the  <strong>Record</strong>  verb into the Welcome module as show in the screenshot below.</p>
+<p>In the <strong>Say</strong> verb text area, enter your welcome message. For example, "Welcome to Restcomm. Please leave your message and phone number after the beep.".</p>
 </li>
 <li>
-<p>In the <strong>Continue To</strong> drop down menu field, choose the <strong>Send email</strong>,</p>
+<p>Drag and drop the <strong>Record</strong> verb into the Welcome module as shown in the screenshot below.</p>
 </li>
 <li>
-<p>Check <strong>Play beep</strong>.</p>
+<p>Create a new application module by clicking on the <strong>+</strong> button. Name that one <strong>Send Email</strong>.</p>
 </li>
 <li>
-<p>Set the <strong>Timeout</strong> field to  10 seconds .</p>
+<p>Get back to the <strong>Welcome module</strong>. Navigate to the <strong>Record</strong> verb and select <strong>Send Email</strong> from the <strong>Continue to</strong> drop down menu field,</p>
 </li>
 <li>
-<p>Leave the rest of the fields as default.</p>
+<p>Set the <strong>Play beep</strong> option to "Yes".</p>
+</li>
+<li>
+<p>Leave the rest of the fields with their default values.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/WelcomeVoicemail2Email-845x604.png" alt="WelcomeVoicemail2Email"></span></p>
+<p><span class="image"><img src="../_images/Voicemail_to_Email_Welcome_module.png" alt="Voicemail to Email Welcome module"></span></p>
 </div>
 </div>
 </div>
@@ -1337,44 +1349,93 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Go to <a href="http://www.zapier.com" class="bare">http://www.zapier.com</a>, make a registration and then log in. Following screen will appear.</p>
+<p>Go to <a href="https://zapier.com">Zapier</a> and log into your account. If you do not have an account, you can sign up <a href="https://zapier.com/sign-up/">here</a>.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/zapierDashboard-845x305.png" alt="zapierDashboard"></span></p>
+<p><span class="image"><img src="../_images/Zapier_Dashboard.png" alt="Zapier Dashboard"></span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Click on Make a Zap.</p>
+<p>Click on <strong>Make a Zap</strong> buton.</p>
 </li>
 <li>
-<p>Get Web Hook trigger and an Email action app from the drop down menus.</p>
-</li>
-<li>
-<p>Choose a trigger and an action to send an  outbound email.</p>
-</li>
-<li>
-<p>Press <strong>Continue</strong> and go to the next step, Web Hook.</p>
+<p>Get a <strong>Webhook trigger</strong> and set it to catch a hook.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/emailVoicemail2Email-845x460.png" alt="emailVoicemail2Email"></span></p>
+<p><span class="image"><img src="../_images/Zapier_Webhook.png" alt="Zapier Webhook"></span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Copy the Webhook URL to clipboard and click on Continue</p>
+<p>Click <strong>Continue</strong> and copy the generated webhook to your clipboard. It should the following format: https://hooks.zapier.com/hooks/catch/308227/je884z/.</p>
 </li>
 <li>
-<p>Select an email account if not already done</p>
+<p>Open a new browser tab enter your webhook url alongside recordingUrl and destination (email address( parameters as shown below:</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/webhookZapier-845x453.png" alt="webhookZapier"></span></p>
+<p>https://hooks.zapier.com/hooks/catch/308227/je884z/?recordingUrl=testurl&amp;destination=youremail@gmail.com</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You should see the following output in your browser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/Webhook_Output.png" alt="Webhook Output"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Get back to Zapier. Click on <strong>Add step</strong> button to add a second step in your application.</p>
+</li>
+<li>
+<p>Choose to add an <strong>Action</strong> and then select <strong>Email</strong> from the list of apps.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/Zapier_Add_an_Email_Step.png" alt="Add an Email step"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose to <strong>Send Outbound Email</strong> and then click <strong>Continue</strong>.</p>
+</li>
+<li>
+<p>Enter the recipient email address in the <strong>To</strong> field.</p>
+</li>
+<li>
+<p>Specify an email subject. For example, "You have received a new Voice message".</p>
+</li>
+<li>
+<p>Enter the body copy of the email. Make sure that you select the recording URL parameter from the drop down field on the right, so that your recipient can receive a copy of the recording.</p>
+</li>
+<li>
+<p>Once set, your screen should look similar to the onw below.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/Set_email_details.png" alt="Set email details"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click "Continue" and then <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Give your Zap a name and switch it on.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1386,14 +1447,37 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Go back to RVD</p>
+<p>Go back to your Visual Designer application.</p>
 </li>
 <li>
-<p>Go to <strong>Send email</strong> module and paste the WebHook URL in the <strong>Service Url</strong>  text area.</p>
+<p>Navigate to the <strong>Send email</strong> module.</p>
 </li>
 <li>
-<p>Drag and drop <strong>Say</strong> module. In the text area enter the following text: "Thank you for calling. We will get back to you as soon as possible."</p>
+<p>Drag and drop an External Service element inside the module.</p>
 </li>
+<li>
+<p>Enter the copied webhook url in the ServiceUrl field.</p>
+</li>
+<li>
+<p>Add the following two service parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>recoringUrl with value set to $core_PublicRecordingUrl</p>
+</li>
+<li>
+<p>destination with the value of the recipient email address</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/External_Service_Voicemail_to_Email.png" alt="External Service Voicemail to Email"></span></p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>The <strong>Send email</strong> module requires an External Service called Zapier. where the recorded message will be processed and a URL will the recorded message will be returned to Restcomm</p>
 </li>
@@ -1433,75 +1517,21 @@
 <div class="paragraph">
 <p><span class="image"><img src="../_images/ExternalServiceVoicemail2email-845x529.png" alt="ExternalServiceVoicemail2email"></span></p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Save your application.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_step_4"><a class="anchor" href="#_step_4"></a> Step 4</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Go back to Zapier. and enter the name of the Values: $core_RecordingUrl</p>
-</li>
-<li>
-<p>Enter the  email address to which the email will be sent.</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/filterwebhook.png" alt="filterwebhook"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Match up the web hook to the outbound email.</p>
-</li>
-<li>
-<p>Enter the email, subject, body text etc.</p>
-</li>
-<li>
-<p>It is important to choose the appropriate type of attachments</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../_images/matchupWH-746x684.png" alt="matchupWH"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Finally, test the Zap.</p>
-</li>
-<li>
-<p>Copy the <code>Webhook URL</code> to your web browser and add the following parameters:</p>
-<div class="paragraph">
-<p><code>https\://zapier.com/hooks/catch/ealwr/?recordingUrl=testurl&amp;destination=miss4eto@gmail.com</code></p>
-</div>
-</li>
-<li>
-<p>Your email will be different</p>
-</li>
-<li>
-<p>This will return a Json object as shown below</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../_images/voicemail2emailjson-845x66.png" alt="voicemail2emailjson"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You can now give your Zap a name and activate it.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../_images/zapname.png" alt="zapname"></span></p>
-</div>
-<div class="paragraph">
-<p>Application is finished. You can call your Restcomm number and test it.</p>
+<p>In order to test your application you need to bind it to a Restcomm phone number. Once that is done, you can start using your application.</p>
 </div>
 </div>
 </div>
