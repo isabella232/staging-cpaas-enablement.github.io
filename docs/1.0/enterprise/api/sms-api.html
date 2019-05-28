@@ -2026,6 +2026,7 @@ public class JavaSampleClass {
     "price_unit":"USD",
     "api_version":"2012-04-24",
     "uri":"/restcomm/2012-04-24/Accounts/&lt;authToken&gt;/SMS/Messages/SM55ce5cf07b9649c283cbacab4dae56a9.json"
+    "num_segments":"1"
 }</pre>
 </div>
 </div>
@@ -2105,6 +2106,10 @@ public class JavaSampleClass {
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">error_message</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Similar to <strong>error_code</strong>, but providing human readable text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">num_segments</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the message is sent to PSTN and requires segmentation because of length, this will indicate number of segments. This is not available in POST response.</p></td>
 </tr>
 </tbody>
 </table>
