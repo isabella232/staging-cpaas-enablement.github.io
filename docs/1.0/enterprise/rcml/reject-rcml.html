@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reject - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rcml/reject-rcml.html">
-    <meta name="description" content="The &amp;lt;Reject&amp;gt; verb rejects an incoming call to your Restcomm endpoint and can be used for blocking unwanted calls. If the first verb in a RCML response is &amp;lt;Reject&amp;gt;, Restcomm will not pick up the call.">
-    <meta name="keywords" content="reject a call, reject verb, reject rcml, restcomm reject, reject calls with restcomm">
+    <meta name="description" content="The &amp;lt;Reject&amp;gt; verb rejects an incoming call to your wlParam:application_name[rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] endpoint and can be used for blocking unwanted calls. If the first verb in a RCML response is &amp;lt;Reject&amp;gt;, wlParam:application_name[rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] will not pick up the call.">
+    <meta name="keywords" content="reject a call, reject verb, reject rcml, wlParam:application_name[rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] reject, reject calls with wlParam:application_name[rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;]">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1292,8 +1292,26 @@
 <h2 id="_reject"><a class="anchor" href="#_reject"></a>Reject</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The &lt;Reject&gt; verb rejects an incoming call to your Restcomm endpoint and can be used for blocking unwanted calls.
-If the first verb in a RCML response is &lt;Reject&gt;, Restcomm will not pick up the call.
+<p>The &lt;Reject&gt; verb rejects an incoming call to your <script>
+      // 'application_name' comes from inline macro
+      if (!window.replacementParams) {
+         window.replacementParams = {};
+      }
+      if (window.replacementParams.application_name) {
+         console.error('White labeled replacement parameter already exists: ' + application_name);
+      }
+      window.replacementParams.application_name = '';
+      </script><span class="application_name">Restcomm</span> endpoint and can be used for blocking unwanted calls.
+If the first verb in a RCML response is &lt;Reject&gt;, <script>
+      // 'application_name' comes from inline macro
+      if (!window.replacementParams) {
+         window.replacementParams = {};
+      }
+      if (window.replacementParams.application_name) {
+         console.error('White labeled replacement parameter already exists: ' + application_name);
+      }
+      window.replacementParams.application_name = '';
+      </script><span class="application_name">Restcomm</span> will not pick up the call.
 The call ends with ‘busy', 'no-answer' or other status, depending on the verb&#8217;s 'reason' attribute. Any verbs after &lt;Reject&gt; are ignored and won’t be executed.</p>
 </div>
 <div class="sect2">
