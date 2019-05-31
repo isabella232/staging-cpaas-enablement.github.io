@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send SMS to a SIP phone - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/tutorials/Send-an-SMS-to-a-SIP-Phone.html">
-    <meta name="description" content="Learn how to send text messages from wlParam:application_name[rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] Visual Designer (RVD) to a Jitsi SIP phone.">
-    <meta name="keywords" content="send sms, sip phone, jitsi, wlParam:application_name[rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] sms, sip">
+    <meta name="description" content="Learn how to send text messages from Restcomm Visual Designer (RVD) to a Jitsi SIP phone.">
+    <meta name="keywords" content="send sms, sip phone, jitsi, restcomm sms, sip">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -17,12 +17,12 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article">
+  <body class="article" style="display: none">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item header-logo-link" href="
-        https://dev.restcomm.com/docs/1.0/enterprise
+        /docs/
         ">
       </a>
     </div>
@@ -53,6 +53,7 @@
       <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/api/overview.html">Reference</a>
       <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/tutorials/index.html">Tutorials</a>
       <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/rvd/index.html">Visual Designer</a>
+
 
 
     </div>
@@ -1291,16 +1292,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this tutorial, you will learn how to send an SMS from <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Visual Designer (RVD) to a Jitsi SIP phone.</p>
+<p>In this tutorial, you will learn how to send an SMS from Restcomm Visual Designer (RVD) to a Jitsi SIP phone.</p>
 </div>
 </div>
 </div>
@@ -1310,16 +1302,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> on running on your local server.</p>
+<p>Restcomm on running on your local server.</p>
 </li>
 <li>
 <p>Jitsi SIP phone installed on your local server. (Latest version of Jitsi)</p>
@@ -1332,16 +1315,7 @@
 <h2 id="_step_1"><a class="anchor" href="#_step_1"></a>Step 1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Create an SMS application using <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Visual Designer (RVD)</p>
+<p>Create an SMS application using Restcomm Visual Designer (RVD)</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1421,30 +1395,12 @@
 <h2 id="_step_2"><a class="anchor" href="#_step_2"></a>Step 2</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You must now link the newly created SMSTest to a <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> phone number.</p>
+<p>You must now link the newly created SMSTest to a Restcomm phone number.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Go to http://127.0.0.1:8080/ in order to open the <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Admin Management page</p>
+<p>Go to http://127.0.0.1:8080/ in order to open the Restcomm Admin Management page</p>
 </li>
 <li>
 <p>You will see the login, screen below. Log in using your credentials.</p>
@@ -1491,16 +1447,7 @@
 <h2 id="_step_3"><a class="anchor" href="#_step_3"></a>Step 3</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this section, you will configure Jitsi SIP phone to use the <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> application you have just created and receive the SMS message you configured.</p>
+<p>In this section, you will configure Jitsi SIP phone to use the Restcomm application you have just created and receive the SMS message you configured.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1667,7 +1614,6 @@ Alice configuration SIP port must match the port configured in the restcomm.xml 
         <h5 class="footer-column-title">Products</h5>
           <p><a href="/docs/1.0/enterprise/api/voice-category.html">Programmable Voice</a></p>
           <p><a href="/docs/1.0/enterprise/api/sms-category.html">Programmable SMS</a></p>
-
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use cases</h5>
@@ -1677,19 +1623,12 @@ Alice configuration SIP port must match the port configured in the restcomm.xml 
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
-        <p><a href="https://www.restcomm.com/blog/">Blog</a></p>
 
           <p><a id="terms-link" href="/docs/1.0/enterprise/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p>+1 650 263 6146</p>
-        <p>
-          <span><a href="https://twitter.com/restcomm"><i class="fab fa-twitter"></i></a></span>
-          <span><a href="https://www.linkedin.com/company/telestax"><i class="fab fa-linkedin-in"></i></a></span>
-          <span><a href="https://www.facebook.com/Telestax/"><i class="fab fa-facebook-f"></i></a></span>
-          <span><a href="https://www.youtube.com/channel/UCrZ-J48d3AdwGdL01XuZKZQ"><i class="fab fa-youtube"></i></a></span>
-        </p>
+        <p><a id='company_site' href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
       </div>
     </div>
   </div>

@@ -17,12 +17,12 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article">
+  <body class="article" style="display: none">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item header-logo-link" href="
-        https://dev.restcomm.com/docs/1.0/enterprise
+        /docs/
         ">
       </a>
     </div>
@@ -53,6 +53,7 @@
       <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/api/overview.html">Reference</a>
       <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/tutorials/index.html">Tutorials</a>
       <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/rvd/index.html">Visual Designer</a>
+
 
 
     </div>
@@ -1291,16 +1292,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This tutorial will walk you through the steps of setting up your own <a href="https://www.restcomm.com/use-cases/two-factor-authentication-2fa/">two-factor authentication service</a>. As of today, this functionality is only available on the <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> US Point of Presence.</p>
+<p>This tutorial will walk you through the steps of setting up your own <a href="https://www.restcomm.com/use-cases/two-factor-authentication-2fa/">two-factor authentication service</a>. As of today, this functionality is only available on the Restcomm US Point of Presence.</p>
 </div>
 <div class="paragraph">
 <p><strong>User enters your application</strong></p>
@@ -1312,31 +1304,13 @@
 <p><strong>User is prompted to enter his phone number</strong></p>
 </div>
 <div class="paragraph">
-<p><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
+<p>Restcomm receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
 </div>
 <div class="paragraph">
 <p><strong>PIN code is sent to the user via SMS</strong></p>
 </div>
 <div class="paragraph">
-<p>Once the user enters a valid phone number, from your application you will need to ask <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
+<p>Once the user enters a valid phone number, from your application you will need to ask Restcomm to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
 </div>
 <div class="paragraph">
 <p>Sending a verification code requires basic authorization that includes your <a href="#">/docs/connect/admin/console-overview.html.adoc#restcomm-account-settings</a>. Below is the format you have to use in order to send a verification code to the user&#8217;s phone number.</p>
@@ -1530,7 +1504,6 @@
         <h5 class="footer-column-title">Products</h5>
           <p><a href="/docs/1.0/enterprise/api/voice-category.html">Programmable Voice</a></p>
           <p><a href="/docs/1.0/enterprise/api/sms-category.html">Programmable SMS</a></p>
-
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use cases</h5>
@@ -1540,19 +1513,12 @@
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
-        <p><a href="https://www.restcomm.com/blog/">Blog</a></p>
 
           <p><a id="terms-link" href="/docs/1.0/enterprise/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p>+1 650 263 6146</p>
-        <p>
-          <span><a href="https://twitter.com/restcomm"><i class="fab fa-twitter"></i></a></span>
-          <span><a href="https://www.linkedin.com/company/telestax"><i class="fab fa-linkedin-in"></i></a></span>
-          <span><a href="https://www.facebook.com/Telestax/"><i class="fab fa-facebook-f"></i></a></span>
-          <span><a href="https://www.youtube.com/channel/UCrZ-J48d3AdwGdL01XuZKZQ"><i class="fab fa-youtube"></i></a></span>
-        </p>
+        <p><a id='company_site' href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
       </div>
     </div>
   </div>
