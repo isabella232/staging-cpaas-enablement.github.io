@@ -6,7 +6,7 @@
     <title>Web Trigger Overview - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rvd/Using-web-trigger.html">
     <meta name="description" content="Web Trigger is an alternative way to start a voice application. It allows establishing a call between an RVD application and a destination address using a simple HTTP request. Any RVD Voice application can be configured to be started using Web Trigger.">
-    <meta name="keywords" content="web trigger, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} web trigger, start a voice app">
+    <meta name="keywords" content="web trigger, restcomm web trigger, start a voice app">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -50,10 +50,10 @@
     </div>
     <div class="navbar-enterprise-container">
 
-      <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/api/overview.html">Reference</a>
-      <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/tutorials/index.html">Tutorials</a>
-      <a class="navbar-enterprise-item" href="/docs/1.0/enterprise/rvd/index.html">Visual Designer</a>
 
+      <a class="navbar-enterprise-item" href="/docs/api/overview.html">Reference</a>
+      <a class="navbar-enterprise-item" href="/docs/tutorials/index.html">Tutorials</a>
+      <a class="navbar-enterprise-item" href="/docs/rvd/index.html">Visual Designer</a>
 
 
     </div>
@@ -1325,29 +1325,11 @@ Any RVD Voice application can be configured to be started using Web Trigger. The
 </ul>
 </div>
 <div class="paragraph">
-<p>Web Trigger relies on the <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Calls REST API to do the actual work. You can find more information on how a call between an RCML application and a destination address is established at <a href="../api/calls-api.html">Restcomm API – Calls</a>.</p>
+<p>Web Trigger relies on the Restcomm Calls REST API to do the actual work. You can find more information on how a call between an RCML application and a destination address is established at <a href="../api/calls-api.html">Restcomm API – Calls</a>.</p>
 </div>
 <div class="paragraph">
 <p>In the following example we will create a sample application that, when
- trigrred, will establish a call between a <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Client and the application and execute it.</p>
+ trigrred, will establish a call between a Restcomm Client and the application and execute it.</p>
 </div>
 </div>
 </div>
@@ -1392,16 +1374,7 @@ Any RVD Voice application can be configured to be started using Web Trigger. The
 <div class="sectionbody">
 <div class="paragraph">
 <p>You will need a registered destination address to receive the triggered call.
-Fire up your favourite SIP client and register to your <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> instance as <strong>alice</strong>. Default password is <em>1234.</em></p>
+Fire up your favourite SIP client and register to your Restcomm instance as <strong>alice</strong>. Default password is <em>1234.</em></p>
 </div>
 </div>
 </div>
@@ -1429,16 +1402,7 @@ you just registered. The destination goes in the <code>to</code> parameter of th
 <p>Notice <em>client:</em> prefix in the <code>to</code> parameter.</p>
 </div>
 <div class="paragraph">
-<p>Also, WebTrigger supports Basic HTTP authentication. Use your <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> account credentials in order
+<p>Also, WebTrigger supports Basic HTTP authentication. Use your restcomm account credentials in order
 to authenticate. In this example we will use <strong>administrator@company.com</strong> / <strong>RestComm</strong>.</p>
 </div>
 <div class="paragraph">
@@ -1498,16 +1462,7 @@ directly in the browser:</p>
 </td>
 <td class="content">
 Before giving it a try make sure that you have configured
- <a href="#configure-restcomm-api-credentials"><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> API credentials</a> in RVD settings.
+ <a href="#configure-restcomm-api-credentials">Restcomm API credentials</a> in RVD settings.
 </td>
 </tr>
 </table>
@@ -1532,48 +1487,12 @@ be provided in the configuration form as follows:</p>
 will be used instead.</p>
 </div>
 <div class="sect2">
-<h3 id="_configure_script_application_name_comes_from_inline_macro_if_window_replacementparams_window_replacementparams_if_window_replacementparams_application_name_console_error_white_labeled_replacement_parameter_already_exists_application_name_window_replacementparams_application_name_script_span_class_application_name_restcomm_span_api_access_credentials"><a class="anchor" href="#_configure_script_application_name_comes_from_inline_macro_if_window_replacementparams_window_replacementparams_if_window_replacementparams_application_name_console_error_white_labeled_replacement_parameter_already_exists_application_name_window_replacementparams_application_name_script_span_class_application_name_restcomm_span_api_access_credentials"></a>Configure <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> API access credentials</h3>
+<h3 id="_configure_restcomm_api_access_credentials"><a class="anchor" href="#_configure_restcomm_api_access_credentials"></a>Configure Restcomm API access credentials</h3>
 <div class="paragraph">
-<p>In order to use application-specific tokens <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> API credentials should be configured in RVD
- settings. RVD relies on <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Calls REST API to create the actual call between the
+<p>In order to use application-specific tokens Restcomm API credentials should be configured in RVD
+ settings. RVD relies on Restcomm Calls REST API to create the actual call between the
  application and the destination address. For that, it needs to know the credentials of
- the <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Account that will make the call.</p>
+ the Restcomm Account that will make the call.</p>
 </div>
 <div class="paragraph">
 <p>To supply these credentials:</p>
@@ -1599,16 +1518,7 @@ will be used instead.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Supply the credentials of the <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> account that will be used to create the call.</p>
+<p>Supply the credentials of the Restcomm account that will be used to create the call.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1661,16 +1571,7 @@ option in <em>Advanced configuration</em> options should be set to <em>Applicati
 <div class="sect3">
 <h4 id="_destination_address_syntax"><a class="anchor" href="#_destination_address_syntax"></a>Destination address syntax</h4>
 <div class="paragraph">
-<p>Throughout this tutorial we have only used <em>client</em> destinations for the call. <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span>
+<p>Throughout this tutorial we have only used <em>client</em> destinations for the call. Restcomm
 Calls REST API and consequently RVD WebTrigger support four different types of destination
 address. Any of these types can be used as a destination address. Here are some example
 values you can use as destinations either directly in the URL <code>to</code> parameter or as overrides
@@ -1747,8 +1648,8 @@ Make sure you url-encode these values if you specify the <strong>to</strong> des
     <div class="footer-column-container">
       <div class="footer-column">
         <h5 class="footer-column-title">Products</h5>
-          <p><a href="/docs/1.0/enterprise/api/voice-category.html">Programmable Voice</a></p>
-          <p><a href="/docs/1.0/enterprise/api/sms-category.html">Programmable SMS</a></p>
+          <p><a href="/docs/api/voice-category.html">Programmable Voice</a></p>
+          <p><a href="/docs/api/sms-category.html">Programmable SMS</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use cases</h5>
@@ -1759,7 +1660,7 @@ Make sure you url-encode these values if you specify the <strong>to</strong> des
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" href="/docs/1.0/enterprise/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
