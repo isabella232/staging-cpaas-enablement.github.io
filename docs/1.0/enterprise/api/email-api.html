@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/email-api.html">
-    <meta name="description" content="Using the Restcomm API, you can send Emails through a simple request.">
-    <meta name="keywords" content="restcomm email, send email, restcomm email api">
+    <meta name="description" content="Using the #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} API, you can send Emails through a simple request.">
+    <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} email, send email, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} email api">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1295,7 +1295,16 @@
 <h2 id="_email"><a class="anchor" href="#_email"></a>Email</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Using the Restcomm API, you can send Emails through a simple request.</p>
+<p>Using the <script>
+      // 'application_name' comes from inline macro
+      if (!window.replacementParams) {
+         window.replacementParams = {};
+      }
+      if (window.replacementParams.application_name) {
+         console.error('White labeled replacement parameter already exists: ' + application_name);
+      }
+      window.replacementParams.application_name = '';
+      </script><span class="application_name">Restcomm</span> API, you can send Emails through a simple request.</p>
 </div>
 <div class="sect2">
 <h3 id="_email_resource_uri"><a class="anchor" href="#_email_resource_uri"></a>Email resource URI</h3>
@@ -1487,7 +1496,16 @@ public class JavaSampleClass {
 <h2 id="_using_email"><a class="anchor" href="#_using_email"></a>Using Email</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You need to configure Restcomm to send Email messages. For the necessary configuration please refer to this <a href="http://docs.telestax.com/restcomm-sending-email-via-restcomm-email-verb/">post</a></p>
+<p>You need to configure <script>
+      // 'application_name' comes from inline macro
+      if (!window.replacementParams) {
+         window.replacementParams = {};
+      }
+      if (window.replacementParams.application_name) {
+         console.error('White labeled replacement parameter already exists: ' + application_name);
+      }
+      window.replacementParams.application_name = '';
+      </script><span class="application_name">Restcomm</span> to send Email messages. For the necessary configuration please refer to this <a href="http://docs.telestax.com/restcomm-sending-email-via-restcomm-email-verb/">post</a></p>
 </div>
 </div>
 </div>
