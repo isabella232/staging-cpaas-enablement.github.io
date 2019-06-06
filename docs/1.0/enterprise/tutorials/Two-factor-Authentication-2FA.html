@@ -6,7 +6,7 @@
     <title>Two-Factor Authentication (2FA) - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/tutorials/Two-factor-Authentication-2FA.html">
     <meta name="description" content="Secure online transactions, account sign-ins, mobile apps, websites and more by providing two-factor authentication (2FA) with One-Time Passwords to your users.">
-    <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords">
+    <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} two-factor authentication">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1292,7 +1292,16 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This tutorial will walk you through the steps of setting up your own <a href="https://www.restcomm.com/use-cases/two-factor-authentication-2fa/">two-factor authentication service</a>. As of today, this functionality is only available on the Restcomm US Point of Presence.</p>
+<p>This tutorial will walk you through the steps of setting up your own two-factor authentication service. As of today, this functionality is only available on the <script>
+      // 'application_name' comes from inline macro
+      if (!window.replacementParams) {
+         window.replacementParams = {};
+      }
+      if (window.replacementParams.application_name) {
+         console.error('White labeled replacement parameter already exists: ' + application_name);
+      }
+      window.replacementParams.application_name = '';
+      </script><span class="application_name">Restcomm</span> US Point of Presence.</p>
 </div>
 <div class="paragraph">
 <p><strong>User enters your application</strong></p>
@@ -1304,13 +1313,31 @@
 <p><strong>User is prompted to enter his phone number</strong></p>
 </div>
 <div class="paragraph">
-<p>Restcomm receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
+<p><script>
+      // 'application_name' comes from inline macro
+      if (!window.replacementParams) {
+         window.replacementParams = {};
+      }
+      if (window.replacementParams.application_name) {
+         console.error('White labeled replacement parameter already exists: ' + application_name);
+      }
+      window.replacementParams.application_name = '';
+      </script><span class="application_name">Restcomm</span> receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
 </div>
 <div class="paragraph">
 <p><strong>PIN code is sent to the user via SMS</strong></p>
 </div>
 <div class="paragraph">
-<p>Once the user enters a valid phone number, from your application you will need to ask Restcomm to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
+<p>Once the user enters a valid phone number, from your application you will need to ask <script>
+      // 'application_name' comes from inline macro
+      if (!window.replacementParams) {
+         window.replacementParams = {};
+      }
+      if (window.replacementParams.application_name) {
+         console.error('White labeled replacement parameter already exists: ' + application_name);
+      }
+      window.replacementParams.application_name = '';
+      </script><span class="application_name">Restcomm</span> to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
 </div>
 <div class="paragraph">
 <p>Sending a verification code requires basic authorization that includes your <a href="#">/docs/connect/admin/console-overview.html.adoc#restcomm-account-settings</a>. Below is the format you have to use in order to send a verification code to the user&#8217;s phone number.</p>
@@ -1395,7 +1422,7 @@
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
   -d '{
-    "service" : "Restcomm",
+    "service" : "wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"]",
     "from" : "+13216549878",
     "to" : "+13216549879",
     "body": "Your verification code is: \{code}"
@@ -1466,7 +1493,7 @@
 <div class="listingblock">
 <div class="content">
 <pre>{
-    "service" : "Restcomm", // the name of your service
+    "service" : "wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"]", // the name of your service
     "number" : "+XXXXXXXXXX",  // the phone number of the SMS recepient
     "code": "XXXXX" // the verification code
 }</pre>
@@ -1483,7 +1510,7 @@
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
   -d '{
-    "service" : "Restcomm",
+    "service" : "wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"]",
     "number" : "+13216549879",
     "code": "294228"
 }</pre>
