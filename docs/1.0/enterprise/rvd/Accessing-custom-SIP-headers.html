@@ -1292,16 +1292,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> provides an additional interface to communicate with an RCML/RVD application by means of custom SIP headers. The idea is that all custom SIP headers in a SIP message are detected and converted to HTTP parameters in the request to the RCML application using a convention. The RCML application can consume this parameters. Furthermore, RVD converts these parameters to RVD variables and makes them available to its modules.</p>
+<p><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> provides an additional interface to communicate with an RCML/RVD application by means of custom SIP headers. The idea is that all custom SIP headers in a SIP message are detected and converted to HTTP parameters in the request to the RCML application using a convention. The RCML application can consume this parameters. Furthermore, RVD converts these parameters to RVD variables and makes them available to its modules.</p>
 </div>
 </div>
 </div>
@@ -1335,16 +1326,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_script_application_name_comes_from_inline_macro_if_window_replacementparams_window_replacementparams_if_window_replacementparams_application_name_console_error_white_labeled_replacement_parameter_already_exists_application_name_window_replacementparams_application_name_script_span_class_application_name_restcomm_span_visual_designer_rvd_applications"><a class="anchor" href="#_script_application_name_comes_from_inline_macro_if_window_replacementparams_window_replacementparams_if_window_replacementparams_application_name_console_error_white_labeled_replacement_parameter_already_exists_application_name_window_replacementparams_application_name_script_span_class_application_name_restcomm_span_visual_designer_rvd_applications"></a><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Visual Designer (RVD) applications</h2>
+<h2 id="_span_class_replacement_parm_data_parm_key_application_name_restcomm_span_visual_designer_rvd_applications"><a class="anchor" href="#_span_class_replacement_parm_data_parm_key_application_name_restcomm_span_visual_designer_rvd_applications"></a><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Visual Designer (RVD) applications</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>RVD will take the previous convention one step further and create an RVD variable out of the parameter. Thus, the mapping from a custom SIP header to an RVD variable will be the following:</p>
@@ -1355,16 +1337,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>So, if <strong>X-My-Header</strong> SIP header arrives at <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span>, RVD will have a variable named <strong>$core_x_my_header</strong> available in its modules. Note the following:</p>
+<p>So, if <strong>X-My-Header</strong> SIP header arrives at <span class="replacement-parm" data-parm-key="application_name">Restcomm</span>, RVD will have a variable named <strong>$core_x_my_header</strong> available in its modules. Note the following:</p>
 </div>
 <div class="ulist">
 <ul>
