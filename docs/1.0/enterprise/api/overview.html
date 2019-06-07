@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REST API Overview - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/overview.html">
-    <meta name="description" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} REST APIs power the Restcomm Communicaitons Platform as a Service (CPaaS) and represent wide range of operations that enable you to create programmable Voice and SMS applications. You can use the REST APIs to create enterprise application that focus on your users needs. The REST APIs are implemented on the HTTP protocol, so you can use them with your preferred programming language and tools.">
-    <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} REST API, programmable voice rest api, programmable SMS rest api">
+    <meta name="description" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} REST APIs power the #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} Communications Platform as a Service (CPaaS) and represent wide range of operations that enable you to create programmable Voice and SMS applications. You can use the REST APIs to create enterprise application that focus on your users needs. The REST APIs are implemented on the HTTP protocol, so you can use them with your preferred programming language and tools.">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -989,6 +988,20 @@
             </span>
           </div>
               </li>
+      <li class="nav-item" data-depth="2">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="usage-records-api.html">Usage Records</a>
+              
+            </span>
+          </div>
+              </li>
   </ul>
       </li>
       <li class="nav-item" data-depth="1">
@@ -1130,7 +1143,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="#">rcml/email.adoc</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/email-rcml.html">Email</a>
               
             </span>
           </div>
@@ -1324,7 +1337,7 @@
 <h2 id="_api_endpoint"><a class="anchor" href="#_api_endpoint"></a>API Endpoint</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The base for all the API urls is: <strong><code>https://mycompany.restcomm.com/restcomm/2012-04-24</code></strong></p>
+<p>The base for all the API urls is: <strong><code><span class="local-link">https://$DOMAIN/restcomm/2012-04-24</span></code></strong></p>
 </div>
 </div>
 </div>
@@ -1332,13 +1345,13 @@
 <h2 id="_supported_http_methods"><a class="anchor" href="#_supported_http_methods"></a>Supported HTTP Methods</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>GET</strong>: Lists or reads objects and includes the information needed to perform any Read operations on the object. Sample use: list all of the applications under your <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> account.</p>
+<p><strong>GET</strong>: Lists or reads objects and includes the information needed to perform any Read operations on the object. Sample use: list all of the applications under your Restcomm account.</p>
 </div>
 <div class="paragraph">
-<p><strong>POST/PUT</strong>: Creates or updates objects. Most requests using the POST/PUT method require JSON/XML in the request body. Sample use: modify a Client under your <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> account.</p>
+<p><strong>POST/PUT</strong>: Creates or updates objects. Most requests using the POST/PUT method require JSON/XML in the request body. Sample use: modify a Client under your Restcomm account.</p>
 </div>
 <div class="paragraph">
-<p><strong>DELETE</strong>: Removes objects. Sample use: delete an application or client under your <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> account.</p>
+<p><strong>DELETE</strong>: Removes objects. Sample use: delete an application or client under your Restcomm account.</p>
 </div>
 </div>
 </div>
@@ -1346,7 +1359,7 @@
 <h2 id="_authentication"><a class="anchor" href="#_authentication"></a>Authentication</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> APIs use basic HTTP authentication to restrict access to API endpoints to authenticated users only. After you sign up with <span class="replacement-parm" data-parm-key="application_name">Restcomm</span>, you can find your Account SID and Auth Token by navigating to <code>your profile</code> &#8594; <code>Account</code> in the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Console.</p>
+<p><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> APIs use basic HTTP authentication to restrict access to API endpoints to authenticated users only. After you sign up with Restcomm, you can find your Account SID and Auth Token by navigating to <code>your profile</code> &#8594; <code>Account</code> in the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Console.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/Restcomm_AccountSID_and_Token.png" alt="Restcomm Account SID and Token"></span></p>
@@ -1373,17 +1386,17 @@
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-52 is-active" onclick="openLanguage('Curl', 52)">Curl</button>
-        <button class="sample-code-button scsIndex-52" onclick="openLanguage('Nodejs', 52)">Nodejs</button>
-        <button class="sample-code-button scsIndex-52" onclick="openLanguage('Python', 52)">Python</button>
-        <button class="sample-code-button scsIndex-52" onclick="openLanguage('Java', 52)">Java</button>
+        <button class="sample-code-button scsIndex-53 is-active" onclick="openLanguage('Curl', 53)">Curl</button>
+        <button class="sample-code-button scsIndex-53" onclick="openLanguage('Nodejs', 53)">Nodejs</button>
+        <button class="sample-code-button scsIndex-53" onclick="openLanguage('Python', 53)">Python</button>
+        <button class="sample-code-button scsIndex-53" onclick="openLanguage('Java', 53)">Java</button>
       </div>
-      <div id="Curl-52" class="sample-language-52">
+      <div id="Curl-53" class="sample-language-53">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.json \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-52" class="sample-language-52" style="display:none">
+      <div id="Nodejs-53" class="sample-language-53" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -1402,7 +1415,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-52" class="sample-language-52" style="display:none">
+      <div id="Python-53" class="sample-language-53" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1422,7 +1435,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-52" class="sample-language-52" style="display:none">
+      <div id="Java-53" class="sample-language-53" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1499,17 +1512,17 @@ public class JavaSampleClass {
 <p>For example, the following request will return the first page of results with a size of 10 items:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-53 is-active" onclick="openLanguage('Curl', 53)">Curl</button>
-        <button class="sample-code-button scsIndex-53" onclick="openLanguage('Nodejs', 53)">Nodejs</button>
-        <button class="sample-code-button scsIndex-53" onclick="openLanguage('Python', 53)">Python</button>
-        <button class="sample-code-button scsIndex-53" onclick="openLanguage('Java', 53)">Java</button>
+        <button class="sample-code-button scsIndex-54 is-active" onclick="openLanguage('Curl', 54)">Curl</button>
+        <button class="sample-code-button scsIndex-54" onclick="openLanguage('Nodejs', 54)">Nodejs</button>
+        <button class="sample-code-button scsIndex-54" onclick="openLanguage('Python', 54)">Python</button>
+        <button class="sample-code-button scsIndex-54" onclick="openLanguage('Java', 54)">Java</button>
       </div>
-      <div id="Curl-53" class="sample-language-53">
+      <div id="Curl-54" class="sample-language-54">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/SMS/Messages.json?Page=0&PageSize=10 \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-53" class="sample-language-53" style="display:none">
+      <div id="Nodejs-54" class="sample-language-54" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -1528,7 +1541,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-53" class="sample-language-53" style="display:none">
+      <div id="Python-54" class="sample-language-54" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1548,7 +1561,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-53" class="sample-language-53" style="display:none">
+      <div id="Java-54" class="sample-language-54" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
