@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessing HTTP resources with External Service element - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rvd/Making-HTTP-requests-with-external-service-client.html">
-    <meta name="description" content="Restcomm Visual Designer’s External Service element is a tool for making HTTP requests to external services and processessing their responses. This document focuses on the former.">
-    <meta name="keywords" content="restcomm external service, http sources with external service, restcomm external service">
+    <meta name="description" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} Visual Designer’s External Service element is a tool for making HTTP requests to external services and processessing their responses. This document focuses on the former.">
+    <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} external service, http sources with external service, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} external service">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -989,20 +989,6 @@
             </span>
           </div>
               </li>
-      <li class="nav-item" data-depth="2">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../api/usage-records-api.html">Usage Records</a>
-              
-            </span>
-          </div>
-              </li>
   </ul>
       </li>
       <li class="nav-item" data-depth="1">
@@ -1144,7 +1130,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/email-rcml.html">Email</a>
+              <a class="nav-link nav-flex-item-text" href="#">rcml/email.adoc</a>
               
             </span>
           </div>
@@ -1306,7 +1292,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm Visual Designer’s External Service element is a tool for making HTTP requests to external services and processessing their responses. This document focuses on the former. It explains its capabilities and describes how it can be used from Visual Designer’s UI. Currently ES client supports:</p>
+<p><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Visual Designer’s External Service element is a tool for making HTTP requests to external services and processessing their responses. This document focuses on the former. It explains its capabilities and describes how it can be used from RVD’s UI. Currently ES client supports:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1397,7 +1383,7 @@
 <p>Either www form or json content types are supported. For common url-encoded request use www form.</p>
 </li>
 <li>
-<p>Manually building the body of the request with ‘&amp;’ and ‘=’ can often be a daunting and error-prone task. Check Automatically populate from service parameters to let Visual Designer build the request body from the Name/Value pairs you have defined.</p>
+<p>Manually building the body of the request with ‘&amp;’ and ‘=’ can often be a daunting and error-prone task. Check Automatically populate from service parameters to let RVD build the request body from the Name/Value pairs you have defined.</p>
 </li>
 </ul>
 </div>
@@ -1462,7 +1448,7 @@
 <p>{"name":<strong>"$firstname"</strong>,"lastname":"bar"}</p>
 </div>
 <div class="paragraph">
-<p>Note that double quotes are being used in the JSON expression. Visual Designer does not know about the json syntax and its types. It will just go for a search‘n’replace. You will need to make sure that a valid json expression will result at the end.</p>
+<p>Note that double quotes are being used in the JSON expression. RVD does not know about the json syntax and its types. It will just go for a search‘n’replace. You will need to make sure that a valid json expression will result at the end.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1484,7 +1470,7 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>create a handler Visual Designer module</p>
+<p>create a handler RVD module</p>
 </li>
 <li>
 <p>bind the ES component to this handler using ‘On Remote Error’ drop down menu</p>

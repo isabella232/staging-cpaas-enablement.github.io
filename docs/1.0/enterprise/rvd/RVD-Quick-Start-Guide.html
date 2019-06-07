@@ -6,7 +6,7 @@
     <title>Visual Designer Quick Start Guide - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rvd/RVD-Quick-Start-Guide.html">
     <meta name="description" content="This guide will help you learn the basics of Visual Designer.">
-    <meta name="keywords" content="visual deisnger quick start, restcomm visual designer quick start">
+    <meta name="keywords" content="visual deisnger quick start, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} visual designer quick start">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -989,20 +989,6 @@
             </span>
           </div>
               </li>
-      <li class="nav-item" data-depth="2">
-          <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-            "></span>
-            <span>
-              <a class="nav-link nav-flex-item-text" href="../api/usage-records-api.html">Usage Records</a>
-              
-            </span>
-          </div>
-              </li>
   </ul>
       </li>
       <li class="nav-item" data-depth="1">
@@ -1144,7 +1130,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/email-rcml.html">Email</a>
+              <a class="nav-link nav-flex-item-text" href="#">rcml/email.adoc</a>
               
             </span>
           </div>
@@ -1316,7 +1302,7 @@
 <div class="sect2">
 <h3 id="_create_the_application"><a class="anchor" href="#_create_the_application"></a>Create the Application</h3>
 <div class="paragraph">
-<p>New applications are easily created from within the Restcomm Console.</p>
+<p>New applications are easily created from within the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Console.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1324,7 +1310,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>In order to create a Restcomm Application:</p>
+<p>In order to create a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Application:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1357,29 +1343,29 @@ Choose <code>voice</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://www.restcomm.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-02-16-39-23.png" alt="Restcomm Visual Designer Greeting application">
+<img src="https://www.restcomm.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-02-16-39-23.png" alt="wlparam:sps[parmName=&quot;application_name&quot;">
 </div>
 </div>
 <div class="paragraph">
 <p>You&#8217;re almost there. Your application has been created and is ready to greet you with the default message when called.
-You do need a way to reach it though. To do that, you&#8217;ll have to attach it to a Restcomm Number and finally make a call to it.</p>
+You do need a way to reach it though. To do that, you&#8217;ll have to attach it to a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Number and finally make a call to it.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_attach_your_application_to_a_restcomm_number"><a class="anchor" href="#_attach_your_application_to_a_restcomm_number"></a>Attach your Application to a Restcomm number</h3>
+<h3 id="_attach_your_application_to_a_span_class_replacement_parm_data_parm_key_application_name_restcomm_span_number"><a class="anchor" href="#_attach_your_application_to_a_span_class_replacement_parm_data_parm_key_application_name_restcomm_span_number"></a>Attach your Application to a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> number</h3>
 <div class="paragraph">
-<p>You&#8217;ve just created a <em>voice</em> application. Such applications are executed when an incoming voice call is made to a Restcomm Number.
+<p>You&#8217;ve just created a <em>voice</em> application. Such applications are executed when an incoming voice call is made to a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Number.
 We will register a SIP Number which is a number that can be called via a SIP or WebRTC Client</p>
 </div>
 <div class="paragraph">
-<p>In the Restcomm Console, click on the <code>Numbers</code> Tab and follow the steps below:</p>
+<p>In the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Console, click on the <code>Numbers</code> Tab and follow the steps below:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>At the top of the screen, provide a value for <code>SIP Address</code> and <code>Friendly Name</code> such as 5555 by example.
 Remember, what you define as SIP Address is the number you will call to test your application.
-Click <code>Register</code> to register this number and start the wizard for linking a Restcomm Number to your newly created application.
+Click <code>Register</code> to register this number and start the wizard for linking a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Number to your newly created application.
 The operation will fail if the number has already been registered.</p>
 </li>
 <li>
@@ -1407,13 +1393,13 @@ see an entry named <code>greeting-app</code>. Select it.</p>
 <div class="sect2">
 <h3 id="_call_the_application"><a class="anchor" href="#_call_the_application"></a>Call the Application</h3>
 <div class="paragraph">
-<p>It&#8217;s now time to test the application. Voice applications are executed when an incoming voice call is made to the Restcomm Number you just registered.
-We will use the WebRTC Demo client that is available in your Restcomm account for testing purposes.</p>
+<p>It&#8217;s now time to test the application. Voice applications are executed when an incoming voice call is made to the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Number you just registered.
+We will use the WebRTC Demo client that is available in your <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> account for testing purposes.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Start WebRTC Demo client. Please use the same password that you used to create your Restcomm Account, unless you changed it in the Restcomm Clients Tab</p>
+<p>Start WebRTC Demo client. Please use the same password that you used to create your <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Account, unless you changed it in the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Clients Tab</p>
 </li>
 </ul>
 </div>
@@ -1458,7 +1444,7 @@ We will use the WebRTC Demo client that is available in your Restcomm account fo
 <h2 id="_visual_designer_concepts"><a class="anchor" href="#_visual_designer_concepts"></a>Visual Designer Concepts</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Now that the base application has been created, linked to a Restcomm Number and tested through the WebRTC Demo Client, you can go ahead and tweak your application with more useful and interesting features.  Let&#8217;s switch back to Visual Designer tab and introduce some basic concepts.</p>
+<p>Now that the base application has been created, linked to a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Number and tested through the WebRTC Demo Client, you can go ahead and tweak your application with more useful and interesting features.  Let&#8217;s switch back to Visual Designer tab and introduce some basic concepts.</p>
 </div>
 <div class="sect2">
 <h3 id="_elements"><a class="anchor" href="#_elements"></a>Elements</h3>
