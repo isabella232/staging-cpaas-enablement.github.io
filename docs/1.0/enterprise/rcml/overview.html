@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RCML Overview - Restcomm Docs</title>
+    <title>REST Communications Markup Language Overview - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rcml/overview.html">
-    <meta name="description" content="The #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} Markup Language (RCML) represents a set of instructions you can use to tell #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} what to do when you receive an incoming call or SMS.">
-    <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} markup language, rcml">
+    <meta name="description" content="The REST Communications Markup Language represents a set of instructions you can use to tell Restcomm what to do when you receive an incoming call or SMS.">
+    <meta name="keywords" content="REST Communications Markup Language, RCML, rcml">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -989,6 +989,20 @@
             </span>
           </div>
               </li>
+      <li class="nav-item" data-depth="2">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="../api/usage-records-api.html">Usage Records</a>
+              
+            </span>
+          </div>
+              </li>
   </ul>
       </li>
       <li class="nav-item is-current-page" data-depth="1">
@@ -1130,7 +1144,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="#">rcml/email.adoc</a>
+              <a class="nav-link nav-flex-item-text" href="email-rcml.html">Email</a>
               
             </span>
           </div>
@@ -1288,59 +1302,14 @@
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>RCML Overview</h1>
+  <h1>REST Communications Markup Language Overview</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Markup Language (RCML) represents a set of instructions you can use to tell <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> what to do when you receive an incoming call or SMS.</p>
+<p>The REST Communications Markup Language represents a set of instructions you can use to tell Restcomm what to do when you receive an incoming call or SMS.</p>
 </div>
 <div class="paragraph">
-<p>When someone makes a call or sends an SMS to one of your <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> numbers#, <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> will look up the URL associated with that phone number and make a request to that URL. <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> will read RCML instructions at that URL to determine what to do: record the call#, play a message for the caller#, prompt the caller to press digits on their keypad#, etc.</p>
+<p>When someone makes a call or sends an SMS to one of your Restcomm numbers#, Restcomm will look up the URL associated with that phone number and make a request to that URL. Restcomm will read RCML instructions at that URL to determine what to do: record the call#, play a message for the caller#, prompt the caller to press digits on their keypad#, etc.</p>
 </div>
 <div class="paragraph">
 <p>For example, the following will say a short message#, and then record the caller&#8217;s voice:</p>
@@ -1358,83 +1327,20 @@
 <p>RCML is similar to HTML. Only one RCML document is rendered to the caller at once#, but many documents can be linked together to build complex interactive voice applications.</p>
 </div>
 <div class="paragraph">
-<p>Calls from a <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> number to an outside number are controlled using RCML in the same manner as incoming calls. The initial URL for the call is provided as a parameter to the <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> REST API request you make to initiate the call.</p>
+<p>Calls from a Restcomm number to an outside number are controlled using RCML in the same manner as incoming calls. The initial URL for the call is provided as a parameter to the Restcomm  REST API request you make to initiate the call.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_script_application_name_comes_from_inline_macro_if_window_replacementparams_window_replacementparams_if_window_replacementparams_application_name_console_error_white_labeled_replacement_parameter_already_exists_application_name_window_replacementparams_application_name_script_span_class_application_name_restcomm_span_interacts_with_your_application"><a class="anchor" href="#_how_script_application_name_comes_from_inline_macro_if_window_replacementparams_window_replacementparams_if_window_replacementparams_application_name_console_error_white_labeled_replacement_parameter_already_exists_application_name_window_replacementparams_application_name_script_span_class_application_name_restcomm_span_interacts_with_your_application"></a>How <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Interacts with Your Application</h2>
+<h2 id="_how_restcomm_interacts_with_your_application"><a class="anchor" href="#_how_restcomm_interacts_with_your_application"></a>How Restcomm Interacts with Your Application</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_script_application_name_comes_from_inline_macro_if_window_replacementparams_window_replacementparams_if_window_replacementparams_application_name_console_error_white_labeled_replacement_parameter_already_exists_application_name_window_replacementparams_application_name_script_span_class_application_name_restcomm_span_request"><a class="anchor" href="#_script_application_name_comes_from_inline_macro_if_window_replacementparams_window_replacementparams_if_window_replacementparams_application_name_console_error_white_labeled_replacement_parameter_already_exists_application_name_window_replacementparams_application_name_script_span_class_application_name_restcomm_span_request"></a><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Request</h3>
+<h3 id="_restcomm_request"><a class="anchor" href="#_restcomm_request"></a>Restcomm Request</h3>
 <div class="paragraph">
-<p>The way <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> passes data to you application depends on the request method for the given <strong>UR</strong>I. If the request method is <strong>GET</strong> then the data is passed in the query string or the part after the question mark. If the request method is <strong>POST</strong> then the data is sent a multi-part form data just like when a browser submits a form.</p>
+<p>The way Restcomm passes data to you application depends on the request method for the given <strong>UR</strong>I. If the request method is <strong>GET</strong> then the data is passed in the query string or the part after the question mark. If the request method is <strong>POST</strong> then the data is sent a multi-part form data just like when a browser submits a form.</p>
 </div>
 <div class="paragraph">
-<p><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> Voice Request. Any time <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> makes a request to you applications it will include the following data as request parameters.</p>
+<p>Restcomm Voice Request. Any time Restcomm makes a request to you applications it will include the following data as request parameters.</p>
 </div>
 <div class="sect3">
 <h4 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h4>
@@ -1489,37 +1395,10 @@
 <div class="sect2">
 <h3 id="_restcomm_response"><a class="anchor" href="#_restcomm_response"></a>Restcomm Response</h3>
 <div class="paragraph">
-<p>In your response to the request from <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> you want to provide RCML that will instruct <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> on how to handle the current call.</p>
+<p>In your response to the request from Restcomm you want to provide RCML that will instruct Restcomm on how to handle the current call.</p>
 </div>
 <div class="paragraph">
-<p><strong>MIME Types. </strong><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> supports the MIME types described in the table below.</p>
+<p><strong>MIME Types. </strong>Restcomm supports the MIME types described in the table below.</p>
 </div>
 <div class="sect3">
 <h4 id="_supported_mime_types"><a class="anchor" href="#_supported_mime_types"></a>Supported MIME Types</h4>
@@ -1537,16 +1416,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">text/xml, application/xml</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> interprets the returned document as an XML instruction set.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm interprets the returned document as an XML instruction set.</p></td>
 </tr>
 </tbody>
 </table>
