@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REST API Overview - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/overview.html">
-    <meta name="description" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} REST APIs power the Restcomm Communicaitons Platform as a Service (CPaaS) and represent wide range of operations that enable you to create programmable Voice and SMS applications. You can use the REST APIs to create enterprise application that focus on your users needs. The REST APIs are implemented on the HTTP protocol, so you can use them with your preferred programming language and tools.">
-    <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} REST API, programmable voice rest api, programmable SMS rest api">
+    <meta name="description" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} REST APIs power the #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} Communications Platform as a Service (CPaaS) and represent wide range of operations that enable you to create programmable Voice and SMS applications. You can use the REST APIs to create enterprise application that focus on your users needs. The REST APIs are implemented on the HTTP protocol, so you can use them with your preferred programming language and tools.">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -989,6 +988,20 @@
             </span>
           </div>
               </li>
+      <li class="nav-item" data-depth="2">
+          <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+            "></span>
+            <span>
+              <a class="nav-link nav-flex-item-text" href="usage-records-api.html">Usage Records API</a>
+              
+            </span>
+          </div>
+              </li>
   </ul>
       </li>
       <li class="nav-item" data-depth="1">
@@ -1342,7 +1355,7 @@
 <h2 id="_api_endpoint"><a class="anchor" href="#_api_endpoint"></a>API Endpoint</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The base for all the API urls is: <strong><code>https://mycompany.restcomm.com/restcomm/2012-04-24</code></strong></p>
+<p>The base for all the API urls is: <strong><code><span class="local-link">https://$DOMAIN/restcomm/2012-04-24</span></code></strong></p>
 </div>
 </div>
 </div>
@@ -1350,40 +1363,13 @@
 <h2 id="_supported_http_methods"><a class="anchor" href="#_supported_http_methods"></a>Supported HTTP Methods</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>GET</strong>: Lists or reads objects and includes the information needed to perform any Read operations on the object. Sample use: list all of the applications under your <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> account.</p>
+<p><strong>GET</strong>: Lists or reads objects and includes the information needed to perform any Read operations on the object. Sample use: list all of the applications under your Restcomm account.</p>
 </div>
 <div class="paragraph">
-<p><strong>POST/PUT</strong>: Creates or updates objects. Most requests using the POST/PUT method require JSON/XML in the request body. Sample use: modify a Client under your <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> account.</p>
+<p><strong>POST/PUT</strong>: Creates or updates objects. Most requests using the POST/PUT method require JSON/XML in the request body. Sample use: modify a Client under your Restcomm account.</p>
 </div>
 <div class="paragraph">
-<p><strong>DELETE</strong>: Removes objects. Sample use: delete an application or client under your <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> account.</p>
+<p><strong>DELETE</strong>: Removes objects. Sample use: delete an application or client under your Restcomm account.</p>
 </div>
 </div>
 </div>
@@ -1400,16 +1386,7 @@
          console.error('White labeled replacement parameter already exists: ' + application_name);
       }
       window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span> APIs use basic HTTP authentication to restrict access to API endpoints to authenticated users only. After you sign up with <script>
-      // 'application_name' comes from inline macro
-      if (!window.replacementParams) {
-         window.replacementParams = {};
-      }
-      if (window.replacementParams.application_name) {
-         console.error('White labeled replacement parameter already exists: ' + application_name);
-      }
-      window.replacementParams.application_name = '';
-      </script><span class="application_name">Restcomm</span>, you can find your Account SID and Auth Token by navigating to <code>your profile</code> &#8594; <code>Account</code> in the <script>
+      </script><span class="application_name">Restcomm</span> APIs use basic HTTP authentication to restrict access to API endpoints to authenticated users only. After you sign up with Restcomm, you can find your Account SID and Auth Token by navigating to <code>your profile</code> &#8594; <code>Account</code> in the <script>
       // 'application_name' comes from inline macro
       if (!window.replacementParams) {
          window.replacementParams = {};
