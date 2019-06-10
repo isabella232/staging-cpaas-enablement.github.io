@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clients - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/clients-api.html">
-    <meta name="description" content="A Client represents a user agent that can make and receive calls as well as send and receive text messages using the Restcomm Cloud. This means that you can configure any software or hardware VoIP phone with the Client Username and Password in order to register with Restcomm Cloud.">
+    <meta name="description" content="A Client represents a user agent that can make and receive calls as well as send and receive text messages using the wlparam:sps[parmName&#x3D;&quot;application_name&quot;,rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] Cloud. This means that you can configure any software or hardware VoIP phone with the Client Username and Password in order to register with wlparam:sps[parmName&#x3D;&quot;application_name&quot;,rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] Cloud.">
     <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} clients">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
@@ -1042,7 +1042,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How Restcomm Interacts with Your Application</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1309,12 +1309,12 @@
 <h2 id="_clients"><a class="anchor" href="#_clients"></a>Clients</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A <strong>Client</strong> represents a user agent that can make and receive calls as well as send and receive text messages using the Restcomm Cloud. This means that you can configure any software or hardware VoIP phone with the Client Username and Password in order to register with Restcomm Cloud. Once you do that you will be able to do things like:</p>
+<p>A <strong>Client</strong> represents a user agent that can make and receive calls as well as send and receive text messages using the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Cloud. This means that you can configure any software or hardware VoIP phone with the Client Username and Password in order to register with <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Cloud. Once you do that you will be able to do things like:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Call or text any Restcomm Number to trigger the associated Voice or SMS Application. Notice that you first need to setup the Application with the logic you want and associate it with a Restcomm Number. For more information please check here.</p>
+<p>Call or text any <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Number to trigger the associated Voice or SMS Application. Notice that you first need to setup the Application with the logic you want and associate it with a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Number. For more information please check here.</p>
 </li>
 <li>
 <p>Call out to any PSTN number</p>
@@ -1328,7 +1328,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>The Client can also be associated with a Restcomm Application, either in the form of Visual Designer Application or externally hosted. If that is the case then this application will be called no matter what digits the user of the VoIP phone dials</p>
+<p>The Client can also be associated with a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Application, either in the form of Visual Designer Application or externally hosted. If that is the case then this application will be called no matter what digits the user of the VoIP phone dials</p>
 </div>
 <div class="sect2">
 <h3 id="_client_resource_uri"><a class="anchor" href="#_client_resource_uri"></a>Client Resource URI</h3>
@@ -1343,12 +1343,12 @@ When using RestComm to handle SIP user agent you have to create a new Client res
 </li>
 <li>
 <p>Client without VoiceUrl
-Restcomm has a new implied behavior when VoiceUrl is not provided for a Client account. Restcomm will proxy calls from such Clients to the destination Client (only if registered) or to the destination Application DID.</p>
+<span class="replacement-parm" data-parm-key="application_name">Restcomm</span> has a new implied behavior when VoiceUrl is not provided for a Client account. <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will proxy calls from such Clients to the destination Client (only if registered) or to the destination Application DID.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Only registered Clients are allowed to use the <strong>B2BUA/P2P/Proxy</strong> functionalities of Restcomm. Proxying and P2P calls are only allowed between registered(authenticated) Clients.</p>
+<p>Only registered Clients are allowed to use the <strong>B2BUA/P2P/Proxy</strong> functionalities of <span class="replacement-parm" data-parm-key="application_name">Restcomm</span>. Proxying and P2P calls are only allowed between registered(authenticated) Clients.</p>
 </div>
 <div class="paragraph">
 <p>The CDR records generated for calls made by Clients, will have account SID the account that the Client belongs to.</p>

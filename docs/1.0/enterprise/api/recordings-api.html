@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recordings - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/recordings-api.html">
-    <meta name="description" content="Recordings are generated when you use the Record verb. Those recordings are hosted with Restcomm for you to retrieve. The Recordings list resource represents the set of an account&#x27;s recordings.">
+    <meta name="description" content="Recordings are generated when you use the Record verb. Those recordings are hosted with wlparam:sps[parmName&#x3D;&quot;application_name&quot;,rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] for you to retrieve. The Recordings list resource represents the set of an account&#x27;s recordings.">
     <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} recordings">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
@@ -1042,7 +1042,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How Restcomm Interacts with Your Application</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1309,7 +1309,7 @@
 <h2 id="_recordings"><a class="anchor" href="#_recordings"></a>Recordings</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Recordings are generated when you use the <strong>&lt;Record&gt;</strong> verb. Those recordings are hosted with Restcomm for you to retrieve. The Recordings list resource represents the set of an account&#8217;s recordings.</p>
+<p>Recordings are generated when you use the <strong>&lt;Record&gt;</strong> verb. Those recordings are hosted with <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> for you to retrieve. The Recordings list resource represents the set of an account&#8217;s recordings.</p>
 </div>
 <div class="sect2">
 <h3 id="_recording_resource_uri"><a class="anchor" href="#_recording_resource_uri"></a>Recording Resource URI</h3>
@@ -1320,7 +1320,7 @@
 <p>To download the audio file just append <strong>.wav</strong> after the <strong>RecordingSid.</strong></p>
 </div>
 <div class="paragraph">
-<p>The URLs that contain the actual audio recordings are accessible by everyone without the need to authenticate with Restcomm. This is per design to allow for your apps to easily access the recordings without revealing your credentials. The same is NOT true for the resource to retrieve the list of recordings so unauthenticated users cannot access the RecordingSid and hence not able to download the actual recording.</p>
+<p>The URLs that contain the actual audio recordings are accessible by everyone without the need to authenticate with <span class="replacement-parm" data-parm-key="application_name">Restcomm</span>. This is per design to allow for your apps to easily access the recordings without revealing your credentials. The same is NOT true for the resource to retrieve the list of recordings so unauthenticated users cannot access the RecordingSid and hence not able to download the actual recording.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1596,7 +1596,7 @@ public class JavaSampleClass {
 </table>
 </div>
 <div class="paragraph">
-<p>If you want to return the recording url you will need to parse the <strong>&lt;Uri&gt;/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Recordings/REb4c03af76cdc4a27aad0d9d759e119bc&lt;/Uri&gt;</strong> response from Restcomm and add the extension .<strong>wav</strong></p>
+<p>If you want to return the recording url you will need to parse the <strong>&lt;Uri&gt;/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Recordings/REb4c03af76cdc4a27aad0d9d759e119bc&lt;/Uri&gt;</strong> response from <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> and add the extension .<strong>wav</strong></p>
 </div>
 <div class="paragraph">
 <p>The <strong>&lt;Uri&gt;</strong> holds the http URI that can be used for playback or to download the recorded message.

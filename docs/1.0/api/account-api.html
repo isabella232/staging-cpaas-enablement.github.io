@@ -1023,7 +1023,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/overview.html#_how_restcomm_interacts_with_your_application">How Restcomm Interacts with Your Application</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -2163,7 +2163,7 @@ public class JavaSampleClass {
 <h2 id="_sub_accounts"><a class="anchor" href="#_sub_accounts"></a>Sub-Accounts</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can read more about Sub-Accounts and Multi-tenancy <a href="http://docs.telestax.com/restcomm-multi-tenancy-and-managing-sub-accounts/">HERE</a></p>
+<p>You can read more about Sub-Accounts and Multi-tenancy <a href="Multi-tenancy-and-Managing-Sub-Accounts.adoc">HERE</a></p>
 </div>
       <div class="sample-code-bar">
         <button class="sample-code-button scsIndex-6 is-active" onclick="openLanguage('Curl', 6)">Curl</button>
@@ -2337,7 +2337,7 @@ public class JavaSampleClass {
       <div id="Curl-8" class="sample-language-8">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -d 'FriendlyName=MySubAccount' \
-   -d 'EmailAddress=test@telestax.com' \
+   -d 'EmailAddress=test@company.com' \
    -d 'Password=restcomm' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
@@ -2355,7 +2355,7 @@ request.({
       auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       form: {
          'FriendlyName': 'MySubAccount',
-         'EmailAddress': 'test@telestax.com',
+         'EmailAddress': 'test@company.com',
          'Password': 'restcomm'
       }
    },
@@ -2382,7 +2382,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 # Update POST parameters accordingly
 params = urlencode({
    'FriendlyName': 'MySubAccount',
-   'EmailAddress': 'test@telestax.com',
+   'EmailAddress': 'test@company.com',
    'Password': 'restcomm'
 })
 
@@ -2420,7 +2420,7 @@ public class JavaSampleClass {
 
       // Update POST parameters accordingly
       os.writeBytes("FriendlyName=MySubAccount&" +
-        "EmailAddress=test@telestax.com&" +
+        "EmailAddress=test@company.com&" +
         "Password=restcomm");
       os.close();
 
@@ -2442,7 +2442,7 @@ public class JavaSampleClass {
       <div id="Curl-9" class="sample-language-9">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.xml \
    -d 'FriendlyName=MySubAccount' \
-   -d 'EmailAddress=test@telestax.com' \
+   -d 'EmailAddress=test@company.com' \
    -d 'Password=restcomm' \
    -d 'OrganizationSid=OrganizationSid' \
    -u 'YourAccountSid:YourAuthToken'
@@ -2461,7 +2461,7 @@ request.({
       auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       form: {
          'FriendlyName': 'MySubAccount',
-         'EmailAddress': 'test@telestax.com',
+         'EmailAddress': 'test@company.com',
          'Password': 'restcomm',
          'OrganizationSid': 'OrganizationSid'
       }
@@ -2489,7 +2489,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 # Update POST parameters accordingly
 params = urlencode({
    'FriendlyName': 'MySubAccount',
-   'EmailAddress': 'test@telestax.com',
+   'EmailAddress': 'test@company.com',
    'Password': 'restcomm',
    'OrganizationSid': 'OrganizationSid'
 })
@@ -2528,7 +2528,7 @@ public class JavaSampleClass {
 
       // Update POST parameters accordingly
       os.writeBytes("FriendlyName=MySubAccount&" +
-        "EmailAddress=test@telestax.com&" +
+        "EmailAddress=test@company.com&" +
         "Password=restcomm&" +
         "OrganizationSid=OrganizationSid");
       os.close();
