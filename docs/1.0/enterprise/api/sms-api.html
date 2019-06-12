@@ -26,19 +26,6 @@
         ">
       </a>
     </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <!-- TODO: Bring back when we integrate with searching facilities
-        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
-        -->
-        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
-        <div class="navbar-item">
-          <span>
-            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
-          </span>
-        </div>
-      </div>
-    </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
@@ -1459,12 +1446,12 @@
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-62 is-active" onclick="openLanguage('Curl', 62)">Curl</button>
-        <button class="sample-code-button scsIndex-62" onclick="openLanguage('Nodejs', 62)">Nodejs</button>
-        <button class="sample-code-button scsIndex-62" onclick="openLanguage('Python', 62)">Python</button>
-        <button class="sample-code-button scsIndex-62" onclick="openLanguage('Java', 62)">Java</button>
+        <button class="sample-code-button scsIndex-64 is-active" onclick="openLanguage('Curl', 64)">Curl</button>
+        <button class="sample-code-button scsIndex-64" onclick="openLanguage('Nodejs', 64)">Nodejs</button>
+        <button class="sample-code-button scsIndex-64" onclick="openLanguage('Python', 64)">Python</button>
+        <button class="sample-code-button scsIndex-64" onclick="openLanguage('Java', 64)">Java</button>
       </div>
-      <div id="Curl-62" class="sample-language-62">
+      <div id="Curl-64" class="sample-language-64">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/SMS/Messages.json \
    -d 'From=19876543212' \
    -d 'To=13216549878' \
@@ -1472,7 +1459,7 @@
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-62" class="sample-language-62" style="display:none">
+      <div id="Nodejs-64" class="sample-language-64" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -1495,7 +1482,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-62" class="sample-language-62" style="display:none">
+      <div id="Python-64" class="sample-language-64" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -1525,7 +1512,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-62" class="sample-language-62" style="display:none">
+      <div id="Java-64" class="sample-language-64" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1586,12 +1573,12 @@ public class JavaSampleClass {
 <p>Send a (SIP) message from 19876543212 to <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Client <code>alice</code>. Notice the <code>client:</code> prefix in the <code>To</code> (remember that this client needs to be registered):</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-63 is-active" onclick="openLanguage('Curl', 63)">Curl</button>
-        <button class="sample-code-button scsIndex-63" onclick="openLanguage('Nodejs', 63)">Nodejs</button>
-        <button class="sample-code-button scsIndex-63" onclick="openLanguage('Python', 63)">Python</button>
-        <button class="sample-code-button scsIndex-63" onclick="openLanguage('Java', 63)">Java</button>
+        <button class="sample-code-button scsIndex-65 is-active" onclick="openLanguage('Curl', 65)">Curl</button>
+        <button class="sample-code-button scsIndex-65" onclick="openLanguage('Nodejs', 65)">Nodejs</button>
+        <button class="sample-code-button scsIndex-65" onclick="openLanguage('Python', 65)">Python</button>
+        <button class="sample-code-button scsIndex-65" onclick="openLanguage('Java', 65)">Java</button>
       </div>
-      <div id="Curl-63" class="sample-language-63">
+      <div id="Curl-65" class="sample-language-65">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/SMS/Messages.json \
    -d 'From=19876543212' \
    -d 'To=client:alice8' \
@@ -1599,7 +1586,7 @@ public class JavaSampleClass {
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-63" class="sample-language-63" style="display:none">
+      <div id="Nodejs-65" class="sample-language-65" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -1622,7 +1609,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-63" class="sample-language-63" style="display:none">
+      <div id="Python-65" class="sample-language-65" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -1652,7 +1639,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-63" class="sample-language-63" style="display:none">
+      <div id="Java-65" class="sample-language-65" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1849,17 +1836,17 @@ public class JavaSampleClass {
 <p>The command below will return the first page of SMS records corresponding to SMS messages sent from '19876543212' to '13216549878' between 2018-05-30 and 2018-06-09, sorted by the creation date in ascending order:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-64 is-active" onclick="openLanguage('Curl', 64)">Curl</button>
-        <button class="sample-code-button scsIndex-64" onclick="openLanguage('Nodejs', 64)">Nodejs</button>
-        <button class="sample-code-button scsIndex-64" onclick="openLanguage('Python', 64)">Python</button>
-        <button class="sample-code-button scsIndex-64" onclick="openLanguage('Java', 64)">Java</button>
+        <button class="sample-code-button scsIndex-66 is-active" onclick="openLanguage('Curl', 66)">Curl</button>
+        <button class="sample-code-button scsIndex-66" onclick="openLanguage('Nodejs', 66)">Nodejs</button>
+        <button class="sample-code-button scsIndex-66" onclick="openLanguage('Python', 66)">Python</button>
+        <button class="sample-code-button scsIndex-66" onclick="openLanguage('Java', 66)">Java</button>
       </div>
-      <div id="Curl-64" class="sample-language-64">
+      <div id="Curl-66" class="sample-language-66">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/SMS/Messages.json?From=19876543212&To=13216549878&StartTime=2018-05-30&EndTime=2018-06-09&Page=0&PageSize=10&SortBy=DateCreated:asc \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-64" class="sample-language-64" style="display:none">
+      <div id="Nodejs-66" class="sample-language-66" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -1878,7 +1865,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-64" class="sample-language-64" style="display:none">
+      <div id="Python-66" class="sample-language-66" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -1898,7 +1885,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-64" class="sample-language-64" style="display:none">
+      <div id="Java-66" class="sample-language-66" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1974,17 +1961,17 @@ public class JavaSampleClass {
 <p>Retrieve the information of the SMS record with Sid SM55ce5cf07b9649c283cbacab4dae56a9:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-65 is-active" onclick="openLanguage('Curl', 65)">Curl</button>
-        <button class="sample-code-button scsIndex-65" onclick="openLanguage('Nodejs', 65)">Nodejs</button>
-        <button class="sample-code-button scsIndex-65" onclick="openLanguage('Python', 65)">Python</button>
-        <button class="sample-code-button scsIndex-65" onclick="openLanguage('Java', 65)">Java</button>
+        <button class="sample-code-button scsIndex-67 is-active" onclick="openLanguage('Curl', 67)">Curl</button>
+        <button class="sample-code-button scsIndex-67" onclick="openLanguage('Nodejs', 67)">Nodejs</button>
+        <button class="sample-code-button scsIndex-67" onclick="openLanguage('Python', 67)">Python</button>
+        <button class="sample-code-button scsIndex-67" onclick="openLanguage('Java', 67)">Java</button>
       </div>
-      <div id="Curl-65" class="sample-language-65">
+      <div id="Curl-67" class="sample-language-67">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/SMS/Messages/MESSAGE_SID.json \
    -u "YourAccountSid:YourAuthToken"
 </code></pre>
       </div>
-      <div id="Nodejs-65" class="sample-language-65" style="display:none">
+      <div id="Nodejs-67" class="sample-language-67" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -2005,7 +1992,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-65" class="sample-language-65" style="display:none">
+      <div id="Python-67" class="sample-language-67" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2027,7 +2014,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-65" class="sample-language-65" style="display:none">
+      <div id="Java-67" class="sample-language-67" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2142,7 +2129,7 @@ public class JavaSampleClass {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ApiVersion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The API version RestComm used to handle the SMS message.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The API version <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> used to handle the SMS message.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>

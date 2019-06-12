@@ -26,19 +26,6 @@
         ">
       </a>
     </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <!-- TODO: Bring back when we integrate with searching facilities
-        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
-        -->
-        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
-        <div class="navbar-item">
-          <span>
-            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
-          </span>
-        </div>
-      </div>
-    </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
@@ -1366,7 +1353,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>action.</strong> The 'action' attribute takes a URL as an argument. When the dialed call ends, RestComm will make a GET or POST request to this URL including the parameters below. If you provide an 'action' URL, RestComm will continue the current call after the dialed party has hung up, using the RCML received in your response to the 'action' URL request. Any RCML verbs occuring after a &lt;Dial&gt; which specifies an 'action' attribute are unreachable. If no 'action' is provided, &lt;Dial&gt; will finish and RestComm will move on to the next RCML verb in the document. If there is no next verb, RestComm will end the phone call.</p>
+<p><strong>action.</strong> The 'action' attribute takes a URL as an argument. When the dialed call ends, <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will make a GET or POST request to this URL including the parameters below. If you provide an 'action' URL, RestComm will continue the current call after the dialed party has hung up, using the RCML received in your response to the 'action' URL request. Any RCML verbs occuring after a &lt;Dial&gt; which specifies an 'action' attribute are unreachable. If no 'action' is provided, &lt;Dial&gt; will finish and RestComm will move on to the next RCML verb in the document. If there is no next verb, RestComm will end the phone call.</p>
 </li>
 </ul>
 </div>
@@ -1424,7 +1411,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">busy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RestComm received a busy signal when trying to connect to the called party.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> received a busy signal when trying to connect to the called party.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">no-answer</p></td>
@@ -1432,7 +1419,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">failed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RestComm was unable to route to the given phone number. This is frequently caused by dialing a properly formated but non-existent phone number.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> was unable to route to the given phone number. This is frequently caused by dialing a properly formated but non-existent phone number.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">canceled</p></td>
@@ -1443,7 +1430,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>method.</strong> The 'method' attribute takes the value 'GET' or 'POST'. This tells RestComm whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute.</p>
+<p><strong>method.</strong> The 'method' attribute takes the value 'GET' or 'POST'. This tells <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute.</p>
 </li>
 <li>
 <p><strong>timeout.</strong> The 'timeout' attribute sets the limit in seconds that &lt;Dial&gt; waits for the called party to answer the call.</p>
@@ -1452,7 +1439,7 @@
 <p><strong>timelimit.</strong> The 'timeLimit' attribute sets the maximum duration of the &lt;Dial&gt; in seconds.</p>
 </li>
 <li>
-<p><strong>callerId.</strong> The 'callerId' attribute lets you specify the caller ID that will appear to the called party when RestComm calls. By default, when you put a &lt;Dial&gt; in your RCML response to RestComm&#8217;s inbound call request, the caller ID that the dialed party sees is the inbound caller&#8217;s caller ID. If you are dialing to a &lt;Client&gt;, you can set a client identifier as the callerId attribute. For instance, if you&#8217;ve set up a client for incoming calls and you are dialing to it, you could set the callerId attribute to client:thomas.</p>
+<p><strong>callerId.</strong> The 'callerId' attribute lets you specify the caller ID that will appear to the called party when <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> calls. By default, when you put a &lt;Dial&gt; in your RCML response to RestComm&#8217;s inbound call request, the caller ID that the dialed party sees is the inbound caller&#8217;s caller ID. If you are dialing to a &lt;Client&gt;, you can set a client identifier as the callerId attribute. For instance, if you&#8217;ve set up a client for incoming calls and you are dialing to it, you could set the callerId attribute to client:thomas.</p>
 </li>
 <li>
 <p><strong>record.</strong> The 'record' attribute lets you specify whether the call will be recorded or not. By default, the call is not recorded. If you set the attribute to 'true' <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will start recording when the two calls are bridged</p>

@@ -26,19 +26,6 @@
         ">
       </a>
     </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <!-- TODO: Bring back when we integrate with searching facilities
-        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
-        -->
-        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
-        <div class="navbar-item">
-          <span>
-            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
-          </span>
-        </div>
-      </div>
-    </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
@@ -1345,7 +1332,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Next, create two application new modules.called Welcome and Send SMS</p>
+<p>Next, create two application new modules called Welcome and Send SMS</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1512,18 +1499,6 @@
 <div class="paragraph">
 <p>Next, you will need to configure the second instance with user Bob. The configuration is similar to the one used for Alice.</p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Alice configuration SIP port must match the port configured in the restcomm.xml file to which the SMS message will be sent
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>How to check: In the Jitsi instance on which user Alice is configured,</p>
 </div>
@@ -1542,9 +1517,6 @@ Alice configuration SIP port must match the port configured in the restcomm.xml 
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/restcomm-rvd-smstest10.png" alt="restcomm-rvd-smstest10"></span></p>
-</div>
-<div class="paragraph">
-<p>Make sure the <strong>SIP client port</strong> above (<strong>5070</strong>)matches the port defined in the <code>$RESTCOMM_HOME/standalone/deployments/restcomm.war/WEB-INF/conf/restcomm.xml</code></p>
 </div>
 <div class="listingblock">
 <div class="content">

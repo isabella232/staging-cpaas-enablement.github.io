@@ -26,19 +26,6 @@
         ">
       </a>
     </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <!-- TODO: Bring back when we integrate with searching facilities
-        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
-        -->
-        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
-        <div class="navbar-item">
-          <span>
-            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
-          </span>
-        </div>
-      </div>
-    </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
@@ -1349,7 +1336,7 @@
 <p><strong>voice.</strong> The 'voice' attribute allows you to select the gender of the voice used to synthesize the text to speech for playback.</p>
 </li>
 <li>
-<p><strong>language.</strong> The 'language' attribute allows you pick a specific language for speech synthesis. RestComm currently supports languages 'bf' (Belgium-French), 'bp' (Brazilian-Portugues), 'en' (English), 'en-gb' (British-English), 'cf' (Canadian-French), 'cs' (Czech), 'dan' (Dannish), 'fi' (Finnish), 'es' (Spanish), 'fr' (French), 'de' (German), 'el' (Greek), 'it' (Italian), 'nl' (Netherlands-Dutch), 'no' (Norwegian), 'pl' (Polish), 'pt' (Portuguese), 'ru' (Russian), 'ar' (Saudi-Arabia Arabic), 'ca' (Spain Catalan), 'sv' (Swedish), and 'tr' (Turkish).</p>
+<p><strong>language.</strong> The 'language' attribute allows you pick a specific language for speech synthesis. <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> currently supports languages 'bf' (Belgium-French), 'bp' (Brazilian-Portugues), 'en' (English), 'en-gb' (British-English), 'cf' (Canadian-French), 'cs' (Czech), 'dan' (Dannish), 'fi' (Finnish), 'es' (Spanish), 'fr' (French), 'de' (German), 'el' (Greek), 'it' (Italian), 'nl' (Netherlands-Dutch), 'no' (Norwegian), 'pl' (Polish), 'pt' (Portuguese), 'ru' (Russian), 'ar' (Saudi-Arabia Arabic), 'ca' (Spain Catalan), 'sv' (Swedish), and 'tr' (Turkish).</p>
 </li>
 <li>
 <p><strong>loop.</strong> The 'loop' attribute specifies how many times you&#8217;d like the text repeated. Specifying '0' will cause the the &lt;Say&gt; verb to loop until the call is hung up.</p>
@@ -1381,7 +1368,7 @@
 <div class="listingblock">
 <div class="content">
 <pre>&lt;Response&gt;
-        &lt;Say voice="woman" language="fr" loop="3"&gt;Bienvenue à RestComm un projet parrainé par TeleStax&lt;/Say&gt;
+        &lt;Say voice="woman" language="fr" loop="3"&gt;Bonjour le monde&lt;/Say&gt;
 &lt;/Response&gt;</pre>
 </div>
 </div>

@@ -26,19 +26,6 @@
         ">
       </a>
     </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <!-- TODO: Bring back when we integrate with searching facilities
-        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
-        -->
-        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
-        <div class="navbar-item">
-          <span>
-            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
-          </span>
-        </div>
-      </div>
-    </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
@@ -1362,7 +1349,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>sendDigits.</strong> The 'sendDigits' attribute tells RestComm to play DTMF tones when the call is answered. This is useful when dialing a phone number and an extension. RestComm will dial the number, and when the automated system picks up, send the DTMF tones to connect to the extension.</p>
+<p><strong>sendDigits.</strong> The 'sendDigits' attribute tells <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> to play DTMF tones when the call is answered. This is useful when dialing a phone number and an extension. RestComm will dial the number, and when the automated system picks up, send the DTMF tones to connect to the extension.</p>
 </li>
 <li>
 <p><strong>url.</strong> The 'url' attribute allows you to specify a url for a RCML document that will run on the called party&#8217;s end, after he/she answers, but before the parties are connected. You can use this RCML to privately play or say information to the called party, or provide a chance to decline the phone call using &lt;Gather&gt; and &lt;Hangup&gt;. The current caller will continue to hear ringing while the RCML document executes on the other end. RCML documents executed in this manner are not allowed to contain the &lt;Dial&gt; verb.</p>
