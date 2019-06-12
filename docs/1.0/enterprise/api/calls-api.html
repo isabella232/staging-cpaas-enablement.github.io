@@ -1392,7 +1392,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this account, relative to https://localhost:port/restcomm.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this account, relative to <a href="https://$DOMAIN/restcomm" class="local-link">https://$DOMAIN/restcomm</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1616,7 +1616,7 @@
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Calls.json \
    -d 'From=16175551212' \
    -d 'To=sip:alice@mycompany.restcomm.com' \
-   -d 'Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
+   -d 'Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -1634,7 +1634,7 @@ request.({
       form: {
          'From': '16175551212',
          'To': 'sip:alice@mycompany.restcomm.com',
-         'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+         'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
       }
    },
    function (error, response, body) {
@@ -1661,7 +1661,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 params = urlencode({
    'From': '16175551212',
    'To': 'sip:alice@mycompany.restcomm.com',
-   'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+   'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -1699,7 +1699,7 @@ public class JavaSampleClass {
       // Update POST parameters accordingly
       os.writeBytes("From=16175551212&" +
         "To=sip:alice@mycompany.restcomm.com&" +
-        "Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
+        "Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -1726,7 +1726,7 @@ public class JavaSampleClass {
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Calls.json \
    -d 'From=16175551212' \
    -d 'To=client:alice' \
-   -d 'Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
+   -d 'Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -1744,7 +1744,7 @@ request.({
       form: {
          'From': '16175551212',
          'To': 'client:alice',
-         'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+         'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
       }
    },
    function (error, response, body) {
@@ -1771,7 +1771,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 params = urlencode({
    'From': '16175551212',
    'To': 'client:alice',
-   'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+   'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -1809,7 +1809,7 @@ public class JavaSampleClass {
       // Update POST parameters accordingly
       os.writeBytes("From=16175551212&" +
         "To=client:alice&" +
-        "Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
+        "Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -1833,7 +1833,7 @@ included in the outgoing INVITE message.</p>
    -d 'From=16175551212' \
    -d 'To=client:alice?X-Custom-Header1=1234' \
    -d 'X-Custom-Header2=432' \
-   -d 'Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
+   -d 'Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -1852,7 +1852,7 @@ request.({
          'From': '16175551212',
          'To': 'client:alice?X-Custom-Header1',
          'X-Custom-Header2': '432',
-         'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+         'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
       }
    },
    function (error, response, body) {
@@ -1880,7 +1880,7 @@ params = urlencode({
    'From': '16175551212',
    'To': 'client:alice?X-Custom-Header1',
    'X-Custom-Header2': '432',
-   'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+   'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -1919,7 +1919,7 @@ public class JavaSampleClass {
       os.writeBytes("From=16175551212&" +
         "To=client:alice?X-Custom-Header1=1234&" +
         "X-Custom-Header2=432&" +
-        "Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
+        "Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -1941,7 +1941,7 @@ public class JavaSampleClass {
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Calls.json \
    -d 'From=16175551212' \
    -d 'To=client:alice' \
-   -d 'Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
+   -d 'Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -d 'StatusCallbackEvent=answered,completed' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
@@ -1960,7 +1960,7 @@ request.({
       form: {
          'From': '16175551212',
          'To': 'client:alice',
-         'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml',
+         'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml',
          'StatusCallbackEvent': 'answered,completed'
       }
    },
@@ -1988,7 +1988,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 params = urlencode({
    'From': '16175551212',
    'To': 'client:alice',
-   'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml',
+   'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml',
    'StatusCallbackEvent': 'answered,completed'
 })
 
@@ -2027,7 +2027,7 @@ public class JavaSampleClass {
       // Update POST parameters accordingly
       os.writeBytes("From=16175551212&" +
         "To=client:alice&" +
-        "Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml&" +
+        "Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml&" +
         "StatusCallbackEvent=answered,completed");
       os.close();
 
@@ -2797,7 +2797,7 @@ public class JavaSampleClass {
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Calls.json \
    -d 'From=+16175551212' \
    -d 'To=sip:alice@mycompany.restcomm.com' \
-   -d 'Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
+   -d 'Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -2815,7 +2815,7 @@ request.({
       form: {
          'From': '+16175551212',
          'To': 'sip:alice@mycompany.restcomm.com',
-         'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+         'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
       }
    },
    function (error, response, body) {
@@ -2842,7 +2842,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 params = urlencode({
    'From': '+16175551212',
    'To': 'sip:alice@mycompany.restcomm.com',
-   'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+   'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -2880,7 +2880,7 @@ public class JavaSampleClass {
       // Update POST parameters accordingly
       os.writeBytes("From=+16175551212&" +
         "To=sip:alice@mycompany.restcomm.com&" +
-        "Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
+        "Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -2930,7 +2930,7 @@ The call will now be redirected to the Url specified(hello-world.xml)</p>
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Calls/CALL_SID.json \
    -d 'From=+16175551212' \
    -d 'To=sip:alice@mycompany.restcomm.com' \
-   -d 'Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
+   -d 'Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -2950,7 +2950,7 @@ request.({
       form: {
          'From': '+16175551212',
          'To': 'sip:alice@mycompany.restcomm.com',
-         'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+         'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
       }
    },
    function (error, response, body) {
@@ -2979,7 +2979,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 params = urlencode({
    'From': '+16175551212',
    'To': 'sip:alice@mycompany.restcomm.com',
-   'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+   'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -3018,7 +3018,7 @@ public class JavaSampleClass {
       // Update POST parameters accordingly
       os.writeBytes("From=+16175551212&" +
         "To=sip:alice@mycompany.restcomm.com&" +
-        "Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
+        "Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -3056,7 +3056,7 @@ public class JavaSampleClass {
       </div>
       <div id="Curl-29" class="sample-language-29">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Calls/CALL_SID.json \
-   -d 'Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
+   -d 'Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -3074,7 +3074,7 @@ request.({
       url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Calls/' + CALL_SID + '.json',
       auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       form: {
-         'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+         'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
       }
    },
    function (error, response, body) {
@@ -3101,7 +3101,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 
 # Update POST parameters accordingly
 params = urlencode({
-   'Url': 'https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
+   'Url': 'https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -3138,7 +3138,7 @@ public class JavaSampleClass {
       DataOutputStream os = new DataOutputStream(conn.getOutputStream());
 
       // Update POST parameters accordingly
-      os.writeBytes("Url=https://<accountSid>:<authToken>@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
+      os.writeBytes("Url=https://ACCOUNT_SID:AUTH_TOKEN@mycompany.restcomm.com/restcomm/demos/hello-play.xml");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'

@@ -1325,7 +1325,7 @@
 <p><strong>Base Resource URI</strong></p>
 </div>
 <div class="paragraph">
-<p>https://{your_organization}.restcomm.com</p>
+<p><a href="https://$DOMAIN" class="local-link">https://$DOMAIN</a></p>
 </div>
 <div class="paragraph">
 <p><strong>Verification Code Resource URI</strong></p>
@@ -1391,7 +1391,7 @@
 <div class="listingblock">
 <div class="content">
 <pre>curl -X POST \
-  https://{your_organization}.restcomm.com/2fa/send \
+  wlparam:localLink[text="https://$DOMAIN/2fa/send"] \
 --user  ' {your_account_SID}:{your_account_token}' \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
@@ -1418,7 +1418,7 @@
 <p><strong>Base Resource URI</strong></p>
 </div>
 <div class="paragraph">
-<p>https://{your_organization}.restcomm.com</p>
+<p><a href="https://$DOMAIN" class="local-link">https://$DOMAIN</a></p>
 </div>
 <div class="paragraph">
 <p><strong>Verification Code Resource URI</strong></p>
@@ -1479,7 +1479,7 @@
 <div class="listingblock">
 <div class="content">
 <pre>curl -X POST \
-  https://{your_company}.restcomm.com/2fa/verify \
+  wlparam:localLink[text="https://$DOMAIN/2fa/verify"] \
   --user  ' {your_account_SID}:{your_account_token}' \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
