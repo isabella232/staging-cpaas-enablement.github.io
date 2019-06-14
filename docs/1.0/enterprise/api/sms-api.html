@@ -1453,7 +1453,8 @@
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/SMS/Messages.json \
    -d 'From=19876543212' \
    -d 'To=13216549878' \
-   -d 'Body=Test SMS from wlparam:replace[textMode=' \
+   -d 'Body=Test SMS' \
+   -d 'StatusCallback=http://status.callback.url' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -1471,7 +1472,8 @@ request.({
       form: {
          'From': '19876543212',
          'To': '13216549878',
-         'Body': 'Test SMS from wlparam:replace[textMode'
+         'Body': 'Test SMS',
+         'StatusCallback': 'http://status.callback.url'
       }
    },
    function (error, response, body) {
@@ -1498,7 +1500,8 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 params = urlencode({
    'From': '19876543212',
    'To': '13216549878',
-   'Body': 'Test SMS from wlparam:replace[textMode'
+   'Body': 'Test SMS',
+   'StatusCallback': 'http://status.callback.url'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -1536,7 +1539,8 @@ public class JavaSampleClass {
       // Update POST parameters accordingly
       os.writeBytes("From=19876543212&" +
         "To=13216549878&" +
-        "Body=Test SMS from wlparam:replace[textMode=");
+        "Body=Test SMS&" +
+        "StatusCallback=http://status.callback.url");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -1557,7 +1561,7 @@ public class JavaSampleClass {
   "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "from":"19876543212",
   "to":"13216549878",
-  "body":"Test SMS from <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
+  "body":"Test SMS",
   "status":"sending",
   "direction":"outbound-api",
   "price":"0",
@@ -1580,7 +1584,8 @@ public class JavaSampleClass {
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/SMS/Messages.json \
    -d 'From=19876543212' \
    -d 'To=client:alice8' \
-   -d 'Body=Test SIP message from wlparam:replace[textMode=' \
+   -d 'Body=Test SIP message' \
+   -d 'StatusCallback=http://status.callback.url' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -1598,7 +1603,8 @@ request.({
       form: {
          'From': '19876543212',
          'To': 'client:alice8',
-         'Body': 'Test SIP message from wlparam:replace[textMode'
+         'Body': 'Test SIP message',
+         'StatusCallback': 'http://status.callback.url'
       }
    },
    function (error, response, body) {
@@ -1625,7 +1631,8 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 params = urlencode({
    'From': '19876543212',
    'To': 'client:alice8',
-   'Body': 'Test SIP message from wlparam:replace[textMode'
+   'Body': 'Test SIP message',
+   'StatusCallback': 'http://status.callback.url'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -1663,7 +1670,8 @@ public class JavaSampleClass {
       // Update POST parameters accordingly
       os.writeBytes("From=19876543212&" +
         "To=client:alice8&" +
-        "Body=Test SIP message from wlparam:replace[textMode=");
+        "Body=Test SIP message&" +
+        "StatusCallback=http://status.callback.url");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -1684,7 +1692,7 @@ public class JavaSampleClass {
   "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "from":"19876543212",
   "to":"client:alice",
-  "body":"Test SIP message from <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
+  "body":"Test SIP message",
   "status":"sending",
   "direction":"outbound-api",
   "price":"0",
