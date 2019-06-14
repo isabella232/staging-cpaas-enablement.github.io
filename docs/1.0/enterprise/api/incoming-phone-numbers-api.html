@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incoming Phone Numbers - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/incoming-phone-numbers-api.html">
-    <meta name="description" content="An IncomingPhoneNumber instance resource represents a wlparam:replace[textMode&#x3D;&quot;sps&quot;,parmText&#x3D;&quot;application_name&quot;,text&#x3D;&quot;Restcomm&quot;,defaultText&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] phone number">
-    <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} incoming phone numbers">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -2233,7 +2231,7 @@ public class JavaSampleClass {
       <div id="Curl-46" class="sample-language-46">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/IncomingPhoneNumbers.json \
    -d 'PhoneNumber=+15105555555' \
-   -d 'VoiceUrl=https://127.0.0.1/restcomm/demos/hello-play.xml' \
+   -d 'VoiceUrl=https://mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -2250,7 +2248,7 @@ request.({
       auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       form: {
          'PhoneNumber': '+15105555555',
-         'VoiceUrl': 'https://127.0.0.1/restcomm/demos/hello-play.xml'
+         'VoiceUrl': 'https://mycompany.restcomm.com/restcomm/demos/hello-play.xml'
       }
    },
    function (error, response, body) {
@@ -2276,7 +2274,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 # Update POST parameters accordingly
 params = urlencode({
    'PhoneNumber': '+15105555555',
-   'VoiceUrl': 'https://127.0.0.1/restcomm/demos/hello-play.xml'
+   'VoiceUrl': 'https://mycompany.restcomm.com/restcomm/demos/hello-play.xml'
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -2313,7 +2311,7 @@ public class JavaSampleClass {
 
       // Update POST parameters accordingly
       os.writeBytes("PhoneNumber=+15105555555&" +
-        "VoiceUrl=https://127.0.0.1/restcomm/demos/hello-play.xml");
+        "VoiceUrl=https://mycompany.restcomm.com/restcomm/demos/hello-play.xml");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -2372,7 +2370,7 @@ If you are trying to attach a number that you didn&#8217;t look up previously fr
       <div id="Curl-47" class="sample-language-47">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/IncomingPhoneNumbers.json \
    -d 'PhoneNumber=1234' \
-   -d 'VoiceUrl=https://127.0.0.1/restcomm/demos/hello-play.xml' \
+   -d 'VoiceUrl=https://mycompany.restcomm.com/restcomm/demos/hello-play.xml' \
    -d 'isSIP=true' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
@@ -2390,7 +2388,7 @@ request.({
       auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       form: {
          'PhoneNumber': '1234',
-         'VoiceUrl': 'https://127.0.0.1/restcomm/demos/hello-play.xml',
+         'VoiceUrl': 'https://mycompany.restcomm.com/restcomm/demos/hello-play.xml',
          'isSIP': 'true'
       }
    },
@@ -2417,7 +2415,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 # Update POST parameters accordingly
 params = urlencode({
    'PhoneNumber': '1234',
-   'VoiceUrl': 'https://127.0.0.1/restcomm/demos/hello-play.xml',
+   'VoiceUrl': 'https://mycompany.restcomm.com/restcomm/demos/hello-play.xml',
    'isSIP': 'true'
 })
 
@@ -2455,7 +2453,7 @@ public class JavaSampleClass {
 
       // Update POST parameters accordingly
       os.writeBytes("PhoneNumber=1234&" +
-        "VoiceUrl=https://127.0.0.1/restcomm/demos/hello-play.xml&" +
+        "VoiceUrl=https://mycompany.restcomm.com/restcomm/demos/hello-play.xml&" +
         "isSIP=true");
       os.close();
 

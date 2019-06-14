@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applications - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/applications-api.html">
-    <meta name="description" content="An Application instance resource represents a RCML set of instructions used by a #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} interpreter to process an on-going call or SMS.">
-    <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} applications">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1482,7 +1480,7 @@ Modifies an Application resource and returns the representation, including the p
    -d 'FriendlyName=ApplicationFooBar' \
    -d 'ApiVersion=2012-04-24' \
    -d 'HasVoiceCallerIdLookup=false' \
-   -d 'RcmlUrl=http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller' \
+   -d 'RcmlUrl=http://mycompany.restcomm.com/restcomm-rvd/services/apps/foobar/controller' \
    -d 'Kind=voice' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
@@ -1502,7 +1500,7 @@ request.({
          'FriendlyName': 'ApplicationFooBar',
          'ApiVersion': '2012-04-24',
          'HasVoiceCallerIdLookup': 'false',
-         'RcmlUrl': 'http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller',
+         'RcmlUrl': 'http://mycompany.restcomm.com/restcomm-rvd/services/apps/foobar/controller',
          'Kind': 'voice'
       }
    },
@@ -1531,7 +1529,7 @@ params = urlencode({
    'FriendlyName': 'ApplicationFooBar',
    'ApiVersion': '2012-04-24',
    'HasVoiceCallerIdLookup': 'false',
-   'RcmlUrl': 'http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller',
+   'RcmlUrl': 'http://mycompany.restcomm.com/restcomm-rvd/services/apps/foobar/controller',
    'Kind': 'voice'
 })
 
@@ -1571,7 +1569,7 @@ public class JavaSampleClass {
       os.writeBytes("FriendlyName=ApplicationFooBar&" +
         "ApiVersion=2012-04-24&" +
         "HasVoiceCallerIdLookup=false&" +
-        "RcmlUrl=http://127.0.0.1:8080/restcomm-rvd/services/apps/foobar/controller&" +
+        "RcmlUrl=http://mycompany.restcomm.com/restcomm-rvd/services/apps/foobar/controller&" +
         "Kind=voice");
       os.close();
 
@@ -1907,7 +1905,7 @@ public class JavaSampleClass {
     "sid": "AP73926e7113fa4d95981aa96b76eca854",
     "date_created": "Wed, 23 Sep 2015 06:56:04 -0300",
     "date_updated": "Wed, 23 Sep 2015 06:56:04 -0300",
-    "friendly_name": "rvdCollectVerbDemo",
+    "friendly_name": "vdCollectVerbDemo",
     "account_sid": "ACae6e420f425248d6a26948c17a9e2acf",
     "api_version": "2012-04-24",
     "voice_caller_id_lookup": false,
@@ -1919,7 +1917,7 @@ public class JavaSampleClass {
     "sid": "AP81cf45088cba4abcac1261385916d582",
     "date_created": "Wed, 23 Sep 2015 06:56:17 -0300",
     "date_updated": "Wed, 23 Sep 2015 06:56:17 -0300",
-    "friendly_name": "rvdESDemo",
+    "friendly_name": "vdESDemo",
     "account_sid": "ACae6e420f425248d6a26948c17a9e2acf",
     "api_version": "2012-04-24",
     "voice_caller_id_lookup": false,
@@ -1972,7 +1970,7 @@ public class JavaSampleClass {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this Application, relative to https://localhost:port/restcomm.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this Application, relative to <code><span class="non-sps-text non-sps-link">https://$DOMAIN/#/restcomm</span></code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RcmlUrl</p></td>

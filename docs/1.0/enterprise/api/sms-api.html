@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMS - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/sms-api.html">
-    <meta name="description" content="An SMS represents an inbound or outbound SMS message. Using this API you can do things like:">
-    <meta name="keywords" content="send sms, sms api, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} sms api, sms rest api">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1559,7 +1557,7 @@ public class JavaSampleClass {
   "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "from":"19876543212",
   "to":"13216549878",
-  "body":"Test SMS from wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"]",
+  "body":"Test SMS from <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
   "status":"sending",
   "direction":"outbound-api",
   "price":"0",
@@ -1686,7 +1684,7 @@ public class JavaSampleClass {
   "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "from":"19876543212",
   "to":"client:alice",
-  "body":"Test SIP message from wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"]",
+  "body":"Test SIP message from <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
   "status":"sending",
   "direction":"outbound-api",
   "price":"0",
@@ -2055,7 +2053,7 @@ public class JavaSampleClass {
     "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "from":"19876543212",
     "to":"13216549878",
-    "body":"Another test from wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"]",
+    "body":"Another test from <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
     "status":"sent",
     "direction":"outbound-api",
     "price":"0",
