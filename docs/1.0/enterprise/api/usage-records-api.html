@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usage Records - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/api/usage-records-api.html">
-    <meta name="description" content="The UsageRecords REST resource provides a simple API to retrieve usage made by your wlparam:sps[parmName&#x3D;&quot;application_name&quot;,rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] account during any time period and by any usage category.">
+    <meta name="description" content="The UsageRecords REST resource provides a simple API to retrieve usage made by your wlparam:replace[textMode&#x3D;&quot;sps&quot;,parmText&#x3D;&quot;application_name&quot;,text&#x3D;&quot;Restcomm&quot;,defaultText&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] account during any time period and by any usage category.">
     <meta name="keywords" content="usage records">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
@@ -1029,7 +1029,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1295,7 +1295,7 @@
 <h2 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage Records</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The UsageRecords REST resource provides a simple API to retrieve usage made by your <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> account during any time period and by any usage category. This makes it easy to build reporting and analytics tools for your application. UsageRecords used in combination with Subaccounts created for each of your end-users make it possible to build recurring usage-based billing systems on top of <span class="replacement-parm" data-parm-key="application_name">Restcomm</span>'s API with just a few simple API calls.</p>
+<p>The UsageRecords REST resource provides a simple API to retrieve usage made by your <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> account during any time period and by any usage category. This makes it easy to build reporting and analytics tools for your application. UsageRecords used in combination with Subaccounts created for each of your end-users make it possible to build recurring usage-based billing systems on top of <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>'s API with just a few simple API calls.</p>
 </div>
 <div class="paragraph">
 <p>You can also set up usage triggers to notify your application when a particular category of usage reaches a threshold on a daily, monthly, yearly, or all-time basis. Triggers can help determine if your users have reached a cap on usage, or if your application may have runaway requests. For more on usage triggers, see the Usage Triggers documentation.</p>
@@ -1371,7 +1371,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URI that returns only this UsageRecord, relative to <code>https://<span class="replacement-parm" data-parm-key="application_name">Restcomm</span>_IP_ADDRESS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI that returns only this UsageRecord, relative to <code>https://<span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>_IP_ADDRESS</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SubresourceUris</p></td>
@@ -1417,7 +1417,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">recordings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recordings of voice calls. <code>Count</code> is the number of recordings and <code>Usage</code> is the number of recorded minutes. Note that <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> doesn&#8217;t charge for making recordings (only storing them long term) so <code>Price</code> will always be 0.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recordings of voice calls. <code>Count</code> is the number of recordings and <code>Usage</code> is the number of recorded minutes. Note that <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> doesn&#8217;t charge for making recordings (only storing them long term) so <code>Price</code> will always be 0.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">transcriptions</p></td>
@@ -1425,7 +1425,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">totalprice</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Total price of all usage. <code>Usage</code> will be the same as <code>Price</code>, and <code>Count</code> will be empty. Note that because some <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> costs may not be included in any usage category, the sum of the <code>Price</code> of all UsageRecords may not be equal to the <code>Price</code> of <code>TotalPrice</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total price of all usage. <code>Usage</code> will be the same as <code>Price</code>, and <code>Count</code> will be empty. Note that because some <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> costs may not be included in any usage category, the sum of the <code>Price</code> of all UsageRecords may not be equal to the <code>Price</code> of <code>TotalPrice</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1591,7 +1591,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">calls-client</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Client voice calls.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Client voice calls.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">calls-sip</p></td>
@@ -1659,7 +1659,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">recordings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recordings of voice calls. <code>Count</code> is the number of recordings and <code>Usage</code> is the number of recorded minutes. Note that <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> doesn&#8217;t charge for making recordings (only storing them long term) so <code>Price</code> will always be 0.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recordings of voice calls. <code>Count</code> is the number of recordings and <code>Usage</code> is the number of recorded minutes. Note that <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> doesn&#8217;t charge for making recordings (only storing them long term) so <code>Price</code> will always be 0.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">transcriptions</p></td>
@@ -1671,7 +1671,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">totalprice</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Total price of all usage. <code>Usage</code> will be the same as <code>Price</code>, and <code>Count</code> will be empty. Note that because some <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> costs may not be included in any usage category, the sum of the <code>Price</code> in all UsageRecords may or may not be equal to the <code>Price</code> of <code>TotalPrice</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total price of all usage. <code>Usage</code> will be the same as <code>Price</code>, and <code>Count</code> will be empty. Note that because some <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> costs may not be included in any usage category, the sum of the <code>Price</code> in all UsageRecords may or may not be equal to the <code>Price</code> of <code>TotalPrice</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1840,11 +1840,11 @@ public class JavaSampleClass {
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="replacement-parm" data-parm-key="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p><a class="replacement-parm" data-parm-key="company_link" href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
+        <p><a class="non-sps-text sps-link" data-parm-link="company_link" href="https://www.telestax.com/" data-default-link="#">Company Site</a></p>
       </div>
     </div>
   </div>

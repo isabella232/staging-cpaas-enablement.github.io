@@ -1029,7 +1029,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1293,7 +1293,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This tutorial will walk you through the steps of setting up your own two-factor authentication service. As of today, this functionality is only available on the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> US Point of Presence.</p>
+<p>This tutorial will walk you through the steps of setting up your own two-factor authentication service. As of today, this functionality is only available on the <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> US Point of Presence.</p>
 </div>
 <div class="paragraph">
 <p><strong>User enters your application</strong></p>
@@ -1305,13 +1305,13 @@
 <p><strong>User is prompted to enter his phone number</strong></p>
 </div>
 <div class="paragraph">
-<p><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
+<p><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
 </div>
 <div class="paragraph">
 <p><strong>PIN code is sent to the user via SMS</strong></p>
 </div>
 <div class="paragraph">
-<p>Once the user enters a valid phone number, from your application you will need to ask <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
+<p>Once the user enters a valid phone number, from your application you will need to ask <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
 </div>
 <div class="paragraph">
 <p>Sending a verification code requires basic authorization that includes your account SID and auth token. Below is the format you have to use in order to send a verification code to the user&#8217;s phone number.</p>
@@ -1325,7 +1325,7 @@
 <p><strong>Base Resource URI</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://$DOMAIN" class="local-link">https://$DOMAIN</a></p>
+<p><span class="non-sps-text non-sps-link">https://$DOMAIN</span></p>
 </div>
 <div class="paragraph">
 <p><strong>Verification Code Resource URI</strong></p>
@@ -1378,7 +1378,7 @@
 <div class="listingblock">
 <div class="content">
 <pre>{
-    "service" : "wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"]", // the name of your service
+    "service" : "wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"]", // the name of your service
     "from" : "+XXXXXXXXX", // the SMS sender phone number
     "to" : "+XXXXXXXXXX", // the SMS recepient phone number
     "body": "Your verification code is: \{code}" // SMS body, containing the verification code
@@ -1391,12 +1391,12 @@
 <div class="listingblock">
 <div class="content">
 <pre>curl -X POST \
-  wlparam:localLink[text="https://$DOMAIN/2fa/send"] \
+  <span class="non-sps-text non-sps-link">https://$DOMAIN/2fa/send</span> \
 --user  ' {your_account_SID}:{your_account_token}' \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
   -d '{
-    "service" : "wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"]",
+    "service" : "<span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
     "from" : "+13216549878",
     "to" : "+13216549879",
     "body": "Your verification code is: \{code}"
@@ -1418,7 +1418,7 @@
 <p><strong>Base Resource URI</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://$DOMAIN" class="local-link">https://$DOMAIN</a></p>
+<p><span class="non-sps-text non-sps-link">https://$DOMAIN</span></p>
 </div>
 <div class="paragraph">
 <p><strong>Verification Code Resource URI</strong></p>
@@ -1467,7 +1467,7 @@
 <div class="listingblock">
 <div class="content">
 <pre>{
-    "service" : "wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"]", // the name of your service
+    "service" : "wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"]", // the name of your service
     "number" : "+XXXXXXXXXX",  // the phone number of the SMS recepient
     "code": "XXXXX" // the verification code
 }</pre>
@@ -1479,12 +1479,12 @@
 <div class="listingblock">
 <div class="content">
 <pre>curl -X POST \
-  wlparam:localLink[text="https://$DOMAIN/2fa/verify"] \
+  <span class="non-sps-text non-sps-link">https://$DOMAIN/2fa/verify</span> \
   --user  ' {your_account_SID}:{your_account_token}' \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
   -d '{
-    "service" : "wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"]",
+    "service" : "<span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
     "number" : "+13216549879",
     "code": "294228"
 }</pre>
@@ -1515,11 +1515,11 @@
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="replacement-parm" data-parm-key="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p><a class="replacement-parm" data-parm-key="company_link" href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
+        <p><a class="non-sps-text sps-link" data-parm-link="company_link" href="https://www.telestax.com/" data-default-link="#">Company Site</a></p>
       </div>
     </div>
   </div>

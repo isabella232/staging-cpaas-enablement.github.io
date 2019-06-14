@@ -1029,7 +1029,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1296,7 +1296,7 @@
 <h2 id="_email"><a class="anchor" href="#_email"></a>Email</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Using the <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> API, you can send Emails through a simple request.</p>
+<p>Using the <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> API, you can send Emails through a simple request.</p>
 </div>
 <div class="sect2">
 <h3 id="_email_resource_uri"><a class="anchor" href="#_email_resource_uri"></a>Email resource URI</h3>
@@ -1488,7 +1488,7 @@ public class JavaSampleClass {
 <h2 id="_using_email"><a class="anchor" href="#_using_email"></a>Using Email</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You need to configure <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> to send Email messages. For the necessary configuration please refer to this <a href="email-rcml.adoc">post</a></p>
+<p>You need to configure <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> to send Email messages. For the necessary configuration please refer to this <a href="email-rcml.adoc">post</a></p>
 </div>
 </div>
 </div>
@@ -1811,11 +1811,11 @@ public class JavaSampleClass {
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="replacement-parm" data-parm-key="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p><a class="replacement-parm" data-parm-key="company_link" href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
+        <p><a class="non-sps-text sps-link" data-parm-link="company_link" href="https://www.telestax.com/" data-default-link="#">Company Site</a></p>
       </div>
     </div>
   </div>

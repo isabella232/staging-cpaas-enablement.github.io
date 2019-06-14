@@ -1029,7 +1029,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1295,10 +1295,10 @@
 <h2 id="_applications"><a class="anchor" href="#_applications"></a>Applications</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>An Application instance resource represents a RCML set of instructions used by a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> interpreter to process an on-going call or SMS.</p>
+<p>An Application instance resource represents a RCML set of instructions used by a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> interpreter to process an on-going call or SMS.</p>
 </div>
 <div class="paragraph">
-<p><span class="replacement-parm" data-parm-key="application_name">Restcomm</span> stores only part of the metadata for this Application, which contains as one of its attributes the URL with the address of the application server where the RCML can be retrieved.</p>
+<p><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> stores only part of the metadata for this Application, which contains as one of its attributes the URL with the address of the application server where the RCML can be retrieved.</p>
 </div>
 <div class="paragraph">
 <p>Currently there are 3 types of Applications that are supported: Voice, SMS and USSD. Each type of Application will be used by its specific interpreter.</p>
@@ -1347,7 +1347,7 @@ Modifies an Application resource and returns the representation, including the p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RcmlUrl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP address that <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will use to get the RCML of this Application.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP address that <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will use to get the RCML of this Application.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kind</p></td>
@@ -1359,7 +1359,7 @@ Modifies an Application resource and returns the representation, including the p
 <p><strong>HTTP DELETE</strong></p>
 </div>
 <div class="paragraph">
-<p>Remove the Application from <span class="replacement-parm" data-parm-key="application_name">Restcomm</span>'s database. This Application will not be displayed anymore at the list of available applications while using AdminUI, consequently, not possible to be assigned to a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> Number or Client. If successful, returns an HTTP 204 response with no body.</p>
+<p>Remove the Application from <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>'s database. This Application will not be displayed anymore at the list of available applications while using AdminUI, consequently, not possible to be assigned to a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Number or Client. If successful, returns an HTTP 204 response with no body.</p>
 </div>
 </div>
 </div>
@@ -1433,7 +1433,7 @@ Modifies an Application resource and returns the representation, including the p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RcmlUrl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP address that <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will use to get the RCML of this Application.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP address that <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will use to get the RCML of this Application.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kind</p></td>
@@ -1976,7 +1976,7 @@ public class JavaSampleClass {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RcmlUrl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP address that <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will use to get the RCML of this Application.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP address that <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will use to get the RCML of this Application.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kind</p></td>
@@ -2007,11 +2007,11 @@ public class JavaSampleClass {
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="replacement-parm" data-parm-key="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p><a class="replacement-parm" data-parm-key="company_link" href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
+        <p><a class="non-sps-text sps-link" data-parm-link="company_link" href="https://www.telestax.com/" data-default-link="#">Company Site</a></p>
       </div>
     </div>
   </div>

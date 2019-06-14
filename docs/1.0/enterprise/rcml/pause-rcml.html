@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pause - Restcomm Docs</title>
     <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rcml/pause-rcml.html">
-    <meta name="description" content="The &amp;lt;Pause&amp;gt; verb waits silently for a specific number of seconds. If &amp;lt;Pause&amp;gt; is the first verb in a RCML response, wlparam:sps[parmName&#x3D;&quot;application_name&quot;,rcText&#x3D;&quot;Restcomm&quot;,defaultValue&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] will wait the specified number of seconds before picking up the call.">
+    <meta name="description" content="The &amp;lt;Pause&amp;gt; verb waits silently for a specific number of seconds. If &amp;lt;Pause&amp;gt; is the first verb in a RCML response, wlparam:replace[textMode&#x3D;&quot;sps&quot;,parmText&#x3D;&quot;application_name&quot;,text&#x3D;&quot;Restcomm&quot;,defaultText&#x3D;&quot;$INFER_FROM_DOMAIN&quot;] will wait the specified number of seconds before picking up the call.">
     <meta name="keywords" content="pause verb, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} pause verb, pause a call">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
@@ -1029,7 +1029,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1295,7 +1295,7 @@
 <h2 id="_pause"><a class="anchor" href="#_pause"></a>Pause</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <strong>&lt;Pause&gt;</strong> verb waits silently for a specific number of seconds. If &lt;Pause&gt; is the first verb in a RCML response, <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will wait the specified number of seconds before picking up the call.</p>
+<p>The <strong>&lt;Pause&gt;</strong> verb waits silently for a specific number of seconds. If &lt;Pause&gt; is the first verb in a RCML response, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will wait the specified number of seconds before picking up the call.</p>
 </div>
 <div class="sect2">
 <h3 id="_pause_attributes"><a class="anchor" href="#_pause_attributes"></a>Pause Attributes</h3>
@@ -1323,7 +1323,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>length.</strong> The 'length' attribute specifies how many seconds <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will wait silently before continuing on.</p>
+<p><strong>length.</strong> The 'length' attribute specifies how many seconds <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will wait silently before continuing on.</p>
 </li>
 </ul>
 </div>
@@ -1385,11 +1385,11 @@
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="replacement-parm" data-parm-key="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p><a class="replacement-parm" data-parm-key="company_link" href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
+        <p><a class="non-sps-text sps-link" data-parm-link="company_link" href="https://www.telestax.com/" data-default-link="#">Company Site</a></p>
       </div>
     </div>
   </div>

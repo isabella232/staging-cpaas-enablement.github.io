@@ -1029,7 +1029,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1317,7 +1317,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Basic knowledge of <span class="replacement-parm" data-parm-key="application_name">Restcomm</span></p>
+<p>Basic knowledge of <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p>
 </li>
 <li>
 <p>Basic knowledge of Zapier service (or alternatives web services integration tool such as IfTTT.com)</p>
@@ -1330,12 +1330,12 @@
 <h2 id="_step_1"><a class="anchor" href="#_step_1"></a>Step 1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You must create a Restomm Visual Designer project.</p>
+<p>You must create a Visual Designer project.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Log into at <code><a href="https://$DOMAIN/#/login" class="local-link">https://$DOMAIN/#/login</a></code> and navigate to <strong>Applications</strong>.</p>
+<p>Login to Console and navigate to <strong>Applications</strong>.</p>
 </li>
 <li>
 <p>Click on the <strong>Add New App</strong> button. Choose to <strong>Create a Visual Designer Application</strong>.</p>
@@ -1363,7 +1363,7 @@
 <p>The <strong>Welcome</strong> module is created by default. Navigate to it.</p>
 </li>
 <li>
-<p>In the <strong>Say</strong> verb text area, enter your welcome message. For example, "Welcome to <span class="replacement-parm" data-parm-key="application_name">Restcomm</span>. Please leave your message and phone number after the beep.".</p>
+<p>In the <strong>Say</strong> verb text area, enter your welcome message. For example, "Welcome to <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>. Please leave your message and phone number after the beep.".</p>
 </li>
 <li>
 <p>Drag and drop the <strong>Record</strong> verb into the Welcome module as shown in the screenshot below.</p>
@@ -1534,7 +1534,7 @@
 <h2 id="_step_4"><a class="anchor" href="#_step_4"></a> Step 4</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In order to test your application you need to bind it to a <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> phone number. Once that is done, you can start using your application.</p>
+<p>In order to test your application you need to bind it to a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> phone number. Once that is done, you can start using your application.</p>
 </div>
 </div>
 </div>
@@ -1558,11 +1558,11 @@
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="replacement-parm" data-parm-key="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p><a class="replacement-parm" data-parm-key="company_link" href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
+        <p><a class="non-sps-text sps-link" data-parm-link="company_link" href="https://www.telestax.com/" data-default-link="#">Company Site</a></p>
       </div>
     </div>
   </div>

@@ -1029,7 +1029,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1344,7 +1344,7 @@
 <h2 id="_to"><a class="anchor" href="#_to"></a>to</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The 'to' attribute takes a valid E.164 phone number as a value. <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will send an SMS message to this number. When sending an SMS during an incoming call, 'to' defaults to the caller. When sending an SMS during an outgoing call, 'to' defaults to the called party. The value of 'to' must be a valid phone number.</p>
+<p>The 'to' attribute takes a valid E.164 phone number as a value. <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will send an SMS message to this number. When sending an SMS during an incoming call, 'to' defaults to the caller. When sending an SMS during an outgoing call, 'to' defaults to the called party. The value of 'to' must be a valid phone number.</p>
 </div>
 </div>
 </div>
@@ -1360,10 +1360,10 @@
 <h2 id="_action"><a class="anchor" href="#_action"></a>action</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The 'action' attribute takes a URL as an argument. After processing the &lt;Sms&gt; verb, <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will make a GET or POST request to this URL with the form parameters 'SmsStatus' and 'SmsSid'. Using an 'action' URL, your application can receive synchronous notification that the message was successfully enqueued or not.</p>
+<p>The 'action' attribute takes a URL as an argument. After processing the &lt;Sms&gt; verb, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will make a GET or POST request to this URL with the form parameters 'SmsStatus' and 'SmsSid'. Using an 'action' URL, your application can receive synchronous notification that the message was successfully enqueued or not.</p>
 </div>
 <div class="paragraph">
-<p>If you provide an 'action' URL, <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will use the RCML received in your response to the 'action' URL request to continue the current call. Any RCML verbs occuring after an &lt;Sms&gt; which specifies an 'action' attribute are unreachable. If no 'action' is provided, &lt;Sms&gt; will finish and RestComm will move on to the next RCML verb in the document. If there is no next verb, RestComm will end the phone call.</p>
+<p>If you provide an 'action' URL, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will use the RCML received in your response to the 'action' URL request to continue the current call. Any RCML verbs occuring after an &lt;Sms&gt; which specifies an 'action' attribute are unreachable. If no 'action' is provided, &lt;Sms&gt; will finish and <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will move on to the next RCML verb in the document. If there is no next verb, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will end the phone call.</p>
 </div>
 </div>
 </div>
@@ -1371,7 +1371,7 @@
 <h2 id="_method"><a class="anchor" href="#_method"></a>method</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The 'method' attribute takes the value 'GET' or 'POST'. This tells <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute.</p>
+<p>The 'method' attribute takes the value 'GET' or 'POST'. This tells <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute.</p>
 </div>
 <div class="sect2">
 <h3 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h3>
@@ -1439,11 +1439,11 @@
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="replacement-parm" data-parm-key="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p><a class="replacement-parm" data-parm-key="company_link" href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
+        <p><a class="non-sps-text sps-link" data-parm-link="company_link" href="https://www.telestax.com/" data-default-link="#">Company Site</a></p>
       </div>
     </div>
   </div>

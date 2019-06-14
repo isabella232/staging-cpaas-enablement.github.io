@@ -1029,7 +1029,7 @@
               
             "></span>
             <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_how_restcomm_interacts_with_your_application">How wlparam:sps[parmName="application_name",rcText="Restcomm",defaultValue="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
               
             </span>
           </div>
@@ -1304,7 +1304,7 @@
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-* Video is supported only when <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> is configured to use Dialogic&#8217;s PowerMedia XMS media server.
+* Video is supported only when <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> is configured to use Dialogic&#8217;s PowerMedia XMS media server.
 </td>
 </tr>
 </table>
@@ -1375,7 +1375,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>action.</strong> The 'action' attribute takes an absolute or relative URL as a value. When recording is finished <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will make a GET or POST request to this URL including the parameters below. If no 'action' is provided, &lt;Record&gt; will default to requesting the current document&#8217;s URL. After making this request, RestComm will continue the current call using the RCML received in your response. Any RCML verbs occuring after a &lt;Record&gt; are unreachable. There is one exception: if RestComm receives an empty recording, it will not make a request to the 'action' URL. The current call flow will continue with the next verb in the current RCML document.</p>
+<p><strong>action.</strong> The 'action' attribute takes an absolute or relative URL as a value. When recording is finished <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will make a GET or POST request to this URL including the parameters below. If no 'action' is provided, &lt;Record&gt; will default to requesting the current document&#8217;s URL. After making this request, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will continue the current call using the RCML received in your response. Any RCML verbs occuring after a &lt;Record&gt; are unreachable. There is one exception: if <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> receives an empty recording, it will not make a request to the 'action' URL. The current call flow will continue with the next verb in the current RCML document.</p>
 </li>
 </ul>
 </div>
@@ -1411,22 +1411,22 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>method.</strong> The 'method' attribute takes the value 'GET' or 'POST'. This tells <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> whether to request the URL via HTTP GET or POST.</p>
+<p><strong>method.</strong> The 'method' attribute takes the value 'GET' or 'POST'. This tells <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> whether to request the URL via HTTP GET or POST.</p>
 </li>
 <li>
-<p><strong>timeout.</strong> The 'timeout' attribute tells <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> to end the recording after a number of seconds of silence has passed.</p>
+<p><strong>timeout.</strong> The 'timeout' attribute tells <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> to end the recording after a number of seconds of silence has passed.</p>
 </li>
 <li>
-<p><strong>finishOnKey.</strong> The 'finishOnKey' attribute lets you choose a set of digits that end the recording when entered. For example, if you set 'finishOnKey' to '#' and the caller presses '#', <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will immediately stop recording and submit 'RecordingUrl', 'RecordingDuration', and the '#' as parameters in a request to the 'action' URL. The allowed values are the digits 0-9, '#', '*' and '-1'. The default value is '1234567890*#' which means that any key will end the recording. The value '-1' is a special value that can be used to disable finishOnKey and never stop recording on a DTMF. Unlike &lt;Gather&gt;, you may specify more than one character as a 'finishOnKey' value but '-1' must be used alone.</p>
+<p><strong>finishOnKey.</strong> The 'finishOnKey' attribute lets you choose a set of digits that end the recording when entered. For example, if you set 'finishOnKey' to '#' and the caller presses '#', <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will immediately stop recording and submit 'RecordingUrl', 'RecordingDuration', and the '#' as parameters in a request to the 'action' URL. The allowed values are the digits 0-9, '#', '*' and '-1'. The default value is '1234567890*#' which means that any key will end the recording. The value '-1' is a special value that can be used to disable finishOnKey and never stop recording on a DTMF. Unlike &lt;Gather&gt;, you may specify more than one character as a 'finishOnKey' value but '-1' must be used alone.</p>
 </li>
 <li>
 <p><strong>maxLength.</strong> The 'maxLength' attribute lets you set the maximum length for the recording in seconds.</p>
 </li>
 <li>
-<p><strong>transcribe.</strong> The 'transcribe' attribute tells <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> that you would like a text representation of the audio of the recording.</p>
+<p><strong>transcribe.</strong> The 'transcribe' attribute tells <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> that you would like a text representation of the audio of the recording.</p>
 </li>
 <li>
-<p><strong>transcribeCallback.</strong> The 'transcribeCallback' attribute is used in conjunction with the 'transcribe' attribute. It allows you to specify a URL to which <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> will make an asynchronous POST request when the transcription is complete. This is not a request for RCML and the response will not change call flow, but the request will contain the standard RCML request parameters as well as 'TranscriptionStatus', 'TranscriptionText', 'TranscriptionUrl' and 'RecordingUrl'. If 'transcribeCallback' is specified, then there is no need to specify 'transcribe=true'. It is implied. If you specify 'transcribe=true' without a 'transcribeCallback', the completed transcription will be stored for you to retrieve later (see the REST API Transcriptions section), but RestComm will not asynchronously notify your application.</p>
+<p><strong>transcribeCallback.</strong> The 'transcribeCallback' attribute is used in conjunction with the 'transcribe' attribute. It allows you to specify a URL to which <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will make an asynchronous POST request when the transcription is complete. This is not a request for RCML and the response will not change call flow, but the request will contain the standard RCML request parameters as well as 'TranscriptionStatus', 'TranscriptionText', 'TranscriptionUrl' and 'RecordingUrl'. If 'transcribeCallback' is specified, then there is no need to specify 'transcribe=true'. It is implied. If you specify 'transcribe=true' without a 'transcribeCallback', the completed transcription will be stored for you to retrieve later (see the REST API Transcriptions section), but <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will not asynchronously notify your application.</p>
 </li>
 </ul>
 </div>
@@ -1480,7 +1480,7 @@
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-* Video is supported only when <span class="replacement-parm" data-parm-key="application_name">Restcomm</span> is configured to use Dialogic&#8217;s PowerMedia XMS media server.
+* Video is supported only when <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> is configured to use Dialogic&#8217;s PowerMedia XMS media server.
 </td>
 </tr>
 </table>
@@ -1528,11 +1528,11 @@
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="replacement-parm" data-parm-key="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
-        <p><a class="replacement-parm" data-parm-key="company_link" href="https://www.telestax.com/" data-default-text="$INFER_FROM_DOMAIN" data-default-link="#">telestax.com</a></p>
+        <p><a class="non-sps-text sps-link" data-parm-link="company_link" href="https://www.telestax.com/" data-default-link="#">Company Site</a></p>
       </div>
     </div>
   </div>
