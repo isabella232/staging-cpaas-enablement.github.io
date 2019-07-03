@@ -1488,7 +1488,7 @@ Modifies an Application resource and returns the representation, including the p
    -d 'FriendlyName=ApplicationFooBar' \
    -d 'ApiVersion=2012-04-24' \
    -d 'HasVoiceCallerIdLookup=false' \
-   -d 'RcmlUrl=http://mycompany.restcomm.com/restcomm-rvd/services/apps/foobar/controller' \
+   -d 'RcmlUrl=http://mycompany.restcomm.com/visual-designer/services/apps/foobar/controller' \
    -d 'Kind=voice' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
@@ -1508,7 +1508,7 @@ request.({
          'FriendlyName': 'ApplicationFooBar',
          'ApiVersion': '2012-04-24',
          'HasVoiceCallerIdLookup': 'false',
-         'RcmlUrl': 'http://mycompany.restcomm.com/restcomm-rvd/services/apps/foobar/controller',
+         'RcmlUrl': 'http://mycompany.restcomm.com/visual-designer/services/apps/foobar/controller',
          'Kind': 'voice'
       }
    },
@@ -1537,7 +1537,7 @@ params = urlencode({
    'FriendlyName': 'ApplicationFooBar',
    'ApiVersion': '2012-04-24',
    'HasVoiceCallerIdLookup': 'false',
-   'RcmlUrl': 'http://mycompany.restcomm.com/restcomm-rvd/services/apps/foobar/controller',
+   'RcmlUrl': 'http://mycompany.restcomm.com/visual-designer/services/apps/foobar/controller',
    'Kind': 'voice'
 })
 
@@ -1577,7 +1577,7 @@ public class JavaSampleClass {
       os.writeBytes("FriendlyName=ApplicationFooBar&" +
         "ApiVersion=2012-04-24&" +
         "HasVoiceCallerIdLookup=false&" +
-        "RcmlUrl=http://mycompany.restcomm.com/restcomm-rvd/services/apps/foobar/controller&" +
+        "RcmlUrl=http://mycompany.restcomm.com/visual-designer/services/apps/foobar/controller&" +
         "Kind=voice");
       os.close();
 

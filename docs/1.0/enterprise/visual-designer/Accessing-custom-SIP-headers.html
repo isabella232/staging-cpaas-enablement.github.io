@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Restcomm Visual Designer Application Log Overview - Restcomm Docs"></title>
-    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rvd/Application-log.html">
+    <title data-custom-title="Accessing custom SIP headers from an RCML or Visual Designer application - Restcomm Docs"></title>
+    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/visual-designer/Accessing-custom-SIP-headers.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1290,92 +1290,71 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="Application-log.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log Overview</a></li>
+    <li class="crumb"><a href="Accessing-custom-SIP-headers.html">Accessing custom SIP headers from an RCML or Visual Designer application</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log Overview</h1>
+  <h1>Accessing custom SIP headers from an RCML or Visual Designer application</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Application Logging is designed to help users troubleshoot their applications.</p>
+<p><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> provides an additional interface to communicate with an RCML/Visual Designer application by means of custom SIP headers. The idea is that all custom SIP headers in a SIP message are detected and converted to HTTP parameters in the request to the RCML application using a convention. The RCML application can consume this parameters. Furthermore, Visual Designer converts these parameters to RVD variables and makes them available to its modules.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_accessing_application_log"><a class="anchor" href="#_accessing_application_log"></a>Accessing Application Log</h2>
+<h2 id="_rcml_applications"><a class="anchor" href="#_rcml_applications"></a>RCML applications</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Go to <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</p>
-</li>
-<li>
-<p>Open the application you wish to enable logging for</p>
-</li>
-<li>
-<p>On the top of the application screen click on the <em>Settings</em> icon</p>
-</li>
-<li>
-<p>Select <em>Project Settings</em></p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/application-log-1.png" alt="Project Settings">
-</div>
+<div class="paragraph">
+<p>The following conventions are followed:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Enable Application Logging (you can also check RCML to see the RCML used)</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/application-log-2.png" alt="enable app logging">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Make a test call to your application</p>
+<p>Any SIP header starting with <strong>X-</strong> prefix is custom.</p>
 </li>
 <li>
-<p>After the test call click on the <em>Settings</em> button again and and open application <em>Log</em></p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/application-log-3.png" alt="enable application logging">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If your application is working properly you should see a screen similar to the one below.</p>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/application-log-4.png" alt="application log screen">
-</div>
-</div>
-</li>
-<li>
-<p>If you want to debug external service issues you can also enable external service logging :</p>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/application-log-5.png" alt="Enable External Service Logging">
-</div>
-</div>
+<p>HTTP parameters are created out of each custom SIP header by adding the <strong>SipHeader_</strong> prefix to its name.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Enabling Application log can help you easily find and troubleshoot issues related with your application while you are still developing it. If you want to clear the application log just click on the Reset button. Reload your application log screen each time you are testing your application in order to view new logs.</p>
+<p>Example mappings from SIP header names to HTTP parameter names:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">X-My-Header -&gt; SipHeader_X-My-Header</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Thus the SipHeader_X-My-Header will be available as typical GET or POST parameter in the RCML application.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_visual_designer_applications"><a class="anchor" href="#_visual_designer_applications"></a>Visual Designer applications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Visual Designer will take the previous convention one step further and create a Visual Designer variable out of the parameter. Thus, the mapping from a custom SIP header to an Visual Designer variable will be the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">X-My-Header -&gt; $core_x_my_header</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So, if <strong>X-My-Header</strong> SIP header arrives at <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>, Visual Designer will have a variable named <strong>$core_x_my_header</strong> available in its modules. Note the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All characters are converted to lower case. This happens because although SIP headers are  not case insesitive while Visual Designer variables are.</p>
+</li>
+<li>
+<p>All non alpha numeric characters i.e.<strong> [^A-Za-z0-9_]</strong>,  are converted to `_'  (underscore). That happens because Visual Designer has some additional restrictions for naming variables. Here is the regular expression that is used for invalid characters to underscore:</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
