@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Visual Designer Tutorial - Restcomm Docs"></title>
-    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/visual-designer/Tutorial.html">
+    <title data-custom-title="Visual Designer Quick Start Guide - Restcomm Docs"></title>
+    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rvd/RVD-Quick-Start-Guide.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1290,249 +1290,244 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="Tutorial.html">Visual Designer Tutorial</a></li>
+    <li class="crumb"><a href="RVD-Quick-Start-Guide.html">Visual Designer Quick Start Guide</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Visual Designer Tutorial</h1>
+  <h1>Visual Designer Quick Start Guide</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Welcome to Visual Designer tutorial.</p>
-</div>
-<div class="paragraph">
-<p>If you are using Visual Designer for first time, you may want to have a look
-at the <a href="RVD-Quick-Start-Guide.html" class="page">Quick Start Guide</a> to create an application and get familiar with the workflow.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-We&#8217;re reworking this section of the documentation. Stay tuned for new updates coming up soon. Thanks for your patience.
-</td>
-</tr>
-</table>
+<p>This guide will help you learn the basics of Visual Designer.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<h2 id="_the_em_greeting_em_voice_application"><a class="anchor" href="#_the_em_greeting_em_voice_application"></a>The <em>Greeting</em> Voice Application</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_create_the_application"><a class="anchor" href="#_create_the_application"></a>Create the Application</h3>
 <div class="paragraph">
-<p>Executing a Visual Designer application is like navigating the web page by page. Instead
- of viewing your pages in a web browser, you "listen" to them through your phone. Visual Designer
- builds the markup and <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> reads it to you. It all works in a request-response fashion. However, instead of html responses are made of RCML. The same applies for pure RCML applications
- but we won&#8217;t cover that in this guide.</p>
+<p>New applications are easily created from within the <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Console.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/vd-quickstart-0.png" alt="Create Application in Console">
+</div>
+</div>
+<div class="paragraph">
+<p>In order to create a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Application:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the <code>Add New App</code> button from the <code>Applications</code> Tab. This will start the application creation wizard.</p>
+</li>
+<li>
+<p>Choose <code>Create a Visual Designer Application</code> in the next view.</p>
+</li>
+<li>
+<p>In the Template Gallery pick the <code>Blank</code> template. That&#8217;s the most basic Visual Designer application.
+Template Gallery offers a range of options to kick start your application and can save you a great deal of time
+and effort. More templates are added on a continunous basis.</p>
+</li>
+<li>
+<p>Next, you need to name your application and choose a <em>type</em> for it. The <em>name</em> is not an
+identifier but more like a user friendly way to refer to your app. We&#8217;ll use <code>greeting-app</code> for the purpose of this example.</p>
+</li>
+<li>
+<p>The <em>type</em> determines whether this application will be used to handle incoming voice calls or SMS messages.
+Choose <code>voice</code>.</p>
+</li>
+<li>
+<p>When done, click <code>Create</code>. This will create your application and navigate you to the Application details page.</p>
+</li>
+<li>
+<p>Click <code>Design</code> to open the Visual Designer editor in a new tab.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/vd-quickstart-1.png" alt="wlparam:replace[textMode=&quot;sps&quot;">
+</div>
+</div>
+<div class="paragraph">
+<p>You&#8217;re almost there. Your application has been created and is ready to greet you with the default message when called.
+You do need a way to reach it though. To do that, you&#8217;ll have to attach it to a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Number and finally make a call to it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_attach_your_application_to_a_span_class_sps_text_non_sps_link_data_parm_text_application_name_data_default_text_infer_from_domain_restcomm_span_number"><a class="anchor" href="#_attach_your_application_to_a_span_class_sps_text_non_sps_link_data_parm_text_application_name_data_default_text_infer_from_domain_restcomm_span_number"></a>Attach your Application to a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> number</h3>
+<div class="paragraph">
+<p>You&#8217;ve just created a <em>voice</em> application. Such applications are executed when an incoming voice call is made to a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Number.
+We will register a SIP Number which is a number that can be called via a SIP or WebRTC Client</p>
+</div>
+<div class="paragraph">
+<p>In the <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Console, click on the <code>Numbers</code> Tab and follow the steps below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>At the top of the screen, provide a value for <code>SIP Address</code> and <code>Friendly Name</code> such as 5555 by example.
+Remember, what you define as SIP Address is the number you will call to test your application.
+Click <code>Register</code> to register this number and start the wizard for linking a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Number to your newly created application.
+The operation will fail if the number has already been registered.</p>
+</li>
+<li>
+<p>You should now see the number details form similar to the screenshot below. Your number is registered but does not point
+to your application yet.</p>
+</li>
+<li>
+<p>In the <code>Voice</code> section expand the dropdown with the list of applications. You should
+see an entry named <code>greeting-app</code>. Select it.</p>
+</li>
+<li>
+<p>Click <code>Save changes</code> at the bottom.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/vd-quickstart-2.png" alt="Bind greeting application to a phone number">
+</div>
+</div>
+<div class="paragraph">
+<p>Your number is now linked to the application.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_call_the_application"><a class="anchor" href="#_call_the_application"></a>Call the Application</h3>
+<div class="paragraph">
+<p>It&#8217;s now time to test the application. Voice applications are executed when an incoming voice call is made to the <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Number you just registered.
+We will use the WebRTC Demo client that is available in your <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> account for testing purposes.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start WebRTC Demo client. Please use the same password that you used to create your <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Account, unless you changed it in the <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Clients Tab</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/vd-quickstart-3.png" alt="WebRTCDemo">
+</div>
+</div>
+<div class="paragraph">
+<p>From WebRTC Demo client</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a new Contact named after the number you created. In our case this is 5555.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/vd-quickstart-4.png" alt="WebRTCDemo-add-contact">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Place your call and make sure your sound output device is active.
+image::vd-quickstart-5.png[Greeting app demo call]</p>
+</li>
+<li>
+<p>You should hear the greeting message of the <code>greeting-app</code> application.</p>
+</li>
+<li>
+<p>Keep the tab open for later use.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_modules"><a class="anchor" href="#_modules"></a>Modules</h2>
+<h2 id="_visual_designer_concepts"><a class="anchor" href="#_visual_designer_concepts"></a>Visual Designer Concepts</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This step-by-step concept is implemented using <em>modules</em>. They are linked together and executed one at a time, resulting
- in an actual application flow.</p>
+<p>Now that the base application has been created, linked to a <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Number and tested through the WebRTC Demo Client, you can go ahead and tweak your application with more useful and interesting features.  Let&#8217;s switch back to Visual Designer tab and introduce some basic concepts.</p>
+</div>
+<div class="sect2">
+<h3 id="_elements"><a class="anchor" href="#_elements"></a>Elements</h3>
+<div class="paragraph">
+<p>On the left, you will notice a list of buttons you can drag and drop into the modules to the right of this list. They are called <code>Elements</code>.
+Elements are the building blocks of each Visual Designer application.</p>
 </div>
 <div class="paragraph">
-<p>In the Visual Designer UI, modules appear as tabs under the horizontal menu. Default blank applications typicaly come with a single <em>Welcome</em> module already in place.</p>
-</div>
-<div class="paragraph">
-<p>Here is how four module tabs look like in Visual Designer.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="../_images/Tutorial_module_tabs.png" alt="Tutorial module tabs">
+<p>You will notice that your application already contains a <code>Say</code> element. It contains the greeting that
+you heard when calling the application. <code>Say</code> elements are able to convert written phrases to their
+audio representations. We call this Text-To-Speech (TTS).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_create_a_module"><a class="anchor" href="#_create_a_module"></a>Create a module</h3>
+<h3 id="_modules"><a class="anchor" href="#_modules"></a>Modules</h3>
 <div class="paragraph">
-<p>Υou can easily create modules by clicking on the '+' button in your menu. Each module has a <strong>label</strong> and a <strong>name</strong>.
-The label is editable and works as user-friendly title of the module. The name is an identifier used internally
-and cannot be changed. By default new modules will be labeled 'Untitled module'. You may edit the label by clicking
-on it and typing the desired value. Pick something short and descriptive with no fancy characters.
-If you&#8217;re curious to find out what the <em>name</em> is, hover your cursor over the label and wait a couple of seconds.
-The <em>name</em> will appear as a hint.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Go ahead, create a new module and label it 'sales'. Let&#8217;s see if we can implement a simple IVR. After doing it check its name. It should be <code>module1</code>. Drop a Say element inside of it and type "Welcome to sales" in it.
-</td>
-</tr>
-</table>
+<p><code>Elements</code> are grouped together in sequences called <code>modules</code>. The whole area next to the
+element toolbox is where modules appear. They are organized in a series of tabs and will accept
+elements when dragged and dropped over them. Modules are the main execution unit in a Visual Designer application.</p>
 </div>
 <div class="paragraph">
-<p>Your application should now look like this:</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="../_images/Tutorial_sales_module.png" alt="Tutorial sales module">
-</div>
+<p>By default new applications already contain a <em>Welcome</em> module with the <code>Say</code> element previously mentioned.
+Since this gets executed first, this is called the <code>Startup</code> module.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_remove_or_hide_a_module"><a class="anchor" href="#_remove_or_hide_a_module"></a>Remove or hide a module</h3>
+<h3 id="_making_changes"><a class="anchor" href="#_making_changes"></a>Making changes</h3>
 <div class="paragraph">
-<p>If you want to remove a module click the trashbin icon present on the tab. This will remove it altogether from the
-project. If your list of modules grows big and your screen gets crowded you may also <em>hide</em> it to get it out
-of your way. Click on the down arrow on the module tab, next to the trashbin to hide it. Don&#8217;t worry, you may still
-bring it back from the <em>Modules</em> dropdown in the horizontal menu.</p>
+<p>Let&#8217;s now change the greeting to something more interesting.</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Take some time to create/remove/hide modules to get the hang of it.
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit the default text in the <code>Say</code> element and use something more personalized like <em>'Hello Alice. I am glad to hear back from you.'</em>.</p>
+</li>
+<li>
+<p>Click the <code>Save</code> button.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>When you open an application all modules will be in hidden except of the starting one. You can make them visible by choosing them from the <em>Modules</em> dropdown.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_startup_module"><a class="anchor" href="#_startup_module"></a>Startup module</h3>
-<div class="paragraph">
-<p>One of the modules will be the entry point of your application. It will be executed first and will point to other modules. By
-default this is the <em>Welcome</em> module. You may change the startup module from the <em>Startup module</em> dropdown.</p>
-</div>
-<div class="imageblock thumb">
+<div class="imageblock">
 <div class="content">
-<img src="../_images/Tutorial_startup_module.png" alt="Tutorial startup module">
+<img src="../_images/vd-quickstart-6.png" alt="Greeting app announcement modified">
 </div>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Get back to the WebRTC Demo tab and call your application once again.</p>
+</li>
+<li>
+<p>You should hear the updated greeting.</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_standalone_modules"><a class="anchor" href="#_standalone_modules"></a>Standalone modules</h3>
-<div class="paragraph">
-<p>Creating a module won&#8217;t have any effect on your application unless you somehow incorporate it to your
-application flow. Typically this is done through a process called 'linking' which we will describe in a
-while. For now, your 'sales' module is not reachable. It&#8217;s like a web page to which no other pages link to.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_collecting_input"><a class="anchor" href="#_collecting_input"></a>Collecting input</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As with tranditional applications, voice applications have some sort of input and output. <code>Say</code> verbs are a way to
-express output that manifests as a text-to-speech message. On the other hand, the <strong>Collect</strong> element is used as an input gateway.
-You will find it in your toolbox on the left handside.</p>
-</div>
-<div class="paragraph">
-<p><em>Collect</em> element captures one or more keys pressed by the user on his mobile device
-and sends them to the application. This is known as DTMF capturing. Alternatively, speech recognition (ASR) can be used
-to convert spoken language to its written form. We will stick to DTMF
-for now and cover ASR in another documentation section.</p>
-</div>
-<div class="paragraph">
-<p>Each Collect element may have a <em>prompt</em>. This is a tightly coupled message that the user will hear
-when the <em>Collect</em> is executed or in case of validation errors. It&#8217;s a prompt for the user to do something.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-In your appication, switch to the <em>Welcome</em> module  and locate the <em>Collect</em> element in the toolbox. Then, drag it onto the module under the existing <em>Say</em>. Add another <em>Say</em> element but this time drop it inside the <em>Collect</em> under 'Prompt' section. Type 'Press 1 for sales' as text in the <em>Say</em> element.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The Collect element should now look like this:</p>
-</div>
-<div class="imageblock thumb">
+<div class="imageblock">
 <div class="content">
-<img src="../_images/Tutorial_collect_menu_prompt.png" alt="Tutorial collect menu prompt">
-</div>
-</div>
-<div class="sect2">
-<h3 id="_menus"><a class="anchor" href="#_menus"></a>Menus</h3>
-<div class="paragraph">
-<p>A <em>Collect</em> has two modes of operation. It will either work as a <em>menu</em> or as a <em>digit collector</em>. Menus are very popular in voice applications
- for letting users easily navigate hierarchical dialog structures. They map numeric values to different
- modules using <em>mappings</em>.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-In the newlly added <em>Collect</em> element click <em>Add mapping</em> to create a new mapping. In the <em>Digit</em> field type '1'. In the target field select the 'sales' module.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Mappings are straightforward. The application will try to match the user input to the
-values provided in the mapping&#8217;s <em>Digit</em> field. When a match is made the corresponding module will be executed.
-Otherwise, the validation message (if any) will be played and another round or 'collection' will start over i.e.
-the prompt will be re-played and new user input will be captured.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Type some validation text in the 'Say if invalid' field. E.g. 'You have entered a wrong input, please try again'.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The Collect element should now look like this:</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="../_images/Tutorial_collect_menu.png" alt="Tutorial collect menu">
+<img src="../_images/vd-quickstart-5.png" alt="Greeting app demo call">
 </div>
 </div>
 <div class="sect3">
-<h4 id="_no_input_at_all"><a class="anchor" href="#_no_input_at_all"></a>No input at all</h4>
+<h4 id="_validation_errors"><a class="anchor" href="#_validation_errors"></a>Validation errors</h4>
 <div class="paragraph">
-<p>Any input that is not matched against one of the mappings will be considered invalid. However, having no input
-at all is a different case. Instead of getting validated, the application will skip this <em>Collect</em> and proceed
-with the next element.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Now is time to call your application again and see how it behaves. Don&#8217;t forget to save it first.
-</td>
-</tr>
-</table>
+<p>You will need to <em>Save</em> your changes so that they are effective. In case you get a validation
+error, your changes won&#8217;t be applied to the actual running application. They will be persisted though so
+that you don&#8217;t loose your work.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_digit_collector"><a class="anchor" href="#_digit_collector"></a>Digit collector</h3>
+<h3 id="_workflow"><a class="anchor" href="#_workflow"></a>Workflow</h3>
 <div class="paragraph">
-<p>Comming soon.</p>
+<p>Once you&#8217;re done, it&#8217;s good practice to close the editor tab. Think of Visual Designer
+as an editor like the one you edit images in. You get a new window for each new image you edit
+and you&#8217;re allowed to switch between them. When done, you just close what you don&#8217;t need any more.
+This is not required but will result in a cleaner and faster workflow.</p>
 </div>
 </div>
 </div>

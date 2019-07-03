@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Restcomm Visual Designer - Restcomm Docs"></title>
-    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/visual-designer/index.html">
+    <title data-custom-title="Restcomm Visual Designer Application Log Overview - Restcomm Docs"></title>
+    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rvd/Application-log.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1290,48 +1290,92 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="index.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</a></li>
+    <li class="crumb"><a href="Application-log.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log Overview</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</h1>
+  <h1><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log Overview</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or
-no programming knowledge. You can find all you need to get started here.</p>
-</div>
-<div class="paragraph">
-<p>If you&#8217;re new to <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>, we recommend looking at the <a href="RVD-Quick-Start-Guide.html">Quick Start Guide</a>. For more in-depth
-overview, check out the <a href="Tutorial.html">Visual Designer Tutorial</a>. Below you will find a list with popular Visual Designer how-tos.</p>
+<p>Application Logging is designed to help users troubleshoot their applications.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_s"><a class="anchor" href="#_how_to_s"></a>How To&#8217;s</h2>
+<h2 id="_accessing_application_log"><a class="anchor" href="#_accessing_application_log"></a>Accessing Application Log</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Making-decisions-with-control-element.html">Making decisions with Control element</a></p>
+<p>Go to <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</p>
 </li>
 <li>
-<p><a href="Making-HTTP-requests-with-external-service-client.html">Making HTTP requests with the External Service client</a></p>
+<p>Open the application you wish to enable logging for</p>
 </li>
 <li>
-<p><a href="Using-web-trigger.html">Using Web Trigger</a></p>
+<p>On the top of the application screen click on the <em>Settings</em> icon</p>
 </li>
 <li>
-<p><a href="Diagrams.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Diagrams</a></p>
-</li>
-<li>
-<p><a href="Application-log.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log</a></p>
-</li>
-<li>
-<p><a href="Accessing-custom-SIP-headers.html">Accessing custom SIP headers from an RCML or Visual Designer application</a></p>
+<p>Select <em>Project Settings</em></p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-1.png" alt="Project Settings">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Application Logging (you can also check RCML to see the RCML used)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-2.png" alt="enable app logging">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make a test call to your application</p>
+</li>
+<li>
+<p>After the test call click on the <em>Settings</em> button again and and open application <em>Log</em></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-3.png" alt="enable application logging">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If your application is working properly you should see a screen similar to the one below.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-4.png" alt="application log screen">
+</div>
+</div>
+</li>
+<li>
+<p>If you want to debug external service issues you can also enable external service logging :</p>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-5.png" alt="Enable External Service Logging">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enabling Application log can help you easily find and troubleshoot issues related with your application while you are still developing it. If you want to clear the application log just click on the Reset button. Reload your application log screen each time you are testing your application in order to view new logs.</p>
 </div>
 </div>
 </div>
