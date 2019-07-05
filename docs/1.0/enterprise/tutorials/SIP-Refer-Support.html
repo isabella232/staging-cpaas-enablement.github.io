@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Restcomm Visual Designer - Restcomm Docs"></title>
-    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/visual-designer/index.html">
+    <title data-custom-title="Restcomm SIP Refer support - Restcomm Docs"></title>
+    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/tutorials/SIP-Refer-Support.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1290,48 +1290,92 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="index.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</a></li>
+    <li class="crumb"><a href="SIP-Refer-Support.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> SIP Refer support</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</h1>
+  <h1><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> SIP Refer support</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or
-no programming knowledge. You can find all you need to get started here.</p>
+<p><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> true now supports RFC5589 flow 6.1 SIP Refer that allows clients to transfer calls.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;re new to <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>, we recommend looking at the <a href="RVD-Quick-Start-Guide.html">Quick Start Guide</a>. For more in-depth
-overview, check out the <a href="Tutorial.html">Visual Designer Tutorial</a>. Below you will find a list with popular Visual Designer how-tos.</p>
+<p>This new feature enables usage of blind transfer capabilities in desk phones and other SIP clients such as Linphone.</p>
+</div>
+<div class="paragraph">
+<p>The feature is supported for calls that were created using the Dial verb and was tested with Yealink SIP-T21P E2, Cisco SPA525G and Polycom SoundPoint IP 335 deskphones.</p>
+</div>
+<div class="paragraph">
+<p>Currently call transfer is not supported on peer to peer calls.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_s"><a class="anchor" href="#_how_to_s"></a>How To&#8217;s</h2>
+<h2 id="_example"><a class="anchor" href="#_example"></a>Example</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Let’s start with the simple scenario involving three parties: Alice, Bob and Carol. Alice calls Bob and Bob wants to connect Alice to Carol. Bob presses the Blind Transfer button on his desk phone and types Carol’s number. His phone hungs up and Alice should be connected to Carol. There is also a possibility that Carol will not answer timely or will be busy talking with somebody else. In that case, it’s needed to connect Alice to Bob again, and this is easy to implement with existing <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> features as we’ll see later.</p>
+</div>
+<div class="paragraph">
+<p>For the described scenario, we will need two incoming phone numbers:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Making-decisions-with-control-element.html">Making decisions with Control element</a></p>
+<p>Number A which is the number that Alice will call to connect to Bob. This number points to Visual Designer application that dials Bob. For this Number we need to set the refer url application</p>
 </li>
 <li>
-<p><a href="Making-HTTP-requests-with-external-service-client.html">Making HTTP requests with the External Service client</a></p>
-</li>
-<li>
-<p><a href="Using-web-trigger.html">Using Web Trigger</a></p>
-</li>
-<li>
-<p><a href="Diagrams.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Diagrams</a></p>
-</li>
-<li>
-<p><a href="Application-log.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log</a></p>
-</li>
-<li>
-<p><a href="Accessing-custom-SIP-headers.html">Accessing custom SIP headers from an RCML or Visual Designer application</a></p>
+<p>Number B will be used by Bob as a transfer target during the call transfer. This Number points to an Visual Designer application that dials Carol.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The number A has additional property called Refer URL which could be either Visual Designer application name or any other URL and is used to point to the refer application that will be executed during the call transfer. So configuration for number A should look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Restcomm_SIP_Refer.png" alt="Incoming Phone Number SIP Refer URL">
+</div>
+</div>
+<div class="paragraph">
+<p>During call transfer, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will check the SIP Refer request in order to extract the call transfer details and will create the following new parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Transferor. Transferor is the one that initates the transfer</p>
+</li>
+<li>
+<p>Transferee. Transferee is the one that gets transfered</p>
+</li>
+<li>
+<p>ReferTarget. Is the transfer target</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The above new parameters will be part of the HTTP request that <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will do download the RCML and so at Visual Designer you can use the following new core variables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>$core_Transferor</p>
+</li>
+<li>
+<p>$core_Transferee</p>
+</li>
+<li>
+<p>$core_ReferTarget</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, the Visual Designer application for number B that will be executed after call transfer can use <code>&lt;Dial&gt;&lt;Number&gt;$core_ReferTarget&lt;/Number&gt;&lt;/Dial&gt;</code> so what ever Bob dialed during the call transfered it will be in the Dial verb of the Refer application.</p>
+</div>
+<div class="paragraph">
+<p>Call flow exceptions such as no answer, failed etc, should be handled the usual way, by using Dial Action or verbs after Dial.</p>
 </div>
 </div>
 </div>
