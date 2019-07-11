@@ -1,7 +1,4 @@
 User-agent: *
-
-Noindex: /*docs
-
-Disallow: /*docs
+Disallow:
 Disallow: /cgi-bin/
 Sitemap: https://staging-cpaas-enablement-docs.restcomm.com/sitemap.xml
