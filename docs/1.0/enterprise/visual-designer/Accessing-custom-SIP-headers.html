@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Accessing HTTP resources with External Service element - Restcomm Docs"></title>
-    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rvd/Making-HTTP-requests-with-external-service-client.html">
+    <title data-custom-title="Accessing custom SIP headers from an RCML or Visual Designer application - Restcomm Docs"></title>
+    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/visual-designer/Accessing-custom-SIP-headers.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1290,217 +1290,71 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="Making-HTTP-requests-with-external-service-client.html">Accessing HTTP resources with External Service element</a></li>
+    <li class="crumb"><a href="Accessing-custom-SIP-headers.html">Accessing custom SIP headers from an RCML or Visual Designer application</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Accessing HTTP resources with External Service element</h1>
+  <h1>Accessing custom SIP headers from an RCML or Visual Designer application</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer’s External Service element is a tool for making HTTP requests to external services and processessing their responses. This document focuses on the former. It explains its capabilities and describes how it can be used from Visual Designer’s UI. Currently ES client supports:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>GET or POST request methods</p>
-</li>
-<li>
-<p>JSON or web form content types</p>
-</li>
-<li>
-<p>HTTP or HTTPS schemes</p>
-</li>
-<li>
-<p>basic HTTP authentication</p>
-</li>
-</ul>
+<p><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> provides an additional interface to communicate with an RCML/Visual Designer application by means of custom SIP headers. The idea is that all custom SIP headers in a SIP message are detected and converted to HTTP parameters in the request to the RCML application using a convention. The RCML application can consume this parameters. Furthermore, Visual Designer converts these parameters to RVD variables and makes them available to its modules.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_a_simple_get_request"><a class="anchor" href="#_a_simple_get_request"></a>A Simple GET request</h2>
+<h2 id="_rcml_applications"><a class="anchor" href="#_rcml_applications"></a>RCML applications</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Here is a simple GET request with parameters:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/Selection_069.png" alt="Selection_069">
-</div>
-</div>
-<div class="paragraph">
-<p>By default, all requests use GET method. Note that name-value parameter is user defined. Such parameters are appended in the query when the request is made. It’s a good practice to keep parameters in their own fields and avoid putting them directly in the Service Url field. Here is what the actual data on the wire:</p>
-</div>
-<div class="paragraph">
-<p><strong>Request</strong></p>
-</div>
-<div class="paragraph">
-<p>GET /services/simpleGetRequest.php?name=foo HTTP/1.1</p>
-</div>
-<div class="paragraph">
-<p>Host: localhost</p>
-</div>
-<div class="paragraph">
-<p><strong>Response</strong></p>
-</div>
-<div class="paragraph">
-<p>HTTP/1.1 200 OK</p>
-</div>
-<div class="sect2">
-<h3 id="_a_note_on_em_variable_expansion_em"><a class="anchor" href="#_a_note_on_em_variable_expansion_em"></a>A note on <em>Variable expansion</em></h3>
-<div class="paragraph">
-<p>Both Service Url and Value fields support <em>variable expansion</em>. That means that all $variables and references in them will be replaced by their actual value before the request is being made.</p>
-</div>
-<div class="paragraph">
-<p><strong>For example:</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/Selection_071.png" alt="Selection_071">
-</div>
-</div>
-<div class="paragraph">
-<p>Here $firstname variable will be expanded to its actual content.</p>
-</div>
-<div class="paragraph">
-<p>$firstname → name</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_posting_web_forms"><a class="anchor" href="#_posting_web_forms"></a>POSTing web forms</h3>
-<div class="paragraph">
-<p>Here is a simple POST request:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/Selection_073.png" alt="post request">
-</div>
-</div>
-<div class="paragraph">
-<p>In order to access the advances features of the ES client you will need to click on the <em>gear</em> icon. Also notice the following:</p>
+<p>The following conventions are followed:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>You can switch the HTTP method used by using the Method drop down menu. Default is GET.</p>
+<p>Any SIP header starting with <strong>X-</strong> prefix is custom.</p>
 </li>
 <li>
-<p>Either www form or json content types are supported. For common url-encoded request use www form.</p>
-</li>
-<li>
-<p>Manually building the body of the request with ‘&amp;’ and ‘=’ can often be a daunting and error-prone task. Check Automatically populate from service parameters to let Visual Designer build the request body from the Name/Value pairs you have defined.</p>
+<p>HTTP parameters are created out of each custom SIP header by adding the <strong>SipHeader_</strong> prefix to its name.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Let’s see it in action:</p>
+<p>Example mappings from SIP header names to HTTP parameter names:</p>
 </div>
-<div class="paragraph">
-<p><strong>Request</strong></p>
-</div>
-<div class="paragraph">
-<p>POST /services/simplePostRequest.php HTTP/1.1</p>
-</div>
-<div class="paragraph">
-<p>Content-Length: 21</p>
-</div>
-<div class="paragraph">
-<p>Content-Type: application/x-www-form-urlencoded</p>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>name=foo&amp;lastname=bar</p>
-</div>
-<div class="paragraph">
-<p><strong>Response</strong></p>
-</div>
-<div class="paragraph">
-<p>HTTP/1.1 200 OK</p>
-</div>
-<div class="sect3">
-<h4 id="_provide_post_body_manually"><a class="anchor" href="#_provide_post_body_manually"></a>Provide POST body manually</h4>
-<div class="paragraph">
-<p>You can also provide the POST body manually if you want. For example:</p>
-</div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="../_images/Selection_074.png" alt="provide POST body manually">
+<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">X-My-Header -&gt; SipHeader_X-My-Header</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Notice how we have removed the service parameters and provided the url-encoded body instead. In case the service parameters were still there, they would be ignored.</p>
+<p>Thus the SipHeader_X-My-Header will be available as typical GET or POST parameter in the RCML application.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_posting_json"><a class="anchor" href="#_posting_json"></a>POSTing json</h4>
+</div>
+<div class="sect1">
+<h2 id="_visual_designer_applications"><a class="anchor" href="#_visual_designer_applications"></a>Visual Designer applications</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Using a JSON request body is not much different:</p>
+<p>Visual Designer will take the previous convention one step further and create a Visual Designer variable out of the parameter. Thus, the mapping from a custom SIP header to an Visual Designer variable will be the following:</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="../_images/Selection_075.png" alt="Selection_075">
+<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">X-My-Header -&gt; $core_x_my_header</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>POSTing JSON can only be done by manually providing the JSON expression. You will just need to set the <em>Content type</em> to json and type the JSON expression.</p>
+<p>So, if <strong>X-My-Header</strong> SIP header arrives at <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>, Visual Designer will have a variable named <strong>$core_x_my_header</strong> available in its modules. Note the following:</p>
 </div>
-<div class="paragraph">
-<p>Here is an example of JSON expression:</p>
-</div>
-<div class="paragraph">
-<p>{"name":<strong>"$firstname"</strong>,"lastname":"bar"}</p>
-</div>
-<div class="paragraph">
-<p>Note that double quotes are being used in the JSON expression. Visual Designer does not know about the json syntax and its types. It will just go for a search‘n’replace. You will need to make sure that a valid json expression will result at the end.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_using_basic_http_authentication"><a class="anchor" href="#_using_basic_http_authentication"></a>Using basic HTTP authentication</h4>
-<div class="paragraph">
-<p>For services that are protected with basic http authentication the user credentials need also to be provided:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/Selection_076.png" alt="Selection_076">
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_handling_service_http_errors"><a class="anchor" href="#_handling_service_http_errors"></a>Handling service HTTP errors</h4>
-<div class="paragraph">
-<p>In case the external service fails with an HTTP error code a handler can be used. In order to set up the handler you will need to:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>create a handler Visual Designer module</p>
+<p>All characters are converted to lower case. This happens because although SIP headers are  not case insesitive while Visual Designer variables are.</p>
 </li>
 <li>
-<p>bind the ES component to this handler using ‘On Remote Error’ drop down menu</p>
+<p>All non alpha numeric characters i.e.<strong> [^A-Za-z0-9_]</strong>,  are converted to `_'  (underscore). That happens because Visual Designer has some additional restrictions for naming variables. Here is the regular expression that is used for invalid characters to underscore:</p>
 </li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Here is a sample handler module labeled ‘Error announcement’:</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/Selection_077.png" alt="Selection_077">
-</div>
-</div>
-<div class="paragraph">
-<p>You can find the ‘On Remote Error’ drop down menu at the bottom of the ES component. Here is how it should look like after binding it to the handler module:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/Selection_078.png" alt="Selection_078">
-</div>
-</div>
-</div>
+</ul>
 </div>
 </div>
 </div>

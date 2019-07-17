@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Restcomm Visual Designer Diagrams - Restcomm Docs"></title>
-    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/rvd/Diagrams.html">
+    <title data-custom-title="Restcomm Visual Designer Application Log Overview - Restcomm Docs"></title>
+    <link rel="canonical" href="https://dev.restcomm.com/docs/1.0/enterprise/visual-designer/Application-log.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1290,72 +1290,92 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="Diagrams.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Diagrams</a></li>
+    <li class="crumb"><a href="Application-log.html"><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log Overview</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Diagrams</h1>
+  <h1><span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log Overview</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>Diagram</em> is a feature of Visual Designer introduced in <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> release version 7.5.0. It&#8217;s a graphical tree-like view of a project&#8217;s call flow where modules are depicted as tree nodes and connections between modules are drawn as arrows. With a single look one can get a pretty good idea of what an application does.</p>
+<p>Application Logging is designed to help users troubleshoot their applications.</p>
 </div>
-<div class="paragraph">
-<p>To enable the diagram view, just hit the <em>Diagram</em> button at the project menu bar:</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_accessing_application_log"><a class="anchor" href="#_accessing_application_log"></a>Accessing Application Log</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Go to <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</p>
+</li>
+<li>
+<p>Open the application you wish to enable logging for</p>
+</li>
+<li>
+<p>On the top of the application screen click on the <em>Settings</em> icon</p>
+</li>
+<li>
+<p>Select <em>Project Settings</em></p>
+</li>
+</ul>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/diagram_menu.png" alt="diagram_menu">
+<img src="../_images/application-log-1.png" alt="Project Settings">
 </div>
-</div>
-<div class="paragraph">
-<p>A new section will appear under the menu, showing the diagram.</p>
-</div>
-<div class="paragraph">
-<p>Points worth mentioning:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Nodes are displayed by their labels.</p>
-</li>
-<li>
-<p>Links between modules are displayed using arrows. Typical Visual Designer elements that produce links are <em>Collect</em>, and <em>External Service</em></p>
+<p>Enable Application Logging (you can also check RCML to see the RCML used)</p>
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-2.png" alt="enable app logging">
 </div>
-</div>
-<div class="sect1">
-<h2 id="_arrows_continue_to"><a class="anchor" href="#_arrows_continue_to"></a>Arrows - Continue To</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In general, wherever Visual Designer contains a <em>ContinueTo</em> field that links to another module an arrow is displayed. Depending on the type of the element, a different piece of information is displayed on the arrow.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>For <em>Collect</em> menu elements descriptions like <strong>"Press 1", "Press 2"</strong> etc. are displayed.</p>
+<p>Make a test call to your application</p>
 </li>
 <li>
-<p>For <em>Collect</em> elements that capture digits in variables the name of the variable is displayed. For example: <strong>'app_phone' = &lt;collect&gt;</strong>. <em>app_phone</em> is the name of the variable.</p>
+<p>After the test call click on the <em>Settings</em> button again and and open application <em>Log</em></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-3.png" alt="enable application logging">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If your application is working properly you should see a screen similar to the one below.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-4.png" alt="application log screen">
+</div>
+</div>
 </li>
 <li>
-<p>For <em>External Service</em> elements with <em>mapped routing</em> enabled the service response value that leads to a destination module is displayed. For example, for a service returning values <em>ok</em>|<em>error</em> to indicate success or failure, typical arrow descriptions would be <strong>"ES Result = ok"</strong> or <strong>"ES Result = error"</strong>.</p>
+<p>If you want to debug external service issues you can also enable external service logging :</p>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/application-log-5.png" alt="Enable External Service Logging">
+</div>
+</div>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Diagrams are not updated for any single operation a user makes. Instead a per-save update policy is followed requiring a user to <em>Save</em> in order to see the updated graphical representation of a project.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_future_plans"><a class="anchor" href="#_future_plans"></a>Future plans</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Future plans on tightening the integration between the new graphical and the old view of a project are already under way. Stay tuned!</p>
+<p>Enabling Application log can help you easily find and troubleshoot issues related with your application while you are still developing it. If you want to clear the application log just click on the Reset button. Reload your application log screen each time you are testing your application in order to view new logs.</p>
 </div>
 </div>
 </div>
