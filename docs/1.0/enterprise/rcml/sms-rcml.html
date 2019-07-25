@@ -8,8 +8,6 @@
     <link rel="canonical" href="
       https://cloud.restcomm.com/docs/rcml/sms-rcml.html
     ">
-    <meta name="description" content="The &amp;lt;Sms&amp;gt; verb sends an SMS message to a phone number during a phone call.">
-    <meta name="keywords" content="sms verb, sms rcml, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} sms, send an sms, send a message to phone number, send a message">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1377,7 +1375,7 @@
 <h2 id="_to"><a class="anchor" href="#_to"></a>to</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The 'to' attribute takes a valid E.164 phone number as a value. <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will send an SMS message to this number. When sending an SMS during an incoming call, 'to' defaults to the caller. When sending an SMS during an outgoing call, 'to' defaults to the called party. The value of 'to' must be a valid phone number.</p>
+<p>The 'to' attribute takes a valid E.164 phone number as a value. <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will send an SMS message to this number. When sending an SMS during an incoming call, 'to' defaults to the caller. When sending an SMS during an outgoing call, 'to' defaults to the called party. The value of 'to' must be a valid phone number.</p>
 </div>
 </div>
 </div>
@@ -1393,10 +1391,10 @@
 <h2 id="_action"><a class="anchor" href="#_action"></a>action</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The 'action' attribute takes a URL address as an argument. After processing the &lt;Sms&gt; verb, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will make a GET or POST request to this URL with the form parameters 'SmsStatus' and 'SmsSid'. Using an 'action' URL, your application can receive synchronous notification that the message was successfully enqueued or not.</p>
+<p>The 'action' attribute takes a URL address as an argument. After processing the &lt;Sms&gt; verb, <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will make a GET or POST request to this URL with the form parameters 'SmsStatus' and 'SmsSid'. Using an 'action' URL, your application can receive synchronous notification that the message was successfully enqueued or not.</p>
 </div>
 <div class="paragraph">
-<p>If you provide an 'action' URL, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will use the RCML received in your response to the 'action' URL request to continue the current call. Any RCML verbs occuring after an &lt;Sms&gt; which specifies an 'action' attribute are unreachable. If no 'action' is provided, &lt;Sms&gt; will finish and <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will move on to the next RCML verb in the document. If there is no next verb, <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will end the phone call.</p>
+<p>If you provide an 'action' URL, <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will use the RCML received in your response to the 'action' URL request to continue the current call. Any RCML verbs occuring after an &lt;Sms&gt; which specifies an 'action' attribute are unreachable. If no 'action' is provided, &lt;Sms&gt; will finish and <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will move on to the next RCML verb in the document. If there is no next verb, <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will end the phone call.</p>
 </div>
 </div>
 </div>
@@ -1404,7 +1402,7 @@
 <h2 id="_method"><a class="anchor" href="#_method"></a>method</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The 'method' attribute takes the value 'GET' or 'POST'. This tells <span class="sps-text non-sps-link" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute.</p>
+<p>The 'method' attribute takes the value 'GET' or 'POST'. This tells <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute.</p>
 </div>
 <div class="sect2">
 <h3 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h3>
