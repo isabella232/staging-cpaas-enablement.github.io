@@ -2006,7 +2006,11 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include OTP list that is initiated by this accountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include OTP list that is initiated by this specific accountSid. The accountSid should be of one of the sub account&#8217;s of this account.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subAccounts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If set to true, include OTP list that is initiated by all the sub accounts within this account. By default false.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">service</p></td>
@@ -2471,7 +2475,11 @@ If there are multiple checks with invalid and finally valid, this records are co
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage record that is initiated by this accountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage record that is initiated by this specific accountSid. The accountSid should be of one of the sub account&#8217;s of this account.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subAccounts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If set to true, include Usage records that is initiated by all the sub accounts within this account. By default false.</p></td>
 </tr>
 </tbody>
 </table>
