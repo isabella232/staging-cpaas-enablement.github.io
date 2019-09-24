@@ -1532,7 +1532,7 @@
       </div>
       <div id="Curl-69" class="sample-language-69">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST <a href="https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send" class="bare">https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send</a> \
-   -d 'service=wlparam:replace[textMode=' \
+   -d 'service=' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
@@ -1548,7 +1548,7 @@ request.({
       url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send',
       auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       form: {
-         'service': 'wlparam:replace[textMode'
+         'service': ''
       }
    },
    function (error, response, body) {
@@ -1573,7 +1573,7 @@ headers = { 'Authorization' : 'Basic %s' %  userAndPass,
 
 # Update POST parameters accordingly
 params = urlencode({
-   'service': 'wlparam:replace[textMode'
+   'service': ''
 })
 
 conn = HTTPSConnection('mycompany.restcomm.com')
@@ -1604,7 +1604,7 @@ public class JavaSampleClass {
       URL url = new URL"https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send");       HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();       conn.setRequestProperty("Authorization", "Basic " + encoded);       conn.setRequestMethod("POST");       conn.setDoOutput(true);       DataOutputStream os = new DataOutputStream(conn.getOutputStream(;
 
       // Update POST parameters accordingly
-      os.writeBytes("service=wlparam:replace[textMode=");
+      os.writeBytes("service=");
       os.close();
 
       // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
@@ -1625,7 +1625,7 @@ public class JavaSampleClass {
     "from" : "+13216549878",
     "to" : "+13216549879",
     "body": "Your verification code is: \{code}"
-}'</pre>
+}</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1818,7 +1818,7 @@ public class JavaSampleClass {
     "service" : "<span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
     "number" : "+13216549879",
     "code": "294228"
-}'</pre>
+}</pre>
 </div>
 </div>
 </div>
@@ -1847,7 +1847,7 @@ public class JavaSampleClass {
     "service" : "<span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",
     "requestId" : "OTPb6eb071d21124dbab20b095c25f1274f",
     "code": "294228"
-}'</pre>
+}</pre>
 </div>
 </div>
 </div>
@@ -2020,7 +2020,7 @@ public class JavaSampleClass {
   -d '{
     "requestId" : "OTPabc2128918293123413216549879",
     "accountSid": "AC123461724187287abcbas791282cf"
-}'</pre>
+}</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2288,10 +2288,87 @@ For SMS, possible value can be <span class="non-sps-text non-sps-link" data-orig
 <div class="paragraph">
 <p>From the bash terminal you can run the command below:</p>
 </div>
+      <div class="sample-code-bar">
+        <button class="sample-code-button scsIndex-70 is-active" onclick="openLanguage('Curl', 70)">Curl</button>
+        <button class="sample-code-button scsIndex-70" onclick="openLanguage('Nodejs', 70)">Nodejs</button>
+        <button class="sample-code-button scsIndex-70" onclick="openLanguage('Python', 70)">Python</button>
+        <button class="sample-code-button scsIndex-70" onclick="openLanguage('Java', 70)">Java</button>
+      </div>
+      <div id="Curl-70" class="sample-language-70">
+        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET <a href="https://mycompany.restcomm.com/restcomm/2012-04-24//2fa/search.json?pageSize=2&page=0&status&success&sortBy&DateCreated:asc" class="bare">https://mycompany.restcomm.com/restcomm/2012-04-24//2fa/search.json?pageSize=2&page=0&status&success&sortBy&DateCreated:asc</a> \
+   -u "YourAccountSid:YourAuthToken"
+</code></pre>
+      </div>
+      <div id="Nodejs-70" class="sample-language-70" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
+
+// Provide your Account Sid and Auth Token from your Console Account page
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
+
+request({
+      method: 'GET',
+      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24//2fa/search.json?pageSize=2&page=0&status&success&sortBy&DateCreated:asc',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
+   },
+   function (error, response, body) {
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
+   }
+);
+</code></pre>
+      </div>
+      <div id="Python-70" class="sample-language-70" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+
+# Provide your Account Sid and Auth Token from your Console Account page
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
+
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+conn = HTTPSConnection('mycompany.restcomm.com')
+conn.request("GET", '/restcomm/2012-04-24//2fa/search.json?pageSize=2&page=0&status&success&sortBy&DateCreated:asc',
+      headers=headers)
+res = conn.getresponse()
+
+// Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
+</code></pre>
+      </div>
+      <div id="Java-70" class="sample-language-70" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL("https://mycompany.restcomm.com/restcomm/2012-04-24//2fa/search.json?pageSize=2&page=0&status&success&sortBy&DateCreated:asc");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestMethod("GET");
+
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
+  }
+}
+</code></pre>
+      </div>
 <div class="listingblock">
 <div class="content">
 <pre>curl -X GET \
-  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/search">https://$DOMAIN/2fa/search</span> \
+  wlparam:replace[text="https://$DOMAIN/2fa/search"] \
   --user  ' {your_account_SID}:{your_account_token}' \
   -d '{  "pageSize": "2", "page":"0", "status":"success", "sortBy":"DateCreated:asc"}'</pre>
 </div>
