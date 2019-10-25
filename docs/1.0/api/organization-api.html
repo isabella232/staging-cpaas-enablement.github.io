@@ -1757,7 +1757,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange/create-operation.html">Message Exchange API</a>
+              <a class="nav-link nav-flex-item-text" href="message-exchange/create-operation.html">Create Operation</a>
 
             </span>
               </div>
@@ -1774,7 +1774,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange/read-operation.html">Message Exchange API</a>
+              <a class="nav-link nav-flex-item-text" href="message-exchange/read-operation.html">Read Operation</a>
 
             </span>
               </div>
@@ -1858,18 +1858,21 @@
 <article class="doc fix-anchor-links-position">
   <h1>Organizations</h1>
 <div class="sect1">
-<h2 id="_organizations"><a class="anchor" href="#_organizations"></a>Organizations</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Organization are useful for segmenting accounts and providing restcomm functionalities on custom domain name.</p>
+<p>Organization are useful for segmenting accounts and providing Restcomm functionalities on a custom domain name.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_organization_api"><a class="anchor" href="#_organization_api"></a>Organization API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Organization API will provide functionality to perform CRUD (create, read, update and delete) operations for organizations. The API is mainly responsible for communicating with configureable DNS hosting service provider (for example Route-53 or others) for making changes in record sets.</p>
 </div>
 <div class="sect2">
-<h3 id="_organization_api"><a class="anchor" href="#_organization_api"></a>Organization Api</h3>
-<div class="paragraph">
-<p>Organization api will provide functionality to perform CRUD (create, read, update and delete) operations for organizations. Api is mainly responsible for communicating with configureable DNS hosting service provider (for example Route-53 or others) for making changes in record sets.</p>
-</div>
-<div class="sect3">
-<h4 id="_organization_entity"><a class="anchor" href="#_organization_entity"></a>Organization Entity</h4>
+<h3 id="_organization_entity"><a class="anchor" href="#_organization_entity"></a>Organization Entity</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1904,10 +1907,10 @@
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="_create_new_organization"><a class="anchor" href="#_create_new_organization"></a>Create New Organization</h3>
 <div class="sect3">
-<h4 id="_create_new_organization"><a class="anchor" href="#_create_new_organization"></a>Create new organization</h4>
-<div class="sect4">
-<h5 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h5>
+<h4 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h4>
 <div class="paragraph">
 <p>Rational to create a new organization pretty simple and described already, we want to onboard a new customer and provide them with their own domain and account on the platform.</p>
 </div>
@@ -1920,8 +1923,8 @@
 <p>HTTP PUT to above Uri will create a new organization and returns the representation of the organization resource, including the properties above.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_uri_parameters"><a class="anchor" href="#_uri_parameters"></a>Uri Parameters</h5>
+<div class="sect3">
+<h4 id="_uri_parameters"><a class="anchor" href="#_uri_parameters"></a>Uri Parameters</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1961,8 +1964,8 @@
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_optional_request_parameters"><a class="anchor" href="#_optional_request_parameters"></a>Optional Request Parameters</h5>
+<div class="sect3">
+<h4 id="_optional_request_parameters"><a class="anchor" href="#_optional_request_parameters"></a>Optional Request Parameters</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -2002,26 +2005,26 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_read_organization"><a class="anchor" href="#_read_organization"></a>Read organization</h4>
+<div class="sect2">
+<h3 id="_read_organization"><a class="anchor" href="#_read_organization"></a>Read Organization</h3>
 <div class="paragraph">
 <p>An account can read organization details if it belongs to that particular organization. Super admins can read all organizations.</p>
 </div>
 <div class="paragraph">
 <p>Read organization resource will return organization entity provided above.</p>
 </div>
-<div class="sect4">
-<h5 id="_single_resource_uri"><a class="anchor" href="#_single_resource_uri"></a>Single Resource URI</h5>
+<div class="sect3">
+<h4 id="_single_resource_uri"><a class="anchor" href="#_single_resource_uri"></a>Single Resource URI</h4>
 <div class="paragraph">
 <p>Will return single organization resource</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>/{Version}/Organizations(.json)/\{OrganizationSid}</code></pre>
+<pre class="highlightjs highlight"><code>/{Version}/Organizations(.json)/{OrganizationSid}</code></pre>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_response_headers"><a class="anchor" href="#_response_headers"></a>Response Headers</h6>
+<div class="sect4">
+<h5 id="_response_headers"><a class="anchor" href="#_response_headers"></a>Response Headers</h5>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -2062,15 +2065,15 @@
 </div>
 </div>
 <div class="literalblock">
-<div class="title">Read Organization Json Example</div>
+<div class="title">Read Organization JSON Example</div>
 <div class="content">
 <pre>curl -X GET "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations.json/{OrganizationSid}"</pre>
 </div>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_list_resource_uri"><a class="anchor" href="#_list_resource_uri"></a>List Resource URI</h5>
+<div class="sect3">
+<h4 id="_list_resource_uri"><a class="anchor" href="#_list_resource_uri"></a>List Resource URI</h4>
 <div class="paragraph">
 <p>Will return list of organizations</p>
 </div>
@@ -2080,14 +2083,14 @@
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_list_filter"><a class="anchor" href="#_list_filter"></a>List Filter</h5>
+<div class="sect3">
+<h4 id="_list_filter"><a class="anchor" href="#_list_filter"></a>List Filter</h4>
 <div class="paragraph">
 <p>You can filter an organization list resource by providing following parameters.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h5>
+<div class="sect3">
+<h4 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -2112,8 +2115,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_delete_organization"><a class="anchor" href="#_delete_organization"></a>Delete Organization</h4>
+<div class="sect2">
+<h3 id="_delete_organization"><a class="anchor" href="#_delete_organization"></a>Delete Organization</h3>
 <div class="paragraph">
 <p>An existing Organization can be deleted using the REST API.
 Actually the Delete request will set the Organization to state <code>Closed</code></p>
@@ -2126,8 +2129,8 @@ Actually the Delete request will set the Organization to state <code>Closed</cod
 <div class="paragraph">
 <p>HTTP DELETE to above Uri will delete an existing organization and will return the representation of the organization resource.</p>
 </div>
-<div class="sect4">
-<h5 id="_uri_parameters_2"><a class="anchor" href="#_uri_parameters_2"></a>Uri Parameters</h5>
+<div class="sect3">
+<h4 id="_uri_parameters_2"><a class="anchor" href="#_uri_parameters_2"></a>Uri Parameters</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -2146,10 +2149,10 @@ Actually the Delete request will set the Organization to state <code>Closed</cod
 </table>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_migrate_client_passwords"><a class="anchor" href="#_migrate_client_passwords"></a>Migrate Client Passwords</h3>
 <div class="sect3">
-<h4 id="_migrate_client_passwords"><a class="anchor" href="#_migrate_client_passwords"></a>Migrate Client Passwords</h4>
-<div class="sect4">
-<h5 id="_rationale_2"><a class="anchor" href="#_rationale_2"></a>Rationale</h5>
+<h4 id="_rationale_2"><a class="anchor" href="#_rationale_2"></a>Rationale</h4>
 <div class="paragraph">
 <p>This will encrypt all associated Clients passwords to a given encryption algorithm.
 At this moment, the target algorithm is hardcoded to MD5.</p>
@@ -2166,7 +2169,6 @@ At this moment, the target algorithm is hardcoded to MD5.</p>
 <div class="title">Migrate Organization Example</div>
 <div class="content">
 <pre>curl -X PUT "https://{accountSid}:{authToken}@cloud.restcomm.com/restcomm/2012-04-24/Organizations/{OrganizationSid}.json/Migrate"</pre>
-</div>
 </div>
 </div>
 </div>

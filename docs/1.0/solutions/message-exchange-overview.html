@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="csp-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
     <title data-custom-title="Message Exchange Overview - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/1.0/solutions/message-exchange-overview.html
+      https://dev.restcomm.com/docs/1.0/solutions/message-exchange-overview.html
     ">
+    <meta name="description" content="Restcomm Message Exchange helps service providers enable their enterprise customers to send and receive SMS using their Unified Communication (UC) client. Enterprise customers can send either two-way SMS or an SMS to multiple destinations.">
     <meta name="generator" content="Antora 1.1.1">
-    <link rel="icon" type="image/png" href=""/>
+    <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
@@ -29,33 +30,24 @@
       <a class="navbar-item header-logo-link" href="/docs/">
       </a>
     </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <!-- TODO: Bring back when we integrate with searching facilities
+        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
+        -->
+        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
+        <div class="navbar-item">
+          <span>
+            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
+          </span>
+        </div>
+      </div>
+    </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
-  <nav class="navbar-enterprise">
-    <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle icon-custom-font-right">
-      </button>
-      <!--
-      <span class="icon-custom-font-x"><span class="icon-custom-font-back-hamburger"><span class="icon-custom-font-left"><span class="icon-custom-font-right">
-      -->
-      <button class="navbar-enterprise-burger icon-custom-font-back-hamburger">
-      </button>
-    </div>
-    <div class="navbar-enterprise-container">
-
-
-
-        <a class="navbar-enterprise-item" href="/docs/api/overview.html">Reference</a>
-        <a class="navbar-enterprise-item" href="/docs/solutions/index.html">Solutions</a>
-        <a class="navbar-enterprise-item" href="/docs/tutorials/index.html">Tutorials</a>
-        <a class="navbar-enterprise-item" href="/docs/visual-designer/index.html">Visual Designer</a>
-
-
-    </div>
-  </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0" >
+<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
   <aside class="navigation">
     <div class="panels">
   <div class="navigation-menu is-active" data-panel="menu">
@@ -1550,6 +1542,36 @@
 </div>
 <article class="doc fix-anchor-links-position">
   <h1>Message Exchange Overview</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_prerequisites">Prerequisites</a></li>
+<li><a href="#_federating_your_uc_server">Federating your UC server</a>
+<ul class="sectlevel2">
+<li><a href="#_use_an_already_federated_xmpp_server_and_xmpp_client">Use an already federated XMPP server and XMPP client</a></li>
+</ul>
+</li>
+<li><a href="#_setting_up_your_first_mapping">Setting up your first mapping</a>
+<ul class="sectlevel2">
+<li><a href="#_receiving_an_sms_message_to_your_uc_client">Receiving an SMS/message to your UC client</a></li>
+<li><a href="#_sending_an_sms_message_from_your_uc_client">Sending an SMS/message from your UC client</a></li>
+</ul>
+</li>
+<li><a href="#_use_your_custom_domain">Use your custom domain</a>
+<ul class="sectlevel2">
+<li><a href="#_setting_up_your_custom_domain">Setting up your custom domain</a></li>
+</ul>
+</li>
+<li><a href="#_setting_up_your_domain_with_godaddy">Setting up your domain with GoDaddy</a></li>
+<li><a href="#_setting_up_your_ssl_certificate_with_godaddy">Setting up your SSL certificate with GoDaddy</a>
+<ul class="sectlevel2">
+<li><a href="#_setting_up_a_new_domain_in_message_exchange">Setting up a new domain in Message Exchange</a></li>
+</ul>
+</li>
+<li><a href="#_understanding_the_message_exchange_console_and_api">Understanding the Message Exchange Console and API</a></li>
+</ul>
+</div>
 <div class="sect1">
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
@@ -1578,7 +1600,7 @@
 </div>
 </li>
 <li>
-<p>Create a mapping (cia API or UI Console)</p>
+<p>Create a mapping (via API or UI Console)</p>
 </li>
 <li>
 <p>Start sending messages</p>
@@ -1602,13 +1624,13 @@
 <p>An open firewall port to your XMPP server, allowing incoming traffic from xmpp.restcomm.com’s IP on port 5269</p>
 </li>
 <li>
-<p>Working knowledge of cURL and a way to make HTTP API calls (either using cURL or Postman; we recommend Postman if you’re not familiar with cURL.)</p>
+<p>Working knowledge of <a href="https://curl.haxx.se/docs/manpage.html">cURL</a> and a way to make HTTP API calls (either using cURL or Postman; we recommend Postman if you’re not familiar with cURL.)</p>
 </li>
 <li>
 <p>An understanding of Message Exchange API’s or Console on how to add mappings.</p>
 </li>
 <li>
-<p>An activated Restcomm Cloud account.</p>
+<p>An activated linke:https://cloud.restcomm.com/#/signup[Restcomm Cloud account].</p>
 </li>
 </ul>
 </div>
@@ -1629,7 +1651,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Add your server’s IP addresses to our Whitelist using the Whitelist API as explained in Section 2.4 Create IP Whitelisting of Message Exchange(MX) CSP API</p>
+<p>Add your server’s IP addresses to our Whitelist using the Whitelist API as explained the <a href="api/message-exchange/create-operation.html#_create_ip_whitelisting">Create IP Whitelisting section</a> of Message Exchange(MX) API documentation.</p>
 </li>
 <li>
 <p>Create DNS SRV records on your DNS servers for our Message Exchange server (cloud-xmpp-server.restcomm.com).</p>
@@ -1660,7 +1682,7 @@
 <h2 id="_setting_up_your_first_mapping"><a class="anchor" href="#_setting_up_your_first_mapping"></a>Setting up your first mapping</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Note: You must have a valid, working Restcomm account in order to complete this step. If you do not have one, you can sign up for one here or contact us.</p>
+<p>Note: You must have a valid, working <a href="https://www.restcomm.com/sign-up/">Restcomm account</a> in order to complete this step. If you do not have one, you can <a href="https://cloud.restcomm.com/#/signup">sign up</a> here or <a href="https://www.restcomm.com/contact/">contact us</a>.</p>
 </div>
 <div class="paragraph">
 <p>The purpose of an XMPP mapping is to associate a phone number with an existing XMPP contact on your UC server. For example, imagine you have a user with the XMPP address of <a href="mailto:joe@myserver.com">joe@myserver.com</a> and Joe’s desk phone is +1-919-555-1212.</p>
@@ -1674,7 +1696,7 @@
 <div class="paragraph">
 <p>Setting up a new mapping
 * Log in to your Restcomm account
-* Create new Mapping as explained in Section 2.3 Add Mappings in Docs : Message Exchange CSP console</p>
+* Create new Mapping as explained in the <a href="message-exchange-console.html#_add_a_mapping">Add Mappings section</a> of the Message Exchange Console documentation.</p>
 </div>
 <div class="sect2">
 <h3 id="_receiving_an_sms_message_to_your_uc_client"><a class="anchor" href="#_receiving_an_sms_message_to_your_uc_client"></a>Receiving an SMS/message to your UC client</h3>
@@ -1726,7 +1748,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Provide a valid certificate obtained by trusted third party organization</p>
+<p>Provide a valid certificate obtained by a trusted third party organization</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1891,7 +1913,7 @@ DNS Records propagation might take some time to complete.
 <p>Log in to your Restcomm account</p>
 </li>
 <li>
-<p>Create a new Domain as explained in Section 5.3 Add Domain in Docs: Message Exchange CSP console</p>
+<p><a href="message-exchange-console.html#_add_domains">Create a new Domain</a></p>
 </li>
 </ul>
 </div>
@@ -1920,20 +1942,39 @@ DNS Records propagation might take some time to complete.
     <div class="footer-column-container">
       <div class="footer-column">
         <h5 class="footer-column-title">Products</h5>
-          <p><a id="footer-voice-link" href="#">Programmable Voice</a></p>
-          <p><a id="footer-sms-link" href="#">Programmable SMS</a></p>
-              </div>
+          <p><a href="/docs/programmable.html">Programmable Voice</a></p>
+          <p><a href="/docs/programmable.html">Programmable SMS</a></p>
+          <p><a href="/docs/message-exchange.html">Message Exchange</a></p>
+      </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use Cases</h5>
+        <p><a href="https://www.restcomm.com/use-cases/two-factor-authentication-2fa/">Two-Factor Authentication (2FA)</a></p>
+        <p><a href="https://www.restcomm.com/use-cases/phone-number-masking/">Phone Number Masking</a></p>
+        <p><a href="https://www.restcomm.com/voicemail-using-restcomm-visual-designer/">Interactive Voicemail to Email Application</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
+        <p><a href="https://www.restcomm.com/blog/">Blog</a></p>
 
-          <p><a id="terms-link" href="#">Terms And Conditions</a></p>
-              </div>
+          <p><a id="terms-link" href="/docs/support.html">Terms And Conditions</a></p>
+      </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
         <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/" data-default-text="Company Name" data-default-link="#">Telestax</a></p>
+        <p>
+          <span><a href="https://twitter.com/restcomm"><i class="fab fa-twitter"></i></a></span>
+          <span><a href="https://www.linkedin.com/company/telestax"><i class="fab fa-linkedin-in"></i></a></span>
+          <span><a href="https://www.facebook.com/Telestax/"><i class="fab fa-facebook-f"></i></a></span>
+          <span><a href="https://www.youtube.com/channel/UCrZ-J48d3AdwGdL01XuZKZQ"><i class="fab fa-youtube"></i></a></span>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom-container">
+      <div class="footer-logo">
+        <a class="footer-logo-link" href="https://telestax.com"></a>
+      </div>
+      <div class="footer-copyright">
+        <p class="footer-copyright-paragraph">COPYRIGHT © 2018, TELESTAX INC., ALL RIGHTS RESERVED.</p>
       </div>
     </div>
   </div>
