@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Restcomm Visual Designer - Restcomm Docs"></title>
+    <title data-custom-title="Text-to-Speech and SSML Support - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/1.0/visual-designer/index.html
+      https://cloud.restcomm.com/docs/1.0/rcml/ssml-reference.html
     ">
-    <meta name="description" content="Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or no programming knowledge. You can find all you need to get started here.">
-    <meta name="keywords" content="#{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} visual designer, visual designer, visual deisgner how to, programmable voice designer, programmable sms designer">
+    <meta name="description" content="The *&amp;lt;Say&amp;gt;* verb is used to convert text into a human-like speech real-time and playback the audio. When using *&amp;lt;Say&amp;gt;* you have a choice between using male or female Google or Amazon Polly voices.">
+    <meta name="keywords" content="say verb, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} say, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} text to speech, play text to speech">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -35,7 +35,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle icon-custom-font-right" style="visibility: hidden;">
+      <button class="navigation-toggle icon-custom-font-right">
       </button>
       <!--
       <span class="icon-custom-font-x"><span class="icon-custom-font-back-hamburger"><span class="icon-custom-font-left"><span class="icon-custom-font-right">
@@ -56,7 +56,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
   <div class="navigation-menu is-active" data-panel="menu">
@@ -112,7 +112,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html">RCML</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html">RCML</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -129,7 +129,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html">Overview</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html">Overview</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -146,7 +146,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">Interacting with Your Application</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_how_restcomm_interacts_with_your_application">Interacting with Your Application</a>
 
             </span>
               </div>
@@ -163,7 +163,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_the_rcml_verbs">RCML Verbs</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_the_rcml_verbs">RCML Verbs</a>
 
             </span>
               </div>
@@ -182,7 +182,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/dial-rcml.html">Dial</a>
+              <a class="nav-link nav-flex-item-text" href="dial-rcml.html">Dial</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -199,7 +199,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/client-rcml.html">Client</a>
+              <a class="nav-link nav-flex-item-text" href="client-rcml.html">Client</a>
 
             </span>
               </div>
@@ -216,7 +216,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/conference-rcml.html">Conference</a>
+              <a class="nav-link nav-flex-item-text" href="conference-rcml.html">Conference</a>
 
             </span>
               </div>
@@ -233,7 +233,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/number-rcml.html">Number</a>
+              <a class="nav-link nav-flex-item-text" href="number-rcml.html">Number</a>
 
             </span>
               </div>
@@ -250,7 +250,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/sip-rcml.html">SIP</a>
+              <a class="nav-link nav-flex-item-text" href="sip-rcml.html">SIP</a>
 
             </span>
               </div>
@@ -269,7 +269,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/email-rcml.html">Email</a>
+              <a class="nav-link nav-flex-item-text" href="email-rcml.html">Email</a>
 
             </span>
               </div>
@@ -286,7 +286,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/gather-rcml.html">Gather</a>
+              <a class="nav-link nav-flex-item-text" href="gather-rcml.html">Gather</a>
 
             </span>
               </div>
@@ -303,12 +303,12 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/say-rcml.html">Say</a>
+              <a class="nav-link nav-flex-item-text" href="say-rcml.html">Say</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
                 <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
+            <li class="nav-item is-current-page" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -320,7 +320,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/ssml-reference.html">SSML Reference</a>
+              <a class="nav-link nav-flex-item-text" href="ssml-reference.html">SSML Reference</a>
 
             </span>
               </div>
@@ -339,7 +339,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/play-rcml.html">Play</a>
+              <a class="nav-link nav-flex-item-text" href="play-rcml.html">Play</a>
 
             </span>
               </div>
@@ -356,7 +356,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/sms-rcml.html">SMS</a>
+              <a class="nav-link nav-flex-item-text" href="sms-rcml.html">SMS</a>
 
             </span>
               </div>
@@ -373,7 +373,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/hangup-rcml.html">Hangup</a>
+              <a class="nav-link nav-flex-item-text" href="hangup-rcml.html">Hangup</a>
 
             </span>
               </div>
@@ -390,7 +390,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/pause-rcml.html">Pause</a>
+              <a class="nav-link nav-flex-item-text" href="pause-rcml.html">Pause</a>
 
             </span>
               </div>
@@ -407,7 +407,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/redirect-rcml.html">Redirect</a>
+              <a class="nav-link nav-flex-item-text" href="redirect-rcml.html">Redirect</a>
 
             </span>
               </div>
@@ -424,7 +424,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/record-rcml.html">Record</a>
+              <a class="nav-link nav-flex-item-text" href="record-rcml.html">Record</a>
 
             </span>
               </div>
@@ -441,7 +441,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/reject-rcml.html">Reject</a>
+              <a class="nav-link nav-flex-item-text" href="reject-rcml.html">Reject</a>
 
             </span>
               </div>
@@ -1871,48 +1871,309 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="index.html"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</a></li>
+    <li class="crumb"><a href="overview.html">CSP:RCML</a></li>
+    <li class="crumb"><a href="say-rcml.html">CSP:Say</a></li>
+    <li class="crumb"><a href="ssml-reference.html">CSP:SSML Reference</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</h1>
-<div id="preamble">
+  <h1>Text-to-Speech and SSML Support</h1>
+<div class="sect1">
+<h2 id="_text_to_speech_tts"><a class="anchor" href="#_text_to_speech_tts"></a>Text-to-Speech (TTS)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visual Designer offers a quick and easy way to create Voice and Messaging applications with just a little or
-no programming knowledge. You can find all you need to get started here.</p>
+<p>The <strong>&lt;Say&gt;</strong> verb is used to convert text into a human-like speech real-time. All you need is to provide the text in the Visual designer’s Say element and <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will synthesize speech and playback the audio. The default TTS provider is Amazon Polly. A default US English dialect is used with a male voice.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;re new to <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>, we recommend looking at the <a href="RVD-Quick-Start-Guide.html">Quick Start Guide</a>. For more in-depth
-overview, check out the <a href="Tutorial.html">Visual Designer Tutorial</a>. Below you will find a list with popular Visual Designer how-tos.</p>
+<p>When using <strong>&lt;Say&gt;</strong> you have a choice between using male or female Google or Amazon Polly voices.</p>
+</div>
+<div class="sect2">
+<h3 id="_speech_synthesis_markup_language_ssml"><a class="anchor" href="#_speech_synthesis_markup_language_ssml"></a>Speech Synthesis Markup Language (SSML)</h3>
+<div class="paragraph">
+<p>You can send Speech Synthesis Markup Language (SSML) in your Text-to-Speech request to allow for more customization in your audio response by providing details on pauses, and audio formatting for acronyms, dates, times, abbreviations, or text that should be censored.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_supported_voices_and_languages"><a class="anchor" href="#_supported_voices_and_languages"></a>Supported Voices and languages</h3>
+<div class="paragraph">
+<p>For detailed information about all supported languages and voice with Amazon Polly and Google please visit the following resources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon Polly supported <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">voices</a> and <a href="https://docs.aws.amazon.com/polly/latest/dg/SupportedLanguage.html">languages</a></p>
+</li>
+<li>
+<p>Google supported <a href="https://cloud.google.com/text-to-speech/docs/voices">voices and languages</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_s"><a class="anchor" href="#_how_to_s"></a>How To&#8217;s</h2>
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_ssml_markup_and_text_to_speech_synthesizes_of_the_text"><a class="anchor" href="#_ssml_markup_and_text_to_speech_synthesizes_of_the_text"></a>SSML Markup and Text-to-Speech Synthesizes of The Text</h3>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;speak&gt;
+  This is a &lt;say-as interpret-as="characters"&gt;SSML&lt;/say-as&gt; example.
+  I can pause &lt;break time="3s"/&gt;.
+  I can play a sound
+  &lt;audio src="https://www.example.com/MY_MP3_FILE.mp3"&gt;didn't get your MP3 audio file&lt;/audio&gt;.
+  I can speak in cardinals. Your number is &lt;say-as interpret-as="cardinal"&gt;10&lt;/say-as&gt;.
+  Or I can speak in ordinals. You are &lt;say-as interpret-as="ordinal"&gt;10&lt;/say-as&gt; in line.
+  Or I can even speak in digits. The digits for ten are &lt;say-as interpret-as="characters"&gt;10&lt;/say-as&gt;.
+  I can also substitute phrases, like the &lt;sub alias="World Wide Web Consortium"&gt;W3C&lt;/sub&gt;.
+  Finally, I can speak a paragraph with two sentences.
+  &lt;p&gt;&lt;s&gt;This is sentence one.&lt;/s&gt;&lt;s&gt;This is sentence two.&lt;/s&gt;&lt;/p&gt;
+&lt;/speak&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is the synthesized text for the example SSML document:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>This is a S S M L samples. I can pause [3 second pause]. I can play a sound [audio file plays].
+I can speak in cardinals. Your number is ten.
+Or I can speak in ordinals. You are tenth in line.
+Or I can even speak in digits. The digits for ten are one oh.
+I can also substitute phrases, like the World Wide Web Consortium.
+Finally, I can speak a paragraph with two sentences. This is sentence one. This is sentence two.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Google Cloud Text-to-Speech supports a subset of available SSML tags.</p>
+</div>
+<div class="paragraph">
+<p>For more information about how to create audio data from SSML input with the Google Cloud Text-to-Speech, see <a href="https://cloud.google.com/text-to-speech/docs/create-audio#ssml">Creating Voice Audio Files</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="_google_cloud_support_for_ssml_elements"><a class="anchor" href="#_google_cloud_support_for_ssml_elements"></a>Google Cloud Support for SSML Elements</h4>
+<div class="paragraph">
+<p>You can use various SSML elements and options for your actions. For more information check out <a href="https://cloud.google.com/text-to-speech/docs/ssml">Google Cloud Support for SSML elements</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_amazon_polly_support_for_ssml_elements"><a class="anchor" href="#_amazon_polly_support_for_ssml_elements"></a>Amazon Polly Support for SSML Elements</h4>
+<div class="paragraph">
+<p>For more information about Amazon Polly supported SSML tags visit <a href="https://docs.aws.amazon.com/polly/latest/dg/supportedtags.html">Amazon Polly Supported SSML Tags</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_speech_synthesis_markup_language_ssml_in_visual_designer"><a class="anchor" href="#_using_speech_synthesis_markup_language_ssml_in_visual_designer"></a>Using Speech Synthesis Markup Language (SSML) in Visual Designer</h3>
+<div class="paragraph">
+<p>You can use SSML within a <strong>&lt;Say&gt;</strong> verb in Visual designer as shown below.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Making-decisions-with-control-element.html">Making decisions with Control element</a></p>
+<p>Click on the gear icon to expand the <strong>&lt;Say&gt;</strong> verb settings. You will notice a <code>Language</code> drop-down field. Select the desired language.</p>
 </li>
 <li>
-<p><a href="Making-HTTP-requests-with-external-service-client.html">Making HTTP requests with the External Service client</a></p>
+<p>Select the male or female icon next to the <code>Language</code> field to set a voice variation.</p>
 </li>
 <li>
-<p><a href="Using-web-trigger.html">Using Web Trigger</a></p>
-</li>
-<li>
-<p><a href="Diagrams.html"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Diagrams</a></p>
-</li>
-<li>
-<p><a href="Application-log.html"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer Application Log</a></p>
-</li>
-<li>
-<p><a href="Accessing-custom-SIP-headers.html">Accessing custom SIP headers from an RCML or Visual Designer application</a></p>
+<p>Save your application.</p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Using_SSML_in_Visual_Designer.png" alt="Using SSML in Vsual designer">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_speech_synthesis_markup_language_ssml_in_rcml"><a class="anchor" href="#_using_speech_synthesis_markup_language_ssml_in_rcml"></a>Using Speech Synthesis Markup Language (SSML) in RCML</h3>
+<div class="paragraph">
+<p>You can use SSML in your RCML applications as follows to create pauses, and audio formatting for acronyms, dates, times, abbreviations, or text that should be censored.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>&lt;emphasis&gt;</strong> element can be used to add or remove emphasis from text contained by the element as follows.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+&lt;Say voice="woman" language="en" loop="3"&gt;
+&lt;speak&gt;
+   &lt;emphasis level="moderate"&gt;This is an important announcement&lt;/emphasis&gt;
+&lt;/speak&gt;
+&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>&lt;break&gt;</strong> element lets you control pausing or other prosodic boundaries between words. Using &lt;break&gt; between any pair of tokens is optional. If this element is not present between words, the break is automatically determined based on the linguistic context.</p>
+</div>
+<div class="paragraph">
+<p>This element accepts two optional attributes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>time</code>: Sets the length of the break by seconds or milliseconds (e.g. "3s" or "250ms").</p>
+</li>
+<li>
+<p><code>strength</code>: Sets the strength of the output&#8217;s prosodic break by relative terms. Valid values are: "x-weak", weak", "medium", "strong", and "x-strong". The value "none" indicates that no prosodic break boundary should be outputted, which can be used to prevent a prosodic break that the processor would otherwise produce. The other values indicate monotonically non-decreasing (conceptually increasing) break strength between tokens. The stronger boundaries are typically accompanied by pauses.
+The following example shows how to use the <strong>&lt;break&gt;</strong> element to pause between steps:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+&lt;Say voice="woman" language="en" loop="3"&gt;
+&lt;speak&gt;
+  Step 1, take a deep breath. &lt;break time="200ms"/&gt;
+  Step 2, exhale.
+  Step 3, take a deep breath again. &lt;break strength="weak"/&gt;
+  Step 4, exhale.
+&lt;/speak&gt;
+&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>&lt;say‑as&gt;</strong> lets you indicate information about the type of text construct that is contained within the element. It also helps specify the level of detail for rendering the contained text.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>&lt;say‑as&gt;</strong> element has the required attribute, interpret-as, which determines how the value is spoken. Optional attributes format and detail may be used depending on the particular interpret-as value. The interpret-as attribute supports the following values:</p>
+</div>
+<div class="sect3">
+<h4 id="_strong_cardinal_strong"><a class="anchor" href="#_strong_cardinal_strong"></a><strong>cardinal</strong></h4>
+<div class="paragraph">
+<p>The following example is spoken as "Twelve thousand three hundred forty five" (for US English) or "Twelve thousand three hundred and forty five (for UK English)":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+&lt;Say voice="woman" language="en" loop="3"&gt;
+&lt;speak&gt;
+  &lt;say-as interpret-as="cardinal"&gt;12345&lt;/say-as&gt;
+&lt;/speak&gt;
+&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_strong_ordinal_strong"><a class="anchor" href="#_strong_ordinal_strong"></a><strong>ordinal</strong></h4>
+<div class="paragraph">
+<p>The following example is spoken as "First":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+&lt;Say voice="woman" language="en" loop="3"&gt;
+&lt;speak&gt;
+  &lt;say-as interpret-as="ordinal"&gt;1&lt;/say-as&gt;
+&lt;/speak&gt;
+&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_strong_characters_strong"><a class="anchor" href="#_strong_characters_strong"></a><strong>characters</strong></h4>
+<div class="paragraph">
+<p>The following example is spoken as "C A N":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+&lt;Say voice="woman" language="en" loop="3"&gt;
+  &lt;speak&gt;
+    &lt;say-as interpret-as="characters"&gt;can&lt;/say-as&gt;
+  &lt;/speak&gt;
+&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_strong_expletive_or_bleep_strong"><a class="anchor" href="#_strong_expletive_or_bleep_strong"></a><strong>expletive or bleep</strong></h4>
+<div class="paragraph">
+<p>The following example comes out as a beep, as though it has been censored:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+&lt;Say voice="woman" language="en" loop="3"&gt;
+ &lt;speak&gt;
+   &lt;say-as interpret-as="expletive"&gt;censor this&lt;/say-as&gt;
+ &lt;/speak&gt;
+ &lt;/Say&gt;
+ &lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_strong_verbatim_or_spell_out_strong"><a class="anchor" href="#_strong_verbatim_or_spell_out_strong"></a><strong>verbatim or spell-out</strong></h4>
+<div class="paragraph">
+<p>The following example is spelled out letter by letter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+&lt;Say voice="woman" language="en" loop="3"&gt;
+  &lt;speak&gt;
+    &lt;say-as interpret-as="verbatim"&gt;abcdefg&lt;/say-as&gt;
+  &lt;/speak&gt;
+&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_strong_date_strong"><a class="anchor" href="#_strong_date_strong"></a><strong>date</strong></h4>
+<div class="paragraph">
+<p>The format attribute is a sequence of date field character codes. Supported field character codes in format are {y, m, d} for year, month, and day (of the month) respectively. If the field code appears once for year, month, or day then the number of digits expected are 4, 2, and 2 respectively. If the field code is repeated then the number of expected digits is the number of times the code is repeated. Fields in the date text may be separated by punctuation and/or spaces.</p>
+</div>
+<div class="paragraph">
+<p>The detail attribute controls the spoken form of the date. For detail='1' only the day fields and one of month or year fields are required, although both may be supplied. This is the default when less than all three fields are given. The spoken form is "The \{ordinal day} of {month}, {year}".</p>
+</div>
+<div class="paragraph">
+<p>The following example is spoken as "The thirtieth of September, two thousand and nineteen":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;Response&gt;
+&lt;Say voice="woman" language="en" loop="3"&gt;
+&lt;speak&gt;
+  &lt;say-as interpret-as="date" format="yyyymmdd" detail="1"&gt;
+    2019-09-30
+  &lt;/say-as&gt;
+&lt;/speak&gt;
+&lt;/Say&gt;
+&lt;/Response&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example is spoken as "The thirtieth of September":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;speak&gt;
+  &lt;say-as interpret-as="date" format="dm"&gt;30-9&lt;/say-as&gt;
+&lt;/speak&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are looking for building more complex SSML scenarios make sure to check out the <a href="https://cloud.google.com/text-to-speech/docs/ssml">Google Cloud</a> and <a href="https://docs.aws.amazon.com/polly/latest/dg/supportedtags.html">Amazon Polly</a> documentation pages.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testing_your_ssml_settings"><a class="anchor" href="#_testing_your_ssml_settings"></a>Testing your SSML settings</h3>
+<div class="paragraph">
+<p>You can test your SSML settings by initiating a call to your application. Make sure to bind it to a phone number or SIP client prior to that.</p>
+</div>
 </div>
 </div>
 </div>

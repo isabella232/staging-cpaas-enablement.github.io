@@ -8,8 +8,6 @@
     <link rel="canonical" href="
       https://cloud.restcomm.com/docs/1.0/api/usage-records-api.html
     ">
-    <meta name="description" content="The UsageRecords REST resource provides a simple API to retrieve usage made by your Restcomm account during any time period and by any usage category.">
-    <meta name="keywords" content="usage records">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -146,7 +144,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">How wlparam:replace[textMode="sps",parmText="application_name",text="Restcomm",defaultText="$INFER_FROM_DOMAIN"</a>
+              <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">Interacting with Your Application</a>
 
             </span>
               </div>
@@ -304,10 +302,29 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/say-rcml.html">Say</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../rcml/ssml-reference.html">SSML Reference</a>
 
             </span>
               </div>
                           </li>
+  </ul>
+            </li>
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -1863,7 +1880,7 @@
 <h2 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage Records</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The UsageRecords REST resource provides a simple API to retrieve usage made by your Restcomm account during any time period and by any usage category. This makes it easy to build reporting and analytics tools for your application. UsageRecords used in combination with Subaccounts created for each of your end-users make it possible to build recurring usage-based billing systems on top of Restcomm&#8217;s API with just a few simple API calls.</p>
+<p>The UsageRecords REST resource provides a simple API to retrieve usage made by your <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> account during any time period and by any usage category. This makes it easy to build reporting and analytics tools for your application. UsageRecords used in combination with Subaccounts created for each of your end-users make it possible to build recurring usage-based billing systems on top of <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>'s API with just a few simple API calls.</p>
 </div>
 <div class="paragraph">
 <p>You can also set up usage triggers to notify your application when a particular category of usage reaches a threshold on a daily, monthly, yearly, or all-time basis. Triggers can help determine if your users have reached a cap on usage, or if your application may have runaway requests. For more on usage triggers, see the Usage Triggers documentation.</p>
@@ -1939,7 +1956,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URI that returns only this UsageRecord, relative to <code><a href="https://Restcomm_IP_ADDRESS" class="bare">https://Restcomm_IP_ADDRESS</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI that returns only this UsageRecord, relative to <code>https://<span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>_IP_ADDRESS</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SubresourceUris</p></td>
@@ -1972,28 +1989,20 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calls</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CALLS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All voice calls. <code>Count</code> is the number of calls and <code>Usage</code> is the number of minutes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sms</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All SMS messages. <code>Count</code> and <code>Usage</code> are both the number of messages sent.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">phonenumbers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHONENUMBERS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All phone numbers owned by the account.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">recordings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recordings of voice calls. <code>Count</code> is the number of recordings and <code>Usage</code> is the number of recorded minutes. Note that Restcomm doesn&#8217;t charge for making recordings (only storing them long term) so <code>Price</code> will always be 0.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">transcriptions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Transcriptions of voice calls. <code>Count</code> is the number of transcriptions and <code>Usage</code> is the number of transcribed minutes.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">totalprice</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Total price of all usage. <code>Usage</code> will be the same as <code>Price</code>, and <code>Count</code> will be empty. Note that because some Restcomm costs may not be included in any usage category, the sum of the <code>Price</code> of all UsageRecords may not be equal to the <code>Price</code> of <code>TotalPrice</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RECORDINGS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recordings of voice calls. <code>Count</code> is the number of recordings and <code>Usage</code> is the number of recorded minutes. Note that <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> doesn&#8217;t charge for making recordings (only storing them long term) so <code>Price</code> will always be 0.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2138,108 +2147,80 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calls</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CALLS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All voice calls, inbound &amp; outbound. <code>Count</code> is the number of calls and <code>Usage</code> is the number of minutes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calls-inbound</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CALLS-INBOUND</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All inbound voice calls, to both toll-free and local numbers.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calls-inbound-local</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CALLS-INBOUND-LOCAL</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All inbound voice calls to local numbers.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calls-inbound-tollfree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CALLS-INBOUND-TOLLFREE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All inbound voice calls to toll-free numbers.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calls-outbound</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CALLS-OUTBOUND</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All outbound voice calls.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calls-client</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All Restcomm Client voice calls.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CALLS-CLIENT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Client voice calls.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calls-sip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CALLS-SIP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All SIP calls.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sms</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All SMS messages, both inbound and outbound. <code>Count</code> and <code>Usage</code> are both the number of messages sent.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sms-inbound</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS-INBOUND</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All inbound SMS messages, to both short-codes and long-codes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sms-inbound-shortcode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS-INBOUND-SHORTCODE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All inbound SMS messages to short-codes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sms-inbound-longcode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS-INBOUND-LONGCODE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All inbound SMS messages to long-codes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sms-outbound</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS-OUTBOUND</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All outbound SMS messages, from both short-codes and long-codes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sms-outbound-shortcode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS-OUTBOUND-SHORTCODE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All outbound SMS messages from short-codes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sms-outbound-longcode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS-OUTBOUND-LONGCODE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All outbound SMS messages from long-codes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">phonenumbers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHONENUMBERS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All phone numbers owned by the account, toll-free and local.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">phonenumbers-tollfree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHONENUMBERS-TOLLFREE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All toll-free phone numbers owned by the account.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">phonenumbers-local</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHONENUMBERS-LOCAL</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All local phone numbers owned by the account.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">shortcodes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All ShortCodes owned by the account, of all types.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RECORDINGS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recordings of voice calls. <code>Count</code> is the number of recordings and <code>Usage</code> is the number of recorded minutes. Note that <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> doesn&#8217;t charge for making recordings (only storing them long term) so <code>Price</code> will always be 0.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">shortcodes-vanity</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All vanity ShortCodes owned by the account.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">shortcodes-random</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All randomly-assigned ShortCodes owned by the account.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">shortcodes-customerowned</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All ShortCodes owned by the account that are leased from another provider.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">calleridlookups</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CallerID (CallerName) lookups.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">recordings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recordings of voice calls. <code>Count</code> is the number of recordings and <code>Usage</code> is the number of recorded minutes. Note that Restcomm doesn&#8217;t charge for making recordings (only storing them long term) so <code>Price</code> will always be 0.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">transcriptions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Transcriptions of voice calls. <code>Count</code> is the number of transcriptions and <code>Usage</code> is the number of transcribed minutes.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">recordingstorage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RECORDINGSTORAGE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Amount of storage used by call recordings stored for the account. <code>Count</code> is the number of stored recordings, <code>Usage</code> is the number of stored recorded minutes, and <code>Price</code> is the price of storing the recordings.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">totalprice</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Total price of all usage. <code>Usage</code> will be the same as <code>Price</code>, and <code>Count</code> will be empty. Note that because some Restcomm costs may not be included in any usage category, the sum of the <code>Price</code> in all UsageRecords may or may not be equal to the <code>Price</code> of <code>TotalPrice</code>.</p></td>
 </tr>
 </tbody>
 </table>
