@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="enterprise-persona">
+<html lang="en" class="csp-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
     <title data-custom-title="Recordings - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/1.0/api/recordings-api.html
+      https://dev.restcomm.com/docs/1.0/api/recordings-api.html
     ">
     <meta name="generator" content="Antora 1.1.1">
-    <link rel="icon" type="image/png" href=""/>
+    <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
@@ -18,7 +18,7 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article" style="display: none">
+  <body class="article" >
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -28,6 +28,19 @@
       -->
       <a class="navbar-item header-logo-link" href="/docs/">
       </a>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <!-- TODO: Bring back when we integrate with searching facilities
+        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
+        -->
+        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
+        <div class="navbar-item">
+          <span>
+            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
+          </span>
+        </div>
+      </div>
     </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
@@ -2052,17 +2065,17 @@ Unlike the Recording instance resource described above, the list of recordings I
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-114 is-active" onclick="openLanguage('Curl', 114)">Curl</button>
-        <button class="sample-code-button scsIndex-114" onclick="openLanguage('Nodejs', 114)">Nodejs</button>
-        <button class="sample-code-button scsIndex-114" onclick="openLanguage('Python', 114)">Python</button>
-        <button class="sample-code-button scsIndex-114" onclick="openLanguage('Java', 114)">Java</button>
+        <button class="sample-code-button scsIndex-57 is-active" onclick="openLanguage('Curl', 57)">Curl</button>
+        <button class="sample-code-button scsIndex-57" onclick="openLanguage('Nodejs', 57)">Nodejs</button>
+        <button class="sample-code-button scsIndex-57" onclick="openLanguage('Python', 57)">Python</button>
+        <button class="sample-code-button scsIndex-57" onclick="openLanguage('Java', 57)">Java</button>
       </div>
-      <div id="Curl-114" class="sample-language-114">
+      <div id="Curl-57" class="sample-language-57">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Recordings.json  \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-114" class="sample-language-114" style="display:none">
+      <div id="Nodejs-57" class="sample-language-57" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -2081,7 +2094,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-114" class="sample-language-114" style="display:none">
+      <div id="Python-57" class="sample-language-57" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2101,7 +2114,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-114" class="sample-language-114" style="display:none">
+      <div id="Java-57" class="sample-language-57" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2213,17 +2226,17 @@ Here is how to access the file using http <code><span class="non-sps-text non-sp
 <p>The example below will only return Recordings that has been started from this CallSid</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-115 is-active" onclick="openLanguage('Curl', 115)">Curl</button>
-        <button class="sample-code-button scsIndex-115" onclick="openLanguage('Nodejs', 115)">Nodejs</button>
-        <button class="sample-code-button scsIndex-115" onclick="openLanguage('Python', 115)">Python</button>
-        <button class="sample-code-button scsIndex-115" onclick="openLanguage('Java', 115)">Java</button>
+        <button class="sample-code-button scsIndex-58 is-active" onclick="openLanguage('Curl', 58)">Curl</button>
+        <button class="sample-code-button scsIndex-58" onclick="openLanguage('Nodejs', 58)">Nodejs</button>
+        <button class="sample-code-button scsIndex-58" onclick="openLanguage('Python', 58)">Python</button>
+        <button class="sample-code-button scsIndex-58" onclick="openLanguage('Java', 58)">Java</button>
       </div>
-      <div id="Curl-115" class="sample-language-115">
+      <div id="Curl-58" class="sample-language-58">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Recordings.json?CallSid=CAfe9ce46f104f5beeb10c83a5dad2be66  \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-115" class="sample-language-115" style="display:none">
+      <div id="Nodejs-58" class="sample-language-58" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -2242,7 +2255,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-115" class="sample-language-115" style="display:none">
+      <div id="Python-58" class="sample-language-58" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2262,7 +2275,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-115" class="sample-language-115" style="display:none">
+      <div id="Java-58" class="sample-language-58" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2368,17 +2381,17 @@ public class JavaSampleClass {
 <p>The command below will return a single item from the list of recordings using the PageSize parameter</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-116 is-active" onclick="openLanguage('Curl', 116)">Curl</button>
-        <button class="sample-code-button scsIndex-116" onclick="openLanguage('Nodejs', 116)">Nodejs</button>
-        <button class="sample-code-button scsIndex-116" onclick="openLanguage('Python', 116)">Python</button>
-        <button class="sample-code-button scsIndex-116" onclick="openLanguage('Java', 116)">Java</button>
+        <button class="sample-code-button scsIndex-59 is-active" onclick="openLanguage('Curl', 59)">Curl</button>
+        <button class="sample-code-button scsIndex-59" onclick="openLanguage('Nodejs', 59)">Nodejs</button>
+        <button class="sample-code-button scsIndex-59" onclick="openLanguage('Python', 59)">Python</button>
+        <button class="sample-code-button scsIndex-59" onclick="openLanguage('Java', 59)">Java</button>
       </div>
-      <div id="Curl-116" class="sample-language-116">
+      <div id="Curl-59" class="sample-language-59">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Recordings.json?PageSize=1  \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-116" class="sample-language-116" style="display:none">
+      <div id="Nodejs-59" class="sample-language-59" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -2397,7 +2410,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-116" class="sample-language-116" style="display:none">
+      <div id="Python-59" class="sample-language-59" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2417,7 +2430,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-116" class="sample-language-116" style="display:none">
+      <div id="Java-59" class="sample-language-59" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2555,17 +2568,17 @@ public class JavaSampleClass {
 <p>The command below will return recordings sorted by the creation date in ascending order using SortBy parameter:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-117 is-active" onclick="openLanguage('Curl', 117)">Curl</button>
-        <button class="sample-code-button scsIndex-117" onclick="openLanguage('Nodejs', 117)">Nodejs</button>
-        <button class="sample-code-button scsIndex-117" onclick="openLanguage('Python', 117)">Python</button>
-        <button class="sample-code-button scsIndex-117" onclick="openLanguage('Java', 117)">Java</button>
+        <button class="sample-code-button scsIndex-60 is-active" onclick="openLanguage('Curl', 60)">Curl</button>
+        <button class="sample-code-button scsIndex-60" onclick="openLanguage('Nodejs', 60)">Nodejs</button>
+        <button class="sample-code-button scsIndex-60" onclick="openLanguage('Python', 60)">Python</button>
+        <button class="sample-code-button scsIndex-60" onclick="openLanguage('Java', 60)">Java</button>
       </div>
-      <div id="Curl-117" class="sample-language-117">
+      <div id="Curl-60" class="sample-language-60">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/"Accounts/ACCOUNT_SID/Recordings.xml?SortBy=DateCreated:asc'  \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-117" class="sample-language-117" style="display:none">
+      <div id="Nodejs-60" class="sample-language-60" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -2584,7 +2597,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-117" class="sample-language-117" style="display:none">
+      <div id="Python-60" class="sample-language-60" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2604,7 +2617,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-117" class="sample-language-117" style="display:none">
+      <div id="Java-60" class="sample-language-60" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2685,17 +2698,17 @@ public class JavaSampleClass {
 <p>From the bash terminal, you can run the command below:</p>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-118 is-active" onclick="openLanguage('Curl', 118)">Curl</button>
-        <button class="sample-code-button scsIndex-118" onclick="openLanguage('Nodejs', 118)">Nodejs</button>
-        <button class="sample-code-button scsIndex-118" onclick="openLanguage('Python', 118)">Python</button>
-        <button class="sample-code-button scsIndex-118" onclick="openLanguage('Java', 118)">Java</button>
+        <button class="sample-code-button scsIndex-61 is-active" onclick="openLanguage('Curl', 61)">Curl</button>
+        <button class="sample-code-button scsIndex-61" onclick="openLanguage('Nodejs', 61)">Nodejs</button>
+        <button class="sample-code-button scsIndex-61" onclick="openLanguage('Python', 61)">Python</button>
+        <button class="sample-code-button scsIndex-61" onclick="openLanguage('Java', 61)">Java</button>
       </div>
-      <div id="Curl-118" class="sample-language-118">
+      <div id="Curl-61" class="sample-language-61">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X DELETE https://mycompany.restcomm.com/restcomm/2012-04-24/"Accounts/ACCOUNT_SID/Recordings/RECORDING_SID'  \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-118" class="sample-language-118" style="display:none">
+      <div id="Nodejs-61" class="sample-language-61" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -2716,7 +2729,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-118" class="sample-language-118" style="display:none">
+      <div id="Python-61" class="sample-language-61" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2738,7 +2751,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-118" class="sample-language-118" style="display:none">
+      <div id="Java-61" class="sample-language-61" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2777,23 +2790,39 @@ public class JavaSampleClass {
     <div class="footer-column-container">
       <div class="footer-column">
         <h5 class="footer-column-title">Products</h5>
-          <p><a class="footer-products-item" href="/docs/api/voice-category.html">Programmable Voice</a></p>
-          <p><a class="footer-products-item" href="/docs/api/sms-category.html">Programmable SMS</a></p>
+          <p><a href="/docs/programmable.html">Programmable Voice</a></p>
+          <p><a href="/docs/programmable.html">Programmable SMS</a></p>
+          <p><a href="/docs/message-exchange.html">Message Exchange</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Use Cases</h5>
-        <p><a class="footer-usecase-item" href="/docs/tutorials/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a></p>
-        <p><a class="footer-usecase-item" href="/docs/tutorials/Phone-number-masking.html">Phone Number Masking</a></p>
-        <p><a class="footer-usecase-item" href="/docs/tutorials/Create-a-Voicemail-to-Email-app-with-zero-coding.html">Voicemail to Email Application</a></p>
+        <p><a href="https://www.restcomm.com/use-cases/two-factor-authentication-2fa/">Two-Factor Authentication (2FA)</a></p>
+        <p><a href="https://www.restcomm.com/use-cases/phone-number-masking/">Phone Number Masking</a></p>
+        <p><a href="https://www.restcomm.com/voicemail-using-restcomm-visual-designer/">Interactive Voicemail to Email Application</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
+        <p><a href="https://www.restcomm.com/blog/">Blog</a></p>
 
-          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html" data-default-link="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" href="/docs/support.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Contact us</h5>
         <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/" data-default-text="Company Name" data-default-link="#">Telestax</a></p>
+        <p>
+          <span><a href="https://twitter.com/restcomm"><i class="fab fa-twitter"></i></a></span>
+          <span><a href="https://www.linkedin.com/company/telestax"><i class="fab fa-linkedin-in"></i></a></span>
+          <span><a href="https://www.facebook.com/Telestax/"><i class="fab fa-facebook-f"></i></a></span>
+          <span><a href="https://www.youtube.com/channel/UCrZ-J48d3AdwGdL01XuZKZQ"><i class="fab fa-youtube"></i></a></span>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom-container">
+      <div class="footer-logo">
+        <a class="footer-logo-link" href="https://telestax.com"></a>
+      </div>
+      <div class="footer-copyright">
+        <p class="footer-copyright-paragraph">COPYRIGHT © 2018, TELESTAX INC., ALL RIGHTS RESERVED.</p>
       </div>
     </div>
   </div>
