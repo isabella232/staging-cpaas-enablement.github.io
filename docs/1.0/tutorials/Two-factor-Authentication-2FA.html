@@ -2196,8 +2196,8 @@
       </div>
       <div id="Curl-67" class="sample-language-67">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send.json \
-   -H 'X-Header-1: Value1' \
-   -H 'X-Header-2: Value2' \
+   -H 'Cache-Control: no-cache' \
+   -H 'Content-Type: application/json' \
    -d 'From=XXXXXXXX' \
    -d 'To=XXXXXXXX' \
    -d 'service=2FA' \
@@ -2217,8 +2217,8 @@ request.({
       url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send.json',
       auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
       headers: {
-          'X-Header-1': 'Value1',
-          'X-Header-2': 'Value2'
+          'Cache-Control': 'no-cache',
+          'Content-Type': 'application/json'
       },
       form: {
          'From': 'XXXXXXXX',
@@ -2244,8 +2244,8 @@ AUTH_TOKEN = 'my_AUTH_TOKEN'
 
 userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
 headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'X-Header-1': 'Value1',
-    'X-Header-2': 'Value2',
+    'Cache-Control': 'no-cache',
+    'Content-Type': 'application/json',
     'Content-type': 'application/x-www-form-urlencoded',
     'Accept': 'text/plain' }
 
@@ -2285,8 +2285,8 @@ public class JavaSampleClass {
       URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send.json");
       HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
       conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestProperty("X-Header-1", "Value1");
-      conn.setRequestProperty("X-Header-2", "Value2");
+      conn.setRequestProperty("Cache-Control", "no-cache");
+      conn.setRequestProperty("Content-Type", "application/json");
       conn.setRequestMethod("POST");
       conn.setDoOutput(true);
       DataOutputStream os = new DataOutputStream(conn.getOutputStream());
