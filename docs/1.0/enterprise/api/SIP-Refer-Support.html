@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Programmable Voice - Restcomm Docs"></title>
+    <title data-custom-title="Restcomm SIP Refer Support - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/api/voice-category.html
+      https://cloud.restcomm.com/docs/api/SIP-Refer-Support.html
     ">
-    <meta name="description" content="Build voice applications for any app, website or voice based communications system with the help of our powerful drag and drop Visual Designer or robust Programmable Voice APIs.">
+    <meta name="description" content="Learn how to send text messages from Visual Designer to a Jitsi SIP phone.">
+    <meta name="keywords" content="sip refer">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -173,7 +174,7 @@
                           </li>
   </ul>
             </li>
-            <li class="nav-item is-current-page" data-depth="2">
+            <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -633,7 +634,7 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="3">
+            <li class="nav-item is-current-page" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1482,214 +1483,92 @@
     <li class="crumb"><a href="../../index.html">docs</a></li>
     <li class="crumb"><a href="overview.html">Enterprise:REST API</a></li>
     <li class="crumb"><a href="voice-category.html">Enterprise:Voice</a></li>
+    <li class="crumb"><a href="SIP-Refer-Support.html">Enterprise:SIP Refer Support</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Programmable Voice</h1>
-<div class="sect1">
-<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+  <h1><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> SIP Refer Support</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Build voice applications for any app, website or voice based communications system with the help of our powerful drag and drop Visual Designer or robust Programmable Voice APIs.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_programmable_voice_features"><a class="anchor" href="#_programmable_voice_features"></a>Programmable Voice features</h2>
-<div class="sectionbody">
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<div class="title">Intelligent Call Control</div>
-<p>Take control over your app call flow including call forwarding and routing, call transfer, collecting input, playing music, recording and storing calls, leaving a voicemail, sending an SMS and email and more.</p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<div class="title">Call Conference</div>
-<p><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> provides robust scalable audio conferencing functionality for your collaboration needs. You can create room-based and ad-hoc conferences with personal identification (PIN) codes that offer full conference room controls for a moderator including muting and dropping participants.</p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<div class="title">Speech recognition</div>
-<p><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Speech Recognition API captures your speech in real-time, transcribes it, and returns text. Automatic speech recognition enable you to create applications and services that listen to users in 119 languages without any pre training and that can act on partial recognition results as your customer speaks. Imagine users driving your next app or service by talking to it!</p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<div class="title">Audio Playback</div>
-<p><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> enable your apps with a rich calling experience that includes playing customized voice prompts and hold music by uploading your choice of audio file.</p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<div class="title">Recording</div>
-<p><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> includes built-in and programmatic media recording. Using Visual Designer or APIs, your team can implement features for recording voicemail and meetings, integrating stored call recordings with your preferred Customer Relationship Management tools or build your own dashboard. <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> is compatible with popular external transcription services to transcribe recordings from voice to text.</p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<div class="title">Bring your own carrier (BYON)</div>
-<p>Bring your own Carrier (BYON) is a way to keep your existing phone provider for incoming or outgoing calls. <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> works with any SIP-capable carrier and gives you the flexibility and control to choose the right phone company with the right plan for you. If you don’t already have a carrier for your phone calls, then we have exclusive partnerships with Carriers that are guaranteed to save you lots on your phone bill</p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<div class="title">SIP Interfaces and API’s</div>
-<p><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> allows you to connect your existing SIP or WebRTC infrastructure from PBX to SIP or WebRTC Clients to the cloud and easily create VoIP call experiences.</p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<div class="title">Text-to-speech</div>
-<p>Create synthesized audio messages that are delivered in a language, accent and gender configured for your users.</p>
-</div>
-</div>
+<p><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> true now supports RFC5589 flow 6.1 SIP Refer that allows clients to transfer calls.</p>
 </div>
 <div class="paragraph">
-<p>Start easily with <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer</p>
+<p>This new feature enables usage of blind transfer capabilities in desk phones and other SIP clients such as Linphone.</p>
 </div>
 <div class="paragraph">
-<p>Create voice applications using a drag and drop interface. <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Visual Designer lets you enrich your application with custom code on your favorite programming language.</p>
+<p>The feature is supported for calls that were created using the Dial verb and was tested with Yealink SIP-T21P E2, Cisco SPA525G and Polycom SoundPoint IP 335 deskphones.</p>
 </div>
 <div class="paragraph">
-<p>You can start building your application from scratch or use one of the many templates available.  Sign in to <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> console and start quickly using the template gallery.</p>
+<p>Currently call transfer is not supported on peer to peer calls.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_check_out_the_voice_api_reference"><a class="anchor" href="#_check_out_the_voice_api_reference"></a>Check out the Voice API reference</h2>
+<h2 id="_example"><a class="anchor" href="#_example"></a>Example</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Let’s start with the simple scenario involving three parties: Alice, Bob and Carol. Alice calls Bob and Bob wants to connect Alice to Carol. Bob presses the Blind Transfer button on his desk phone and types Carol’s number. His phone hungs up and Alice should be connected to Carol. There is also a possibility that Carol will not answer timely or will be busy talking with somebody else. In that case, it’s needed to connect Alice to Bob again, and this is easy to implement with existing <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> features as we’ll see later.</p>
+</div>
+<div class="paragraph">
+<p>For the described scenario, we will need two incoming phone numbers:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="voice-category.html" class="page">Voice</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="available-phone-numbers-api.html" class="page">Available Phone Numbers</a></p>
+<p>Number A which is the number that Alice will call to connect to Bob. This number points to Visual Designer application that dials Bob. For this Number we need to set the refer url application</p>
 </li>
 <li>
-<p><a href="calls-api.html" class="page">Calls</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="calls-api.html#_call_list_resource_uri" class="page">Call List Resource URI</a></p>
-</li>
-<li>
-<p><a href="calls-api.html#_making_a_call_to_a_sip_account" class="page">Making a Call</a></p>
-</li>
-<li>
-<p><a href="calls-api.html#_modifying_live_calls" class="page">Modifying Live Calls</a></p>
-</li>
-<li>
-<p><a href="calls-api.html#examples" class="page">Examples</a></p>
-</li>
-<li>
-<p><a href="calls-api.html#_list_filter" class="page">List Filter</a></p>
-</li>
-<li>
-<p><a href="calls-api.html#_paging_information" class="page">Paging Information</a></p>
+<p>Number B will be used by Bob as a transfer target during the call transfer. This Number points to an Visual Designer application that dials Carol.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p><a href="clients-api.html" class="page">Clients</a></p>
+<div class="paragraph">
+<p>The number A has additional property called Refer URL which could be either Visual Designer application name or any other URL and is used to point to the refer application that will be executed during the call transfer. So configuration for number A should look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/Restcomm_SIP_Refer.png" alt="Incoming Phone Number SIP Refer URL">
+</div>
+</div>
+<div class="paragraph">
+<p>During call transfer, <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will check the SIP Refer request in order to extract the call transfer details and will create the following new parameters:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="clients-api.html#_create_a_client" class="page">Create a Client</a></p>
+<p>Transferor. Transferor is the one that initates the transfer</p>
 </li>
 <li>
-<p><a href="clients-api.html#_delete_a_client" class="page">Delete a Client</a></p>
+<p>Transferee. Transferee is the one that gets transfered</p>
 </li>
 <li>
-<p><a href="clients-api.html#_change_client_s_password" class="page">Change Client&#8217;s Password</a></p>
-</li>
-<li>
-<p><a href="clients-api.html#_get_list_of_available_clients" class="page">Get a List of Available Clients</a></p>
+<p>ReferTarget. Is the transfer target</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p><a href="conferences-api.html" class="page">Conference Management</a></p>
+<div class="paragraph">
+<p>The above new parameters will be part of the HTTP request that <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will do download the RCML and so at Visual Designer you can use the following new core variables:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="conferences-api.html#_supported_operations" class="page">Supported Operations</a></p>
+<p>$core_Transferor</p>
 </li>
 <li>
-<p><a href="conferences-api.html#_conference_list_resource_uri" class="page">Conference List Resource URI</a></p>
+<p>$core_Transferee</p>
+</li>
+<li>
+<p>$core_ReferTarget</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p><a href="participants-api.html" class="page">Conference Participants Management</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="participants-api.html#_participant_list_resource_uri" class="page">Participants List Resource URI</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>For example, the Visual Designer application for number B that will be executed after call transfer can use <code>&lt;Dial&gt;&lt;Number&gt;$core_ReferTarget&lt;/Number&gt;&lt;/Dial&gt;</code> so what ever Bob dialed during the call transfered it will be in the Dial verb of the Refer application.</p>
 </div>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html" class="page">Incoming Phone Numbers</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource" class="page">IncomingPhoneNumber Instance Resource</a></p>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource" class="page">IncomingPhoneNumbers List Resource</a></p>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource" class="page">Local IncomingPhoneNumber Factory Resource</a></p>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource" class="page">Toll-Free IncomingPhoneNumber Factory Resource</a></p>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource" class="page">Mobile IncomingPhoneNumber Factory Resource</a></p>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application" class="page">Attach a phone number to an application</a></p>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_delete_a_phone_number" class="page">Delete a phone number</a></p>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_list_of_phone_numbers" class="page">List of Phone Numbers</a></p>
-</li>
-<li>
-<p><a href="incoming-phone-numbers-api.html#_incoming_phone_number_regex_support" class="page">Incoming Phone Number Regex Support</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<div class="paragraph">
+<p>Call flow exceptions such as no answer, failed etc, should be handled the usual way, by using Dial Action or verbs after Dial.</p>
 </div>
 </div>
 </div>

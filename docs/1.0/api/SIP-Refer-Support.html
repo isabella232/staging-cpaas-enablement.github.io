@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Accessing custom SIP headers from an RCML or Visual Designer application - Restcomm Docs"></title>
+    <title data-custom-title="Restcomm SIP Refer support - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/visual-designer/Accessing-custom-SIP-headers.html
+      https://dev.restcomm.com/docs/1.0/api/SIP-Refer-Support.html
     ">
+    <meta name="description" content="Learn how to send text messages from Visual Designer to a Jitsi SIP phone.">
+    <meta name="keywords" content="sip refer">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -46,7 +48,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle icon-custom-font-right" style="visibility: hidden;">
+      <button class="navigation-toggle icon-custom-font-right">
       </button>
       <!--
       <span class="icon-custom-font-x"><span class="icon-custom-font-back-hamburger"><span class="icon-custom-font-left"><span class="icon-custom-font-right">
@@ -67,7 +69,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
   <div class="navigation-menu is-active" data-panel="menu">
@@ -123,7 +125,7 @@
               icomoon3-font-reference-api
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html">API Overview</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html">API Overview</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -140,7 +142,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_api_endpoint">API Endpoint</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_api_endpoint">API Endpoint</a>
 
             </span>
               </div>
@@ -157,7 +159,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_authentication">Authentication</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_authentication">Authentication</a>
 
             </span>
               </div>
@@ -174,7 +176,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_requests">Requests</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_requests">Requests</a>
 
             </span>
               </div>
@@ -191,7 +193,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_responses">Responses</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_responses">Responses</a>
 
             </span>
               </div>
@@ -208,7 +210,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_paging">Paging</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html#_paging">Paging</a>
 
             </span>
               </div>
@@ -227,7 +229,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/organization-api.html">Management APIs</a>
+              <a class="nav-link nav-flex-item-text" href="organization-api.html">Management APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -244,7 +246,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/organization-api.html">Organization</a>
+              <a class="nav-link nav-flex-item-text" href="organization-api.html">Organization</a>
 
             </span>
               </div>
@@ -261,7 +263,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html">Accounts</a>
+              <a class="nav-link nav-flex-item-text" href="account-api.html">Accounts</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -278,7 +280,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_get_strong">HTTP GET</a>
+              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_get_strong">HTTP GET</a>
 
             </span>
               </div>
@@ -295,7 +297,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_post_strong">HTTP POST</a>
+              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_post_strong">HTTP POST</a>
 
             </span>
               </div>
@@ -312,7 +314,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_put_strong">HTTP PUT</a>
+              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_put_strong">HTTP PUT</a>
 
             </span>
               </div>
@@ -329,7 +331,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_delete_strong">HTTP DELETE</a>
+              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_delete_strong">HTTP DELETE</a>
 
             </span>
               </div>
@@ -348,7 +350,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/applications-api.html">Applications</a>
+              <a class="nav-link nav-flex-item-text" href="applications-api.html">Applications</a>
 
             </span>
               </div>
@@ -365,7 +367,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/notifications-api.html">Notifications</a>
+              <a class="nav-link nav-flex-item-text" href="notifications-api.html">Notifications</a>
 
             </span>
               </div>
@@ -382,7 +384,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/usage-records-api.html">Usage Records</a>
+              <a class="nav-link nav-flex-item-text" href="usage-records-api.html">Usage Records</a>
 
             </span>
               </div>
@@ -401,7 +403,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/voice-category.html">Voice APIs</a>
+              <a class="nav-link nav-flex-item-text" href="voice-category.html">Voice APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -418,7 +420,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/available-phone-numbers-api.html">Available Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="available-phone-numbers-api.html">Available Phone Numbers</a>
 
             </span>
               </div>
@@ -435,7 +437,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html">Calls</a>
+              <a class="nav-link nav-flex-item-text" href="calls-api.html">Calls</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -452,7 +454,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
 
             </span>
               </div>
@@ -469,7 +471,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
+              <a class="nav-link nav-flex-item-text" href="calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
 
             </span>
               </div>
@@ -486,7 +488,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
+              <a class="nav-link nav-flex-item-text" href="calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
 
             </span>
               </div>
@@ -503,7 +505,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#examples">Examples</a>
+              <a class="nav-link nav-flex-item-text" href="calls-api.html#examples">Examples</a>
 
             </span>
               </div>
@@ -520,7 +522,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_list_filter">List Filter</a>
+              <a class="nav-link nav-flex-item-text" href="calls-api.html#_list_filter">List Filter</a>
 
             </span>
               </div>
@@ -537,7 +539,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_paging_information">Paging Information</a>
+              <a class="nav-link nav-flex-item-text" href="calls-api.html#_paging_information">Paging Information</a>
 
             </span>
               </div>
@@ -556,7 +558,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html">Clients</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -573,7 +575,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_create_a_client">Create a Client</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html#_create_a_client">Create a Client</a>
 
             </span>
               </div>
@@ -590,7 +592,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html#_delete_a_client">Delete a Client</a>
 
             </span>
               </div>
@@ -607,7 +609,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
 
             </span>
               </div>
@@ -624,7 +626,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
 
             </span>
               </div>
@@ -643,7 +645,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html">Conference Management</a>
+              <a class="nav-link nav-flex-item-text" href="conferences-api.html">Conference Management</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -660,7 +662,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_supported_operations">Supported Operations</a>
+              <a class="nav-link nav-flex-item-text" href="conferences-api.html#_supported_operations">Supported Operations</a>
 
             </span>
               </div>
@@ -677,7 +679,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
 
             </span>
               </div>
@@ -696,7 +698,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/participants-api.html">Conference Participants Management</a>
+              <a class="nav-link nav-flex-item-text" href="participants-api.html">Conference Participants Management</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -713,7 +715,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
 
             </span>
               </div>
@@ -732,7 +734,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -749,7 +751,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
 
             </span>
               </div>
@@ -766,7 +768,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
 
             </span>
               </div>
@@ -783,7 +785,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -800,7 +802,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -817,7 +819,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -834,7 +836,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
 
             </span>
               </div>
@@ -851,7 +853,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
 
             </span>
               </div>
@@ -868,7 +870,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
 
             </span>
               </div>
@@ -885,7 +887,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
 
             </span>
               </div>
@@ -904,7 +906,24 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/recordings-api.html">Recordings</a>
+              <a class="nav-link nav-flex-item-text" href="recordings-api.html">Recordings</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item is-current-page" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="SIP-Refer-Support.html">SIP Refer Support</a>
 
             </span>
               </div>
@@ -921,24 +940,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/SIP-Refer-Support.html">SIP Refer Support</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/email-api.html">Email</a>
+              <a class="nav-link nav-flex-item-text" href="email-api.html">Email</a>
 
             </span>
               </div>
@@ -957,7 +959,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-category.html">SMS APIs</a>
+              <a class="nav-link nav-flex-item-text" href="sms-category.html">SMS APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -974,7 +976,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/available-phone-numbers-api.html">Available Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="available-phone-numbers-api.html">Available Phone Numbers</a>
 
             </span>
               </div>
@@ -991,7 +993,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html">Clients</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1008,7 +1010,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_create_a_client">Create a Client</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html#_create_a_client">Create a Client</a>
 
             </span>
               </div>
@@ -1025,7 +1027,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html#_delete_a_client">Delete a Client</a>
 
             </span>
               </div>
@@ -1042,7 +1044,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
 
             </span>
               </div>
@@ -1059,7 +1061,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              <a class="nav-link nav-flex-item-text" href="clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
 
             </span>
               </div>
@@ -1078,7 +1080,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1095,7 +1097,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
 
             </span>
               </div>
@@ -1112,7 +1114,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
 
             </span>
               </div>
@@ -1129,7 +1131,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -1146,7 +1148,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -1163,7 +1165,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -1180,7 +1182,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
 
             </span>
               </div>
@@ -1197,7 +1199,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
 
             </span>
               </div>
@@ -1214,7 +1216,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
 
             </span>
               </div>
@@ -1231,7 +1233,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
 
             </span>
               </div>
@@ -1250,7 +1252,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html">Messages</a>
+              <a class="nav-link nav-flex-item-text" href="sms-api.html">Messages</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1267,7 +1269,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_send_sms">Send SMS</a>
+              <a class="nav-link nav-flex-item-text" href="sms-api.html#_send_sms">Send SMS</a>
 
             </span>
               </div>
@@ -1284,7 +1286,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_sms_list">Get SMS List</a>
+              <a class="nav-link nav-flex-item-text" href="sms-api.html#_get_sms_list">Get SMS List</a>
 
             </span>
               </div>
@@ -1301,7 +1303,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
+              <a class="nav-link nav-flex-item-text" href="sms-api.html#_get_single_sms_information">Get single SMS Information</a>
 
             </span>
               </div>
@@ -1318,7 +1320,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_sms_attributes">SMS Attributes</a>
+              <a class="nav-link nav-flex-item-text" href="sms-api.html#_sms_attributes">SMS Attributes</a>
 
             </span>
               </div>
@@ -1337,7 +1339,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/email-api.html">Email</a>
+              <a class="nav-link nav-flex-item-text" href="email-api.html">Email</a>
 
             </span>
               </div>
@@ -1511,7 +1513,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/overview.html">Message Exchange API</a>
+              <a class="nav-link nav-flex-item-text" href="message-exchange/overview.html">Message Exchange API</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1528,7 +1530,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/create-operation.html">Create Operation</a>
+              <a class="nav-link nav-flex-item-text" href="message-exchange/create-operation.html">Create Operation</a>
 
             </span>
               </div>
@@ -1545,7 +1547,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/read-operation.html">Read Operation</a>
+              <a class="nav-link nav-flex-item-text" href="message-exchange/read-operation.html">Read Operation</a>
 
             </span>
               </div>
@@ -1562,7 +1564,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/delete-operation.html">Delete Operation</a>
+              <a class="nav-link nav-flex-item-text" href="message-exchange/delete-operation.html">Delete Operation</a>
 
             </span>
               </div>
@@ -1579,7 +1581,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/common-response-error-codes.html">Error Codes</a>
+              <a class="nav-link nav-flex-item-text" href="message-exchange/common-response-error-codes.html">Error Codes</a>
 
             </span>
               </div>
@@ -1598,7 +1600,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html">Cisco Webex API</a>
+              <a class="nav-link nav-flex-item-text" href="cisco-webex/overview.html">Cisco Webex API</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1615,7 +1617,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html#_create_operation">Create Operation</a>
+              <a class="nav-link nav-flex-item-text" href="cisco-webex/overview.html#_create_operation">Create Operation</a>
 
             </span>
               </div>
@@ -1632,7 +1634,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html#_read_operation">Read Operation</a>
+              <a class="nav-link nav-flex-item-text" href="cisco-webex/overview.html#_read_operation">Read Operation</a>
 
             </span>
               </div>
@@ -1649,7 +1651,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html#_update_enterprise">Update Operation</a>
+              <a class="nav-link nav-flex-item-text" href="cisco-webex/overview.html#_update_enterprise">Update Operation</a>
 
             </span>
               </div>
@@ -1666,7 +1668,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html#_delete_operation">Delete Operation</a>
+              <a class="nav-link nav-flex-item-text" href="cisco-webex/overview.html#_delete_operation">Delete Operation</a>
 
             </span>
               </div>
@@ -2056,71 +2058,93 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="Accessing-custom-SIP-headers.html">Accessing custom SIP headers from an RCML or Visual Designer application</a></li>
+    <li class="crumb"><a href="voice-category.html">CSP:Voice APIs</a></li>
+    <li class="crumb"><a href="SIP-Refer-Support.html">CSP:SIP Refer Support</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Accessing custom SIP headers from an RCML or Visual Designer application</h1>
+  <h1><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> SIP Refer support</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm provides an additional interface to communicate with an RCML/Visual Designer application by means of custom SIP headers. The idea is that all custom SIP headers in a SIP message are detected and converted to HTTP parameters in the request to the RCML application using a convention. The RCML application can consume this parameters. Furthermore, Visual Designer converts these parameters to RVD variables and makes them available to its modules.</p>
+<p>Restcomm true now supports RFC5589 flow 6.1 SIP Refer that allows clients to transfer calls.</p>
+</div>
+<div class="paragraph">
+<p>This new feature enables usage of blind transfer capabilities in desk phones and other SIP clients such as Linphone.</p>
+</div>
+<div class="paragraph">
+<p>The feature is supported for calls that were created using the Dial verb and was tested with Yealink SIP-T21P E2, Cisco SPA525G and Polycom SoundPoint IP 335 deskphones.</p>
+</div>
+<div class="paragraph">
+<p>Currently call transfer is not supported on peer to peer calls.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_rcml_applications"><a class="anchor" href="#_rcml_applications"></a>RCML applications</h2>
+<h2 id="_example"><a class="anchor" href="#_example"></a>Example</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following conventions are followed:</p>
+<p>Let’s start with the simple scenario involving three parties: Alice, Bob and Carol. Alice calls Bob and Bob wants to connect Alice to Carol. Bob presses the Blind Transfer button on his desk phone and types Carol’s number. His phone hungs up and Alice should be connected to Carol. There is also a possibility that Carol will not answer timely or will be busy talking with somebody else. In that case, it’s needed to connect Alice to Bob again, and this is easy to implement with existing Restcomm features as we’ll see later.</p>
+</div>
+<div class="paragraph">
+<p>For the described scenario, we will need two incoming phone numbers:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Any SIP header starting with <strong>X-</strong> prefix is custom.</p>
+<p>Number A which is the number that Alice will call to connect to Bob. This number points to Visual Designer application that dials Bob. For this Number we need to set the refer url application</p>
 </li>
 <li>
-<p>HTTP parameters are created out of each custom SIP header by adding the <strong>SipHeader_</strong> prefix to its name.</p>
+<p>Number B will be used by Bob as a transfer target during the call transfer. This Number points to an Visual Designer application that dials Carol.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Example mappings from SIP header names to HTTP parameter names:</p>
+<p>The number A has additional property called Refer URL which could be either Visual Designer application name or any other URL and is used to point to the refer application that will be executed during the call transfer. So configuration for number A should look like this:</p>
 </div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">X-My-Header -&gt; SipHeader_X-My-Header</code></pre>
+<img src="../_images/Restcomm_SIP_Refer.png" alt="Incoming Phone Number SIP Refer URL">
 </div>
 </div>
 <div class="paragraph">
-<p>Thus the SipHeader_X-My-Header will be available as typical GET or POST parameter in the RCML application.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_visual_designer_applications"><a class="anchor" href="#_visual_designer_applications"></a>Visual Designer applications</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Visual Designer will take the previous convention one step further and create a Visual Designer variable out of the parameter. Thus, the mapping from a custom SIP header to an Visual Designer variable will be the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">X-My-Header -&gt; $core_x_my_header</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>So, if <strong>X-My-Header</strong> SIP header arrives at Restcomm, Visual Designer will have a variable named <strong>$core_x_my_header</strong> available in its modules. Note the following:</p>
+<p>During call transfer, Restcomm will check the SIP Refer request in order to extract the call transfer details and will create the following new parameters:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>All characters are converted to lower case. This happens because although SIP headers are  not case insesitive while Visual Designer variables are.</p>
+<p>Transferor. Transferor is the one that initates the transfer</p>
 </li>
 <li>
-<p>All non alpha numeric characters i.e.<strong> [^A-Za-z0-9_]</strong>,  are converted to `_'  (underscore). That happens because Visual Designer has some additional restrictions for naming variables. Here is the regular expression that is used for invalid characters to underscore:</p>
+<p>Transferee. Transferee is the one that gets transfered</p>
+</li>
+<li>
+<p>ReferTarget. Is the transfer target</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The above new parameters will be part of the HTTP request that Restcomm will do download the RCML and so at Visual Designer you can use the following new core variables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>$core_Transferor</p>
+</li>
+<li>
+<p>$core_Transferee</p>
+</li>
+<li>
+<p>$core_ReferTarget</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, the Visual Designer application for number B that will be executed after call transfer can use <code>&lt;Dial&gt;&lt;Number&gt;$core_ReferTarget&lt;/Number&gt;&lt;/Dial&gt;</code> so what ever Bob dialed during the call transfered it will be in the Dial verb of the Refer application.</p>
+</div>
+<div class="paragraph">
+<p>Call flow exceptions such as no answer, failed etc, should be handled the usual way, by using Dial Action or verbs after Dial.</p>
 </div>
 </div>
 </div>

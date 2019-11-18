@@ -93,7 +93,7 @@
               </ul>
               <ul class="nav-list">
                                                                                                               </ul>
-                          </ul>
+                                      </ul>
               <ul class="nav-list">
                           <ul class="nav-list">
                                                   </ul>
@@ -229,7 +229,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../overview.html">Management APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../organization-api.html">Management APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -264,10 +264,80 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../account-api.html">Accounts</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../account-api.html#_strong_http_get_strong">HTTP GET</a>
 
             </span>
               </div>
                           </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../account-api.html#_strong_http_post_strong">HTTP POST</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../account-api.html#_strong_http_put_strong">HTTP PUT</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../account-api.html#_strong_http_delete_strong">HTTP DELETE</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -837,6 +907,23 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../recordings-api.html">Recordings</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../SIP-Refer-Support.html">SIP Refer Support</a>
 
             </span>
               </div>
@@ -1978,56 +2065,6 @@
 </div>
 <article class="doc fix-anchor-links-position">
   <h1>Cisco Webex API Overview</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_overview">Overview</a></li>
-<li><a href="#_create_operation">Create Operation</a>
-<ul class="sectlevel2">
-<li><a href="#_create_enterprise">Create Enterprise</a></li>
-<li><a href="#_create_webex_teams_mappings">Create Webex Teams Mappings</a></li>
-<li><a href="#_create_sms_enablement_key">Create SMS enablement Key</a></li>
-</ul>
-</li>
-<li><a href="#_update_operation">Update Operation</a>
-<ul class="sectlevel2">
-<li><a href="#_update_enterprise">Update Enterprise</a></li>
-<li><a href="#_update_webex_teams_mappings">Update Webex Teams Mappings</a></li>
-</ul>
-</li>
-<li><a href="#_update_sms_enablement_key">Update SMS enablement Key</a>
-<ul class="sectlevel2">
-<li><a href="#_base_resource_uri_6">Base Resource URI</a></li>
-<li><a href="#_update_sms_key_resource_uri">Update SMS Key Resource URI</a></li>
-<li><a href="#_supported_operations_6">Supported Operations</a></li>
-<li><a href="#_request_parameters_6">Request Parameters</a></li>
-<li><a href="#_response_body_6">Response Body</a></li>
-<li><a href="#_response_parameters_6">Response Parameters</a></li>
-<li><a href="#_example_6">Example:</a></li>
-</ul>
-</li>
-<li><a href="#_delete_operation">Delete Operation</a>
-<ul class="sectlevel2">
-<li><a href="#_delete_enterprise">Delete Enterprise</a></li>
-<li><a href="#_request_parameters_7">Request Parameters</a></li>
-</ul>
-</li>
-<li><a href="#_read_operations">Read Operations</a>
-<ul class="sectlevel2">
-<li><a href="#_get_list_of_enterprise">Get list of Enterprise</a></li>
-<li><a href="#_get_single_enterprise">Get Single Enterprise</a></li>
-<li><a href="#_get_list_of_webex_teams_mappings">Get list of Webex Teams Mappings</a></li>
-<li><a href="#_get_single_webex_teams_mappings">Get Single Webex Teams Mappings</a></li>
-<li><a href="#_get_list_of_webex_teams_messages">Get list of Webex Teams Messages</a></li>
-<li><a href="#_get_single_webex_teams_message">Get Single Webex Teams Message</a></li>
-<li><a href="#_get_sms_key">Get SMS Key</a></li>
-<li><a href="#_get_enterprise_usage_records">Get Enterprise Usage Records</a></li>
-<li><a href="#_get_mappings_usage_records">Get Mappings Usage Records</a></li>
-<li><a href="#_get_messages_usage_records">Get Messages Usage Records</a></li>
-</ul>
-</li>
-</ul>
-</div>
 <div class="sect1">
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
@@ -2046,7 +2083,7 @@
 <p>Read</p>
 </li>
 <li>
-<p>Update and</p>
+<p>Update</p>
 </li>
 <li>
 <p>Delete</p>
@@ -3271,7 +3308,7 @@ https://cloud.restcomm.com/webex/enterprise/WEM68d24872732d41449a5ae21fd149cab9 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_read_operations"><a class="anchor" href="#_read_operations"></a>Read Operations</h2>
+<h2 id="_read_operation"><a class="anchor" href="#_read_operation"></a>Read Operation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Read Operations is basically divided into two main categories
