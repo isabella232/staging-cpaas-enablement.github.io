@@ -1505,7 +1505,7 @@
 <p><a href="cisco-webex-console.html">Getting Started with the Cisco Webex Console</a></p>
 </div>
 <div class="paragraph">
-<p><a href="../api/cisco-webex/overview.html">Getting Started with the Cisco Webex API</a>.</p>
+<p><a href="../api/cisco-webex/overview.html">Getting Started with the Cisco Webex API</a></p>
 </div>
 </div>
 </div>
@@ -1678,20 +1678,136 @@ You must have a valid, working Restcomm account in order to complete this step. 
 <p>Once bot is created in Webex we will get bot access token
 To map Bot with an enterprise we have to call the below api.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>curl -X POST \
-https://cloud.restcomm.com/webex/webexbot/access \
---user  ' {your_account_SID}:{your_account_token}' \
-  -H 'Cache-Control: no-cache' \
-  -H 'Content-Type: application/json' \
--d'{
- “accessToken”:MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692”,
-“username":”Telestax Support Bot”,
-“enterpriseSid”: “WEMe8f1bac1cf0f45d199d3a4d55aacc13a”
-}</pre>
-</div>
-</div>
+<script>
+      function openLanguage(language, index) {
+        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
+        for (const sampleClass of sampleClasses) {
+          sampleClass.style.display = "none";
+        }
+        document.getElementById(language + '-' + index).style.display = "block";
+
+        // first, disable the previously selected tab title
+        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
+        if (previouslyActive.length > 0) {
+          previouslyActive[0].classList.toggle('is-active')
+        }
+
+        // then, enable the newly selected title
+        event.target.classList.toggle('is-active')
+      }
+      </script>
+      <div class="sample-code-bar">
+        <button class="sample-code-button scsIndex-77 is-active" onclick="openLanguage('Curl', 77)">Curl</button>
+        <button class="sample-code-button scsIndex-77" onclick="openLanguage('Nodejs', 77)">Nodejs</button>
+        <button class="sample-code-button scsIndex-77" onclick="openLanguage('Python', 77)">Python</button>
+        <button class="sample-code-button scsIndex-77" onclick="openLanguage('Java', 77)">Java</button>
+      </div>
+      <div id="Curl-77" class="sample-language-77">
+        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json \
+   -H 'Cache-Control: no-cache' \
+   -H 'Content-Type: application/json' \
+   -d 'accessToken=MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692' \
+   -d 'username=Customer Service Bot' \
+   -d 'enterpriseSid=WEMe8f1bac1cf0f45d199d3a4d55aacc13a' \
+   -u 'YourAccountSid:YourAuthToken'
+</code></pre>
+      </div>
+      <div id="Nodejs-77" class="sample-language-77" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
+
+// Provide your Account Sid and Auth Token from your Console Account page
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
+
+request.({
+      method: 'POST',
+      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
+      headers: {
+          'Cache-Control': 'no-cache',
+          'Content-Type': 'application/json'
+      },
+      form: {
+         'accessToken': 'MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692',
+         'username': 'Customer Service Bot',
+         'enterpriseSid': 'WEMe8f1bac1cf0f45d199d3a4d55aacc13a'
+      }
+   },
+   function (error, response, body) {
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
+});
+</code></pre>
+      </div>
+      <div id="Python-77" class="sample-language-77" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+from urllib.parse import urlencode
+
+# Provide your Account Sid and Auth Token from your Console Account page
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
+
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass,
+    'Cache-Control': 'no-cache',
+    'Content-Type': 'application/json',
+    'Content-type': 'application/x-www-form-urlencoded',
+    'Accept': 'text/plain' }
+
+# Update POST parameters accordingly
+params = urlencode({
+   'accessToken': 'MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692',
+   'username': 'Customer Service Bot',
+   'enterpriseSid': 'WEMe8f1bac1cf0f45d199d3a4d55aacc13a'
+})
+
+conn = HTTPSConnection('mycompany.restcomm.com')
+conn.request("POST", '/restcomm/2012-04-24/webex/webexbot/access.json',
+      params, headers=headers)
+res = conn.getresponse()
+
+# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
+</code></pre>
+      </div>
+      <div id="Java-77" class="sample-language-77" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestProperty("Cache-Control", "no-cache");
+      conn.setRequestProperty("Content-Type", "application/json");
+      conn.setRequestMethod("POST");
+      conn.setDoOutput(true);
+      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
+
+      // Update POST parameters accordingly
+      os.writeBytes("accessToken=MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692&" +
+        "username=Customer Service Bot&" +
+        "enterpriseSid=WEMe8f1bac1cf0f45d199d3a4d55aacc13a");
+      os.close();
+
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
+  }
+}
+</code></pre>
+      </div>
 </div>
 </div>
 </div>
