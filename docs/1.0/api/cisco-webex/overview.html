@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Cisco WebEx API Overview - Restcomm Docs"></title>
+    <title data-custom-title="Cisco Webex API Overview - Restcomm Docs"></title>
     <link rel="canonical" href="
       https://dev.restcomm.com/docs/1.0/api/cisco-webex/overview.html
     ">
-    <meta name="description" content="Cisco WebEx API allows Restcomm Accounts to create, manage and get usage records for mappings.">
+    <meta name="description" content="Cisco Webex API allows Restcomm Accounts to create, manage and get usage records for mappings.">
     <meta name="keywords" content="cisco webex api, webex teams api, cisco webex api overview">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
@@ -1977,7 +1977,7 @@
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Cisco WebEx API Overview</h1>
+  <h1>Cisco Webex API Overview</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -1985,14 +1985,14 @@
 <li><a href="#_create_operation">Create Operation</a>
 <ul class="sectlevel2">
 <li><a href="#_create_enterprise">Create Enterprise</a></li>
-<li><a href="#_create_webex_teams_mappings">Create WebEx Teams Mappings</a></li>
+<li><a href="#_create_webex_teams_mappings">Create Webex Teams Mappings</a></li>
 <li><a href="#_create_sms_enablement_key">Create SMS enablement Key</a></li>
 </ul>
 </li>
 <li><a href="#_update_operation">Update Operation</a>
 <ul class="sectlevel2">
 <li><a href="#_update_enterprise">Update Enterprise</a></li>
-<li><a href="#_update_webex_teams_mappings">Update WebEx Teams Mappings</a></li>
+<li><a href="#_update_webex_teams_mappings">Update Webex Teams Mappings</a></li>
 </ul>
 </li>
 <li><a href="#_update_sms_enablement_key">Update SMS enablement Key</a>
@@ -2006,7 +2006,7 @@
 <li><a href="#_example_6">Example:</a></li>
 </ul>
 </li>
-<li><a href="#_4_delete_operation">4 Delete Operation</a>
+<li><a href="#_delete_operation">Delete Operation</a>
 <ul class="sectlevel2">
 <li><a href="#_delete_enterprise">Delete Enterprise</a></li>
 <li><a href="#_request_parameters_7">Request Parameters</a></li>
@@ -2016,10 +2016,10 @@
 <ul class="sectlevel2">
 <li><a href="#_get_list_of_enterprise">Get list of Enterprise</a></li>
 <li><a href="#_get_single_enterprise">Get Single Enterprise</a></li>
-<li><a href="#_get_list_of_webex_teams_mappings">Get list of WebEx Teams Mappings</a></li>
-<li><a href="#_get_single_webex_teams_mappings">Get Single WebEx Teams Mappings</a></li>
-<li><a href="#_get_list_of_webex_teams_messages">Get list of WebEx Teams Messages</a></li>
-<li><a href="#_get_single_webex_teams_message">Get Single WebEx Teams Message</a></li>
+<li><a href="#_get_list_of_webex_teams_mappings">Get list of Webex Teams Mappings</a></li>
+<li><a href="#_get_single_webex_teams_mappings">Get Single Webex Teams Mappings</a></li>
+<li><a href="#_get_list_of_webex_teams_messages">Get list of Webex Teams Messages</a></li>
+<li><a href="#_get_single_webex_teams_message">Get Single Webex Teams Message</a></li>
 <li><a href="#_get_sms_key">Get SMS Key</a></li>
 <li><a href="#_get_enterprise_usage_records">Get Enterprise Usage Records</a></li>
 <li><a href="#_get_mappings_usage_records">Get Mappings Usage Records</a></li>
@@ -2032,10 +2032,10 @@
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm Cisco WebEx helps service providers enable their Enterprise customers to send and receive SMS using WebEex Teams and to manage and monitor the usage.</p>
+<p>Restcomm Cisco Webex helps service providers enable their Enterprise customers to send and receive SMS using WebEex Teams and to manage and monitor the usage.</p>
 </div>
 <div class="paragraph">
-<p>The Restcomm Cisco WebEx allows the following operations.</p>
+<p>The Restcomm Cisco Webex allows the following operations.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2059,7 +2059,7 @@
 <h2 id="_create_operation"><a class="anchor" href="#_create_operation"></a>Create Operation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Create allows CSP Account (Restcomm Admin Account) to create WebEx Teams mappings and also create new Enterprise names for easy segregation of mappings specific to each enterprise account. For example consider MetTel as CSP will have Kohl’s, Walmart etc as Enterprise Customers. Mettel should be able to define the Enterprise and within each Enterprise add unique Cisco WebEx Team’s mappings</p>
+<p>Create allows CSP Account (Restcomm Admin Account) to create Webex Teams mappings and also create new Enterprise names for easy segregation of mappings specific to each enterprise account. For example consider MetTel as CSP will have Kohl’s, Walmart etc as Enterprise Customers. Mettel should be able to define the Enterprise and within each Enterprise add unique Cisco Webex Team’s mappings</p>
 </div>
 <div class="sect2">
 <h3 id="_create_enterprise"><a class="anchor" href="#_create_enterprise"></a>Create Enterprise</h3>
@@ -2098,34 +2098,61 @@ Mandatory name of Enterprise. Name must be unique within given CSP Organisation.
 <div class="paragraph">
 <p>Response Body will carry Code, corresponding message and unique-id if creation of Enterprise was successful.</p>
 </div>
-<div class="paragraph">
-<p>Code
-Description
-code
-Sub-error code for response
-message
-Message describing error if error occured or success message
-data
-Details of enterprise created</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Details of enterprise created</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_parameters"><a class="anchor" href="#_response_parameters"></a>Response Parameters</h4>
 <div class="paragraph">
 <p>Create Enterprise API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-460
-409
-Enterprise name not unique
-Add Enterprise API is called for enterprise name that is already present for this Organisation. There can be same name Organisation in different Orgs.
-Create Enterprise</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Cod</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">460</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name not unique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add Enterprise API is called for enterprise name that is already present for this Organisation. There can be same name Organisation in different Orgs.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Enterprise</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example"><a class="anchor" href="#_example"></a>Example:</h4>
@@ -2175,9 +2202,9 @@ Create Enterprise</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_create_webex_teams_mappings"><a class="anchor" href="#_create_webex_teams_mappings"></a>Create WebEx Teams Mappings</h3>
+<h3 id="_create_webex_teams_mappings"><a class="anchor" href="#_create_webex_teams_mappings"></a>Create Webex Teams Mappings</h3>
 <div class="paragraph">
-<p>Create WebEx Teams Mapping  will add mapping between WebEx Teams Id and SMS enabled number.</p>
+<p>Create Webex Teams Mapping  will add mapping between Webex Teams Id and SMS enabled number.</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_2"><a class="anchor" href="#_base_resource_uri_2"></a>Base Resource URI</h4>
@@ -2186,7 +2213,7 @@ Create Enterprise</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_add_webex_teams_mappings_resource_uri"><a class="anchor" href="#_add_webex_teams_mappings_resource_uri"></a>Add WebEx Teams Mappings Resource URI</h4>
+<h4 id="_add_webex_teams_mappings_resource_uri"><a class="anchor" href="#_add_webex_teams_mappings_resource_uri"></a>Add Webex Teams Mappings Resource URI</h4>
 <div class="paragraph">
 <p>/webex/webexteams/mappings/{enterpriseId}</p>
 </div>
@@ -2194,67 +2221,114 @@ Create Enterprise</p>
 <div class="sect3">
 <h4 id="_supported_operations_2"><a class="anchor" href="#_supported_operations_2"></a>Supported Operations</h4>
 <div class="paragraph">
-<p>HTTP POST: Add WebEx Teams users and SMS enabled numbers mappings</p>
+<p>HTTP POST: Add Webex Teams users and SMS enabled numbers mappings</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_request_parameters_2"><a class="anchor" href="#_request_parameters_2"></a>Request Parameters</h4>
-<div class="paragraph">
-<p>Parameter
-Description
-name
-Optional friendly name of WebEx Team user. If not passed its same as WebEx Teams UserId
-webexAddress
-Mandatory WebEx Team’s User ID to be mapped. This must be unique in whole system
-externalAddress
-Mandatory number that must be mapped with userId. System will also SMS enable this number. This must be unique in the whole system.
-enterpriseId
-Mandatory Enterprise id that was added via “Create Enterprise” API call.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional friendly name of Webex Team user. If not passed its same as Webex Teams UserId</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webexAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory Webex Team’s User ID to be mapped. This must be unique in whole system</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">externalAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory number that must be mapped with userId. System will also SMS enable this number. This must be unique in the whole system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory Enterprise id that was added via “Create Enterprise” API call.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_body_2"><a class="anchor" href="#_response_body_2"></a>Response Body</h4>
 <div class="paragraph">
 <p>Response Body will carry Code, corresponding message and unique-id if creation of Enterprise was successful.</p>
 </div>
-<div class="paragraph">
-<p>Code
-Description
-code
-Sub-error code for response
-message
-Message describing error if error occured or success message
-data
-Details of mapping created</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Details of mapping created</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_parameters_2"><a class="anchor" href="#_response_parameters_2"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Create WebEx Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
+<p>Create Webex Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-465
-409
-webexAddress not unique
-webexAddress is already in use.
-Create Mapping
-466
-409
-externalAddress not unique
-externalAddress is already in use.
-Create Mapping
-467
-409
-Enterprise not found
-Enterprise for which mapping is to be added is not found.
-Create Mapping</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">465</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webexAddress not unique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webexAddress is already in use.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">466</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">externalAddress not unique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">externalAddress is already in use.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">467</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise for which mapping is to be added is not found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Mapping</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_2"><a class="anchor" href="#_example_2"></a>Example:</h4>
@@ -2312,7 +2386,7 @@ https://cloud.restcomm.com/webex/webexteams/mappings/WEM7cc91d3200044d9fbe8e9 \
 <div class="sect2">
 <h3 id="_create_sms_enablement_key"><a class="anchor" href="#_create_sms_enablement_key"></a>Create SMS enablement Key</h3>
 <div class="paragraph">
-<p>SMS enablement key is created by Telestax in back-end and will be sent over email to customers. Customers must set the Key before creating WebEx Teams Mappings. This is key is needed to SMS enable numbers as explained in Teli SMS Enablement document here</p>
+<p>SMS enablement key is created by Telestax in back-end and will be sent over email to customers. Customers must set the Key before creating Webex Teams Mappings. This is key is needed to SMS enable numbers as explained in Teli SMS Enablement document here</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_3"><a class="anchor" href="#_base_resource_uri_3"></a>Base Resource URI</h4>
@@ -2334,30 +2408,56 @@ https://cloud.restcomm.com/webex/webexteams/mappings/WEM7cc91d3200044d9fbe8e9 \
 </div>
 <div class="sect3">
 <h4 id="_request_parameters_3"><a class="anchor" href="#_request_parameters_3"></a>Request Parameters</h4>
-<div class="paragraph">
-<p>Parameter
-Description
-smskey
-Mandatory key that was provided by Telestax support.
-byoc
-Boolean which is false by default in which case Teli is used for SMS enabling number. If users sets this flag to true, “smskey” is not needed and even if set, it will be ignored. If true SMS enabling of number will not happen via Teli.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">smskey</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory key that was provided by Telestax support.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">byoc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean which is false by default in which case Teli is used for SMS enabling number. If users sets this flag to true, “smskey” is not needed and even if set, it will be ignored. If true SMS enabling of number will not happen via Teli.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_body_3"><a class="anchor" href="#_response_body_3"></a>Response Body</h4>
 <div class="paragraph">
 <p>Response Body will carry Code, corresponding message and data of enterprise if creation of Enterprise was successful.</p>
 </div>
-<div class="paragraph">
-<p>Code
-Description
-code
-Sub-error code for response
-message
-Message describing error if error occured or success message
-data
-Unique Key ID generated by system</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Key ID generated by system</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_parameters_3"><a class="anchor" href="#_response_parameters_3"></a>Response Parameters</h4>
@@ -2433,53 +2533,94 @@ Unique Key ID generated by system</p>
 </div>
 <div class="sect3">
 <h4 id="_request_parameters_4"><a class="anchor" href="#_request_parameters_4"></a>Request Parameters</h4>
-<div class="paragraph">
-<p>Parameter
-Description
-EnterpriseId
-Enterprise SID that was generated by calling create Enterprise API
-name
-Mandatory name of Enterprise. Name must be unique within given CSP Organisation.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EnterpriseId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise SID that was generated by calling create Enterprise API</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory name of Enterprise. Name must be unique within given CSP Organisation.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_body_4"><a class="anchor" href="#_response_body_4"></a>Response Body</h4>
 <div class="paragraph">
 <p>Response Body will carry Code, corresponding message and body of updated enterprise if update was successful.</p>
 </div>
-<div class="paragraph">
-<p>Code
-Description
-code
-Sub-error code for response
-message
-Message describing error if error occured or success message
-data
-Details of updated enterprise</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Details of updated enterprise</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_parameters_4"><a class="anchor" href="#_response_parameters_4"></a>Response Parameters</h4>
 <div class="paragraph">
 <p>Update Enterprise API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-470
-409
-Enterprise name not unique
-Update Enterprise API is called for enterprise name that is already present
-Update Enterprise
-471
-409
-Enterprise name not found
-Add Enterprise API is called for enterprise that is not present in system
-Update Enterprise</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">470</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name not unique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Enterprise API is called for enterprise name that is already present</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">471</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add Enterprise API is called for enterprise that is not present in system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Enterprise</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_4"><a class="anchor" href="#_example_4"></a>Example:</h4>
@@ -2529,9 +2670,9 @@ Update Enterprise</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_update_webex_teams_mappings"><a class="anchor" href="#_update_webex_teams_mappings"></a>Update WebEx Teams Mappings</h3>
+<h3 id="_update_webex_teams_mappings"><a class="anchor" href="#_update_webex_teams_mappings"></a>Update Webex Teams Mappings</h3>
 <div class="paragraph">
-<p>Update WebEx Teams Mapping  will update name of  mapping between WebEx Teams Id and SMS enabled number.</p>
+<p>Update Webex Teams Mapping  will update name of  mapping between Webex Teams Id and SMS enabled number.</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_5"><a class="anchor" href="#_base_resource_uri_5"></a>Base Resource URI</h4>
@@ -2540,7 +2681,7 @@ Update Enterprise</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_add_webex_teams_mappings_resource_uri_2"><a class="anchor" href="#_add_webex_teams_mappings_resource_uri_2"></a>Add WebEx Teams Mappings Resource URI</h4>
+<h4 id="_add_webex_teams_mappings_resource_uri_2"><a class="anchor" href="#_add_webex_teams_mappings_resource_uri_2"></a>Add Webex Teams Mappings Resource URI</h4>
 <div class="paragraph">
 <p>/webex/webexteams/mappings/{mappingId}</p>
 </div>
@@ -2548,53 +2689,92 @@ Update Enterprise</p>
 <div class="sect3">
 <h4 id="_supported_operations_5"><a class="anchor" href="#_supported_operations_5"></a>Supported Operations</h4>
 <div class="paragraph">
-<p>HTTP PUT: Update WebEx Teams users name</p>
+<p>HTTP PUT: Update Webex Teams users name</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_request_parameters_5"><a class="anchor" href="#_request_parameters_5"></a>Request Parameters</h4>
-<div class="paragraph">
-<p>Parameter
-Description
-mappingId
-Mandatory unique WebEx Teams vs SMS enabled number mapping id that was generated by calling Add Mapping API
-name
-Optional friendly name of WebEx Team user. If not passed its same as original record</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappingId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory unique Webex Teams vs SMS enabled number mapping id that was generated by calling Add Mapping API</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional friendly name of Webex Team user. If not passed its same as original record</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_body_5"><a class="anchor" href="#_response_body_5"></a>Response Body</h4>
 <div class="paragraph">
 <p>Response Body will carry Code, corresponding message and data of updated mapping if update was successful.</p>
 </div>
-<div class="paragraph">
-<p>Code
-Description
-code
-Sub-error code for response
-message
-Message describing error if error occured or success message
-data
-Details of updated mapping</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Details of updated mapping</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_parameters_5"><a class="anchor" href="#_response_parameters_5"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Update WebEx Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
+<p>Update Webex Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-478
-409
-Mapping not found
-Update is called passing MappingId that is not found for give Organisation
-Update Mapping</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">478</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mapping not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update is called passing MappingId that is not found for give Organisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Mapping</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_5"><a class="anchor" href="#_example_5"></a>Example:</h4>
@@ -2674,50 +2854,91 @@ https://cloud.restcomm.com/webex/webexteams/mappings/WEMac5558ff4312422db129b0a3
 </div>
 <div class="sect2">
 <h3 id="_request_parameters_6"><a class="anchor" href="#_request_parameters_6"></a>Request Parameters</h3>
-<div class="paragraph">
-<p>Parameter
-Description
-smsKeyId
-SMS Key SID that was generated by calling create SMS Key API. This is passed in above
-smsKey
-New SMS key that must be updated
-byoc
-Boolean which is false by default in which case Teli is used for SMS enabling number. If users sets this flag to true, “smskey” is not needed and even if set, it will be ignored. If true SMS enabling of number will not happen via Teli.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">smsKeyId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS Key SID that was generated by calling create SMS Key API. This is passed in above</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">smsKey</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New SMS key that must be updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">byoc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean which is false by default in which case Teli is used for SMS enabling number. If users sets this flag to true, “smskey” is not needed and even if set, it will be ignored. If true SMS enabling of number will not happen via Teli.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_response_body_6"><a class="anchor" href="#_response_body_6"></a>Response Body</h3>
 <div class="paragraph">
 <p>Response Body will carry Code, corresponding message and unique-id if update of smskey was successful.</p>
 </div>
-<div class="paragraph">
-<p>Code
-Description
-code
-Sub-error code for response
-message
-Message describing error if error occured or success message
-data
-Unique SMS Key ID. Same as passed in request.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique SMS Key ID. Same as passed in request.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_response_parameters_6"><a class="anchor" href="#_response_parameters_6"></a>Response Parameters</h3>
 <div class="paragraph">
 <p>Update SMS Key API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-480
-409
-SMS Key Id not found
-Add Enterprise API is called for enterprise that is not present in system
-Update Enterprise</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">480</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS Key Id not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add Enterprise API is called for enterprise that is not present in system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Enterprise</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_example_6"><a class="anchor" href="#_example_6"></a>Example:</h3>
@@ -2756,7 +2977,7 @@ smsKey: "221ba9be-ff31-4c0b-8bd6-f393c2277a80"
 </div>
 </div>
 <div class="sect1">
-<h2 id="_4_delete_operation"><a class="anchor" href="#_4_delete_operation"></a>4 Delete Operation</h2>
+<h2 id="_delete_operation"><a class="anchor" href="#_delete_operation"></a>Delete Operation</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_delete_enterprise"><a class="anchor" href="#_delete_enterprise"></a>Delete Enterprise</h3>
@@ -2784,46 +3005,89 @@ smsKey: "221ba9be-ff31-4c0b-8bd6-f393c2277a80"
 </div>
 <div class="sect2">
 <h3 id="_request_parameters_7"><a class="anchor" href="#_request_parameters_7"></a>Request Parameters</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EnterpriseId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise SID that was generated by calling create Enterprise API</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_response_body_7"><a class="anchor" href="#_response_body_7"></a>Response Body</h4>
 <div class="paragraph">
-<p>Parameter
-Description
-EnterpriseId
-Enterprise SID that was generated by calling create Enterprise API
-4.1.5 Response Body
-Response Body will carry Code, corresponding message and details of enterprise if deletion of Enterprise was successful.</p>
+<p>Response Body will carry Code, corresponding message and details of enterprise if deletion of Enterprise was successful.</p>
 </div>
-<div class="paragraph">
-<p>Code
-Description
-code
-Sub-error code for response
-message
-Message describing error if error occured or success message
-data
-Details of enterprise that is deleted</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Details of enterprise that is deleted</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_parameters_7"><a class="anchor" href="#_response_parameters_7"></a>Response Parameters</h4>
 <div class="paragraph">
 <p>Delete Enterprise API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-482
-409
-Enterprise has mappings
-Delete Enterprise API is called for enterprise name that has Mappings associated.
-Update Enterprise
-481
-409
-Enterprise name not found
-Delete Enterprise API is called for enterprise that is not present in system
-Update Enterprise</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">482</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise has mappings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Enterprise API is called for enterprise name that has Mappings associated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">481</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Enterprise API is called for enterprise that is not present in system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Enterprise</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_7"><a class="anchor" href="#_example_7"></a>Example:</h4>
@@ -2862,9 +3126,9 @@ https://cloud.restcomm.com/webex/enterprise/WEM68d24872732d41449a5ae21fd149cab9 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_delete_webex_teams_mappings"><a class="anchor" href="#_delete_webex_teams_mappings"></a>Delete WebEx Teams Mappings</h4>
+<h4 id="_delete_webex_teams_mappings"><a class="anchor" href="#_delete_webex_teams_mappings"></a>Delete Webex Teams Mappings</h4>
 <div class="paragraph">
-<p>Delete WebEx Teams Mapping  will delete mapping between WebEx Teams Id and SMS enabled number.</p>
+<p>Delete Webex Teams Mapping  will delete mapping between Webex Teams Id and SMS enabled number.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2874,7 +3138,7 @@ https://cloud.restcomm.com/webex/enterprise/WEM68d24872732d41449a5ae21fd149cab9 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_add_webex_teams_mappings_resource_uri_3"><a class="anchor" href="#_add_webex_teams_mappings_resource_uri_3"></a>Add WebEx Teams Mappings Resource URI</h4>
+<h4 id="_add_webex_teams_mappings_resource_uri_3"><a class="anchor" href="#_add_webex_teams_mappings_resource_uri_3"></a>Add Webex Teams Mappings Resource URI</h4>
 <div class="paragraph">
 <p>/webex/webexteams/mappings/{mappingId}</p>
 </div>
@@ -2882,51 +3146,88 @@ https://cloud.restcomm.com/webex/enterprise/WEM68d24872732d41449a5ae21fd149cab9 
 <div class="sect3">
 <h4 id="_supported_operations_8"><a class="anchor" href="#_supported_operations_8"></a>Supported Operations</h4>
 <div class="paragraph">
-<p>HTTP DELETE: Delete WebEx Teams users and SMS enabled numbers mappings</p>
+<p>HTTP DELETE: Delete Webex Teams users and SMS enabled numbers mappings</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_request_parameters_8"><a class="anchor" href="#_request_parameters_8"></a>Request Parameters</h4>
-<div class="paragraph">
-<p>Parameter
-Description
-mappingId
-Unique WebEx Teams vs SMS enabled number mapping id that was generated by calling Add Mapping API</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappingId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Webex Teams vs SMS enabled number mapping id that was generated by calling Add Mapping API</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
-<h4 id="_response_body_7"><a class="anchor" href="#_response_body_7"></a>Response Body</h4>
+<h4 id="_response_body_8"><a class="anchor" href="#_response_body_8"></a>Response Body</h4>
 <div class="paragraph">
 <p>Response Body will carry Code, corresponding message and details of mapping if deletion of mapping was successful.</p>
 </div>
-<div class="paragraph">
-<p>Code
-Description
-code
-Sub-error code for response
-message
-Message describing error if error occured or success message
-data
-Details of mapping that is deleted</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Details of mapping that is deleted</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_response_parameters_8"><a class="anchor" href="#_response_parameters_8"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Delete WebEx Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
+<p>Delete Webex Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-485
-409
-Mapping not found
-Delete is called passing MappingId that is not found for give Organisation
-Delete Mapping</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">485</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mapping not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete is called passing MappingId that is not found for give Organisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Mapping</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_8"><a class="anchor" href="#_example_8"></a>Example:</h4>
@@ -3005,13 +3306,26 @@ The UsageRecords REST resource provides a simple API to retrieve usage made by y
 <div class="paragraph">
 <p>The following paging parameters are supported</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-page
-Which page of Enterprise records to return, starting from 0.
-per_page</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which page of Enterprise records to return, starting from 0.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">per_page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Number of records returned per page</p>
 </div>
@@ -3021,18 +3335,34 @@ per_page</p>
 <div class="paragraph">
 <p>Following filtering parameters are supported</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-name
-Optional parameter. Only show Enterprises that match name text, partially or fully.
-startTime
-Optional parameter. Only show enterprises that were created on this date/time or later, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-05T22:45:32) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-05). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.
-endTime
-Optional parameter. Only show enterprises that were created on this date/time or earlier, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-06T02:10:03) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-06). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.
-accountSid
-Optional parameter. Only show Enterprise that match passed accountSid</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show Enterprises that match name text, partially or fully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show enterprises that were created on this date/time or later, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-05T22:45:32) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-05). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show enterprises that were created on this date/time or earlier, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-06T02:10:03) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-06). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show Enterprise that match passed accountSid</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_sorting_information"><a class="anchor" href="#_sorting_information"></a>Sorting Information</h4>
@@ -3041,16 +3371,30 @@ Optional parameter. Only show Enterprise that match passed accountSid</p>
 </div>
 <div class="sect4">
 <h5 id="_sort_attributes"><a class="anchor" href="#_sort_attributes"></a>Sort Attributes</h5>
-<div class="paragraph">
-<p>Parameter
-Description
-name
-Sort by name
-dateUpdated
-Sort by date when Enterprise was Updated
-mappings
-Sort by number of mappings</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by date when Enterprise was Updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by number of mappings</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -3061,26 +3405,50 @@ Sort by number of mappings</p>
 <div class="paragraph">
 <p>The response returned is JSON body as shown in the example below. Each SDR parameters are as explained below</p>
 </div>
-<div class="paragraph">
-<p>Response Parameter
-Description
-sid
-Unique Enterprise Id
-accountSid
-Unique Restcomm Account that created/updated this particular Enterprise
-accountEmail
- Restcomm Account email  that created/updated this particular Enterprise
-dateCreated
-Timestamp when this Enterprise was created
-dateUpdated
-Timestamp when this Enterprise was updated
-name
-Name of this Enterprise
-mappingsCount
-Number of WebEx Teams to SMS enabled Numbers mappings under this Enterprise
-status
-Status of enterprise</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Response Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Enterprise Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Restcomm Account that created/updated this particular Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm Account email  that created/updated this particular Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this Enterprise was created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this Enterprise was updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of this Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappingsCount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Webex Teams to SMS enabled Numbers mappings under this Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of enterprise</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_9"><a class="anchor" href="#_example_9"></a>Example:</h4>
@@ -3167,18 +3535,31 @@ Status of enterprise</p>
 <div class="paragraph">
 <p>Search Enterprise API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-490
-409
-Invalid EnterpriseId
-Search is called passing EnterpriseId which is not present in system or doesn’t belong to same Organisation
-Search</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">490</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid EnterpriseId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search is called passing EnterpriseId which is not present in system or doesn’t belong to same Organisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_10"><a class="anchor" href="#_example_10"></a>Example:</h4>
@@ -3218,9 +3599,9 @@ Search</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_get_list_of_webex_teams_mappings"><a class="anchor" href="#_get_list_of_webex_teams_mappings"></a>Get list of WebEx Teams Mappings</h3>
+<h3 id="_get_list_of_webex_teams_mappings"><a class="anchor" href="#_get_list_of_webex_teams_mappings"></a>Get list of Webex Teams Mappings</h3>
 <div class="paragraph">
-<p>List WebEx Teams Mappings API allows users to list all the Mappings for specific Organisation  which means under that CSP.</p>
+<p>List Webex Teams Mappings API allows users to list all the Mappings for specific Organisation  which means under that CSP.</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_11"><a class="anchor" href="#_base_resource_uri_11"></a>Base Resource URI</h4>
@@ -3241,13 +3622,26 @@ HTTP GET: List all Mappings under Organisation</p>
 <div class="paragraph">
 <p>The following paging parameters are supported</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-page
-Which page of Mappings records to return, starting from 0.
-per_page</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which page of Mappings records to return, starting from 0.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">per_page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Number of records returned per page</p>
 </div>
@@ -3257,26 +3651,46 @@ per_page</p>
 <div class="paragraph">
 <p>Following filtering parameters are supported</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-enterpriseSid</p>
-</div>
-<div class="paragraph">
-<p>Optional parameter to show all mappings under that Enterprise Id
-startTime
-Optional parameter. Only show mappings that were created on this date/time or later, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-05T22:45:32) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-05). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.
-endTime
-Optional parameter. Only show mappings that were created on this date/time or earlier, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-06T02:10:03) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-06). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.
-name
-Optional parameter. Only show mappings that match name text, partially or fully.
-webexAddress
-Optional parameter. Only show mappings that match webex id text, partially or fully.
-externalAddress
-Optional parameter. Only show mappings that match externalAddress text, partially or fully.
-accountSid
-Optional parameter. Only show mappings that match passed accountSid</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter to show all mappings under that Enterprise Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show mappings that were created on this date/time or later, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-05T22:45:32) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-05). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show mappings that were created on this date/time or earlier, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-06T02:10:03) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-06). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show mappings that match name text, partially or fully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webexAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show mappings that match webex id text, partially or fully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">externalAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show mappings that match externalAddress text, partially or fully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show mappings that match passed accountSid</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_sorting_information_2"><a class="anchor" href="#_sorting_information_2"></a>Sorting Information</h4>
@@ -3285,18 +3699,34 @@ Optional parameter. Only show mappings that match passed accountSid</p>
 </div>
 <div class="sect4">
 <h5 id="_sort_attributes_2"><a class="anchor" href="#_sort_attributes_2"></a>Sort Attributes</h5>
-<div class="paragraph">
-<p>Parameter
-Description
-name
-Sort by name
-dateUpdated
-Sort by date when mapping was Updated
-webexAddress
-Sort by webEx Address
-externalAddress
-Sort by external Address</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by date when mapping was Updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webexAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by webEx Address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">externalAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by external Address</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -3307,30 +3737,58 @@ Sort by external Address</p>
 <div class="paragraph">
 <p>The response returned is JSON body as shown in the example below. Each SDR parameters are as explained below</p>
 </div>
-<div class="paragraph">
-<p>Response Parameter
-Description
-sid
-Unique WebEx Team mapping Id
-enterpriseSid
-Enterprise Id under which this Mapping is created
-accountSid
-Unique Restcomm Account that created/updated this particular mapping
-dateCreated
-Timestamp when this mapping  was created
-dateUpdated
-Timestamp when this mapping was updated
-name
-Friendly name of this user
-webexAddress
-Cisco WebEx id of this user
-enterpriseName
-Enterprise name  under which this Mapping is created
-accountEmail
- Restcomm Account email  that created/updated this particular mapping
-externalAddress
-SMS enabled number mapped to this WebEx id.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Response Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Webex Team mapping Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise Id under which this Mapping is created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Restcomm Account that created/updated this particular mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this mapping  was created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this mapping was updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Friendly name of this user</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webexAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cisco Webex id of this user</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name  under which this Mapping is created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm Account email  that created/updated this particular mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">externalAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMS enabled number mapped to this Webex id.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_11"><a class="anchor" href="#_example_11"></a>Example:</h4>
@@ -3407,9 +3865,9 @@ SMS enabled number mapped to this WebEx id.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_get_single_webex_teams_mappings"><a class="anchor" href="#_get_single_webex_teams_mappings"></a>Get Single WebEx Teams Mappings</h3>
+<h3 id="_get_single_webex_teams_mappings"><a class="anchor" href="#_get_single_webex_teams_mappings"></a>Get Single Webex Teams Mappings</h3>
 <div class="paragraph">
-<p>Single WebEx Team Mapping search API allows users to retrieve specific mapping created under that “Organisation” which means under that CSP.</p>
+<p>Single Webex Team Mapping search API allows users to retrieve specific mapping created under that “Organisation” which means under that CSP.</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_12"><a class="anchor" href="#_base_resource_uri_12"></a>Base Resource URI</h4>
@@ -3434,18 +3892,31 @@ SMS enabled number mapped to this WebEx id.</p>
 <div class="paragraph">
 <p>Search Enterprise API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-491
-409
-Invalid MappingId
-Search is called passing MappingId which is not present in system or doesn’t belong to same Organisation
-Search</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">491</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid MappingId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search is called passing MappingId which is not present in system or doesn’t belong to same Organisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_12"><a class="anchor" href="#_example_12"></a>Example:</h4>
@@ -3487,9 +3958,9 @@ Search</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_get_list_of_webex_teams_messages"><a class="anchor" href="#_get_list_of_webex_teams_messages"></a>Get list of WebEx Teams Messages</h3>
+<h3 id="_get_list_of_webex_teams_messages"><a class="anchor" href="#_get_list_of_webex_teams_messages"></a>Get list of Webex Teams Messages</h3>
 <div class="paragraph">
-<p>List WebEx Teams Messages API allows users to list all the Messages for specific Organisation  which means under that CSP.</p>
+<p>List Webex Teams Messages API allows users to list all the Messages for specific Organisation  which means under that CSP.</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_13"><a class="anchor" href="#_base_resource_uri_13"></a>Base Resource URI</h4>
@@ -3514,13 +3985,26 @@ Search</p>
 <div class="paragraph">
 <p>The following paging parameters are supported</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-page
-Which page of Messages records to return, starting from 0.
-per_page</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which page of Messages records to return, starting from 0.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">per_page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Number of records returned per page</p>
 </div>
@@ -3530,42 +4014,62 @@ per_page</p>
 <div class="paragraph">
 <p>Following filtering parameters are supported</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-enterpriseSid</p>
-</div>
-<div class="paragraph">
-<p>Optional parameter to show all messages under that Enterprise Id
-startTime
-Optional parameter. Only show messages that were created on this date/time or later, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-05T22:45:32) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-05). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.
-endTime
-Optional parameter. Only show messages that were created on this date/time or earlier, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-06T02:10:03) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-06). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.
-to
-Optional parameter. Only Show the list of messages that are sent to this number or WebExId
-from
-Optional parameter. Only Show the list of messages that are sent from this number or WebExId
-direction
-Optional parameter.Only Show the list of messages of particular direction(INBOUND,OUTBOUND).
-Inbound means messages coming from Mobile to WebEx Id.
-Outbound means message sent from WebEx Id to Mobile</p>
-</div>
-<div class="paragraph">
-<p>type
-Optional parameter.Only  Show the list of messages of particular type(SMS,MMS)
-channelStatus</p>
-</div>
-<div class="paragraph">
-<p>Optional parameter. Only include messages  list that match underlying channel status, partially or fully in any position
-channelErrorCode</p>
-</div>
-<div class="paragraph">
-<p>Optional parameter. Only include messages  list that match underlying channel Error code, partially or fully in any position
-channelErrorMessage</p>
-</div>
-<div class="paragraph">
-<p>Optional parameter. Only include messages  list that match underlying channel error message, partially or fully in any position</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter to show all messages under that Enterprise Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show messages that were created on this date/time or later, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-05T22:45:32) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-05). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show messages that were created on this date/time or earlier, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-06T02:10:03) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-06). When only a date is provided the time is assumed to be at midnight of the given date. Note that the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only Show the list of messages that are sent to this number or WebExId</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only Show the list of messages that are sent from this number or WebExId</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter.Only Show the list of messages of particular direction(INBOUND,OUTBOUND).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inbound means messages coming from Mobile to WebEx Id.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Outbound means message sent from WebEx Id to Mobile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter.Only  Show the list of messages of particular type(SMS,MMS)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only include messages  list that match underlying channel status, partially or fully in any position</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelErrorCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only include messages  list that match underlying channel Error code, partially or fully in any position</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelErrorMessage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only include messages  list that match underlying channel error message, partially or fully in any position</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_sorting_information_3"><a class="anchor" href="#_sorting_information_3"></a>Sorting Information</h4>
@@ -3574,16 +4078,30 @@ channelErrorMessage</p>
 </div>
 <div class="sect4">
 <h5 id="_sort_attributes_3"><a class="anchor" href="#_sort_attributes_3"></a>Sort Attributes</h5>
-<div class="paragraph">
-<p>Parameter
-Description
-dateCreated
-Sort by date when message was created
-from
-Sort by from
-to
-Sort by to</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by date when message was created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by from</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by to</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -3594,30 +4112,56 @@ Sort by to</p>
 <div class="paragraph">
 <p>The response returned is JSON body as shown in the example below. Each SDR parameters are as explained below</p>
 </div>
-<div class="paragraph">
-<p>Response Parameter
-Description
-sid
-Unique WebEx Team message Id
-enterpriseSid
-Enterprise Id under which this Message  is created
-accountSid
-Unique Restcomm Account that created/updated this particular message
-dateCreated
-Timestamp when this message was created
-dateUpdated
-Timestamp when this message was updated
-from
-From which number/email the message is sent
-to
-To which number/email the message is sent
-direction
-Direction of message(INBOUND,OUTBOUND).
-1.Inbound means messages coming from Mobile to WebEx Id.
-2.Outbound means message sent from WebEx Id to Mobile
-type
-Type of message (SMS,MMS)</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Response Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Webex Team message Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise Id under which this Message  is created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Restcomm Account that created/updated this particular message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this message was created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this message was updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">From which number/email the message is sent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To which number/email the message is sent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direction of message (INBOUND,OUTBOUND).
+1. Inbound means messages coming from Mobile to Webex Id.
+2. Outbound means message sent from Webex Id to Mobile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type of message (SMS,MMS)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_13"><a class="anchor" href="#_example_13"></a>Example:</h4>
@@ -3679,9 +4223,9 @@ Type of message (SMS,MMS)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_get_single_webex_teams_message"><a class="anchor" href="#_get_single_webex_teams_message"></a>Get Single WebEx Teams Message</h3>
+<h3 id="_get_single_webex_teams_message"><a class="anchor" href="#_get_single_webex_teams_message"></a>Get Single Webex Teams Message</h3>
 <div class="paragraph">
-<p>Single WebEx Team Message search API allows users to retrieve specific message created under that “Organisation” which means under that CSP.</p>
+<p>Single Webex Team Message search API allows users to retrieve specific message created under that “Organisation” which means under that CSP.</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_14"><a class="anchor" href="#_base_resource_uri_14"></a>Base Resource URI</h4>
@@ -3707,16 +4251,8 @@ Type of message (SMS,MMS)</p>
 <p>Search Enterprise API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
 </div>
 <div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-491
-409
-Invalid MappingId
-Search is called passing MappingId which is not present in system or doesn’t belong to same Organisation
-Search</p>
+<p>|Error Code |HTTP Status |Error Message |Description |Category
+|491 |409 |Invalid MappingId |Search is called passing MappingId which is not present in system or doesn’t belong to same Organisation |Search</p>
 </div>
 </div>
 <div class="sect3">
@@ -3846,19 +4382,30 @@ Search</p>
 <div class="paragraph">
 <p>Usage filter will return usage records for passed filter. Following filtering parameters are supported.</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-startDate
-Only include usage that has occurred on or after this date. Format is
-YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, StartDate=-30days will make StartDate be 30 days before today.
-endDate
-Only include usage that has occurred on or before this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, EndDate=+30days will make EndDate be 30 days from today.
-accountSid</p>
-</div>
-<div class="paragraph">
-<p>Only include Usage record that is initiated by this specific accountSid. The accountSid should be of one of the sub account of this account.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include usage that has occurred on or after this date. Format is</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, StartDate=-30days will make StartDate be 30 days before today.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endDate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include usage that has occurred on or before this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, EndDate=+30days will make EndDate be 30 days from today.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect4">
 <h5 id="_example_16"><a class="anchor" href="#_example_16"></a>Example:</h5>
 <div class="paragraph">
@@ -3911,24 +4458,46 @@ accountSid</p>
 <div class="paragraph">
 <p>Supported subresources are</p>
 </div>
-<div class="paragraph">
-<p>Subresource
-Description
-daily
-Return Usage record on a daily basis. If no date filter is passed, last 30 days usage is retrieved.
-monthly
-Return Usage record on a monthly basis. If no date filter is passed, last 12 months usage is retrieved
-yearly
-Return Usage record on yearly basis. If no date filter is passed, only this year and previous year usage is retrieved.
-today
-Return Usage record on today.
-yesterday
-Return Usage record on yesterday.
-thismonth
-Return Usage record on this month.
-lastmonth
-Return Usage record on last month.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subresource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">daily</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on a daily basis. If no date filter is passed, last 30 days usage is retrieved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">monthly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on a monthly basis. If no date filter is passed, last 12 months usage is retrieved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yearly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on yearly basis. If no date filter is passed, only this year and previous year usage is retrieved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">today</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yesterday</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on yesterday.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thismonth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on this month.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lastmonth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on last month.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>“startDate” and “endDate” filters can also be passed with subresource to get usage date for that given time period.</p>
 </div>
@@ -4020,20 +4589,34 @@ Return Usage record on last month.</p>
 <div class="paragraph">
 <p>Usage filter will return usage records for passed filter. Following filtering parameters are supported.</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-startDate
-Only include usage that has occurred on or after this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, StartDate=-30days will make StartDate be 30 days before today.
-endDate
-Only include usage that has occurred on or before this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, EndDate=+30days will make EndDate be 30 days from today.
-enterpriseSid</p>
-</div>
-<div class="paragraph">
-<p>Usage records only for passed enterprise ID
-accountSid
-Only include Usage record that is initiated by this specific accountSid. The accountSid should be of one of the sub account of this account.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include usage that has occurred on or after this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, StartDate=-30days will make StartDate be 30 days before today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include usage that has occurred on or before this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, EndDate=+30days will make EndDate be 30 days from today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usage records only for passed enterprise ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage record that is initiated by this specific accountSid. The accountSid should be of one of the sub account of this account.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect4">
 <h5 id="_example_18"><a class="anchor" href="#_example_18"></a>Example:</h5>
 <div class="paragraph">
@@ -4078,24 +4661,46 @@ https://cloud.restcomm.com/webex/webexteams/mappings/usage/records \
 <div class="paragraph">
 <p>Supported subresources are</p>
 </div>
-<div class="paragraph">
-<p>Subresource
-Description
-daily
-Return Usage record on a daily basis. If no date filter is passed, last 30 days usage is retrieved.
-monthly
-Return Usage record on a monthly basis. If no date filter is passed, last 12 months usage is retrieved
-yearly
-Return Usage record on yearly basis. If no date filter is passed, only this year and previous year usage is retrieved.
-today
-Return Usage record on today.
-yesterday
-Return Usage record on yesterday.
-thismonth
-Return Usage record on this month.
-lastmonth
-Return Usage record on last month.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subresource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">daily</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on a daily basis. If no date filter is passed, last 30 days usage is retrieved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">monthly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on a monthly basis. If no date filter is passed, last 12 months usage is retrieved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yearly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on yearly basis. If no date filter is passed, only this year and previous year usage is retrieved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">today</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yesterday</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on yesterday.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thismonth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on this month.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lastmonth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on last month.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>“startDate” and “endDate” filters can also be passed with subresource to get usage date for that given time period.</p>
 </div>
@@ -4202,28 +4807,52 @@ Return Usage record on last month.</p>
 <div class="paragraph">
 <p>Usage filter will return usage records for passed filter. Following filtering parameters are supported.</p>
 </div>
-<div class="paragraph">
-<p>Query Parameter
-Description
-startDate
-Only include usage that has occurred on or after this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, StartDate=-30days will make StartDate be 30 days before today.
-endDate
-Only include usage that has occurred on or before this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, EndDate=+30days will make EndDate be 30 days from today.
-enterpriseSid
-Usage records only for passed enterprise ID
-from
-From which number/email the message is sent
-to
-To which number/email the message is sent
-direction
-Direction of message(INBOUND,OUTBOUND).
-1.Inbound means messages coming from Mobile to WebEx Id.
-2.Outbound means message sent from WebEx Id to Mobile
-type
-Type of message (SMS,MMS)
-channelStatus
-Usage Records With this channel status</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include usage that has occurred on or after this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, StartDate=-30days will make StartDate be 30 days before today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include usage that has occurred on or before this date. Format is YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify offsets to today. For example, EndDate=+30days will make EndDate be 30 days from today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usage records only for passed enterprise ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">From which number/email the message is sent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To which number/email the message is sent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direction of message(INBOUND,OUTBOUND).
+1. Inbound means messages coming from Mobile to Webex Id.
+2. Outbound means message sent from Webex Id to Mobile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type of message (SMS,MMS)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usage Records With this channel status</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect4">
 <h5 id="_example_20"><a class="anchor" href="#_example_20"></a>Example:</h5>
 <div class="paragraph">
@@ -4266,26 +4895,48 @@ Usage Records With this channel status</p>
 <p>/webex/webexteams/messages/usage/records/{Subresource}</p>
 </div>
 <div class="paragraph">
-<p>Supported subresources are</p>
+<p>Supported subresources:</p>
 </div>
-<div class="paragraph">
-<p>Subresource
-Description
-daily
-Return Usage record on a daily basis. If no date filter is passed, last 30 days usage is retrieved.
-monthly
-Return Usage record on a monthly basis. If no date filter is passed, last 12 months usage is retrieved
-yearly
-Return Usage record on yearly basis. If no date filter is passed, only this year and previous year usage is retrieved.
-today
-Return Usage record on today.
-yesterday
-Return Usage record on yesterday.
-thismonth
-Return Usage record on this month.
-lastmonth
-Return Usage record on last month.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subresource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">daily</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on a daily basis. If no date filter is passed, last 30 days usage is retrieved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">monthly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on a monthly basis. If no date filter is passed, last 12 months usage is retrieved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yearly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on yearly basis. If no date filter is passed, only this year and previous year usage is retrieved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">today</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yesterday</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on yesterday.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thismonth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on this month.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lastmonth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Usage record on last month.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>“startDate” and “endDate” filters can also be passed with subresource to get usage date for that given time period.</p>
 </div>
