@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="csp-persona">
+<html lang="en" class="enterprise-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
     <title data-custom-title="Auto Attendant API - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/enterprise/api/auto-attendant-api.html
+      https://cloud.restcomm.com/docs/api/auto-attendant-api.html
     ">
     <meta name="description" content="Cisco Webex API allows Rest">
     <meta name="keywords" content="cisco webex api, webex teams a">
     <meta name="generator" content="Antora 1.1.1">
-    <link rel="icon" type="image/png" href="../../../../_/img/favicon.png"/>
+    <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
@@ -20,7 +20,7 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article" >
+  <body class="article" style="display: none">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -31,24 +31,33 @@
       <a class="navbar-item header-logo-link" href="/docs/">
       </a>
     </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <!-- TODO: Bring back when we integrate with searching facilities
-        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
-        -->
-        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
-        <div class="navbar-item">
-          <span>
-            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
-          </span>
-        </div>
-      </div>
-    </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
+  <nav class="navbar-enterprise">
+    <div class="navbar-enterprise-button-container">
+      <button class="navigation-toggle icon-custom-font-right">
+      </button>
+      <!--
+      <span class="icon-custom-font-x"><span class="icon-custom-font-back-hamburger"><span class="icon-custom-font-left"><span class="icon-custom-font-right">
+      -->
+      <button class="navbar-enterprise-burger icon-custom-font-back-hamburger">
+      </button>
+    </div>
+    <div class="navbar-enterprise-container">
+
+
+
+        <a class="navbar-enterprise-item" href="/docs/api/overview.html">Reference</a>
+        <a class="navbar-enterprise-item" href="/docs/solutions/index.html">Solutions</a>
+        <a class="navbar-enterprise-item" href="/docs/tutorials/index.html">Tutorials</a>
+        <a class="navbar-enterprise-item" href="/docs/visual-designer/index.html">Visual Designer</a>
+
+
+    </div>
+  </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
   <div class="navigation-menu is-active" data-panel="menu">
@@ -1652,50 +1661,6 @@
 </div>
 <article class="doc fix-anchor-links-position">
   <h1>Auto Attendant API</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_overview">Overview</a></li>
-<li><a href="#_create_operation">Create Operation</a>
-<ul class="sectlevel2">
-<li><a href="#_create_user">Create User</a></li>
-<li><a href="#_create_announcement">Create Announcement</a></li>
-<li><a href="#_create_schedule">Create Schedule</a></li>
-<li><a href="#_create_menu">Create Menu</a></li>
-</ul>
-</li>
-<li><a href="#_update_operation">Update Operation</a>
-<ul class="sectlevel2">
-<li><a href="#_update_user">Update User</a></li>
-<li><a href="#_update_announcement">Update Announcement</a></li>
-<li><a href="#_update_menu">Update Menu</a></li>
-<li><a href="#_update_auto_attendant_system">Update Auto Attendant System</a></li>
-<li><a href="#_update_phone_numbers">Update Phone numbers</a></li>
-</ul>
-</li>
-<li><a href="#_delete_operation">Delete Operation</a>
-<ul class="sectlevel2">
-<li><a href="#_delete_announcement">Delete Announcement</a></li>
-<li><a href="#_delete_menu">Delete Menu</a></li>
-</ul>
-</li>
-<li><a href="#_read_operations">Read Operations</a>
-<ul class="sectlevel2">
-<li><a href="#_get_list_of_users">Get list of Users</a></li>
-<li><a href="#_get_single_user">Get Single User</a></li>
-<li><a href="#_get_list_of_announcement">Get list of Announcement</a></li>
-<li><a href="#_get_single_announcement">Get Single Announcement</a></li>
-<li><a href="#_get_schedule">Get Schedule</a></li>
-<li><a href="#_get_list_of_menus">Get list of Menus</a></li>
-<li><a href="#_get_single_menu">Get Single Menu</a></li>
-<li><a href="#_get_list_of_aa_systems">Get list of AA-Systems</a></li>
-<li><a href="#_get_single_aa_system">Get Single AA-System</a></li>
-<li><a href="#_get_list_of_phone_numbers">Get list of Phone Numbers</a></li>
-<li><a href="#_get_single_phone_number">Get Single Phone number</a></li>
-</ul>
-</li>
-</ul>
-</div>
 <div class="sect1">
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
@@ -1749,15 +1714,23 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <div class="paragraph">
 <p>This endpoint will be used to create user depending on role as explained below</p>
 </div>
-<div class="paragraph">
-<p>SUPPORT can add another user with role SUPPORT(This role is not yet defined to be done in future)
-CSP_ADMIN can create users with role ENTERPRISE_ADMIN  (a.k.a BG Admin) and AA_ADMIN
-ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within same Enterprise</p>
+<div class="ulist">
+<ul>
+<li>
+<p>SUPPORT can add another user with role SUPPORT(This role is not yet defined to be done in future)</p>
+</li>
+<li>
+<p>CSP_ADMIN can create users with role ENTERPRISE_ADMIN  (a.k.a BG Admin) and AA_ADMIN</p>
+</li>
+<li>
+<p>ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within same Enterprise</p>
+</li>
+</ul>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri"><a class="anchor" href="#_base_resource_uri"></a>Base Resource URI</h4>
 <div class="paragraph">
-<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+<p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
 </div>
 <div class="sect3">
@@ -2297,9 +2270,13 @@ ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within
 <div class="sect2">
 <h3 id="_create_schedule"><a class="anchor" href="#_create_schedule"></a>Create Schedule</h3>
 <div class="paragraph">
-<p>This API creates a schedule for an AA system.
-==== Base Resource URI
-<a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+<p>This API creates a schedule for an AA system.</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_3"><a class="anchor" href="#_base_resource_uri_3"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_add_schedule_resource_uri"><a class="anchor" href="#_add_schedule_resource_uri"></a>Add Schedule Resource URI</h4>
@@ -2693,7 +2670,7 @@ ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within
 <p>This endpoint will be used to create a menu.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_3"><a class="anchor" href="#_base_resource_uri_3"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_4"><a class="anchor" href="#_base_resource_uri_4"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
 </div>
@@ -2728,7 +2705,7 @@ ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keys</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of Action Type and action Data for each of the keys explained in below table 2.4.4.1 key data parameters: .</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of Action Type and action Data for each of the keys explained in below key data parameters: section.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
@@ -3059,7 +3036,7 @@ ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_4"><a class="anchor" href="#_base_resource_uri_4"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_5"><a class="anchor" href="#_base_resource_uri_5"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
@@ -3260,9 +3237,13 @@ ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within
 <div class="sect2">
 <h3 id="_update_announcement"><a class="anchor" href="#_update_announcement"></a>Update Announcement</h3>
 <div class="paragraph">
-<p>Update announcement will update an existing announcement
-==== Base Resource URI
-<a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+<p>Update announcement will update an existing announcement</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_6"><a class="anchor" href="#_base_resource_uri_6"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_update_announcement_resource_uri"><a class="anchor" href="#_update_announcement_resource_uri"></a>Update Announcement Resource URI</h4>
@@ -3460,9 +3441,13 @@ ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within
 <div class="sect2">
 <h3 id="_update_menu"><a class="anchor" href="#_update_menu"></a>Update Menu</h3>
 <div class="paragraph">
-<p>This endpoint will be used to update an existing menu.
-==== Base Resource URI
-<a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+<p>This endpoint will be used to update an existing menu.</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_7"><a class="anchor" href="#_base_resource_uri_7"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_update_menu_resource_uri"><a class="anchor" href="#_update_menu_resource_uri"></a>Update Menu Resource URI</h4>
@@ -3725,7 +3710,7 @@ ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within
 <p>This endpoint will be used to update an existing auto attendant system.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_5"><a class="anchor" href="#_base_resource_uri_5"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_8"><a class="anchor" href="#_base_resource_uri_8"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
 </div>
@@ -4043,7 +4028,7 @@ ENTERPRISE_ADMIN can create users with role ENTERPRISE_ADMIN and AA_ADMIN within
 <p>This endpoint will be used to update an existing phone number. User can choose to make an extension an autoattendant number or vice-versa.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_6"><a class="anchor" href="#_base_resource_uri_6"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_9"><a class="anchor" href="#_base_resource_uri_9"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
 </div>
@@ -4275,9 +4260,13 @@ Name of the user the extension belongs to.</p>
 <div class="sect2">
 <h3 id="_delete_announcement"><a class="anchor" href="#_delete_announcement"></a>Delete Announcement</h3>
 <div class="paragraph">
-<p>Delete announcement will delete an existing announcement
-==== Base Resource URI
-<a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+<p>Delete announcement will delete an existing announcement</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_10"><a class="anchor" href="#_base_resource_uri_10"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_delete_announcement_resource_uri"><a class="anchor" href="#_delete_announcement_resource_uri"></a>Delete Announcement Resource URI</h4>
@@ -4436,7 +4425,7 @@ Name of the user the extension belongs to.</p>
 <p>This endpoint will be used to delete an existing menu.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_7"><a class="anchor" href="#_base_resource_uri_7"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_11"><a class="anchor" href="#_base_resource_uri_11"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
@@ -4625,7 +4614,7 @@ Name of the user the extension belongs to.</p>
 <p>This endpoint will be used to get list of  user.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_8"><a class="anchor" href="#_base_resource_uri_8"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_12"><a class="anchor" href="#_base_resource_uri_12"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
@@ -4903,7 +4892,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>Single Enterprise search API allows users to retrieve specific User.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_9"><a class="anchor" href="#_base_resource_uri_9"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_13"><a class="anchor" href="#_base_resource_uri_13"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
@@ -4995,7 +4984,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>This endpoint will be used to delete an existing user.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_10"><a class="anchor" href="#_base_resource_uri_10"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_14"><a class="anchor" href="#_base_resource_uri_14"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
@@ -5257,7 +5246,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>Single Announcement search API allows users to retrieve specific announcement.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_11"><a class="anchor" href="#_base_resource_uri_11"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_15"><a class="anchor" href="#_base_resource_uri_15"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
@@ -5363,7 +5352,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>Get schedule for an AA-System</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_12"><a class="anchor" href="#_base_resource_uri_12"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_16"><a class="anchor" href="#_base_resource_uri_16"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
@@ -5456,7 +5445,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>This endpoint will be used to get list of Menus</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_13"><a class="anchor" href="#_base_resource_uri_13"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_17"><a class="anchor" href="#_base_resource_uri_17"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p>https://&lt;custom domain of CSP’s&gt;</p>
 </div>
@@ -5727,7 +5716,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>Single Menu search API allows users to retrieve specific Menu.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_14"><a class="anchor" href="#_base_resource_uri_14"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_18"><a class="anchor" href="#_base_resource_uri_18"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
 </div>
@@ -5837,7 +5826,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>This endpoint will be used to get list of AA-Systems</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_15"><a class="anchor" href="#_base_resource_uri_15"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_19"><a class="anchor" href="#_base_resource_uri_19"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
 </div>
@@ -6104,7 +6093,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>Single Menu search API allows users to retrieve specific Menu.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_16"><a class="anchor" href="#_base_resource_uri_16"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_20"><a class="anchor" href="#_base_resource_uri_20"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
 </div>
@@ -6298,7 +6287,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>This endpoint will be used to get list of AA-Systems</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_17"><a class="anchor" href="#_base_resource_uri_17"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_21"><a class="anchor" href="#_base_resource_uri_21"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
 </div>
@@ -6565,7 +6554,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 <p>Single Phonenumber search API allows users to retrieve specific phonenumber.</p>
 </div>
 <div class="sect3">
-<h4 id="_base_resource_uri_18"><a class="anchor" href="#_base_resource_uri_18"></a>Base Resource URI</h4>
+<h4 id="_base_resource_uri_22"><a class="anchor" href="#_base_resource_uri_22"></a>Base Resource URI</h4>
 <div class="paragraph">
 <p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
 </div>
@@ -6660,48 +6649,24 @@ If search API is called without page and pageSize, by default pageSize will be 1
     <div class="footer-column-container">
       <div class="footer-column">
         <h5 class="footer-column-title">Contact Us</h5>
-          <p>+1 (650) 263 6146</p>
-          <p><a href="https://go.telestax.com/sales-inquiries">SALES</a></p>
-          <p><a href="https://go.telestax.com/support-inquiries">SUPPORT</a></p>
-          <p><a href="https://go.telestax.com/general-inquiries">GENERAL</a></p>
-          <h5 class="footer-column-title">Follow Us</h5>
-          <p>
-            <span><a href="https://twitter.com/restcomm"><i class="fab fa-twitter"></i></a></span>
-            <span><a href="https://www.linkedin.com/company/telestax"><i class="fab fa-linkedin-in"></i></a></span>
-            <span><a href="https://www.facebook.com/Telestax/"><i class="fab fa-facebook-f"></i></a></span>
-            <span><a href="https://www.youtube.com/channel/UCrZ-J48d3AdwGdL01XuZKZQ"><i class="fab fa-youtube"></i></a></span>
-          </p>
+          <p><a class="footer-products-item" href="/docs/api/voice-category.html">Programmable Voice</a></p>
+          <p><a class="footer-products-item" href="/docs/api/sms-category.html">Programmable SMS</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Solutions</h5>
-        <p><a class="footer-usecase-item" href="/docs/1.0/solutions/two-factor-authentication-overview.html">TWO-FACTOR AUTHENTICATION (2FA)</a></p>
-          <p><a class="footer-usecase-item" href="/docs/1.0/solutions/message-exchange-overview.html">MESSAGE EXCHANGE</a></p>
-          <p><a class="footer-usecase-item" href="/docs/1.0/solutions/cisco-webex-overview.html">CISCO WEBEX</a></p>
-          <p><a class="footer-usecase-item" href="/docs/1.0/api/call-queue-api.html">CALL QUEUE</a></p>
+        <p><a class="footer-usecase-item" href="/docs/tutorials/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a></p>
+          <p><a class="footer-usecase-item" href="/docs/api/call-queue-api.html">Call Queue</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
-        <p><a href="https://www.telestax.com/blog/">BLOG</a></p>
 
-          <p><a id="terms-link" href="/docs/enterprise/support.html">TERMS AND CONDITIONS</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html" data-default-link="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Additional Links</h5>
         <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/about/" data-default-text="Company Name" data-default-link="#">ABOUT</a></p>
-       <p><a href="https://www.telestax.com/faqs/">FAQ'S</a></p>
-       <p><a href="https://www.telestax.com/privacy-statement/">PRIVACY POLICY</a></p>
-       <p><a href="https://www.telestax.com/contact/">CONTACT</a></p>
       </div>
     </div>
-    <!---->
-    <!--<div class="footer-bottom-container">-->
-      <!--<div class="footer-logo">-->
-        <!--<a class="footer-logo-link" href="https://telestax.com"></a>-->
-      <!--</div>-->
-      <!--<div class="footer-copyright">-->
-        <!--<p class="footer-copyright-paragraph">COPYRIGHT © 2020, TELESTAX INC., ALL RIGHTS RESERVED.</p>-->
-      <!--</div>-->
-    <!--</div>-->
     <!---->
   </div>
 </footer>
