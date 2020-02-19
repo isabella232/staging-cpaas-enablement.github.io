@@ -1568,11 +1568,13 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="auto-attendant-api.html">Auto Attendant API</a>
-
+              <a class="nav-link nav-flex-item-text" href="auto-attendant-api.html">Auto Attendant</a>
+                      <button class="nav-toggle"></button>
             </span>
               </div>
-                          </li>
+                <ul class="nav-list">
+                                                  </ul>
+            </li>
   </ul>
             </li>
   </ul>
@@ -1612,6 +1614,8 @@
                                                   </ul>
               <ul class="nav-list">
                                       </ul>
+              <ul class="nav-list">
+                                                  </ul>
   </ul>
               <ul class="nav-list">
               <ul class="nav-list">
@@ -1655,7 +1659,7 @@
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
     <li class="crumb"><a href="../solutions/index.html">Enterprise:Solution APIs</a></li>
-    <li class="crumb"><a href="auto-attendant-api.html">Enterprise:Auto Attendant API</a></li>
+    <li class="crumb"><a href="auto-attendant-api.html">Enterprise:Auto Attendant</a></li>
   </ul>
 </nav>
 </div>
@@ -1668,21 +1672,21 @@
 <p>Auto Attendant API allows Enterprise Accounts to Edit Autoattendant,manage users,assign phone numbers and assign extensions.</p>
 </div>
 <div class="paragraph">
-<p>Restcomm Auto Attendant API’s can be broadly classified as below operations</p>
+<p><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Auto Attendant API’s can be broadly classified as below operations</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Create</p>
+<p><a href="auto-attendant-api.html#_create_operation">Create</a></p>
 </li>
 <li>
-<p>Read</p>
+<p><a href="auto-attendant-api.html#_read_operations">Read</a></p>
 </li>
 <li>
-<p>Update</p>
+<p><a href="auto-attendant-api.html#_update_operation">Update</a></p>
 </li>
 <li>
-<p>Delete</p>
+<p><a href="auto-attendant-api.html#_delete_operation">Delete</a></p>
 </li>
 </ul>
 </div>
@@ -1712,7 +1716,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <div class="sect2">
 <h3 id="_create_user"><a class="anchor" href="#_create_user"></a>Create User</h3>
 <div class="paragraph">
-<p>This endpoint will be used to create user depending on role as explained below</p>
+<p>This endpoint will be used to create user depending on role as explained below.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1790,7 +1794,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <p>Response Body will carry Code, corresponding message and data of User if it was  successfully created. HTTP response will be 200 Created  (OK).</p>
 </div>
 <div class="paragraph">
-<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below</p>
+<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -1834,7 +1838,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Restcomm Account that created this particular user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Account that created this particular user</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
@@ -1893,10 +1897,10 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error in creating subaccount on Restcomm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error in creating subaccount on <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error while creating subaccount in restcomm(password fail)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error while creating subaccount in <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>(password fail)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Create User, Update User</p></td>
 </tr>
 <tr>
@@ -1924,7 +1928,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm subaccount belongs to a different Admin account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> subaccount belongs to a different Admin account</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user id is already subaccount to different account</p></td>
 </tr>
 </tbody>
@@ -2010,7 +2014,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <div class="sect2">
 <h3 id="_create_announcement"><a class="anchor" href="#_create_announcement"></a>Create Announcement</h3>
 <div class="paragraph">
-<p>Creating an announcement  will upload an audio file to AA System and will populate the uri in Database.</p>
+<p>Creating an announcement will upload an audio file to AA System and will populate the uri in Database.</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_2"><a class="anchor" href="#_base_resource_uri_2"></a>Base Resource URI</h4>
@@ -2067,7 +2071,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <p>The Response Body will carry the Code, corresponding message and data of the Announcement File if it was  successfully created. HTTP response will be 200 Created  (OK).</p>
 </div>
 <div class="paragraph">
-<p>The response returned is the JSON body as shown in the example below. Each parameters are as explained below</p>
+<p>The response returned is the JSON body as shown in the example below. Each parameters are as explained below.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -2119,7 +2123,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Restcomm Account that created this particular announcement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Account that created this particular announcement</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
@@ -2805,7 +2809,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Restcomm Account that created this particular Record</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Account that created this particular Record</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
@@ -3083,10 +3087,10 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <div class="sect3">
 <h4 id="_response_body_5"><a class="anchor" href="#_response_body_5"></a>Response Body</h4>
 <div class="paragraph">
-<p>Response Body will carry Code, corresponding message and data of User if it was  successfully updated. HTTP response will be 200 OK.</p>
+<p>Response Body will carry Code, corresponding message and data of User if it was successfully updated. HTTP response will be 200 OK.</p>
 </div>
 <div class="paragraph">
-<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below</p>
+<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -3137,7 +3141,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">499</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error in creating subaccount on Restcomm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error in creating subaccount on <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A user already exists in the DB with provided emailId</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Create User, Update User</p></td>
 </tr>
@@ -3158,7 +3162,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">505</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm subaccount belongs to a different Admin account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> subaccount belongs to a different Admin account</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user id is already subaccount  to different account</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Create User, Update User</p></td>
 </tr>
@@ -3821,7 +3825,7 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm Account that created this particular Record</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Account that created this particular Record</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
@@ -4114,31 +4118,58 @@ Where ever API returns Timestamp or expects Date/Timestamp as request parameter,
 </table>
 <div class="sect4">
 <h5 id="_data_parameter_4"><a class="anchor" href="#_data_parameter_4"></a>Data Parameter</h5>
-<div class="paragraph">
-<p>Data Parameter
-Description
-sid
-Unique phoneNumber Sid
-accountEmail
-Unique Restcomm Account that created/updated this particular Phone number
-dateCreated
-Timestamp when this Enterprise was created
-dateUpdated
-Timestamp when this Enterprise was updated
-number
-Phone number
-isExtension
-true if  the number being added is an extension.
- false if the  number will be considered an AA number.
-uri
-Unique URI that you can call to get only this specific PhoneNumber
-enterpriseSid
-Sid of the enterprise the phoneNumber belongs to.
-extension
-Extension assigned to the number
-extensionSpokenName
-Name of the user the extension belongs to.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique phoneNumber Sid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Account that created/updated this particular Phone number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this Enterprise was created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this Enterprise was updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Phone number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">isExtension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true if the number being added is an extension. false if the  number will be considered an AA number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get only this specific PhoneNumber</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sid of the enterprise the phoneNumber belongs to.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extension assigned to the number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extensionSpokenName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the user the extension belongs to.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Update phoneNumber API can also return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
 </div>
@@ -4603,7 +4634,7 @@ Name of the user the extension belongs to.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_read_operations"><a class="anchor" href="#_read_operations"></a>Read Operations</h2>
+<h2 id="_read_operation"><a class="anchor" href="#_read_operation"></a>Read Operation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Read Operations is basically session Detail Record that gives list of PhoneNumbers, Users, Announcement, Schedule, Menu, AA-System.</p>
@@ -4611,7 +4642,7 @@ Name of the user the extension belongs to.</p>
 <div class="sect2">
 <h3 id="_get_list_of_users"><a class="anchor" href="#_get_list_of_users"></a>Get list of Users</h3>
 <div class="paragraph">
-<p>This endpoint will be used to get list of  user.</p>
+<p>This endpoint will be used to get list of user.</p>
 </div>
 <div class="sect3">
 <h4 id="_base_resource_uri_12"><a class="anchor" href="#_base_resource_uri_12"></a>Base Resource URI</h4>
@@ -5148,7 +5179,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">result</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list of Announcement  data as explained in the table 2.2.5.1 Data Parameter.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of Announcement data as explained in the table 2.2.5.1 Data Parameter.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
@@ -5990,7 +6021,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">result</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list of AA system  data as explained in the table 3.4.5.1 Data Parameters .</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of AA system  data as explained in the table 3.4.5.1 Data Parameters.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
@@ -6447,7 +6478,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">result</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list of Phone number  data as explained in the table 3.6.5.1 Data Parameter .</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of Phone number data as explained in the Data Parameter section.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
@@ -6648,7 +6679,7 @@ If search API is called without page and pageSize, by default pageSize will be 1
   <div class="footer-container">
     <div class="footer-column-container">
       <div class="footer-column">
-        <h5 class="footer-column-title">Contact Us</h5>
+          <h5 class="footer-column-title">Platform</h5>
           <p><a class="footer-products-item" href="/docs/api/voice-category.html">Programmable Voice</a></p>
           <p><a class="footer-products-item" href="/docs/api/sms-category.html">Programmable SMS</a></p>
       </div>
@@ -6663,8 +6694,8 @@ If search API is called without page and pageSize, by default pageSize will be 1
           <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html" data-default-link="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
-        <h5 class="footer-column-title">Additional Links</h5>
-        <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/about/" data-default-text="Company Name" data-default-link="#">ABOUT</a></p>
+    <h5 class="footer-column-title">About</h5>
+        <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/about/" data-default-text="About Us" data-default-link="#">ABOUT</a></p>
       </div>
     </div>
     <!---->
