@@ -4,12 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Web Trigger Overview - Restcomm Docs"></title>
+    <title data-custom-title="Phone Number Masking - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/visual-designer/Using-web-trigger.html
+      https://cloud.restcomm.com/docs/tutorials/Phone-number-masking.html
     ">
-    <meta name="description" content="Web Trigger is an alternative way to start a voice application. It allows establishing a call between a Visual Designer application and a destination address using a simple HTTP request. Any Visual Designer Voice application can be configured to be started using Web Trigger.">
-    <meta name="keywords" content="web trigger, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;CPaaS&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} web trigger, start a voice app">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1486,7 +1484,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
+              <a class="nav-link nav-flex-item-text" href="Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
 
             </span>
               </div>
@@ -1658,336 +1656,66 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="Using-web-trigger.html">Web Trigger Overview</a></li>
+    <li class="crumb"><a href="Phone-number-masking.html">Phone Number Masking</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Web Trigger Overview</h1>
+  <h1>Phone Number Masking</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Web Trigger is an alternative way to start a voice application. It allows establishing a call between an Visual Designer application and a destination address using a simple HTTP request.
-Any Visual Designer voice application can be configured to be started using Web Trigger. The process of doing that is roughly the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create a Voice application in Visual Designer.</p>
-</li>
-<li>
-<p>Enable and configure Web Trigger feature for this application.</p>
-</li>
-<li>
-<p>Start your application by making a request to the WebTrigger URL.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Other features of Web Trigger include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Custom authentication using an application-specific token.</p>
-</li>
-<li>
-<p>Initialization of Visual Designer variables by using HTTP parameters.</p>
-</li>
-<li>
-<p>Control caller identifier that will be presented to the callee.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Web Trigger relies on the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Calls REST API to do the actual work. You can find more information on how a call between an RCML application and a destination address is established at <a href="../api/calls-api.html"><span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> API – Calls</a>.</p>
-</div>
-<div class="paragraph">
-<p>In the following example we will create a sample application that, when
- trigrred, will establish a call between a <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Client and the application and execute it.</p>
+<p>This tutorial will help you to create a number masking application using the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Visual Designer. Follow the steps below to get started.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_step_1_create_the_voice_application"><a class="anchor" href="#_step_1_create_the_voice_application"></a>Step 1 - Create the Voice application</h2>
+<h2 id="_creating_your_phone_number_masking_application"><a class="anchor" href="#_creating_your_phone_number_masking_application"></a>Creating your phone number masking application</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Log into Visual Designer and create a new project named TestWebTrigger.</p>
+<p>Log into your account</p>
+</li>
+<li>
+<p>Navigate to ”<strong>Applications</strong>”</p>
+</li>
+<li>
+<p>Choose ”<strong>Create a Visual Designer Application</strong>” option</p>
+</li>
+<li>
+<p>Select ”<strong>Number masking</strong>” template from the list available in the Template Gallery</p>
+</li>
+<li>
+<p>Name your application and click “<strong>Create</strong>”</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>No need to change anything yet. If you don&#8217;t know what Visual Designer is and how to create an application please have a look at <a href="#">Visual Designer Basic Tasks</a> first.</p>
+<p>See screenshot below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/binding_your_application_to_a_phone_number.png" alt="binding_your_application_to_a_phone_number"></span></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_step_2_enable_web_trigger"><a class="anchor" href="#_step_2_enable_web_trigger"></a>Step 2 - Enable Web Trigger</h2>
+<h2 id="_designing_your_application"><a class="anchor" href="#_designing_your_application"></a>Designing your application</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Navigate to <em>Your Project Name</em> &#8594; <em>Web Trigger</em>:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/show_web_trigger_form.png" alt="show_web_trigger_form">
-</div>
-</div>
-<div class="paragraph">
-<p>Then, check <em>Enable Web Trigger</em>:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/WebTrigger_enable.png" alt="web_trigger_enable">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_step_3_register_your_sip_client"><a class="anchor" href="#_step_3_register_your_sip_client"></a>Step 3 - Register your SIP client</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You will need a registered destination address to receive the triggered call.
-Fire up your favourite SIP client and register to your <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> instance as <strong>alice</strong>. Default password is <em>1234.</em></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_step_4_trigger_a_call"><a class="anchor" href="#_step_4_trigger_a_call"></a>Step 4 - Trigger a call</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Using your favorite REST client make a call to the WebTrigger URL. You can copy it from the configuration form:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/WebTrigger_copy_URL.png" alt="copy_web_trigger_url">
-</div>
-</div>
-<div class="paragraph">
-<p>Before making the request you need to specify a destination for the call in the <code>to</code> parameter. You may use the <em>client</em>
-you just registered. The destination goes in the <code>to</code> parameter of the request:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>http://this:8080/visual-designer/services/apps/APdc8c1eea063d4a85b64a5bebda8e8c04/start?to=client:alice</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice <em>client:</em> prefix in the <code>to</code> parameter.</p>
-</div>
-<div class="paragraph">
-<p>Also, WebTrigger supports Basic HTTP authentication. Use your <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> account credentials in order
-to authenticate. In this example we will use <strong>administrator@company.com</strong> / <strong>mypass</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Here is the cURL command to make the request:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>$ curl -X GET --user 'administrator@company.com:mypass' 'http://this:8080/visual-designer/services/apps/APdc8c1eea063d4a85b64a5bebda8e8c04/start?to=client:alice'</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In addition to specifying the destination of the call, the caller ID may also be specified (optional) using
-the <code>from</code> parameter. Here is the how the trigger URL  will look like when the caller ID  is set to <strong>bob</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>.../start?to=client:alice&amp;from=bob</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>At this point you should be able to trigger a call to your registered client and listen to
- your application.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_authenticate_with_application_specific_tokens"><a class="anchor" href="#_authenticate_with_application_specific_tokens"></a>Authenticate with application-specific tokens</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In case you don&#8217;t want to reveal your account credentials to the user of the trigger you can
-use an alternative form of authentication that relies on custom application-specific tokens. To enable it
-you will need to define an arbitrary security token in the configuration form and then use it in the request that
-will trigger the call. If the tokens match the request will be accepted.</p>
-</div>
-<div class="paragraph">
-<p>Here is the configuration form with the <em>application access token</em> set to <strong>MyTopSeCrEt</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/WebTrigger_specify_application_token.png" alt="specify_application_access_token">
-</div>
-</div>
-<div class="paragraph">
-<p>Since there are no Basic HTTP authentication headers involved you may easily trigger the call by typing the WebTrigger URL
-directly in the browser:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>http://this:8080/visual-designer/services/apps/APdc8c1eea063d4a85b64a5bebda8e8c04/start?to=client:alice&amp;token=MyTopSeCrEt</pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Before giving it a try make sure that you have configured
- <a href="#configure-restcomm-api-credentials"><span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> API credentials</a> in Visual Designer settings.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_call_source_and_destination_overrides"><a class="anchor" href="#_call_source_and_destination_overrides"></a>Call source and destination overrides</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>There can be cases when the destination or the source of a WebTrigger call should be locked
-down to a fixed value and not be controlled from the request. In order to do that <em>overrides</em> can
-be provided in the configuration form as follows:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/WebTrigger_overrides.png" alt="source_dest_overrides">
-</div>
-</div>
-<div class="paragraph">
-<p>Now, the <code>to</code> and <code>form</code> parameters in the HTTP request will be ignored and values in the form
-will be used instead.</p>
-</div>
-<div class="sect2">
-<h3 id="_configure_span_class_sps_text_non_sps_link_data_orig_text_cpaas_data_parm_text_application_name_data_default_text_infer_from_domain_cpaas_span_api_access_credentials"><a class="anchor" href="#_configure_span_class_sps_text_non_sps_link_data_orig_text_cpaas_data_parm_text_application_name_data_default_text_infer_from_domain_cpaas_span_api_access_credentials"></a>Configure <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> API access credentials</h3>
-<div class="paragraph">
-<p>In order to use application-specific tokens <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> API credentials should be configured in Visual Designer
- settings. Visual Designer relies on <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Calls REST API to create the actual call between the
- application and the destination address. For that, it needs to know the credentials of
- the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Account that will make the call.</p>
-</div>
-<div class="paragraph">
-<p>To supply these credentials:</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Navigate to <em>Your Project Name</em> &#8594; <em>Account Settings</em></p>
+<p>Click on the “<strong>Design</strong>” button</p>
 </li>
-</ul>
-</div>
-<div class="paragraph">
-<p>This will bring up the IDE Settings form for the logged user:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/ide_settings_profile_form_complete.png" alt="ide_settings_profile_form_complete">
-</div>
-</div>
-<div class="paragraph">
-<p>Supply the credentials of the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> account that will be used to create the call.</p>
-</div>
+<li>
+<p>Next, configure your application parameters</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Set <strong>Username</strong> to the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> username on whose behalf the calls will be made. In this tutorial we used <em>administrator@company.com</em></p>
+<p><em>agentPhoneNumber</em> - enter the phone number of the agent that will be dialed</p>
 </li>
 <li>
-<p>Set <strong>Password</strong> to the <em>AuthToken</em> of your account displayed in Dashboard.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_adding_variables"><a class="anchor" href="#_adding_variables"></a>Adding variables</h3>
-<div class="paragraph">
-<p>Application behaviour can be further enhanced by adding parameters to your trigger URL.
-All additional parameters will be converted to Visual Designer variables and can be used in your application.</p>
-</div>
-<div class="paragraph">
-<p>Bellow is a personalized greeting of the application using <code>firstname</code> and <code>lastname</code> variables.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/add_variables_to_the_mix.png" alt="add variables to the mix">
-</div>
-</div>
-<div class="paragraph">
-<p>This application will use the <em>firstname</em> and <em>lastname</em> parameters from a trigger URL like the
-following:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>http://this:8080/visual-designer/services/apps/APdc8c1eea063d4a85b64a5bebda8e8c04/start?to=client:alice&amp;firstname=nick&amp;lastname=the+greek</pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_variable_scope"><a class="anchor" href="#_variable_scope"></a>Variable scope</h4>
-<div class="paragraph">
-<p>In the example above <code>firstname</code> and <code>lastname</code> parameters defined in the url will result in creating module-scoped
-Visual Designer variables. This means that the variables will be available only in the first module
-execution. To make them last for the whole application lifecycle the 'User parameter scope'
-option in <em>Advanced configuration</em> options should be set to <em>Application</em> as illustrated below.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/WebTrigger_application_scoped_vars.png" alt="application_scoped_variables">
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_destination_address_syntax"><a class="anchor" href="#_destination_address_syntax"></a>Destination address syntax</h4>
-<div class="paragraph">
-<p>Throughout this tutorial we have only used <em>client</em> destinations for the call. <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span>
-Calls REST API and consequently Visual Designer WebTrigger support four different types of destination
-address. Any of these types can be used as a destination address. Here are some example
-values you can use as destinations either directly in the URL <code>to</code> parameter or as overrides
- in the configuration form.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>client</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>client:alice</p>
-</li>
-<li>
-<p>client:bob</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>sip</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>sip:bob@192.168.1.39:5060</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>conference</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>conference:2233</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>number</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>+1234598323</p>
+<p><em>callerID</em> - specify the caller ID that will be displayed on the agent’s side (e.g. 5555)</p>
 </li>
 </ul>
 </div>
@@ -2001,12 +1729,88 @@ values you can use as destinations either directly in the URL <code>to</code> pa
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Make sure you url-encode these values if you specify the <strong>to</strong> destination in the trigger URL!
+Note: Some carriers don&#8217;t support the CallerID override.
 </td>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>See screenshot below:</p>
 </div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/designing_your_application.png" alt="designing_your_application"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_binding_your_application_to_a_phone_number"><a class="anchor" href="#_binding_your_application_to_a_phone_number"></a>Binding your application to a phone number</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Head back to the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Console and navigate to “<strong>Numbers</strong>”</p>
+</li>
+<li>
+<p>Search for available phone number in the region you are interested in</p>
+</li>
+<li>
+<p>Click on “<strong>Register number</strong>”</p>
+</li>
+<li>
+<p>Select your application from the Voice URI drop down</p>
+</li>
+<li>
+<p>Click “<strong>Save</strong>”</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See screenshot below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/creating_your_phone_number_masking_application.png" alt="creating_your_phone_number_masking_application"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing_your_application_with_span_class_sps_text_non_sps_link_data_orig_text_cpaas_data_parm_text_application_name_data_default_text_infer_from_domain_cpaas_span_webrtc_demo"><a class="anchor" href="#_testing_your_application_with_span_class_sps_text_non_sps_link_data_orig_text_cpaas_data_parm_text_application_name_data_default_text_infer_from_domain_cpaas_span_webrtc_demo"></a>Testing your application with <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> WebRTC demo</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You need to have an active SIP client registered on the Cloud
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Log into your <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> WebRTC demo account</p>
+</li>
+<li>
+<p>Click on “<strong>Add contact</strong>” button</p>
+</li>
+<li>
+<p>Enter the phone number your application was bound to</p>
+</li>
+<li>
+<p>Click on “<strong>Add contact</strong>”</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See screenshot below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/testing_your_application_with_restcomm_webrtc_demo.png" alt="testing_your_application_with_webrtc_demo"></span></p>
+</div>
+<div class="paragraph">
+<p>You are all set. Dial the newly added contact. Your agent should receive an incoming call with the previously configured caller ID.</p>
 </div>
 </div>
 </div>
