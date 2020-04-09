@@ -1501,60 +1501,10 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="api/call-queue-api.html">Call Queue</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="api/call-queue-api.html#_create_queue_api">Create Queue</a>
 
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="api/call-queue-api.html#_queue_rcml">Queue RCML</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="api/call-queue-api.html#_enqueue_rcml">Enqueue RCML</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -1567,12 +1517,10 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="api/auto-attendant-api.html">Auto Attendant</a>
-                      <button class="nav-toggle"></button>
+
             </span>
               </div>
-                <ul class="nav-list">
-                                                  </ul>
-            </li>
+                          </li>
   </ul>
             </li>
   </ul>
@@ -1665,7 +1613,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In our continuous effort to improve <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> functionalities, we have introduced multi-tenancy support. It provides a set of rules that improve user information management and control who can gain access to specific accounts. This set of rules will be also applied by the upcoming OAuth support, so they both OAuth and Multi-tenancy Support will handle this consistency together. The information below will provide an overview of how multi-tenancy is applied to <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>.</p>
+<p>In our continuous effort to improve <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> functionalities, we have introduced multi-tenancy support. It provides a set of rules that improve user information management and control who can gain access to specific accounts. This set of rules will be also applied by the upcoming OAuth support, so they both OAuth and Multi-tenancy Support will handle this consistency together. The information below will provide an overview of how multi-tenancy is applied to <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span>.</p>
 </div>
 <div class="paragraph">
 <p><span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> REST API access control is managed by two main entities, credentials and accounts. To better understand how it works, we&#8217;ll assume the following diagram as the account hierarchy, where each account and sub account has its own information.</p>
@@ -1680,7 +1628,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">curl -X GET https://ACCOUNT_SID:AUTH_TOKEN@cloud.restcomm.com/restcomm/2012-04-24/Accounts/[secondarySid]/IncomingPhoneNumbers.json</code></pre>
+<pre class="highlightjs highlight"><code class="language-lang:default hljs" data-lang="lang:default">curl -X GET https://ACCOUNT_SID:AUTH_TOKEN@yourcompany.com/restcomm/2012-04-24/Accounts/[secondarySid]/IncomingPhoneNumbers.json</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1790,7 +1738,7 @@ The Applications API has a different access control, and allows the accounts to 
 <p>If the hostname of the request doesn&#8217;t match the organization domain name of the provided account credential <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> will not allow access.</p>
 </div>
 <div class="paragraph">
-<p>For example, if trying to login to 'https://wonderland.restcomm.com' using account credentials that belong to organization 'https://alice.restcomm.com', <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> will drop the request.</p>
+<p>For example, if trying to login to 'https://wonderland.company.com' using account credentials that belong to organization 'https://$DOMAIN', <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> will drop the request.</p>
 </div>
 <div class="paragraph">
 <p>Same is true for accessing organization/account resources using REST API. If the hostname of the REST API request doesn&#8217;t match the domain name of the organization that the account credentials belong, <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> will drop the request.</p>

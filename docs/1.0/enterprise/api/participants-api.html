@@ -1503,60 +1503,10 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="call-queue-api.html">Call Queue</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="call-queue-api.html#_create_queue_api">Create Queue</a>
 
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="call-queue-api.html#_queue_rcml">Queue RCML</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="call-queue-api.html#_enqueue_rcml">Enqueue RCML</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -1569,12 +1519,10 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="auto-attendant-api.html">Auto Attendant</a>
-                      <button class="nav-toggle"></button>
+
             </span>
               </div>
-                <ul class="nav-list">
-                                                  </ul>
-            </li>
+                          </li>
   </ul>
             </li>
   </ul>
@@ -1727,7 +1675,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this account, relative to <code><span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/restcomm/2012-04-12/">https://$DOMAIN/restcomm/2012-04-12/</span></code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for this account, relative to <code><span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/restcomm/2012-04-24/">https://$DOMAIN/restcomm/2012-04-24/</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1838,18 +1786,18 @@ Not supported</p>
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-131 is-active" onclick="openLanguage('Curl', 131)">Curl</button>
-        <button class="sample-code-button scsIndex-131" onclick="openLanguage('Nodejs', 131)">Nodejs</button>
-        <button class="sample-code-button scsIndex-131" onclick="openLanguage('Python', 131)">Python</button>
-        <button class="sample-code-button scsIndex-131" onclick="openLanguage('Java', 131)">Java</button>
+        <button class="sample-code-button scsIndex-130 is-active" onclick="openLanguage('Curl', 130)">Curl</button>
+        <button class="sample-code-button scsIndex-130" onclick="openLanguage('Nodejs', 130)">Nodejs</button>
+        <button class="sample-code-button scsIndex-130" onclick="openLanguage('Python', 130)">Python</button>
+        <button class="sample-code-button scsIndex-130" onclick="openLanguage('Java', 130)">Java</button>
       </div>
-      <div id="Curl-131" class="sample-language-131">
+      <div id="Curl-130" class="sample-language-130">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Conferences/CONFERENCE_SID/Participants/CALL_SID.xml  \
    -d 'Mute=true' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-131" class="sample-language-131" style="display:none">
+      <div id="Nodejs-130" class="sample-language-130" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -1873,7 +1821,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-131" class="sample-language-131" style="display:none">
+      <div id="Python-130" class="sample-language-130" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -1904,7 +1852,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-131" class="sample-language-131" style="display:none">
+      <div id="Java-130" class="sample-language-130" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -1961,18 +1909,18 @@ public class JavaSampleClass {
 </div>
 </div>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-132 is-active" onclick="openLanguage('Curl', 132)">Curl</button>
-        <button class="sample-code-button scsIndex-132" onclick="openLanguage('Nodejs', 132)">Nodejs</button>
-        <button class="sample-code-button scsIndex-132" onclick="openLanguage('Python', 132)">Python</button>
-        <button class="sample-code-button scsIndex-132" onclick="openLanguage('Java', 132)">Java</button>
+        <button class="sample-code-button scsIndex-131 is-active" onclick="openLanguage('Curl', 131)">Curl</button>
+        <button class="sample-code-button scsIndex-131" onclick="openLanguage('Nodejs', 131)">Nodejs</button>
+        <button class="sample-code-button scsIndex-131" onclick="openLanguage('Python', 131)">Python</button>
+        <button class="sample-code-button scsIndex-131" onclick="openLanguage('Java', 131)">Java</button>
       </div>
-      <div id="Curl-132" class="sample-language-132">
+      <div id="Curl-131" class="sample-language-131">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Conferences/CONFERENCE_SID/Participants/CALL_SID.xml  \
    -d 'Mute=false' \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-132" class="sample-language-132" style="display:none">
+      <div id="Nodejs-131" class="sample-language-131" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -1996,7 +1944,7 @@ request.({
 });
 </code></pre>
       </div>
-      <div id="Python-132" class="sample-language-132" style="display:none">
+      <div id="Python-131" class="sample-language-131" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 from urllib.parse import urlencode
@@ -2027,7 +1975,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-132" class="sample-language-132" style="display:none">
+      <div id="Java-131" class="sample-language-131" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
