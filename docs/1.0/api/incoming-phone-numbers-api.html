@@ -2346,30 +2346,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">The application name.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UssdUrl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URL <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will request when receiving an incoming USSD request to this number.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UssdMethod</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP method <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will use when making requests to the UssdUrl. Either GET or POST.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UssdFallbackUrl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URL that <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will request if an error occurs retrieving or executing the RCML from UssdUrl.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UssdFallbackMethod</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP method <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will use when requesting the above URL. Either GET or POST.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UssdApplicationSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The 34 character sid of the application <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> should use to handle USSD requests to this number. If a UssdApplicationSid is present, <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will ignore all of the Ussd urls above and use those set on the application.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UssdApplicationName</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The application name.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ReferUrl</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The URL <span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> will request when receiving a SIP Refer request to this number.</p></td>
 </tr>
@@ -2792,11 +2768,11 @@ public class JavaSampleClass {
     "sms_fallback_url": null,
     "sms_fallback_method": "POST",
     "sms_application_sid": null,
-    "ussd_url": null,
-    "ussd_method": null,
-    "ussd_fallback_url": null,
-    "ussd_fallback_method": null,
-    "ussd_application_sid": null,
+//    "ussd_url": null,
+//    "ussd_method": null,
+//    "ussd_fallback_url": null,
+//    "ussd_fallback_method": null,
+//    "ussd_application_sid": null,
     "refer_url": null,
     "refer_method": null,
     "refer_application_sid": null,
