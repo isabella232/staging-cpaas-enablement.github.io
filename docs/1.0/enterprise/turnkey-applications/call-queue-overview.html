@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Solutions - Restcomm Docs"></title>
+    <title data-custom-title="Call Queue Overview - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/solutions/index.html
+      https://cloud.restcomm.com/docs/turnkey-applications/call-queue-overview.html
     ">
+    <meta name="description" content="Call Queue allows callers to be placed in a Queue, hearing background music or announcement (text to speech) while waiting to get connected to called party.">
+    <meta name="keywords" content="call queue, call queue api">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
@@ -1457,22 +1459,7 @@
                           </li>
   </ul>
             </li>
-            <li class="nav-item is-current-page" data-depth="1">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              icomoon3-font-reference-solutions
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="index.html">Solution APIs</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
+              <ul class="nav-list">
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -1522,7 +1509,6 @@
               </div>
                           </li>
   </ul>
-            </li>
   </ul>
           <ul class="nav-list">
               <ul class="nav-list">
@@ -1604,46 +1590,64 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="index.html">Enterprise:Solution APIs</a></li>
+    <li class="crumb"><a href="call-queue-overview.html">Call Queue Overview</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Solutions</h1>
-<div class="paragraph">
-<p>Explore a wide range of <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> use cases and industry best solutions.<br></p>
+  <h1>Call Queue Overview</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_unique_features_of_call_queue">Unique Features of Call Queue</a></li>
+<li><a href="#_understanding_the_call_queue_api">Understanding the Call Queue API</a></li>
+</ul>
 </div>
-<div class="api-callout-container">
-  <div class="api-callout-item">
-    <div class="api-callout-title api-callout-title-usecase">
-      <div class="api-callout-header-container">
-        <div class="api-callout-box-icon api-callout-box-icon-usecase"></div>
-        <a class="api-callout-link" href="../solutions/Two-factor-Authentication-2FA-Overview.html">Two-Factor Authentication (2FA)</a>
-      </div>
-    </div>
-    <p class="api-callout-text">Secure online transactions, account sign-ins, mobile apps, websites, and more by providing two-factor authentication (2FA) with one-time passwords to your users.</p>
-    <p class="api-callout-text"><a class="api-callout-link-usecase" href="../solutions/Two-factor-Authentication-2FA-Overview.html">Read more</a></p>
-  </div>
-  <div class="api-callout-item">
-     <div class="api-callout-title api-callout-title-usecase">
-       <div class="api-callout-header-container">
-         <div class="api-callout-box-icon api-callout-box-icon-usecase"></div>
-         <a class="api-callout-link" href="call-queue-overview.html">Call Queue</a>
-       </div>
-     </div>
-     <p class="api-callout-text">Call Queue allows callers to be placed in a Queue, hearing background music or announcement (text to speech) while waiting to get connected to called party.</p>
-     <p class="api-callout-text"><a class="api-callout-link-usecase" href="call-queue-overview.html">Read more</a></p>
-   </div>
-   <div class="api-callout-item">
-       <div class="api-callout-title api-callout-title-usecase">
-         <div class="api-callout-header-container">
-           <div class="api-callout-box-icon api-callout-box-icon-usecase"></div>
-           <a class="api-callout-link" href="auto-attendant-overview.html">Auto Attendant</a>
-         </div>
-       </div>
-       <p class="api-callout-text">Auto Attendant (AA) is intended for business customers who want to provide an automated means of directing incoming calls to the appropriate person within the organization, typically to offload this task from a receptionist and also offer a simple menu system.</p>
-       <p class="api-callout-text"><a class="api-callout-link-usecase" href="auto-attendant-overview.html">Read more</a></p>
-     </div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Call Queue is a feature that allows callers (A leg) to be placed in a Queue, hearing background music or announcement (text to speech) while waiting to get connected to called party (B leg). This is one of the most commonly needed features to build any kind of Inbound Contact Center solution.</p>
+</div>
+<div class="paragraph">
+<p>The Call Queue solution built on top of the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Platform exposes API’s that developers can leverage to create simple Contact Center solution. A Queue stores incoming calls in First In First Out (FIFO) order (let’s call those callers customers). The queue then connects first caller in queue to a callee (let’s call that one an agent).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/call-queue/call-queue-workflow.png" alt="Cisco Webex Add an Enterprise">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unique_features_of_call_queue"><a class="anchor" href="#_unique_features_of_call_queue"></a>Unique Features of Call Queue</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Create as many queues as you want. For example, the Support Team can have its own Queue and Sales its own.</p>
+</li>
+<li>
+<p>Developers can create IVR in front via Visual Designer collecting input from users like “Press 1 for Support and 2 for Sales” and intelligently route the caller to correct queue based on input received!</p>
+</li>
+<li>
+<p>For Agents joining the call queue, developers can create RVD applications that can Authenticate Agent via password (DTMF) before letting Agent join queue.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Basically via Visual Designer developers can add any business logic they want before placing call in queue.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_understanding_the_call_queue_api"><a class="anchor" href="#_understanding_the_call_queue_api"></a>Understanding the Call Queue API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="../api/call-queue-api.html">Getting Started with the Call Queue API</a></p>
+</div>
+</div>
 </div>
 </article>
   </main>
