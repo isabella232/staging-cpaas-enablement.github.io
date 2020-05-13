@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Two-Factor Authentication (2FA) Overview - Restcomm Docs"></title>
+    <title data-custom-title="Restcomm Message Exchange for Cisco WebEx Teams Console - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/solutions/two-factor-authentication-overview.html
+      https://dev.restcomm.com/docs/1.0/turnkey-applications/cisco-webex-console.html
     ">
-    <meta name="description" content="Secure online transactions, account sign-ins, mobile apps, websites and more by providing two-factor authentication (2FA) with One-Time Passwords to your users.">
-    <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} two-factor authentication">
+    <meta name="description" content="Cisco Webex API allows Restcomm Accounts to create, manage and get usage records for mappings.">
+    <meta name="keywords" content="cisco webex api, webex teams api, cisco webex api overview, cisco webex">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -1597,110 +1597,531 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="two-factor-authentication-overview.html">Two-Factor Authentication (2FA) Overview</a></li>
+    <li class="crumb"><a href="cisco-webex-console.html">Restcomm Message Exchange for Cisco WebEx Teams Console</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Two-Factor Authentication (2FA) Overview</h1>
+  <h1>Restcomm Message Exchange for Cisco WebEx Teams Console</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_understanding_the_two_factor_authentication_2fa_console_and_api">Understanding the Two-Factor Authentication (2FA) Console and API</a></li>
-<li><a href="#_introduction">Introduction</a>
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_home">Home</a></li>
+<li><a href="#_mappings">Mappings</a>
 <ul class="sectlevel2">
-<li><a href="#_what_is_2fa">What is 2FA?</a></li>
-<li><a href="#_enhanced_security_with_2fa">Enhanced Security with 2FA</a></li>
-<li><a href="#_how_2fa_works">How 2FA Works?</a></li>
-<li><a href="#_flexible_dependable_2fa">Flexible, Dependable 2FA</a></li>
-<li><a href="#_smart_2fa_for_communications_service_providers_5_distinct_advantages">Smart 2FA for Communications Service Providers - 5 Distinct Advantages</a></li>
+<li><a href="#_adding_an_enterprise">Adding an enterprise</a></li>
+<li><a href="#_enterprise_mapping_details">Enterprise mapping Details</a></li>
+<li><a href="#_add_a_mapping">Add a mapping</a></li>
 </ul>
 </li>
+<li><a href="#_search">Search</a>
+<ul class="sectlevel2">
+<li><a href="#_enterprise_search">Enterprise search</a></li>
+<li><a href="#_mappings_search">Mappings search</a></li>
+<li><a href="#_messages_search">Messages search</a></li>
+</ul>
+</li>
+<li><a href="#_usage_records">Usage-records</a>
+<ul class="sectlevel2">
+<li><a href="#_enterprise_usage_records">Enterprise Usage-records</a></li>
+<li><a href="#_mappings_usage_records">Mappings Usage-records</a></li>
+<li><a href="#_messages_usage_records">Messages Usage-records</a></li>
+</ul>
+</li>
+<li><a href="#_settings">Settings</a></li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_understanding_the_two_factor_authentication_2fa_console_and_api"><a class="anchor" href="#_understanding_the_two_factor_authentication_2fa_console_and_api"></a>Understanding the Two-Factor Authentication (2FA) Console and API</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="two-factor-authentication-console.html">Getting Started with the Two-Factor Authentication (2FA) Console</a></p>
+<p>Restcomm Cisco Webex helps service providers enable their Enterprise Customers to send and receive SMS using webexTeams and to manage and monitor the usage</p>
 </div>
 <div class="paragraph">
-<p><a href="Two-factor-Authentication-2FA.html">Getting Started with the Two-Factor Authentication (2FA) API</a></p>
+<p>If you want to use the Restcomm Message Exchange feature, you will need to complete the following steps:</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Restcomm Smart 2FA application provides an intuitive out-of-the-box omni-channel two-factor authentication (2FA) solution that communications service providers (CSPs) can rebrand to offer to their enterprise and small-to-medium sized business customers.</p>
-</div>
-<div class="sect2">
-<h3 id="_what_is_2fa"><a class="anchor" href="#_what_is_2fa"></a>What is 2FA?</h3>
-<div class="paragraph">
-<p>2FA helps organizations protect user accounts and verify the identity of online users. For example, companies like WhatsApp have built their empire of over 1 billion users on top of 2FA as a method for verifying user identity using SMS. Many other popular companies have followed the same method in their user sign-up process. These include Oracle Cloud, Expedia, SAP, Bank Of America, Amex, Uber, Microsoft, Apple, Airbnb, and many more.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_enhanced_security_with_2fa"><a class="anchor" href="#_enhanced_security_with_2fa"></a>Enhanced Security with 2FA</h3>
-<div class="paragraph">
-<p>Today, almost every popular application relies on 2FA as the best method to verify user identity when signing up or logging into an application online. According to a recent report by Google, NYU, and the University of California San Diego, receiving a secondary SMS code blocked 100 percent of automated attacks, 96 percent of bulk phishing attacks, and most direct, targeted attacks.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_how_2fa_works"><a class="anchor" href="#_how_2fa_works"></a>How 2FA Works?</h3>
-<div class="sect3">
-<h4 id="_user_enters_enterprise_application"><a class="anchor" href="#_user_enters_enterprise_application"></a>User enters Enterprise application</h4>
-<div class="paragraph">
-<p>User visits Enterprise website or mobile app and attempts to log into his account, authorize a transaction, or perform another action that requires two-factor authentication from a new device. Enterprise Application will have a user profile including Mobile Number.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_pin_code_is_sent_to_the_user_via_sms_phone_call_or_email_depending_on_api_called"><a class="anchor" href="#_pin_code_is_sent_to_the_user_via_sms_phone_call_or_email_depending_on_api_called"></a>PIN code is sent to the user via SMS, phone call or email depending on API called</h4>
-<div class="paragraph">
-<p>Once the user enters a valid phone number, from Enterprise application, the developer will need to ask Restcomm 2FA to send a verification code to that phone number by using the HTTP REST API Call.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_verification_of_2fa_code"><a class="anchor" href="#_verification_of_2fa_code"></a>Verification of 2FA Code</h4>
-<div class="paragraph">
-<p>Once the user receives 2FA code, they will try to authenticate by entering same to Enterprise App. The enterprise application developer will need to pass the same 2FA Code also known as One Time Password (OTP) back to Restcomm 2FA. Restcomm 2FA will verify the code and provide appropriate response.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_flexible_dependable_2fa"><a class="anchor" href="#_flexible_dependable_2fa"></a>Flexible, Dependable 2FA</h3>
-<div class="paragraph">
-<p>The flexibility of using any channel (SMS, voice, email) makes sure your users get the OTP even when they experience issues with one of the channels. For example, if the user doesn’t get the OTP on their handset due to issues like “storage full,” the Smart 2FA can send the OTP via email or via a voice call in hundreds of languages using a text-to-speech (TTS) engine.</p>
-</div>
-<div class="paragraph">
-<p>For over a decade, enterprises depended on over-the-top (OTT) players and their APIs to easily integrate 2FA into service offerings. The reason for this was because most CSPs do not offer APIs directly to the enterprise. With Telestax Smart 2FA we make it easy and straightforward for CSPs to provide their enterprise customers with branded APIs and developer documentation.</p>
-</div>
-<div class="paragraph">
-<p>This is great news for enterprise customers as well, including popular ones like Microsoft, Facebook, and more. When CSPs offer 2FA APIs directly to companies, this will enable them to have better cost, higher delivery rate, faster support when an incident happens, and that results in more signups, more revenue, fewer tickets,  and better overall customer experience.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_smart_2fa_for_communications_service_providers_5_distinct_advantages"><a class="anchor" href="#_smart_2fa_for_communications_service_providers_5_distinct_advantages"></a>Smart 2FA for Communications Service Providers - 5 Distinct Advantages</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>BYOC</strong> – Bring-your-own-carrier (BYOC) to reduce costs and enable better delivery rates. The CSP is able to control routing from their existing core softswitch / SMSC to quickly address delivery or routing issues.</p>
+<p>Create Bot for Enterprise and map the Bot Access Token with Enterprise as explained in section XXX</p>
 </li>
 <li>
-<p><strong>Simple API</strong> – Simple APIs to Send OTP via various channels including SMS, voice, or email.</p>
+<p>Create a mapping</p>
 </li>
 <li>
-<p><strong>Control API</strong> – Control APIs like canceling existing OTP (while it is still active) to resend a new one. Or keep an old OTP active for a period of time while a new one is also sent. Many times there are network delays and users receive the first OTP after a delay while the system would have already generated a second OTP. In that case, allowing both the OTPs offers more options for users.</p>
-</li>
-<li>
-<p><strong>Rich API Set</strong> – Rich API set allows users to select any language for voice calls via text-to-speech (TTS) with support for engines like VoiceRSS, Acapella, Amazon Poly, and Google Text-to-Speech.</p>
-</li>
-<li>
-<p><strong>Intuitive Console</strong> – Allows users to view usage reports by day, month, or year and search using filter criteria like country code, channel, delivery status, and more.</p>
+<p>Start sending messages</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>This document explains Resctomm Cisco Webex Console and how to use features mentioned above.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_home"><a class="anchor" href="#_home"></a>Home</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is the default page user will see after user logs in. Here user can find the number of enterprises, mappings added and messages sent/received in the last 24 hours within the organisation and 30 days usage report of enterprises, mapping and messages for an organisation</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/webex_home.png" alt="Cisco Webex Console Home">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mappings"><a class="anchor" href="#_mappings"></a>Mappings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To navigate to page, click on the Mappings on the top header.</p>
+</div>
+<div class="paragraph">
+<p>User can view list of all enterprises that have been added under his organisation. Enterprises can be filtered based on the name.</p>
+</div>
+<div class="paragraph">
+<p>Enterprise is service providers customers which can help them to understand number of mappings created for specific Enterprise over a specific period of time for billing and management purposes.</p>
+</div>
+<div class="paragraph">
+<p>Each Enterprise has list of mappings which is basically mapping between SMS enabled number and Cisco WebEx Id.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/webex_mappings.png" alt="Cisco Webex Mappings">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding_an_enterprise"><a class="anchor" href="#_adding_an_enterprise"></a>Adding an enterprise</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on add enterprise button.</p>
+</li>
+<li>
+<p>Enter the name of new enterprise and click add account button</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Enterprise name must be unique.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/adding_an_enterprise.png" alt="Cisco Webex Add an Enterprise">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enterprise_mapping_details"><a class="anchor" href="#_enterprise_mapping_details"></a>Enterprise mapping Details</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>If user clicks on any enterprise in the list, he will see a paginated list of mappings that belong to the enterprise.</p>
+</li>
+<li>
+<p>Name is the friendly name given to user, number is the external address (SMS enabled number), webexId is the webex teams Id that is mapped with the external number and last column contains the timestamp when the mapping was last updated and the user who updated it.</p>
+</li>
+<li>
+<p>User can edit the name of a particular mapping.</p>
+</li>
+<li>
+<p>User can delete a particular mapping by clicking on the delete icon that appears by hovering mouse on specific row.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/enterprise_mapping_details.png" alt="Enterprise mapping details">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_a_mapping"><a class="anchor" href="#_add_a_mapping"></a>Add a mapping</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>User can reach add mapping page by clicking on “Add Mappings” button.</p>
+</li>
+<li>
+<p>User needs to input below 3 fields:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Friendly name for the user.</p>
+</li>
+<li>
+<p>External address i.e. the number to be SMS enabled.</p>
+</li>
+<li>
+<p>Webex teams id.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>User can add single or multiple mappings under a particular enterprise.</p>
+</li>
+<li>
+<p>Webex teams id and number have to be unique across the system.</p>
+</li>
+<li>
+<p>While adding, if all the mappings are valid then user will see the mapping list else user will see the rejected mappings where user can modify the webex teams id or number.</p>
+</li>
+<li>
+<p>When a mapping is added, the number is provisioned on Restcomm and also the number is SMS enabled byTelestax</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/adding_mapping.png" alt="Add mapping">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_search"><a class="anchor" href="#_search"></a>Search</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_enterprise_search"><a class="anchor" href="#_enterprise_search"></a>Enterprise search</h3>
+<div class="paragraph">
+<p>The user can perform a search on the enterprises of the organization. Below are the supported filters for enterprise search:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account Scope:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the list of Enterprises  that are created by the logged in user.</p>
+</li>
+<li>
+<p>Search in All Account: Shows the list of all the enterprises under the organisation.</p>
+</li>
+<li>
+<p>Search in Specific Account: To search enterprises that are created by a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Date: Shows the list of enterprises that were created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the list of enterprises that were created on or before this date.</p>
+</li>
+<li>
+<p>Name: Shows the list of enterprises whose name are partially or fully match with the given String:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/search_enterprise.png" alt="Search Enterprise">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mappings_search"><a class="anchor" href="#_mappings_search"></a>Mappings search</h3>
+<div class="paragraph">
+<p>The user can perform a search on the enterprises of the organization. Below are the supported filters for enterprise search:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account Scope:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the list of mappings  that are created by the logged in user.</p>
+</li>
+<li>
+<p>Search in All Account: Shows the list of all the mappings  under the organisation.</p>
+</li>
+<li>
+<p>Search in Specific Account: To search mappings that are created a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Date: Shows the list of mappings that were created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the list of mappings that were created on or before this date.</p>
+</li>
+<li>
+<p>Enterprise: Shows the list of mappings that belong to this enterprise.</p>
+</li>
+<li>
+<p>Name: Shows the list of mappings whose name partially or fully match the entered String.</p>
+</li>
+<li>
+<p>Number: Shows the list of mappings whose external address partially or fully match the entered String.</p>
+</li>
+<li>
+<p>WebexId: Shows the list of mappings whose Webex teams Id  partially or fully match the entered String.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/search_mappings.png" alt="Search Mappings">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_messages_search"><a class="anchor" href="#_messages_search"></a>Messages search</h3>
+<div class="paragraph">
+<p>The user can search the messages of the organization by applying below filters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start Date: Shows the list of messages that is created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the list of messages that is created on or before this date.</p>
+</li>
+<li>
+<p>Enterprise:Shows the list of messages that belong to this enterprise.</p>
+</li>
+<li>
+<p>To:Shows the list of messages that are sent to this number or WebExId</p>
+</li>
+<li>
+<p>From:Shows the list of messages that are sent from  this number or WebExId</p>
+</li>
+<li>
+<p>Direction:Shows the list of messages of particular direction(INBOUND,OUTBOUND). Inbound means messages coming from Mobile to WebEx Id. Outbound means message sent from WebEx Id to Mobile</p>
+</li>
+<li>
+<p>Type:Shows the list of messages of particular type(SMS,MMS). Please note MMS is still not supported.</p>
+</li>
+<li>
+<p>Channel Status:Shows the list of messages with this channel status.</p>
+</li>
+<li>
+<p>Channel Error Code:Shows the list of messages with this Channel Error Code.</p>
+</li>
+<li>
+<p>Channel Error Message:Shows the list of messages with this Channel error message.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/search_messages.png" alt="Search Messages">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage-records</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_enterprise_usage_records"><a class="anchor" href="#_enterprise_usage_records"></a>Enterprise Usage-records</h3>
+<div class="paragraph">
+<p>The user can view enterprises created records of the organization by applying below filters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account Scope:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the list of mappings  that are created by the logged  in user.</p>
+</li>
+<li>
+<p>Search in All Account: Shows the list of all the mappings  under the organisation.</p>
+</li>
+<li>
+<p>Search in Specific Account: To search mappings that are created a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Date: Shows the record of enterprise that has created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the record of enterprise that has created on or before this date.</p>
+</li>
+<li>
+<p>Sub resource:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily: Shows the record of enterprise on a daily basis.</p>
+</li>
+<li>
+<p>Monthly: Shows the record of enterprise on a monthly basis.</p>
+</li>
+<li>
+<p>Yearly:  Shows the record of enterprise on a yearly basis.</p>
+</li>
+<li>
+<p>Today:  Shows the record of enterprise today.</p>
+</li>
+<li>
+<p>Yesterday: Shows the record of enterprise on yesterday.</p>
+</li>
+<li>
+<p>This Month:  Shows the record of enterprise this month.</p>
+</li>
+<li>
+<p>Last Month:  Shows the record of enterprise last month.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/usage_records_enterprise.png" alt="Usage Records Enterprise">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mappings_usage_records"><a class="anchor" href="#_mappings_usage_records"></a>Mappings Usage-records</h3>
+<div class="paragraph">
+<p>The user can view mappings created records of the organisation by applying below filters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account Scope:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the list of mappings  that are created by the    logged  in user.</p>
+</li>
+<li>
+<p>Search in All Account: Shows the list of all the mappings  under the organisation.</p>
+</li>
+<li>
+<p>Search in Specific Account: To search mappings that are created a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Date: Shows the record of mapping that has created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the record of mapping that has created on or before this date.</p>
+</li>
+<li>
+<p>Enterprise: Shows the record of mapping that belong to this enterprise.</p>
+</li>
+<li>
+<p>Sub resource:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily: Shows the record of mappings on a daily basis.</p>
+</li>
+<li>
+<p>Monthly: Shows the record of mappings on a monthly basis</p>
+</li>
+<li>
+<p>Yearly: Shows the record of mappings on a yearly basis.</p>
+</li>
+<li>
+<p>Today: Shows the record of mappings today.</p>
+</li>
+<li>
+<p>Yesterday: Shows the record of mappings on yesterday.</p>
+</li>
+<li>
+<p>This Month: Shows the record of mappings this month.</p>
+</li>
+<li>
+<p>Last Month: Shows the record of mappings last month.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/usage_records.png" alt="Usage Records Mapping">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_messages_usage_records"><a class="anchor" href="#_messages_usage_records"></a>Messages Usage-records</h3>
+<div class="paragraph">
+<p>The user can view Messages records of the organization by applying below filters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start Date: Shows the record of messages that has created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the record of messages that has created on or before this date.</p>
+</li>
+<li>
+<p>Enterprise: Shows the record of messages that are belong to this enterprise.</p>
+</li>
+<li>
+<p>Direction: Shows the record of messages of particular direction(INBOUND,OUTBOUND).</p>
+</li>
+<li>
+<p>Type: Shows the record of messages of particular type(SMS,MMS).</p>
+</li>
+<li>
+<p>To: Shows the record of messages that are sent to this number</p>
+</li>
+<li>
+<p>From: Shows the record of messages that are sent from  this number</p>
+</li>
+<li>
+<p>Channel Status: Shows the record of messages with this channel status.</p>
+</li>
+<li>
+<p>Channel Error Code: Shows the record of messages with this Channel Error Code.</p>
+</li>
+<li>
+<p>Channel Error Message: Shows the record of messages with this Channel error message.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cisco-webex-console/webex_settings.png" alt="Cisco Webex Settings">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_settings"><a class="anchor" href="#_settings"></a>Settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The user can provide SMS enablement key to sms enable number through teli</p>
+</div>
+<div class="paragraph">
+<p>If you would like to explore the Cisco Webex API, we recommend having a loot at the
+<a href="../api/cisco-webex/overview.html">Getting Started with the Cisco Webex API Guide</a></p>
 </div>
 </div>
 </div>
@@ -1815,14 +2236,5 @@
     })('userback-sdk');
 </script>
 
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
   </body>
 </html>

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Two-Factor Authentication (2FA) Console - Restcomm Docs"></title>
+    <title data-custom-title="Auto Attendant Console - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/solutions/two-factor-authentication-console.html
+      https://dev.restcomm.com/docs/1.0/turnkey-applications/auto-attendant-console.html
     ">
-    <meta name="description" content="Secure online transactions, account sign-ins, mobile apps, websites and more by providing two-factor authentication (2FA) with One-Time Passwords to your users.">
-    <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} two-factor authentication">
+    <meta name="description" content="Cisco Webex API allows Restcomm Accounts to create, manage and get usage records for mappings.">
+    <meta name="keywords" content="cisco webex api, webex teams api, cisco webex api overview, cisco webex">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -1597,193 +1597,75 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="two-factor-authentication-console.html">Two-Factor Authentication (2FA) Console</a></li>
+    <li class="crumb"><a href="auto-attendant-console.html">Auto Attendant Console</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Two-Factor Authentication (2FA) Console</h1>
+  <h1>Auto Attendant Console</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_introduction">Introduction</a></li>
-<li><a href="#_white_labeling">White Labeling</a></li>
-<li><a href="#_home">Home</a></li>
-<li><a href="#_session_details">Session Details</a>
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_enterprise">Enterprise</a>
 <ul class="sectlevel2">
-<li><a href="#_search">Search</a></li>
-<li><a href="#_usage_records">Usage Records</a></li>
+<li><a href="#_enterprise_list">Enterprise List</a></li>
+<li><a href="#_add_enterprise">Add Enterprise</a></li>
 </ul>
 </li>
-<li><a href="#_demo">Demo</a></li>
+<li><a href="#_autoattendant_system">AutoAttendant System</a>
+<ul class="sectlevel2">
+<li><a href="#_aa_system_list">AA system List</a></li>
+<li><a href="#_aa_system">AA system</a></li>
+</ul>
+</li>
+<li><a href="#_phone_numbers">Phone Numbers</a>
+<ul class="sectlevel2">
+<li><a href="#_phone_numbers_list">Phone numbers List</a></li>
+<li><a href="#_add_phone_number">Add Phone number</a></li>
+</ul>
+</li>
+<li><a href="#_extensions">Extensions</a>
+<ul class="sectlevel2">
+<li><a href="#_extension_list">Extension List</a></li>
+<li><a href="#_add_extension">Add Extension</a></li>
+</ul>
+</li>
+<li><a href="#_user_management">User Management</a>
+<ul class="sectlevel2">
+<li><a href="#_users_list">Users List</a></li>
+<li><a href="#_add_users">Add Users</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Two-factor authentication (2FA) API lets you send One Time Password (OTP) using SMS, Voice or email.</p>
+<p>Auto Attendant (AA) is intended for business customers who want to provide an automated means of directing incoming calls to the appropriate person within the organization, typically to offload this task from a receptionist and also offer a simple menu system ("for menu, press 1, for transfer to phone, press 2," etc.)</p>
 </div>
 <div class="paragraph">
-<p>2FA allows you to add a second layer of security to your Application in addition to the user-id and password. The flexibility of using any channel makes sure your users get OTP even when they experience issues with one of the channels.</p>
-</div>
-<div class="paragraph">
-<p>To learn more about 2FA, check out the <a href="two-factor-authentication-overview.html">Two-Factor Authentication (2FA) Overview</a></p>
-</div>
-<div class="paragraph">
-<p>This document covers features and functionalities of the 2FA UI Console that leverage the underlying API.</p>
-</div>
-<div class="paragraph">
-<p>To access 2FA Console visit https://&lt;your_custom_domain&gt;/twofa/ and login with your Restcomm Credentials.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_white_labeling"><a class="anchor" href="#_white_labeling"></a>White Labeling</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Restcomm enables you to go to market with your own 2FA brand in a matter of days. 2FA leverages the Restcomm Whitelabel, hence all the work done by user to whitelabel Restcomm Dashboard is used by 2FA as it is. For further details on Restcomm Dashboard whitelabeling please check the <a href="../whitelabeling.html">Restcomm Whitelabeling Guide</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_home"><a class="anchor" href="#_home"></a>Home</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This is the default page the user will see after logging in. Here user can find the number of OTP requests sent per channel - SMS, Voice and Email in the last 24 hours for users Account and 30 days usage report of OTP requests.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/two-factor-authentication/restcomm-2fa-console-home.png" alt="Two-factor authentication - Home screen">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_session_details"><a class="anchor" href="#_session_details"></a>Session Details</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Session Details Records allows users to search for a specific set of 2FA request based on filter criteria or to retrieve Usage Records like how many 2FA requests per day based on filter criteria.</p>
-</div>
-<div class="sect2">
-<h3 id="_search"><a class="anchor" href="#_search"></a>Search</h3>
-<div class="paragraph">
-<p>The user can search for a specific set of 2FA. Below are the supported filters for search:</p>
-</div>
-<div class="paragraph">
-<p><strong>Account Scope:</strong></p>
+<p>Restcomm Auto Attendant helps service providers enable their enterprise customers to Edit Autoattendant,manage users,assign phone numbers and assign extensions. Enterprise Customers can define different menus for given AA. For example</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Search in Current Account: Shows the 2FA requests that are created by the logged-in user.</p>
+<p>“Work hour menu” provides option to caller to reach to out Extension etc</p>
 </li>
 <li>
-<p>Search current account and sub-accounts: Shows 2FA requests that are created by logged in user and all other Sub-Accounts under logged in user.</p>
+<p>“Non work hours menu” can request to call back during working hours</p>
 </li>
 <li>
-<p>Search in Specific Account: Search 2FA requests  created by specific Sub-Account under logged in user. The user is presented with a list of Sub-Accounts in a popup window. The user can select the Restcomm account on that popup window.</p>
+<p>“Special day menu” can announce different greetings</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Start Date:</strong> Shows the list of 2FA requests that were created on or after this date.</p>
+<p>It allows Enterprise Users to create menus,schedules,announcements for an auto attendant system.</p>
 </div>
 <div class="paragraph">
-<p><strong>End Date:</strong> Shows the list of 2FA requests that were created on or before this date.</p>
-</div>
-<div class="paragraph">
-<p><strong>Status:</strong> Show the list of 2FA requests that have selected status.</p>
-</div>
-<div class="paragraph">
-<p><strong>Channel:</strong> Show the list of 2FA requests that are sent via the selected channel.</p>
-</div>
-<div class="paragraph">
-<p><strong>Service:</strong>  Show the list of 2FA requests that match this service text, partially or fully in any position.</p>
-</div>
-<div class="paragraph">
-<p><strong>From:</strong> Only include 2FA list that has from begins with this number/email text. For example, if OTP is generated from number “15713316943” and from filter parameter is “1”, it will match. However if from filter parameter is “3”, this record will not match. This allows filtering 2FA sent from specific country code.</p>
-</div>
-<div class="paragraph">
-<p><strong>To:</strong> Only include the OTP list that has to begin with this number/email text. For example, if OTP is sent to number “16513333367” and to filter parameter is “1”, it will match. However if to filter parameter is “3”, this record will not match. This allows to filter OTP sent to specific country code.</p>
-</div>
-<div class="paragraph">
-<p><strong>TargetSid:</strong> Only include 2FA list that match target sid of SMS/ Call/ Email text, partially or fully in any position.</p>
-</div>
-<div class="paragraph">
-<p><strong>Check Status:</strong> Only include a 2FA list that has this check status. Possible values are valid or invalid</p>
-</div>
-<div class="paragraph">
-<p><strong>Channel Status:</strong> Only include 2FA list that matches underlying channel status, partially or fully in any position. For SMS, possible channel status value can be as explained <a href="../api/sms-api.html#_status_description">here</a>. For Call, possible values are as explained in “status” property <a href="../api/calls-api.html#_calls_attributes">here</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Channel Error Code:</strong> Only include a 2FA list that matches underlying channel code, partially or fully in any position. For SMS, the possible value can be found <a href="../api/sms-api.html#_sms_specific_error_codes">here</a></p>
-</div>
-<div class="paragraph">
-<p><strong>Channel Error Message:</strong> Only include 2FA list that matches channel error message text, partially or fully in any position</p>
-</div>
-<div class="sect3">
-<h4 id="_sorting"><a class="anchor" href="#_sorting"></a>Sorting</h4>
-<div class="paragraph">
-<p>Users can sort the search results by clicking on Column Header as explained below.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Date:</strong> Ascending or Descending list of 2FA based on Date when it was created</p>
-</li>
-<li>
-<p><strong>Service:</strong> Sort by Service.</p>
-</li>
-<li>
-<p><strong>Status:</strong> Sort by the status of 2FA request.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/two-factor-authentication/restcomm-2fa-search.png" alt="Two-factor authentication - Search screen">
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_download_as_csv"><a class="anchor" href="#_download_as_csv"></a>Download as CSV:</h4>
-<div class="paragraph">
-<p>Once results are displayed for search criteria, the user can click on the Download icon below the Search icon to download search results as CSV.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_2fa_request_details"><a class="anchor" href="#_2fa_request_details"></a>2FA request details:</h4>
-<div class="paragraph">
-<p>User can view details of particular 2FA by clicking on any row in the list.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/two-factor-authentication/restcomm-2fa-request-details.png" alt="Two-factor authentication - Request details">
-</div>
-</div>
-<div class="paragraph">
-<p>User can click on Check link to see the details of the 2FA check request</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/two-factor-authentication/restcomm-2fa-check-request.png" alt="Two-factor authentication - Check request">
-</div>
-</div>
-<div class="paragraph">
-<p>User can click on Events to see details of Channel used to send 2FA request.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/two-factor-authentication/restcomm-2fa-channel-details.jpg" alt="Two-factor authentication - Channel details">
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage Records</h3>
-<div class="paragraph">
-<p>The Usage record allows to retrieve usage made by your 2FA account during any time period and by any usage channel. Below filter parameters are supported.</p>
+<p>This document covers the features and functionalities of the Telestax Auto Attendant from Communications Service Providers (CSP) Point of View.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1792,90 +1674,745 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Usage Records do not include real-time data and can be delayed by maximum 1 hour.
+Auto Attendant can be White Labeled to follow CSP branding. For further details please look at <a href="https://www.restcomm.com/docs/whitelabeling.html" class="bare">https://www.restcomm.com/docs/whitelabeling.html</a>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Account Scope:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Search in Current Account: Shows the 2FA requests  that are created by the logged-in user.</p>
-</li>
-<li>
-<p>Search current account and sub-accounts: Shows 2FA requests that are created by logged in user and all other Sub-Accounts under logged in user.</p>
-</li>
-<li>
-<p>Search in Specific Account: Search 2FA request that is created by specific Sub-Account under logged in user. The user is presented with a list of Sub-Accounts in a popup window. The user can select the Restcomm account on that popup window.</p>
-</li>
-</ul>
+<p>To begin with CSP has to define at-least one Enterprise as explained in section 2 Enterprise. Then for each Enterprise CSP has to define at-least one Phone Number as explained in section 4 Phone Numbers. While Extensions are not mandatory, 99% of the AA systems would have Extensions associated.</p>
 </div>
 <div class="paragraph">
-<p><strong>Subresource:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Daily: Shows the record of 2FA on a daily basis.</p>
-</li>
-<li>
-<p>Monthly: Shows the record of 2FA on a monthly basis.</p>
-</li>
-<li>
-<p>Yearly: Shows the record of enterprise on a yearly basis.</p>
-</li>
-<li>
-<p>Today: Shows the record of enterprise today.</p>
-</li>
-<li>
-<p>Yesterday: Shows the record of enterprise on yesterday.</p>
-</li>
-<li>
-<p>This Month: Shows the record of enterprise this month.</p>
-</li>
-<li>
-<p>Last Month: Shows the record of enterprise last month.</p>
-</li>
-</ul>
+<p>Console can be accessed from <a href="https://&lt;CSP" class="bare">https://&lt;CSP</a> Custom Domain&gt;/autoattendantconsole/</p>
 </div>
 <div class="paragraph">
-<p><strong>Start Date:</strong> Only includes 2FA requests that were created on or after this date.</p>
+<p>To sign in to AA Console, CSP has to use the same credentials that they have for their Restcomm Accounts.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only CSP Admins under Restcomm can have access to AA. This restriction is because CSP Admin can define new Enterprise in AA Systems and in process it has to add Sub-Account. Restcomm as of today only allows top level Admin to define Sub-Account. Sub-Account cannot define another Sub-Account under it.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_enterprise"><a class="anchor" href="#_enterprise"></a>Enterprise</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enterprises are customers of CSP. It allows CSP to easily categorize AA Systems for specific Enterprise and hence easy management, monitoring and also understanding the usage.</p>
 </div>
 <div class="paragraph">
-<p><strong>End Date:</strong> Only includes 2FA requests that were created on or before this date.</p>
+<p>Each Enterprise can have one or more AA System, Phone Numbers and Extensions.</p>
 </div>
-<div class="paragraph">
-<p><strong>Status:</strong> Only includes 2FA requests that have selected status.</p>
-</div>
-<div class="paragraph">
-<p><strong>Channel:</strong> Only includes 2FA requests that are sent via selected channel.</p>
-</div>
-<div class="paragraph">
-<p><strong>Filter By Country Code:</strong> Only includes 2FA requests sent to selected Country Code. For example if OTP is sent to “16513333367” and the filter parameter is “1 - United States”, it will match.</p>
-</div>
+<div class="sect2">
+<h3 id="_enterprise_list"><a class="anchor" href="#_enterprise_list"></a>Enterprise List</h3>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/two-factor-authentication/restcomm-2fa-usage-records.png" alt="Two-factor authentication - Usage records">
+<img src="../_images/auto-attendant/enterprise-list.png" alt="Enterprise List">
 </div>
 </div>
 <div class="paragraph">
-<p>Usage Records will show Total, Successful, UnSuccessful and Success Ratio (Successful / Total).</p>
+<p>Users can view a list of all enterprises that have been added under their organization. Enterprises can be filtered based on the name.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_enterprise"><a class="anchor" href="#_add_enterprise"></a>Add Enterprise</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/add-enterprise.png" alt="Add Enterprise">
+</div>
 </div>
 <div class="paragraph">
-<p>If you would like to explore the Two-factor authentication (2FA) API, we recommend having a look at the
-<a href="Two-factor-Authentication-2FA.html">Getting Started with the Two-factor authentication (2FA) API Guide</a></p>
+<p>Follow the steps below to add an enterprise:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the “Add Enterprise” button in the enterprise list page.</p>
+</li>
+<li>
+<p>Enter the name of the new enterprise.</p>
+</li>
+<li>
+<p>An enterprise admin has to be assigned to this enterprise. Enter the email Id of the business group admin user you’d want to be the admin of the enterprise. All the numbers will be provisioned under this RC account.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Never ever share this newly created Business Group Admin credentials with Enterprise. This is because, all Numbers added by CSP Admin are registered under this newly created Business Group Admin (Sub-Account) under Restcomm. If the Enterprise has access to Restcomm, they can sign-in to Restcomm and messup the settings. Once Enterprise is created, please go to the User Management section as explained in 6 User Management, create new BG Admin and share this credentials with Enterprise.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter the password for the enterprise admin account. This will be set in RC.</p>
+</li>
+<li>
+<p>Enter a friendly name of the enterprise admin user.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Enterprise name,Mail ID must be unique.
+NOTE: Password should meet below criteria:
+ At least one Uppercase letter(A,B,C,D…&#8230;&#8203;)
+ At least one Lowercase letter(a,b,c,d,&#8230;&#8203;&#8230;&#8203;.)
+ At least one number(1,2,3,4,5….)
+ At least one special character(!,@,#,$,%,&amp;,&#8230;&#8203;&#8230;&#8203;.)
+ Length of the password should be greater than equal to 8.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once Enterprise is created, click on Enterprise Name to see all other options mentioned below from Section 3 to Section 6.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_demo"><a class="anchor" href="#_demo"></a>Demo</h2>
+<h2 id="_autoattendant_system"><a class="anchor" href="#_autoattendant_system"></a>AutoAttendant System</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_aa_system_list"><a class="anchor" href="#_aa_system_list"></a>AA system List</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-system-list.png" alt="Auto-attendant system list">
+</div>
+</div>
+<div class="paragraph">
+<p>To navigate to the page, click on the Systems on the top header.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Users can view a list of all AA systems that have been added under a particular enterprise.</p>
+</li>
+<li>
+<p>AA System can be filtered based on the name.</p>
+</li>
+<li>
+<p>User can deactivate/activate the aa system by clicking on the status of any AA system</p>
+</li>
+<li>
+<p>Users can delete a AA system by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aa_system"><a class="anchor" href="#_aa_system"></a>AA system</h3>
+<div class="paragraph">
+<p>To create a new AA system click on the add AA system button.
+To edit an existing AA system click on the name of the AA system.
+Both the actions will take the user to the basic details page.
+Steps to follow while creating an AA system.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Basic details</p>
+</li>
+<li>
+<p>Announcement</p>
+</li>
+<li>
+<p>Menu</p>
+</li>
+<li>
+<p>Schedule</p>
+</li>
+<li>
+<p>Special Days</p>
+</li>
+<li>
+<p>Error Handling</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_basic_details"><a class="anchor" href="#_basic_details"></a>Basic details</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a name of the AA System.</p>
+</li>
+<li>
+<p>Assign the phone numbers from the list of available phone numbers.</p>
+</li>
+<li>
+<p>Assign the extension numbers from the list of available extensions,</p>
+</li>
+<li>
+<p>Set the time zone where the AA system is being used.</p>
+</li>
+<li>
+<p>Add the description to the AA system</p>
+</li>
+<li>
+<p>Click ‘Save &amp; Continue’ Button</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-basic-details.png" alt="Basic details">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_announcement"><a class="anchor" href="#_announcement"></a>Announcement</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-announcements.png" alt="Auto attendant announcements">
+</div>
+</div>
+<div class="paragraph">
+<p>To navigate to this page click on announcements in the side navigation bar of the screen.
+Users can view a list of all announcements that have been added under the enterprise.</p>
+</div>
+<div class="sect4">
+<h5 id="_create_announcement"><a class="anchor" href="#_create_announcement"></a>Create Announcement</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/create-announcement.png" alt="Auto attendant create announcements">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on “Create Announcement” button</p>
+</li>
+<li>
+<p>Enter the name of the announcement.</p>
+</li>
+<li>
+<p>Enter description of the announcement.</p>
+</li>
+<li>
+<p>User can upload a announcement by:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the “Record” button and record the announcement through the browser itself.</p>
+</li>
+<li>
+<p>Drop the wav file with 8 khz mono specification from the local files into the specified field.</p>
+</li>
+<li>
+<p>Click on “Browse” and select the audio file of announcement from the local files (wav file with 8khz mono specification)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_menu"><a class="anchor" href="#_menu"></a>Menu</h4>
+<div class="paragraph">
+<p>To navigate to this page click on Schedule in the side navigation bar of the screen.</p>
+</div>
+<div class="paragraph">
+<p>Below the schedule table users can view the list of menus available for that AA system</p>
+</div>
+<div class="paragraph">
+<p>Users can change the color code of the menu by clicking on the color box in the list to change the color of the menu and click on select.</p>
+</div>
+<div class="paragraph">
+<p>Users can delete the menu by clicking on the delete icon of the particular menu.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Menu can only be deleted if it is not used in schedule and there is no announcement assigned to it.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-menu.png" alt="Auto attendant menu">
+</div>
+</div>
+<div class="sect4">
+<h5 id="_create_menu"><a class="anchor" href="#_create_menu"></a>Create menu</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-add-menu.png" alt="Auto attendant add menu">
+</div>
+</div>
+<div class="paragraph">
+<p>To add a menu click on “Add Menu” button. A popup screen will appear:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter the name of the menu.</p>
+</li>
+<li>
+<p>Assign an announcement to the menu from the list of the announcements.</p>
+</li>
+<li>
+<p>Assign action to be performed for the keys mentioned on the screen and respective data of the action if needed to carry out that particular action. Please see section 4.2.3.2 Menu Actions to understand the list of actions possible.</p>
+</li>
+<li>
+<p>Set the timeout of the menu in seconds and set the action and respective action data (if needed) to be performed after the timeout.</p>
+</li>
+<li>
+<p>Menu will be created by clicking on the “Done” button.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+After series of DTMF pressed by caller, its expected that user presses # key to indicate to the system that the caller is done with input. If user doesn’t press # key, System waits for timeout seconds and then carries necessary action depending on DTMF input.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_menu_actions"><a class="anchor" href="#_menu_actions"></a>Menu Actions</h5>
+<div class="paragraph">
+<p>Table below explains each of Menu actions that can be assigned to keys.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Menu Action</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement Hangup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Play the selected Announcement and hang up the call</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement Return</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Play the selected Announcement and return to the menu. System will play the Menu Announcement again.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dial By Extension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dial the extension number entered by caller</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dial By Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Listen to speech from the caller and dial the corresponding extension. For this to work correctly the Name must have been defined for extensions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Go To Menu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Play the selected Menu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hangup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hang Up the call</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replay Menu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Play the existing Menu again</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return To Previous Menu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Play the previous Menu again</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transfer To Phone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transfer the call to specified Phone Number</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schedule"><a class="anchor" href="#_schedule"></a>Schedule</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-schedule.png" alt="Auto attendant schedule">
+</div>
+</div>
+<div class="paragraph">
+<p>To navigate to this page click on schedule on the side navigation bar of the screen.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A grid will appear where you can create a weekly schedule for different menus.</p>
+</li>
+<li>
+<p>Select a menu checkbox, drag and create the schedule for it in the grid.</p>
+</li>
+<li>
+<p>Grid can be changed to a 15 minutes or 30 minutes time window.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_special_days"><a class="anchor" href="#_special_days"></a>Special Days</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-special-days.png" alt="Auto attendant special days">
+</div>
+</div>
+<div class="paragraph">
+<p>To navigate to this page click on special days on the side navigation bar of the screen.</p>
+</div>
+<div class="paragraph">
+<p>Select a checkbox of menu from the list of menus below the calendar</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A calendar will appear where you can create a special days schedule from different menus.</p>
+</li>
+<li>
+<p>Select a menu checkbox, select a date on the calendar to create special day schedule for it.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_error_handling"><a class="anchor" href="#_error_handling"></a>Error Handling</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-error-handling.png" alt="Auto attendant error handling">
+</div>
+</div>
+<div class="paragraph">
+<p>To navigate to this page click on “Error Handling” on the side navigation bar of the screen.</p>
+</div>
+<div class="paragraph">
+<p>In each AA System that you create, you should always define the action to be taken if the menu times out or the user presses invalid key or the user presses invalid extension: For example,if the user does not press a key within the specified time. you could repeat the menu so that the caller has another chance to check the options and select the right key, or transfer the caller to an operator.</p>
+</div>
+<div class="sect4">
+<h5 id="_timeout"><a class="anchor" href="#_timeout"></a>Timeout</h5>
+<div class="paragraph">
+<p>If the caller doesn’t press any DTMF for configured timeout duration, system will perform the configured action.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set the timeout seconds to wait for the schedule.</p>
+</li>
+<li>
+<p>Set how many consecutive timeout occurrences are allowed after which</p>
+</li>
+<li>
+<p>Set the action and respective data of the action if needed to carry out that particular action.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If timeout is defined at Menu Level, it will override the global timeout defined here
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_unknown_input"><a class="anchor" href="#_unknown_input"></a>Unknown Input:</h5>
+<div class="paragraph">
+<p>If the menu detects unknown input: that is, if the user presses a key which is not defined in the menu.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set how many occurences that the user presses unknown input after which</p>
+</li>
+<li>
+<p>Set the action and respective data of the action if needed to carry out that particular action.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_invalid_extension"><a class="anchor" href="#_invalid_extension"></a>Invalid Extension:</h5>
+<div class="paragraph">
+<p>Set the action to take place If the user presses a invalid extension which is not configured in the aa system.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set how many occurences that the user presses invalid extension after which</p>
+</li>
+<li>
+<p>Set the action and respective data of the action if needed to carry out that particular action.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phone_numbers"><a class="anchor" href="#_phone_numbers"></a>Phone Numbers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>2FA Console provides an easy to use demo for users to send OTP and test the 2FA API. To try Demo, click on your name at top right corner and select “2FA Demo”. Click on the “Try Demo” button on the card displayed. You will see a form where you can enter all the values and send OTP. If sending is successful, you will see the API called along with parameters.</p>
+<p>One or more lines/phone numbers are setup as Auto Attendant phone numbers. This means that the system provides Auto Attendant Service to caller on these numbers.</p>
+</div>
+<div class="sect2">
+<h3 id="_phone_numbers_list"><a class="anchor" href="#_phone_numbers_list"></a>Phone numbers List</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-phone-numbers-list.png" alt="Auto attendant phone numbers list">
+</div>
+</div>
+<div class="paragraph">
+<p>To navigate to the page, click on the phone numbers on the top header.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Users can view the list of phone numbers under the enterprise.</p>
+</li>
+<li>
+<p>Users can assign the phone numbers to the AA system by selecting the AA system from the drop down of AA system names.</p>
+</li>
+<li>
+<p>Users can delete the phone number by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_phone_number"><a class="anchor" href="#_add_phone_number"></a>Add Phone number</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-add-number.png" alt="Auto attendant add phone number">
+</div>
+</div>
+<div class="paragraph">
+<p>To add a phone number under the enterprise click on “Add Phonenumbers” button</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter phone number</p>
+</li>
+<li>
+<p>Enter friendly name of the phone number and click done</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+These numbers will be provisioned under main BG Admin Sub-Account under Restcomm.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_extensions"><a class="anchor" href="#_extensions"></a>Extensions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_extension_list"><a class="anchor" href="#_extension_list"></a>Extension List</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-extensions-list.png" alt="Auto attendant add phone number">
+</div>
+</div>
+<div class="paragraph">
+<p>To navigate to the page, click on the Extensions on the top header.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Users can view the list of Extensions that are configured under the enterprise.</p>
+</li>
+<li>
+<p>Users can edit the extension number and spoken name of the number by clicking on the pencil icon in the respective fields( “Spoken name”, “Extension”)</p>
+</li>
+<li>
+<p>Users can delete the Extension by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_extension"><a class="anchor" href="#_add_extension"></a>Add Extension</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-add-extension.png" alt="Auto attendant add phone number">
+</div>
+</div>
+<div class="paragraph">
+<p>To add a phone number under the enterprise click on “Add Extensions” button</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter Extension number</p>
+</li>
+<li>
+<p>Enter Phone number</p>
+</li>
+<li>
+<p>Enter Spoken name of the extension and click done</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_management"><a class="anchor" href="#_user_management"></a>User Management</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_users_list"><a class="anchor" href="#_users_list"></a>Users List</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-users-list.png" alt="Auto attendant add phone number">
+</div>
+</div>
+<div class="paragraph">
+<p>To navigate to the page, click on the “User Management” on the top header.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Users can view the list of accounts registered under the enterprise.</p>
+</li>
+<li>
+<p>Users can deactivate/activate the account by clicking on the status of any account.</p>
+</li>
+<li>
+<p>Users can delete the account by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+All the users created are Sub-Accounts under that CSP Admin Account in Restcomm
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_users"><a class="anchor" href="#_add_users"></a>Add Users</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/auto-attendant/auto-attendant-create-user.png" alt="Auto attendant add phone number">
+</div>
+</div>
+<div class="paragraph">
+<p>Follow the steps below to add an user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the “Add User” button in the User management page.</p>
+</li>
+<li>
+<p>Enter the name of the new user.</p>
+</li>
+<li>
+<p>Enter email id of the user.</p>
+</li>
+<li>
+<p>Enter the password for the user account. This will be set in RC.</p>
+</li>
+<li>
+<p>Set a role for the user (BG ADMIN,AA ADMIN)</p>
+</li>
+<li>
+<p>Set the status of the account (ACTIVE,INACTIVE)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Mail ID must be unique. Password should meet below criteria:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>At least one Uppercase letter(A,B,C,D…&#8230;&#8203;)</p>
+</li>
+<li>
+<p>At least one Lowercase letter(a,b,c,d,&#8230;&#8203;&#8230;&#8203;.)</p>
+</li>
+<li>
+<p>At least one number(1,2,3,4,5….)</p>
+</li>
+<li>
+<p>At least one special character(!,@,#,$,%,&amp;,&#8230;&#8203;&#8230;&#8203;.)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Length of the password should be greater than equal to 8.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you would like to explore the Auto Attendant API, we recommend having a look at the <a href="../api/auto-attendant/auto-attendant-api.html">Getting Started with the Auto Attendant API Guide</a>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1990,14 +2527,5 @@ Usage Records do not include real-time data and can be delayed by maximum 1 hour
     })('userback-sdk');
 </script>
 
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
   </body>
 </html>

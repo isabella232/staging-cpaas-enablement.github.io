@@ -1970,6 +1970,95 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_paging"><a class="anchor" href="#_paging"></a>Paging</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following paging parameters are supported</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which page of Profile records to return, starting from 0.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PageSize</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_paging_information"><a class="anchor" href="#_additional_paging_information"></a>Additional Paging Information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The API returns URIs to the next, previous, first and last pages of the returned list as shown in the table below:</p>
+</div>
+<div class="sect2">
+<h3 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI of the current page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Firstpageuri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for the first page of this list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nextpageuri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for the next page of this list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Previouspageuri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for the previous page of this list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lastpageuri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URI for the last page of this list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NumPages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The total number of pages.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The total number of items in the list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The position in the overall list of the first item in this page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">End</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The position in the overall list of the last item in this page.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_example_of_getting_daily_calls_stats"><a class="anchor" href="#_example_of_getting_daily_calls_stats"></a>Example of Getting Daily Calls Stats</h2>
 <div class="sectionbody">
 <script>
@@ -1991,17 +2080,17 @@
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-141 is-active" onclick="openLanguage('Curl', 141)">Curl</button>
-        <button class="sample-code-button scsIndex-141" onclick="openLanguage('Nodejs', 141)">Nodejs</button>
-        <button class="sample-code-button scsIndex-141" onclick="openLanguage('Python', 141)">Python</button>
-        <button class="sample-code-button scsIndex-141" onclick="openLanguage('Java', 141)">Java</button>
+        <button class="sample-code-button scsIndex-148 is-active" onclick="openLanguage('Curl', 148)">Curl</button>
+        <button class="sample-code-button scsIndex-148" onclick="openLanguage('Nodejs', 148)">Nodejs</button>
+        <button class="sample-code-button scsIndex-148" onclick="openLanguage('Python', 148)">Python</button>
+        <button class="sample-code-button scsIndex-148" onclick="openLanguage('Java', 148)">Java</button>
       </div>
-      <div id="Curl-141" class="sample-language-141">
+      <div id="Curl-148" class="sample-language-148">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/"Accounts/ACCOUNT_SID/Usage/Records/Daily.xml  \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-141" class="sample-language-141" style="display:none">
+      <div id="Nodejs-148" class="sample-language-148" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -2020,7 +2109,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-141" class="sample-language-141" style="display:none">
+      <div id="Python-148" class="sample-language-148" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -2040,7 +2129,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-141" class="sample-language-141" style="display:none">
+      <div id="Java-148" class="sample-language-148" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
@@ -2201,14 +2290,5 @@ public class JavaSampleClass {
     })()
   </script>
 
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
   </body>
 </html>

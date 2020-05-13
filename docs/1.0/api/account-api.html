@@ -1411,7 +1411,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html">Solution APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html">Solution APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1428,7 +1428,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1445,7 +1445,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_sending_one_time_passwords_api_reference">Sending One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_sending_one_time_passwords_api_reference">Sending One-Time Passwords</a>
 
             </span>
               </div>
@@ -1462,7 +1462,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_verifying_one_time_passwords_api_reference">Verifying One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_verifying_one_time_passwords_api_reference">Verifying One-Time Passwords</a>
 
             </span>
               </div>
@@ -1479,7 +1479,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_cancel_one_time_passwords_api_reference">Cancel One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_cancel_one_time_passwords_api_reference">Cancel One-Time Passwords</a>
 
             </span>
               </div>
@@ -1496,7 +1496,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_session_detail_record_sdr">Session Detail Record (SDR)</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_session_detail_record_sdr">Session Detail Record (SDR)</a>
 
             </span>
               </div>
@@ -1513,7 +1513,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_get_list_of_one_time_passwords_api_reference">Get list of One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_get_list_of_one_time_passwords_api_reference">Get list of One-Time Passwords</a>
 
             </span>
               </div>
@@ -1530,7 +1530,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_get_single_one_time_passwords_api_reference">Get a Single One-Time Password</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_get_single_one_time_passwords_api_reference">Get a Single One-Time Password</a>
 
             </span>
               </div>
@@ -1547,7 +1547,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_usage_record_one_time_passwords_api_reference">Usage Record One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_usage_record_one_time_passwords_api_reference">Usage Record One-Time Passwords</a>
 
             </span>
               </div>
@@ -2414,7 +2414,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Check also <a href="#close-sub-accounts">[close-sub-accounts]</a>.</p>
+<p>Check also <a href="account-api.html#_close_sub_accounts">close sub-accounts</a>.</p>
 </div>
 <div class="paragraph">
 <p>Below you will find a list of parameters.</p>
@@ -3117,9 +3117,8 @@ public class JavaSampleClass {
 <div class="sect1">
 <h2 id="_sub_accounts"><a class="anchor" href="#_sub_accounts"></a>Sub-Accounts</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>You can read more about Sub-Accounts and Multi-tenancy <a href="Multi-tenancy-and-Managing-Sub-Accounts.adoc">HERE</a></p>
-</div>
+<div class="sect2">
+<h3 id="_get_information_about_the_current_account"><a class="anchor" href="#_get_information_about_the_current_account"></a>Get information about the current account</h3>
       <div class="sample-code-bar">
         <button class="sample-code-button scsIndex-9 is-active" onclick="openLanguage('Curl', 9)">Curl</button>
         <button class="sample-code-button scsIndex-9" onclick="openLanguage('Nodejs', 9)">Nodejs</button>
@@ -3197,6 +3196,7 @@ public class JavaSampleClass {
 }
 </code></pre>
       </div>
+</div>
 <div class="sect2">
 <h3 id="_examples_2"><a class="anchor" href="#_examples_2"></a>Examples</h3>
 
@@ -3756,14 +3756,5 @@ public class JavaSampleClass {
     })('userback-sdk');
 </script>
 
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
   </body>
 </html>

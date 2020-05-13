@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Auto Attendant Console - Restcomm Docs"></title>
+    <title data-custom-title="Message Exchange Console - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/solutions/auto-attendant-console.html
+      https://dev.restcomm.com/docs/1.0/turnkey-applications/message-exchange-console.html
     ">
-    <meta name="description" content="Cisco Webex API allows Restcomm Accounts to create, manage and get usage records for mappings.">
-    <meta name="keywords" content="cisco webex api, webex teams api, cisco webex api overview, cisco webex">
+    <meta name="description" content="The Restcomm Message Exchange Console helps service providers enable their enterprise customers to send and receive SMS using their Unified Communication (UC) client. Enterprise customers can send either two-way SMS or an SMS to multiple destinations.">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -1597,44 +1596,48 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="auto-attendant-console.html">Auto Attendant Console</a></li>
+    <li class="crumb"><a href="message-exchange-console.html">Message Exchange Console</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Auto Attendant Console</h1>
+  <h1>Message Exchange Console</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_overview">Overview</a></li>
-<li><a href="#_enterprise">Enterprise</a>
+<li><a href="#_home">Home</a></li>
+<li><a href="#_mappings">Mappings</a>
 <ul class="sectlevel2">
-<li><a href="#_enterprise_list">Enterprise List</a></li>
-<li><a href="#_add_enterprise">Add Enterprise</a></li>
+<li><a href="#_adding_an_enterprise">Adding an enterprise</a></li>
+<li><a href="#_enterprise_mapping_details">Enterprise mapping Details</a></li>
+<li><a href="#_add_a_mapping">Add a mapping</a></li>
 </ul>
 </li>
-<li><a href="#_autoattendant_system">AutoAttendant System</a>
+<li><a href="#_whitelist">Whitelist</a>
 <ul class="sectlevel2">
-<li><a href="#_aa_system_list">AA system List</a></li>
-<li><a href="#_aa_system">AA system</a></li>
+<li><a href="#_whitelist_search">Whitelist Search</a></li>
+<li><a href="#_add_whitelist">Add Whitelist</a></li>
 </ul>
 </li>
-<li><a href="#_phone_numbers">Phone Numbers</a>
+<li><a href="#_domains">Domains</a>
 <ul class="sectlevel2">
-<li><a href="#_phone_numbers_list">Phone numbers List</a></li>
-<li><a href="#_add_phone_number">Add Phone number</a></li>
+<li><a href="#_domains_list">Domains List</a></li>
+<li><a href="#_add_domains">Add Domains</a></li>
 </ul>
 </li>
-<li><a href="#_extensions">Extensions</a>
+<li><a href="#_search">Search</a>
 <ul class="sectlevel2">
-<li><a href="#_extension_list">Extension List</a></li>
-<li><a href="#_add_extension">Add Extension</a></li>
+<li><a href="#_enterprise_search">Enterprise search</a></li>
+<li><a href="#_mappings_search">Mappings search</a></li>
+<li><a href="#_messages_search">Messages search</a></li>
 </ul>
 </li>
-<li><a href="#_user_management">User Management</a>
+<li><a href="#_usage_records">Usage-records</a>
 <ul class="sectlevel2">
-<li><a href="#_users_list">Users List</a></li>
-<li><a href="#_add_users">Add Users</a></li>
+<li><a href="#_enterprise_usage_records">Enterprise Usage-records</a></li>
+<li><a href="#_mappings_usage_records">Mappings Usage-records</a></li>
+<li><a href="#_messages_usage_records">Messages Usage-records</a></li>
 </ul>
 </li>
 </ul>
@@ -1643,350 +1646,55 @@
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Auto Attendant (AA) is intended for business customers who want to provide an automated means of directing incoming calls to the appropriate person within the organization, typically to offload this task from a receptionist and also offer a simple menu system ("for menu, press 1, for transfer to phone, press 2," etc.)</p>
+<p>Restcomm Message Exchange helps service providers enable their enterprise customers to send and receive SMS using their Unified Communication (UC) client. Enterprise customers can send either two-way SMS or an SMS to multiple destinations.</p>
 </div>
 <div class="paragraph">
-<p>Restcomm Auto Attendant helps service providers enable their enterprise customers to Edit Autoattendant,manage users,assign phone numbers and assign extensions. Enterprise Customers can define different menus for given AA. For example</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>“Work hour menu” provides option to caller to reach to out Extension etc</p>
-</li>
-<li>
-<p>“Non work hours menu” can request to call back during working hours</p>
-</li>
-<li>
-<p>“Special day menu” can announce different greetings</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>It allows Enterprise Users to create menus,schedules,announcements for an auto attendant system.</p>
-</div>
-<div class="paragraph">
-<p>This document covers the features and functionalities of the Telestax Auto Attendant from Communications Service Providers (CSP) Point of View.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Auto Attendant can be White Labeled to follow CSP branding. For further details please look at <a href="https://www.restcomm.com/docs/whitelabeling.html" class="bare">https://www.restcomm.com/docs/whitelabeling.html</a>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>To begin with CSP has to define at-least one Enterprise as explained in section 2 Enterprise. Then for each Enterprise CSP has to define at-least one Phone Number as explained in section 4 Phone Numbers. While Extensions are not mandatory, 99% of the AA systems would have Extensions associated.</p>
-</div>
-<div class="paragraph">
-<p>Console can be accessed from <a href="https://&lt;CSP" class="bare">https://&lt;CSP</a> Custom Domain&gt;/autoattendantconsole/</p>
-</div>
-<div class="paragraph">
-<p>To sign in to AA Console, CSP has to use the same credentials that they have for their Restcomm Accounts.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Only CSP Admins under Restcomm can have access to AA. This restriction is because CSP Admin can define new Enterprise in AA Systems and in process it has to add Sub-Account. Restcomm as of today only allows top level Admin to define Sub-Account. Sub-Account cannot define another Sub-Account under it.
-</td>
-</tr>
-</table>
+<p>To understand more about Message Exchange please go through <a href="api/message-exchange/overview.html">Message Exchange Provisioning API</a> documentation. This document covers the features and functionalities of the Message Exchange JUI Console that leverages the underlying APIs.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_enterprise"><a class="anchor" href="#_enterprise"></a>Enterprise</h2>
+<h2 id="_home"><a class="anchor" href="#_home"></a>Home</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Enterprises are customers of CSP. It allows CSP to easily categorize AA Systems for specific Enterprise and hence easy management, monitoring and also understanding the usage.</p>
+<p>This is the default page the user will see after user logs in. Here user can find the number of enterprises, mappings added and messages sent/received in the last 24 hours within the organization and 30 days usage report of enterprises, mapping and messages for an organization</p>
 </div>
-<div class="paragraph">
-<p>Each Enterprise can have one or more AA System, Phone Numbers and Extensions.</p>
-</div>
-<div class="sect2">
-<h3 id="_enterprise_list"><a class="anchor" href="#_enterprise_list"></a>Enterprise List</h3>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/enterprise-list.png" alt="Enterprise List">
+<img src="../_images/message-exchange-console/home.png" alt="Message Exchange Console Home">
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mappings"><a class="anchor" href="#_mappings"></a>Mappings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To navigate to the page, click on the Mappings on the top header.</p>
 </div>
 <div class="paragraph">
 <p>Users can view a list of all enterprises that have been added under their organization. Enterprises can be filtered based on the name.</p>
 </div>
+<div class="paragraph">
+<p>The Enterprise entity represents the service provider customers. Service providers can quickly check the number of mappings created per customer, over a specific period of time.</p>
 </div>
-<div class="sect2">
-<h3 id="_add_enterprise"><a class="anchor" href="#_add_enterprise"></a>Add Enterprise</h3>
+<div class="paragraph">
+<p>Each Enterprise has a list of mappings which is basically mapping between SMS enabled number and Jabber Address.</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/add-enterprise.png" alt="Add Enterprise">
-</div>
-</div>
-<div class="paragraph">
-<p>Follow the steps below to add an enterprise:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Click on the “Add Enterprise” button in the enterprise list page.</p>
-</li>
-<li>
-<p>Enter the name of the new enterprise.</p>
-</li>
-<li>
-<p>An enterprise admin has to be assigned to this enterprise. Enter the email Id of the business group admin user you’d want to be the admin of the enterprise. All the numbers will be provisioned under this RC account.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Never ever share this newly created Business Group Admin credentials with Enterprise. This is because, all Numbers added by CSP Admin are registered under this newly created Business Group Admin (Sub-Account) under Restcomm. If the Enterprise has access to Restcomm, they can sign-in to Restcomm and messup the settings. Once Enterprise is created, please go to the User Management section as explained in 6 User Management, create new BG Admin and share this credentials with Enterprise.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Enter the password for the enterprise admin account. This will be set in RC.</p>
-</li>
-<li>
-<p>Enter a friendly name of the enterprise admin user.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Enterprise name,Mail ID must be unique.
-NOTE: Password should meet below criteria:
- At least one Uppercase letter(A,B,C,D…&#8230;&#8203;)
- At least one Lowercase letter(a,b,c,d,&#8230;&#8203;&#8230;&#8203;.)
- At least one number(1,2,3,4,5….)
- At least one special character(!,@,#,$,%,&amp;,&#8230;&#8203;&#8230;&#8203;.)
- Length of the password should be greater than equal to 8.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Once Enterprise is created, click on Enterprise Name to see all other options mentioned below from Section 3 to Section 6.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_autoattendant_system"><a class="anchor" href="#_autoattendant_system"></a>AutoAttendant System</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_aa_system_list"><a class="anchor" href="#_aa_system_list"></a>AA system List</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/auto-attendant/auto-attendant-system-list.png" alt="Auto-attendant system list">
-</div>
-</div>
-<div class="paragraph">
-<p>To navigate to the page, click on the Systems on the top header.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Users can view a list of all AA systems that have been added under a particular enterprise.</p>
-</li>
-<li>
-<p>AA System can be filtered based on the name.</p>
-</li>
-<li>
-<p>User can deactivate/activate the aa system by clicking on the status of any AA system</p>
-</li>
-<li>
-<p>Users can delete a AA system by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
-</li>
-</ul>
+<img src="../_images/message-exchange-console/message-exchange-mappings.png" alt="Message Exchange Mappings">
 </div>
 </div>
 <div class="sect2">
-<h3 id="_aa_system"><a class="anchor" href="#_aa_system"></a>AA system</h3>
-<div class="paragraph">
-<p>To create a new AA system click on the add AA system button.
-To edit an existing AA system click on the name of the AA system.
-Both the actions will take the user to the basic details page.
-Steps to follow while creating an AA system.</p>
-</div>
+<h3 id="_adding_an_enterprise"><a class="anchor" href="#_adding_an_enterprise"></a>Adding an enterprise</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Basic details</p>
+<p>Click on the <strong>add enterprise</strong> button.</p>
 </li>
 <li>
-<p>Announcement</p>
-</li>
-<li>
-<p>Menu</p>
-</li>
-<li>
-<p>Schedule</p>
-</li>
-<li>
-<p>Special Days</p>
-</li>
-<li>
-<p>Error Handling</p>
-</li>
-</ul>
-</div>
-<div class="sect3">
-<h4 id="_basic_details"><a class="anchor" href="#_basic_details"></a>Basic details</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Add a name of the AA System.</p>
-</li>
-<li>
-<p>Assign the phone numbers from the list of available phone numbers.</p>
-</li>
-<li>
-<p>Assign the extension numbers from the list of available extensions,</p>
-</li>
-<li>
-<p>Set the time zone where the AA system is being used.</p>
-</li>
-<li>
-<p>Add the description to the AA system</p>
-</li>
-<li>
-<p>Click ‘Save &amp; Continue’ Button</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/auto-attendant/auto-attendant-basic-details.png" alt="Basic details">
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_announcement"><a class="anchor" href="#_announcement"></a>Announcement</h4>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/auto-attendant/auto-attendant-announcements.png" alt="Auto attendant announcements">
-</div>
-</div>
-<div class="paragraph">
-<p>To navigate to this page click on announcements in the side navigation bar of the screen.
-Users can view a list of all announcements that have been added under the enterprise.</p>
-</div>
-<div class="sect4">
-<h5 id="_create_announcement"><a class="anchor" href="#_create_announcement"></a>Create Announcement</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/auto-attendant/create-announcement.png" alt="Auto attendant create announcements">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Click on “Create Announcement” button</p>
-</li>
-<li>
-<p>Enter the name of the announcement.</p>
-</li>
-<li>
-<p>Enter description of the announcement.</p>
-</li>
-<li>
-<p>User can upload a announcement by:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Click on the “Record” button and record the announcement through the browser itself.</p>
-</li>
-<li>
-<p>Drop the wav file with 8 khz mono specification from the local files into the specified field.</p>
-</li>
-<li>
-<p>Click on “Browse” and select the audio file of announcement from the local files (wav file with 8khz mono specification)</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_menu"><a class="anchor" href="#_menu"></a>Menu</h4>
-<div class="paragraph">
-<p>To navigate to this page click on Schedule in the side navigation bar of the screen.</p>
-</div>
-<div class="paragraph">
-<p>Below the schedule table users can view the list of menus available for that AA system</p>
-</div>
-<div class="paragraph">
-<p>Users can change the color code of the menu by clicking on the color box in the list to change the color of the menu and click on select.</p>
-</div>
-<div class="paragraph">
-<p>Users can delete the menu by clicking on the delete icon of the particular menu.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Menu can only be deleted if it is not used in schedule and there is no announcement assigned to it.
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/auto-attendant/auto-attendant-menu.png" alt="Auto attendant menu">
-</div>
-</div>
-<div class="sect4">
-<h5 id="_create_menu"><a class="anchor" href="#_create_menu"></a>Create menu</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/auto-attendant/auto-attendant-add-menu.png" alt="Auto attendant add menu">
-</div>
-</div>
-<div class="paragraph">
-<p>To add a menu click on “Add Menu” button. A popup screen will appear:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Enter the name of the menu.</p>
-</li>
-<li>
-<p>Assign an announcement to the menu from the list of the announcements.</p>
-</li>
-<li>
-<p>Assign action to be performed for the keys mentioned on the screen and respective data of the action if needed to carry out that particular action. Please see section 4.2.3.2 Menu Actions to understand the list of actions possible.</p>
-</li>
-<li>
-<p>Set the timeout of the menu in seconds and set the action and respective action data (if needed) to be performed after the timeout.</p>
-</li>
-<li>
-<p>Menu will be created by clicking on the “Done” button.</p>
+<p>Enter the name of new enterprise and click <strong>add enterprise</strong> button</p>
 </li>
 </ul>
 </div>
@@ -1997,421 +1705,516 @@ Menu can only be deleted if it is not used in schedule and there is no announcem
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-After series of DTMF pressed by caller, its expected that user presses # key to indicate to the system that the caller is done with input. If user doesn’t press # key, System waits for timeout seconds and then carries necessary action depending on DTMF input.
+Enterprise names must be unique.
 </td>
 </tr>
 </table>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_menu_actions"><a class="anchor" href="#_menu_actions"></a>Menu Actions</h5>
-<div class="paragraph">
-<p>Table below explains each of Menu actions that can be assigned to keys.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Menu Action</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement Hangup</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Play the selected Announcement and hang up the call</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement Return</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Play the selected Announcement and return to the menu. System will play the Menu Announcement again.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dial By Extension</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dial the extension number entered by caller</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dial By Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Listen to speech from the caller and dial the corresponding extension. For this to work correctly the Name must have been defined for extensions.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Go To Menu</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Play the selected Menu</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hangup</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hang Up the call</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Replay Menu</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Play the existing Menu again</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Return To Previous Menu</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Play the previous Menu again</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Transfer To Phone</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Transfer the call to specified Phone Number</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_schedule"><a class="anchor" href="#_schedule"></a>Schedule</h4>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/auto-attendant-schedule.png" alt="Auto attendant schedule">
+<img src="../_images/message-exchange-console/add-enterprise-mapping.png" alt="Add Enerprise Mapping">
 </div>
 </div>
-<div class="paragraph">
-<p>To navigate to this page click on schedule on the side navigation bar of the screen.</p>
 </div>
+<div class="sect2">
+<h3 id="_enterprise_mapping_details"><a class="anchor" href="#_enterprise_mapping_details"></a>Enterprise mapping Details</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>A grid will appear where you can create a weekly schedule for different menus.</p>
+<p>If a user clicks on any enterprise in the list, he will see a paginated list of mappings that belong to the enterprise.</p>
 </li>
 <li>
-<p>Select a menu checkbox, drag and create the schedule for it in the grid.</p>
+<p>Name is the friendly name given to the user, the number is the external address (SMS enabled number), Jabber Address is the Jabber Address Id that is mapped with the external number and last column contains the timestamp when the mapping was last updated and the user who updated it.</p>
 </li>
 <li>
-<p>Grid can be changed to a 15 minutes or 30 minutes time window.</p>
+<p>User can edit the name of a particular mapping.</p>
+</li>
+<li>
+<p>User can delete a particular mapping by clicking on the delete icon that appears by hovering mouse on a specific row.</p>
+</li>
+<li>
+<p>User can edit domain of a particular mapping.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_special_days"><a class="anchor" href="#_special_days"></a>Special Days</h4>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/auto-attendant-special-days.png" alt="Auto attendant special days">
+<img src="../_images/message-exchange-console/testing-your-mapping.png" alt="Testing Your Mapping">
 </div>
 </div>
 <div class="paragraph">
-<p>To navigate to this page click on special days on the side navigation bar of the screen.</p>
+<p>User can edit enterprise of particular mapping
+* Click on checkbox
+* Click on the <strong>change enterprise</strong> button.
+* A list of enterprises is shown.
+* Select one from the list.</p>
 </div>
-<div class="paragraph">
-<p>Select a checkbox of menu from the list of menus below the calendar</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A calendar will appear where you can create a special days schedule from different menus.</p>
-</li>
-<li>
-<p>Select a menu checkbox, select a date on the calendar to create special day schedule for it.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_error_handling"><a class="anchor" href="#_error_handling"></a>Error Handling</h4>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/auto-attendant-error-handling.png" alt="Auto attendant error handling">
+<img src="../_images/message-exchange-console/edit-mapping.png" alt="Edit Mapping">
 </div>
 </div>
-<div class="paragraph">
-<p>To navigate to this page click on “Error Handling” on the side navigation bar of the screen.</p>
 </div>
-<div class="paragraph">
-<p>In each AA System that you create, you should always define the action to be taken if the menu times out or the user presses invalid key or the user presses invalid extension: For example,if the user does not press a key within the specified time. you could repeat the menu so that the caller has another chance to check the options and select the right key, or transfer the caller to an operator.</p>
-</div>
-<div class="sect4">
-<h5 id="_timeout"><a class="anchor" href="#_timeout"></a>Timeout</h5>
-<div class="paragraph">
-<p>If the caller doesn’t press any DTMF for configured timeout duration, system will perform the configured action.</p>
-</div>
+<div class="sect2">
+<h3 id="_add_a_mapping"><a class="anchor" href="#_add_a_mapping"></a>Add a mapping</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Set the timeout seconds to wait for the schedule.</p>
+<p>User can reach add mapping page by clicking on the <strong>Add Mappings</strong> button.</p>
 </li>
 <li>
-<p>Set how many consecutive timeout occurrences are allowed after which</p>
-</li>
-<li>
-<p>Set the action and respective data of the action if needed to carry out that particular action.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If timeout is defined at Menu Level, it will override the global timeout defined here
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_unknown_input"><a class="anchor" href="#_unknown_input"></a>Unknown Input:</h5>
-<div class="paragraph">
-<p>If the menu detects unknown input: that is, if the user presses a key which is not defined in the menu.</p>
-</div>
+<p>User needs to input below 3 fields:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Set how many occurences that the user presses unknown input after which</p>
+<p>Friendly name for the user.</p>
 </li>
 <li>
-<p>Set the action and respective data of the action if needed to carry out that particular action.</p>
+<p>External address i.e. the number to be SMS enabled.</p>
+</li>
+<li>
+<p>Jabber Address.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_invalid_extension"><a class="anchor" href="#_invalid_extension"></a>Invalid Extension:</h5>
-<div class="paragraph">
-<p>Set the action to take place If the user presses a invalid extension which is not configured in the aa system.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Set how many occurences that the user presses invalid extension after which</p>
 </li>
 <li>
-<p>Set the action and respective data of the action if needed to carry out that particular action.</p>
+<p>User can add single or multiple mappings under a particular enterprise.</p>
+</li>
+<li>
+<p>Jabber Address and number have to be unique across the system.</p>
+</li>
+<li>
+<p>While adding, if all the mappings are valid then the user will see the mapping list else user will see the rejected mappings where user can modify the Jabber Address or number.</p>
+</li>
+<li>
+<p>When a mapping is added, the number is provisioned on Restcomm and also the number is SMS enabled by Telestax.</p>
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/add-mapping.png" alt="Add a Mapping">
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_phone_numbers"><a class="anchor" href="#_phone_numbers"></a>Phone Numbers</h2>
+<h2 id="_whitelist"><a class="anchor" href="#_whitelist"></a>Whitelist</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>One or more lines/phone numbers are setup as Auto Attendant phone numbers. This means that the system provides Auto Attendant Service to caller on these numbers.</p>
-</div>
 <div class="sect2">
-<h3 id="_phone_numbers_list"><a class="anchor" href="#_phone_numbers_list"></a>Phone numbers List</h3>
+<h3 id="_whitelist_search"><a class="anchor" href="#_whitelist_search"></a>Whitelist Search</h3>
+<div class="paragraph">
+<p>To navigate to page, click on the Whitelist on the top header.</p>
+</div>
+<div class="paragraph">
+<p>User can view list of all Whitelists that have been added under their organization. The Whitelist can be filtered based on the Whitelist Ip.</p>
+</div>
+<div class="paragraph">
+<p>User can edit the IP by clicking on the pencil icon.</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/auto-attendant-phone-numbers-list.png" alt="Auto attendant phone numbers list">
+<img src="../_images/message-exchange-console/message-exchange-whitelist.png" alt="Message Exchange Whitelist">
 </div>
-</div>
-<div class="paragraph">
-<p>To navigate to the page, click on the phone numbers on the top header.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Users can view the list of phone numbers under the enterprise.</p>
-</li>
-<li>
-<p>Users can assign the phone numbers to the AA system by selecting the AA system from the drop down of AA system names.</p>
-</li>
-<li>
-<p>Users can delete the phone number by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_add_phone_number"><a class="anchor" href="#_add_phone_number"></a>Add Phone number</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/auto-attendant/auto-attendant-add-number.png" alt="Auto attendant add phone number">
-</div>
-</div>
-<div class="paragraph">
-<p>To add a phone number under the enterprise click on “Add Phonenumbers” button</p>
-</div>
+<h3 id="_add_whitelist"><a class="anchor" href="#_add_whitelist"></a>Add Whitelist</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Enter phone number</p>
+<p>Click on add Whitelist Ip button.</p>
 </li>
 <li>
-<p>Enter friendly name of the phone number and click done</p>
+<p>Enter the Ip of new Whitelist Ip and click add Whitelist Ip button</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-These numbers will be provisioned under main BG Admin Sub-Account under Restcomm.
-</td>
-</tr>
-</table>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/add-whitelist.png" alt="Add Whitelist">
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_extensions"><a class="anchor" href="#_extensions"></a>Extensions</h2>
+<h2 id="_domains"><a class="anchor" href="#_domains"></a>Domains</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_extension_list"><a class="anchor" href="#_extension_list"></a>Extension List</h3>
+<h3 id="_domains_list"><a class="anchor" href="#_domains_list"></a>Domains List</h3>
+<div class="paragraph">
+<p>To navigate to the page click on the <strong>Domains</strong> on the top navigation.</p>
+</div>
+<div class="paragraph">
+<p>User can view a list of all Domains that have been added under their organization. Domains can be filtered based on the Domain name.</p>
+</div>
+<div class="paragraph">
+<p>User can edit the name of a particular domain by clicking on the pencil icon.</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/auto-attendant-extensions-list.png" alt="Auto attendant add phone number">
+<img src="../_images/message-exchange-console/domains-list.png" alt="Domains List">
 </div>
 </div>
 <div class="paragraph">
-<p>To navigate to the page, click on the Extensions on the top header.</p>
+<p>User can view and edit certificate of a particular domain by clicking on the certificate icon of the particular domain</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Users can view the list of Extensions that are configured under the enterprise.</p>
-</li>
-<li>
-<p>Users can edit the extension number and spoken name of the number by clicking on the pencil icon in the respective fields( “Spoken name”, “Extension”)</p>
-</li>
-<li>
-<p>Users can delete the Extension by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
-</li>
-</ul>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/edit-certificate.png" alt="Edit Certificate">
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_add_extension"><a class="anchor" href="#_add_extension"></a>Add Extension</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/auto-attendant/auto-attendant-add-extension.png" alt="Auto attendant add phone number">
-</div>
-</div>
-<div class="paragraph">
-<p>To add a phone number under the enterprise click on “Add Extensions” button</p>
-</div>
+<h3 id="_add_domains"><a class="anchor" href="#_add_domains"></a>Add Domains</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Enter Extension number</p>
+<p>Click on the <strong>add Domain</strong> button.</p>
 </li>
 <li>
-<p>Enter Phone number</p>
-</li>
-<li>
-<p>Enter Spoken name of the extension and click done</p>
+<p>Enter the name and certificate of the new domain and click on the <strong>add Domain</strong> button</p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/add-domain.png" alt="Add Domain">
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_user_management"><a class="anchor" href="#_user_management"></a>User Management</h2>
+<h2 id="_search"><a class="anchor" href="#_search"></a>Search</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_users_list"><a class="anchor" href="#_users_list"></a>Users List</h3>
+<h3 id="_enterprise_search"><a class="anchor" href="#_enterprise_search"></a>Enterprise search</h3>
+<div class="paragraph">
+<p>The user can perform a search on the enterprises of the organization. Below are the supported filters for enterprise search:
+* Account Scope:
+<strong> Search in Current Account: Shows the list of Enterprises that are created by the logged in user.
+</strong> Search in All Account: Shows the list of all the enterprises under the organization.
+** Search in Specific Account: To search enterprises that are created by a particular user of the organization, the user is presented with a list of users of that organization in a popup window. The user can select the Restcomm account on that popup window.
+* Start Date: Shows the list of enterprises that were created on or after this date.
+* End Date: Shows the list of enterprises that were created on or before this date.
+* Name: Shows the list of enterprises whose name are partially or fully match with the given String:</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/auto-attendant-users-list.png" alt="Auto attendant add phone number">
+<img src="../_images/message-exchange-console/message-exchange-search.png" alt="Message Exchange Search">
 </div>
 </div>
 <div class="paragraph">
-<p>To navigate to the page, click on the “User Management” on the top header.</p>
+<p>User can view details of particular enterprise by clicking any Enterprise in the list .</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Users can view the list of accounts registered under the enterprise.</p>
-</li>
-<li>
-<p>Users can deactivate/activate the account by clicking on the status of any account.</p>
-</li>
-<li>
-<p>Users can delete the account by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
-</li>
-</ul>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/view-enterprise-details.png" alt="View Enterprise Details">
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-All the users created are Sub-Accounts under that CSP Admin Account in Restcomm
-</td>
-</tr>
-</table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_add_users"><a class="anchor" href="#_add_users"></a>Add Users</h3>
+<h3 id="_mappings_search"><a class="anchor" href="#_mappings_search"></a>Mappings search</h3>
+<div class="paragraph">
+<p>The user can perform a search on the enterprises of the organization. Below are the supported filters for enterprise search:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account Scope:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the list of mappings that are created by the logged in user.</p>
+</li>
+<li>
+<p>Search in All Account: Shows the list of all the mappings under the organization.</p>
+</li>
+<li>
+<p>Search in Specific Account: To search mappings that are created a particular user of the organization, the user is presented with a list of users of that organization in a popup window. The user can select the Restcomm account on that popup window.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Date: Shows the list of mappings that were created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the list of mappings that were created on or before this date.</p>
+</li>
+<li>
+<p>Enterprise: Shows the list of mappings that belong to this enterprise.</p>
+</li>
+<li>
+<p>Name: Shows the list of mappings whose name partially or fully match the entered String.</p>
+</li>
+<li>
+<p>Number: Shows the list of mappings whose external address partially or fully match the entered String.</p>
+</li>
+<li>
+<p>Jabber Address: Shows the list of mappings whose Jabber Address partially or fully match the entered String.</p>
+</li>
+<li>
+<p>Domain: Shows the list of mappings whose Domain is matched with the selected domain in dropdown.</p>
+</li>
+</ul>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/auto-attendant/auto-attendant-create-user.png" alt="Auto attendant add phone number">
+<img src="../_images/message-exchange-console/search-mappings.png" alt="Search Mappings">
 </div>
 </div>
 <div class="paragraph">
-<p>Follow the steps below to add an user:</p>
+<p>User can view details of particular Mapping by clicking any mapping in the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/mapping-details.png" alt="View Mapping Details">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_messages_search"><a class="anchor" href="#_messages_search"></a>Messages search</h3>
+<div class="paragraph">
+<p>The user can search the messages of the organization by applying below filters.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Click on the “Add User” button in the User management page.</p>
+<p>Start Date: Shows the list of messages that is created on or after this date.</p>
 </li>
 <li>
-<p>Enter the name of the new user.</p>
+<p>End Date: Shows the list of messages that is created on or before this date.</p>
 </li>
 <li>
-<p>Enter email id of the user.</p>
+<p>Enterprise: Shows the list of messages that belong to this enterprise.</p>
 </li>
 <li>
-<p>Enter the password for the user account. This will be set in RC.</p>
+<p>To: Shows the list of messages that are sent to this number or Jabber Address.</p>
 </li>
 <li>
-<p>Set a role for the user (BG ADMIN,AA ADMIN)</p>
+<p>From: Shows the list of messages that are sent from this number or Jabber Address.</p>
 </li>
 <li>
-<p>Set the status of the account (ACTIVE,INACTIVE)</p>
+<p>Direction: Shows the list of messages of particular direction (INBOUND,OUTBOUND). Inbound means messages coming from Mobile to Jabber Address. Outbound means message sent from Jabber Address to Mobile.</p>
+</li>
+<li>
+<p>Type: Shows the list of messages of particular type(SMS,MMS). Please note MMS is still not supported.</p>
+</li>
+<li>
+<p>Channel Status: Shows the list of messages with this channel status.</p>
+</li>
+<li>
+<p>Channel Error Code: Shows the list of messages with this Channel Error Code.</p>
+</li>
+<li>
+<p>Channel Error Message: Shows the list of messages with this Channel error message.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/messages-search.png" alt="Messages Search">
+</div>
+</div>
 <div class="paragraph">
-<p>Mail ID must be unique. Password should meet below criteria:</p>
+<p>User can view details of a particular Message by clicking any message in the list .</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/message-details.png" alt="Messages Details">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage-records</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_enterprise_usage_records"><a class="anchor" href="#_enterprise_usage_records"></a>Enterprise Usage-records</h3>
+<div class="paragraph">
+<p>The user can view enterprises created records of the organization by applying below filters.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>At least one Uppercase letter(A,B,C,D…&#8230;&#8203;)</p>
+<p>Account Scope:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the list of mappings that are created by the logged in user.</p>
 </li>
 <li>
-<p>At least one Lowercase letter(a,b,c,d,&#8230;&#8203;&#8230;&#8203;.)</p>
+<p>Search in All Account: Shows the list of all the mappings under the organization.</p>
 </li>
 <li>
-<p>At least one number(1,2,3,4,5….)</p>
-</li>
-<li>
-<p>At least one special character(!,@,#,$,%,&amp;,&#8230;&#8203;&#8230;&#8203;.)</p>
+<p>Search in Specific Account: To search mappings that are created a particular user of the organization, the user is presented with a list of users of that organization in a popup window. The user can select the Restcomm account on that popup window.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Length of the password should be greater than equal to 8.</p>
+</li>
+<li>
+<p>Start Date: Shows the record of enterprise that has created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the record of enterprise that has created on or before this date.</p>
+</li>
+<li>
+<p>Subresource:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily: Shows the record of enterprise on a daily basis.</p>
+</li>
+<li>
+<p>Monthly: Shows the record of enterprise on a monthly basis.</p>
+</li>
+<li>
+<p>Yearly: Shows the record of enterprise on a yearly basis.</p>
+</li>
+<li>
+<p>Today: Shows the record of enterprise today.</p>
+</li>
+<li>
+<p>Yesterday: Shows the record of enterprise on yesterday.</p>
+</li>
+<li>
+<p>This Month: Shows the record of enterprise this month.</p>
+</li>
+<li>
+<p>Last Month: Shows the record of enterprise last month.</p>
+</li>
+</ul>
 </div>
-</td>
-</tr>
-</table>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/enterprise-usage-records.png" alt="Enterprise Usage Records">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mappings_usage_records"><a class="anchor" href="#_mappings_usage_records"></a>Mappings Usage-records</h3>
+<div class="paragraph">
+<p>The user can view mappings created records of the organization by applying below filters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account Scope:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the list of mappings that are created by the logged in user.</p>
+</li>
+<li>
+<p>Search in All Account: Shows the list of all the mappings under the organization.</p>
+</li>
+<li>
+<p>Search in Specific Account: To search mappings that are created a particular user of the organization, the user is presented with a list of users of that organization in a popup window. The user can select the Restcomm account on that popup window.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Date: Shows the record of mapping that has created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the record of mapping that has created on or before this date.</p>
+</li>
+<li>
+<p>Enterprise:Shows the record of mapping that belong to this enterprise.</p>
+</li>
+<li>
+<p>Subresource:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily: Shows the record of mappings on a daily basis.</p>
+</li>
+<li>
+<p>Monthly: Shows the record of mappings on a monthly basis</p>
+</li>
+<li>
+<p>Yearly: Shows the record of mappings on a yearly basis.</p>
+</li>
+<li>
+<p>Today: Shows the record of mappings today.</p>
+</li>
+<li>
+<p>Yesterday: Shows the record of mappings on yesterday.</p>
+</li>
+<li>
+<p>This Month: Shows the record of mappings this month.</p>
+</li>
+<li>
+<p>Last Month: Shows the record of mappings last month.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/mappings-usage-records.png" alt="Mappings Usage Records">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_messages_usage_records"><a class="anchor" href="#_messages_usage_records"></a>Messages Usage-records</h3>
+<div class="paragraph">
+<p>The user can view Messages records of the organization by applying below filters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start Date: Shows the record of messages that has created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the record of messages that has created on or before this date.</p>
+</li>
+<li>
+<p>Enterprise: Shows the record of messages that are belong to this enterprise.</p>
+</li>
+<li>
+<p>Direction: Shows the record of messages of a particular direction (INBOUND, OUTBOUND).</p>
+</li>
+<li>
+<p>Type: Shows the record of messages of particular type (SMS,MMS).</p>
+</li>
+<li>
+<p>To: Shows the record of messages that are sent to this number</p>
+</li>
+<li>
+<p>From: Shows the record of messages that are sent from this number</p>
+</li>
+<li>
+<p>Channel Status: Shows the record of messages with this channel status.</p>
+</li>
+<li>
+<p>Channel Error Code:Shows the record of messages with this Channel Error Code.</p>
+</li>
+<li>
+<p>Channel Error Message: Shows the record of messages with this Channel error message.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/message-exchange-console/messages-usage-records.png" alt="Messages Usage Records">
+</div>
 </div>
 <div class="paragraph">
-<p>If you would like to explore the Auto Attendant API, we recommend having a look at the <a href="../api/auto-attendant/auto-attendant-api.html">Getting Started with the Auto Attendant API Guide</a>.</p>
+<p>If you would like to explore the Message Exchange Provisioning API, we recommend having a loot at the
+<a href="../api/message-exchange/overview.html">Getting Started with the Message Exchange API Guide</a></p>
 </div>
 </div>
 </div>
@@ -2527,14 +2330,5 @@ All the users created are Sub-Accounts under that CSP Admin Account in Restcomm
     })('userback-sdk');
 </script>
 
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
   </body>
 </html>

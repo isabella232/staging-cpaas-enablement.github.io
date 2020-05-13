@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Message Exchange - Restcomm Docs"></title>
+    <title data-custom-title="Restcomm Message Exchange for Cisco WebEx Teams Overview - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/solutions/message-exchange-overview.html
+      https://dev.restcomm.com/docs/1.0/turnkey-applications/cisco-webex-overview.html
     ">
-    <meta name="description" content="Restcomm Message Exchange helps service providers enable their enterprise customers to send and receive SMS using their Unified Communication (UC) client. Enterprise customers can send either two-way SMS or an SMS to multiple destinations.">
+    <meta name="description" content="Restcomm Cisco Webex helps service providers enable their Enterprise customers to send and receive SMS using Webex Teams and to manage and monitor their usage. Cisco users can have two-way conversations with any phone number right in the Cisco Webex Teams and UC-One applications.">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -1596,53 +1596,41 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="message-exchange-overview.html">Message Exchange</a></li>
+    <li class="crumb"><a href="cisco-webex-overview.html">Restcomm Message Exchange for Cisco WebEx Teams Overview</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Message Exchange</h1>
+  <h1>Restcomm Message Exchange for Cisco WebEx Teams Overview</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_understanding_the_message_exchange_console_and_provisioning_api">Understanding the Message Exchange Console and Provisioning API</a></li>
+<li><a href="#_understanding_the_restcomm_cisco_webex_console_and_api">Understanding the Restcomm Cisco Webex Console and API</a></li>
 <li><a href="#_overview">Overview</a></li>
-<li><a href="#_prerequisites">Prerequisites</a></li>
-<li><a href="#_federating_your_uc_server">Federating your UC server</a>
-<ul class="sectlevel2">
-<li><a href="#_use_an_already_federated_xmpp_server_and_xmpp_client">Use an already federated XMPP server and XMPP client</a></li>
-</ul>
-</li>
+<li><a href="#_prerequisite">Prerequisite</a></li>
 <li><a href="#_setting_up_your_first_mapping">Setting up your first mapping</a>
 <ul class="sectlevel2">
-<li><a href="#_receiving_an_sms_message_to_your_uc_client">Receiving an SMS/message to your UC client</a></li>
-<li><a href="#_sending_an_sms_message_from_your_uc_client">Sending an SMS/message from your UC client</a></li>
+<li><a href="#_setting_up_a_new_mapping_via_console">Setting up a new mapping via Console</a></li>
+<li><a href="#_receiving_an_sms_message_in_webex_teams">Receiving an SMS/message in Webex teams</a></li>
+<li><a href="#_replying_to_received_sms_message">Replying to received SMS/message</a></li>
+<li><a href="#_sending_an_sms_message_to_new_number_from_webex_teams">Sending an SMS/message to new Number from  Webex Teams</a></li>
 </ul>
 </li>
-<li><a href="#_use_your_custom_domain">Use your custom domain</a>
+<li><a href="#_create_bot_for_enterprise">Create Bot for Enterprise</a>
 <ul class="sectlevel2">
-<li><a href="#_setting_up_your_custom_domain">Setting up your custom domain</a></li>
-</ul>
-</li>
-<li><a href="#_setting_up_your_domain_with_godaddy">Setting up your domain with GoDaddy</a></li>
-<li><a href="#_setting_up_your_ssl_certificate_with_godaddy">Setting up your SSL certificate with GoDaddy</a>
-<ul class="sectlevel2">
-<li><a href="#_setting_up_a_new_domain_in_message_exchange_via_api">Setting up a new domain in Message Exchange via API</a></li>
+<li><a href="#_mapping_bot_access_token_with_the_enterprise">Mapping Bot Access Token With the enterprise</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_understanding_the_message_exchange_console_and_provisioning_api"><a class="anchor" href="#_understanding_the_message_exchange_console_and_provisioning_api"></a>Understanding the Message Exchange Console and Provisioning API</h2>
+<h2 id="_understanding_the_restcomm_cisco_webex_console_and_api"><a class="anchor" href="#_understanding_the_restcomm_cisco_webex_console_and_api"></a>Understanding the Restcomm Cisco Webex Console and API</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To learn more about the Message Exchange Console and Provisioning API, please visit the following getting started guides:</p>
+<p><a href="cisco-webex-console.html">Getting Started with the Cisco Webex Console</a></p>
 </div>
 <div class="paragraph">
-<p><a href="message-exchange-console.html">Getting Started with the Message Exchange Console</a></p>
-</div>
-<div class="paragraph">
-<p><a href="../api/message-exchange/overview.html">Getting Started with the Message Exchange API</a></p>
+<p><a href="../api/cisco-webex/overview.html">Getting Started with the Cisco Webex API</a></p>
 </div>
 </div>
 </div>
@@ -1650,41 +1638,20 @@
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm Message Exchange helps service providers enable their enterprise customers to send and receive SMS using their Unified Communication (UC) client. Enterprise customers can send either two-way SMS or an SMS to multiple destinations.</p>
+<p>Restcomm Cisco Webex helps service providers enable their Enterprise customers to send and receive SMS using Webex Teams and to manage and monitor their usage. Enterprise customers can send two-way SMS.</p>
 </div>
 <div class="paragraph">
-<p>If you want to use the Restcomm Message Exchange feature, you will need to complete the following steps:</p>
+<p>If you want to use the Restcomm Cisco Webex feature, you will need to complete the following steps:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Federate your UC server with Restcomm Message Exchange</p>
-</li>
-<li>
-<p>Reach out to Telestax Global Support Services (GSS) if you are bringing your own numbers (existing numbers).</p>
-<div class="ulist">
-<ul>
-<li>
-<p>GSS will do the setup from backend to SMS enable your (existing) numbers automatically whenever you create a new mapping.</p>
-</li>
-<li>
-<p>By default, Message Exchange assumes that you will buy a new number from Restcomm unless explicitly configured by GSS.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Create a mapping (via API or UI Console)</p>
-</li>
-<li>
-<p>Start sending messages</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Create Bot for each of the Enterprises and map the Bot Access Token with Enterprise as explained in 4 Create Bot for Enterprise
+Create a mapping (Via API or UI Console)
+Start sending messages</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h2>
+<h2 id="_prerequisite"><a class="anchor" href="#_prerequisite"></a>Prerequisite</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In order to complete the aforementioned steps, you will need:</p>
@@ -1692,297 +1659,280 @@
 <div class="ulist">
 <ul>
 <li>
-<p>An operational XMPP server on the public internet with valid, CA-issued certificates</p>
+<p>Webex setup for your Enterprise Customers</p>
 </li>
 <li>
-<p>An open firewall port to your XMPP server, allowing incoming traffic from xmpp.restcomm.com’s IP on port 5269</p>
+<p>Working knowledge of cURL and a way to make HTTP API calls (either using cURL or Postman; we recommend Postman if you’re not familiar with cURL.) Or you can directly use UI Console exposed by Restcomm.</p>
 </li>
 <li>
-<p>Working knowledge of <a href="https://curl.haxx.se/docs/manpage.html">cURL</a> and a way to make HTTP API calls (either using cURL or Postman; we recommend Postman if you’re not familiar with cURL.)</p>
+<p>An understanding of Restcomm Message Exchange API’s for Cisco Webex or Console on how to add mappings.</p>
 </li>
 <li>
-<p>An understanding of Message Exchange API’s or Console on how to add mappings.</p>
-</li>
-<li>
-<p>An activated linke:https://cloud.restcomm.com/#/signup[Restcomm Cloud account].</p>
+<p>An activated Restcomm Cloud account.</p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_federating_your_uc_server"><a class="anchor" href="#_federating_your_uc_server"></a>Federating your UC server</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Federation is the process of establishing a server-to-server connection between your messaging environment and ours. Once this connection is established, the two servers will manage to stay connected on their own.</p>
-</div>
-<div class="paragraph">
-<p>The process of federation is managed by the Telestax Global Support Services (GSS) organization and must be scheduled. Please contact your Telestax sales or GSS representative to schedule your federation interop.</p>
-</div>
-<div class="paragraph">
-<p>Follow the steps below to federate your server:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Add your server’s IP addresses to our Whitelist using the Whitelist API as explained the <a href="api/message-exchange/create-operation.html#_create_ip_whitelisting">Create IP Whitelisting section</a> of Message Exchange(MX) API documentation.</p>
-</li>
-<li>
-<p>Create DNS SRV records on your DNS servers for our Message Exchange server (cloud-xmpp-server.restcomm.com).</p>
-</li>
-<li>
-<p>Ensure your server is on the public internet and has a firewall port open for port 5269</p>
-</li>
-<li>
-<p>Ensure your firewall is allowing incoming traffic from cloud-xmpp-server.restcomm.com’s IP address</p>
-</li>
-<li>
-<p>From a contact on your server, create a new contact and, for the IM address, enter <a href="mailto:interop@restcomm.com">interop@restcomm.com</a></p>
-</li>
-<li>
-<p>Save the contact record and send a test message to <a href="mailto:interop@restcomm.com">interop@restcomm.com</a>. This will initiate the server federation process. Our technical representatives will verify that the federation has been successfully completed.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_use_an_already_federated_xmpp_server_and_xmpp_client"><a class="anchor" href="#_use_an_already_federated_xmpp_server_and_xmpp_client"></a>Use an already federated XMPP server and XMPP client</h3>
-<div class="paragraph">
-<p>Restcomm Message Exchange has already been federated with a number of public servers. If you don’t have your own UC server to federate with, you can use XMPP.is and register an account there. If you don’t have a UC client, you are able to utilize any XMPP client. Pidgin and Audium have been successfully tested with Restcomm Message Exchange. You can configure either of those clients with the previously created account from XMPP.is.</p>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_setting_up_your_first_mapping"><a class="anchor" href="#_setting_up_your_first_mapping"></a>Setting up your first mapping</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Note: You must have a valid, working <a href="https://www.restcomm.com/sign-up/">Restcomm account</a> in order to complete this step. If you do not have one, you can <a href="https://cloud.restcomm.com/#/signup">sign up</a> here or <a href="https://www.restcomm.com/contact/">contact us</a>.</p>
-</div>
-<div class="paragraph">
-<p>The purpose of an XMPP mapping is to associate a phone number with an existing XMPP contact on your UC server. For example, imagine you have a user with the XMPP address of <a href="mailto:joe@myserver.com">joe@myserver.com</a> and Joe’s desk phone is +1-919-555-1212.</p>
-</div>
-<div class="paragraph">
-<p>An XMPP mapping will tell the Restcomm Message Exchange service to send all inbound SMS messages sent to Joe’s number to <a href="mailto:joe@myserver.com">joe@myserver.com</a>. Additionally, any time Joe sends an outbound SMS from his XMPP account, it will be sent from his phone number.</p>
-</div>
-<div class="paragraph">
-<p>You can set up your mapping in two different ways, either via the Restcomm Message Exchange Console or via the API. For the purposes of this guide, we will use the Restcomm Message Exchange Console and will be using a new number rather than an existing number.</p>
-</div>
-<div class="paragraph">
-<p>Setting up a new mapping
-* Log in to your Restcomm account
-* Create new Mapping as explained in the <a href="message-exchange-console.html#_add_a_mapping">Add Mappings section</a> of the Message Exchange Console documentation.</p>
-</div>
-<div class="sect2">
-<h3 id="_receiving_an_sms_message_to_your_uc_client"><a class="anchor" href="#_receiving_an_sms_message_to_your_uc_client"></a>Receiving an SMS/message to your UC client</h3>
-<div class="paragraph">
-<p>Once you’ve completed all of the steps above, you’re ready to test. Login to your UC client as your test user (in our case <a href="mailto:joe@myserver.com">joe@myserver.com</a>)., Then, using your mobile phone, send a text message to the number you added to Restcomm.</p>
-</div>
-<div class="paragraph">
-<p>You should then see the message appear in your UC client.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_sending_an_sms_message_from_your_uc_client"><a class="anchor" href="#_sending_an_sms_message_from_your_uc_client"></a>Sending an SMS/message from your UC client</h3>
-<div class="paragraph">
-<p>To send an SMS message from your UC client, perform the following steps:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Add a contact to your contact list in your UC client as you would normally.</p>
-</li>
-<li>
-<p>In the IM Address field, enter the address in the format of <a href="mailto:phoneNumber@restcomm.com">phoneNumber@restcomm.com</a> or, if you have a custom domain, <a href="mailto:phoneNumber@yourdomain.com">phoneNumber@yourdomain.com</a>. For example, if your cell phone number is 19195551212, then you would enter <a href="mailto:19195551212@restcomm.com">19195551212@restcomm.com</a> for the IM Address of the contact.</p>
-</li>
-<li>
-<p>Once the contact is added, send a message from your client to the new contact.</p>
-</li>
-<li>
-<p>Restcomm Message Exchange will convert the message from a UC message to SMS and route it to the number provided.</p>
-</li>
-<li>
-<p>The message will appear on the destination handset.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_use_your_custom_domain"><a class="anchor" href="#_use_your_custom_domain"></a>Use your custom domain</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Restcomm message exchange supports usage of custom domains. For example you can use <a href="mailto:phoneNumber@mycompany.com">phoneNumber@mycompany.com</a> instead of <a href="mailto:phoneNumber@restcomm.com">phoneNumber@restcomm.com</a></p>
-</div>
-<div class="sect2">
-<h3 id="_setting_up_your_custom_domain"><a class="anchor" href="#_setting_up_your_custom_domain"></a>Setting up your custom domain</h3>
-<div class="paragraph">
-<p>In order to use your custom domain with Restcomm message exchange, you need to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Provide a valid certificate obtained by a trusted third party organization</p>
-<div class="ulist">
-<ul>
-<li>
-<p>You should provide a full chain certificate in PEM format, that obtains Root CA and intermediate CAs</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>You have to create a DNS SRV record pointing to Restcomm Message Exchange. For example, the DNS SRV record for xmpp.mycompany.com should look like:</p>
-<div class="literalblock">
-<div class="content">
-<pre>_xmpp-server._tcp.xmpp.mycompany.com. 1 1 5269 cloud-xmpp-server.restcomm.com.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock warning">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Pay attention to _ or . characters since they are important for DNS SRV records
+You must have a valid, working Restcomm account in order to complete this step. If you do not have one, you can contact us.
 </td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-DNS Records propagation might take some time to complete.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The purpose of Webex mapping is to associate a phone phone number with an existing Cisco WebexId. For example, imagine you have a user with the Webex teams id of <a href="mailto:joe@myserver.com">joe@myserver.com</a> and Restcomm number is +1-919-555-1212.</p>
+</div>
+<div class="paragraph">
+<p>Mapping will tell the Restcomm Message Exchange service for Cisco Webex to send all inbound SMS messages sent to Joe’s number to <a href="mailto:joe@myserver.com">joe@myserver.com</a>. Additionally, any time Joe sends an outbound SMS from his Cisco Webex account, it will be sent from his phone number.</p>
+</div>
+<div class="paragraph">
+<p>You can set up your mapping in two different ways, either via the Restcomm Message Exchange Console for CiscoWebex or via the API.</p>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_a_new_mapping_via_console"><a class="anchor" href="#_setting_up_a_new_mapping_via_console"></a>Setting up a new mapping via Console</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Log in to your Restcomm Message Exchange Console via your Restcomm cloud account</p>
+</li>
+<li>
+<p>Create new Mapping as explained in Section 2.3 Add Mappings in Docs :Cisco Webex console</p>
+</li>
+<li>
+<p>Before creating mapping, you need to create Enterprise. This is a very important step as Cisco Webex Bot has one to one mapping with Enterprise.</p>
+</li>
+<li>
+<p>Create Bot (for each enterprise) as explained in 3 Create Bot for Enterprise</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_receiving_an_sms_message_in_webex_teams"><a class="anchor" href="#_receiving_an_sms_message_in_webex_teams"></a>Receiving an SMS/message in Webex teams</h3>
+<div class="paragraph">
+<p>Once you’ve completed all of the steps above, you’re ready to test.</p>
+</div>
+<div class="paragraph">
+<p>Send a message from PSTN number to mapped number .You should then see the message appear in Webex teams whose Cisco Id is mapped with this restcomm number. The message should appear in new Webex Space if you are receiving a message for the first time. All subsequent messages appear in the same space. Space name by default is phone number from where message was initiated. You can rename space to something more meaningful, for example, “Ryan’s Mobile Phone”</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_replying_to_received_sms_message"><a class="anchor" href="#_replying_to_received_sms_message"></a>Replying to received SMS/message</h3>
+<div class="paragraph">
+<p>To reply to received message follow steps below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In newly created space, refer to Bot with “@” prefix and then type your message</p>
+</li>
+<li>
+<p>Hit Enter and your message will be sent as SMS to mobile number of receiver.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sending_an_sms_message_to_new_number_from_webex_teams"><a class="anchor" href="#_sending_an_sms_message_to_new_number_from_webex_teams"></a>Sending an SMS/message to new Number from  Webex Teams</h3>
+<div class="paragraph">
+<p>To send SMS to new number, follow below steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add newly created Bot as Contact in your Cisco Webex if not done earlier. This is one time process.</p>
+</li>
+<li>
+<p>Send any private message to this Bot</p>
+</li>
+<li>
+<p>It should respond back with Card that allows you to enter the receiving party’s phone number</p>
+</li>
+<li>
+<p>Enter receiving party&#8217;s phone number and hit Submit. It should create a new Space with receiver Phone number as Space name</p>
+</li>
+<li>
+<p>In newly created space, refer to Bot with “@” prefix and then type your message</p>
+</li>
+<li>
+<p>Hit Enter and your message will be sent as SMS to mobile number of receiver.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_setting_up_your_domain_with_godaddy"><a class="anchor" href="#_setting_up_your_domain_with_godaddy"></a>Setting up your domain with GoDaddy</h2>
+<h2 id="_create_bot_for_enterprise"><a class="anchor" href="#_create_bot_for_enterprise"></a>Create Bot for Enterprise</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>For simplicity, let’s assume your domain is testxmpp.com and for UC-One you use sub-domain text.testxmpp.com. The next step is to make sure you set DNS SRV for your subdomain to point to our XMPP server (<code>cloud-xmpp-server.restcomm.com</code>). Below is a screenshot on how to set up DNS SRV on GoDaddy.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/message-exchange/setting_your_DNS_SRV.png" alt="Message Exchange - Setting Up a Your DNS SRV Record">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setting_up_your_ssl_certificate_with_godaddy"><a class="anchor" href="#_setting_up_your_ssl_certificate_with_godaddy"></a>Setting up your SSL certificate with GoDaddy</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Prior to using white labeling, you must:</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Set up an SSL Certificate for the sub-domain.</p>
+<p>Visit  <a href="https://developer.webex.com/" class="bare">https://developer.webex.com/</a>  then click on “Start Building Apps”.</p>
 </li>
 <li>
-<p>Upload a full chain of the certificate using the <a href="message-exchange-console.html#_add_domains">Message Exchange Console UI</a>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Make sure the order of the SSL Certificate chain is as follows: your domain certificate, your private key, authority issuing your certificate, root certificate.</p>
-</div>
-<div class="paragraph">
-<p>For simplicity let’s assume your domain is testxmpp.com and for UC-One you are using the following sub-domain: text.testxmpp.com. In the steps below, we will explain how to generate a private key and  certificate using OpenSSL.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Generate an openssl key
-(GSS bought a domain on Godaddy text.textxmpp.com)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><code>$ openssl genrsa -out text.testxmpp.com.key 2048</code></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create your CSR or certification request file (notice the password below is just an example, please use your own strong password)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><code>$ openssl req -new -key text.testxmpp.com.key -out text.testxmpp.com.csr</code></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/message-exchange/Creating_CSR_certification_request_file.png" alt="Message Exchange - Creating CSR certification request">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Copy the content of the newly created text.testxmpp.com.csr and paste it into the Godaddy CSR enrollment form.</p>
+<p>Login with the webex teams for developers credentials.</p>
 </li>
 <li>
-<p>When you receive the confirmation, download the certificate zip file from you Godaddy Dashboard</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/message-exchange/Downloading_the_certificate_zip_file.png" alt="Message Exchange - Download the certificate zip file">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The content of the certificate zip file for Tomcat should look like the one below:</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/message-exchange/Content_of_the_certificate_zip_file.png" alt="Message Exchange - Content of the certificate zip">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Combine the certificate from Godaddy with the openssl key you generated in step one</p>
-</li>
-</ul>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>$ cat '/home/charles/Downloads/text.testxmpp.com/51e1fbfeeae30fdb.crt' '/home/charles/telestax/text.testxmpp.com.key' '/home/charles/Downloads/text.testxmpp.com/gd_bundle-g2-g1.crt' &gt; text.testxmpp.combined.pem....</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The newly created text.testxmpp.combined.pem will contain the certificate you need in order to create a new domain mapping in the <a href="message-exchange-console.html#_add_domains">Console UI</a>. Copy and paste the content of the combine.pem to the <a href="message-exchange-console.html#_add_domains">Console UI</a>.</p>
+<p>Click on “Create a New App”.</p>
 </li>
 <li>
-<p>If the mapping and the certificate are valid, you will see a confirmation message that the domain was successfully added.</p>
+<p>Click on “Create a Bot”.</p>
+</li>
+<li>
+<p>Fill the basic details of the bot such as “Bot Name”, “Bot Username”, “Icon”, “Description” then click   “Add Bot”.</p>
+</li>
+<li>
+<p>You will get “Bot’s Access Token”, “Bot Id”</p>
 </li>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_setting_up_a_new_domain_in_message_exchange_via_api"><a class="anchor" href="#_setting_up_a_new_domain_in_message_exchange_via_api"></a>Setting up a new domain in Message Exchange via API</h3>
+<h3 id="_mapping_bot_access_token_with_the_enterprise"><a class="anchor" href="#_mapping_bot_access_token_with_the_enterprise"></a>Mapping Bot Access Token With the enterprise</h3>
 <div class="paragraph">
-<p>Find out more about setting up a new domain using the Message Exchange API at <a href="api/message-exchange/create-operation.html#_create_domain">Create Domain API</a> documentation page.</p>
+<p>Once bot is created in Webex we will get bot access token
+To map Bot with an enterprise we have to call the below api.</p>
 </div>
+<script>
+      function openLanguage(language, index) {
+        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
+        for (const sampleClass of sampleClasses) {
+          sampleClass.style.display = "none";
+        }
+        document.getElementById(language + '-' + index).style.display = "block";
+
+        // first, disable the previously selected tab title
+        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
+        if (previouslyActive.length > 0) {
+          previouslyActive[0].classList.toggle('is-active')
+        }
+
+        // then, enable the newly selected title
+        event.target.classList.toggle('is-active')
+      }
+      </script>
+      <div class="sample-code-bar">
+        <button class="sample-code-button scsIndex-82 is-active" onclick="openLanguage('Curl', 82)">Curl</button>
+        <button class="sample-code-button scsIndex-82" onclick="openLanguage('Nodejs', 82)">Nodejs</button>
+        <button class="sample-code-button scsIndex-82" onclick="openLanguage('Python', 82)">Python</button>
+        <button class="sample-code-button scsIndex-82" onclick="openLanguage('Java', 82)">Java</button>
+      </div>
+      <div id="Curl-82" class="sample-language-82">
+        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json \
+   -H 'Cache-Control: no-cache' \
+   -H 'Content-Type: application/json' \
+   -d 'accessToken=MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692' \
+   -d 'username=Customer Service Bot' \
+   -d 'enterpriseSid=WEMe8f1bac1cf0f45d199d3a4d55aacc13a' \
+   -u 'YourAccountSid:YourAuthToken'
+</code></pre>
+      </div>
+      <div id="Nodejs-82" class="sample-language-82" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
+
+// Provide your Account Sid and Auth Token from your Console Account page
+const ACCOUNT_SID = 'my_ACCOUNT_SID';
+const AUTH_TOKEN = 'my_AUTH_TOKEN';
+
+request.({
+      method: 'POST',
+      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json',
+      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
+      headers: {
+          'Cache-Control': 'no-cache',
+          'Content-Type': 'application/json'
+      },
+      form: {
+         'accessToken': 'MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692',
+         'username': 'Customer Service Bot',
+         'enterpriseSid': 'WEMe8f1bac1cf0f45d199d3a4d55aacc13a'
+      }
+   },
+   function (error, response, body) {
+      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
+      ...
+});
+</code></pre>
+      </div>
+      <div id="Python-82" class="sample-language-82" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
+from base64 import b64encode
+from urllib.parse import urlencode
+
+# Provide your Account Sid and Auth Token from your Console Account page
+ACCOUNT_SID = 'my_ACCOUNT_SID'
+AUTH_TOKEN = 'my_AUTH_TOKEN'
+
+userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass,
+    'Cache-Control': 'no-cache',
+    'Content-Type': 'application/json',
+    'Content-type': 'application/x-www-form-urlencoded',
+    'Accept': 'text/plain' }
+
+# Update POST parameters accordingly
+params = urlencode({
+   'accessToken': 'MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692',
+   'username': 'Customer Service Bot',
+   'enterpriseSid': 'WEMe8f1bac1cf0f45d199d3a4d55aacc13a'
+})
+
+conn = HTTPSConnection('mycompany.restcomm.com')
+conn.request("POST", '/restcomm/2012-04-24/webex/webexbot/access.json',
+      params, headers=headers)
+res = conn.getresponse()
+
+# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
+...
+</code></pre>
+      </div>
+      <div id="Java-82" class="sample-language-82" style="display:none">
+        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import java.io.*;
+import java.util.Base64;
+
+public class JavaSampleClass {
+   // Provide your Account Sid and Auth Token from your Console Account page
+   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
+   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
+
+
+   public static void main(String[] args) throws Exception {
+      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
+      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
+
+      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json");
+      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+      conn.setRequestProperty("Authorization", "Basic " + encoded);
+      conn.setRequestProperty("Cache-Control", "no-cache");
+      conn.setRequestProperty("Content-Type", "application/json");
+      conn.setRequestMethod("POST");
+      conn.setDoOutput(true);
+      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
+
+      // Update POST parameters accordingly
+      os.writeBytes("accessToken=MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692&" +
+        "username=Customer Service Bot&" +
+        "enterpriseSid=WEMe8f1bac1cf0f45d199d3a4d55aacc13a");
+      os.close();
+
+      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
+      ...
+  }
+}
+</code></pre>
+      </div>
 </div>
 </div>
 </div>
@@ -2097,14 +2047,5 @@ DNS Records propagation might take some time to complete.
     })('userback-sdk');
 </script>
 
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
   </body>
 </html>

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Restcomm Message Exchange for Cisco WebEx Teams Console - Restcomm Docs"></title>
+    <title data-custom-title="Two-Factor Authentication (2FA) Console - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/solutions/cisco-webex-console.html
+      https://dev.restcomm.com/docs/1.0/turnkey-applications/two-factor-authentication-console.html
     ">
-    <meta name="description" content="Cisco Webex API allows Restcomm Accounts to create, manage and get usage records for mappings.">
-    <meta name="keywords" content="cisco webex api, webex teams api, cisco webex api overview, cisco webex">
+    <meta name="description" content="Secure online transactions, account sign-ins, mobile apps, websites and more by providing two-factor authentication (2FA) with One-Time Passwords to your users.">
+    <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} two-factor authentication">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -1597,65 +1597,52 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="cisco-webex-console.html">Restcomm Message Exchange for Cisco WebEx Teams Console</a></li>
+    <li class="crumb"><a href="two-factor-authentication-console.html">Two-Factor Authentication (2FA) Console</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm Message Exchange for Cisco WebEx Teams Console</h1>
+  <h1>Two-Factor Authentication (2FA) Console</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_overview">Overview</a></li>
+<li><a href="#_introduction">Introduction</a></li>
+<li><a href="#_white_labeling">White Labeling</a></li>
 <li><a href="#_home">Home</a></li>
-<li><a href="#_mappings">Mappings</a>
+<li><a href="#_session_details">Session Details</a>
 <ul class="sectlevel2">
-<li><a href="#_adding_an_enterprise">Adding an enterprise</a></li>
-<li><a href="#_enterprise_mapping_details">Enterprise mapping Details</a></li>
-<li><a href="#_add_a_mapping">Add a mapping</a></li>
+<li><a href="#_search">Search</a></li>
+<li><a href="#_usage_records">Usage Records</a></li>
 </ul>
 </li>
-<li><a href="#_search">Search</a>
-<ul class="sectlevel2">
-<li><a href="#_enterprise_search">Enterprise search</a></li>
-<li><a href="#_mappings_search">Mappings search</a></li>
-<li><a href="#_messages_search">Messages search</a></li>
-</ul>
-</li>
-<li><a href="#_usage_records">Usage-records</a>
-<ul class="sectlevel2">
-<li><a href="#_enterprise_usage_records">Enterprise Usage-records</a></li>
-<li><a href="#_mappings_usage_records">Mappings Usage-records</a></li>
-<li><a href="#_messages_usage_records">Messages Usage-records</a></li>
-</ul>
-</li>
-<li><a href="#_settings">Settings</a></li>
+<li><a href="#_demo">Demo</a></li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm Cisco Webex helps service providers enable their Enterprise Customers to send and receive SMS using webexTeams and to manage and monitor the usage</p>
+<p>Two-factor authentication (2FA) API lets you send One Time Password (OTP) using SMS, Voice or email.</p>
 </div>
 <div class="paragraph">
-<p>If you want to use the Restcomm Message Exchange feature, you will need to complete the following steps:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create Bot for Enterprise and map the Bot Access Token with Enterprise as explained in section XXX</p>
-</li>
-<li>
-<p>Create a mapping</p>
-</li>
-<li>
-<p>Start sending messages</p>
-</li>
-</ul>
+<p>2FA allows you to add a second layer of security to your Application in addition to the user-id and password. The flexibility of using any channel makes sure your users get OTP even when they experience issues with one of the channels.</p>
 </div>
 <div class="paragraph">
-<p>This document explains Resctomm Cisco Webex Console and how to use features mentioned above.</p>
+<p>To learn more about 2FA, check out the <a href="two-factor-authentication-overview.html">Two-Factor Authentication (2FA) Overview</a></p>
+</div>
+<div class="paragraph">
+<p>This document covers features and functionalities of the 2FA UI Console that leverage the underlying API.</p>
+</div>
+<div class="paragraph">
+<p>To access 2FA Console visit https://&lt;your_custom_domain&gt;/twofa/ and login with your Restcomm Credentials.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_white_labeling"><a class="anchor" href="#_white_labeling"></a>White Labeling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Restcomm enables you to go to market with your own 2FA brand in a matter of days. 2FA leverages the Restcomm Whitelabel, hence all the work done by user to whitelabel Restcomm Dashboard is used by 2FA as it is. For further details on Restcomm Dashboard whitelabeling please check the <a href="../whitelabeling.html">Restcomm Whitelabeling Guide</a>.</p>
 </div>
 </div>
 </div>
@@ -1663,46 +1650,140 @@
 <h2 id="_home"><a class="anchor" href="#_home"></a>Home</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is the default page user will see after user logs in. Here user can find the number of enterprises, mappings added and messages sent/received in the last 24 hours within the organisation and 30 days usage report of enterprises, mapping and messages for an organisation</p>
+<p>This is the default page the user will see after logging in. Here user can find the number of OTP requests sent per channel - SMS, Voice and Email in the last 24 hours for users Account and 30 days usage report of OTP requests.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/cisco-webex-console/webex_home.png" alt="Cisco Webex Console Home">
+<img src="../_images/two-factor-authentication/restcomm-2fa-console-home.png" alt="Two-factor authentication - Home screen">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mappings"><a class="anchor" href="#_mappings"></a>Mappings</h2>
+<h2 id="_session_details"><a class="anchor" href="#_session_details"></a>Session Details</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To navigate to page, click on the Mappings on the top header.</p>
-</div>
-<div class="paragraph">
-<p>User can view list of all enterprises that have been added under his organisation. Enterprises can be filtered based on the name.</p>
-</div>
-<div class="paragraph">
-<p>Enterprise is service providers customers which can help them to understand number of mappings created for specific Enterprise over a specific period of time for billing and management purposes.</p>
-</div>
-<div class="paragraph">
-<p>Each Enterprise has list of mappings which is basically mapping between SMS enabled number and Cisco WebEx Id.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/webex_mappings.png" alt="Cisco Webex Mappings">
-</div>
+<p>Session Details Records allows users to search for a specific set of 2FA request based on filter criteria or to retrieve Usage Records like how many 2FA requests per day based on filter criteria.</p>
 </div>
 <div class="sect2">
-<h3 id="_adding_an_enterprise"><a class="anchor" href="#_adding_an_enterprise"></a>Adding an enterprise</h3>
+<h3 id="_search"><a class="anchor" href="#_search"></a>Search</h3>
+<div class="paragraph">
+<p>The user can search for a specific set of 2FA. Below are the supported filters for search:</p>
+</div>
+<div class="paragraph">
+<p><strong>Account Scope:</strong></p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Click on add enterprise button.</p>
+<p>Search in Current Account: Shows the 2FA requests that are created by the logged-in user.</p>
 </li>
 <li>
-<p>Enter the name of new enterprise and click add account button</p>
+<p>Search current account and sub-accounts: Shows 2FA requests that are created by logged in user and all other Sub-Accounts under logged in user.</p>
+</li>
+<li>
+<p>Search in Specific Account: Search 2FA requests  created by specific Sub-Account under logged in user. The user is presented with a list of Sub-Accounts in a popup window. The user can select the Restcomm account on that popup window.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Start Date:</strong> Shows the list of 2FA requests that were created on or after this date.</p>
+</div>
+<div class="paragraph">
+<p><strong>End Date:</strong> Shows the list of 2FA requests that were created on or before this date.</p>
+</div>
+<div class="paragraph">
+<p><strong>Status:</strong> Show the list of 2FA requests that have selected status.</p>
+</div>
+<div class="paragraph">
+<p><strong>Channel:</strong> Show the list of 2FA requests that are sent via the selected channel.</p>
+</div>
+<div class="paragraph">
+<p><strong>Service:</strong>  Show the list of 2FA requests that match this service text, partially or fully in any position.</p>
+</div>
+<div class="paragraph">
+<p><strong>From:</strong> Only include 2FA list that has from begins with this number/email text. For example, if OTP is generated from number “15713316943” and from filter parameter is “1”, it will match. However if from filter parameter is “3”, this record will not match. This allows filtering 2FA sent from specific country code.</p>
+</div>
+<div class="paragraph">
+<p><strong>To:</strong> Only include the OTP list that has to begin with this number/email text. For example, if OTP is sent to number “16513333367” and to filter parameter is “1”, it will match. However if to filter parameter is “3”, this record will not match. This allows to filter OTP sent to specific country code.</p>
+</div>
+<div class="paragraph">
+<p><strong>TargetSid:</strong> Only include 2FA list that match target sid of SMS/ Call/ Email text, partially or fully in any position.</p>
+</div>
+<div class="paragraph">
+<p><strong>Check Status:</strong> Only include a 2FA list that has this check status. Possible values are valid or invalid</p>
+</div>
+<div class="paragraph">
+<p><strong>Channel Status:</strong> Only include 2FA list that matches underlying channel status, partially or fully in any position. For SMS, possible channel status value can be as explained <a href="../api/sms-api.html#_status_description">here</a>. For Call, possible values are as explained in “status” property <a href="../api/calls-api.html#_calls_attributes">here</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Channel Error Code:</strong> Only include a 2FA list that matches underlying channel code, partially or fully in any position. For SMS, the possible value can be found <a href="../api/sms-api.html#_sms_specific_error_codes">here</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Channel Error Message:</strong> Only include 2FA list that matches channel error message text, partially or fully in any position</p>
+</div>
+<div class="sect3">
+<h4 id="_sorting"><a class="anchor" href="#_sorting"></a>Sorting</h4>
+<div class="paragraph">
+<p>Users can sort the search results by clicking on Column Header as explained below.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Date:</strong> Ascending or Descending list of 2FA based on Date when it was created</p>
+</li>
+<li>
+<p><strong>Service:</strong> Sort by Service.</p>
+</li>
+<li>
+<p><strong>Status:</strong> Sort by the status of 2FA request.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-search.png" alt="Two-factor authentication - Search screen">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_download_as_csv"><a class="anchor" href="#_download_as_csv"></a>Download as CSV:</h4>
+<div class="paragraph">
+<p>Once results are displayed for search criteria, the user can click on the Download icon below the Search icon to download search results as CSV.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2fa_request_details"><a class="anchor" href="#_2fa_request_details"></a>2FA request details:</h4>
+<div class="paragraph">
+<p>User can view details of particular 2FA by clicking on any row in the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-request-details.png" alt="Two-factor authentication - Request details">
+</div>
+</div>
+<div class="paragraph">
+<p>User can click on Check link to see the details of the 2FA check request</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-check-request.png" alt="Two-factor authentication - Check request">
+</div>
+</div>
+<div class="paragraph">
+<p>User can click on Events to see details of Channel used to send 2FA request.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-channel-details.jpg" alt="Two-factor authentication - Channel details">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage Records</h3>
+<div class="paragraph">
+<p>The Usage record allows to retrieve usage made by your 2FA account during any time period and by any usage channel. Below filter parameters are supported.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1711,417 +1792,90 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Enterprise name must be unique.
+Usage Records do not include real-time data and can be delayed by maximum 1 hour.
 </td>
 </tr>
 </table>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/adding_an_enterprise.png" alt="Cisco Webex Add an Enterprise">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_enterprise_mapping_details"><a class="anchor" href="#_enterprise_mapping_details"></a>Enterprise mapping Details</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>If user clicks on any enterprise in the list, he will see a paginated list of mappings that belong to the enterprise.</p>
-</li>
-<li>
-<p>Name is the friendly name given to user, number is the external address (SMS enabled number), webexId is the webex teams Id that is mapped with the external number and last column contains the timestamp when the mapping was last updated and the user who updated it.</p>
-</li>
-<li>
-<p>User can edit the name of a particular mapping.</p>
-</li>
-<li>
-<p>User can delete a particular mapping by clicking on the delete icon that appears by hovering mouse on specific row.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/enterprise_mapping_details.png" alt="Enterprise mapping details">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_add_a_mapping"><a class="anchor" href="#_add_a_mapping"></a>Add a mapping</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>User can reach add mapping page by clicking on “Add Mappings” button.</p>
-</li>
-<li>
-<p>User needs to input below 3 fields:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Friendly name for the user.</p>
-</li>
-<li>
-<p>External address i.e. the number to be SMS enabled.</p>
-</li>
-<li>
-<p>Webex teams id.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>User can add single or multiple mappings under a particular enterprise.</p>
-</li>
-<li>
-<p>Webex teams id and number have to be unique across the system.</p>
-</li>
-<li>
-<p>While adding, if all the mappings are valid then user will see the mapping list else user will see the rejected mappings where user can modify the webex teams id or number.</p>
-</li>
-<li>
-<p>When a mapping is added, the number is provisioned on Restcomm and also the number is SMS enabled byTelestax</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/adding_mapping.png" alt="Add mapping">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_search"><a class="anchor" href="#_search"></a>Search</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_enterprise_search"><a class="anchor" href="#_enterprise_search"></a>Enterprise search</h3>
 <div class="paragraph">
-<p>The user can perform a search on the enterprises of the organization. Below are the supported filters for enterprise search:</p>
+<p><strong>Account Scope:</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Account Scope:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Search in Current Account: Shows the list of Enterprises  that are created by the logged in user.</p>
+<p>Search in Current Account: Shows the 2FA requests  that are created by the logged-in user.</p>
 </li>
 <li>
-<p>Search in All Account: Shows the list of all the enterprises under the organisation.</p>
+<p>Search current account and sub-accounts: Shows 2FA requests that are created by logged in user and all other Sub-Accounts under logged in user.</p>
 </li>
 <li>
-<p>Search in Specific Account: To search enterprises that are created by a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window.</p>
+<p>Search in Specific Account: Search 2FA request that is created by specific Sub-Account under logged in user. The user is presented with a list of Sub-Accounts in a popup window. The user can select the Restcomm account on that popup window.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Start Date: Shows the list of enterprises that were created on or after this date.</p>
-</li>
-<li>
-<p>End Date: Shows the list of enterprises that were created on or before this date.</p>
-</li>
-<li>
-<p>Name: Shows the list of enterprises whose name are partially or fully match with the given String:</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/search_enterprise.png" alt="Search Enterprise">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_mappings_search"><a class="anchor" href="#_mappings_search"></a>Mappings search</h3>
 <div class="paragraph">
-<p>The user can perform a search on the enterprises of the organization. Below are the supported filters for enterprise search:</p>
+<p><strong>Subresource:</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Account Scope:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Search in Current Account: Shows the list of mappings  that are created by the logged in user.</p>
+<p>Daily: Shows the record of 2FA on a daily basis.</p>
 </li>
 <li>
-<p>Search in All Account: Shows the list of all the mappings  under the organisation.</p>
+<p>Monthly: Shows the record of 2FA on a monthly basis.</p>
 </li>
 <li>
-<p>Search in Specific Account: To search mappings that are created a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window.</p>
-</li>
-</ul>
-</div>
+<p>Yearly: Shows the record of enterprise on a yearly basis.</p>
 </li>
 <li>
-<p>Start Date: Shows the list of mappings that were created on or after this date.</p>
-</li>
-<li>
-<p>End Date: Shows the list of mappings that were created on or before this date.</p>
-</li>
-<li>
-<p>Enterprise: Shows the list of mappings that belong to this enterprise.</p>
-</li>
-<li>
-<p>Name: Shows the list of mappings whose name partially or fully match the entered String.</p>
-</li>
-<li>
-<p>Number: Shows the list of mappings whose external address partially or fully match the entered String.</p>
-</li>
-<li>
-<p>WebexId: Shows the list of mappings whose Webex teams Id  partially or fully match the entered String.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/search_mappings.png" alt="Search Mappings">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_messages_search"><a class="anchor" href="#_messages_search"></a>Messages search</h3>
-<div class="paragraph">
-<p>The user can search the messages of the organization by applying below filters.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Start Date: Shows the list of messages that is created on or after this date.</p>
-</li>
-<li>
-<p>End Date: Shows the list of messages that is created on or before this date.</p>
-</li>
-<li>
-<p>Enterprise:Shows the list of messages that belong to this enterprise.</p>
-</li>
-<li>
-<p>To:Shows the list of messages that are sent to this number or WebExId</p>
-</li>
-<li>
-<p>From:Shows the list of messages that are sent from  this number or WebExId</p>
-</li>
-<li>
-<p>Direction:Shows the list of messages of particular direction(INBOUND,OUTBOUND). Inbound means messages coming from Mobile to WebEx Id. Outbound means message sent from WebEx Id to Mobile</p>
-</li>
-<li>
-<p>Type:Shows the list of messages of particular type(SMS,MMS). Please note MMS is still not supported.</p>
-</li>
-<li>
-<p>Channel Status:Shows the list of messages with this channel status.</p>
-</li>
-<li>
-<p>Channel Error Code:Shows the list of messages with this Channel Error Code.</p>
-</li>
-<li>
-<p>Channel Error Message:Shows the list of messages with this Channel error message.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/search_messages.png" alt="Search Messages">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage-records</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_enterprise_usage_records"><a class="anchor" href="#_enterprise_usage_records"></a>Enterprise Usage-records</h3>
-<div class="paragraph">
-<p>The user can view enterprises created records of the organization by applying below filters.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Account Scope:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Search in Current Account: Shows the list of mappings  that are created by the logged  in user.</p>
-</li>
-<li>
-<p>Search in All Account: Shows the list of all the mappings  under the organisation.</p>
-</li>
-<li>
-<p>Search in Specific Account: To search mappings that are created a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Start Date: Shows the record of enterprise that has created on or after this date.</p>
-</li>
-<li>
-<p>End Date: Shows the record of enterprise that has created on or before this date.</p>
-</li>
-<li>
-<p>Sub resource:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Daily: Shows the record of enterprise on a daily basis.</p>
-</li>
-<li>
-<p>Monthly: Shows the record of enterprise on a monthly basis.</p>
-</li>
-<li>
-<p>Yearly:  Shows the record of enterprise on a yearly basis.</p>
-</li>
-<li>
-<p>Today:  Shows the record of enterprise today.</p>
+<p>Today: Shows the record of enterprise today.</p>
 </li>
 <li>
 <p>Yesterday: Shows the record of enterprise on yesterday.</p>
 </li>
 <li>
-<p>This Month:  Shows the record of enterprise this month.</p>
+<p>This Month: Shows the record of enterprise this month.</p>
 </li>
 <li>
-<p>Last Month:  Shows the record of enterprise last month.</p>
+<p>Last Month: Shows the record of enterprise last month.</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/usage_records_enterprise.png" alt="Usage Records Enterprise">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_mappings_usage_records"><a class="anchor" href="#_mappings_usage_records"></a>Mappings Usage-records</h3>
 <div class="paragraph">
-<p>The user can view mappings created records of the organisation by applying below filters.</p>
+<p><strong>Start Date:</strong> Only includes 2FA requests that were created on or after this date.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Account Scope:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Search in Current Account: Shows the list of mappings  that are created by the    logged  in user.</p>
-</li>
-<li>
-<p>Search in All Account: Shows the list of all the mappings  under the organisation.</p>
-</li>
-<li>
-<p>Search in Specific Account: To search mappings that are created a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Start Date: Shows the record of mapping that has created on or after this date.</p>
-</li>
-<li>
-<p>End Date: Shows the record of mapping that has created on or before this date.</p>
-</li>
-<li>
-<p>Enterprise: Shows the record of mapping that belong to this enterprise.</p>
-</li>
-<li>
-<p>Sub resource:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Daily: Shows the record of mappings on a daily basis.</p>
-</li>
-<li>
-<p>Monthly: Shows the record of mappings on a monthly basis</p>
-</li>
-<li>
-<p>Yearly: Shows the record of mappings on a yearly basis.</p>
-</li>
-<li>
-<p>Today: Shows the record of mappings today.</p>
-</li>
-<li>
-<p>Yesterday: Shows the record of mappings on yesterday.</p>
-</li>
-<li>
-<p>This Month: Shows the record of mappings this month.</p>
-</li>
-<li>
-<p>Last Month: Shows the record of mappings last month.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cisco-webex-console/usage_records.png" alt="Usage Records Mapping">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_messages_usage_records"><a class="anchor" href="#_messages_usage_records"></a>Messages Usage-records</h3>
 <div class="paragraph">
-<p>The user can view Messages records of the organization by applying below filters.</p>
+<p><strong>End Date:</strong> Only includes 2FA requests that were created on or before this date.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Start Date: Shows the record of messages that has created on or after this date.</p>
-</li>
-<li>
-<p>End Date: Shows the record of messages that has created on or before this date.</p>
-</li>
-<li>
-<p>Enterprise: Shows the record of messages that are belong to this enterprise.</p>
-</li>
-<li>
-<p>Direction: Shows the record of messages of particular direction(INBOUND,OUTBOUND).</p>
-</li>
-<li>
-<p>Type: Shows the record of messages of particular type(SMS,MMS).</p>
-</li>
-<li>
-<p>To: Shows the record of messages that are sent to this number</p>
-</li>
-<li>
-<p>From: Shows the record of messages that are sent from  this number</p>
-</li>
-<li>
-<p>Channel Status: Shows the record of messages with this channel status.</p>
-</li>
-<li>
-<p>Channel Error Code: Shows the record of messages with this Channel Error Code.</p>
-</li>
-<li>
-<p>Channel Error Message: Shows the record of messages with this Channel error message.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p><strong>Status:</strong> Only includes 2FA requests that have selected status.</p>
+</div>
+<div class="paragraph">
+<p><strong>Channel:</strong> Only includes 2FA requests that are sent via selected channel.</p>
+</div>
+<div class="paragraph">
+<p><strong>Filter By Country Code:</strong> Only includes 2FA requests sent to selected Country Code. For example if OTP is sent to “16513333367” and the filter parameter is “1 - United States”, it will match.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/cisco-webex-console/webex_settings.png" alt="Cisco Webex Settings">
+<img src="../_images/two-factor-authentication/restcomm-2fa-usage-records.png" alt="Two-factor authentication - Usage records">
 </div>
+</div>
+<div class="paragraph">
+<p>Usage Records will show Total, Successful, UnSuccessful and Success Ratio (Successful / Total).</p>
+</div>
+<div class="paragraph">
+<p>If you would like to explore the Two-factor authentication (2FA) API, we recommend having a look at the
+<a href="Two-factor-Authentication-2FA.html">Getting Started with the Two-factor authentication (2FA) API Guide</a></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_settings"><a class="anchor" href="#_settings"></a>Settings</h2>
+<h2 id="_demo"><a class="anchor" href="#_demo"></a>Demo</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The user can provide SMS enablement key to sms enable number through teli</p>
-</div>
-<div class="paragraph">
-<p>If you would like to explore the Cisco Webex API, we recommend having a loot at the
-<a href="../api/cisco-webex/overview.html">Getting Started with the Cisco Webex API Guide</a></p>
+<p>2FA Console provides an easy to use demo for users to send OTP and test the 2FA API. To try Demo, click on your name at top right corner and select “2FA Demo”. Click on the “Try Demo” button on the card displayed. You will see a form where you can enter all the values and send OTP. If sending is successful, you will see the API called along with parameters.</p>
 </div>
 </div>
 </div>
@@ -2236,14 +1990,5 @@ Enterprise name must be unique.
     })('userback-sdk');
 </script>
 
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
   </body>
 </html>

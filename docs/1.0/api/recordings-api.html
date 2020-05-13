@@ -1409,7 +1409,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html">Solution APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html">Solution APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1426,7 +1426,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1443,7 +1443,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_sending_one_time_passwords_api_reference">Sending One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_sending_one_time_passwords_api_reference">Sending One-Time Passwords</a>
 
             </span>
               </div>
@@ -1460,7 +1460,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_verifying_one_time_passwords_api_reference">Verifying One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_verifying_one_time_passwords_api_reference">Verifying One-Time Passwords</a>
 
             </span>
               </div>
@@ -1477,7 +1477,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_cancel_one_time_passwords_api_reference">Cancel One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_cancel_one_time_passwords_api_reference">Cancel One-Time Passwords</a>
 
             </span>
               </div>
@@ -1494,7 +1494,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_session_detail_record_sdr">Session Detail Record (SDR)</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_session_detail_record_sdr">Session Detail Record (SDR)</a>
 
             </span>
               </div>
@@ -1511,7 +1511,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_get_list_of_one_time_passwords_api_reference">Get list of One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_get_list_of_one_time_passwords_api_reference">Get list of One-Time Passwords</a>
 
             </span>
               </div>
@@ -1528,7 +1528,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_get_single_one_time_passwords_api_reference">Get a Single One-Time Password</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_get_single_one_time_passwords_api_reference">Get a Single One-Time Password</a>
 
             </span>
               </div>
@@ -1545,7 +1545,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../solutions/Two-factor-Authentication-2FA.html#_usage_record_one_time_passwords_api_reference">Usage Record One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/Two-factor-Authentication-2FA.html#_usage_record_one_time_passwords_api_reference">Usage Record One-Time Passwords</a>
 
             </span>
               </div>
@@ -2800,7 +2800,7 @@ public class JavaSampleClass {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_additional_paging_information"><a class="anchor" href="#_additional_paging_information"></a>Additional Paging Information.</h2>
+<h2 id="_additional_paging_information"><a class="anchor" href="#_additional_paging_information"></a>Additional Paging Information</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The API returns URIs to the next, previous, first and last pages of the returned list as shown in the table below:</p>
@@ -2838,6 +2838,22 @@ public class JavaSampleClass {
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Lastpageuri</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The URI for the last page of this list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NumPages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The total number of pages.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The total number of items in the list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The position in the overall list of the first item in this page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">End</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The position in the overall list of the last item in this page.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3210,14 +3226,5 @@ public class JavaSampleClass {
     })('userback-sdk');
 </script>
 
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
   </body>
 </html>
