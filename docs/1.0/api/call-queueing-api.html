@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="enterprise-persona">
+<html lang="en" class="csp-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Call Queue - Restcomm Docs"></title>
+    <title data-custom-title="Call Queueing - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/api/call-queue-api.html
+      https://dev.restcomm.com/docs/1.0/api/call-queueing-api.html
     ">
-    <meta name="description" content="Call Queue allows callers to be placed in a Queue, hearing background music or announcement (text to speech) while waiting to get connected to called party.">
-    <meta name="keywords" content="call queue, call queue api">
+    <meta name="description" content="Call Queueing allows callers to be placed in a Queue, hearing background music or announcement (text to speech) while waiting to get connected to called party.">
+    <meta name="keywords" content="call queue, restcomm call queueing api">
     <meta name="generator" content="Antora 1.1.1">
-    <link rel="icon" type="image/png" href=""/>
-    <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
+    <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
+    <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -20,7 +20,7 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article" style="display: none">
+  <body class="article" >
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -30,6 +30,19 @@
       -->
       <a class="navbar-item header-logo-link" href="/docs/">
       </a>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <!-- TODO: Bring back when we integrate with searching facilities
+        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
+        -->
+        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
+        <div class="navbar-item">
+          <span>
+            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
+          </span>
+        </div>
+      </div>
     </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
@@ -47,10 +60,9 @@
 
 
 
-        <a class="navbar-enterprise-item" href="/docs/api/overview.html">Reference</a>
-        <a class="navbar-enterprise-item" href="/docs/turnkey-applications/index.html">Turnkey Applications</a>
-        <a class="navbar-enterprise-item" href="/docs/tutorials/index.html">Tutorials</a>
-        <a class="navbar-enterprise-item" href="/docs/visual-designer/index.html">Visual Designer</a>
+        <a class="navbar-enterprise-item" href="/docs/1.0/api/overview.html">Reference</a>
+        <a class="navbar-enterprise-item" href="/docs/1.0/visual-designer/index.html">Visual Designer</a>
+        <a class="navbar-enterprise-item" href="/docs/1.0/tutorials/index.html">Tutorials</a>
 
 
     </div>
@@ -63,9 +75,45 @@
   <div class="navigation-menu is-active" data-panel="menu">
     <nav class="nav-menu">
       <!-- Not applicable to our Enterprise docs
-    <h3 class="title"><a href="../../index.html">docs</a></h3>
+    <h3 class="title"><a href="../index.html">docs</a></h3>
     -->
         <ul class="nav-list">
+          <ul class="nav-list">
+              <ul class="nav-list">
+              <ul class="nav-list">
+                                                              </ul>
+  </ul>
+              <ul class="nav-list">
+                                                  </ul>
+              <ul class="nav-list">
+                          <ul class="nav-list">
+                                                                          </ul>
+              <ul class="nav-list">
+                                                  </ul>
+              <ul class="nav-list">
+                          </ul>
+              <ul class="nav-list">
+              </ul>
+              <ul class="nav-list">
+                                                                                                              </ul>
+                          </ul>
+              <ul class="nav-list">
+                          <ul class="nav-list">
+                                                  </ul>
+              <ul class="nav-list">
+                                                                                                              </ul>
+              <ul class="nav-list">
+                                                  </ul>
+              </ul>
+              <ul class="nav-list">
+              <ul class="nav-list">
+                          </ul>
+              <ul class="nav-list">
+                                                  </ul>
+                                                                                                                          </ul>
+              <ul class="nav-list">
+                                      </ul>
+  </ul>
           <ul class="nav-list">
             <li class="nav-item" data-depth="1">
               <div class="nav-flex-container">
@@ -73,12 +121,13 @@
               
               
               
+              
+              
+              
               icomoon3-font-reference-api
-              
-              
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html">REST API</a>
+              <a class="nav-link nav-flex-item-text" href="overview.html">API Overview</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -92,21 +141,6 @@
               
               
               
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html">Overview</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
               
             "></span>
                   <span>
@@ -115,9 +149,10 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="3">
+            <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -131,9 +166,10 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="3">
+            <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -147,9 +183,10 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="3">
+            <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -163,9 +200,10 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="3">
+            <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -181,8 +219,6 @@
                           </li>
   </ul>
             </li>
-  </ul>
-            </li>
             <li class="nav-item" data-depth="1">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -190,8 +226,9 @@
               
               
               
-              
               icomoon3-font-reference-management
+              
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="management-apis-overview.html">Management APIs</a>
@@ -199,9 +236,10 @@
             </span>
               </div>
                 <ul class="nav-list">
-            <li class="nav-item" data-depth="2">
+                        <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -211,6 +249,110 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="account-api.html">Accounts</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_get_strong">HTTP GET</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_post_strong">HTTP POST</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_put_strong">HTTP PUT</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_delete_strong">HTTP DELETE</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="account-roles.html">Account Roles</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="profile-api.html">Profiles</a>
 
             </span>
               </div>
@@ -218,6 +360,7 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -240,6 +383,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="notifications-api.html">Notifications</a>
@@ -256,9 +400,27 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="usage-records-api.html">Usage Records</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="audit-logs-api.html">Audit Logs</a>
 
             </span>
               </div>
@@ -269,6 +431,7 @@
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
+              
               icomoon3-font-reference-voice
               
               
@@ -276,7 +439,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="voice-category.html">Voice</a>
+              <a class="nav-link nav-flex-item-text" href="voice-category.html">Voice APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -284,6 +447,7 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -306,6 +470,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="calls-api.html">Calls</a>
@@ -316,6 +481,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -338,6 +504,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
@@ -348,6 +515,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -370,6 +538,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="calls-api.html#examples">Examples</a>
@@ -386,6 +555,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="calls-api.html#_list_filter">List Filter</a>
@@ -396,6 +566,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -420,6 +591,24 @@
               
               
               
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="outgoing-caller-id-api.html">Outgoing Caller ID</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="clients-api.html">Clients</a>
@@ -430,6 +619,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -452,6 +642,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="clients-api.html#_delete_a_client">Delete a Client</a>
@@ -468,6 +659,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
@@ -478,6 +670,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -502,6 +695,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="conferences-api.html">Conference Management</a>
@@ -518,6 +712,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="conferences-api.html#_supported_operations">Supported Operations</a>
@@ -528,6 +723,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -552,6 +748,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="participants-api.html">Conference Participants Management</a>
@@ -562,6 +759,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -586,6 +784,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
@@ -596,6 +795,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -618,6 +818,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
@@ -628,6 +829,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -650,6 +852,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
@@ -660,6 +863,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -682,6 +886,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
@@ -692,6 +897,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -714,6 +920,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
@@ -724,6 +931,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -748,6 +956,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="recordings-api.html">Recordings</a>
@@ -758,6 +967,7 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -776,6 +986,7 @@
             <li class="nav-item" data-depth="1">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               icomoon3-font-reference-sms
               
               
@@ -784,7 +995,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sms-category.html">SMS</a>
+              <a class="nav-link nav-flex-item-text" href="sms-category.html">SMS APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -792,6 +1003,7 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -814,6 +1026,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="clients-api.html">Clients</a>
@@ -824,6 +1037,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -846,6 +1060,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="clients-api.html#_delete_a_client">Delete a Client</a>
@@ -862,6 +1077,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
@@ -872,6 +1088,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -896,6 +1113,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
@@ -906,6 +1124,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -928,6 +1147,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
@@ -938,6 +1158,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -960,6 +1181,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
@@ -970,6 +1192,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -992,6 +1215,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
@@ -1002,6 +1226,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1024,6 +1249,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
@@ -1034,6 +1260,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1058,6 +1285,24 @@
               
               
               
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="outgoing-caller-id-api.html">Outgoing Caller ID</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="sms-api.html">Messages</a>
@@ -1068,6 +1313,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1090,6 +1336,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="sms-api.html#_get_sms_list">Get SMS List</a>
@@ -1106,6 +1353,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="sms-api.html#_get_single_sms_information">Get single SMS Information</a>
@@ -1116,6 +1364,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1140,6 +1389,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="email-api.html">Email</a>
@@ -1152,6 +1402,444 @@
             <li class="nav-item" data-depth="1">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              icomoon3-font-reference-solutions
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html">Turnkey Apps APIs</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html">Smart 2FA</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_sending_one_time_passwords_api_reference">Sending One-Time Passwords</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_verifying_one_time_passwords_api_reference">Verifying One-Time Passwords</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_cancel_one_time_passwords_api_reference">Cancel One-Time Passwords</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_session_detail_record_sdr">Session Detail Record (SDR)</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_get_list_of_one_time_passwords_api_reference">Get list of One-Time Passwords</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_get_single_one_time_passwords_api_reference">Get a Single One-Time Password</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_usage_record_one_time_passwords_api_reference">Usage Record One-Time Passwords</a>
+
+            </span>
+              </div>
+                          </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/overview.html">Message Exchange for Cisco UC-One</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/create-operation.html">Create Operation</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/read-operation.html">Read Operation</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/update-operation.html">Update Operation</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/delete-operation.html">Delete Operation</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/common-response-error-codes.html">Error Codes</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html"> Message Exchange for Cisco Webex Teams</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html#_create_operation">Create Operation</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html#_read_operation">Read Operation</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html#_update_enterprise">Update Operation</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html#_delete_operation">Delete Operation</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
+            <li class="nav-item is-current-page" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="call-queueing-api.html">Call Queueing</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="#_create_queue_api">Create Queue</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="#_queue_rcml">Queue RCML</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="#_enqueue_rcml">Enqueue RCML</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="auto-attendant/auto-attendant-api.html">Auto Attendant</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+                                                  </ul>
+            </li>
+  </ul>
+            </li>
+            <li class="nav-item" data-depth="1">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
               
               
               icomoon3-font-reference-rcml
@@ -1174,6 +1862,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/overview.html">Overview</a>
@@ -1190,6 +1879,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">Interacting with Your Application</a>
@@ -1200,6 +1890,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1224,6 +1915,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/dial-rcml.html">Dial</a>
@@ -1234,6 +1926,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1256,6 +1949,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/conference-rcml.html">Conference</a>
@@ -1272,6 +1966,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/number-rcml.html">Number</a>
@@ -1282,6 +1977,7 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1306,6 +2002,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/email-rcml.html">Email</a>
@@ -1316,6 +2013,7 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1338,16 +2036,37 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/say-rcml.html">Say</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../rcml/ssml-reference.html">SSML Reference</a>
 
             </span>
               </div>
                           </li>
+  </ul>
+            </li>
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1364,7 +2083,8 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              icomoon3-font-reference-sms
+              
+              
               
               
               
@@ -1380,6 +2100,7 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1402,6 +2123,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/pause-rcml.html">Pause</a>
@@ -1412,6 +2134,7 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
+              
               
               
               
@@ -1434,6 +2157,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/record-rcml.html">Record</a>
@@ -1450,6 +2174,7 @@
               
               
               
+              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/reject-rcml.html">Reject</a>
@@ -1459,120 +2184,6 @@
                           </li>
   </ul>
             </li>
-            <li class="nav-item" data-depth="1">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              icomoon3-font-reference-solutions
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/index.html">Turnkey Apps APIs</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item is-current-page" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="call-queue-api.html">Call Queue</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="auto-attendant-api.html">Auto Attendant</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
-  </ul>
-          <ul class="nav-list">
-              <ul class="nav-list">
-                                                              </ul>
-              <ul class="nav-list">
-                          <ul class="nav-list">
-                                                              </ul>
-                                                              </ul>
-              <ul class="nav-list">
-                          <ul class="nav-list">
-                                                                          </ul>
-                          <ul class="nav-list">
-                                                  </ul>
-              <ul class="nav-list">
-                          </ul>
-              <ul class="nav-list">
-              </ul>
-              <ul class="nav-list">
-                                                                                                              </ul>
-                          </ul>
-              <ul class="nav-list">
-                          <ul class="nav-list">
-                                                  </ul>
-              <ul class="nav-list">
-                                                                                                              </ul>
-                          <ul class="nav-list">
-                                                  </ul>
-              </ul>
-              <ul class="nav-list">
-              <ul class="nav-list">
-                                                                                                  </ul>
-              <ul class="nav-list">
-                                                              </ul>
-              <ul class="nav-list">
-                                                  </ul>
-              <ul class="nav-list">
-                                      </ul>
-              <ul class="nav-list">
-                                                  </ul>
-  </ul>
-              <ul class="nav-list">
-              <ul class="nav-list">
-                          </ul>
-              <ul class="nav-list">
-                                                  </ul>
-                                      <ul class="nav-list">
-              </ul>
-                                                                                      </ul>
   </ul>
   </ul>
     </nav>
@@ -1587,7 +2198,7 @@
       <span class="title">docs</span>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../index.html">1.0</a>
+          <a href="../index.html">1.0</a>
         </li>
       </ul>
     </li>
@@ -1602,41 +2213,41 @@
 -->
 <div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
-  <a href="../../index.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
-    <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="../turnkey-applications/index.html">Enterprise:Turnkey Apps APIs</a></li>
-    <li class="crumb"><a href="call-queue-api.html">Enterprise:Call Queue</a></li>
+    <li class="crumb"><a href="../index.html">docs</a></li>
+    <li class="crumb"><a href="../turnkey-applications/smart-2fa.html">CSP:Turnkey Apps APIs</a></li>
+    <li class="crumb"><a href="call-queueing-api.html">CSP:Call Queueing</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Call Queue</h1>
+  <h1>Call Queueing</h1>
 <div class="sect1">
 <h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Call Queue is a feature that allows callers (A leg) to be placed in a Queue, hearing background music or announcement (text-to-speech) while waiting to get connected to called party (B leg). This is one of the most commonly needed features to build any kind of Inbound Contact Center solution.</p>
+<p>Call Queueing is a feature that allows callers (A leg) to be placed in a Queue, hearing background music or announcement (text to speech) while waiting to get connected to called party (B leg). This is one of the most commonly needed features to build any kind of Inbound Contact Center solution.</p>
 </div>
 <div class="paragraph">
-<p>The document below describes the Call Queue Solution from <span class="sps-text non-sps-link" data-orig-text="ACME" data-parm-text="company_name" data-default-text="$INFER_FROM_DOMAIN">ACME</span> build on top of the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Platform leveraging its APIs. A Queue stores incoming calls in First In First Out (FIFO) order (let’s call those callers Customers). The Queue then connects the first call in queue to receivers (let’s call those Agents).</p>
+<p>The document below describes the Call Queue turnkey application from Telestax build on top of the Restcomm Platform leveraging its APIs. A Queue stores incoming calls in First In First Out (FIFO) order (let’s call those callers Customers). The Queue then connects the first call in queue to receivers (let’s call those Agents).</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_call_queue"><a class="anchor" href="#_call_queue"></a>Call Queue</h2>
+<h2 id="_call_queueing"><a class="anchor" href="#_call_queueing"></a>Call Queueing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In order to use Call Queue, you need a valid <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud account.</p>
+<p>In order to use Call Queueing, you need a valid Restcomm Cloud account.</p>
 </div>
 <div class="paragraph">
-<p>For the Call Queue solution to function correctly at least two numbers must be reserved in <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud (via Call Queue API) and at least one unique Queue defined (via Call Queue API), let’s call this “Support” Queue have to be defined. The first number will be used by Customers to call and get in “Support” Queue. Let&#8217;s set this number to +1 571 331 6666. The second number is called by Agents and starts accepting call’s queued in “Support” in FIFO order. Let&#8217;s have this number set to +1 571 331 9999. Users can create as many queues as long as they all have unique names.</p>
+<p>For the Call Queueing turnkey application to function correctly at least two numbers must be reserved in Restcomm Cloud (via Call Queueing API) and at least one unique Queue defined (via Call Queueing API), let’s call this “Support” Queue have to be defined. The first number will be used by Customers to call and get in “Support” Queue. Let&#8217;s set this number to +1 571 331 6666. The second number is called by Agents and starts accepting call’s queued in “Support” in FIFO order. Let&#8217;s have this number set to +1 571 331 9999. Users can create as many queues as long as they all have unique names.</p>
 </div>
 <div class="sect2">
-<h3 id="_create_queue_api"><a class="anchor" href="#_create_queue_api"></a>Create Queue API</h3>
+<h3 id="_create_queueing_api"><a class="anchor" href="#_create_queueing_api"></a>Create Queueing API</h3>
 <div class="paragraph">
-<p>Create Queue API has to be called twice.</p>
+<p>Create Queueing API has to be called twice.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1651,11 +2262,11 @@
 <div class="sect3">
 <h4 id="_base_resource_uri"><a class="anchor" href="#_base_resource_uri"></a>Base Resource URI</h4>
 <div class="paragraph">
-<p><a href="https://&lt;custom_domain&gt" class="bare">https://&lt;custom_domain&gt</a>;</p>
+<p><a href="https://&lt;custom_domain_of_CSP’s&gt" class="bare">https://&lt;custom_domain_of_CSP’s&gt</a>;</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_add_queue_resource_uri"><a class="anchor" href="#_add_queue_resource_uri"></a>Add Queue Resource URI</h4>
+<h4 id="_add_queueing_resource_uri"><a class="anchor" href="#_add_queueing_resource_uri"></a>Add Queueing Resource URI</h4>
 <div class="paragraph">
 <p>/callqueue/provisioning</p>
 </div>
@@ -1680,7 +2291,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">applicationUrl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory parameter. applicationUrl takes absolute URL as value. URL points to RCML that will be executed for an incoming call. The RCML can be setup for &lt;queue&gt; if its Customer Number or &lt;enqueue&gt; if its Agent Number.&#160;<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory parameter. applicationUrl takes absolute URL as value. URL points to Restcomm Markup Language (RCML) that will be executed for an incoming call. The RCML can be setup for &lt;queue&gt; if its Customer Number or &lt;enqueue&gt; if its Agent Number.&#160;<br>
 &#160;<br>
 For example, Customer Number URL can return:&#160;<br>
 &lt;Response&gt;
@@ -1704,15 +2315,15 @@ For example, Customer Number URL can return:&#160;<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">phoneNumber</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory parameter. Phone Number that must be provisioned in <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud. Number is either Customer Number or Agent Number.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory parameter. Phone Number that must be provisioned in Restcomm Cloud. Number is either Customer Number or Agent Number.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">override</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">override parameter is either true or false. If <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud already has a number provisioned and API is called passing the same number, setting override to “true”, Call Queue Solution will override the setting of the number. By default it is set to false.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">override parameter is either true or false. If Restcomm Cloud already has a number provisioned and API is called passing the same number, setting override to “true”, Call Queue Solution will override the setting of the number. By default it is set to false.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">byoc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">byoc parameter defines if provisioned phoneNumber is to be bought from <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud Platform or to be used as SIP number (Bring Your Own Career). iF byoc is set to true, phoneNumber is registered as SIP number. Its default value is set to true.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">byoc parameter defines if provisioned phoneNumber is to be bought from Restcomm Cloud Platform or to be used as SIP number (Bring Your Own Career). iF byoc is set to true, phoneNumber is registered as SIP number. Its default value is set to true.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1737,7 +2348,7 @@ For example, Customer Number URL can return:&#160;<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Id for this Application within Call Queue Solution.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Id for this Application within Call Queueing turnkey application.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">phoneNumber</p></td>
@@ -1745,7 +2356,7 @@ For example, Customer Number URL can return:&#160;<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Account Sid that called this API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm Account Sid that called this API</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">friendlyName</p></td>
@@ -1753,15 +2364,15 @@ For example, Customer Number URL can return:&#160;<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this Call Queue app was created.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this Call Queueing app was created.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">voiceUrl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URL that is provisioned for passed phoneNumber in <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud. This URL is made up of “applicationUrlMethod” that was passed as request parameter along with some additional parameters that are used by Call Queue Solution.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL that is provisioned for passed phoneNumber in Restcomm Cloud. This URL is made up of “applicationUrlMethod” that was passed as request parameter along with some additional parameters that are used by Call Queueing turnkey application.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">voiceMethod</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Method for calling the voiceUrl provisioned in <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud for PhoneNumber. This is the same value as applicationUrlMethod parameter passed in API request.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Method for calling the voiceUrl provisioned in Restcomm Cloud for PhoneNumber. This is the same value as applicationUrlMethod parameter passed in API request.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">voiceFallbackUrl</p></td>
@@ -1781,11 +2392,11 @@ For example, Customer Number URL can return:&#160;<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">statusCallback</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URL that <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> will request to pass status parameters (such as call ended) to Call Queue application.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URL that Restcomm will request to pass status parameters (such as call ended) to Call Queueing application.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">statusCallbackMethod</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP method <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> will use to make requests to the StatusCallback URL.Always POST.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP method Restcomm will use to make requests to the StatusCallback URL.Always POST.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">smsUrl</p></td>
@@ -1805,15 +2416,15 @@ For example, Customer Number URL can return:&#160;<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">apiVersion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The API version of <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The API version of Restcomm Cloud</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">isSIP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If phoneNumber is registered as SIP Number (BYOC) or if it&#8217;s provided by <span class="sps-text non-sps-link" data-orig-text="ACME" data-parm-text="company_name" data-default-text="$INFER_FROM_DOMAIN">ACME</span>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If phoneNumber is registered as SIP Number (BYOC) or if it&#8217;s provided by Telestax.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI in <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> Cloud to reach to provisioned phoneNumber</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI in Restcomm Cloud to reach to provisioned phoneNumber</p></td>
 </tr>
 </tbody>
 </table>
@@ -1835,7 +2446,7 @@ For example, Customer Number URL can return:&#160;<br>
 <div class="listingblock">
 <div class="content">
 <pre>curl -X POST \
-'https://yourcompany.com/callqueue/provisioning' \
+'https://cloud.restcomm.com/callqueue/provisioning' \
 --user '{your_account_SID}:{your_account_token}' \
 -H 'Cache-Control: no-cache' \
 -H 'Content-Type: application/json' \
@@ -1843,24 +2454,24 @@ For example, Customer Number URL can return:&#160;<br>
 </div>
 </div>
 <div class="paragraph">
-<p>If the creation of Call Queue is successful, below is the response returned:</p>
+<p>If the creation of Call Queueing is successful, below is the response returned:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>{
-   "sid":"PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "sid":"PN1865b4235b7b498bbbf983d2ec486f0e",
    "phoneNumber":"15713316666",
-   "accountSid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "accountSid":"AC23f1b11bbb99a46436c365cb7bec246e",
    "friendlyName":"15713316666",
    "dateCreated":"Wed, 20 Nov 2019 02:54:42 +0000",
    "dateUpdated":"Wed, 20 Nov 2019 02:54:42 +0000",
-   "voiceUrl":"https://yourcompany.com/callqueue/rcml?appUrl=http%3A%2F%2Fwww.mocky.io%2Fv2%2F5dd4a91f2f0000f905d4fb63&amp;queueState=initiating",
+   "voiceUrl":"https://cloud.restcomm.com/callqueue/rcml?appUrl=http%3A%2F%2Fwww.mocky.io%2Fv2%2F5dd4a91f2f0000f905d4fb63&amp;queueState=initiating",
    "voiceMethod":"POST",
    "voiceFallbackUrl":null,
    "voiceFallbackMethod":"POST",
    "voiceCallerIdLookup":"false",
    "voiceApplicationSid":null,
-   "statusCallback":"https://yourcompany.com/callqueue/callback",
+   "statusCallback":"https://cloud.restcomm.com/callqueue/callback",
    "statusCallbackMethod":"POST",
    "smsUrl":null,
    "smsMethod":"POST",
@@ -1879,7 +2490,7 @@ For example, Customer Number URL can return:&#160;<br>
 <div class="listingblock">
 <div class="content">
 <pre>curl -X POST \
-'https://yourcompany.com/callqueue/provisioning' \
+'https://cloud.restcomm.com/callqueue/provisioning' \
 --user '{your_account_SID}:{your_account_token}' \
 -H 'Cache-Control: no-cache' \
 -H 'Content-Type: application/json' \
@@ -1998,7 +2609,7 @@ Call Queue will pass the parameters explained in <a href="call-queue-api.html#_r
 All our Agents are busy. Your call is important to us. Please hold your line and we will connect you in sometime.
 &lt;/Say&gt;
 &lt;Play&gt;
-https://yourcompany.com/restcomm/music/electronica/teru_-_110_Downtempo_Electronic_4.wav
+https://cloud.restcomm.com/restcomm/music/electronica/teru_-_110_Downtempo_Electronic_4.wav
 &lt;/Play&gt;
 &lt;/Response&gt;</pre>
 </div>
@@ -2123,7 +2734,7 @@ Call Queue will pass the parameters explained in <a href="call-queue-api.html#_r
 There are no customers in Queue. Please hold your line.
 &lt;/Say&gt;
 &lt;Play&gt;
-https://yourcompany.com/restcomm/music/electronica/teru_-_110_Downtempo_Electronic_4.wav
+https://cloud.restcomm.com/restcomm/music/electronica/teru_-_110_Downtempo_Electronic_4.wav
 &lt;/Play&gt;
 &lt;/Response&gt;</pre>
 </div>
@@ -2149,37 +2760,54 @@ https://yourcompany.com/restcomm/music/electronica/teru_-_110_Downtempo_Electron
   <div class="footer-container">
     <div class="footer-column-container">
       <div class="footer-column">
-          <h5 class="footer-column-title">Platform</h5>
-          <p><a class="footer-products-item" href="/docs/api/voice-category.html">Programmable Voice</a></p>
-          <p><a class="footer-products-item" href="/docs/api/sms-category.html">Programmable SMS</a></p>
+          <h5 class="footer-column-title">Contact Us</h5>
+          <p>+1 (650) 263 6146</p>
+          <p><a href="https://go.telestax.com/sales-inquiries">SALES</a></p>
+          <p><a href="https://go.telestax.com/support-inquiries">SUPPORT</a></p>
+          <p><a href="https://go.telestax.com/general-inquiries">GENERAL</a></p>
+          <h5 class="footer-column-title">Follow Us</h5>
+          <p>
+            <span><a href="https://twitter.com/restcomm"><i class="fab fa-twitter"></i></a></span>
+            <span><a href="https://www.linkedin.com/company/telestax"><i class="fab fa-linkedin-in"></i></a></span>
+            <span><a href="https://www.facebook.com/Telestax/"><i class="fab fa-facebook-f"></i></a></span>
+            <span><a href="https://www.youtube.com/channel/UCrZ-J48d3AdwGdL01XuZKZQ"><i class="fab fa-youtube"></i></a></span>
+          </p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Solutions</h5>
-        <p><a class="footer-usecase-item" href="/docs/tutorials/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a></p>
-          <p><a class="footer-usecase-item" href="/docs/api/call-queue-api.html">Call Queue</a></p>
-          <p><a class="footer-usecase-item" href="/docs/solutions/auto-attendant-overview.html">Auto Attendant</a></p>
+        <p><a class="footer-usecase-item" href="/docs/1.0/solutions/two-factor-authentication-overview.html">TWO-FACTOR AUTHENTICATION (2FA)</a></p>
+          <p><a class="footer-usecase-item" href="/docs/1.0/solutions/message-exchange-overview.html">MESSAGE EXCHANGE</a></p>
+          <p><a class="footer-usecase-item" href="/docs/1.0/solutions/cisco-webex-overview.html">CISCO WEBEX</a></p>
+          <p><a class="footer-usecase-item" href="/docs/1.0/api/call-queue-api.html">CALL QUEUE</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
+        <p><a href="https://www.telestax.com/blog/">BLOG</a></p>
 
-          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html" data-default-link="/docs/terms.html">Terms And Conditions</a></p>
+          <p><a id="terms-link" href="/docs/support.html">TERMS AND CONDITIONS</a></p>
       </div>
       <div class="footer-column">
-    <h5 class="footer-column-title">About</h5>
+    <h5 class="footer-column-title">Additional Links</h5>
         <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/about/" data-default-text="About Us" data-default-link="#">ABOUT</a></p>
-  <p><a class="sps-text sps-link" data-parm-text="Contact Us" data-parm-link="contact_link" href="https://www.telestax.com/contact/" data-default-text="Contact Us" data-default-link="#">CONTACT US</a></p>
+       <p><a href="https://www.telestax.com/faqs/">FAQ'S</a></p>
+       <p><a href="https://www.telestax.com/privacy-statement/">PRIVACY POLICY</a></p>
+       <p><a href="https://www.telestax.com/contact/">CONTACT</a></p>
       </div>
     </div>
-   <div class="footer-bottom-container">
-    <div class="footer-copyright">
-     <p class="footer-copyright-paragraph"><a class="sps-text" data-parm-text="copyright_text" data-default-text="© 2020, All rights reserved.">© 2020, All rights reserved.</a></p>
-    </div>
-   </div>
+    <!---->
+    <!--<div class="footer-bottom-container">-->
+      <!--<div class="footer-logo">-->
+        <!--<a class="footer-logo-link" href="https://telestax.com"></a>-->
+      <!--</div>-->
+      <!--<div class="footer-copyright">-->
+        <!--<p class="footer-copyright-paragraph">COPYRIGHT © 2020, TELESTAX INC., ALL RIGHTS RESERVED.</p>-->
+      <!--</div>-->
+    <!--</div>-->
     <!---->
   </div>
 </footer>
-<script src="../../../../_/js/site.js"></script>
-<script src="../../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
 <!--
 <script>hljs.initHighlighting()</script>
 -->
@@ -2225,6 +2853,16 @@ https://yourcompany.com/restcomm/music/electronica/teru_-_110_Downtempo_Electron
       s.parentNode.insertBefore(cly, s)
     })()
   </script>
+<!-- UserBack Tool -->
+<script>
+    Userback = window.Userback || {};
+    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
+    (function(id) {
+        var s = document.createElement('script');
+        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
+        var parent_node = document.head || document.body;parent_node.appendChild(s);
+    })('userback-sdk');
+</script>
 
   </body>
 </html>

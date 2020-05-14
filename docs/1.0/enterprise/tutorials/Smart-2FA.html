@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="csp-persona">
+<html lang="en" class="enterprise-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
     <title data-custom-title="Two-Factor Authentication (2FA) - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/turnkey-applications/Two-factor-Authentication-2FA.html
+      https://cloud.restcomm.com/docs/tutorials/Smart-2FA.html
     ">
     <meta name="description" content="Secure online transactions, account sign-ins, mobile apps, websites and more by providing two-factor authentication (2FA) with One-Time Passwords to your users.">
-    <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} two-factor authentication">
+    <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;CPaaS&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} two-factor authentication">
     <meta name="generator" content="Antora 1.1.1">
-    <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
-    <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
+    <link rel="icon" type="image/png" href=""/>
+    <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -20,7 +20,7 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article" >
+  <body class="article" style="display: none">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -30,19 +30,6 @@
       -->
       <a class="navbar-item header-logo-link" href="/docs/">
       </a>
-    </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <!-- TODO: Bring back when we integrate with searching facilities
-        <a class="navbar-item" href="#"><i class="material-icons">search</i></a>
-        -->
-        <a class="navbar-item" href="https://cloud.restcomm.com/#/login">Sign in</a>
-        <div class="navbar-item">
-          <span>
-            <a id="signup" class="button" href="https://cloud.restcomm.com/#/signup">Sign up</a>
-          </span>
-        </div>
-      </div>
     </div>
   </nav>
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
@@ -60,9 +47,10 @@
 
 
 
-        <a class="navbar-enterprise-item" href="/docs/1.0/api/overview.html">Reference</a>
-        <a class="navbar-enterprise-item" href="/docs/1.0/visual-designer/index.html">Visual Designer</a>
-        <a class="navbar-enterprise-item" href="/docs/1.0/tutorials/index.html">Tutorials</a>
+        <a class="navbar-enterprise-item" href="/docs/api/overview.html">Reference</a>
+        <a class="navbar-enterprise-item" href="/docs/turnkey-applications/index.html">Turnkey Applications</a>
+        <a class="navbar-enterprise-item" href="/docs/tutorials/index.html">Tutorials</a>
+        <a class="navbar-enterprise-item" href="/docs/visual-designer/index.html">Visual Designer</a>
 
 
     </div>
@@ -75,45 +63,9 @@
   <div class="navigation-menu is-active" data-panel="menu">
     <nav class="nav-menu">
       <!-- Not applicable to our Enterprise docs
-    <h3 class="title"><a href="../index.html">docs</a></h3>
+    <h3 class="title"><a href="../../index.html">docs</a></h3>
     -->
         <ul class="nav-list">
-          <ul class="nav-list">
-              <ul class="nav-list">
-              <ul class="nav-list">
-                                                              </ul>
-  </ul>
-              <ul class="nav-list">
-                                                  </ul>
-              <ul class="nav-list">
-                          <ul class="nav-list">
-                                                                          </ul>
-              <ul class="nav-list">
-                                                  </ul>
-              <ul class="nav-list">
-                          </ul>
-              <ul class="nav-list">
-              </ul>
-              <ul class="nav-list">
-                                                                                                              </ul>
-                          </ul>
-              <ul class="nav-list">
-                          <ul class="nav-list">
-                                                  </ul>
-              <ul class="nav-list">
-                                                                                                              </ul>
-              <ul class="nav-list">
-                                                  </ul>
-              </ul>
-              <ul class="nav-list">
-              <ul class="nav-list">
-                          </ul>
-              <ul class="nav-list">
-                                                  </ul>
-                                                                                                                          </ul>
-              <ul class="nav-list">
-                                      </ul>
-  </ul>
           <ul class="nav-list">
             <li class="nav-item" data-depth="1">
               <div class="nav-flex-container">
@@ -121,13 +73,12 @@
               
               
               
-              
-              
-              
               icomoon3-font-reference-api
+              
+              
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html">API Overview</a>
+              <a class="nav-link nav-flex-item-text" href="../api/overview.html">REST API</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -141,6 +92,21 @@
               
               
               
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/overview.html">Overview</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
               
             "></span>
                   <span>
@@ -149,10 +115,9 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="2">
+            <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -166,10 +131,9 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="2">
+            <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -183,10 +147,9 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="2">
+            <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -200,10 +163,9 @@
             </span>
               </div>
                           </li>
-            <li class="nav-item" data-depth="2">
+            <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -219,6 +181,8 @@
                           </li>
   </ul>
             </li>
+  </ul>
+            </li>
             <li class="nav-item" data-depth="1">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -226,9 +190,8 @@
               
               
               
+              
               icomoon3-font-reference-management
-              
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/management-apis-overview.html">Management APIs</a>
@@ -236,10 +199,9 @@
             </span>
               </div>
                 <ul class="nav-list">
-                        <li class="nav-item" data-depth="2">
+            <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -249,110 +211,6 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/account-api.html">Accounts</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_get_strong">HTTP GET</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_post_strong">HTTP POST</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_put_strong">HTTP PUT</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_delete_strong">HTTP DELETE</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-roles.html">Account Roles</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/profile-api.html">Profiles</a>
 
             </span>
               </div>
@@ -360,7 +218,6 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -383,7 +240,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/notifications-api.html">Notifications</a>
@@ -400,27 +256,9 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/usage-records-api.html">Usage Records</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/audit-logs-api.html">Audit Logs</a>
 
             </span>
               </div>
@@ -431,7 +269,6 @@
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
-              
               icomoon3-font-reference-voice
               
               
@@ -439,7 +276,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/voice-category.html">Voice APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../api/voice-category.html">Voice</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -447,7 +284,6 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -470,7 +306,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/calls-api.html">Calls</a>
@@ -481,7 +316,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -504,7 +338,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
@@ -515,7 +348,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -538,7 +370,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#examples">Examples</a>
@@ -555,7 +386,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_list_filter">List Filter</a>
@@ -566,7 +396,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -591,24 +420,6 @@
               
               
               
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/outgoing-caller-id-api.html">Outgoing Caller ID</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
@@ -619,7 +430,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -642,7 +452,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
@@ -659,7 +468,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
@@ -670,7 +478,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -695,7 +502,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html">Conference Management</a>
@@ -712,7 +518,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_supported_operations">Supported Operations</a>
@@ -723,7 +528,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -748,7 +552,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/participants-api.html">Conference Participants Management</a>
@@ -759,7 +562,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -784,7 +586,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
@@ -795,7 +596,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -818,7 +618,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
@@ -829,7 +628,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -852,7 +650,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
@@ -863,7 +660,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -886,7 +682,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
@@ -897,7 +692,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -920,7 +714,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
@@ -931,7 +724,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -956,7 +748,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/recordings-api.html">Recordings</a>
@@ -967,7 +758,6 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -986,7 +776,6 @@
             <li class="nav-item" data-depth="1">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               icomoon3-font-reference-sms
               
               
@@ -995,7 +784,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-category.html">SMS APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-category.html">SMS</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1003,7 +792,6 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1026,7 +814,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
@@ -1037,7 +824,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1060,7 +846,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
@@ -1077,7 +862,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
@@ -1088,7 +872,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1113,7 +896,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
@@ -1124,7 +906,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1147,7 +928,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
@@ -1158,7 +938,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1181,7 +960,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
@@ -1192,7 +970,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1215,7 +992,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
@@ -1226,7 +1002,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1249,7 +1024,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
@@ -1260,7 +1034,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1285,24 +1058,6 @@
               
               
               
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/outgoing-caller-id-api.html">Outgoing Caller ID</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/sms-api.html">Messages</a>
@@ -1313,7 +1068,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1336,7 +1090,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_sms_list">Get SMS List</a>
@@ -1353,7 +1106,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
@@ -1364,7 +1116,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1389,7 +1140,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/email-api.html">Email</a>
@@ -1399,447 +1149,9 @@
                           </li>
   </ul>
             </li>
-            <li class="nav-item is-current-page" data-depth="1">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              icomoon3-font-reference-solutions
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="Two-factor-Authentication-2FA.html">Turnkey Apps APIs</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item is-current-page" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_sending_one_time_passwords_api_reference">Sending One-Time Passwords</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_verifying_one_time_passwords_api_reference">Verifying One-Time Passwords</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_cancel_one_time_passwords_api_reference">Cancel One-Time Passwords</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_session_detail_record_sdr">Session Detail Record (SDR)</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_get_list_of_one_time_passwords_api_reference">Get list of One-Time Passwords</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_get_single_one_time_passwords_api_reference">Get a Single One-Time Password</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_usage_record_one_time_passwords_api_reference">Usage Record One-Time Passwords</a>
-
-            </span>
-              </div>
-                          </li>
-              </ul>
-            </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/overview.html">Message Exchange</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/create-operation.html">Create Operation</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/read-operation.html">Read Operation</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/update-operation.html">Update Operation</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/delete-operation.html">Delete Operation</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/message-exchange/common-response-error-codes.html">Error Codes</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html">Cisco Webex</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html#_create_operation">Create Operation</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html#_read_operation">Read Operation</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html#_update_enterprise">Update Operation</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/cisco-webex/overview.html#_delete_operation">Delete Operation</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/call-queue-api.html">Call Queue</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/call-queue-api.html#_create_queue_api">Create Queue</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/call-queue-api.html#_queue_rcml">Queue RCML</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/call-queue-api.html#_enqueue_rcml">Enqueue RCML</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
-            <li class="nav-item" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/auto-attendant/auto-attendant-api.html">Auto Attendant</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-                                                  </ul>
-            </li>
-  </ul>
-            </li>
             <li class="nav-item" data-depth="1">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               icomoon3-font-reference-rcml
@@ -1862,7 +1174,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/overview.html">Overview</a>
@@ -1879,7 +1190,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/overview.html#_how_restcomm_interacts_with_your_application">Interacting with Your Application</a>
@@ -1890,7 +1200,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1915,7 +1224,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/dial-rcml.html">Dial</a>
@@ -1926,7 +1234,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -1949,7 +1256,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/conference-rcml.html">Conference</a>
@@ -1966,7 +1272,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/number-rcml.html">Number</a>
@@ -1977,7 +1282,6 @@
             <li class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -2002,7 +1306,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/email-rcml.html">Email</a>
@@ -2013,7 +1316,6 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -2036,37 +1338,16 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/say-rcml.html">Say</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../rcml/ssml-reference.html">SSML Reference</a>
 
             </span>
               </div>
                           </li>
-  </ul>
-            </li>
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -2083,8 +1364,7 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
-              
+              icomoon3-font-reference-sms
               
               
               
@@ -2100,7 +1380,6 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -2123,7 +1402,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/pause-rcml.html">Pause</a>
@@ -2134,7 +1412,6 @@
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
-              
               
               
               
@@ -2157,7 +1434,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/record-rcml.html">Record</a>
@@ -2174,7 +1450,6 @@
               
               
               
-              
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../rcml/reject-rcml.html">Reject</a>
@@ -2184,6 +1459,120 @@
                           </li>
   </ul>
             </li>
+            <li class="nav-item" data-depth="1">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              icomoon3-font-reference-solutions
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/index.html">Turnkey Apps APIs</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item is-current-page" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="Smart-2FA.html">Smart 2FA</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/call-queueing-api.html">Call Queueing</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/auto-attendant-api.html">Auto Attendant</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
+  </ul>
+          <ul class="nav-list">
+              <ul class="nav-list">
+                                                              </ul>
+              <ul class="nav-list">
+                          <ul class="nav-list">
+                                                              </ul>
+                                                              </ul>
+              <ul class="nav-list">
+                          <ul class="nav-list">
+                                                                          </ul>
+                          <ul class="nav-list">
+                                                  </ul>
+              <ul class="nav-list">
+                          </ul>
+              <ul class="nav-list">
+              </ul>
+              <ul class="nav-list">
+                                                                                                              </ul>
+                          </ul>
+              <ul class="nav-list">
+                          <ul class="nav-list">
+                                                  </ul>
+              <ul class="nav-list">
+                                                                                                              </ul>
+                          <ul class="nav-list">
+                                                  </ul>
+              </ul>
+              <ul class="nav-list">
+              <ul class="nav-list">
+                                                                                                  </ul>
+              <ul class="nav-list">
+                                                              </ul>
+              <ul class="nav-list">
+                                                  </ul>
+              <ul class="nav-list">
+                                      </ul>
+              <ul class="nav-list">
+                                                  </ul>
+  </ul>
+              <ul class="nav-list">
+              <ul class="nav-list">
+                          </ul>
+              <ul class="nav-list">
+                                                  </ul>
+                                      <ul class="nav-list">
+              </ul>
+                                                                                      </ul>
   </ul>
   </ul>
     </nav>
@@ -2198,7 +1587,7 @@
       <span class="title">docs</span>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">1.0</a>
+          <a href="../../index.html">1.0</a>
         </li>
       </ul>
     </li>
@@ -2213,11 +1602,12 @@
 -->
 <div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
-  <a href="../index.html" class="home-link"></a>
+  <a href="../../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
-    <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="Two-factor-Authentication-2FA.html">CSP:Turnkey Apps APIs</a></li>
+    <li class="crumb"><a href="../../index.html">docs</a></li>
+    <li class="crumb"><a href="../turnkey-applications/index.html">Enterprise:Turnkey Apps APIs</a></li>
+    <li class="crumb"><a href="Smart-2FA.html">Enterprise:Smart 2FA</a></li>
   </ul>
 </nav>
 </div>
@@ -2226,7 +1616,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Two-factor authentication (2FA) API lets you to send One Time Passowrd (OTP) using SMS, Voice or email.</p>
+<p>Smart 2FA API lets you to send One Time Passowrd (OTP) using SMS, Voice or email.</p>
 </div>
 <div class="paragraph">
 <p>2FA allows you to add a second layer of security to your Application in addition to the user-id and password. The flexibility of using any channel makes sure your users get OTP even when they experience issue with one of the channels.</p>
@@ -2241,13 +1631,13 @@
 <p><strong>User is prompted to enter his phone number</strong></p>
 </div>
 <div class="paragraph">
-<p>Restcomm receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
+<p><span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> receives the login attempt and prompts the user to enter his phone number in order to authorize the new device.</p>
 </div>
 <div class="paragraph">
 <p><strong>PIN code is sent to the user via SMS, phone call or email depending on API called</strong></p>
 </div>
 <div class="paragraph">
-<p>Once the user enters a valid phone number, from your application you will need to ask Restcomm to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
+<p>Once the user enters a valid phone number, from your application you will need to ask <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> to send a verification code to that phone number by using the HTTP REST API Call Below.</p>
 </div>
 <div class="paragraph">
 <p><strong>Categories</strong></p>
@@ -2321,7 +1711,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">to (Required)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The destination address to send the OTP message containing the verification code to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The destination address to send the OTP message containing the verification code.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">body (Required)</p></td>
@@ -2341,7 +1731,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">language (Optional)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text-to-Speech (TTS) language for announcing OTP message over call channel. AWS Polly is default TTS engine. To use another engine, use format like : &lt;engine&gt;.&lt;language-code&gt; for example: nuance.ja-JP. More information about language, please visit <a href="https://$DOMAIN/docs/rcml/say-rcml.html" class="non-sps-text non-sps-link" data-orig-text="Say-RCML">Say-RCML</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text-to-Speech (TTS) language for announcing OTP message over call channel. AWS Polly is default TTS engine. To use another engine, use format like : &lt;engine&gt;.&lt;language-code&gt; for example: awspolly.ja-JP. More information about language, please visit <a href="wlparam:replace[text="https://$DOMAIN/docs/rcml/say-rcml.html"" class="non-sps-text non-sps-link" data-orig-text="Say-RCML">Say-RCML</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">repeat (Optional)</p></td>
@@ -2373,13 +1763,11 @@
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Responde Body</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responde Body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sub error code for the request.</p></td>
@@ -2397,8 +1785,33 @@
 <div class="sect3">
 <h4 id="_response_parameters"><a class="anchor" href="#_response_parameters"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>send API will return Error Code and corresponding HTTP Error as mentioned in <a href="#_common_response_error_code">Common Response Error Code</a></p>
+<p>send API will return Error Code and corresponding HTTP Error as mentioned in <a href="#_common_response_error_code">Common Response Error Code</a> In addition below are the Error&#8217;s that it can return</p>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">453</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Too many OTP request to same destination Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OTP is sent to same destination number within 1 min of previously sent. 2FA system limits number of OTP sent to same number to maximum one per min.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -2416,146 +1829,27 @@
 <div class="paragraph">
 <p>From the bash terminal you can run the command below:</p>
 </div>
-<script>
-      function openLanguage(language, index) {
-        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
-        for (const sampleClass of sampleClasses) {
-          sampleClass.style.display = "none";
-        }
-        document.getElementById(language + '-' + index).style.display = "block";
-
-        // first, disable the previously selected tab title
-        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
-        if (previouslyActive.length > 0) {
-          previouslyActive[0].classList.toggle('is-active')
-        }
-
-        // then, enable the newly selected title
-        event.target.classList.toggle('is-active')
-      }
-      </script>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-72 is-active" onclick="openLanguage('Curl', 72)">Curl</button>
-        <button class="sample-code-button scsIndex-72" onclick="openLanguage('Nodejs', 72)">Nodejs</button>
-        <button class="sample-code-button scsIndex-72" onclick="openLanguage('Python', 72)">Python</button>
-        <button class="sample-code-button scsIndex-72" onclick="openLanguage('Java', 72)">Java</button>
-      </div>
-      <div id="Curl-72" class="sample-language-72">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send.json \
-   -H 'Cache-Control: no-cache' \
-   -H 'Content-Type: application/json' \
-   -d 'From=XXXXXXXX' \
-   -d 'To=XXXXXXXX' \
-   -d 'service=2FA' \
-   -d 'body=Your verification code is: {code}' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-72" class="sample-language-72" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request.({
-      method: 'POST',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      headers: {
-          'Cache-Control': 'no-cache',
-          'Content-Type': 'application/json'
-      },
-      form: {
-         'From': 'XXXXXXXX',
-         'To': 'XXXXXXXX',
-         'service': '2FA',
-         'body': 'Your verification code is: {code}'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-72" class="sample-language-72" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Cache-Control': 'no-cache',
-    'Content-Type': 'application/json',
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'From': 'XXXXXXXX',
-   'To': 'XXXXXXXX',
-   'service': '2FA',
-   'body': 'Your verification code is: {code}'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("POST", '/restcomm/2012-04-24/2fa/send.json',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-72" class="sample-language-72" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/send.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestProperty("Cache-Control", "no-cache");
-      conn.setRequestProperty("Content-Type", "application/json");
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("From=XXXXXXXX&" +
-        "To=XXXXXXXX&" +
-        "service=2FA&" +
-        "body=Your verification code is: {code}");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/send">https://$DOMAIN/2fa/send</span> \
+  --user  ' \{your_account_SID}:\{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "service" : "2FA",
+    "from" : "XXXXXXXXXXX",
+    "to" : "ZZZZZZZZZZZ",
+    "body": "Your verification code is: \{code}"
+  }'</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>If send is successful, below is the response returned:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>{"code":200,"message":"OK","requestID":"OTPb6eb071d21124dbab20b095c25f1274f"}</pre>
+<pre>{"code":200,"message":"OK","requestID":"OTPYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"}</pre>
 </div>
 </div>
 </div>
@@ -2592,27 +1886,18 @@ public class JavaSampleClass {
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">service</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of your service.<br>
-* For backward compatibility, this is mandatory if API is called by passing the “number” instead of “requestId” explained below.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The phone number to which the SMS containing the verification code was sent to.<br>
-* Not needed if you are using verify via “requestId” or will be ignored even if passed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of your service.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">requestId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The requestID was received when initiating OTP message. This parameter can be ignored if the service and number attributes are being used.
-* Not needed if using “number” to verify the OTP.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requestID was received when initiating OTP message.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
@@ -2632,13 +1917,11 @@ public class JavaSampleClass {
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Responde Body</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responde Body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sub error code for the request.</p></td>
@@ -2666,16 +1949,14 @@ public class JavaSampleClass {
 <col style="width: 20%;">
 <col style="width: 20%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Error Code</th>
-<th class="tableblock halign-left valign-top">HTTP Status</th>
-<th class="tableblock halign-left valign-top">Error Message</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Category</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">470</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
@@ -2716,258 +1997,33 @@ public class JavaSampleClass {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_for_old_api"><a class="anchor" href="#_example_for_old_api"></a>Example (for old API):</h3>
-<div class="listingblock">
-<div class="content">
-<pre>{
-    "service" : "2FA", // the name of your service
-    "number" : "+XXXXXXXXXX",  // the phone number of the SMS recepient
-    "code": "XXXXX" // the verification code
-}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>From the bash terminal you can run the command below:</p>
-</div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-73 is-active" onclick="openLanguage('Curl', 73)">Curl</button>
-        <button class="sample-code-button scsIndex-73" onclick="openLanguage('Nodejs', 73)">Nodejs</button>
-        <button class="sample-code-button scsIndex-73" onclick="openLanguage('Python', 73)">Python</button>
-        <button class="sample-code-button scsIndex-73" onclick="openLanguage('Java', 73)">Java</button>
-      </div>
-      <div id="Curl-73" class="sample-language-73">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/verify.json \
-   -H 'Cache-Control: no-cache' \
-   -H 'Content-Type: application/json' \
-   -d 'service=2FA' \
-   -d 'number=XXXXXXXX' \
-   -d 'code=294228' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-73" class="sample-language-73" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request.({
-      method: 'POST',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/verify.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      headers: {
-          'Cache-Control': 'no-cache',
-          'Content-Type': 'application/json'
-      },
-      form: {
-         'service': '2FA',
-         'number': 'XXXXXXXX',
-         'code': '294228'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-73" class="sample-language-73" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Cache-Control': 'no-cache',
-    'Content-Type': 'application/json',
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'service': '2FA',
-   'number': 'XXXXXXXX',
-   'code': '294228'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("POST", '/restcomm/2012-04-24/2fa/verify.json',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-73" class="sample-language-73" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/verify.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestProperty("Cache-Control", "no-cache");
-      conn.setRequestProperty("Content-Type", "application/json");
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("service=2FA&" +
-        "number=XXXXXXXX&" +
-        "code=294228");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
-</div>
-<div class="sect2">
-<h3 id="_example_for_latest_api"><a class="anchor" href="#_example_for_latest_api"></a>Example (for latest API):</h3>
+<h3 id="_example_2"><a class="anchor" href="#_example_2"></a>Example</h3>
 <div class="listingblock">
 <div class="content">
 <pre>{
     "service" : "2FA", // the name of your service
     "requestId" : "OTPYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",  // the unique OTP Id generated when send was called
-    "code": "XXXXX" // the verification code
+    "code": "XXXXXX" // the verification code
 }</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>From the bash terminal you can run the command below:</p>
 </div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-74 is-active" onclick="openLanguage('Curl', 74)">Curl</button>
-        <button class="sample-code-button scsIndex-74" onclick="openLanguage('Nodejs', 74)">Nodejs</button>
-        <button class="sample-code-button scsIndex-74" onclick="openLanguage('Python', 74)">Python</button>
-        <button class="sample-code-button scsIndex-74" onclick="openLanguage('Java', 74)">Java</button>
-      </div>
-      <div id="Curl-74" class="sample-language-74">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/verify.json \
-   -H 'Cache-Control: no-cache' \
-   -H 'Content-Type: application/json' \
-   -d 'service=2FA' \
-   -d 'requestId=OTPb6eb071d21124dbab20b095c25f1274f' \
-   -d 'code=294228' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-74" class="sample-language-74" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request.({
-      method: 'POST',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/verify.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      headers: {
-          'Cache-Control': 'no-cache',
-          'Content-Type': 'application/json'
-      },
-      form: {
-         'service': '2FA',
-         'requestId': 'OTPb6eb071d21124dbab20b095c25f1274f',
-         'code': '294228'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-74" class="sample-language-74" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Cache-Control': 'no-cache',
-    'Content-Type': 'application/json',
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'service': '2FA',
-   'requestId': 'OTPb6eb071d21124dbab20b095c25f1274f',
-   'code': '294228'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("POST", '/restcomm/2012-04-24/2fa/verify.json',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-74" class="sample-language-74" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/verify.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestProperty("Cache-Control", "no-cache");
-      conn.setRequestProperty("Content-Type", "application/json");
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("service=2FA&" +
-        "requestId=OTPb6eb071d21124dbab20b095c25f1274f&" +
-        "code=294228");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/verify">https://$DOMAIN/2fa/verify</span> \
+  --user  ' \{your_account_SID}:\{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "service" : "2FA",
+    "requestId" : "OTPYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+    "code": "XXXXXX"
+}</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -3083,40 +2139,12 @@ public class JavaSampleClass {
 <td class="tableblock halign-left valign-top"><p class="tableblock">Control (Cancel for now, but may be other too in future) is called for UniqueID which is not present in-system</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Control</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">471</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OTP is already verified</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify is called for UniqueId which is present in-system but already verified (successfully)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">472</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OTP is expired</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify is called for UniqueId which is present in the system but expired</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">473</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OTP is cancelled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify is called for UniqueId which is present in the system but cancelled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">474</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid OTP Code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify is called for UniqueId which is present and Invalid Code is passed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify</p></td>
-</tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_2"><a class="anchor" href="#_example_2"></a>Example:</h3>
+<h3 id="_example_3"><a class="anchor" href="#_example_3"></a>Example:</h3>
 <div class="listingblock">
 <div class="content">
 <pre>{
@@ -3128,114 +2156,19 @@ public class JavaSampleClass {
 <div class="paragraph">
 <p>From the bash terminal you can run the command below:</p>
 </div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-75 is-active" onclick="openLanguage('Curl', 75)">Curl</button>
-        <button class="sample-code-button scsIndex-75" onclick="openLanguage('Nodejs', 75)">Nodejs</button>
-        <button class="sample-code-button scsIndex-75" onclick="openLanguage('Python', 75)">Python</button>
-        <button class="sample-code-button scsIndex-75" onclick="openLanguage('Java', 75)">Java</button>
-      </div>
-      <div id="Curl-75" class="sample-language-75">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/cancel.json \
-   -H 'Cache-Control: no-cache' \
-   -H 'Content-Type: application/json' \
-   -d 'requestId=OTPb6eb071d21124dbab20b095c25f1274f' \
-   -d 'accountSid=AC123461724187287abcbas791282cf' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-75" class="sample-language-75" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request.({
-      method: 'POST',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/cancel.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      headers: {
-          'Cache-Control': 'no-cache',
-          'Content-Type': 'application/json'
-      },
-      form: {
-         'requestId': 'OTPb6eb071d21124dbab20b095c25f1274f',
-         'accountSid': 'AC123461724187287abcbas791282cf'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-75" class="sample-language-75" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Cache-Control': 'no-cache',
-    'Content-Type': 'application/json',
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'requestId': 'OTPb6eb071d21124dbab20b095c25f1274f',
-   'accountSid': 'AC123461724187287abcbas791282cf'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("POST", '/restcomm/2012-04-24/2fa/cancel.json',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-75" class="sample-language-75" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/cancel.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestProperty("Cache-Control", "no-cache");
-      conn.setRequestProperty("Content-Type", "application/json");
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("requestId=OTPb6eb071d21124dbab20b095c25f1274f&" +
-        "accountSid=AC123461724187287abcbas791282cf");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/cancel">https://$DOMAIN/2fa/cancel</span> \
+  --user  ' \{your_account_SID}:\{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "requestId" : "OTPabc2128918293123413216549879",
+    "accountSid": "AC123461724187287abcbas791282cf"
+}</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>If cancel is successful, you should see below response</p>
 </div>
@@ -3381,21 +2314,6 @@ This allows to filter OTP sent to specific country code.</p></td>
 <p class="tableblock">* For SMS, possible channel status value can be as explained in <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN">https://$DOMAIN</span>/docs/api/sms-api.html#_status_description<br>
 * For Call, possible values are as explained in “status” property in below link <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN">https://$DOMAIN</span>/docs/api/calls-api.html#_calls_attributes</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">channelErrorCode</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include OTP list that match underlying channel code, partially or fully in any position<br>
-For SMS, possible value can be <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN">https://$DOMAIN</span>/docs/api/sms-api.html#_sms_specific_error_codes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">channelErrorMessage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include OTP list that match channel error message text, partially or fully in any position</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">checkStatus</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include OTP list that has this check status. Possible values are<br>
-* valid<br>
-* invalid</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -3442,8 +2360,8 @@ For SMS, possible value can be <span class="non-sps-text non-sps-link" data-orig
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">staus</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status of this OTP request. Possible values are successful, expired or cancelled<br>
-* successful : OTP was successfully verified by <strong>verify</strong> API call
-* expired : OTP expired
+* successful : OTP was successfully verified by <strong>verify</strong> API call<br>
+* expired : OTP expired<br>
 * cancelled : OTP was cancelled either by calling <strong>cancel</strong> API or because <strong>send</strong> API was called to send new OTP while previous one has not yet been verified or expired.</p></td>
 </tr>
 <tr>
@@ -3456,7 +2374,7 @@ For SMS, possible value can be <span class="non-sps-text non-sps-link" data-orig
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">events</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This captures the events like sms, call or email that was sent to end user. It has all details like sender, recipient, targetSid which is underlying platform Restcomm id. It also exposes channel Error and message if delivery of SMS, Call or email fails.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This captures the events like sms, call or email that was sent to end user. It has all details like sender, recipient, targetSid which is underlying platform <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> id. It also exposes channel Error and message if delivery of SMS, Call or email fails.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3497,87 +2415,18 @@ For SMS, possible value can be <span class="non-sps-text non-sps-link" data-orig
 </table>
 </div>
 <div class="sect2">
-<h3 id="_example_3"><a class="anchor" href="#_example_3"></a>Example</h3>
+<h3 id="_example_4"><a class="anchor" href="#_example_4"></a>Example</h3>
 <div class="paragraph">
 <p>From the bash terminal you can run the command below:</p>
 </div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-76 is-active" onclick="openLanguage('Curl', 76)">Curl</button>
-        <button class="sample-code-button scsIndex-76" onclick="openLanguage('Nodejs', 76)">Nodejs</button>
-        <button class="sample-code-button scsIndex-76" onclick="openLanguage('Python', 76)">Python</button>
-        <button class="sample-code-button scsIndex-76" onclick="openLanguage('Java', 76)">Java</button>
-      </div>
-      <div id="Curl-76" class="sample-language-76">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/search.json?pageSize=2&page=0&status=success&sortBy=DateCreated:asc  \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-76" class="sample-language-76" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request({
-      method: 'GET',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/search.json?pageSize=2&page=0&status=success&sortBy=DateCreated:asc',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-   }
-);
-</code></pre>
-      </div>
-      <div id="Python-76" class="sample-language-76" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass }
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("GET", '/restcomm/2012-04-24/2fa/search.json?pageSize=2&page=0&status=success&sortBy=DateCreated:asc',
-      headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-76" class="sample-language-76" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/search.json?pageSize=2&page=0&status=success&sortBy=DateCreated:asc");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("GET");
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>  curl -X GET \
+    <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/search">https://$DOMAIN/2fa/search</span> \
+    --user  ' \{your_account_SID}:\{your_account_token}' \
+    -d '{  "pageSize": "2", "page":"0", "status":"success", "sortBy":"DateCreated:asc"}'</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Example response:</p>
 </div>
@@ -3616,12 +2465,10 @@ public class JavaSampleClass {
                "sid":"OTE492b1deb0a7e4a778ab95daa40e7a3f6",
                "dateCreated":"2019-08-20 10:28:08",
                "channel":"email",
-               "sender":"<a href="mailto:info@telestax.com">info@telestax.com</a>",
-               "recipient":"<a href="mailto:amit.bhayani@telestax.com">amit.bhayani@telestax.com</a>",
+               "sender":"<a href="mailto:info@yourcompany.com">info@yourcompany.com</a>",
+               "recipient":"<a href="mailto:jane.doe@yourcompany.com">jane.doe@yourcompany.com</a>",
                "targetSid":"",
-               "channelStatus":"queued",
-               "channelErrorCode":null,
-               "channelErrorMessage":null
+               "channelStatus":"queued"
             }
          ]
       },
@@ -3655,9 +2502,7 @@ public class JavaSampleClass {
                "sender":"12012751398",
                "recipient":"919960639901",
                "targetSid":"SM286fa07039ab498d80bd44d4cc91ac3c",
-               "channelStatus":"failed",
-               "channelErrorCode":null,
-               "channelErrorMessage":null
+               "channelStatus":"delivered"
             }
          ]
       }
@@ -3702,108 +2547,36 @@ public class JavaSampleClass {
 <col style="width: 20%;">
 <col style="width: 20%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Error Code</th>
-<th class="tableblock halign-left valign-top">HTTP Status</th>
-<th class="tableblock halign-left valign-top">Error Message</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Category</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">480</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Invalid OTP Unique Id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Control (Cancel for now, but may be other too in future) is called for UniqueID which is not present in-system</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Control</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get single OTP is called for UniqueId which is not present in-system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get single OTP</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_example_4"><a class="anchor" href="#_example_4"></a>Example</h3>
+<h3 id="_example_5"><a class="anchor" href="#_example_5"></a>Example</h3>
 <div class="paragraph">
 <p>From the bash terminal you can run the command below:</p>
 </div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-77 is-active" onclick="openLanguage('Curl', 77)">Curl</button>
-        <button class="sample-code-button scsIndex-77" onclick="openLanguage('Nodejs', 77)">Nodejs</button>
-        <button class="sample-code-button scsIndex-77" onclick="openLanguage('Python', 77)">Python</button>
-        <button class="sample-code-button scsIndex-77" onclick="openLanguage('Java', 77)">Java</button>
-      </div>
-      <div id="Curl-77" class="sample-language-77">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/search/{OTPSid}.json  \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-77" class="sample-language-77" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request({
-      method: 'GET',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/search/{OTPSid}.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-   }
-);
-</code></pre>
-      </div>
-      <div id="Python-77" class="sample-language-77" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass }
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("GET", '/restcomm/2012-04-24/2fa/search/{OTPSid}.json',
-      headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-77" class="sample-language-77" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/search/{OTPSid}.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("GET");
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X GET \
+  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/search/OTPabc2128918293123413216549879">https://$DOMAIN/2fa/search/OTPabc2128918293123413216549879</span> \
+  --user  ' \{your_account_SID}:\{your_account_token}'</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Example response:</p>
 </div>
@@ -3828,8 +2601,6 @@ public class JavaSampleClass {
                 "recipient":"120120105124",
                 "targetSid":"SMd0a8b9819dfa42548bd3c306daade4f3",
                 "channelStatus":"undelivered",
-                "channelErrorCode":"30008",
-                "channelErrorMessage":"Unknown error"
             }
         ]
     }
@@ -3844,6 +2615,18 @@ public class JavaSampleClass {
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Usage record REST resource provides a simple API to retrieve usage made by your 2FA account during any time period and by any usage channel. This makes it easy to build reporting and analytics tools for your application.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Usage records doesn&#8217;t include real time data and can be delayed by maximum of 1 hour.
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_base_resource_uri_6"><a class="anchor" href="#_base_resource_uri_6"></a>Base Resource URI</h3>
@@ -3868,48 +2651,31 @@ public class JavaSampleClass {
 <div class="paragraph">
 <p>Usage filter will return usage records for passed filter. Following filtering parameters are supported.</p>
 </div>
-<table class="tableblock frame-top grid-rows spread">
+<table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Query Parameter</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">service</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that match this service text, partially or fully in any position.<br>
-For example if OTP Service is “Support” and service filter parameter is “ppo”, it will match.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that match this service text, partially or fully in any position. For example if OTP Service is “Support” and service filter parameter is “ppo”, it will match.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">channel</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that is initiated via this channel. Possible values are<br>
-* call<br>
-* sms<br>
-* email</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">from</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that has from begins with this number/email text.<br></p>
-<p class="tableblock">For example if OTP from  is “15713316943” and from filter parameter is “1”, it will match. However if from filter parameter is “3”, this record will not match.<br>
-This allows to filter Usage records sent from specific country code.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that is initiated via this channel. Possible values are: call, sms, email</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">to</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that has to begins with this number/email text.<br></p>
-<p class="tableblock">For example if OTP to  is “16513333367” and to filter parameter is “1”, it will match. However if to filter parameter is “3”, this record will not match.<br>
-This allows to filter Usage records sent to specific country code.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that has to begins with this number/email text. For example if OTP to  is “16513333367” and to filter parameter is “1”, it will match. However if to filter parameter is “3”, this record will not match. This allows to filter Usage records sent to specific country code.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that has this status. Possible values are<br>
-* success<br>
-* canceled<br>
-* expired<br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that has this status. Possible values are: success, canceled, expired</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">startTime</p></td>
@@ -3921,16 +2687,7 @@ This allows to filter Usage records sent to specific country code.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">channelStatus</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that match underlying channel status, partially or fully in any position<br></p>
-<p class="tableblock">* For SMS, possible channel status value can be as explained in <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN">https://$DOMAIN</span>/docs/api/sms-api.html#_status_description<br>
-* For Call, possible values are as explained in “status” property in below link <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN">https://$DOMAIN</span>/docs/api/calls-api.html#_calls_attributes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">checkStatus</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that has this check status. Possible values are<br>
-* valid<br>
-* invalid<br>
-If there are multiple checks with invalid and finally valid, this records are counted for both valid and invalid filter.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only include Usage records that match underlying channel status, partially or fully in any position. For SMS, possible channel status value can be as explained in <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN">https://$DOMAIN</span>/docs/api/sms-api.html#_status_description  For Call, possible values are as explained in “status” property in below link <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN">https://$DOMAIN</span>/docs/api/calls-api.html#_calls_attributes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accountSid</p></td>
@@ -3948,83 +2705,12 @@ If there are multiple checks with invalid and finally valid, this records are co
 <div class="paragraph">
 <p>From the bash terminal you can run the command below:</p>
 </div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-78 is-active" onclick="openLanguage('Curl', 78)">Curl</button>
-        <button class="sample-code-button scsIndex-78" onclick="openLanguage('Nodejs', 78)">Nodejs</button>
-        <button class="sample-code-button scsIndex-78" onclick="openLanguage('Python', 78)">Python</button>
-        <button class="sample-code-button scsIndex-78" onclick="openLanguage('Java', 78)">Java</button>
-      </div>
-      <div id="Curl-78" class="sample-language-78">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records.json?startDate=2019-08-01&endDate=2019-08-31  \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-78" class="sample-language-78" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request({
-      method: 'GET',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records.json?startDate=2019-08-01&endDate=2019-08-31',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-   }
-);
-</code></pre>
-      </div>
-      <div id="Python-78" class="sample-language-78" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass }
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("GET", '/restcomm/2012-04-24/2fa/usage/records.json?startDate=2019-08-01&endDate=2019-08-31',
-      headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-78" class="sample-language-78" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records.json?startDate=2019-08-01&endDate=2019-08-31");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("GET");
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X GET \
+  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/usage/records?startTime=2020-03-16T18:30:00.000Z&amp;endTime=2020-03-19T13:21:37.778Z">https://$DOMAIN/2fa/usage/records?startTime=2020-03-16T18:30:00.000Z&amp;endTime=2020-03-19T13:21:37.778Z</span> \</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Example Response</p>
 </div>
@@ -4033,14 +2719,14 @@ public class JavaSampleClass {
 <pre>{
    "usageRecords":[
       {
-         "channel":"All",
-         "description":"Total OTP sent, irrespective of channel or retry",
-         "accountSid":"ACae6e420f425248d6a26948c17a9e2acf",
-         "startTime":"2019-08-01",
-         "endTime":"2019-08-30",
-         "count":"14",
-         "unit":"OTP",
-         "uri":"/2fa/usage/records?startTime=2019-08-01&amp;endTime=2019-08-30&amp;accountSid=ACae6e420f425248d6a26948c17a9e2acf"
+         "description":"2FA Usage record",
+         "startTime":"2020-03-16",
+         "endTime":"2020-03-19",
+         "count":10,
+         "successful":5,
+         "unsuccessful":5,
+         "unit":"2FA",
+         "uri":"/2fa/usage/records?startTime=2020-03-16T18:30:00.000Z&amp;endTime=2020-03-19T13:21:37.778Z"
       }
    ]
 }</pre>
@@ -4049,114 +2735,19 @@ public class JavaSampleClass {
 <div class="paragraph">
 <p>HTTP POST example</p>
 </div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-79 is-active" onclick="openLanguage('Curl', 79)">Curl</button>
-        <button class="sample-code-button scsIndex-79" onclick="openLanguage('Nodejs', 79)">Nodejs</button>
-        <button class="sample-code-button scsIndex-79" onclick="openLanguage('Python', 79)">Python</button>
-        <button class="sample-code-button scsIndex-79" onclick="openLanguage('Java', 79)">Java</button>
-      </div>
-      <div id="Curl-79" class="sample-language-79">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records \
-   -H 'Cache-Control: no-cache' \
-   -H 'Content-Type: application/json' \
-   -d 'startTime2019-08-05T06:37:00' \
-   -d 'endTime=2019-08-30' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-79" class="sample-language-79" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request.({
-      method: 'POST',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      headers: {
-          'Cache-Control': 'no-cache',
-          'Content-Type': 'application/json'
-      },
-      form: {
-         'startTime2019-08-05T06:37:00': 'undefined',
-         'endTime': '2019-08-30'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-79" class="sample-language-79" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Cache-Control': 'no-cache',
-    'Content-Type': 'application/json',
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'startTime2019-08-05T06:37:00': 'undefined',
-   'endTime': '2019-08-30'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("POST", '/restcomm/2012-04-24/2fa/usage/records',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-79" class="sample-language-79" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestProperty("Cache-Control", "no-cache");
-      conn.setRequestProperty("Content-Type", "application/json");
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("startTime2019-08-05T06:37:00&" +
-        "endTime=2019-08-30");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/usage/records">https://$DOMAIN/2fa/usage/records</span> \
+    --user  ' \{your_account_SID}:\{your_account_token}'
+    -H 'Cache-Control: no-cache' \
+    -H 'Content-Type: application/json' \
+    -d '{
+      "startTime" : "2020-03-16T18:30:00.000Z",
+      "endTime": "2020-03-19"
+    }'</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Example Response</p>
 </div>
@@ -4165,14 +2756,14 @@ public class JavaSampleClass {
 <pre>{
    "usageRecords":[
       {
-         "channel":"All",
-         "description":"Total OTP sent, irrespective of channel or retry",
-         "accountSid":"ACae6e420f425248d6a26948c17a9e2acf",
-         "startTime":"2019-08-05T06:37:00",
-         "endTime":"2019-08-30",
-         "count":"13",
-         "unit":"OTP",
-         "uri":"/2fa/usage/records?startTime=2019-08-05T06%3A37%3A00&amp;endTime=2019-08-30&amp;accountSid=ACae6e420f425248d6a26948c17a9e2acf"
+         "description":"2FA Usage record",
+         "startTime":"2020-03-16",
+         "endTime":"2020-03-19",
+         "count":10,
+         "successful":5,
+         "unsuccessful":5,
+         "unit":"2FA",
+         "uri":"/2fa/usage/records?startTime=2020-03-16T18:30:00.000Z&amp;endTime=2020-03-19T13:21:37.778Z"
       }
    ]
 }</pre>
@@ -4184,110 +2775,18 @@ public class JavaSampleClass {
 <div class="paragraph">
 <p>HTTP POST example</p>
 </div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-80 is-active" onclick="openLanguage('Curl', 80)">Curl</button>
-        <button class="sample-code-button scsIndex-80" onclick="openLanguage('Nodejs', 80)">Nodejs</button>
-        <button class="sample-code-button scsIndex-80" onclick="openLanguage('Python', 80)">Python</button>
-        <button class="sample-code-button scsIndex-80" onclick="openLanguage('Java', 80)">Java</button>
-      </div>
-      <div id="Curl-80" class="sample-language-80">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records.json \
-   -H 'Cache-Control: no-cache' \
-   -H 'Content-Type: application/json' \
-   -d 'channel=sms' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-80" class="sample-language-80" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request.({
-      method: 'POST',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      headers: {
-          'Cache-Control': 'no-cache',
-          'Content-Type': 'application/json'
-      },
-      form: {
-         'channel': 'sms'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-80" class="sample-language-80" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Cache-Control': 'no-cache',
-    'Content-Type': 'application/json',
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'channel': 'sms'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("POST", '/restcomm/2012-04-24/2fa/usage/records.json',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-80" class="sample-language-80" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestProperty("Cache-Control", "no-cache");
-      conn.setRequestProperty("Content-Type", "application/json");
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("channel=sms");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/usage/records">https://$DOMAIN/2fa/usage/records</span> \
+    --user  ' \{your_account_SID}:\{your_account_token}'
+    -H 'Cache-Control: no-cache' \
+    -H 'Content-Type: application/json' \
+    -d '{
+      "channel" : "sms"
+  }'</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Example Response</p>
 </div>
@@ -4296,14 +2795,14 @@ public class JavaSampleClass {
 <pre>{
    "usageRecords":[
       {
-         "channel":"sms",
-         "description":"2FA sent by SMS",
-         "accountSid":"ACae6e420f425248d6a26948c17a9e2acf",
-         "startTime":"null",
-         "endTime":"2019-08-24",
-         "count":"6",
-         "unit":"Messages",
-         "uri":"/2fa/usage/record?channel=sms&amp;endTime=2019-08-24&amp;accountSid=ACae6e420f425248d6a26948c17a9e2acf"
+         "description":"2FA Usage record",
+         "startTime":"2020-03-16",
+         "endTime":"2020-03-19",
+         "count":3,
+         "successful":1,
+         "unsuccessful":2,
+         "unit":"2FA",
+         "uri":"/2fa/usage/records?channel=sms&amp;startTime=2020-03-16T18:30:00.000Z&amp;endTime=2020-03-19T13:21:37.778Z"
       }
    ]
 }</pre>
@@ -4372,83 +2871,13 @@ public class JavaSampleClass {
 <div class="paragraph">
 <p>HTTP GET Example</p>
 </div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-81 is-active" onclick="openLanguage('Curl', 81)">Curl</button>
-        <button class="sample-code-button scsIndex-81" onclick="openLanguage('Nodejs', 81)">Nodejs</button>
-        <button class="sample-code-button scsIndex-81" onclick="openLanguage('Python', 81)">Python</button>
-        <button class="sample-code-button scsIndex-81" onclick="openLanguage('Java', 81)">Java</button>
-      </div>
-      <div id="Curl-81" class="sample-language-81">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records/daily.json  \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-81" class="sample-language-81" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request({
-      method: 'GET',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records/daily.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-   }
-);
-</code></pre>
-      </div>
-      <div id="Python-81" class="sample-language-81" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass }
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("GET", '/restcomm/2012-04-24/2fa/usage/records/daily.json',
-      headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-81" class="sample-language-81" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL("https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/usage/records/daily.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("GET");
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X GET \
+  <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN/2fa/usage/records/daily">https://$DOMAIN/2fa/usage/records/daily</span> \
+  --user  ' \{your_account_SID}:\{your_account_token}'</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Example Response</p>
 </div>
@@ -4457,34 +2886,31 @@ public class JavaSampleClass {
 <pre>{
    "usageRecords":[
       {
-         "channel":"All",
-         "description":"Total OTP sent, irrespective of channel or retry",
-         "accountSid":"ACae6e420f425248d6a26948c17a9e2acf",
-         "startTime":"2019-08-05",
-         "endTime":"2019-08-05",
-         "count":"7",
-         "unit":"OTP",
-         "uri":"/2fa/usage/records/daily?channel=All&amp;startTime=2019-07-24&amp;accountSid=ACae6e420f425248d6a26948c17a9e2acf"
+         "description":"2FA Usage record",
+         "startTime":"2020-03-17",
+         "endTime":"2020-03-17",
+         "count":259200,
+         "successful":155671,
+         "unsuccessful":103529,
+         "unit":"2FA"
       },
       {
-         "channel":"All",
-         "description":"Total OTP sent, irrespective of channel or retry",
-         "accountSid":"ACae6e420f425248d6a26948c17a9e2acf",
-         "startTime":"2019-08-19",
-         "endTime":"2019-08-19",
-         "count":"4",
-         "unit":"OTP",
-         "uri":"/2fa/usage/records/daily?channel=All&amp;startTime=2019-07-24&amp;accountSid=ACae6e420f425248d6a26948c17a9e2acf"
+         "description":"2FA Usage record",
+         "startTime":"2020-03-19",
+         "endTime":"2020-03-19",
+         "count":140404,
+         "successful":84220,
+         "unsuccessful":56184,
+         "unit":"2FA"
       },
       {
-         "channel":"All",
-         "description":"Total OTP sent, irrespective of channel or retry",
-         "accountSid":"ACae6e420f425248d6a26948c17a9e2acf",
-         "startTime":"2019-08-20",
-         "endTime":"2019-08-20",
-         "count":"3",
-         "unit":"OTP",
-         "uri":"/2fa/usage/records/daily?channel=All&amp;startTime=2019-07-24&amp;accountSid=ACae6e420f425248d6a26948c17a9e2acf"
+         "description":"2FA Usage record",
+         "startTime":"2020-03-18",
+         "endTime":"2020-03-18",
+         "count":259200,
+         "successful":155656,
+         "unsuccessful":103544,
+         "unit":"2FA"
       }
    ]
 }</pre>
@@ -4513,16 +2939,14 @@ public class JavaSampleClass {
 <col style="width: 20%;">
 <col style="width: 20%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Error Code</th>
-<th class="tableblock halign-left valign-top">HTTP Status</th>
-<th class="tableblock halign-left valign-top">Error Message</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Category</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
@@ -4547,8 +2971,8 @@ public class JavaSampleClass {
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">452</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Underlying message from Restcomm</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error returned by underlying Restcomm platform.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Underlying message from <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error returned by underlying <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> platform.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
 </tr>
 </tbody>
@@ -4562,54 +2986,37 @@ public class JavaSampleClass {
   <div class="footer-container">
     <div class="footer-column-container">
       <div class="footer-column">
-          <h5 class="footer-column-title">Contact Us</h5>
-          <p>+1 (650) 263 6146</p>
-          <p><a href="https://go.telestax.com/sales-inquiries">SALES</a></p>
-          <p><a href="https://go.telestax.com/support-inquiries">SUPPORT</a></p>
-          <p><a href="https://go.telestax.com/general-inquiries">GENERAL</a></p>
-          <h5 class="footer-column-title">Follow Us</h5>
-          <p>
-            <span><a href="https://twitter.com/restcomm"><i class="fab fa-twitter"></i></a></span>
-            <span><a href="https://www.linkedin.com/company/telestax"><i class="fab fa-linkedin-in"></i></a></span>
-            <span><a href="https://www.facebook.com/Telestax/"><i class="fab fa-facebook-f"></i></a></span>
-            <span><a href="https://www.youtube.com/channel/UCrZ-J48d3AdwGdL01XuZKZQ"><i class="fab fa-youtube"></i></a></span>
-          </p>
+          <h5 class="footer-column-title">Platform</h5>
+          <p><a class="footer-products-item" href="/docs/api/voice-category.html">Programmable Voice</a></p>
+          <p><a class="footer-products-item" href="/docs/api/sms-category.html">Programmable SMS</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Solutions</h5>
-        <p><a class="footer-usecase-item" href="/docs/1.0/solutions/two-factor-authentication-overview.html">TWO-FACTOR AUTHENTICATION (2FA)</a></p>
-          <p><a class="footer-usecase-item" href="/docs/1.0/solutions/message-exchange-overview.html">MESSAGE EXCHANGE</a></p>
-          <p><a class="footer-usecase-item" href="/docs/1.0/solutions/cisco-webex-overview.html">CISCO WEBEX</a></p>
-          <p><a class="footer-usecase-item" href="/docs/1.0/api/call-queue-api.html">CALL QUEUE</a></p>
+        <p><a class="footer-usecase-item" href="/docs/tutorials/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a></p>
+          <p><a class="footer-usecase-item" href="/docs/api/call-queue-api.html">Call Queue</a></p>
+          <p><a class="footer-usecase-item" href="/docs/solutions/auto-attendant-overview.html">Auto Attendant</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
-        <p><a href="https://www.telestax.com/blog/">BLOG</a></p>
 
-          <p><a id="terms-link" href="/docs/support.html">TERMS AND CONDITIONS</a></p>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html" data-default-link="/docs/terms.html">Terms And Conditions</a></p>
       </div>
       <div class="footer-column">
-    <h5 class="footer-column-title">Additional Links</h5>
+    <h5 class="footer-column-title">About</h5>
         <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/about/" data-default-text="About Us" data-default-link="#">ABOUT</a></p>
-       <p><a href="https://www.telestax.com/faqs/">FAQ'S</a></p>
-       <p><a href="https://www.telestax.com/privacy-statement/">PRIVACY POLICY</a></p>
-       <p><a href="https://www.telestax.com/contact/">CONTACT</a></p>
+  <p><a class="sps-text sps-link" data-parm-text="Contact Us" data-parm-link="contact_link" href="https://www.telestax.com/contact/" data-default-text="Contact Us" data-default-link="#">CONTACT US</a></p>
       </div>
     </div>
-    <!---->
-    <!--<div class="footer-bottom-container">-->
-      <!--<div class="footer-logo">-->
-        <!--<a class="footer-logo-link" href="https://telestax.com"></a>-->
-      <!--</div>-->
-      <!--<div class="footer-copyright">-->
-        <!--<p class="footer-copyright-paragraph">COPYRIGHT © 2020, TELESTAX INC., ALL RIGHTS RESERVED.</p>-->
-      <!--</div>-->
-    <!--</div>-->
+   <div class="footer-bottom-container">
+    <div class="footer-copyright">
+     <p class="footer-copyright-paragraph"><a class="sps-text" data-parm-text="copyright_text" data-default-text="© 2020, All rights reserved.">© 2020, All rights reserved.</a></p>
+    </div>
+   </div>
     <!---->
   </div>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script src="../../../../_/js/vendor/highlight.js"></script>
 <!--
 <script>hljs.initHighlighting()</script>
 -->
@@ -4655,16 +3062,6 @@ public class JavaSampleClass {
       s.parentNode.insertBefore(cly, s)
     })()
   </script>
-<!-- UserBack Tool -->
-<script>
-    Userback = window.Userback || {};
-    Userback.access_token = '5061|10149|r9Ure7pw7zJFVyflkflhPEQJvrsbdWcpYS5Vz3safDjZZg7ukX';
-    (function(id) {
-        var s = document.createElement('script');
-        s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
-        var parent_node = document.head || document.body;parent_node.appendChild(s);
-    })('userback-sdk');
-</script>
 
   </body>
 </html>

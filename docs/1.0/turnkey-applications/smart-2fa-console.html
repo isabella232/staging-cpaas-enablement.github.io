@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Two-Factor Authentication (2FA) Overview - Restcomm Docs"></title>
+    <title data-custom-title="Smart 2FA Console - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/turnkey-applications/two-factor-authentication-overview.html
+      https://dev.restcomm.com/docs/1.0/turnkey-applications/smart-2fa-console.html
     ">
-    <meta name="description" content="Secure online transactions, account sign-ins, mobile apps, websites and more by providing two-factor authentication (2FA) with One-Time Passwords to your users.">
+    <meta name="description" content="Secure online transactions, account sign-ins, mobile apps, websites and more by providing smart 2FA with One-Time Passwords to your users.">
     <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} two-factor authentication">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
@@ -1477,7 +1477,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html">Smart 2FA</a>
 
             </span>
               </div>
@@ -1493,7 +1493,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/call-queue-api.html">Call Queue</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/call-queueing-api.html">Call Queueing</a>
 
             </span>
               </div>
@@ -1597,110 +1597,285 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="two-factor-authentication-overview.html">Two-Factor Authentication (2FA) Overview</a></li>
+    <li class="crumb"><a href="smart-2fa-console.html">Smart 2FA Console</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Two-Factor Authentication (2FA) Overview</h1>
+  <h1>Smart 2FA Console</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_understanding_the_two_factor_authentication_2fa_console_and_api">Understanding the Two-Factor Authentication (2FA) Console and API</a></li>
-<li><a href="#_introduction">Introduction</a>
+<li><a href="#_introduction">Introduction</a></li>
+<li><a href="#_white_labeling">White Labeling</a></li>
+<li><a href="#_home">Home</a></li>
+<li><a href="#_session_details">Session Details</a>
 <ul class="sectlevel2">
-<li><a href="#_what_is_2fa">What is 2FA?</a></li>
-<li><a href="#_enhanced_security_with_2fa">Enhanced Security with 2FA</a></li>
-<li><a href="#_how_2fa_works">How 2FA Works?</a></li>
-<li><a href="#_flexible_dependable_2fa">Flexible, Dependable 2FA</a></li>
-<li><a href="#_smart_2fa_for_communications_service_providers_5_distinct_advantages">Smart 2FA for Communications Service Providers - 5 Distinct Advantages</a></li>
+<li><a href="#_search">Search</a></li>
+<li><a href="#_usage_records">Usage Records</a></li>
 </ul>
 </li>
+<li><a href="#_demo">Demo</a></li>
 </ul>
-</div>
-<div class="sect1">
-<h2 id="_understanding_the_two_factor_authentication_2fa_console_and_api"><a class="anchor" href="#_understanding_the_two_factor_authentication_2fa_console_and_api"></a>Understanding the Two-Factor Authentication (2FA) Console and API</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="two-factor-authentication-console.html">Getting Started with the Two-Factor Authentication (2FA) Console</a></p>
-</div>
-<div class="paragraph">
-<p><a href="Two-factor-Authentication-2FA.html">Getting Started with the Two-Factor Authentication (2FA) API</a></p>
-</div>
-</div>
 </div>
 <div class="sect1">
 <h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Restcomm Smart 2FA application provides an intuitive out-of-the-box omni-channel two-factor authentication (2FA) solution that communications service providers (CSPs) can rebrand to offer to their enterprise and small-to-medium sized business customers.</p>
+<p>Smart 2FA API lets you send One Time Password (OTP) using SMS, Voice or email.</p>
+</div>
+<div class="paragraph">
+<p>2FA allows you to add a second layer of security to your Application in addition to the user-id and password. The flexibility of using any channel makes sure your users get OTP even when they experience issues with one of the channels.</p>
+</div>
+<div class="paragraph">
+<p>To learn more about 2FA, check out the <a href="two-factor-authentication-overview.html">Smart 2FA Overview</a></p>
+</div>
+<div class="paragraph">
+<p>This document covers features and functionalities of the 2FA UI Console that leverage the underlying API.</p>
+</div>
+<div class="paragraph">
+<p>To access 2FA Console visit https://&lt;your_custom_domain&gt;/twofa/ and login with your Restcomm Credentials.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_white_labeling"><a class="anchor" href="#_white_labeling"></a>White Labeling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Restcomm enables you to go to market with your own 2FA brand in a matter of days. 2FA leverages the Restcomm Whitelabel, hence all the work done by user to whitelabel Restcomm Dashboard is used by 2FA as it is. For further details on Restcomm Dashboard whitelabeling please check the <a href="../whitelabeling.html">Restcomm Whitelabeling Guide</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_home"><a class="anchor" href="#_home"></a>Home</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is the default page the user will see after logging in. Here user can find the number of OTP requests sent per channel - SMS, Voice and Email in the last 24 hours for users Account and 30 days usage report of OTP requests.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-console-home.png" alt="Two-factor authentication - Home screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_session_details"><a class="anchor" href="#_session_details"></a>Session Details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Session Details Records allows users to search for a specific set of 2FA request based on filter criteria or to retrieve Usage Records like how many 2FA requests per day based on filter criteria.</p>
 </div>
 <div class="sect2">
-<h3 id="_what_is_2fa"><a class="anchor" href="#_what_is_2fa"></a>What is 2FA?</h3>
+<h3 id="_search"><a class="anchor" href="#_search"></a>Search</h3>
 <div class="paragraph">
-<p>2FA helps organizations protect user accounts and verify the identity of online users. For example, companies like WhatsApp have built their empire of over 1 billion users on top of 2FA as a method for verifying user identity using SMS. Many other popular companies have followed the same method in their user sign-up process. These include Oracle Cloud, Expedia, SAP, Bank Of America, Amex, Uber, Microsoft, Apple, Airbnb, and many more.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_enhanced_security_with_2fa"><a class="anchor" href="#_enhanced_security_with_2fa"></a>Enhanced Security with 2FA</h3>
-<div class="paragraph">
-<p>Today, almost every popular application relies on 2FA as the best method to verify user identity when signing up or logging into an application online. According to a recent report by Google, NYU, and the University of California San Diego, receiving a secondary SMS code blocked 100 percent of automated attacks, 96 percent of bulk phishing attacks, and most direct, targeted attacks.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_how_2fa_works"><a class="anchor" href="#_how_2fa_works"></a>How 2FA Works?</h3>
-<div class="sect3">
-<h4 id="_user_enters_enterprise_application"><a class="anchor" href="#_user_enters_enterprise_application"></a>User enters Enterprise application</h4>
-<div class="paragraph">
-<p>User visits Enterprise website or mobile app and attempts to log into his account, authorize a transaction, or perform another action that requires two-factor authentication from a new device. Enterprise Application will have a user profile including Mobile Number.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_pin_code_is_sent_to_the_user_via_sms_phone_call_or_email_depending_on_api_called"><a class="anchor" href="#_pin_code_is_sent_to_the_user_via_sms_phone_call_or_email_depending_on_api_called"></a>PIN code is sent to the user via SMS, phone call or email depending on API called</h4>
-<div class="paragraph">
-<p>Once the user enters a valid phone number, from Enterprise application, the developer will need to ask Restcomm 2FA to send a verification code to that phone number by using the HTTP REST API Call.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_verification_of_2fa_code"><a class="anchor" href="#_verification_of_2fa_code"></a>Verification of 2FA Code</h4>
-<div class="paragraph">
-<p>Once the user receives 2FA code, they will try to authenticate by entering same to Enterprise App. The enterprise application developer will need to pass the same 2FA Code also known as One Time Password (OTP) back to Restcomm 2FA. Restcomm 2FA will verify the code and provide appropriate response.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_flexible_dependable_2fa"><a class="anchor" href="#_flexible_dependable_2fa"></a>Flexible, Dependable 2FA</h3>
-<div class="paragraph">
-<p>The flexibility of using any channel (SMS, voice, email) makes sure your users get the OTP even when they experience issues with one of the channels. For example, if the user doesn’t get the OTP on their handset due to issues like “storage full,” the Smart 2FA can send the OTP via email or via a voice call in hundreds of languages using a text-to-speech (TTS) engine.</p>
+<p>The user can search for a specific set of 2FA. Below are the supported filters for search:</p>
 </div>
 <div class="paragraph">
-<p>For over a decade, enterprises depended on over-the-top (OTT) players and their APIs to easily integrate 2FA into service offerings. The reason for this was because most CSPs do not offer APIs directly to the enterprise. With Telestax Smart 2FA we make it easy and straightforward for CSPs to provide their enterprise customers with branded APIs and developer documentation.</p>
+<p><strong>Account Scope:</strong></p>
 </div>
-<div class="paragraph">
-<p>This is great news for enterprise customers as well, including popular ones like Microsoft, Facebook, and more. When CSPs offer 2FA APIs directly to companies, this will enable them to have better cost, higher delivery rate, faster support when an incident happens, and that results in more signups, more revenue, fewer tickets,  and better overall customer experience.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_smart_2fa_for_communications_service_providers_5_distinct_advantages"><a class="anchor" href="#_smart_2fa_for_communications_service_providers_5_distinct_advantages"></a>Smart 2FA for Communications Service Providers - 5 Distinct Advantages</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>BYOC</strong> – Bring-your-own-carrier (BYOC) to reduce costs and enable better delivery rates. The CSP is able to control routing from their existing core softswitch / SMSC to quickly address delivery or routing issues.</p>
+<p>Search in Current Account: Shows the 2FA requests that are created by the logged-in user.</p>
 </li>
 <li>
-<p><strong>Simple API</strong> – Simple APIs to Send OTP via various channels including SMS, voice, or email.</p>
+<p>Search current account and sub-accounts: Shows 2FA requests that are created by logged in user and all other Sub-Accounts under logged in user.</p>
 </li>
 <li>
-<p><strong>Control API</strong> – Control APIs like canceling existing OTP (while it is still active) to resend a new one. Or keep an old OTP active for a period of time while a new one is also sent. Many times there are network delays and users receive the first OTP after a delay while the system would have already generated a second OTP. In that case, allowing both the OTPs offers more options for users.</p>
-</li>
-<li>
-<p><strong>Rich API Set</strong> – Rich API set allows users to select any language for voice calls via text-to-speech (TTS) with support for engines like VoiceRSS, Acapella, Amazon Poly, and Google Text-to-Speech.</p>
-</li>
-<li>
-<p><strong>Intuitive Console</strong> – Allows users to view usage reports by day, month, or year and search using filter criteria like country code, channel, delivery status, and more.</p>
+<p>Search in Specific Account: Search 2FA requests  created by specific Sub-Account under logged in user. The user is presented with a list of Sub-Accounts in a popup window. The user can select the Restcomm account on that popup window.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>Start Date:</strong> Shows the list of 2FA requests that were created on or after this date.</p>
+</div>
+<div class="paragraph">
+<p><strong>End Date:</strong> Shows the list of 2FA requests that were created on or before this date.</p>
+</div>
+<div class="paragraph">
+<p><strong>Status:</strong> Show the list of 2FA requests that have selected status.</p>
+</div>
+<div class="paragraph">
+<p><strong>Channel:</strong> Show the list of 2FA requests that are sent via the selected channel.</p>
+</div>
+<div class="paragraph">
+<p><strong>Service:</strong>  Show the list of 2FA requests that match this service text, partially or fully in any position.</p>
+</div>
+<div class="paragraph">
+<p><strong>From:</strong> Only include 2FA list that has from begins with this number/email text. For example, if OTP is generated from number “15713316943” and from filter parameter is “1”, it will match. However if from filter parameter is “3”, this record will not match. This allows filtering 2FA sent from specific country code.</p>
+</div>
+<div class="paragraph">
+<p><strong>To:</strong> Only include the OTP list that has to begin with this number/email text. For example, if OTP is sent to number “16513333367” and to filter parameter is “1”, it will match. However if to filter parameter is “3”, this record will not match. This allows to filter OTP sent to specific country code.</p>
+</div>
+<div class="paragraph">
+<p><strong>TargetSid:</strong> Only include 2FA list that match target sid of SMS/ Call/ Email text, partially or fully in any position.</p>
+</div>
+<div class="paragraph">
+<p><strong>Check Status:</strong> Only include a 2FA list that has this check status. Possible values are valid or invalid</p>
+</div>
+<div class="paragraph">
+<p><strong>Channel Status:</strong> Only include 2FA list that matches underlying channel status, partially or fully in any position. For SMS, possible channel status value can be as explained <a href="../api/sms-api.html#_status_description">here</a>. For Call, possible values are as explained in “status” property <a href="../api/calls-api.html#_calls_attributes">here</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Channel Error Code:</strong> Only include a 2FA list that matches underlying channel code, partially or fully in any position. For SMS, the possible value can be found <a href="../api/sms-api.html#_sms_specific_error_codes">here</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Channel Error Message:</strong> Only include 2FA list that matches channel error message text, partially or fully in any position</p>
+</div>
+<div class="sect3">
+<h4 id="_sorting"><a class="anchor" href="#_sorting"></a>Sorting</h4>
+<div class="paragraph">
+<p>Users can sort the search results by clicking on Column Header as explained below.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Date:</strong> Ascending or Descending list of 2FA based on Date when it was created</p>
+</li>
+<li>
+<p><strong>Service:</strong> Sort by Service.</p>
+</li>
+<li>
+<p><strong>Status:</strong> Sort by the status of 2FA request.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-search.png" alt="Two-factor authentication - Search screen">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_download_as_csv"><a class="anchor" href="#_download_as_csv"></a>Download as CSV:</h4>
+<div class="paragraph">
+<p>Once results are displayed for search criteria, the user can click on the Download icon below the Search icon to download search results as CSV.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2fa_request_details"><a class="anchor" href="#_2fa_request_details"></a>2FA request details:</h4>
+<div class="paragraph">
+<p>User can view details of particular 2FA by clicking on any row in the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-request-details.png" alt="Two-factor authentication - Request details">
+</div>
+</div>
+<div class="paragraph">
+<p>User can click on Check link to see the details of the 2FA check request</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-check-request.png" alt="Two-factor authentication - Check request">
+</div>
+</div>
+<div class="paragraph">
+<p>User can click on Events to see details of Channel used to send 2FA request.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-channel-details.jpg" alt="Two-factor authentication - Channel details">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage Records</h3>
+<div class="paragraph">
+<p>The Usage record allows to retrieve usage made by your 2FA account during any time period and by any usage channel. Below filter parameters are supported.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Usage Records do not include real-time data and can be delayed by maximum 1 hour.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Account Scope:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the 2FA requests  that are created by the logged-in user.</p>
+</li>
+<li>
+<p>Search current account and sub-accounts: Shows 2FA requests that are created by logged in user and all other Sub-Accounts under logged in user.</p>
+</li>
+<li>
+<p>Search in Specific Account: Search 2FA request that is created by specific Sub-Account under logged in user. The user is presented with a list of Sub-Accounts in a popup window. The user can select the Restcomm account on that popup window.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Subresource:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily: Shows the record of 2FA on a daily basis.</p>
+</li>
+<li>
+<p>Monthly: Shows the record of 2FA on a monthly basis.</p>
+</li>
+<li>
+<p>Yearly: Shows the record of enterprise on a yearly basis.</p>
+</li>
+<li>
+<p>Today: Shows the record of enterprise today.</p>
+</li>
+<li>
+<p>Yesterday: Shows the record of enterprise on yesterday.</p>
+</li>
+<li>
+<p>This Month: Shows the record of enterprise this month.</p>
+</li>
+<li>
+<p>Last Month: Shows the record of enterprise last month.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Start Date:</strong> Only includes 2FA requests that were created on or after this date.</p>
+</div>
+<div class="paragraph">
+<p><strong>End Date:</strong> Only includes 2FA requests that were created on or before this date.</p>
+</div>
+<div class="paragraph">
+<p><strong>Status:</strong> Only includes 2FA requests that have selected status.</p>
+</div>
+<div class="paragraph">
+<p><strong>Channel:</strong> Only includes 2FA requests that are sent via selected channel.</p>
+</div>
+<div class="paragraph">
+<p><strong>Filter By Country Code:</strong> Only includes 2FA requests sent to selected Country Code. For example if OTP is sent to “16513333367” and the filter parameter is “1 - United States”, it will match.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/two-factor-authentication/restcomm-2fa-usage-records.png" alt="Two-factor authentication - Usage records">
+</div>
+</div>
+<div class="paragraph">
+<p>Usage Records will show Total, Successful, UnSuccessful and Success Ratio (Successful / Total).</p>
+</div>
+<div class="paragraph">
+<p>If you would like to explore the smart 2FA API, we recommend having a look at the
+<a href="Two-factor-Authentication-2FA.html">Getting Started with the smart 2FA API Guide</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_demo"><a class="anchor" href="#_demo"></a>Demo</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>2FA Console provides an easy to use demo for users to send OTP and test the 2FA API. To try Demo, click on your name at top right corner and select “2FA Demo”. Click on the “Try Demo” button on the card displayed. You will see a form where you can enter all the values and send OTP. If sending is successful, you will see the API called along with parameters.</p>
 </div>
 </div>
 </div>

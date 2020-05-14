@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Restcomm Message Exchange for Cisco WebEx Teams Overview - Restcomm Docs"></title>
+    <title data-custom-title="Smart 2FA Overview - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/turnkey-applications/cisco-webex-overview.html
+      https://dev.restcomm.com/docs/1.0/turnkey-applications/smart-2fa-overview.html
     ">
-    <meta name="description" content="Restcomm Cisco Webex helps service providers enable their Enterprise customers to send and receive SMS using Webex Teams and to manage and monitor their usage. Cisco users can have two-way conversations with any phone number right in the Cisco Webex Teams and UC-One applications.">
+    <meta name="description" content="Secure online transactions, account sign-ins, mobile apps, websites and more by providing smart 2FA with One-Time Passwords to your users.">
+    <meta name="keywords" content="2fa, two-factor authentication, secure online transactions, otp, one-time passwords, #{&quot;spsParm&quot;:&quot;application_name&quot;,&quot;rcText&quot;:&quot;Restcomm&quot;,&quot;defaultText&quot;:&quot;$INFER_FROM_DOMAIN&quot;} two-factor authentication">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -1476,7 +1477,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Two-factor-Authentication-2FA.html">Two-Factor Authentication (2FA)</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html">Smart 2FA</a>
 
             </span>
               </div>
@@ -1492,7 +1493,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../enterprise/api/call-queue-api.html">Call Queue</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/call-queueing-api.html">Call Queueing</a>
 
             </span>
               </div>
@@ -1596,343 +1597,110 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="cisco-webex-overview.html">Restcomm Message Exchange for Cisco WebEx Teams Overview</a></li>
+    <li class="crumb"><a href="smart-2fa-overview.html">Smart 2FA Overview</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Restcomm Message Exchange for Cisco WebEx Teams Overview</h1>
+  <h1>Smart 2FA Overview</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_understanding_the_restcomm_cisco_webex_console_and_api">Understanding the Restcomm Cisco Webex Console and API</a></li>
-<li><a href="#_overview">Overview</a></li>
-<li><a href="#_prerequisite">Prerequisite</a></li>
-<li><a href="#_setting_up_your_first_mapping">Setting up your first mapping</a>
+<li><a href="#_understanding_the_smart_2fa_console_and_api">Understanding the Smart 2FA Console and API</a></li>
+<li><a href="#_introduction">Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#_setting_up_a_new_mapping_via_console">Setting up a new mapping via Console</a></li>
-<li><a href="#_receiving_an_sms_message_in_webex_teams">Receiving an SMS/message in Webex teams</a></li>
-<li><a href="#_replying_to_received_sms_message">Replying to received SMS/message</a></li>
-<li><a href="#_sending_an_sms_message_to_new_number_from_webex_teams">Sending an SMS/message to new Number from  Webex Teams</a></li>
-</ul>
-</li>
-<li><a href="#_create_bot_for_enterprise">Create Bot for Enterprise</a>
-<ul class="sectlevel2">
-<li><a href="#_mapping_bot_access_token_with_the_enterprise">Mapping Bot Access Token With the enterprise</a></li>
+<li><a href="#_what_is_2fa">What is 2FA?</a></li>
+<li><a href="#_enhanced_security_with_2fa">Enhanced Security with 2FA</a></li>
+<li><a href="#_how_2fa_works">How 2FA Works?</a></li>
+<li><a href="#_flexible_dependable_2fa">Flexible, Dependable 2FA</a></li>
+<li><a href="#_smart_2fa_for_communications_service_providers_5_distinct_advantages">Smart 2FA for Communications Service Providers - 5 Distinct Advantages</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_understanding_the_restcomm_cisco_webex_console_and_api"><a class="anchor" href="#_understanding_the_restcomm_cisco_webex_console_and_api"></a>Understanding the Restcomm Cisco Webex Console and API</h2>
+<h2 id="_understanding_the_smart_2fa_console_and_api"><a class="anchor" href="#_understanding_the_smart_2fa_console_and_api"></a>Understanding the Smart 2FA Console and API</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="cisco-webex-console.html">Getting Started with the Cisco Webex Console</a></p>
+<p><a href="two-factor-authentication-console.html">Getting Started with the Smart 2FA Console</a></p>
 </div>
 <div class="paragraph">
-<p><a href="../api/cisco-webex/overview.html">Getting Started with the Cisco Webex API</a></p>
+<p><a href="Two-factor-Authentication-2FA.html">Getting Started with the Smart 2FA API</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm Cisco Webex helps service providers enable their Enterprise customers to send and receive SMS using Webex Teams and to manage and monitor their usage. Enterprise customers can send two-way SMS.</p>
-</div>
-<div class="paragraph">
-<p>If you want to use the Restcomm Cisco Webex feature, you will need to complete the following steps:</p>
-</div>
-<div class="paragraph">
-<p>Create Bot for each of the Enterprises and map the Bot Access Token with Enterprise as explained in 4 Create Bot for Enterprise
-Create a mapping (Via API or UI Console)
-Start sending messages</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_prerequisite"><a class="anchor" href="#_prerequisite"></a>Prerequisite</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In order to complete the aforementioned steps, you will need:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Webex setup for your Enterprise Customers</p>
-</li>
-<li>
-<p>Working knowledge of cURL and a way to make HTTP API calls (either using cURL or Postman; we recommend Postman if you’re not familiar with cURL.) Or you can directly use UI Console exposed by Restcomm.</p>
-</li>
-<li>
-<p>An understanding of Restcomm Message Exchange API’s for Cisco Webex or Console on how to add mappings.</p>
-</li>
-<li>
-<p>An activated Restcomm Cloud account.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setting_up_your_first_mapping"><a class="anchor" href="#_setting_up_your_first_mapping"></a>Setting up your first mapping</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You must have a valid, working Restcomm account in order to complete this step. If you do not have one, you can contact us.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The purpose of Webex mapping is to associate a phone phone number with an existing Cisco WebexId. For example, imagine you have a user with the Webex teams id of <a href="mailto:joe@myserver.com">joe@myserver.com</a> and Restcomm number is +1-919-555-1212.</p>
-</div>
-<div class="paragraph">
-<p>Mapping will tell the Restcomm Message Exchange service for Cisco Webex to send all inbound SMS messages sent to Joe’s number to <a href="mailto:joe@myserver.com">joe@myserver.com</a>. Additionally, any time Joe sends an outbound SMS from his Cisco Webex account, it will be sent from his phone number.</p>
-</div>
-<div class="paragraph">
-<p>You can set up your mapping in two different ways, either via the Restcomm Message Exchange Console for CiscoWebex or via the API.</p>
+<p>The Restcomm Smart 2FA application provides an intuitive out-of-the-box omni-channel smart 2FA solution that communications service providers (CSPs) can rebrand to offer to their enterprise and small-to-medium sized business customers.</p>
 </div>
 <div class="sect2">
-<h3 id="_setting_up_a_new_mapping_via_console"><a class="anchor" href="#_setting_up_a_new_mapping_via_console"></a>Setting up a new mapping via Console</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Log in to your Restcomm Message Exchange Console via your Restcomm cloud account</p>
-</li>
-<li>
-<p>Create new Mapping as explained in Section 2.3 Add Mappings in Docs :Cisco Webex console</p>
-</li>
-<li>
-<p>Before creating mapping, you need to create Enterprise. This is a very important step as Cisco Webex Bot has one to one mapping with Enterprise.</p>
-</li>
-<li>
-<p>Create Bot (for each enterprise) as explained in 3 Create Bot for Enterprise</p>
-</li>
-</ul>
+<h3 id="_what_is_2fa"><a class="anchor" href="#_what_is_2fa"></a>What is 2FA?</h3>
+<div class="paragraph">
+<p>2FA helps organizations protect user accounts and verify the identity of online users. For example, companies like WhatsApp have built their empire of over 1 billion users on top of 2FA as a method for verifying user identity using SMS. Many other popular companies have followed the same method in their user sign-up process. These include Oracle Cloud, Expedia, SAP, Bank Of America, Amex, Uber, Microsoft, Apple, Airbnb, and many more.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_receiving_an_sms_message_in_webex_teams"><a class="anchor" href="#_receiving_an_sms_message_in_webex_teams"></a>Receiving an SMS/message in Webex teams</h3>
+<h3 id="_enhanced_security_with_2fa"><a class="anchor" href="#_enhanced_security_with_2fa"></a>Enhanced Security with 2FA</h3>
 <div class="paragraph">
-<p>Once you’ve completed all of the steps above, you’re ready to test.</p>
-</div>
-<div class="paragraph">
-<p>Send a message from PSTN number to mapped number .You should then see the message appear in Webex teams whose Cisco Id is mapped with this restcomm number. The message should appear in new Webex Space if you are receiving a message for the first time. All subsequent messages appear in the same space. Space name by default is phone number from where message was initiated. You can rename space to something more meaningful, for example, “Ryan’s Mobile Phone”</p>
+<p>Today, almost every popular application relies on 2FA as the best method to verify user identity when signing up or logging into an application online. According to a recent report by Google, NYU, and the University of California San Diego, receiving a secondary SMS code blocked 100 percent of automated attacks, 96 percent of bulk phishing attacks, and most direct, targeted attacks.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_replying_to_received_sms_message"><a class="anchor" href="#_replying_to_received_sms_message"></a>Replying to received SMS/message</h3>
+<h3 id="_how_2fa_works"><a class="anchor" href="#_how_2fa_works"></a>How 2FA Works?</h3>
+<div class="sect3">
+<h4 id="_user_enters_enterprise_application"><a class="anchor" href="#_user_enters_enterprise_application"></a>User enters Enterprise application</h4>
 <div class="paragraph">
-<p>To reply to received message follow steps below:</p>
+<p>User visits Enterprise website or mobile app and attempts to log into his account, authorize a transaction, or perform another action that requires two-factor authentication from a new device. Enterprise Application will have a user profile including Mobile Number.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>In newly created space, refer to Bot with “@” prefix and then type your message</p>
-</li>
-<li>
-<p>Hit Enter and your message will be sent as SMS to mobile number of receiver.</p>
-</li>
-</ul>
+</div>
+<div class="sect3">
+<h4 id="_pin_code_is_sent_to_the_user_via_sms_phone_call_or_email_depending_on_api_called"><a class="anchor" href="#_pin_code_is_sent_to_the_user_via_sms_phone_call_or_email_depending_on_api_called"></a>PIN code is sent to the user via SMS, phone call or email depending on API called</h4>
+<div class="paragraph">
+<p>Once the user enters a valid phone number, from Enterprise application, the developer will need to ask Restcomm 2FA to send a verification code to that phone number by using the HTTP REST API Call.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_verification_of_2fa_code"><a class="anchor" href="#_verification_of_2fa_code"></a>Verification of 2FA Code</h4>
+<div class="paragraph">
+<p>Once the user receives 2FA code, they will try to authenticate by entering same to Enterprise App. The enterprise application developer will need to pass the same 2FA Code also known as One Time Password (OTP) back to Restcomm 2FA. Restcomm 2FA will verify the code and provide appropriate response.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sending_an_sms_message_to_new_number_from_webex_teams"><a class="anchor" href="#_sending_an_sms_message_to_new_number_from_webex_teams"></a>Sending an SMS/message to new Number from  Webex Teams</h3>
+<h3 id="_flexible_dependable_2fa"><a class="anchor" href="#_flexible_dependable_2fa"></a>Flexible, Dependable 2FA</h3>
 <div class="paragraph">
-<p>To send SMS to new number, follow below steps:</p>
+<p>The flexibility of using any channel (SMS, voice, email) makes sure your users get the OTP even when they experience issues with one of the channels. For example, if the user doesn’t get the OTP on their handset due to issues like “storage full,” the Smart 2FA can send the OTP via email or via a voice call in hundreds of languages using a text-to-speech (TTS) engine.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Add newly created Bot as Contact in your Cisco Webex if not done earlier. This is one time process.</p>
-</li>
-<li>
-<p>Send any private message to this Bot</p>
-</li>
-<li>
-<p>It should respond back with Card that allows you to enter the receiving party’s phone number</p>
-</li>
-<li>
-<p>Enter receiving party&#8217;s phone number and hit Submit. It should create a new Space with receiver Phone number as Space name</p>
-</li>
-<li>
-<p>In newly created space, refer to Bot with “@” prefix and then type your message</p>
-</li>
-<li>
-<p>Hit Enter and your message will be sent as SMS to mobile number of receiver.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>For over a decade, enterprises depended on over-the-top (OTT) players and their APIs to easily integrate 2FA into service offerings. The reason for this was because most CSPs do not offer APIs directly to the enterprise. With Telestax Smart 2FA we make it easy and straightforward for CSPs to provide their enterprise customers with branded APIs and developer documentation.</p>
 </div>
+<div class="paragraph">
+<p>This is great news for enterprise customers as well, including popular ones like Microsoft, Facebook, and more. When CSPs offer 2FA APIs directly to companies, this will enable them to have better cost, higher delivery rate, faster support when an incident happens, and that results in more signups, more revenue, fewer tickets,  and better overall customer experience.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_bot_for_enterprise"><a class="anchor" href="#_create_bot_for_enterprise"></a>Create Bot for Enterprise</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Visit  <a href="https://developer.webex.com/" class="bare">https://developer.webex.com/</a>  then click on “Start Building Apps”.</p>
-</li>
-<li>
-<p>Login with the webex teams for developers credentials.</p>
-</li>
-<li>
-<p>Click on “Create a New App”.</p>
-</li>
-<li>
-<p>Click on “Create a Bot”.</p>
-</li>
-<li>
-<p>Fill the basic details of the bot such as “Bot Name”, “Bot Username”, “Icon”, “Description” then click   “Add Bot”.</p>
-</li>
-<li>
-<p>You will get “Bot’s Access Token”, “Bot Id”</p>
-</li>
-</ul>
 </div>
 <div class="sect2">
-<h3 id="_mapping_bot_access_token_with_the_enterprise"><a class="anchor" href="#_mapping_bot_access_token_with_the_enterprise"></a>Mapping Bot Access Token With the enterprise</h3>
-<div class="paragraph">
-<p>Once bot is created in Webex we will get bot access token
-To map Bot with an enterprise we have to call the below api.</p>
+<h3 id="_smart_2fa_for_communications_service_providers_5_distinct_advantages"><a class="anchor" href="#_smart_2fa_for_communications_service_providers_5_distinct_advantages"></a>Smart 2FA for Communications Service Providers - 5 Distinct Advantages</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>BYOC</strong> – Bring-your-own-carrier (BYOC) to reduce costs and enable better delivery rates. The CSP is able to control routing from their existing core softswitch / SMSC to quickly address delivery or routing issues.</p>
+</li>
+<li>
+<p><strong>Simple API</strong> – Simple APIs to Send OTP via various channels including SMS, voice, or email.</p>
+</li>
+<li>
+<p><strong>Control API</strong> – Control APIs like canceling existing OTP (while it is still active) to resend a new one. Or keep an old OTP active for a period of time while a new one is also sent. Many times there are network delays and users receive the first OTP after a delay while the system would have already generated a second OTP. In that case, allowing both the OTPs offers more options for users.</p>
+</li>
+<li>
+<p><strong>Rich API Set</strong> – Rich API set allows users to select any language for voice calls via text-to-speech (TTS) with support for engines like VoiceRSS, Acapella, Amazon Poly, and Google Text-to-Speech.</p>
+</li>
+<li>
+<p><strong>Intuitive Console</strong> – Allows users to view usage reports by day, month, or year and search using filter criteria like country code, channel, delivery status, and more.</p>
+</li>
+</ul>
 </div>
-<script>
-      function openLanguage(language, index) {
-        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
-        for (const sampleClass of sampleClasses) {
-          sampleClass.style.display = "none";
-        }
-        document.getElementById(language + '-' + index).style.display = "block";
-
-        // first, disable the previously selected tab title
-        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
-        if (previouslyActive.length > 0) {
-          previouslyActive[0].classList.toggle('is-active')
-        }
-
-        // then, enable the newly selected title
-        event.target.classList.toggle('is-active')
-      }
-      </script>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-82 is-active" onclick="openLanguage('Curl', 82)">Curl</button>
-        <button class="sample-code-button scsIndex-82" onclick="openLanguage('Nodejs', 82)">Nodejs</button>
-        <button class="sample-code-button scsIndex-82" onclick="openLanguage('Python', 82)">Python</button>
-        <button class="sample-code-button scsIndex-82" onclick="openLanguage('Java', 82)">Java</button>
-      </div>
-      <div id="Curl-82" class="sample-language-82">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json \
-   -H 'Cache-Control: no-cache' \
-   -H 'Content-Type: application/json' \
-   -d 'accessToken=MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692' \
-   -d 'username=Customer Service Bot' \
-   -d 'enterpriseSid=WEMe8f1bac1cf0f45d199d3a4d55aacc13a' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-82" class="sample-language-82" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request.({
-      method: 'POST',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      headers: {
-          'Cache-Control': 'no-cache',
-          'Content-Type': 'application/json'
-      },
-      form: {
-         'accessToken': 'MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692',
-         'username': 'Customer Service Bot',
-         'enterpriseSid': 'WEMe8f1bac1cf0f45d199d3a4d55aacc13a'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-82" class="sample-language-82" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Cache-Control': 'no-cache',
-    'Content-Type': 'application/json',
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'accessToken': 'MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692',
-   'username': 'Customer Service Bot',
-   'enterpriseSid': 'WEMe8f1bac1cf0f45d199d3a4d55aacc13a'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("POST", '/restcomm/2012-04-24/webex/webexbot/access.json',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-82" class="sample-language-82" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/webex/webexbot/access.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestProperty("Cache-Control", "no-cache");
-      conn.setRequestProperty("Content-Type", "application/json");
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("accessToken=MjJjNDcxZjctZWZmYi00NGZmLWIzMzMtZWM3MWUxMjkyNzhlOGNkYjFkMWQtNjcx_PF84_fafbe78f-1599-4cb6-a070-f078ecbc0692&" +
-        "username=Customer Service Bot&" +
-        "enterpriseSid=WEMe8f1bac1cf0f45d199d3a4d55aacc13a");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
 </div>
 </div>
 </div>
