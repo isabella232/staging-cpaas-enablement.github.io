@@ -1589,40 +1589,573 @@
 <article class="doc fix-anchor-links-position">
   <h1>Number Masking Console</h1>
 <div class="sect1">
-<h2 id="_coming_soon"><a class="anchor" href="#_coming_soon"></a>Coming soon</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p> <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br></p>
+<p>Number Masking enables Enterprise to easily make communication between two or more parties without revealing private information (Phone Number).</p>
+</div>
+<div class="paragraph">
+<p>Enterprise Customers can define, manage and view Applications, Contexts, Mask Number Pool etc.</p>
+</div>
+<div class="paragraph">
+<p>This document covers the features and functionalities of the Number Masking Console (UI) from Enterprise user Point of View.</p>
+</div>
+<div class="paragraph">
+<p>To understand more on API please refer to Documentation here.</p>
+</div>
+<div class="paragraph">
+<p>To sign in to Console please visit <a href="https://&lt;domain-provided-by-csp&gt;/numbermaskingconsole/" class="bare">https://&lt;domain-provided-by-csp&gt;/numbermaskingconsole/</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_applications"><a class="anchor" href="#_applications"></a>Applications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To navigate to the page, click on the Applications on the top header.</p>
+</div>
+<div class="paragraph">
+<p>Users can view a list of all Applications that have been created under Enterprise.</p>
+</div>
+<div class="paragraph">
+<p>Applications can be filtered based on the name.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/applications.png" alt="Number Masking Applications">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_application"><a class="anchor" href="#_add_application"></a>Add Application</h3>
+<div class="paragraph">
+<p>To create a new Application:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>click on “Add Application” button</p>
+</li>
+<li>
+<p>enter the name of the application and click the “Done” button.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Name of the application should be unique.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/add-application.png" alt="add application">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_details"><a class="anchor" href="#_basic_details"></a>Basic details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To edit an Application click on the name of the Application in the list of applications, users will view the “Basic Details” page.On the page, enter the fields  and click on the “Save” button.</p>
+</div>
+<div class="paragraph">
+<p>Description of the fields to edit application:</p>
+</div>
+<div class="paragraph">
+<p>Default Time to Live: Default time to live for context in the application after Contexts last update date or interaction. If not passed, default is 0 which is unlimited</p>
+</div>
+<div class="paragraph">
+<p>Application Name: Name of the application.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/basic-details.png" alt="Basic Details">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mask_numbers"><a class="anchor" href="#_mask_numbers"></a>Mask Numbers</h3>
+<div class="paragraph">
+<p>To navigate to this page click on “Mask Numbers” in the side navigation bar of the screen.</p>
+</div>
+<div class="paragraph">
+<p>Users can view a list of all Mask Numbers in the pool that is assigned to the Application.</p>
+</div>
+<div class="paragraph">
+<p>Mask Numbers list can be filtered based on the mask number.</p>
+</div>
+<div class="paragraph">
+<p>To mark a Mask Number as reserved/unreserved click on checkbox of particular mask number</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/mask-numbers.png" alt="Mask Numbers">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_add_mask_number"><a class="anchor" href="#_add_mask_number"></a>Add Mask number</h4>
+<div class="paragraph">
+<p>To add a mask number click on the “Add Mask number” button.</p>
+</div>
+<div class="paragraph">
+<p>List of all the Phone Numbers belonging to the Enterprise and not assigned to any Applications  are shown. To add a Phone Number as Mask Number, user need to select the checkbox of  particular number.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/add-mask-number.png" alt="Add Mask Number">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_context"><a class="anchor" href="#_context"></a>Context</h3>
+<div class="paragraph">
+<p>To navigate to this page click on “Contexts” in the side navigation bar of the screen.</p>
+</div>
+<div class="paragraph">
+<p>Users can view a list of all Contexts that have been created under the Application.</p>
+</div>
+<div class="paragraph">
+<p>Contexts can be filtered based on the name of the Context.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/context.png" alt="Number Masking Context">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_add_context"><a class="anchor" href="#_add_context"></a>Add Context</h4>
+<div class="paragraph">
+<p>To add a context click on the “Add Context” button.</p>
+</div>
+<div class="paragraph">
+<p>Enter the fields required and click on the “Done” button.</p>
+</div>
+<div class="paragraph">
+<p>Description of the field to add context:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Context Name</strong>: Mandatory field and should be unique within Application.</p>
+</li>
+<li>
+<p><strong>Time to live</strong>: Optional field. If provided, it overrides the default time to live configured in the basic details of application .</p>
+</li>
+<li>
+<p><strong>Expiry Date</strong>: Optional field,the date when context should expire, this will override time to live if configured.</p>
+</li>
+<li>
+<p><strong>Mode</strong>: Mode of the interaction, example:“Voice”. As of today only Voice is supported.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/add-context.png" alt="Add Context">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_edit_context"><a class="anchor" href="#_edit_context"></a>Edit Context</h3>
+<div class="paragraph">
+<p>To edit a context click on the context name in the contexts list page. To go back to the context list page click on the “back” button on top right.</p>
+</div>
+<div class="paragraph">
+<p>Users can view the details of the context.</p>
+</div>
+<div class="paragraph">
+<p>Can edit context by updating Name, Expiry date, Mode, Status, Time to live and click on the “Save Changes” button.</p>
+</div>
+<div class="paragraph">
+<p>Can Delete the context by clicking on the “Delete” button</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/edit-context.png" alt="Edit Context">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_participants"><a class="anchor" href="#_participants"></a>Participants</h3>
+<div class="paragraph">
+<p>To view or to add the participants in the context click on “participant” link of particular context in context list page</p>
+</div>
+<div class="paragraph">
+<p>To go back to the context list page click on the “back” button on top right.</p>
+</div>
+<div class="paragraph">
+<p>Users can view the list of participants which are added under that particular context.</p>
+</div>
+<div class="paragraph">
+<p>Participants can be filtered based on the participant number.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/context-participants.png" alt="Participants">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_add_participants"><a class="anchor" href="#_add_participants"></a>Add Participants</h4>
+<div class="paragraph">
+<p>To add a participant in the context click on the “Add Participants” button. Enter the fields required and click on the “Done” button. Description of the fields to add participant:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Participant Name: Optional. Name of the participant. * Phone number: Mandatory field. Phone number of participant</p>
+</li>
+<li>
+<p>Mask Number: Optional field. Mask Number available in Mask Number pool of Application.</p>
+</li>
+<li>
+<p>Mask Number SID: Optional field. Sid of the Mask Number number.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If both Mask Number Sid and Mask Number are specified ,Mask Number SID takes   preference.
+NOTE: If both Mask number and Mask Number SID are not specified, Application will select a random number from the Mask numbers  pool.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/add-participants.png" alt="Add Participants">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_participants_details"><a class="anchor" href="#_participants_details"></a>Participants Details</h4>
+<div class="paragraph">
+<p>Click on the name of the participant to view the details of the participant.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/participant-details.png" alt="Participants Details">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_numbers"><a class="anchor" href="#_numbers"></a>Numbers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your Communications Service Provider (CSP) would have reserved Phone Numbers for your Enterprise to use. Only these numbers can be used as Mask Numbers.</p>
+</div>
+<div class="paragraph">
+<p>To navigate to the page, click on the Numbers on the top header.</p>
+</div>
+<div class="paragraph">
+<p>Users can view a list of all  numbers that have been assigned for your Enterprise.</p>
+</div>
+<div class="paragraph">
+<p>Numbers can be filtered based on the phone numbers.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/numbers.png" alt="Numbers">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_management"><a class="anchor" href="#_user_management"></a>User Management</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To navigate to the page, click on the User Management on the top header.</p>
+</div>
+<div class="paragraph">
+<p>Users can view a list of all users that have been created under enterprise.</p>
+</div>
+<div class="paragraph">
+<p>List of users can be filtered based on the user name.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/user-management.png" alt="User Management">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_users"><a class="anchor" href="#_add_users"></a>Add Users</h3>
+<div class="paragraph">
+<p>To add users under enterprise click on the “Add User” button in the User management page.</p>
+</div>
+<div class="paragraph">
+<p>Follow the steps below to add an user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter the name of the new user.</p>
+</li>
+<li>
+<p>Enter email id of the user.</p>
+</li>
+<li>
+<p>Enter the password for the user account.</p>
+</li>
+<li>
+<p>Set a role for the user (Enterprise ADMIN)</p>
+</li>
+<li>
+<p>Set the status of the account(ACTIVE,INACTIVE)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Mail ID  must be unique.
+NOTE: Password should meet below criteria:
+ At least one Uppercase letter(A,B,C,D…&#8230;&#8203;)
+ At least one Lowercase letter(a,b,c,d,&#8230;&#8203;&#8230;&#8203;.)
+ At least one number(1,2,3,4,5….)
+ At least one special character(!,@,#,$,%,&amp;,&#8230;&#8203;&#8230;&#8203;.)
+ Length of the password should be greater than equal to 8.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/create-user.png" alt="Add Users">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_details"><a class="anchor" href="#_user_details"></a>User Details</h3>
+<div class="paragraph">
+<p>Click on the name of the user in the users list  to view the details of the user.</p>
+</div>
+<div class="paragraph">
+<p>Click on “Close Account” to delete the user</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/user-details.png" alt="User Details">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_search"><a class="anchor" href="#_search"></a>Search</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_search_application"><a class="anchor" href="#_search_application"></a>Search Application</h3>
+<div class="paragraph">
+<p>To navigate to the page, click on the <code>Search</code> on the top header.</p>
+</div>
+<div class="paragraph">
+<p>The user can perform a search on the applications of the enterprise. Below are the supported filters for application search:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Start Date</strong>: Shows the list of applications that were created on or after this date.</p>
+</li>
+<li>
+<p><strong>End Date</strong>: Shows the list of applications that were created on or before this date.</p>
+</li>
+<li>
+<p><strong>Application Name</strong>: Shows the list of applications whose name are partially or fully match with the given name:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/search-applications.png" alt="Search Applications">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_application_details"><a class="anchor" href="#_application_details"></a>Application Details</h4>
+<div class="paragraph">
+<p>Users can view details of a particular application by clicking any application name in the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/application-details.png" alt="Application Details">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_search_mask_numbers"><a class="anchor" href="#_search_mask_numbers"></a>Search Mask Numbers</h3>
+<div class="paragraph">
+<p>To navigate to the page, click on the Mask numbers on the side navigation bar..</p>
+</div>
+<div class="paragraph">
+<p>users can perform a search on the Mask numbers of the enterprise. Below are the supported filters for Mask number search:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Start Date</strong>: Shows the list of Mask numbers that were created on or after this date.</p>
+</li>
+<li>
+<p><strong>End Date</strong>: Shows the list of Mask numbers that were created on or before this date.</p>
+</li>
+<li>
+<p><strong>Application</strong>: Shows the list of Mask numbers that belong to the application selected from the dropdown.</p>
+</li>
+<li>
+<p><strong>Is Reserved</strong>: Shows the list of Mask numbers with this Is Reserved status(“True”, “False”).</p>
+</li>
+<li>
+<p><strong>In Use</strong>: Shows the list of Mask numbers with this In Use status (“True”, “False”).</p>
+</li>
+<li>
+<p><strong>Mask number</strong>: Only show Mask Number that starts with phoneNumber digits. This is useful to search Mask Numbers that belong to specific Country Code.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/search-mask-numbers.png" alt="Search Mask Numbers">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mask_number_details"><a class="anchor" href="#_mask_number_details"></a>Mask Number Details</h4>
+<div class="paragraph">
+<p>Users can view details of a particular mask number by clicking any sid  in the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/mask-numbers-details.png" alt="Mask Number Details">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_search_context"><a class="anchor" href="#_search_context"></a>Search Context</h3>
+<div class="paragraph">
+<p>To navigate to the page, click on the Contexts on the side navigation bar..</p>
+</div>
+<div class="paragraph">
+<p>Users can perform a search on the Contexts of the enterprise. Below are the supported filters for Context  search:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Start Date</strong>: Shows the list of Contexts that were created on or after this date.</p>
+</li>
+<li>
+<p><strong>End Date</strong>: Shows the list of Contexts that were created on or before this date.
+A* <strong>pplication</strong>: Shows the list of Contexts that belong to the application selected from the dropdown.</p>
+</li>
+<li>
+<p><strong>Status</strong>: Shows the list of Contexts that matches with this status (‘Open’, ‘In progress’ , ‘Closed’)</p>
+</li>
+<li>
+<p><strong>Context name</strong>: Shows the list of Contexts whose name are partially or fully match with the given name:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/search-context.png" alt="Search Context">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_context_details"><a class="anchor" href="#_context_details"></a>Context Details</h4>
+<div class="paragraph">
+<p>Users can view details of a particular Context by clicking any Context name  in the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/context-details.png" alt="Context Details">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_search_call_logs"><a class="anchor" href="#_search_call_logs"></a>Search Call logs</h3>
+<div class="paragraph">
+<p>To navigate to the page, click on the Call Logs on the side navigation bar..
+The user can perform a search on the Call Logs of the enterprise. Below are the supported filters for Call Logs search:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account Scope:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search in Current Account: Shows the list of call logs that are created by the logged in user.</p>
+</li>
+<li>
+<p>Search in current Account and sub accounts : Shows the list of all the call logs  that are created by the logged in user and their sub accounts.</p>
+</li>
+<li>
+<p>Search in Specific sub  Account: To search call logs that are created by a particular sub account user, the user is presented with a list of sub account users in a popup window. The user can select the Restcomm account on that popup window.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Date: Shows the list of call logs that were created on or after this date.</p>
+</li>
+<li>
+<p>End Date: Shows the list of call logs that were created on or before this date.</p>
+</li>
+<li>
+<p>Application: Shows the list of call logs that belong to the application selected from the dropdown.</p>
+</li>
+<li>
+<p>Context SID: Shows the list of call logs whose Context SID partially or fully matches the entered context sid.</p>
+</li>
+<li>
+<p>Inbound participant Number: Shows the list of call logs whose Inbound participant Number partially or fully matches the entered number.</p>
+</li>
+<li>
+<p>Inbound Mask Number: Shows the list of call logs whose Inbound Mask Number partially or fully matches the entered number.</p>
+</li>
+<li>
+<p>Outbound Participant Number: Shows the list of call logs whose Outbound Participant Number partially or fully matches the entered number.</p>
+</li>
+<li>
+<p>Outbound Mask Number: Shows the list of call logs whose Outbound Participant Number partially or fully matches the entered number.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/search-call-log.png" alt="Search Call Log">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_call_log_details"><a class="anchor" href="#_call_log_details"></a>Call log Details:</h4>
+<div class="paragraph">
+<p>Users can view details of a particular Call log by clicking any SID in the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/number-masking/call-log-details.png" alt="Call Log Details">
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
