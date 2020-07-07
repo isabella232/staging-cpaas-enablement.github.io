@@ -265,7 +265,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_get_strong">HTTP GET</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_get_strong">Retrieve Account</a>
 
             </span>
               </div>
@@ -282,7 +282,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_post_strong">HTTP POST</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_post_strong">Create Account</a>
 
             </span>
               </div>
@@ -299,7 +299,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_put_strong">HTTP PUT</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_put_strong">Update Account</a>
 
             </span>
               </div>
@@ -316,7 +316,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_delete_strong">HTTP DELETE</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_delete_strong">Delete Account</a>
 
             </span>
               </div>
@@ -353,10 +353,80 @@
             "></span>
                   <span>
               <a class="nav-link nav-flex-item-text" href="../api/tags-api.html">Tags</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/tags-api.html#_create_tag">Create Tags</a>
 
             </span>
               </div>
                           </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/tags-api.html#_update_tag">Update Tags</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/tags-api.html#_get_tags_list">Get Tags list</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/tags-api.html#_delete_tag">Delete Tags</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
             <li class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -3237,17 +3307,17 @@ This allows to filter OTP sent to specific country code.</p></td>
       }
       </script>
       <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-87 is-active" onclick="openLanguage('Curl', 87)">Curl</button>
-        <button class="sample-code-button scsIndex-87" onclick="openLanguage('Nodejs', 87)">Nodejs</button>
-        <button class="sample-code-button scsIndex-87" onclick="openLanguage('Python', 87)">Python</button>
-        <button class="sample-code-button scsIndex-87" onclick="openLanguage('Java', 87)">Java</button>
+        <button class="sample-code-button scsIndex-89 is-active" onclick="openLanguage('Curl', 89)">Curl</button>
+        <button class="sample-code-button scsIndex-89" onclick="openLanguage('Nodejs', 89)">Nodejs</button>
+        <button class="sample-code-button scsIndex-89" onclick="openLanguage('Python', 89)">Python</button>
+        <button class="sample-code-button scsIndex-89" onclick="openLanguage('Java', 89)">Java</button>
       </div>
-      <div id="Curl-87" class="sample-language-87">
+      <div id="Curl-89" class="sample-language-89">
         <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/2fa/search/{OTPSid}  \
    -u 'YourAccountSid:YourAuthToken'
 </code></pre>
       </div>
-      <div id="Nodejs-87" class="sample-language-87" style="display:none">
+      <div id="Nodejs-89" class="sample-language-89" style="display:none">
         <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
 
 // Provide your Account Sid and Auth Token from your Console Account page
@@ -3266,7 +3336,7 @@ request({
 );
 </code></pre>
       </div>
-      <div id="Python-87" class="sample-language-87" style="display:none">
+      <div id="Python-89" class="sample-language-89" style="display:none">
         <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
 from base64 import b64encode
 
@@ -3286,7 +3356,7 @@ res = conn.getresponse()
 ...
 </code></pre>
       </div>
-      <div id="Java-87" class="sample-language-87" style="display:none">
+      <div id="Java-89" class="sample-language-89" style="display:none">
         <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
