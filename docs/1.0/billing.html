@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Billing Tags - Restcomm Docs"></title>
+    <title data-custom-title="Restcomm Billing Tags - Restcomm Docs"></title>
     <link rel="canonical" href="
       https://dev.restcomm.com/docs/1.0/billing.html
     ">
@@ -1613,22 +1613,175 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="index.html">docs</a></li>
-    <li class="crumb"><a href="billing.html">Billing Tags</a></li>
+    <li class="crumb"><a href="billing.html">Restcomm Billing Tags</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Billing Tags</h1>
+  <h1>Restcomm Billing Tags</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_coming_soon">Coming soon</a></li>
+<li><a href="#_understanding_the_restcomm_s_billing_tags_api">Understanding the Restcomm&#8217;s Billing Tags API</a></li>
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_understanding_the_tags_concept">Understanding the Tags Concept</a>
+<ul class="sectlevel2">
+<li><a href="#_voice">Voice</a></li>
+<li><a href="#_sms">SMS</a></li>
+<li><a href="#_example">Example</a></li>
+</ul>
+</li>
+<li><a href="#_accessing_the_tags_in_the_restcomm_console">Accessing the Tags in the Restcomm Console</a></li>
+<li><a href="#_creating_billing_tag">Creating Billing Tag</a></li>
+<li><a href="#_deleting_tags">Deleting Tags</a></li>
+<li><a href="#_mapping_headers_or_tags_to_tlvs_in_the_bring_your_own_carrier_byoc_smpp_connection_configuration">Mapping Headers or Tags to TLVs in the Bring Your Own Carrier (BYOC) SMPP connection configuration</a></li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_coming_soon"><a class="anchor" href="#_coming_soon"></a>Coming soon</h2>
+<h2 id="_understanding_the_restcomm_s_billing_tags_api"><a class="anchor" href="#_understanding_the_restcomm_s_billing_tags_api"></a>Understanding the Restcomm&#8217;s Billing Tags API</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>To learn more about the Restcomm&#8217;s Billing Tags API, please check the following getting started guide:</p>
+</div>
+<div class="paragraph">
+<p><a href="api/tags-api.html">Getting Started with the Restcomm Billing Tags API</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Restcomm’s Account API enables billing tags and headers to be passed in the core network messages, in the various protocols and be persisted in the CDRs for easier billing reconciliation. With the help of tags and headers you can further analyse your network traffic origination and understand better your enterprise customers interactions with your services over time. Whether they are using Visual Designer applications, Turnkey applications or just about any Restcomm API that you offer to them.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_understanding_the_tags_concept"><a class="anchor" href="#_understanding_the_tags_concept"></a>Understanding the Tags Concept</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_voice"><a class="anchor" href="#_voice"></a>Voice</h3>
+<div class="paragraph">
+<p>Once you add a tag it is passed as a header in the voice network messages, eg. it ends up in the CSP SIP server. In addition, you will see that in the CDRs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sms"><a class="anchor" href="#_sms"></a>SMS</h3>
+<div class="paragraph">
+<p>For messaging, you can create a <a href="api/tags-api.html#_passing_custom_tags_in_smpp_tlv_mapping">header to TLV mapping</a>. Any headers from the network message, including the ones added through the tags feature, can be mapped to TLVs under a BYOC SMPP connection configuration.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example"><a class="anchor" href="#_example"></a>Example</h3>
+<div class="paragraph">
+<p>You can add the tag <code>Customer-ID</code> with value <code>123</code>. In that case, you will see the following header in the messages log: <code>Customer-ID: 123</code>. The same will show in the CDRs as well. If you want that to be passed to your BYOC SMPP server you need to add a TLV Mapping with Header Name <code>Customer-ID</code>, TLV ID <code>123</code> and TLV Type <code>4BYTE</code> (for example) which will then translate in the Network Profile JSON as <code>Customer-ID: "X-TLV-4BYTE-123"</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>{
+    "multiProvider": {
+        "outbound-sms": [
+            {
+                "name": "your-network-profile",
+                "serverIpAddress": "10.0.0.1:9999",
+                "version": "3.4",
+                "systemId": "esmeid",
+                "password": "esmepass",
+                "sessionType": "CLIENT",
+                "headerTranslationMap": {
+                    "Customer-ID": "X-TLV-4BYTE-123"
+                }
+            }
+        ]
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_accessing_the_tags_in_the_restcomm_console"><a class="anchor" href="#_accessing_the_tags_in_the_restcomm_console"></a>Accessing the Tags in the Restcomm Console</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can access the billing tags in the Restcomm Console by navigating to <strong>Your Profile</strong> &#8594; <strong>Main Account</strong> &#8594; <strong>Tags</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/restcomm%20console%20tags.png" alt="Restcomm Connsole Tags">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_billing_tag"><a class="anchor" href="#_creating_billing_tag"></a>Creating Billing Tag</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create a new tag, navigate to <strong>Your Profile</strong> &#8594; <strong>Main Account</strong> &#8594; <strong>Tags</strong> then click on the <strong>Add Tag</strong> button. Specify a name and a value for the new tag then save your changes.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A maximum of five tags can be assigned to a single enterprise account. Newly created tags take effect immediately.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create_new_tag.png" alt="Create New Tag">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deleting_tags"><a class="anchor" href="#_deleting_tags"></a>Deleting Tags</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To delete a tag, go to <strong>Your Profile</strong> &#8594; <strong>Main Account</strong> &#8594; <strong>Tags</strong> and click on the <strong>X</strong> button next to the tag value.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mapping_headers_or_tags_to_tlvs_in_the_bring_your_own_carrier_byoc_smpp_connection_configuration"><a class="anchor" href="#_mapping_headers_or_tags_to_tlvs_in_the_bring_your_own_carrier_byoc_smpp_connection_configuration"></a>Mapping Headers or Tags to TLVs in the Bring Your Own Carrier (BYOC) SMPP connection configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can map headers or tags to TLVs by navigating to <strong>Your Profile</strong> &#8594; <strong>Your Network</strong> and then choosing the network profile you want to create the mapping for.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If you are a first time <a href="byoc.html">Bring Your Own Carrier</a> user, you will have to create a network profile first.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the '<strong>Settings</strong>' button and then switch to the SMS tab under the <strong>Network Profile Settings</strong>.</p>
+</li>
+<li>
+<p>Enter the headers or tags names, TLV IDs and TLV Types n the <strong>SMPP TLV Mapping</strong> section</p>
+</li>
+<li>
+<p>Click on the <strong>Submit</strong> button</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/network_profile_settings.png" alt="Network Profile Settings">
+</div>
+</div>
 </div>
 </div>
 </article>
