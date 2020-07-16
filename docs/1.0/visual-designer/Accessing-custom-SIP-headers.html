@@ -2419,24 +2419,24 @@
 </table>
 </div>
 <div class="sect2">
-<h3 id="_accessing_headers_from_voice_application"><a class="anchor" href="#_accessing_headers_from_voice_application"></a>Accessing Headers from Voice Application</h3>
+<h3 id="_passing_custom_headers_using_dial_verb"><a class="anchor" href="#_passing_custom_headers_using_dial_verb"></a>Passing Custom Headers Using Dial Verb</h3>
 <div class="paragraph">
-<p>When editing a voice application in Visual Designer you can use the <code>Dial</code> &#8594; <code>SIP URI</code> and provide a header there to be used in the generated call. For example, using: <code>sip:kostikas@acme.restcomm.com?X-Custom-Header=my_value</code> will result in the following RCML:</p>
+<p>When editing a voice application in Visual Designer you can use the <code>Dial</code> &#8594; <code>SIP URI</code> and provide a header there to be used in the generated call. For example, using: <code>sip:jane@acme.restcomm.com?X-Custom-Header=my_value</code> will result in the following RCML:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>&lt;Response&gt;
 	 &lt;Dial&gt;
-		  &lt;Sip&gt;sip:kostikas@acme.restcomm.com?X-Custom-Header=my_value&lt;/Sip&gt;
+		  &lt;Sip&gt;sip:jane.doe@acme.restcomm.com?X-Custom-Header=my_value&lt;/Sip&gt;
 	 &lt;/Dial&gt;
 &lt;/Response&gt;</pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_accessing_headers_from_webtrigger"><a class="anchor" href="#_accessing_headers_from_webtrigger"></a>Accessing Headers from WebTrigger</h3>
+<h3 id="_passing_custom_headers_using_webtrigger"><a class="anchor" href="#_passing_custom_headers_using_webtrigger"></a>Passing Custom Headers Using WebTrigger</h3>
 <div class="paragraph">
-<p>When using WebTrigger, passing custom HTTP headers doesn’t seem to take any effect. However you can potentially pass parameters in the query string which Restcomm will then propagate and make module parameters in Visual Designer. For example, using <code>https://frontend-tests-org-staging.restcomm.com/visual-designer/services/apps/AP184cf3eb79a9496f926c9e3bd15988ae/start?from=12345&amp;to=client:kostikas&amp;testqueryparam=0value0</code> will make Restcomm send <code>module_module_testqueryparam=0value0</code> in its RCML request (as query string if the GET method is used and form-urlencoded if the POST method is used), which will be then available as <code>$testqueryparam</code> in the Visual Designer application.</p>
+<p>You can pass parameters in the WebTrigger query string which Restcomm will then propagate and make module parameters in Visual Designer. For example, using <code>https://frontend-tests-org-staging.restcomm.com/visual-designer/services/apps/AP184cf3eb79a9496f926c9e3bd15988ae/start?from=12345&amp;to=client:jane&amp;testqueryparam=0value0</code> will make Restcomm send <code>module_module_testqueryparam=0value0</code> in its RCML request (as query string if the GET method is used and form-urlencoded if the POST method is used), which will be then available as <code>$testqueryparam</code> in the Visual Designer application.</p>
 </div>
 </div>
 </div>
