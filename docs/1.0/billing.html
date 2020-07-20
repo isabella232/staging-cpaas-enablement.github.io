@@ -1647,10 +1647,7 @@
 <h2 id="_understanding_the_restcomm_s_billing_tags_api"><a class="anchor" href="#_understanding_the_restcomm_s_billing_tags_api"></a>Understanding the Restcomm&#8217;s Billing Tags API</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To learn more about the Restcomm&#8217;s Billing Tags API, please check the following getting started guide:</p>
-</div>
-<div class="paragraph">
-<p><a href="api/tags-api.html">Getting Started with the Restcomm Billing Tags API</a></p>
+<p>To learn more about the Restcomm&#8217;s Billing Tags API, please check out the <a href="api/tags-api.html">Tags API Reference</a>.</p>
 </div>
 </div>
 </div>
@@ -1658,7 +1655,7 @@
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm’s Account API enables billing tags and headers to be passed in the core network messages, in the various protocols and be persisted in the CDRs for easier billing reconciliation. With the help of tags and headers you can further analyse your network traffic origination and understand better your enterprise customers interactions with your services over time. Whether they are using Visual Designer applications, Turnkey applications or just about any Restcomm API that you offer to them.</p>
+<p>Restcomm’s Account API enables billing tags and headers to be passed in the core network messages, in the various protocols (SIP &amp; SMPP) and be persisted in the Session Detail Records (SDRs) for easier billing reconciliation. With the help of tags and headers you can identify which service (API, Visual Designer or Turnkey Application, etc.) has processed the event (Voice or SMS). You can further analyze and act upon the network traffic originating from or terminating at Restcomm, charge your enterprise customers accordingly and understand better their interactions with your services over time.</p>
 </div>
 </div>
 </div>
@@ -1668,7 +1665,7 @@
 <div class="sect2">
 <h3 id="_voice"><a class="anchor" href="#_voice"></a>Voice</h3>
 <div class="paragraph">
-<p>Once you add a tag it is passed as a header in the voice network messages, eg. it ends up in the CSP SIP server. In addition, you will see that in the CDRs.</p>
+<p>Once you add a tag it is passed as a SIP header in the voice network messages, eg. it will be available in the Communication Partner Session Border Controller as part of our BYOC feature. In addition, it will be stored in the corresponding Session Detail Record.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1680,7 +1677,7 @@
 <div class="sect2">
 <h3 id="_example"><a class="anchor" href="#_example"></a>Example</h3>
 <div class="paragraph">
-<p>You can add the tag <code>Customer-ID</code> with value <code>987654321</code>. In that case, you will see the following header in the messages log: <code>Customer-ID: 987654321</code>. The same will show in the CDRs as well. If you want that to be passed to your BYOC SMPP server you need to add a TLV Mapping with Header Name <code>Customer-ID</code>, TLV ID <code>123</code> and TLV Type <code>4BYTE</code> (for example) which will then translate in the Network Profile JSON as <code>Customer-ID: "X-TLV-4BYTE-123"</code>.</p>
+<p>You can add the tag <code>Customer-ID</code> with value <code>987654321</code>. In that case, you will see the following header passed in the messages in the SIP network traffic. It will be also stored in the Session Detail Record. If you want the header to be passed over SMPP to your SMSC configured in our BYOC, you will need to add a TLV Mapping with Header Name <code>Customer-ID</code>, TLV ID <code>123</code> (beware that on the SMPP network, the decimal value 123 will be converted to hexadecimal) and TLV Type <code>4BYTE</code> (for example) which will then translate in the Network Profile JSON as <code>Customer-ID: "X-TLV-4BYTE-123"</code></p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1713,7 +1710,7 @@
 <p>Billing Tags will apply to all incoming and outgoing traffic. In addition, a new <code>Header P-Asserted-Service</code> will be present to identify which turnkey application processed the traffic. The BYOC mappings can map any Headers or Tags to the corresponding SMPP TLVs.</p>
 </div>
 <div class="paragraph">
-<p>The following are example flows of a turnkey application (Smart 2FA) and Visual Designer.</p>
+<p>The following are examples of an outbound flow with a turnkey application (Smart 2FA) and an inbound flow with Visual Designer.</p>
 </div>
 <div class="sect2">
 <h3 id="_outbound_smart_2fa_example_flow"><a class="anchor" href="#_outbound_smart_2fa_example_flow"></a>Outbound Smart 2FA Example Flow</h3>
@@ -1775,7 +1772,7 @@ A maximum of five tags can be assigned to a single enterprise account. Newly cre
 <h2 id="_deleting_tags"><a class="anchor" href="#_deleting_tags"></a>Deleting Tags</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To delete a tag, go to <strong>Your Profile</strong> &#8594; <strong>Main Account</strong> &#8594; <strong>Tags</strong> and click on the <strong>X</strong> button next to the tag value.</p>
+<p>To delete a tag, go to <strong>Your Profile</strong> &#8594; <strong>Main Account</strong> &#8594; <strong>Tags</strong> and click on the <strong>X</strong> button next to the tag value. Then <strong>Save</strong> your changes.</p>
 </div>
 </div>
 </div>
