@@ -4,12 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Tag - Restcomm Docs"></title>
+    <title data-custom-title="Task Router - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://dev.restcomm.com/docs/1.0/api/tags-api.html
+      https://dev.restcomm.com/docs/1.0/turnkey-applications/task-router-overview.html
     ">
-    <meta name="description" content="Restcomm&#x27;s Account API supports billing tags to be passed in the core network messages, in the various protocols and be persisted in the CDRs for easier billing reconciliation.">
-    <meta name="keywords" content="tags api, billing tags api">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href="../../../_/img/favicon.png"/>
     <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
@@ -48,7 +46,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle icon-custom-font-right">
+      <button class="navigation-toggle icon-custom-font-right" style="visibility: hidden;">
       </button>
       <!--
       <span class="icon-custom-font-x"><span class="icon-custom-font-back-hamburger"><span class="icon-custom-font-left"><span class="icon-custom-font-right">
@@ -69,7 +67,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0" >
+<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
   <aside class="navigation">
     <div class="panels">
   <div class="navigation-menu is-active" data-panel="menu">
@@ -127,7 +125,7 @@
               icomoon3-font-reference-api
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html">API Overview</a>
+              <a class="nav-link nav-flex-item-text" href="../api/overview.html">API Overview</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -144,7 +142,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_api_endpoint">API Endpoint</a>
+              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_api_endpoint">API Endpoint</a>
 
             </span>
               </div>
@@ -161,7 +159,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_authentication">Authentication</a>
+              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_authentication">Authentication</a>
 
             </span>
               </div>
@@ -178,7 +176,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_requests">Requests</a>
+              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_requests">Requests</a>
 
             </span>
               </div>
@@ -195,7 +193,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_responses">Responses</a>
+              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_responses">Responses</a>
 
             </span>
               </div>
@@ -212,7 +210,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_paging">Paging</a>
+              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_paging">Paging</a>
 
             </span>
               </div>
@@ -231,7 +229,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="management-apis-overview.html">Management APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../api/management-apis-overview.html">Management APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -248,7 +246,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="account-api.html">Accounts</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html">Accounts</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -265,7 +263,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_get_strong">Retrieve Account</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_get_strong">HTTP GET</a>
 
             </span>
               </div>
@@ -282,7 +280,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_post_strong">Create Account</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_post_strong">HTTP POST</a>
 
             </span>
               </div>
@@ -299,7 +297,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_put_strong">Update Account</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_put_strong">HTTP PUT</a>
 
             </span>
               </div>
@@ -316,7 +314,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="account-api.html#_strong_http_delete_strong">Delete Account</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-api.html#_strong_http_delete_strong">HTTP DELETE</a>
 
             </span>
               </div>
@@ -333,111 +331,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="account-roles.html">Account Roles</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
-            <li class="nav-item is-current-page" data-depth="2">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="tags-api.html">Tags</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_create_tag">Create Tag</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_update_tag">Update Tag</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_get_tags_list">Get Tag list</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_get_single_tag_information">Retrieve Tag</a>
-
-            </span>
-              </div>
-                          </li>
-            <li class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_delete_tag">Delete Tag</a>
+              <a class="nav-link nav-flex-item-text" href="../api/account-roles.html">Account Roles</a>
 
             </span>
               </div>
@@ -456,7 +350,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="profile-api.html">Profiles</a>
+              <a class="nav-link nav-flex-item-text" href="../api/profile-api.html">Profiles</a>
 
             </span>
               </div>
@@ -473,7 +367,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="applications-api.html">Applications</a>
+              <a class="nav-link nav-flex-item-text" href="../api/applications-api.html">Applications</a>
 
             </span>
               </div>
@@ -490,7 +384,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="notifications-api.html">Notifications</a>
+              <a class="nav-link nav-flex-item-text" href="../api/notifications-api.html">Notifications</a>
 
             </span>
               </div>
@@ -507,7 +401,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="usage-records-api.html">Usage Records</a>
+              <a class="nav-link nav-flex-item-text" href="../api/usage-records-api.html">Usage Records</a>
 
             </span>
               </div>
@@ -524,7 +418,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="audit-logs-api.html">Audit Logs</a>
+              <a class="nav-link nav-flex-item-text" href="../api/audit-logs-api.html">Audit Logs</a>
 
             </span>
               </div>
@@ -543,7 +437,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="voice-category.html">Voice APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../api/voice-category.html">Voice APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -560,7 +454,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="available-phone-numbers-api.html">Available Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../api/available-phone-numbers-api.html">Available Phone Numbers</a>
 
             </span>
               </div>
@@ -577,7 +471,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="calls-api.html">Calls</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html">Calls</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -594,7 +488,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
 
             </span>
               </div>
@@ -611,7 +505,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
 
             </span>
               </div>
@@ -628,7 +522,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
 
             </span>
               </div>
@@ -645,7 +539,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="calls-api.html#examples">Examples</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#examples">Examples</a>
 
             </span>
               </div>
@@ -662,7 +556,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="calls-api.html#_list_filter">List Filter</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_list_filter">List Filter</a>
 
             </span>
               </div>
@@ -679,7 +573,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="calls-api.html#_paging_information">Paging Information</a>
+              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_paging_information">Paging Information</a>
 
             </span>
               </div>
@@ -698,7 +592,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="outgoing-caller-id-api.html">Outgoing Caller ID</a>
+              <a class="nav-link nav-flex-item-text" href="../api/outgoing-caller-id-api.html">Outgoing Caller ID</a>
 
             </span>
               </div>
@@ -715,7 +609,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html">Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -732,7 +626,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html#_create_a_client">Create a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_create_a_client">Create a Client</a>
 
             </span>
               </div>
@@ -749,7 +643,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html#_delete_a_client">Delete a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
 
             </span>
               </div>
@@ -766,7 +660,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
 
             </span>
               </div>
@@ -783,7 +677,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
 
             </span>
               </div>
@@ -802,7 +696,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="conferences-api.html">Conference Management</a>
+              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html">Conference Management</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -819,7 +713,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="conferences-api.html#_supported_operations">Supported Operations</a>
+              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_supported_operations">Supported Operations</a>
 
             </span>
               </div>
@@ -836,7 +730,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
 
             </span>
               </div>
@@ -855,7 +749,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="participants-api.html">Conference Participants Management</a>
+              <a class="nav-link nav-flex-item-text" href="../api/participants-api.html">Conference Participants Management</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -872,7 +766,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../api/participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
 
             </span>
               </div>
@@ -891,7 +785,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -908,7 +802,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
 
             </span>
               </div>
@@ -925,7 +819,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
 
             </span>
               </div>
@@ -942,7 +836,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -959,7 +853,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -976,7 +870,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -993,7 +887,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
 
             </span>
               </div>
@@ -1010,7 +904,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
 
             </span>
               </div>
@@ -1027,7 +921,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
 
             </span>
               </div>
@@ -1044,7 +938,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
 
             </span>
               </div>
@@ -1063,7 +957,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="recordings-api.html">Recordings</a>
+              <a class="nav-link nav-flex-item-text" href="../api/recordings-api.html">Recordings</a>
 
             </span>
               </div>
@@ -1080,7 +974,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="SIP-Refer-Support.html">SIP Refer Support</a>
+              <a class="nav-link nav-flex-item-text" href="../api/SIP-Refer-Support.html">SIP Refer Support</a>
 
             </span>
               </div>
@@ -1099,7 +993,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sms-category.html">SMS APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-category.html">SMS APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1116,7 +1010,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="available-phone-numbers-api.html">Available Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../api/available-phone-numbers-api.html">Available Phone Numbers</a>
 
             </span>
               </div>
@@ -1133,7 +1027,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html">Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1150,7 +1044,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html#_create_a_client">Create a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_create_a_client">Create a Client</a>
 
             </span>
               </div>
@@ -1167,7 +1061,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html#_delete_a_client">Delete a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
 
             </span>
               </div>
@@ -1184,7 +1078,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
 
             </span>
               </div>
@@ -1201,7 +1095,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
 
             </span>
               </div>
@@ -1220,7 +1114,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1237,7 +1131,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
 
             </span>
               </div>
@@ -1254,7 +1148,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
 
             </span>
               </div>
@@ -1271,7 +1165,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -1288,7 +1182,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -1305,7 +1199,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -1322,7 +1216,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
 
             </span>
               </div>
@@ -1339,7 +1233,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
 
             </span>
               </div>
@@ -1356,7 +1250,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
 
             </span>
               </div>
@@ -1373,7 +1267,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
 
             </span>
               </div>
@@ -1392,7 +1286,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="outgoing-caller-id-api.html">Outgoing Caller ID</a>
+              <a class="nav-link nav-flex-item-text" href="../api/outgoing-caller-id-api.html">Outgoing Caller ID</a>
 
             </span>
               </div>
@@ -1409,7 +1303,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sms-api.html">Messages</a>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html">Messages</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1426,7 +1320,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sms-api.html#_send_sms">Send SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_send_sms">Send SMS</a>
 
             </span>
               </div>
@@ -1443,7 +1337,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sms-api.html#_get_sms_list">Get SMS List</a>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_sms_list">Get SMS List</a>
 
             </span>
               </div>
@@ -1460,7 +1354,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sms-api.html#_get_single_sms_information">Get single SMS Information</a>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
 
             </span>
               </div>
@@ -1477,7 +1371,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sms-api.html#_sms_attributes">SMS Attributes</a>
+              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_sms_attributes">SMS Attributes</a>
 
             </span>
               </div>
@@ -1496,7 +1390,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="email-api.html">Email</a>
+              <a class="nav-link nav-flex-item-text" href="../api/email-api.html">Email</a>
 
             </span>
               </div>
@@ -1515,7 +1409,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html">Turnkey Apps APIs</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html">Turnkey Apps APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1532,7 +1426,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html">Smart 2FA</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html">Smart 2FA</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1549,7 +1443,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_sending_one_time_passwords_api_reference">Sending One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html#_sending_one_time_passwords_api_reference">Sending One-Time Passwords</a>
 
             </span>
               </div>
@@ -1566,7 +1460,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_verifying_one_time_passwords_api_reference">Verifying One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html#_verifying_one_time_passwords_api_reference">Verifying One-Time Passwords</a>
 
             </span>
               </div>
@@ -1583,7 +1477,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_cancel_one_time_passwords_api_reference">Cancel One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html#_cancel_one_time_passwords_api_reference">Cancel One-Time Passwords</a>
 
             </span>
               </div>
@@ -1600,7 +1494,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_session_detail_record_sdr">Session Detail Record (SDR)</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html#_session_detail_record_sdr">Session Detail Record (SDR)</a>
 
             </span>
               </div>
@@ -1617,7 +1511,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_get_list_of_one_time_passwords_api_reference">Get list of One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html#_get_list_of_one_time_passwords_api_reference">Get list of One-Time Passwords</a>
 
             </span>
               </div>
@@ -1634,7 +1528,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_get_single_one_time_passwords_api_reference">Get a Single One-Time Password</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html#_get_single_one_time_passwords_api_reference">Get a Single One-Time Password</a>
 
             </span>
               </div>
@@ -1651,7 +1545,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/smart-2fa.html#_usage_record_one_time_passwords_api_reference">Usage Record One-Time Passwords</a>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html#_usage_record_one_time_passwords_api_reference">Usage Record One-Time Passwords</a>
 
             </span>
               </div>
@@ -1670,7 +1564,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/overview.html">Message Exchange for Cisco UC-One</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-uc-one/overview.html">Message Exchange for Cisco UC-One</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1687,7 +1581,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/create-operation.html">Create Operation</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-uc-one/create-operation.html">Create Operation</a>
 
             </span>
               </div>
@@ -1704,7 +1598,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/read-operation.html">Read Operation</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-uc-one/read-operation.html">Read Operation</a>
 
             </span>
               </div>
@@ -1721,7 +1615,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/update-operation.html">Update Operation</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-uc-one/update-operation.html">Update Operation</a>
 
             </span>
               </div>
@@ -1738,7 +1632,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/delete-operation.html">Delete Operation</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-uc-one/delete-operation.html">Delete Operation</a>
 
             </span>
               </div>
@@ -1755,7 +1649,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-uc-one/common-response-error-codes.html">Error Codes</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-uc-one/common-response-error-codes.html">Error Codes</a>
 
             </span>
               </div>
@@ -1774,7 +1668,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html"> Message Exchange for Cisco Webex Teams</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-webex-teams/overview.html"> Message Exchange for Cisco Webex Teams</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1791,7 +1685,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html#_create_operation">Create Operation</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-webex-teams/overview.html#_create_operation">Create Operation</a>
 
             </span>
               </div>
@@ -1808,7 +1702,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html#_read_operation">Read Operation</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-webex-teams/overview.html#_read_operation">Read Operation</a>
 
             </span>
               </div>
@@ -1825,7 +1719,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html#_update_enterprise">Update Operation</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-webex-teams/overview.html#_update_enterprise">Update Operation</a>
 
             </span>
               </div>
@@ -1842,7 +1736,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="message-exchange-for-cisco-webex-teams/overview.html#_delete_operation">Delete Operation</a>
+              <a class="nav-link nav-flex-item-text" href="../api/message-exchange-for-cisco-webex-teams/overview.html#_delete_operation">Delete Operation</a>
 
             </span>
               </div>
@@ -1861,7 +1755,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="call-queueing-api.html">Call Queuing</a>
+              <a class="nav-link nav-flex-item-text" href="../api/call-queueing-api.html">Call Queuing</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1878,7 +1772,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="call-queueing-api.html#_create_queue_api">Create Queue</a>
+              <a class="nav-link nav-flex-item-text" href="../api/call-queueing-api.html#_create_queue_api">Create Queue</a>
 
             </span>
               </div>
@@ -1895,7 +1789,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="call-queueing-api.html#_queue_rcml">Queue RCML</a>
+              <a class="nav-link nav-flex-item-text" href="../api/call-queueing-api.html#_queue_rcml">Queue RCML</a>
 
             </span>
               </div>
@@ -1912,7 +1806,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="call-queueing-api.html#_enqueue_rcml">Enqueue RCML</a>
+              <a class="nav-link nav-flex-item-text" href="../api/call-queueing-api.html#_enqueue_rcml">Enqueue RCML</a>
 
             </span>
               </div>
@@ -1931,7 +1825,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="auto-attendant/auto-attendant-api.html">Auto Attendant</a>
+              <a class="nav-link nav-flex-item-text" href="../api/auto-attendant/auto-attendant-api.html">Auto Attendant</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1950,7 +1844,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="number-masking-api.html">Number Masking</a>
+              <a class="nav-link nav-flex-item-text" href="../api/number-masking-api.html">Number Masking</a>
 
             </span>
               </div>
@@ -2338,959 +2232,22 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="management-apis-overview.html">CSP:Management APIs</a></li>
-    <li class="crumb"><a href="tags-api.html">CSP:Tags</a></li>
+    <li class="crumb"><a href="task-router-overview.html">Task Router</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Tag</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Restcomm&#8217;s Account API supports billing tags to be passed in the core network messages, in the various protocols and be persisted in the CDRs for easier billing reconciliation.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-An Enterprise Account can be assigned a maximum of 5 tags. Each tag name must be unique.
-</td>
-</tr>
-</table>
-</div>
-</div>
+  <h1>Task Router</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_overview">Overview</a></li>
+</ul>
 </div>
 <div class="sect1">
-<h2 id="_create_tag"><a class="anchor" href="#_create_tag"></a>Create Tag</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><code>POST /restcomm/2012-04-24/Accounts/{AccountSid}/Tags.json</code></p>
-</div>
-<div class="paragraph">
-<p>Creates a Tag, assigns it to <code>accountSid</code> and returns its representation.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Tags can only be created by the CSP Administrator.
-</td>
-</tr>
-</table>
-</div>
-<table class="tableblock frame-top grid-rows spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Body Parameter</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag name (Required).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag value (Required).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag type (Required). The only possible value is <code>Billing</code>.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="sect2">
-<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
-<div class="paragraph">
-<p>Create a <code>Billing</code> tag named <code>msisdn</code> with value <code>+30XXXXXXXXX</code> and assign it to an <code>accountSid</code>:</p>
-</div>
-<script>
-      function openLanguage(language, index) {
-        const sampleClasses = document.getElementsByClassName("sample-language-" + index);
-        for (const sampleClass of sampleClasses) {
-          sampleClass.style.display = "none";
-        }
-        document.getElementById(language + '-' + index).style.display = "block";
 
-        // first, disable the previously selected tab title
-        const previouslyActive = document.getElementsByClassName('scsIndex-' + index + ' is-active')
-        if (previouslyActive.length > 0) {
-          previouslyActive[0].classList.toggle('is-active')
-        }
-
-        // then, enable the newly selected title
-        event.target.classList.toggle('is-active')
-      }
-      </script>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-71 is-active" onclick="openLanguage('Curl', 71)">Curl</button>
-        <button class="sample-code-button scsIndex-71" onclick="openLanguage('Nodejs', 71)">Nodejs</button>
-        <button class="sample-code-button scsIndex-71" onclick="openLanguage('Python', 71)">Python</button>
-        <button class="sample-code-button scsIndex-71" onclick="openLanguage('Java', 71)">Java</button>
-      </div>
-      <div id="Curl-71" class="sample-language-71">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X POST https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Tags.json  \
-   -d 'Name=msisdn' \
-   -d 'Value=+30XXXXXXXXX' \
-   -d 'Type=Billing' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-71" class="sample-language-71" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request.({
-      method: 'POST',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      form: {
-         'Name': 'msisdn',
-         'Value': '+30XXXXXXXXX',
-         'Type': 'Billing'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-71" class="sample-language-71" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'Name': 'msisdn',
-   'Value': '+30XXXXXXXXX',
-   'Type': 'Billing'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("POST", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags.json',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-71" class="sample-language-71" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Tags.json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("POST");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("Name=msisdn&" +
-        "Value=+30XXXXXXXXX&" +
-        "Type=Billing");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
-<div class="paragraph">
-<p>Example response:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-    "sid": "TGf0a2ca58c89b41bc829a319371a7a959",
-    "name": "msisdn",
-    "value": "+30XXXXXXXXX",
-    "type": "Billing",
-    "owner_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "target_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "date_created": "Fri, 3 Jul 2020 10:20:07 +0000",
-    "date_updated": "Fri, 3 Jul 2020 10:20:07 +0000",
-    "uri": "/2012-04-24/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tags/TGf0a2ca58c89b41bc829a319371a7a959.json"
-}</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_update_tag"><a class="anchor" href="#_update_tag"></a>Update Tag</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><code>POST /restcomm/2012-04-24/Accounts/{AccountSid}/Tags/{TagSid}.json</code></p>
-</div>
-<div class="paragraph">
-<p>Updates a Tag assigned to <code>accountSid</code> and returns its representation.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Tags can only be updated by the CSP Administrator.
-</td>
-</tr>
-</table>
-</div>
-<table class="tableblock frame-top grid-rows spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Body Parameter</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag name (Optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag value (Optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag type, so far the only possible value is <code>Billing</code> (Optional).</p></td>
-</tr>
-</tbody>
-</table>
-<div class="sect2">
-<h3 id="_examples_2"><a class="anchor" href="#_examples_2"></a>Examples</h3>
-<div class="paragraph">
-<p>Update Tag with Sid <code>TG9e21ed2cb5e548a6bcafbae1e14c238e</code> and set Value to <code>123456789</code>:</p>
-</div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-72 is-active" onclick="openLanguage('Curl', 72)">Curl</button>
-        <button class="sample-code-button scsIndex-72" onclick="openLanguage('Nodejs', 72)">Nodejs</button>
-        <button class="sample-code-button scsIndex-72" onclick="openLanguage('Python', 72)">Python</button>
-        <button class="sample-code-button scsIndex-72" onclick="openLanguage('Java', 72)">Java</button>
-      </div>
-      <div id="Curl-72" class="sample-language-72">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X PUT https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Tags/TAG_SID.json  \
-   -d 'Value=123456789' \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-72" class="sample-language-72" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-// Provide additional path parameters if applicable
-const TAG_SID = 'my_TAG_SID'
-
-request.({
-      method: 'PUT',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags/' + TAG_SID + '.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN },
-      form: {
-         'Value': '123456789'
-      }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-});
-</code></pre>
-      </div>
-      <div id="Python-72" class="sample-language-72" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-from urllib.parse import urlencode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-// Provide additional path parameters if applicable
-TAG_SID = 'my_TAG_SID'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass,
-    'Content-type': 'application/x-www-form-urlencoded',
-    'Accept': 'text/plain' }
-
-# Update POST parameters accordingly
-params = urlencode({
-   'Value': '123456789'
-})
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("PUT", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags/' + TAG_SID + '.json',
-      params, headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-72" class="sample-language-72" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-   // Provide additional path parameters if applicable
-   public static final String TAG_SID = "my_TAG_SID"
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL(("https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Tags/" + TAG_SID + ".json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("PUT");
-      conn.setDoOutput(true);
-      DataOutputStream os = new DataOutputStream(conn.getOutputStream());
-
-      // Update POST parameters accordingly
-      os.writeBytes("Value=123456789");
-      os.close();
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
-<div class="paragraph">
-<p>Example response:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-    "sid": "TG9e21ed2cb5e548a6bcafbae1e14c238e",
-    "name": "msisdn",
-    "value": "123456789",
-    "type": "Billing",
-    "owner_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "target_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "date_created": "Mon, 6 Jul 2020 12:27:08 +0300",
-    "date_updated": "Mon, 6 Jul 2020 12:27:45 +0300",
-    "uri": "/2012-04-24/Accounts/AC438bc7d280e2830b2f80904567b881eb/Tags/TG9e21ed2cb5e548a6bcafbae1e14c238e.json"
-}</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_get_tags_list"><a class="anchor" href="#_get_tags_list"></a>Get Tags List</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><code>GET /restcomm/2012-04-24/Accounts/{AccountSid}/Tags.json</code></p>
-</div>
-<div class="paragraph">
-<p>Return a list of Tags belonging to an `accountSid.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Tags can only be queried by the CSP Administrator.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_filtering"><a class="anchor" href="#_filtering"></a>Filtering</h3>
-<div class="paragraph">
-<p>The following filtering parameters are supported.</p>
-</div>
-<table class="tableblock frame-top grid-rows spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Query Parameter</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Only return Tags of specified Type. Currently only type <code>Billing</code> is supported</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_examples_3"><a class="anchor" href="#_examples_3"></a>Examples</h3>
-<div class="paragraph">
-<p>Query all tags assigned to <code>accountSid</code> of Type <code>Billing</code>.</p>
-</div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-73 is-active" onclick="openLanguage('Curl', 73)">Curl</button>
-        <button class="sample-code-button scsIndex-73" onclick="openLanguage('Nodejs', 73)">Nodejs</button>
-        <button class="sample-code-button scsIndex-73" onclick="openLanguage('Python', 73)">Python</button>
-        <button class="sample-code-button scsIndex-73" onclick="openLanguage('Java', 73)">Java</button>
-      </div>
-      <div id="Curl-73" class="sample-language-73">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Tags.json?Type=Billing  \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-73" class="sample-language-73" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-
-request({
-      method: 'GET',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags.json?Type=Billing',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-   }
-);
-</code></pre>
-      </div>
-      <div id="Python-73" class="sample-language-73" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass }
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("GET", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags.json?Type=Billing',
-      headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-73" class="sample-language-73" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL("https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Tags.json?Type=Billing");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("GET");
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
-<div class="paragraph">
-<p>Example response:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-    "tags": [
-        {
-            "sid": "TGfd1ac838aff64ddca73d3f90e51fe6a2",
-            "name": "msisdn",
-            "value": "+30XXXXXXXXX",
-            "type": "Billing",
-            "owner_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "target_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "date_created": "Fri, 3 Jul 2020 08:18:30 +0000",
-            "date_updated": "Fri, 3 Jul 2020 08:18:30 +0000",
-            "uri": "/2012-04-24/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tags/TGfd1ac838aff64ddca73d3f90e51fe6a2.json"
-        },
-        {
-            "sid": "TG2576e2cfc33a409699fab0b73b18139a",
-            "name": "tag-2",
-            "value": "value-2",
-            "type": "Billing",
-            "owner_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "target_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "date_created": "Fri, 3 Jul 2020 08:18:30 +0000",
-            "date_updated": "Fri, 3 Jul 2020 08:18:30 +0000",
-            "uri": "/2012-04-24/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tags/TG2576e2cfc33a409699fab0b73b18139a.json"
-        },</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_get_single_tag_information"><a class="anchor" href="#_get_single_tag_information"></a>Get single Tag Information</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><code>GET /restcomm/2012-04-24/Accounts/{AccountSid}/Tags/{TagSid}.json</code></p>
-</div>
-<div class="paragraph">
-<p>Return detailed information for a single Tag identified by the TagSid path parameter in the URL.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Tags can only be queried by CSP Administrators
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_examples_4"><a class="anchor" href="#_examples_4"></a>Examples</h3>
-<div class="paragraph">
-<p>Retrieve the information of the Tags with Sid TGf0a2ca58c89b41bc829a319371a7a959:</p>
-</div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-74 is-active" onclick="openLanguage('Curl', 74)">Curl</button>
-        <button class="sample-code-button scsIndex-74" onclick="openLanguage('Nodejs', 74)">Nodejs</button>
-        <button class="sample-code-button scsIndex-74" onclick="openLanguage('Python', 74)">Python</button>
-        <button class="sample-code-button scsIndex-74" onclick="openLanguage('Java', 74)">Java</button>
-      </div>
-      <div id="Curl-74" class="sample-language-74">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X GET https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Tags/TAG_SID.json  \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-74" class="sample-language-74" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-// Provide additional path parameters if applicable
-const TAG_SID = 'my_TAG_SID'
-
-request({
-      method: 'GET',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags/' + TAG_SID + '.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-   }
-);
-</code></pre>
-      </div>
-      <div id="Python-74" class="sample-language-74" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-// Provide additional path parameters if applicable
-TAG_SID = 'my_TAG_SID'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass }
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("GET", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags/' + TAG_SID + '.json',
-      headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-74" class="sample-language-74" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-   // Provide additional path parameters if applicable
-   public static final String TAG_SID = "my_TAG_SID"
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL("https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Tags/" + TAG_SID + ".json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("GET");
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
-<div class="paragraph">
-<p>Example response:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-    "sid": "TGf0a2ca58c89b41bc829a319371a7a959",
-    "name": "msisdn",
-    "value": "+30XXXXXXXXX",
-    "type": "Billing",
-    "owner_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "target_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "date_created": "Fri, 3 Jul 2020 10:20:07 +0000",
-    "date_updated": "Fri, 3 Jul 2020 10:20:07 +0000",
-    "uri": "/2012-04-24/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tags/TGf0a2ca58c89b41bc829a319371a7a959.json"
-}</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_delete_tag"><a class="anchor" href="#_delete_tag"></a>Delete Tag</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><code>DELETE /restcomm/2012-04-24/Accounts/{AccountSid}/Tags/{TagSid}`</code></p>
-</div>
-<div class="paragraph">
-<p>Deletes a Tag.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Tags can only be deleted by the CSP Administrator.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_examples_5"><a class="anchor" href="#_examples_5"></a>Examples</h3>
-<div class="paragraph">
-<p>Delete tag with Sid <code>TGf0a2ca58c89b41bc829a319371a7a959</code>:</p>
-</div>
-      <div class="sample-code-bar">
-        <button class="sample-code-button scsIndex-75 is-active" onclick="openLanguage('Curl', 75)">Curl</button>
-        <button class="sample-code-button scsIndex-75" onclick="openLanguage('Nodejs', 75)">Nodejs</button>
-        <button class="sample-code-button scsIndex-75" onclick="openLanguage('Python', 75)">Python</button>
-        <button class="sample-code-button scsIndex-75" onclick="openLanguage('Java', 75)">Java</button>
-      </div>
-      <div id="Curl-75" class="sample-language-75">
-        <pre class="highlightjs highlight"><code class="language-console hljs samplecode-container" data-lang="console">curl -X DELETE https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID/Tags/TAG_SID.json  \
-   -u 'YourAccountSid:YourAuthToken'
-</code></pre>
-      </div>
-      <div id="Nodejs-75" class="sample-language-75" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-javascript hljs samplecode-container" data-lang="javascript">const request = require('request');
-
-// Provide your Account Sid and Auth Token from your Console Account page
-const ACCOUNT_SID = 'my_ACCOUNT_SID';
-const AUTH_TOKEN = 'my_AUTH_TOKEN';
-// Provide additional path parameters if applicable
-const TAG_SID = 'my_TAG_SID'
-
-request({
-      method: 'DELETE',
-      url: 'https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags/' + TAG_SID + '.json',
-      auth: { 'user': ACCOUNT_SID, 'pass': AUTH_TOKEN }
-   },
-   function (error, response, body) {
-      // Add your business logic below; status can be found at 'response.statusCode' and response body at 'body'
-      ...
-   }
-);
-</code></pre>
-      </div>
-      <div id="Python-75" class="sample-language-75" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-python hljs samplecode-container" data-lang="python">from http.client import HTTPSConnection
-from base64 import b64encode
-
-# Provide your Account Sid and Auth Token from your Console Account page
-ACCOUNT_SID = 'my_ACCOUNT_SID'
-AUTH_TOKEN = 'my_AUTH_TOKEN'
-// Provide additional path parameters if applicable
-TAG_SID = 'my_TAG_SID'
-
-userAndPass = b64encode(bytes(ACCOUNT_SID + ':' + AUTH_TOKEN, 'utf-8')).decode("ascii")
-headers = { 'Authorization' : 'Basic %s' %  userAndPass }
-
-conn = HTTPSConnection('mycompany.restcomm.com')
-conn.request("DELETE", '/restcomm/2012-04-24/Accounts/' + ACCOUNT_SID + '/Tags/' + TAG_SID + '.json',
-      headers=headers)
-res = conn.getresponse()
-
-# Add your business logic below; status can be found at 'res.status', reason at 'res.reason' and response body can be retrieved with res.read()
-...
-</code></pre>
-      </div>
-      <div id="Java-75" class="sample-language-75" style="display:none">
-        <pre class="highlightjs highlight"><code class="language-java hljs samplecode-container" data-lang="java">import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.Base64;
-
-public class JavaSampleClass {
-   // Provide your Account Sid and Auth Token from your Console Account page
-   public static final String ACCOUNT_SID = "my_ACCOUNT_SID";
-   public static final String AUTH_TOKEN = "my_AUTH_TOKEN";
-   // Provide additional path parameters if applicable
-   public static final String TAG_SID = "my_TAG_SID"
-
-   public static void main(String[] args) throws Exception {
-      String userAndPass = ACCOUNT_SID + ':' + AUTH_TOKEN;
-      String encoded = Base64.getEncoder().encodeToString(userAndPass.getBytes());
-
-      URL url = new URL("https://mycompany.restcomm.com/restcomm/2012-04-24/Accounts/" + ACCOUNT_SID + "/Tags/" + TAG_SID + ".json");
-      HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
-      conn.setRequestProperty("Authorization", "Basic " + encoded);
-      conn.setRequestMethod("DELETE");
-
-      // Add your business logic below; response code can be obtained from 'conn.getResponseCode()' and input stream from 'conn.getInputStream()'
-      ...
-  }
-}
-</code></pre>
-      </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tags_attributes"><a class="anchor" href="#_tags_attributes"></a>Tags Attributes</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following is a list of attributes of the Tags resource:</p>
-</div>
-<table class="tableblock frame-top grid-rows spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Attribute</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A string that uniquely identifies the Tag.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the tag.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The value of the tag.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The type of the tag (currently supporting type <code>Billing</code>).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DateCreated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date on which this Tag was created.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DateUpdated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date on which this Tag was last updated.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OwnerSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The AccountSid for the owner of this Tag.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TargetSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The AccountSid where the Tag is assigned.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uri</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The suffix for the HTTP resource, relative to the base organization url. For example when creating a Tag, the Uri will be <code>/2012-04-24/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tags/TGf0a2ca58c89b41bc829a319371a7a959.json</code>.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_passing_custom_tags_in_smpp_tlv_mapping"><a class="anchor" href="#_passing_custom_tags_in_smpp_tlv_mapping"></a>Passing Custom Tags in SMPP TLV Mapping</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can map billing Tags or Restcomm core network headers to <a href="https://www.activexperts.com/sms-component/sms/smpptlv/">SMPP TLVs</a> for billing reconciliation or other purposes.</p>
-</div>
-<div class="paragraph">
-<p><code>PUT /restcomm/2012-04-24/Profiles/{ProfileSid}`</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Subscriber Profiles can only be modified by the CSP Administrators that.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_example_request"><a class="anchor" href="#_example_request"></a>Example Request</h3>
-<div class="listingblock">
-<div class="content">
-<pre>{
-    "multiProvider": {
-        "outbound-sms": [
-            {
-                "name": "your-network-profile",
-                "serverIpAddress": "10.0.0.1:9999",
-                "version": "3.4",
-                "systemId": "esmeid",
-                "password": "esmepass",
-                "sessionType": "CLIENT",
-                "headerTranslationMap": {
-                    "msisdn": "X-TLV-COCTET-5",
-                    "secondtagname": "X-TLV-1BYTE-3"
-                }
-            }
-        ]
-    }
-}</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h3>
-<table class="tableblock frame-top grid-rows spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Attribute</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of your profile</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">serverIpAddress</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The IP address of the server</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The SMPP version you are using.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">systemId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The SystemID and port used in BIND request to SMSC. E.g. <code>10.0.0.1:9999</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The password used in BIND request to SMSC.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sessionType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Either a CLIENT or SERVER. Specifies how Restcomm will behave when interconnecting with your SMPP infrastructure. Restcomm will only allow Transceiver sessions.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">headerTranslationMap</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Your TLV mappings list. A single mapping has the following format: "tag_name": "X-TLV-&lt;type(1BYTE|2BYTE|4BYTE|OCTET|COCTET)&gt;-&lt;id&gt;".  The TLV ID is a decimal that is converted to hexadecimal when mapped to SMPP.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-For more information about SMPP specification, please visit <a href="https://smpp.org/" class="bare">https://smpp.org/</a>.
-</td>
-</tr>
-</table>
-</div>
-</div>
 </div>
 </div>
 </article>
