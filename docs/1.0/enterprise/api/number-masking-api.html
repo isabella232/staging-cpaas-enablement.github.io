@@ -1537,6 +1537,22 @@
             </span>
               </div>
                           </li>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="task-router-api.html">Task Router</a>
+
+            </span>
+              </div>
+                          </li>
   </ul>
             </li>
   </ul>
@@ -6746,7 +6762,12 @@ Usage Records data is collected every 15 minutes. So there is possibility that o
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">category</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Only include Usage records for specific Category. All, voice, message or voiceandmessage. If not passed, default is “all” which includes Contexts created for every mode.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Only include Usage records for specific Category.</p>
+<p class="tableblock">- all<br>
+- voice<br>
+- message<br>
+- voiceandmessage</p>
+<p class="tableblock">If not passed, default is “all” which includes Contexts created for every mode.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">startTime</p></td>
@@ -7200,8 +7221,17 @@ Usage Records data is collected every 15 minutes. So there is possibility that o
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>Filters mentioned in <a href="number-masking-api.html#_filtering_2">Phone Numbers Filtering section</a> can also be passed.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The filters mentioned in <a href="number-masking-api.html#_filtering_2">Phone Numbers Filtering section</a> can also be passed.
+</td>
+</tr>
+</table>
 </div>
 <div class="sect4">
 <h5 id="_example_25"><a class="anchor" href="#_example_25"></a>Example:</h5>
