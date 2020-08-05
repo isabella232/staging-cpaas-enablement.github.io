@@ -1860,6 +1860,23 @@
             </span>
               </div>
                           </li>
+            <li class="nav-item is-current-page" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="task-router-api.html">Task Router</a>
+
+            </span>
+              </div>
+                          </li>
   </ul>
             </li>
             <li class="nav-item" data-depth="1">
@@ -2243,18 +2260,2095 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="task-router-api.html">Task Router API</a></li>
+    <li class="crumb"><a href="../../turnkey-applications/smart-2fa.html">CSP:Turnkey Apps APIs</a></li>
+    <li class="crumb"><a href="task-router-api.html">CSP:Task Router</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
   <h1>Task Router API</h1>
 <div class="sect1">
-<h2 id="_coming_soon"><a class="anchor" href="#_coming_soon"></a>Coming Soon</h2>
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Telestax TaskRouter exposes white label API to allow Enterprises to create Contact Center kind of Solution.</p>
+</div>
+<div class="paragraph">
+<p>Below API explains how CSP can manage Enterprise and add Users under Enterprise.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_enterprise"><a class="anchor" href="#_enterprise"></a>Enterprise</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>CSP’s can create, manage, delete Enterprises. This is logical grouping of CSP customers and helps to easily manage billing/invoices for Enterprise.</p>
+</div>
+<div class="sect2">
+<h3 id="_create_enterprise"><a class="anchor" href="#_create_enterprise"></a>Create Enterprise</h3>
+<div class="paragraph">
+<p>This endpoint will be used to create an enterprise in the TaskRouter. Create Enterprise will add unique Enterprise names for given CSP.</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri"><a class="anchor" href="#_base_resource_uri"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_create_context_resource_uri"><a class="anchor" href="#_create_context_resource_uri"></a>Create Context Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/enterprises</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations"><a class="anchor" href="#_supported_operations"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP POST: Create Enterprise</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_request_parameters"><a class="anchor" href="#_request_parameters"></a>Request Parameters</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory name of Enterprise. Name must be unique within the given CSP Organisation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseAdmin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise User data  explained in the table below  that will be assigned as the admin of this enterprise.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_enterprise_admin_parameters"><a class="anchor" href="#_enterprise_admin_parameters"></a>Enterprise Admin Parameters:</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise Admin data Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Friendly name of the Enterprise admin</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">emailId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise Admin User email Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise Admin password</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Enterprise Admin is Restcomm Sub-Account as of today. If this user is already present in Restcomm, the user gets access to TaskRouter. For existing users, the password field is ignored and not reset in Restcomm.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_response_body"><a class="anchor" href="#_response_body"></a>Response Body</h4>
+<div class="paragraph">
+<p>Response Body will carry Code, corresponding message and data of Enterprise if it was  successfully created. HTTP response will be 201 Created (OK).</p>
+</div>
+<div class="paragraph">
+<p>The response returned is the JSON body as shown in the example below. Each parameters are as explained below</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occurred or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise data as explained in the Data Parameter below.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_data_parameter"><a class="anchor" href="#_data_parameter"></a>Data Parameter</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Enterprise Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Restcomm Account that created/ this particular Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this Enterprise was created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this Enterprise was updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of this Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get only this specific Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseAdminEmail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email id of enterprise Admin</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseAdminSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm Account sid created under Restcomm for Enterprise Admin user</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_response_parameters"><a class="anchor" href="#_response_parameters"></a>Response Parameters</h4>
+<div class="paragraph">
+<p>Create Enterprise API can also return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">HTTP Status</th>
+<th class="tableblock halign-left valign-top">Error Message</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">475</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name not unique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name is already exist in database</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Enterprise, Update Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">476</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User not unique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User already exists</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Enterprise, Update Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">477</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error in creating subaccount on Restcomm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error while creating subaccount in Restcomm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Enterprise, Update Enterprise</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example"><a class="anchor" href="#_example"></a>Example:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "name": "test Enterprise",
+  "enterpriseAdmin": {
+    "emailId": "Testenterprise@telestax.com",
+    "password": "Telestax@123",
+    "name": "test user"
+  }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  https://cloud.restcomm.com/taskrouter/enterprises \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "test Enterprise",
+  "enterpriseAdmin": {
+    "emailId": "Testenterprise@telestax.com",
+    "password": "Telestax@123",
+    "name": "test user"
+  }
+}’</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If creation of Enterprise  is successful, below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "data": {
+    "sid": "EN54e3389b5bf34896876b86e139cca614",
+    "dateUpdated": "2020-01-27T11:14:10+0000",
+    "dateCreated": "2020-01-27T11:14:10+0000",
+    "accountEmail": "subhahu.reddy@telestax.com",
+    "uri": "/taskrouter/enterprises/search/EN54e3389b5bf34896876b86e139cca614",
+    "name": "test Enterprise",
+    "enterpriseAdminEmail": "Testenterprise@telestax.com",
+    "enterpriseAdminSid": "RCSe107da10db554ef79934fd7aa6a97f71"
+
+  },
+  "code": 200,
+  "message": "OK"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If creation fails, below response is returned with corresponding HTTP Error Code</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "errorCode": "475",
+    "message": "Enterprise name not unique",
+    "data": {
+        "name": "test Enterprise",
+        "enterpriseAdmin": {
+            "emailId": "Testenterprise@telestax.com",
+            "password": "Telestax@123",
+            "status": "ACTIVE",
+            "name": "test user"
+        }
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_get_list_of_enterprise"><a class="anchor" href="#_get_list_of_enterprise"></a>Get list of Enterprise</h3>
+<div class="paragraph">
+<p>List Enterprise API allows users to list all the Enterprise created under that “Organisation” which means under that CSP.</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_2"><a class="anchor" href="#_base_resource_uri_2"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_get_list_of_enterprise_resource_uri"><a class="anchor" href="#_get_list_of_enterprise_resource_uri"></a>Get List of Enterprise Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/enterprises/search</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_2"><a class="anchor" href="#_supported_operations_2"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP GET: List Enterprise</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_paging"><a class="anchor" href="#_paging"></a>Paging</h4>
+<div class="paragraph">
+<p>The following paging parameters are supported</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which page of Enterprise records to return, starting from 0.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the search API is called without page and pageSize, by default pageSize will be 10 and page will be 0 to avoid retrieving all data in a single API call.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_filtering"><a class="anchor" href="#_filtering"></a>Filtering</h4>
+<div class="paragraph">
+<p>Following filtering parameters are supported</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show Enterprises that match name text, partially or fully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show enterprises that were created on this date/time or later, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-05T22:45:32) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-05). When only a date is provided the time is assumed to be at midnight of the given date. NOTEthat the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show enterprises that were created on this date/time or earlier, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-06T02:10:03) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-06). When only a date is provided the time is assumed to be at midnight of the given date. NOTEthat the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_sorting_information"><a class="anchor" href="#_sorting_information"></a>Sorting Information</h4>
+<div class="paragraph">
+<p>You can use the SortBy GET query parameter to determine which attribute you want to sort by and in which direction; direction can either be 'asc' for ascending and 'desc' for descending sort ordering. Here’s the overall format: SortBy=&lt;sorting attribute&gt;:&lt;direction&gt;. If no direction parameter is provided, then the listing of calls is sorted by the attribute in ascending order. Below you can find the possible attributes you can sort by:</p>
+</div>
+<div class="sect4">
+<h5 id="_sort_attributes"><a class="anchor" href="#_sort_attributes"></a>Sort Attributes</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by date when Enterprise was created</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_response_parameters_2"><a class="anchor" href="#_response_parameters_2"></a>Response Parameters</h4>
+<div class="paragraph">
+<p>Search Enterprise API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
+</div>
+<div class="paragraph">
+<p>The response returned is JSON body as shown in the example below. Each SDR parameters are as explained below</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data of search as explained in table below</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_data_parameters"><a class="anchor" href="#_data_parameters"></a>Data parameters</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">result</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of Enterprise  data as explained in the table Data Parameter .</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">total</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total Number of records</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which page of records to return.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">numPages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total number of pages</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">start</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting offset of page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">end</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ending offset of page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">firstPageUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get records in First page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nextPageUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get records in next page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get records</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_2"><a class="anchor" href="#_example_2"></a>Example:</h4>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X GET \
+  https://cloud.restcomm.com/taskrouter/enterprises/search?pageSize=2&amp;page=0 \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "data": {
+        "result": [
+            {
+                "sid": "EN838bcdf35f9d421fad3ab516195b873b",
+                "dateUpdated": "2020-01-21T13:35:19+0000",
+                "dateCreated": "2020-01-21T13:35:16+0000",
+                "accountEmail": "derick.adams@acme.com",
+                "uri": "/taskrouter/enterprises/search/EN838bcdf35f9d421fad3ab516195b873b",
+                "name": "Enterprise2",
+"enterpriseAdminSid": "RCSe107da10db554ef79934fd7aa6a97f72",
+                "enterpriseAdminEmail": "testbg@acme-ent2.com"
+            },
+            {
+                "sid": "ENc4a6ddacbea548f7b7b2dca120d5ff20",
+                "dateUpdated": "2020-01-15T05:36:10+0000",
+                "dateCreated": "2020-01-15T05:36:09+0000",
+                "accountEmail": "derick.adams@acme.com",
+                "uri": "/taskrouter/enterprises/search/ENc4a6ddacbea548f7b7b2dca120d5ff20",
+                "name": "Enterprise1",
+"enterpriseAdminSid": "RCSe107da10db554ef79934fd7aa6a97f71",
+                "enterpriseAdminEmail": "testbg@acme-ent1.com"
+            }
+        ],
+        "pageSize": 10,
+        "total": 2,
+        "page": 0,
+        "numPages": 1,
+        "start": 0,
+        "end": 1,
+        "firstPageUri": "/taskrouter/enterprises/search/?pageSize=10&amp;page=0",
+        "uri": "/taskrouter/enterprises/search/?pageSize=10&amp;page=0"
+    },
+    "code": 200,
+    "message": "OK"
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_get_single_enterprise"><a class="anchor" href="#_get_single_enterprise"></a>Get Single Enterprise</h3>
+<div class="paragraph">
+<p>Single Enterprise search API allows users to retrieve specific Enterprise created under that “Organisation” which means under that CSP.</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_3"><a class="anchor" href="#_base_resource_uri_3"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_get_single_enterprise_resource_uri"><a class="anchor" href="#_get_single_enterprise_resource_uri"></a>Get Single Enterprise Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/enterprises/search/{EnterpriseId}</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_3"><a class="anchor" href="#_supported_operations_3"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP GET: Specific Enterprise</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_response_parameters_3"><a class="anchor" href="#_response_parameters_3"></a>Response Parameters</h4>
+<div class="paragraph">
+<p>Search Enterprise API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">478</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise is not found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Enterprise, Search Enterprise, Delete Enterprise</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example_3"><a class="anchor" href="#_example_3"></a>Example</h4>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X GET \
+  https://cloud.restcomm.com/taskrouter/enterprises/search/EN838bcdf35f9d421fad3ab516195b873b \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "data": {
+        "sid": "EN838bcdf35f9d421fad3ab516195b873b",
+        "dateUpdated": "2020-01-21T13:35:19+0000",
+        "dateCreated": "2020-01-21T13:35:16+0000",
+        "accountEmail": "derick.adams@acme.com",
+        "uri": "/taskrouter/enterprises/search/EN838bcdf35f9d421fad3ab516195b873b",
+        "name": "Enterprise2",
+        "enterpriseAdminSid": "RCSe107da10db554ef79934fd7aa6a97f71",
+        "enterpriseAdminEmail": "testbg@acme.com"
+    },
+    "code": 200,
+    "message": "OK"
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_update_enterprise"><a class="anchor" href="#_update_enterprise"></a>Update Enterprise</h3>
+<div class="paragraph">
+<p>This endpoint will be used to update an existing enterprise.</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_4"><a class="anchor" href="#_base_resource_uri_4"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_update_enterprise_resource_uri"><a class="anchor" href="#_update_enterprise_resource_uri"></a>Update Enterprise Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/enterprises/{enterpriseSid}</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_4"><a class="anchor" href="#_supported_operations_4"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP PUT: Update Enterprise</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_request_parameters_2"><a class="anchor" href="#_request_parameters_2"></a>Request Parameters</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Id of the enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name must be unique within the given CSP Organisation.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_response_body_2"><a class="anchor" href="#_response_body_2"></a>Response Body</h4>
+<div class="paragraph">
+<p>Response Body will carry Code, corresponding message and data of Enterprise if it was  successfully updated. HTTP response will be 200 OK.</p>
+</div>
+<div class="paragraph">
+<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occurred or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise data as explained in the table Data Parameter.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Update Enterprise API can also return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">HTTP Status</th>
+<th class="tableblock halign-left valign-top">Error Message</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">475</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name not unique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise name is already exist in database</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Enterprise, Update Enterprise</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">478</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise Id not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Enterprise, Update Enterprise</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example_4"><a class="anchor" href="#_example_4"></a>Example</h4>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "name" : "Enterprise3"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X PUT \
+  https://cloud.restcomm.com/taskrouter/enterprises/EN54e3389b5bf34896876b86e139cca614  \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name" : "Enterprise3"
+}’</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If updating of Enterprise  is successful, below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "data": {
+    "sid": "EN54e3389b5bf34896876b86e139cca614",
+    "dateUpdated": "2020-01-27T11:14:10+0000",
+    "dateCreated": "2020-01-27T11:14:10+0000",
+    "accountEmail": "subhahu.reddy@telestax.com",
+    "uri": "/taskrouter/enterprises/search/EN54e3389b5bf34896876b86e139cca614",
+    "name": "Enterprise3",
+    "enterpriseAdminEmail": "Testenterprise@telestax.com"
+  },
+  "code": 200,
+  "message": "OK"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the update of the enterprise fails, below is the response returned. Exact error code and message will depend on error occurred</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "errorCode": "478",
+    "message": "Enterprise not found",
+    "data": {
+        "sid": "EN838bcdf35f9d421d3ab516195b873b"
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete_enterprise"><a class="anchor" href="#_delete_enterprise"></a>Delete Enterprise</h3>
+<div class="paragraph">
+<p>This endpoint will be used to delete an existing enterprise.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you Delete an Enterprise, all the users under that Enterprise will be “Suspended” under Restcomm. If you want to “Close” these accounts, please sign in using Restcomm Console and mark these Accounts as closed.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_5"><a class="anchor" href="#_base_resource_uri_5"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_delete_enterprise_resource_uri"><a class="anchor" href="#_delete_enterprise_resource_uri"></a>Delete Enterprise Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/enterprises/{enterpriseSid}</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_5"><a class="anchor" href="#_supported_operations_5"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP Delete: Delete Enterprise</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_request_parameters_3"><a class="anchor" href="#_request_parameters_3"></a>Request Parameters</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SID to uniquely identify an enterprise</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_response_body_3"><a class="anchor" href="#_response_body_3"></a>Response Body</h4>
+<div class="paragraph">
+<p>Response Body will carry Code, corresponding message and data of Enterprise if it was  successfully deleted. HTTP response will be 200 OK.</p>
+</div>
+<div class="paragraph">
+<p>The response returned is the JSON body as shown in the example below. Each parameters are as explained below</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occurred or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise data as explained in the table  Data Parameter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_response_parameters_4"><a class="anchor" href="#_response_parameters_4"></a>Response Parameters</h4>
+<div class="paragraph">
+<p>Delete Enterprise API can also return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">HTTP Status</th>
+<th class="tableblock halign-left valign-top">Error Message</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">478</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise SID doesn’t exist in the system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Enterprise,</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete enterprise,</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get Enterprise</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">479</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise has Applications assigned to it</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example_5"><a class="anchor" href="#_example_5"></a>Example:</h4>
+<div class="paragraph">
+<p>the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X DELETE \
+  https://cloud.restcomm.com/taskrouter/enterprises/ENb6eb071d21124dbab20b095c25f1274f   \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If deletion of Enterprise  is successful, below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "data": {
+        "sid": "EN54e3389b5bf34896876b86e139cca614",
+        "dateUpdated": "2020-01-27T11:14:14+0000",
+        "dateCreated": "2020-01-27T11:14:10+0000",
+        "accountEmail": "subhahu.reddy@telestax.com",
+        "uri": "/taskrouter/enterprises/search/EN54e3389b5bf34896876b86e139cca614",
+        "name": "test Enterprise",
+        "enterpriseAdminEmail": "Testenterprise@telestax.com"
+    },
+    "code": 200,
+    "message": "OK"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If delete fails, below response is returned with corresponding HTTP Error Code</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "errorCode": "478",
+    "message": "Enterprise not found",
+    "data": {
+        "sid": "EN54e3389b5bf34896876b86e139cca614"
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_users"><a class="anchor" href="#_users"></a>Users</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_the_task_router_api_documentation_is_under_development_and_will_be_coming_soon"><a class="anchor" href="#_the_task_router_api_documentation_is_under_development_and_will_be_coming_soon"></a>The Task Router API documentation is under development and will be coming soon.</h3>
-
+<h3 id="_create_user"><a class="anchor" href="#_create_user"></a>Create User</h3>
+<div class="paragraph">
+<p>This endpoint will be used to create user depending on role as explained below</p>
+</div>
+<div class="paragraph">
+<p>SUPPORT: Role for Telestax Support
+CRUD another user with role SUPPORT
+Read all Enterprise and within Enterprise
+Read all Users
+Read all Workspace and within Workspace
+Read all Workflow, TaskQueue, Workers and Tasks
+Read Interactions
+Read Usage Records</p>
+</div>
+<div class="paragraph">
+<p>CSP_ADMIN : Role for CSP Admin (Admin Account in Restcomm).
+Can create Enterprise and within Enterprise
+CRUD users with role ENTERPRISE_ADMIN
+CRUD Workspaces and within Workspace
+CRUD Workflow, TaskQueue, Workers and Tasks
+Read Interactions
+Read Usage Records</p>
+</div>
+<div class="paragraph">
+<p>ENTERPRISE_ADMIN : Role for Enterprise users
+CRUD users with role ENTERPRISE_ADMIN
+CRUD Workspaces and within Workspace
+CRUD Workflow, TaskQueue, Workers and Tasks
+Read Interactions
+Read Usage Records</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_6"><a class="anchor" href="#_base_resource_uri_6"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_add_user_resource_uri"><a class="anchor" href="#_add_user_resource_uri"></a>Add User Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/users</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_6"><a class="anchor" href="#_supported_operations_6"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP POST: Add User</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_request_parameters_4"><a class="anchor" href="#_request_parameters_4"></a>Request Parameters</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Full name of the user being added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">emailId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Required. Email Id of the user</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password associated with this user.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Required. Possible values are:
+SUPPORT (This is specifically for Telestax Support Not yet implemented) <br>
+CSP_ADMIN <br>
+ENTERPRISE_ADMIN</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Will be set to active if not passed. Possible values are: <br></p>
+<p class="tableblock">ACTIVE<br>
+SUSPENDED<br>
+DELETED</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sid of the enterprise the user belongs to.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If Sub-Account was already added in Restcomm-console, adding the same user as ENTERPRISE_ADMIN is possible by specifying the same emailId. The password pass will not be changed in Restcomm and users can still sign in with existing credentials.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_response_body_4"><a class="anchor" href="#_response_body_4"></a>Response Body</h4>
+<div class="paragraph">
+<p>Response Body will carry the Code, corresponding message and data of the User if it was  successfully created. HTTP response will be 200 Created  (OK).</p>
+</div>
+<div class="paragraph">
+<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User data as explained in the table below.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_data_parameter_2"><a class="anchor" href="#_data_parameter_2"></a>Data Parameter</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique User Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accountEmail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Restcomm Account that created this particular user</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this User was created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateUpdated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp when this User was updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of this user</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">emailId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email Id of the user created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role of the user</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of the user (ACTIVE/SUSPENDED)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get only this specific user</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_response_parameters_5"><a class="anchor" href="#_response_parameters_5"></a>Response Parameters</h4>
+<div class="paragraph">
+<p>Create User API can also return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">HTTP Status</th>
+<th class="tableblock halign-left valign-top">Error Message</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">499</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error in creating subaccount on Restcomm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error while creating subaccount in restcomm(password fail)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create User, Update User</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">478</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise for which user is to be added is not found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create User, Update User</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User not unique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A user already exists in the DB with provided emailId</p>
+<p class="tableblock">Create User, Update User</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">501</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example_6"><a class="anchor" href="#_example_6"></a>Example:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>{
+   "status":"ACTIVE",
+   "name":"Test BG 2",
+   "enterpriseSid":"EN838bcdf35f9d421fad3ab516195b873b",
+   "emailId":"testbgadmin2@telestax.com",
+   "password":"W31Comet0@@!",
+   "role":"ENTERPRISE_ADMIN"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST \
+  https://cloud.restcomm.com/taskrouter/users  \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+   "status":"ACTIVE",
+   "name":"Test BG 2",
+   "enterpriseSid":"EN838bcdf35f9d421fad3ab516195b873b",
+   "emailId":"testbgadmin2@telestax.com",
+   "password":"W31Comet0@@!",
+   "role":"ENTERPRISE_ADMIN"
+}’</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If creation of User  is successful, below is the response returned</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "data": {
+        "sid": "RCS31e4303c3d06409a9e7a847fc7221bd0",
+        "dateUpdated": "2020-01-27T05:50:02+0000",
+        "dateCreated": "2020-01-27T05:50:02+0000",
+        "accountEmail": "subhahu.reddy@telestax.com",
+        "uri": "/taskrouter/users/search/RCS31e4303c3d06409a9e7a847fc7221bd0",
+        "emailId": "testbgadmin2@telestax.com",
+        "status": "ACTIVE",
+        "role": "ENTERPRISE_ADMIN",
+        "name": "Test BG 2"
+    },
+    "code": 200,
+    "message": "OK"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If creation fails, below response is returned with corresponding HTTP Error Code</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "errorCode": "499",
+    "message": "Error in creating subaccount on Restcomm",
+    "data": {
+        "emailId": "testbgadmin2@telestax.com",
+        "password": "W31Comet0@@!",
+        "status": "ACTIVE",
+        "role": "ENTERPRISE_ADMIN",
+        "name": "Test BG 2",
+        "enterpriseSid": "EN838bcdf35f9d421fad3ab516195b873b"
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_get_list_of_users"><a class="anchor" href="#_get_list_of_users"></a>Get list of Users</h3>
+<div class="paragraph">
+<p>This endpoint will be used to get a list of  users.
+==== Base Resource URI
+<a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+<div class="sect3">
+<h4 id="_get_user_list_resource_uri"><a class="anchor" href="#_get_user_list_resource_uri"></a>Get User list  Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/users/search</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_7"><a class="anchor" href="#_supported_operations_7"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP GET: Get User list</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_paging_2"><a class="anchor" href="#_paging_2"></a>Paging</h4>
+<div class="paragraph">
+<p>The following paging parameters are supported</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which page of Users records to return, starting from 0.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If search API is called without page and pageSize, by default pageSize will be 10 and page will be 0 to avoid retrieving all data in a single API call.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_filtering_2"><a class="anchor" href="#_filtering_2"></a>Filtering</h4>
+<div class="paragraph">
+<p>Following filtering parameters are supported</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show Users that match name text, partially or fully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">emailId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show Users that match email text, partially or fully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show users that have this particular role.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional Parameter. Only show users for this particular enterprise.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show users that have this particular status.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show users that were created on this date/time or later, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-05T22:45:32) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-05). When only a date is provided the time is assumed to be at midnight of the given date. NOTEthat the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter. Only show users that were created on this date/time or earlier, given as an ISO-8601 date/time string, like YYYY-MM-DDTHH:MM:SS (for example 2018-10-06T02:10:03) or, if you want to omit the time, YYYY-MM-DD (for example 2018-10-06). When only a date is provided the time is assumed to be at midnight of the given date. NOTEthat the given date/time is inclusive and is assumed to be in UTC timezone.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_sorting_information_2"><a class="anchor" href="#_sorting_information_2"></a>Sorting Information</h4>
+<div class="paragraph">
+<p>You can use the SortBy GET query parameter to determine which attribute you want to sort by and in which direction; direction can either be 'asc' for ascending and 'desc' for descending sort ordering. Here’s the overall format: SortBy=&lt;sorting attribute&gt;:&lt;direction&gt;. If no direction parameter is provided, then the listing of calls is sorted by the attribute in ascending order. Below you can find the possible attributes you can sort by:</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sort_attributes_2"><a class="anchor" href="#_sort_attributes_2"></a>Sort Attributes</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">email</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort by created date</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_response_body_5"><a class="anchor" href="#_response_body_5"></a>Response Body</h4>
+<div class="paragraph">
+<p>Response Body will carry Code, corresponding message and data of User if it was  successfully fetched. HTTP response will be 200 OK.</p>
+</div>
+<div class="paragraph">
+<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data of search as explained in table below</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_data_parameters_2"><a class="anchor" href="#_data_parameters_2"></a>Data parameters</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">result</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of Users data as explained in the table Data Parameter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">total</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total Number of records</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which page of records to return.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">numPages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total number of pages</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">start</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting offset of page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">end</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ending offset of page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">firstPageUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get records in First page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nextPageUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get records in next page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique URI that you can call to get records</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_7"><a class="anchor" href="#_example_7"></a>Example:</h4>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X GET \
+  https://cloud.restcomm.com/taskrouter/users/search?enterpriseSid=EN54e3389b5bf34896876b86e139cca614 \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "data": {
+    "result": [
+      {
+        "sid": "RCS6de60a360c75453893b5b6d1503b7276",
+        "dateUpdated": "2020-01-27T11:14:14+0000",
+        "dateCreated": "2020-01-27T11:14:14+0000",
+        "accountEmail": "subhahu.reddy@telestax.com",
+        "uri": "/taskrouter/users/search/RCS6de60a360c75453893b5b6d1503b7276",
+        "emailId": "Testenterprise@telestax.com",
+        "status": "ACTIVE",
+        "role": "ENTERPRISE_ADMIN",
+        "name": "testbg"
+      }
+    ],
+    "pageSize": 10,
+    "total": 1,
+    "page": 0,
+    "numPages": 1,
+    "start": 0,
+    "end": 0,
+"firstPageUri": "/taskrouter/users/search/?enterpriseSid=EN54e3389b5bf34896876b86e139cca614&amp;pageSize=10&amp;page=0",
+"uri": "/taskrouter/users/search/?enterpriseSid=EN54e3389b5bf34896876b86e139cca614&amp;pageSize=10&amp;page=0"
+  },
+  "code": 200,
+  "message": "OK"
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_get_single_user"><a class="anchor" href="#_get_single_user"></a>Get Single User</h3>
+<div class="paragraph">
+<p>Single Enterprise search API allows users to retrieve specific User.</p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_7"><a class="anchor" href="#_base_resource_uri_7"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_get_single_user_resource_uri"><a class="anchor" href="#_get_single_user_resource_uri"></a>Get Single User Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/users/search/{userId}</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_8"><a class="anchor" href="#_supported_operations_8"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP GET: Specific User</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_response_parameters_6"><a class="anchor" href="#_response_parameters_6"></a>Response Parameters</h4>
+<div class="paragraph">
+<p>Search User API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">502</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User is not found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete User,
+Update User,
+Get User</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example_8"><a class="anchor" href="#_example_8"></a>Example:</h4>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X GET \
+  https://cloud.restcomm.com/taskrouter/users/search/AAEb6eb071d21124dbab20b095c25f1274f \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+         "code":”200”,
+         "message":"OK",
+         “data”:
+{
+        “sid":"AAEb6eb071d21124dbab20b095c25f1274f",
+        “accountEmail”:”aditya.dixit@telestax.com”,
+        "dateCreated":"2019-07-22 09:53:51",
+        "dateUpdated":"2019-07-22 09:53:51",
+          "name" : "test",
+          “emailId”:”test@telestax.com”,
+           “role”: “ENTERPRISE-ADMIN”,
+           “enterpriseSid”: “ EN801e792d86504368a9385314e8c5c4d6”,
+        "uri":/taskrouter/users/search/ AAEb6eb071d21124dbab20b095c25f1274f "
+}
+ }</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_update_user"><a class="anchor" href="#_update_user"></a>Update User</h3>
+<div class="paragraph">
+<p>This endpoint will be used to update existing users.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SUPPORT can make changes to all users irrespective of role</p>
+</li>
+<li>
+<p>CSP_ADMIN can make changes to all users with ENTERPRISE_ADMIN of all Enterprise that belongs to same Organisation</p>
+</li>
+<li>
+<p>ENTERPRISE_ADMIN cannot make any changes to other users.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_8"><a class="anchor" href="#_base_resource_uri_8"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_update_user_resource_uri"><a class="anchor" href="#_update_user_resource_uri"></a>Update User Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/users/{UserSid}</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_9"><a class="anchor" href="#_supported_operations_9"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP PUT: Update User</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_request_parameters_5"><a class="anchor" href="#_request_parameters_5"></a>Request Parameters</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory. Unique id of the user</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Status of the user, could be one of the following</p>
+<p class="tableblock">ACTIVE     <br>
+SUSPENDED   <br>
+DELETED</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Name of user to be updated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional Enterprise id. If user wants to move user from one enterprise to another, pass the enterpriseId of the target Enterprise.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_response_body_6"><a class="anchor" href="#_response_body_6"></a>Response Body</h4>
+<div class="paragraph">
+<p>Response Body will carry Code, corresponding message and data of User if it was  successfully updated. HTTP response will be 200 OK.</p>
+</div>
+<div class="paragraph">
+<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User data as explained in the table Data Parameter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_response_parameters_7"><a class="anchor" href="#_response_parameters_7"></a>Response Parameters</h4>
+<div class="paragraph">
+<p>Update User API can also return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">478</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise for which user is to be added is not found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create User, Update User</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">501</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restcomm subaccount belongs to a different Admin account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user id is already sub account to different account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create User, Update User</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">502</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User Id not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User Id not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update User</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example_9"><a class="anchor" href="#_example_9"></a>Example:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>{
+"status":"SUSPENDED"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X PUT \
+  https://cloud.restcomm.com/taskrouter/users/RCSb4ba60022d87407db2134146e3bd4ceb \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+"status":"SUSPENDED"
+}’</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If User update is successful, below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "data": {
+        "sid": "RCSb4ba60022d87407db2134146e3bd4ceb",
+        "dateUpdated": "2020-01-29T05:21:28+0000",
+        "dateCreated": "2020-01-21T13:35:19+0000",
+        "accountEmail": "derick.adams@acme.com",
+        "uri": "/taskrouter/users/search/RCSb4ba60022d87407db2134146e3bd4ceb",
+        "emailId": "testbg@acme-ent2.com",
+        "status": "SUSPENDED",
+        "role": "ENTERPRISE_ADMIN",
+        "name": "Ent2 Test Admin"
+    },
+    "code": 200,
+    "message": "OK"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If updating fails, below response is returned with corresponding HTTP Error Code</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "errorCode": "502",
+    "message": "User Id not found",
+    "data": {
+        "sid": "RCSb4ba60022d87407db2134146e3bd4c"
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete_user"><a class="anchor" href="#_delete_user"></a>Delete User</h3>
+<div class="paragraph">
+<p>This endpoint will be used to delete an existing user. In Restcomm, users will be DELETED. To understand more please read documentation at <a href="https://nmorgtest2.restcomm.com/docs/accounts.html#_closing_sub_account" class="bare">https://nmorgtest2.restcomm.com/docs/accounts.html#_closing_sub_account</a></p>
+</div>
+<div class="sect3">
+<h4 id="_base_resource_uri_9"><a class="anchor" href="#_base_resource_uri_9"></a>Base Resource URI</h4>
+<div class="paragraph">
+<p><a href="https://&lt;custom" class="bare">https://&lt;custom</a> domain of CSP’s&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_delete_user_resource_uri"><a class="anchor" href="#_delete_user_resource_uri"></a>Delete User Resource URI</h4>
+<div class="paragraph">
+<p>/taskrouter/users/{UserSid}</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_operations_10"><a class="anchor" href="#_supported_operations_10"></a>Supported Operations</h4>
+<div class="paragraph">
+<p>HTTP DELETE: Delete User</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_request_parameters_6"><a class="anchor" href="#_request_parameters_6"></a>Request Parameters</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserSid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SID of the user to be deleted</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_response_body_7"><a class="anchor" href="#_response_body_7"></a>Response Body</h4>
+<div class="paragraph">
+<p>Response Body will carry Code, corresponding message and data of User if it was  successfully deleted. HTTP response will be 200 OK.</p>
+</div>
+<div class="paragraph">
+<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User data as explained in the table Data Parameter.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_response_parameters_8"><a class="anchor" href="#_response_parameters_8"></a>Response Parameters</h4>
+<div class="paragraph">
+<p>Delete User API can also return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">502</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User Id not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User SID doesn’t exist in the system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update User, Delete user, Get User</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">503</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user is an enterprise admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user is an enterprise admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete user</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example_10"><a class="anchor" href="#_example_10"></a>Example</h4>
+<div class="paragraph">
+<p>From the bash terminal you can run the command below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X DELETE \
+  https://cloud.restcomm.com/taskrouter/users/RCS31e4303c3d06409a9e7a847fc7221bd0	 \
+--user  ' {your_account_SID}:{your_account_token}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If User delete is successful, below is the response returned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "data": {
+        "sid": "RCS31e4303c3d06409a9e7a847fc7221bd0",
+        "dateUpdated": "2020-01-27T05:50:02+0000",
+        "dateCreated": "2020-01-27T05:50:02+0000",
+        "accountEmail": "subhahu.reddy@telestax.com",
+        "uri": "/taskrouter/users/search/RCS31e4303c3d06409a9e7a847fc7221bd0",
+        "emailId": "testbgadmin2@telestax.com",
+        "status": "ACTIVE",
+        "role": "ENTERPRISE_ADMIN",
+        "name": "Test BG 2"
+    },
+    "code": 200,
+    "message": "OK"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If delete fails, below response is returned with corresponding HTTP Error Code</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "code":502,
+  "message":"User not found",
+   “data”:{
+   	          "sid”:” RCS31e4303c3d06409a9e7a847fc7221bd0”
+}
+}</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
