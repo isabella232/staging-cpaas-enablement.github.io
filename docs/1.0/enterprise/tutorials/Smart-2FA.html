@@ -3066,9 +3066,15 @@ If no Limit is defined by Developer or if no Limit is passed when invoking Send 
 <div class="paragraph">
 <p>For example consider below two limits defined.</p>
 </div>
-<div class="paragraph">
-<p>“limit_on_Session”  with  only one bucket [ {"name":"bucket1", "max":"1", "interval":"60"}]
-“limit_on_phonenumber” with two buckets [{"name":"bucket1","max":"1", "interval":"30"},{ "name":"bucket2", "max":"2", "interval":"300"}]</p>
+<div class="ulist">
+<ul>
+<li>
+<p>“limit_on_Session”  with  only one bucket [ {"name":"bucket1", "max":"1", "interval":"60"}]</p>
+</li>
+<li>
+<p>“limit_on_phonenumber” with two buckets [{"name":"bucket1","max":"1", "interval":"30"},{ "name":"bucket2", "max":"2", "interval":"300"}]</p>
+</li>
+</ul>
 </div>
 <div class="sect3">
 <h4 id="_example_1"><a class="anchor" href="#_example_1"></a>Example 1</h4>
@@ -3078,11 +3084,21 @@ If no Limit is defined by Developer or if no Limit is passed when invoking Send 
 <div class="paragraph">
 <p>"limits" : "{  \"limit_on_Session\":\"aabbcd\", \"limit_on_phonenumber\": \"919960639903\" }"</p>
 </div>
-<div class="paragraph">
-<p>timestamp “T0”: 1st Send API called. OTP will be sent.
-timestamp “T1=T0+31 sec”: 2nd Send API called. OTP will be blocked with error code 454 and error message “Too many Otp requests to the same Limit! key: limit_on_Session with value: aabbcd”
-timestamp “T2=T0+61 sec”: 3rd Send API called. OTP will be sent.
-From T2 to “T0+300 sec” OTP will be blocked</p>
+<div class="ulist">
+<ul>
+<li>
+<p>timestamp “T0”: 1st Send API called. OTP will be sent.</p>
+</li>
+<li>
+<p>timestamp “T1=T0+31 sec”: 2nd Send API called. OTP will be blocked with error code 454 and error message “Too many Otp requests to the same Limit! key: limit_on_Session with value: aabbcd”</p>
+</li>
+<li>
+<p>timestamp “T2=T0+61 sec”: 3rd Send API called. OTP will be sent.</p>
+</li>
+<li>
+<p>From T2 to “T0+300 sec” OTP will be blocked</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -3094,11 +3110,21 @@ From T2 to “T0+300 sec” OTP will be blocked</p>
 <div class="paragraph">
 <p>"limits" : "{   \"limit_on_phonenumber\": \"919960639903\",\"limit_on_Session\":\"aabbcd\" }"</p>
 </div>
-<div class="paragraph">
-<p>timestamp “T0”: 1st Send API called. OTP will be sent.
-timestamp “T1=T0+31 sec”: 2nd Send API called. OTP will be sent.
-timestamp “T2=T0+61 sec”: 3rd Send API called. OTP will be blocked
-From T2 to “T0+300 sec” OTP will be blocked.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>timestamp “T0”: 1st Send API called. OTP will be sent.</p>
+</li>
+<li>
+<p>timestamp “T1=T0+31 sec”: 2nd Send API called. OTP will be sent.</p>
+</li>
+<li>
+<p>timestamp “T2=T0+61 sec”: 3rd Send API called. OTP will be blocked</p>
+</li>
+<li>
+<p>From T2 to “T0+300 sec” OTP will be blocked.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -3637,31 +3663,60 @@ Account can Delete SubAccount Limits
 <p>The Response Body will carry Code, corresponding message and data of Limit if it was  successfully deleted. HTTP response will be 200 OK.</p>
 </div>
 <div class="paragraph">
-<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below
-Parameter
-Description
-code
- Sub-error code in case of error
-message
-Message describing error if error occured or success message
-data
-Limit data as explained in the table.</p>
+<p>The response returned is JSON body as shown in the example below. Each parameters are as explained below</p>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code in case of error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Limit data as explained in the table.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Delete Limit API can also return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code. In addition below are the Error that it can return</p>
 </div>
-<div class="paragraph">
-<p>Error Code
-HTTP Status
-Error Message
-Description
-Category
-493
-409
-Invalid Limit Id
-Limit sid passed is not present in the System
-Update, Search Single, Delete Limit, Create Bucket</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">493</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Limit Id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Limit sid passed is not present in the System</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update, Search Single, Delete Limit, Create Bucket</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_example_8"><a class="anchor" href="#_example_8"></a>Example:</h4>
@@ -4447,33 +4502,26 @@ interval: Time period in seconds from previous event to send OTP via defined cha
 <h4 id="_request_parameters_9"><a class="anchor" href="#_request_parameters_9"></a>Request Parameters</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">workflowSid</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory. Unique SID of Workflow that was returned when Create Workflow was invoked.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">channels</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Optional. JSON formatted Channels as explained below</p>
-<p class="tableblock">channel: Channel via which OTP event is to be sent  =
+<p class="tableblock">channel: Channel via which OTP event is to be sent <br>
 interval: Time period in seconds from previous event to send OTP via defined channel</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Description for this Limit</p></td>
 </tr>
 </tbody>
@@ -4856,25 +4904,20 @@ Account can Delete SubAccount Workflows
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Query Parameter</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Which page of Workflow records to return, starting from 0.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Number of records returned per page</p></td>
 </tr>
 </tbody>
@@ -4939,25 +4982,20 @@ If the search API is called without page and pageSize, by default pageSize will 
 <h5 id="_sort_attributes_2"><a class="anchor" href="#_sort_attributes_2"></a>Sort Attributes</h5>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sort by name</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dateCreated</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sort by date when Workflow was created</p></td>
 </tr>
 </tbody>
@@ -4974,31 +5012,24 @@ If the search API is called without page and pageSize, by default pageSize will 
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sub-error code for response</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Message describing error if error occured or success message</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">List of Workflows data of search as explained in table below</p></td>
 </tr>
 </tbody>
