@@ -2255,6 +2255,7 @@
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
+<li><a href="#_overview">Overview</a></li>
 <li><a href="#_restcomm_vpn_site_to_site_connectivity">Restcomm VPN Site-To-Site Connectivity</a>
 <ul class="sectlevel2">
 <li><a href="#_required_from_our_customers">Required from Our Customers</a></li>
@@ -2264,6 +2265,14 @@
 </ul>
 </li>
 </ul>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Secure your communications between your infrastructure and Telestax services using IPSEC tunnels. With Restcomm Interconnect we provide the possibility of a secure private and encrypted connection to Restcomm. To do this we establish a Site-To-Site VPN connection from your infrastructure to Restcomm BYOC border devices. Currently we provide VPN enablement only for our SMSC services (SMPP protocol). We are expecting to expand it, to more protocols in the near future (such as SIP, Media (RTP), HTTP).</p>
+</div>
+</div>
 </div>
 <div class="sect1">
 <h2 id="_restcomm_vpn_site_to_site_connectivity"><a class="anchor" href="#_restcomm_vpn_site_to_site_connectivity"></a>Restcomm VPN Site-To-Site Connectivity</h2>
@@ -2281,7 +2290,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>On your end you have a device with IPSec capabilities exposing a public IPv4 to Telestax. This IP will be addressable/routable globally on the Internet.</p>
+<p>On your end, you have a device with IPSec capabilities exposing a public IPv4 to Telestax. This IP will be addressable/routable globally on the internet.</p>
 </li>
 </ul>
 </div>
@@ -2291,7 +2300,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>One or more of your IP networks that will have access to Telestax through the VPN tunnel. Your border devices (e.g. IP-PBX, SIP-PRI IAD, Session Border Controller, NAT gateway, etc.) will reside in these networks.</p>
+<p>One or more of your IP networks that will have access to Telestax through the VPN tunnel. Your border devices (e.g. IP-PBX, SIP-PRI IAD, Session Border Controller, NAT gateway, etc.) will reside in those networks.</p>
 </li>
 <li>
 <p>The hosts of your Encryption Domain are all using public IPs to communicate with Telestax. This is a key design element to avoid potential private network overlapping issues.</p>
@@ -2316,7 +2325,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="ulist">
 <ul>
 <li>
-<p>This device will manage the flows between you border devices and Telestax services.</p>
+<p>This device will manage the flows between you border devices and the Telestax services.</p>
 </li>
 </ul>
 </div>
@@ -2326,7 +2335,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="ulist">
 <ul>
 <li>
-<p>In order for various Telestax products to function properly, you need to whitelist Telestax' IP addresses on your side.</p>
+<p>In order for various Telestax products to function properly, you need to whitelist Telestax' IP addresses on your end.</p>
 </li>
 </ul>
 </div>
@@ -2349,7 +2358,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="ulist">
 <ul>
 <li>
-<p>The Telestax Encryption Domain is using only public IPs for your SMSC service.</p>
+<p>The Telestax Encryption Domain is using only public IPs for our SMSC service.</p>
 </li>
 </ul>
 </div>
@@ -2359,7 +2368,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="ulist">
 <ul>
 <li>
-<p>Telestax will provision a VPN connection peer in nearest point of presence from your location.</p>
+<p>Telestax will provision a VPN connection peer in the nearest to you location point of presence.</p>
 </li>
 </ul>
 </div>
@@ -2377,7 +2386,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="sect2">
 <h3 id="_customer_vpn_onboarding_process"><a class="anchor" href="#_customer_vpn_onboarding_process"></a>Customer VPN Onboarding Process</h3>
 <div class="paragraph">
-<p>Please contact your Telestax Account Manager contact to start planning the VPN Interconnect. Telestax Global Support Team will guide the cutomers through the process of enabling a VPN connection.</p>
+<p>Please contact your Telestax account manager to start planning the VPN interconnect. The Telestax global support team will guide you through the process of enabling a VPN connection.</p>
 </div>
 <div class="paragraph">
 <p>We will assist you through the various phases of the process:</p>
@@ -2388,7 +2397,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="ulist">
 <ul>
 <li>
-<p>Gather data, Check feasibility.</p>
+<p>Gather data and check feasibility.</p>
 </li>
 </ul>
 </div>
@@ -2398,7 +2407,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="ulist">
 <ul>
 <li>
-<p>Creation of the network resources needed in the Point Of Presence (PoP) near you</p>
+<p>Creation of the network resources needed in the point of presence (PoP) near you</p>
 </li>
 <li>
 <p>Adding the network routes, NAT rules for the customer Encryption Domain IPs</p>
@@ -2420,13 +2429,13 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <p>ICMP/Telnet</p>
 </li>
 <li>
-<p>SMPP traffic Simulations</p>
+<p>SMPP traffic simulations</p>
 </li>
 <li>
 <p>Capacity testing</p>
 </li>
 <li>
-<p>High Availability testing</p>
+<p>High availability testing</p>
 </li>
 </ul>
 </div>
@@ -2436,7 +2445,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="ulist">
 <ul>
 <li>
-<p>Telestax engineers will be working with your team on the platform and Networking issues and verify the VPN is ready for the migration of the traffic to production through the secured connection. Engineers will conduct:</p>
+<p>Telestax engineers will be working with your team on the platform and networking issues and verify the VPN is ready for the migration of the traffic to production through the secured connection. Engineers will conduct:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2470,15 +2479,15 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>IPSEC</strong></p>
+<p><strong>IPsec</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>VPN Device type, VPN public ip address and more details</p>
+<p>VPN Device type, VPN public IP address and other details</p>
 </li>
 <li>
-<p>The pre-shared key for the VPN will be send through a secured channel</p>
+<p>The pre-shared key for the VPN will be sent through a secured channel</p>
 </li>
 </ul>
 </div>
@@ -2488,7 +2497,7 @@ Please make sure the traffic going through the VPN is using the public IPs of yo
 <div class="ulist">
 <ul>
 <li>
-<p>SMPP: address, port, version, credentials</p>
+<p>SMPP: address, port, version and credentials</p>
 </li>
 </ul>
 </div>
