@@ -1861,8 +1861,144 @@
             </span>
               </div>
                           </li>
-              <ul class="nav-list">
-                                                                                                  </ul>
+            <li class="nav-item" data-depth="2">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html">Task Router</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html#_create_enterprise">Create Enterprise</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html#_get_list_of_enterprise">Get a List of Enterprises</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html#_get_single_enterprise">Delete Enterprise</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html#_delete_enterprise">Create User</a>
+
+            </span>
+              </div>
+                          </li>
+                        <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html#_get_single_user">Get a Single User</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html#_update_user">Update User</a>
+
+            </span>
+              </div>
+                          </li>
+            <li class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html#_delete_user">Delete user</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
   </ul>
             </li>
             <li class="nav-item" data-depth="1">
@@ -2303,7 +2439,7 @@
 <p>One or more of your IP networks that will have access to Telestax through the VPN tunnel. Your border devices (e.g. IP-PBX, SIP-PRI IAD, Session Border Controller, NAT gateway, etc.) will reside in those networks.</p>
 </li>
 <li>
-<p>The hosts of your Encryption Domain are all using public IPs to communicate with Telestax. This is a key design element to avoid potential private network overlapping issues.</p>
+<p>The hosts of your Encryption Domain are all using "public IPs" to communicate with Telestax using the tunnel. This is a key design element to avoid potential private network overlapping issues.</p>
 </li>
 </ul>
 </div>
@@ -2314,7 +2450,10 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Please make sure the traffic going through the VPN is using the public IPs of your Encryption Domain for the sources, and the public IPs of the Telestax Encryption Domain for the destinations (NAT rules).
+Note that your Encryption Domain (IP routes) have to be globally unique ("public IPs") - as opposed to RFC 1918 address ranges - to avoid conflicts with other networks that the Restcomm platform is peered with. In other words, your IP routes have to be outside of the following ranges:<br>
+10.0.0.0 - 10.255.255.255<br>
+172.16.0.0 - 172.31.255.255<br>
+192.168.0.0 - 192.168.255.255
 </td>
 </tr>
 </table>
