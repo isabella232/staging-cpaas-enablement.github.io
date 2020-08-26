@@ -4601,6 +4601,17 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">friendlyName</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">friendly name of the phonenumber</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extensionType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Should be one of the two values</p>
+<p class="tableblock">- client
+- number</p>
+<p class="tableblock">Here Client is <a href="https://cloud.restcomm.com/docs/api/clients-api.html">Restcomm Client</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extensionClientPassword</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Is needed when extension type is “client”. If you have set up an already existing Client, the password will be ignored and the existing password will remain valid.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -4692,6 +4703,10 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">extensionSpokenName</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name of the user the extension belongs to.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extensionType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can have either "client or "number".</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -4727,7 +4742,7 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise for which phoneNumber is to be added is not found.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create,update phonenumber</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create,update phone number</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">510</p></td>
@@ -4738,7 +4753,7 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Phone number already exists</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create,update phonenumber</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create,update phone number</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">486</p></td>
 </tr>
 <tr>
@@ -4747,7 +4762,27 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Number already provisioned in restcomm</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create,update phonenumber</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create,update phone number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">495</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password needed to provision new client in Restcomm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password not provided and is needed to provision new client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create phone number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">494</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error in provisioning client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client already provisioned in restcomm or Password does not meet the restcomm policy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create phone number</p></td>
 </tr>
 </tbody>
 </table>
@@ -4799,7 +4834,8 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
     "number": "1234234234",
     "extensionSpokenName": "testextension",
     "isExtension": true,
-    "extension": "123"
+    "extension": "123",
+    "extensionType": "number"
   },
   "code": 200,
   "message": "OK"
@@ -6081,7 +6117,7 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseSid</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional Enterprise id. If user wants to move phoneNumber from one enterprise to another, pass the enterpriseId of target Enterprise.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional Enterprise id. If a user wants to move a phoneNumber from one enterprise to another, pass the enterpriseId of of the target Enterprise.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">extensionSpokenName</p></td>
@@ -6225,7 +6261,8 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
         "uri": "/autoattendant/phonenumber/search/PH2996ad9926c9482aa1fe4da7e425a92a",
         "number": "1671331666",
         "isExtension": false,
-        "autoAttendantSid": "AA1dff3a6c89a34e12b4c31eb177e82e3f"
+        "autoAttendantSid": "AA1dff3a6c89a34e12b4c31eb177e82e3f",
+        "extensionType": "number"
     },
     "code": 200,
     "message": "OK"
@@ -7250,7 +7287,8 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
     "number": "1234234234",
     "extensionSpokenName": "testextension",
     "isExtension": true,
-    "extension": "123"
+    "extension": "123",
+    "extensionType": "number"
   },
   "code": 200,
   "message": "OK"
