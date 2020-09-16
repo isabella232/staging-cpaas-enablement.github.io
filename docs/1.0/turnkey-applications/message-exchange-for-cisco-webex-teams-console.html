@@ -2110,11 +2110,11 @@
 <li><a href="#_messages_search">Messages search</a></li>
 </ul>
 </li>
-<li><a href="#_usage_records">Usage-records</a>
+<li><a href="#_usage_records">Usage Records</a>
 <ul class="sectlevel2">
-<li><a href="#_enterprise_usage_records">Enterprise Usage-records</a></li>
-<li><a href="#_mappings_usage_records">Mappings Usage-records</a></li>
-<li><a href="#_messages_usage_records">Messages Usage-records</a></li>
+<li><a href="#_enterprise_usage_records">Enterprise Usage Records</a></li>
+<li><a href="#_mappings_usage_records">Mappings Usage Records</a></li>
+<li><a href="#_messages_usage_records">Messages Usage Records</a></li>
 </ul>
 </li>
 </ul>
@@ -2123,13 +2123,13 @@
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restcomm Cisco Webex Teams helps service providers enable their Enterprise Customers to send and receive SMS using Webex Teams and to manage and monitor the usage</p>
+<p>Restcomm Cisco Webex Teams helps service providers enable their Enterprise Customers to send and receive SMS using Webex Teams, and to manage and monitor the usage.</p>
 </div>
 <div class="paragraph">
-<p>For more details have a look at <a href="message-exchange-for-cisco-webex-teams-overview.html">General Doc</a></p>
+<p>For more details, have a look at <a href="message-exchange-for-cisco-webex-teams-overview.html">Restcomm Cisco Webex Teams General Documentation</a></p>
 </div>
 <div class="paragraph">
-<p>This document explains Resctomm Cisco Webex Teams Console and how to use features mentioned above.</p>
+<p>This document focuses on the usage of the Resctomm Cisco Webex Teams Console&#8217;s features.</p>
 </div>
 <div class="paragraph">
 <p>The Webex Teams Console can be accessed from https://&lt;your_domain&gt;/webexconsole/</p>
@@ -2140,7 +2140,23 @@
 <h2 id="_home"><a class="anchor" href="#_home"></a>Home</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is the default page the user will see after signing in. Here user can find the number of enterprises, mappings added and messages sent/received in the last 24 hours within the organisation and 30 days usage report of enterprises, mapping and messages for an organisation</p>
+<p>This is the default page the user will see when signing in. Here the user can find:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a number of created enterprises and mappings</p>
+</li>
+<li>
+<p>sent and received messages in the last 24 hours within the organisation</p>
+</li>
+<li>
+<p>30 days enterprises usage report</p>
+</li>
+<li>
+<p>mappings and messages of an organisation</p>
+</li>
+</ul>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2162,7 +2178,7 @@
 <p>An Enterprise is a service provider&#8217;s customer which can help them understand number of mappings created for specific Enterprise over a specific period of time for billing and management purposes.</p>
 </div>
 <div class="paragraph">
-<p>Each Enterprise has list of mappings which is basically mapping between SMS enabled number and Cisco Webex Teams Id.</p>
+<p>Each Enterprise has a list of mappings which represents a mapping between SMS enabled number and a Cisco Webex Teams Id.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2177,7 +2193,7 @@
 <p>Click on the <code>Add enterprise</code> button.</p>
 </li>
 <li>
-<p>Enter the name of new Enterprise and click add account button</p>
+<p>Enter the name of the new Enterprise and click on the <strong>Add Account</strong> button</p>
 </li>
 </ul>
 </div>
@@ -2218,7 +2234,7 @@ Enterprise name must be unique.
 <p>If the user clicks on any enterprise in the list, he will see a paginated list of mappings that belong to the enterprise.</p>
 </li>
 <li>
-<p>Name is the friendly name given to the mapping, number is the external address (SMS enabled number), webexId is the Webex Teams Id that is mapped with the external number and the last column contains the timestamp when the mapping was last updated and the user who updated it.</p>
+<p>Name is the friendly name given to the mapping. Number is the external address (SMS enabled number). webexId is the Webex Teams Id that is mapped to the external number. The last column contains the timestamp (when the mapping was last updated) and information about the user who updated it.</p>
 </li>
 <li>
 <p>Users can edit the name of a particular mapping.</p>
@@ -2252,7 +2268,7 @@ Enterprise name must be unique.
 <p>External address i.e. the number to be SMS enabled.</p>
 </li>
 <li>
-<p>Webex teams id or multiple ids separated by comma if it&#8217;s been set up for group messaging.</p>
+<p>Webex teams id or multiple ids separated by comma, if it has been set up for group messaging.</p>
 </li>
 </ul>
 </div>
@@ -2261,7 +2277,7 @@ Enterprise name must be unique.
 <p>Users can add single or multiple mappings under a particular enterprise.</p>
 </li>
 <li>
-<p>Phone number have to be unique across the system.</p>
+<p>Phone number has to be unique across the system.</p>
 </li>
 <li>
 <p>While adding, if all the mappings are valid then user will see the mapping list else user will see the rejected mappings where user can modify the webex teams id or number.</p>
@@ -2355,13 +2371,13 @@ Enterprise name must be unique.
 <p>Enterprise: Shows the list of mappings that belong to this enterprise.</p>
 </li>
 <li>
-<p>Name: Shows the list of mappings whose name partially or fully matches the entered String.</p>
+<p>Name: Shows the list of mappings whose name partially or fully matches the entered string.</p>
 </li>
 <li>
-<p>Number: Shows the list of mappings whose external address partially or fully matches the entered String.</p>
+<p>Number: Shows the list of mappings whose external address partially or fully matches the entered string.</p>
 </li>
 <li>
-<p>WebexId: Shows the list of mappings whose Webex teams Id  partially or fully match the entered String.</p>
+<p>WebexId: Shows the list of mappings whose Webex teams Id  partially or fully match the entered string.</p>
 </li>
 </ul>
 </div>
@@ -2388,16 +2404,16 @@ Enterprise name must be unique.
 <p>Enterprise:Shows the list of messages that belong to this enterprise.</p>
 </li>
 <li>
-<p>To:Shows the list of messages that are sent to this number or Webex Teams Id</p>
+<p>To: Shows the list of messages that are sent to this number or Webex Teams Id</p>
 </li>
 <li>
-<p>From:Shows the list of messages that are sent from  this number or Webex Teams Id</p>
+<p>From: Shows the list of messages that are sent from this number or Webex Teams Id</p>
 </li>
 <li>
-<p>Direction:Shows the list of messages of particular direction(INBOUND,OUTBOUND). Inbound means messages coming from Mobile to Webex Teams. Outbound means message sent from Webex Teams to Mobile</p>
+<p>Direction: Shows the list of messages of particular direction (INBOUND,OUTBOUND). Inbound means messages coming from mobile to Webex Teams. Outbound means messages sent from Webex Teams to mobile.</p>
 </li>
 <li>
-<p>Type:Shows the list of messages of particular type(SMS,MMS). Please note MMS is still not supported.</p>
+<p>Type: Shows the list of messages of particular type(SMS,MMS). Please note MMS is still not supported.</p>
 </li>
 <li>
 <p>Channel Status:Shows the list of messages with this channel status.</p>
@@ -2419,13 +2435,13 @@ Enterprise name must be unique.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage-records</h2>
+<h2 id="_usage_records"><a class="anchor" href="#_usage_records"></a>Usage Records</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Usage Records provides usage numbers for Enterprises, Mappings and Messages.</p>
+<p>Usage Records provides usage statistics for Enterprises, Mappings and Messages.</p>
 </div>
 <div class="sect2">
-<h3 id="_enterprise_usage_records"><a class="anchor" href="#_enterprise_usage_records"></a>Enterprise Usage-records</h3>
+<h3 id="_enterprise_usage_records"><a class="anchor" href="#_enterprise_usage_records"></a>Enterprise Usage Records</h3>
 <div class="paragraph">
 <p>The user can view the number of Enterprises created for a given time period. Below filters are supported.</p>
 </div>
@@ -2436,47 +2452,47 @@ Enterprise name must be unique.
 <div class="ulist">
 <ul>
 <li>
-<p>Search in Current Account: Shows number or Enterprises created by the logged  in user</p>
+<p>Search in Current Account: Shows the number or enterprises created by the logged in user.</p>
 </li>
 <li>
-<p>Search in All Account: Shows the number of Enterprises created under the organisation</p>
+<p>Search in All Account: Shows the number of enterprises created under the organisation.</p>
 </li>
 <li>
-<p>Search in Specific Account: To search the number of Enterprises created  by a particular user of the organisation, the user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account  on that popup window</p>
+<p>Search in Specific Account: Searches the number of enterprises created by a particular user of the organisation. The user is presented with a list of users of that organisation in a popup window. The user can select the Restcomm account on that popup window.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Start Date: Shows the number  of enterprises that were created on or after this date</p>
+<p>Start Date: Shows the number of enterprises that were created on or after this date.</p>
 </li>
 <li>
-<p>End Date: Shows the number of enterprises that were created on or before this date</p>
+<p>End Date: Shows the number of enterprises that were created on or before this date.</p>
 </li>
 <li>
 <p>Sub resource:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Daily: Shows number of enterprises created on a daily basis</p>
+<p>Daily: Shows the number of enterprises created on a daily basis.</p>
 </li>
 <li>
-<p>Monthly: Shows number of enterprises created on a monthly basis</p>
+<p>Monthly: Shows the number of enterprises created on a monthly basis.</p>
 </li>
 <li>
-<p>Yearly:  Shows number of enterprises  created on a yearly basis</p>
+<p>Yearly:  Shows the number of enterprises  created on a yearly basis.</p>
 </li>
 <li>
-<p>Today:  Shows the number of enterprises created today</p>
+<p>Today:  Shows the number of enterprises created today.</p>
 </li>
 <li>
-<p>Yesterday: Shows the number of enterprises created yesterday</p>
+<p>Yesterday: Shows the number of enterprises created yesterday.</p>
 </li>
 <li>
-<p>This Month:  Shows the number of enterprises created this month</p>
+<p>This Month:  Shows the number of enterprises created this month.</p>
 </li>
 <li>
-<p>Last Month:  Shows the number of enterprises created last month</p>
+<p>Last Month:  Shows the number of enterprises created last month.</p>
 </li>
 </ul>
 </div>
@@ -2490,7 +2506,7 @@ Enterprise name must be unique.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mappings_usage_records"><a class="anchor" href="#_mappings_usage_records"></a>Mappings Usage-records</h3>
+<h3 id="_mappings_usage_records"><a class="anchor" href="#_mappings_usage_records"></a>Mappings Usage Records</h3>
 <div class="paragraph">
 <p>The user can view the number of mappings created. Below filters are supported</p>
 </div>
@@ -2501,50 +2517,50 @@ Enterprise name must be unique.
 <div class="ulist">
 <ul>
 <li>
-<p>Search in Current Account: Shows the number of mappings  by the logged  in user</p>
+<p>Search in Current Account: Shows the number of mappings created by the logged in user.</p>
 </li>
 <li>
-<p>Search in All Account: Shows the number of mappings created under the organisation</p>
+<p>Search in All Account: Shows the number of mappings created under the organisation.</p>
 </li>
 <li>
-<p>Search in Specific Account: To search the number of mappings that are created by a particular user of the organisation, the logged in user is presented with a list of all users of that organisation in a popup window. The user can select the Restcomm account  on that popup window</p>
+<p>Search in Specific Account: Searches the number of mappings that are created by a particular user of the organisation. The logged in user is presented with a list of all users of that organisation in a popup window. The user can select the Restcomm account on that popup window.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Start Date: Shows the number of mappings created on or after this date</p>
+<p>Start Date: Shows the number of mappings created on or after this date.</p>
 </li>
 <li>
-<p>End Date: Shows the number of mappings created on or before this date</p>
+<p>End Date: Shows the number of mappings created on or before this date.</p>
 </li>
 <li>
-<p>Enterprise: Shows the record of mapping that belong to this enterprise</p>
+<p>Enterprise: Shows the record of mapping that belong to this enterprise.</p>
 </li>
 <li>
 <p>Sub resource:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Daily: Shows the record of mappings on a daily basis</p>
+<p>Daily: Shows the record of mappings on a daily basis.</p>
 </li>
 <li>
-<p>Monthly: Shows the record of mappings on a monthly basis</p>
+<p>Monthly: Shows the record of mappings on a monthly basis.</p>
 </li>
 <li>
-<p>Yearly: Shows the record of mappings on a yearly basis</p>
+<p>Yearly: Shows the record of mappings on a yearly basis.</p>
 </li>
 <li>
-<p>Today: Shows the record of mappings today</p>
+<p>Today: Shows the record of mappings today.</p>
 </li>
 <li>
-<p>Yesterday: Shows the record of mappings on yesterday</p>
+<p>Yesterday: Shows the record of mappings on yesterday.</p>
 </li>
 <li>
-<p>This Month: Shows the record of mappings this month</p>
+<p>This Month: Shows the record of mappings this month.</p>
 </li>
 <li>
-<p>Last Month: Shows the record of mappings last month</p>
+<p>Last Month: Shows the record of mappings last month.</p>
 </li>
 </ul>
 </div>
@@ -2558,32 +2574,32 @@ Enterprise name must be unique.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_messages_usage_records"><a class="anchor" href="#_messages_usage_records"></a>Messages Usage-records</h3>
+<h3 id="_messages_usage_records"><a class="anchor" href="#_messages_usage_records"></a>Messages Usage Records</h3>
 <div class="paragraph">
-<p>The user can view the number of Messages records of the organization by applying below filters</p>
+<p>The user can view the number of message records of the organization by applying the following filters.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Start Date: Shows the number of messages that has created on or after this date.</p>
+<p>Start Date: Shows the number of messages created on or after this date.</p>
 </li>
 <li>
-<p>End Date: Shows the number of messages that has created on or before this date.</p>
+<p>End Date: Shows the number of messages created on or before this date.</p>
 </li>
 <li>
-<p>Enterprise: Shows the number of messages that are belong to this enterprise.</p>
+<p>Enterprise: Shows the number of messages that belong to this enterprise.</p>
 </li>
 <li>
-<p>Direction: Shows the number of messages of particular direction(INBOUND,OUTBOUND).</p>
+<p>Direction: Shows the number of messages of a particular direction (INBOUND, OUTBOUND).</p>
 </li>
 <li>
-<p>Type: Shows the number of messages of particular type(SMS,MMS).</p>
+<p>Type: Shows the number of messages of a particular type (SMS, MMS).</p>
 </li>
 <li>
-<p>To: Shows the number of messages that are sent to this number</p>
+<p>To: Shows the number of messages that are sent to this number.</p>
 </li>
 <li>
-<p>From: Shows the number of messages that are sent from  this number</p>
+<p>From: Shows the number of messages that are sent from this number.</p>
 </li>
 <li>
 <p>Channel Status: Shows the number of messages with this channel status.</p>
