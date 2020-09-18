@@ -2955,11 +2955,19 @@ Rest of the response parameters are the same as explained in <a href="auto-atten
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">menuKey</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">menu key ex: 0-9, #, *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">menu key ex: 0-9 and *</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">menuAction</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contains action type and action data if needed  of each key. Possible actionType are as below. Transfer to Phone. Dial by extension. Dial by name. Go To Menu. Return to previous menu. Replay Menu. Announcement Return. Announcement Hangup. Hangup</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actionData</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Action Types can have action data. Possible action data for action types are as below:<br>
+- announcementSid (for actionType : Dial By extension, Dial by name, Announcement Return and Announcement Hangup)        <br>
+- Phone Number (for actionType : Transfer to Phone)     <br>
+- menuSid (for actionType : Go To Menu)                 <br>
+NOTE : Action Types - Hangup, Return to previous menu and Replay Menu cannot have any action data.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4673,6 +4681,13 @@ If you are updating the announcement file, Upload Announcement file should be ca
 <td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">This Announcement cannot be deleted as it is being used in a menu.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">announcement is used in a menu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Announcement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">523</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement cannot be deleted as it is assigned to an action in menu.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement is assigned to an action in menu</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Delete Announcement</p></td>
 </tr>
 </tbody>

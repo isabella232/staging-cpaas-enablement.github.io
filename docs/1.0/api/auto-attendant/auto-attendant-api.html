@@ -3253,7 +3253,7 @@ enterprise,phone numbers.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">menuKey</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">menu key ex: 0-9, #, *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">menu key ex: 0-9 and *</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">menuAction</p></td>
@@ -3267,6 +3267,14 @@ enterprise,phone numbers.</p>
 - Announcement Return    <br>
 - Announcement Hangup    <br>
 - Hangup</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actionData</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Action Types can have action data. Possible action data for action types are as below:<br>
+- announcementSid (for actionType : Dial By extension, Dial by name, Announcement Return and Announcement Hangup)        <br>
+- Phone Number (for actionType : Transfer to Phone)     <br>
+- menuSid (for actionType : Go To Menu)                 <br>
+NOTE : Action Types - Hangup, Return to previous menu and Replay Menu cannot have any action data.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3989,6 +3997,12 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">enterpriseAdmin</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise Admin (BG-ADMIN) data explained in the table below that will be assigned as the admin of this enterprise. A subaccount will be created on restcomm with these values.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extFromPhoneNumber</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional.</p>
+<p class="tableblock">Define “From” number that will be used to dial extension numbers.</p>
+<p class="tableblock">If not defined, the number will be the same as the Caller number who is trying to reach to extension.</p></td>
 </tr>
 </tbody>
 </table>
@@ -6271,14 +6285,21 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Announcement not found</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Announcement SID doesn’t exist in the system</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Update Announcement, Delete Announcement,</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Announcement, Delete Announcement, Get Announcement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Get Announcement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">507</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">This Announcement cannot be deleted as it is being used in a menu.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">announcement is used in a menu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Announcement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">523</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement cannot be deleted as it is assigned to an action in menu.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement is assigned to an action in menu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Announcement</p></td>
 </tr>
 </tbody>
 </table>
