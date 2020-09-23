@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="enterprise-persona">
+<html lang="en" class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Reject - Restcomm Docs"></title>
+    <title data-custom-title="Restcomm",defaultText="$INFER_FROM_DOMAIN"] Reason Codes Dictionary - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/rcml/reject-rcml.html
+      https://cloud.restcomm.com/docs/1.0/api/reasoncodes.html
     ">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
-    <link rel="stylesheet" href="../../../../_/css/site.css" title="antora-stylesheet">
+    <link rel="stylesheet" href="../../../_/css/site.css" title="antora-stylesheet">
     <!-- Right now for demo purposes I'm using google icons, but once we finalize design might be different -->
     <!-- Not using it for now
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -18,7 +18,7 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article" style="display: none">
+  <body class="article" >
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -61,7 +61,7 @@
   <div class="navigation-menu is-active" data-panel="menu">
     <nav class="nav-menu">
       <!-- Not applicable to our Enterprise docs
-    <h3 class="title"><a href="../../index.html">docs</a></h3>
+    <h3 class="title"><a href="../index.html">docs</a></h3>
     -->
         <ul class="nav-list">
           <ul class="nav-list">
@@ -76,7 +76,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html">REST API</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/overview.html">REST API</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -92,7 +92,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html">Overview</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/overview.html">Overview</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -108,7 +108,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_api_endpoint">API Endpoint</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/overview.html#_api_endpoint">API Endpoint</a>
 
             </span>
               </div>
@@ -124,7 +124,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_authentication">Authentication</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/overview.html#_authentication">Authentication</a>
 
             </span>
               </div>
@@ -140,7 +140,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_requests">Requests</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/overview.html#_requests">Requests</a>
 
             </span>
               </div>
@@ -156,7 +156,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_responses">Responses</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/overview.html#_responses">Responses</a>
 
             </span>
               </div>
@@ -172,7 +172,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/overview.html#_paging">Paging</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/overview.html#_paging">Paging</a>
 
             </span>
               </div>
@@ -192,7 +192,7 @@
               icomoon3-font-reference-management
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/management-apis-overview.html">Management APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/management-apis-overview.html">Management APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -208,7 +208,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/account-api.html">Accounts</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/account-api.html">Accounts</a>
 
             </span>
               </div>
@@ -224,7 +224,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/applications-api.html">Applications</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/applications-api.html">Applications</a>
 
             </span>
               </div>
@@ -240,7 +240,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/notifications-api.html">Notifications</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/notifications-api.html">Notifications</a>
 
             </span>
               </div>
@@ -256,7 +256,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/usage-records-api.html">Usage Records</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/usage-records-api.html">Usage Records</a>
 
             </span>
               </div>
@@ -274,7 +274,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/voice-category.html">Voice</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/voice-category.html">Voice</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -290,7 +290,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/available-phone-numbers-api.html">Available Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/available-phone-numbers-api.html">Available Phone Numbers</a>
 
             </span>
               </div>
@@ -306,7 +306,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html">Calls</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html">Calls</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -322,7 +322,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_call_list_resource_uri">Call List Resource URI</a>
 
             </span>
               </div>
@@ -338,7 +338,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_making_a_call_to_a_sip_account">Making a Call</a>
 
             </span>
               </div>
@@ -354,7 +354,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_modifying_live_calls">Modifying Live Calls</a>
 
             </span>
               </div>
@@ -370,7 +370,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#examples">Examples</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#examples">Examples</a>
 
             </span>
               </div>
@@ -386,7 +386,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_list_filter">List Filter</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_list_filter">List Filter</a>
 
             </span>
               </div>
@@ -402,7 +402,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/calls-api.html#_paging_information">Paging Information</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/calls-api.html#_paging_information">Paging Information</a>
 
             </span>
               </div>
@@ -420,7 +420,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html">Clients</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -436,7 +436,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_create_a_client">Create a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_create_a_client">Create a Client</a>
 
             </span>
               </div>
@@ -452,7 +452,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_delete_a_client">Delete a Client</a>
 
             </span>
               </div>
@@ -468,7 +468,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
 
             </span>
               </div>
@@ -484,7 +484,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
 
             </span>
               </div>
@@ -502,7 +502,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html">Conference Management</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/conferences-api.html">Conference Management</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -518,7 +518,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_supported_operations">Supported Operations</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/conferences-api.html#_supported_operations">Supported Operations</a>
 
             </span>
               </div>
@@ -534,7 +534,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/conferences-api.html#_conference_list_resource_uri">Conference List Resource URI</a>
 
             </span>
               </div>
@@ -552,7 +552,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/participants-api.html">Conference Participants Management</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/participants-api.html">Conference Participants Management</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -568,7 +568,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/participants-api.html#_participant_list_resource_uri">Participants List Resource URI</a>
 
             </span>
               </div>
@@ -586,7 +586,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -602,7 +602,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
 
             </span>
               </div>
@@ -618,7 +618,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
 
             </span>
               </div>
@@ -634,7 +634,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -650,7 +650,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -666,7 +666,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -682,7 +682,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
 
             </span>
               </div>
@@ -698,7 +698,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
 
             </span>
               </div>
@@ -714,7 +714,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
 
             </span>
               </div>
@@ -730,7 +730,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
 
             </span>
               </div>
@@ -748,7 +748,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/recordings-api.html">Recordings</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/recordings-api.html">Recordings</a>
 
             </span>
               </div>
@@ -764,7 +764,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/SIP-Refer-Support.html">SIP Refer Support</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/SIP-Refer-Support.html">SIP Refer Support</a>
 
             </span>
               </div>
@@ -782,7 +782,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-category.html">SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-category.html">SMS</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -798,7 +798,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/available-phone-numbers-api.html">Available Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/available-phone-numbers-api.html">Available Phone Numbers</a>
 
             </span>
               </div>
@@ -814,7 +814,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html">Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html">Clients</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -830,7 +830,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_create_a_client">Create a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_create_a_client">Create a Client</a>
 
             </span>
               </div>
@@ -846,7 +846,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_delete_a_client">Delete a Client</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_delete_a_client">Delete a Client</a>
 
             </span>
               </div>
@@ -862,7 +862,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_change_client_s_password">Change Client&#8217;s Password</a>
 
             </span>
               </div>
@@ -878,7 +878,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/clients-api.html#_get_list_of_available_clients">Get a List of Available Clients</a>
 
             </span>
               </div>
@@ -896,7 +896,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html">Incoming Phone Numbers</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -912,7 +912,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incomingphonenumber_instance_resource">IncomingPhoneNumber Instance Resource</a>
 
             </span>
               </div>
@@ -928,7 +928,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incomingphonenumbers_list_resource">IncomingPhoneNumbers List Resource</a>
 
             </span>
               </div>
@@ -944,7 +944,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_local_incomingphonenumber_factory_resource">Local IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -960,7 +960,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_toll_free_incomingphonenumber_factory_resource">Toll-Free IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -976,7 +976,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_mobile_incomingphonenumber_factory_resource">Mobile IncomingPhoneNumber Factory Resource</a>
 
             </span>
               </div>
@@ -992,7 +992,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_attach_a_phone_number_to_an_application">Attach a phone number to an application</a>
 
             </span>
               </div>
@@ -1008,7 +1008,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_delete_a_phone_number">Delete a phone number</a>
 
             </span>
               </div>
@@ -1024,7 +1024,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_list_of_phone_numbers">List of Phone Numbers</a>
 
             </span>
               </div>
@@ -1040,7 +1040,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/incoming-phone-numbers-api.html#_incoming_phone_number_regex_support">Incoming Phone Number Regex Support</a>
 
             </span>
               </div>
@@ -1058,7 +1058,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html">Messages</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html">Messages</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1074,7 +1074,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_send_sms">Send SMS</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html#_send_sms">Send SMS</a>
 
             </span>
               </div>
@@ -1090,7 +1090,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_sms_list">Get SMS List</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html#_get_sms_list">Get SMS List</a>
 
             </span>
               </div>
@@ -1106,7 +1106,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html#_get_single_sms_information">Get single SMS Information</a>
 
             </span>
               </div>
@@ -1122,7 +1122,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/sms-api.html#_sms_attributes">SMS Attributes</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/sms-api.html#_sms_attributes">SMS Attributes</a>
 
             </span>
               </div>
@@ -1140,7 +1140,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/email-api.html">Email</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/email-api.html">Email</a>
 
             </span>
               </div>
@@ -1158,7 +1158,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html">RCML</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/overview.html">RCML</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1174,7 +1174,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html">Overview</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/overview.html">Overview</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1190,7 +1190,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_how_restcomm_interacts_with_your_application">Interacting with Your Application</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/overview.html#_how_restcomm_interacts_with_your_application">Interacting with Your Application</a>
 
             </span>
               </div>
@@ -1206,7 +1206,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="overview.html#_the_rcml_verbs">RCML Verbs</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/overview.html#_the_rcml_verbs">RCML Verbs</a>
 
             </span>
               </div>
@@ -1224,7 +1224,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="dial-rcml.html">Dial</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/dial-rcml.html">Dial</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1240,7 +1240,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="client-rcml.html">Client</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/client-rcml.html">Client</a>
 
             </span>
               </div>
@@ -1256,7 +1256,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="conference-rcml.html">Conference</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/conference-rcml.html">Conference</a>
 
             </span>
               </div>
@@ -1272,7 +1272,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="number-rcml.html">Number</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/number-rcml.html">Number</a>
 
             </span>
               </div>
@@ -1288,7 +1288,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sip-rcml.html">SIP</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/sip-rcml.html">SIP</a>
 
             </span>
               </div>
@@ -1306,7 +1306,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="email-rcml.html">Email</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/email-rcml.html">Email</a>
 
             </span>
               </div>
@@ -1322,7 +1322,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="gather-rcml.html">Gather</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/gather-rcml.html">Gather</a>
 
             </span>
               </div>
@@ -1338,7 +1338,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="say-rcml.html">Say</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/say-rcml.html">Say</a>
 
             </span>
               </div>
@@ -1354,7 +1354,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="play-rcml.html">Play</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/play-rcml.html">Play</a>
 
             </span>
               </div>
@@ -1370,7 +1370,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="sms-rcml.html">SMS </a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/sms-rcml.html">SMS </a>
 
             </span>
               </div>
@@ -1386,7 +1386,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="hangup-rcml.html">Hangup</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/hangup-rcml.html">Hangup</a>
 
             </span>
               </div>
@@ -1402,7 +1402,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="pause-rcml.html">Pause</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/pause-rcml.html">Pause</a>
 
             </span>
               </div>
@@ -1418,7 +1418,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="redirect-rcml.html">Redirect</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/redirect-rcml.html">Redirect</a>
 
             </span>
               </div>
@@ -1434,12 +1434,12 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="record-rcml.html">Record</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/record-rcml.html">Record</a>
 
             </span>
               </div>
                           </li>
-            <li id="Reject" class="nav-item is-current-page" data-depth="2">
+            <li id="Reject" class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1450,7 +1450,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="reject-rcml.html">Reject</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/rcml/reject-rcml.html">Reject</a>
 
             </span>
               </div>
@@ -1468,7 +1468,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../turnkey-applications/index.html">Turnkey Apps APIs</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/turnkey-applications/index.html">Turnkey Apps APIs</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1484,7 +1484,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html">Smart 2FA</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html">Smart 2FA</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1500,7 +1500,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_sending_one_time_passwords_api_reference">Send OTPs</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_sending_one_time_passwords_api_reference">Send OTPs</a>
 
             </span>
               </div>
@@ -1516,7 +1516,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_verifying_one_time_passwords_api_reference">Verify OTPs</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_verifying_one_time_passwords_api_reference">Verify OTPs</a>
 
             </span>
               </div>
@@ -1532,7 +1532,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_control">Control OTPs</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_control">Control OTPs</a>
 
             </span>
               </div>
@@ -1548,7 +1548,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_limit">Limit</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_limit">Limit</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1564,7 +1564,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_create_limit">Create Limit</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_create_limit">Create Limit</a>
 
             </span>
               </div>
@@ -1580,7 +1580,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_update_limit">Update Limit</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_update_limit">Update Limit</a>
 
             </span>
               </div>
@@ -1596,7 +1596,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_delete_limit">Delete Limit</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_delete_limit">Delete Limit</a>
 
             </span>
               </div>
@@ -1612,7 +1612,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_get_list_of_limits">Get List of Limits</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_get_list_of_limits">Get List of Limits</a>
 
             </span>
               </div>
@@ -1630,7 +1630,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_workflow">Workflow</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_workflow">Workflow</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
@@ -1646,7 +1646,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_workflow">Create Workflow</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_workflow">Create Workflow</a>
 
             </span>
               </div>
@@ -1662,7 +1662,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_update_workflow">Update Workflow</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_update_workflow">Update Workflow</a>
 
             </span>
               </div>
@@ -1678,7 +1678,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_delete_workflow">Delete Workflow</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_delete_workflow">Delete Workflow</a>
 
             </span>
               </div>
@@ -1694,7 +1694,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../tutorials/Smart-2FA.html#_get_list_of_workflows">Get List of Workflows</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/tutorials/Smart-2FA.html#_get_list_of_workflows">Get List of Workflows</a>
 
             </span>
               </div>
@@ -1714,7 +1714,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/call-queueing-api.html">Call Queuing</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/call-queueing-api.html">Call Queuing</a>
 
             </span>
               </div>
@@ -1730,7 +1730,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/auto-attendant-api.html">Auto Attendant</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/auto-attendant-api.html">Auto Attendant</a>
 
             </span>
               </div>
@@ -1746,7 +1746,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/number-masking-api.html">Number Masking</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/number-masking-api.html">Number Masking</a>
 
             </span>
               </div>
@@ -1762,7 +1762,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/task-router-api.html">Task Router</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/task-router-api.html">Task Router</a>
 
             </span>
               </div>
@@ -1780,7 +1780,7 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="../api/reasoncodes.html">Reason Codes Dictionary</a>
+              <a class="nav-link nav-flex-item-text" href="../enterprise/api/reasoncodes.html">Reason Codes Dictionary</a>
 
             </span>
               </div>
@@ -1853,7 +1853,7 @@
       <span class="title">docs</span>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../index.html">1.0</a>
+          <a href="../index.html">1.0</a>
         </li>
       </ul>
     </li>
@@ -1868,133 +1868,334 @@
 -->
 <div class="toolbar" role="navigation" style="display: none;">
   <button class="navigation-toggle"></button>
-  <a href="../../index.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
-    <li class="crumb"><a href="../../index.html">docs</a></li>
-    <li class="crumb"><a href="overview.html">Enterprise:RCML</a></li>
-    <li class="crumb"><a href="reject-rcml.html">Enterprise:Reject</a></li>
+    <li class="crumb"><a href="../index.html">docs</a></li>
+    <li class="crumb"><a href="reasoncodes.html">CSP:Reason Codes Dictionary</a></li>
   </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Reject</h1>
-<div class="sect1">
-<h2 id="_reject"><a class="anchor" href="#_reject"></a>Reject</h2>
+  <h1><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",defaultText="$INFER_FROM_DOMAIN"] Reason Codes Dictionary</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The &lt;Reject&gt; verb rejects an incoming call to your <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> endpoint and can be used for blocking unwanted calls.
-If the first verb in a RCML response is &lt;Reject&gt;, <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> will not pick up the call.
-The call ends with ‘busy', 'no-answer' or other status, depending on the verb&#8217;s 'reason' attribute. Any verbs after &lt;Reject&gt; are ignored and won’t be executed.</p>
+<p><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span>",defaultText="$INFER_FROM_DOMAIN"] will provide a reason code along with a short description for failed or blocked session attempts, such as voice or sms sessions.</p>
 </div>
-<div class="sect2">
-<h3 id="_reject_attributes"><a class="anchor" href="#_reject_attributes"></a>Reject Attributes</h3>
+<div class="paragraph">
+<p>Reason code and the relevant description will be provided in either SIP Responses or HTTP Responses.</p>
+</div>
+<div class="paragraph">
+<p>Reason codes 0 - 999 are reserved for network specific error codes from network protocols such as SIP, HTTP, MGCP etc.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reason_code_families"><a class="anchor" href="#_reason_code_families"></a>Reason code families</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Allowed Values</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-center valign-top">Code familiy</th>
+<th class="tableblock halign-center valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">reason</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;See table below&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rejected</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1xxx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Generic errors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11xx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Call errors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2xxx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> RCML Generic errors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21xx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> RCML Gather verb errors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">22xx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> RCML Dial verb errors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">23xx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> RCML Say verb errors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">24xx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> RCML Reject verb errors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3xxx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Provision Generic error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31xx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Number Provision error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">32xx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Client Provision error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">33xx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Account Provision error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4xxx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Media Gateway error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5xxx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Extension error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30xxx</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> SMS Messaging error</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>reason. The reason attribute takes the values from a table below.</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_span_class_sps_text_non_sps_link_data_orig_text_restcomm_data_parm_text_application_name_data_default_text_infer_from_domain_restcomm_span_specific_reason_codes"><a class="anchor" href="#_span_class_sps_text_non_sps_link_data_orig_text_restcomm_data_parm_text_application_name_data_default_text_infer_from_domain_restcomm_span_specific_reason_codes"></a><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> specific reason codes</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 27%;">
+<col style="width: 28.9999%;">
+<col style="width: 22%;">
+<col style="width: 22.0001%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Reason</th>
-<th class="tableblock halign-left valign-top">Internal SIP Error and reason phrase Status</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Protocol</th>
+<th class="tableblock halign-left valign-top">Text</th>
+<th class="tableblock halign-left valign-top">Comment</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rejected</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">603 DECLINE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Will play a standard not-in-service response</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reason code for any internal error that
+is not specified later</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">busy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">486 BUSY</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Will play a busy signal to the caller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client Registration Expired</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> client
+registration expired</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403 Forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Untrusted IP origin/source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feature Not Supported (feature name)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use of feature
+not allowed for the given account. TODO check if more features/extension
+reason codes are needed and change family</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">anonymity_disallowed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">433 Anonymity Disallowed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Calling party is anonymous and destination does not accept those calls</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Call Not Found or Terminated (transferrer/targetRef)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transfer cannot be completed because the transferrer side terminated or
+cannot be found (LCM or Transfer)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">address_incomplete</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">484 Address Incomplete</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wrong destination. regex scenario for number not valid (decision made by the external app still in inbound logic)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Call Terminated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update request to terminate Call
+completed successfully</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">no_route</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404 No Route</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No route to the destination (provider without routing agreement for some countries) if the App makes the decision there is no route to destination dialed (outbound logic)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1102</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Call Canceled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update request to cancel Call completed
+successfully</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">service_unavailable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">503 Service Unavailable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Redirect traffic to other PoP due to many factors (external App behaving bad, low quality, cloud issues faced, etc)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1103</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Call State</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Call state was not in the expected
+state during a call operation such LCM, Transfer etc.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">unwanted</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">607 Unwanted</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Calling party in a blacklist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1104</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Call Maximum Duration Exceeded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Call maximum duration
+exceeded</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1105</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Call No Answer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timeout waiting for answer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generic RCML Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Something was wrong during RCML
+parsing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RCML Validation failure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RCML document validation
+against rcml.xsd failed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gather verb invalid hints</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gather verb HotWords limit
+exceeded or hint length greater than 100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dial verb - conference max time exceeded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum time
+of conference exceeded</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2201</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dial verb - conference not found or completed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">conference not found or completed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2300</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Say verb error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generic Say verb error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2301</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Say verb - no TTS providers available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TTS providers
+not available</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2302</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Say verb - unknown provider</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unknown TTS provider
+requested</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2303</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Say verb - invalid language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid TTS language
+requested</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reject verb</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Reject verb</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generic Provision error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Something was wrong with the
+Provision data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number Provision error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number Provision data error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number not found</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3102</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number not bound (Context)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number doesn’t point to an
+application, either by RCML URL or Application SID. Context could be any
+of: Voice, Sms, Refer, REST API Call.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application provision error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application provision
+error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3201</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application not found</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3301</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Account not active</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Account not active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Media Gateway error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generic Media Gateway
+error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Media Operation failed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Media
+Operation failed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extension Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span> Extension Error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extension Blocked Session</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session was not allowed by an
+extension</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="sps-text non-sps-link" data-orig-text="Restcomm" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">Restcomm</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message Queue overflow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message failed</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect2">
-<h3 id="_nesting"><a class="anchor" href="#_nesting"></a>Nesting</h3>
-<div class="paragraph">
-<p>The &lt;Reject&gt; verb can not have any other verbs or nouns nested.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
-<div class="paragraph">
-<p>Below is an example of how you can use the &lt;Reject&gt; verb.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code>&lt;Response&gt;
-&lt;Reject reason="busy"/&gt;
-&lt;/Response&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Below is the relevant call flow when using the Reject verb</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../_images/reject_callflow.png" alt="Reject Call Flow"></span></p>
-</div>
-</div>
 </div>
 </div>
 </article>
@@ -2005,37 +2206,27 @@ The call ends with ‘busy', 'no-answer' or other status, depending on the verb&
     <div class="footer-column-container">
       <div class="footer-column">
           <h5 class="footer-column-title">Platform</h5>
-          <p><a class="footer-products-item" href="/docs/api/voice-category.html">Programmable Voice</a></p>
-          <p><a class="footer-products-item" href="/docs/api/sms-category.html">Programmable SMS</a></p>
-      </div>
+          <p><a id="footer-voice-link" href="#">Programmable Voice</a></p>
+          <p><a id="footer-sms-link" href="#">Programmable SMS</a></p>
+              </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Turnkey Applications</h5>
-        <p><a class="footer-usecase-item" id="Smart2FA" href="/docs/turnkey-applications/Smart-2FA-Overview.html">Smart 2FA</a></p>
-          <p><a class="footer-usecase-item" id="CallQueuing" href="/docs/api/call-queue-api.html">Call Queue</a></p>
-          <p><a class="footer-usecase-item" id="AutoAttendant" href="/docs/solutions/auto-attendant-overview.html">Auto Attendant</a></p>
-          <p><a class="footer-usecase-item" id="NumberMasking" href="/docs/turnkey-applications/number-masking-overview.html">Number Masking</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html" data-default-link="/docs/terms.html">Terms And Conditions</a></p>
-      </div>
+          <p><a id="terms-link" href="#">Terms and Conditions</a></p>
+              </div>
       <div class="footer-column">
     <h5 class="footer-column-title">About</h5>
         <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/about/" data-default-text="About Us" data-default-link="#">ABOUT</a></p>
-  <p><a class="sps-text sps-link" data-parm-text="Contact Us" data-parm-link="contact_link" href="https://www.telestax.com/contact/" data-default-text="Contact Us" data-default-link="#">CONTACT US</a></p>
       </div>
     </div>
-   <div class="footer-bottom-container">
-    <div class="footer-copyright">
-     <p class="footer-copyright-paragraph"><a class="sps-text" data-parm-text="copyright_text" data-default-text="© 2020, All rights reserved.">© 2020, All rights reserved.</a></p>
-    </div>
-   </div>
     <!---->
   </div>
 </footer>
-<script src="../../../../_/js/site.js"></script>
-<script src="../../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
 <!--
 <script>hljs.initHighlighting()</script>
 -->
