@@ -3268,11 +3268,14 @@ enterprise,phone numbers.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">menuKey</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">menu key ex: 0-9 and *</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>menu key ex: 0-9 and *</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">menuAction</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains action type and action data if needed  of each key. Possible actionType are as below:<br>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Contains action type and action data if needed  of each key. Possible actionType are as below:<br>
 - Transfer to Phone      <br>
 - Dial by extension      <br>
 - Dial by name           <br>
@@ -3281,18 +3284,29 @@ enterprise,phone numbers.</p>
 - Replay Menu            <br>
 - Announcement Return    <br>
 - Announcement Hangup    <br>
-- Hangup</p></td>
+- Hangup</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">actionData</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Action Types can have action data. Possible action data for action types are as below:<br>
-- announcementSid (for actionType: Dial By extension, Dial by name, Announcement Return and Announcement Hangup)        <br>
-- Phone Number (for actionType: Transfer to Phone)     <br>
-- menuSid (for actionType: Go To Menu)                 <br></p>
-<p class="tableblock">[NOTE]
-====
-Action Types - Hangup, Return to previous menu and Replay Menu cannot have any action data.
-====</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Action types can have action data. Possible action data for action types is as follows:<br>
+- announcementSid (for actionType: Dial by extension, Dial by name, Announcement return, Announcement hangup)        <br>
+- Phone Number (for actionType: Transfer to phone)     <br>
+- menuSid (for actionType: Go to menu)                 <br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Action types hangup, return to previous menu and replay menu cannot have any action data.
+</td>
+</tr>
+</table>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -4018,9 +4032,7 @@ Create Enterprise will add unique Enterprise names for given CSP.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">extFromPhoneNumber</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional.<br></p>
-<p class="tableblock">Define <code>From</code> number that will be used to dial extension numbers.<br></p>
-<p class="tableblock">If not defined, it will default to the Caller&#8217;s number who is trying to reach the extension.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Define <code>From</code> number that will be used to dial extension numbers. If not defined, it will default to the caller&#8217;s number who is trying to reach the extension.</p></td>
 </tr>
 </tbody>
 </table>
