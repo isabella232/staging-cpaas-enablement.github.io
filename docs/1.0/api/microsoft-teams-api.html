@@ -3226,7 +3226,7 @@ https://cloud.restcomm.com/msteams/enterprises/search/EN86b7850af05a454b95139d59
 <div class="sect3">
 <h4 id="_response_parameters_4"><a class="anchor" href="#_response_parameters_4"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Create Microsoft Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in <a href="todo">Common Response Error Code</a></p>
+<p>Create Microsoft Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in &lt;Common Response Error Code&gt;</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -3425,7 +3425,7 @@ https://cloud.restcomm.com/msteams/enterprises/search/EN86b7850af05a454b95139d59
 <div class="sect3">
 <h4 id="_response_parameters_5"><a class="anchor" href="#_response_parameters_5"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Update Microsoft Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in <a href="bsk">Common Response Error Code</a></p>
+<p>Update Microsoft Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -3604,7 +3604,7 @@ https://cloud.restcomm.com/msteams/teams/mappings/BEa0e3d44bd03947eaa3fbb783a3bc
 <div class="sect3">
 <h4 id="_response_parameters_6"><a class="anchor" href="#_response_parameters_6"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Delete Microsoft Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in <a href="jsbd">Common Response Error Code</a></p>
+<p>Delete Microsoft Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -4269,7 +4269,7 @@ https://cloud.restcomm.com/msteams/mappings/search/BE7c6b0bd04a92495096102b32633
 <div class="sect3">
 <h4 id="_response_parameters_8"><a class="anchor" href="#_response_parameters_8"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Create Microsoft Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in <a href="todo">Common Response Error Code</a></p>
+<p>Create Microsoft Teams mapping API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -4465,7 +4465,7 @@ https://cloud.restcomm.com/msteams/mappings/search/BE7c6b0bd04a92495096102b32633
 <div class="sect3">
 <h4 id="_response_parameters_9"><a class="anchor" href="#_response_parameters_9"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Update Bot details API will return Error Code and corresponding HTTP Error as mentioned in <a href="bsk">Common Response Error Code</a></p>
+<p>Update Bot details API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -4653,7 +4653,7 @@ https://cloud.restcomm.com/msteams/mappings/search/BE7c6b0bd04a92495096102b32633
 <div class="sect3">
 <h4 id="_response_parameters_10"><a class="anchor" href="#_response_parameters_10"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Delete Bot API will return Error Code and corresponding HTTP Error as mentioned in <a href="jsbd">Common Response Error Code</a></p>
+<p>Delete Bot API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -4832,7 +4832,7 @@ If search API is called without page and pageSize parameters, by default pageSiz
 <div class="sect3">
 <h4 id="_response_parameters_11"><a class="anchor" href="#_response_parameters_11"></a>Response Parameters</h4>
 <div class="paragraph">
-<p>Delete Bot API will return Error Code and corresponding HTTP Error as mentioned in <a href="jsbd">Common Response Error Code</a></p>
+<p>Delete Bot API will return Error Code and corresponding HTTP Error as mentioned in Common Response Error Code</p>
 </div>
 <div class="paragraph">
 <p>The response returned is JSON body as shown in the example below. Parameters are as explained below.</p>
@@ -5730,6 +5730,43 @@ If search API is called without page and pageSize parameters, by default pageSiz
 </div>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_common_response_error_codes"><a class="anchor" href="#_common_response_error_codes"></a>Common Response Error codes</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">HTTP Status</th>
+<th class="tableblock halign-left valign-top">Error Message</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">451</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory parameter xxx is missing.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xxx is actual parameter name. Comma separated parameters name if multiple.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">452</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Underlying message from Restcomm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error returned by underlying vpcpoc platform.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="enterprise-persona">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article" >
+  <body class="article" style="display: none">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -33,7 +33,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle icon-custom-font-right">
+      <button class="navigation-toggle icon-custom-font-right" style="visibility: hidden;">
       </button>
       <!--
       <span class="icon-custom-font-x"><span class="icon-custom-font-back-hamburger"><span class="icon-custom-font-left"><span class="icon-custom-font-right">
@@ -55,7 +55,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0" >
+<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
   <aside class="navigation">
     <div class="panels">
   <div class="navigation-menu is-active" data-panel="menu">
@@ -1858,7 +1858,7 @@
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document contains information and the Steps that you will need to follow in order to get onboarded with the <span class="non-sps-text non-sps-link" data-orig-text="$DOMAIN">$DOMAIN</span> for SMS enablement of  Microsoft Teams .</p>
+<p>This document contains information and the Steps that you will need to follow in order to get onboarded with the <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span> for SMS enablement of  Microsoft Teams .</p>
 </div>
 <div class="sect2">
 <h3 id="_prerequisite"><a class="anchor" href="#_prerequisite"></a>Prerequisite</h3>
@@ -1866,7 +1866,7 @@
 <p>You should have an <a href="https://azure.microsoft.com/en-in/">account</a> on Microsoft Azure. You should also be Admin for your Organisations Microsoft  Teams</p>
 </div>
 <div class="paragraph">
-<p>By Following this document, you will have following details that needs to be passed on to <span class="non-sps-text non-sps-link" data-orig-text="$DOMAIN">$DOMAIN</span></p>
+<p>By Following this document, you will have following details that needs to be passed on to <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span></p>
 </div>
 <div class="ulist">
 <ul>
@@ -2197,7 +2197,7 @@ Once you add the client secret, the value is shown one time only. So be sure to 
 <p>Pricing tier: Choose F0 from the drop down menu.</p>
 </li>
 <li>
-<p>Messaging Endpoint:  This is the Webhook url. Please enter below URL <a href="https://vpcpoc.restcomm.com/msteams/internal/message" class="bare">https://vpcpoc.restcomm.com/msteams/internal/message</a> XXX</p>
+<p>Messaging Endpoint:  This is the Webhook url. Please enter below URL <span class="non-sps-text non-sps-link" data-orig-text="https://$DOMAIN">https://$DOMAIN</span>/msteams/internal/message</p>
 </li>
 <li>
 <p>Application Insights Location: Turn this as "Off"</p>
@@ -2314,7 +2314,7 @@ It will display "Terms of Service", you need to Agree on the same.
 <h2 id="_add_bot_to_microsoft_teams"><a class="anchor" href="#_add_bot_to_microsoft_teams"></a>Add Bot to Microsoft Teams</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For adding the Bot to the Microsoft Teams, you will need a Zip file of the application which will be passed on to you by <span class="non-sps-text non-sps-link" data-orig-text="$DOMAIN">$DOMAIN</span></p>
+<p>For adding the Bot to the Microsoft Teams, you will need a Zip file of the application which will be passed on to you by <span class="sps-text non-sps-link" data-orig-text="CPaaS" data-parm-text="application_name" data-default-text="$INFER_FROM_DOMAIN">CPaaS</span></p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -2343,7 +2343,7 @@ It will display "Terms of Service", you need to Agree on the same.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-replace &lt; and &gt; as well
+replace &lt;&lt; &gt;&gt; as well
 </td>
 </tr>
 </table>
@@ -2423,22 +2423,34 @@ The link  will look something like this:</p>
     <div class="footer-column-container">
       <div class="footer-column">
           <h5 class="footer-column-title">Platform</h5>
-          <p><a id="footer-voice-link" href="#">Programmable Voice</a></p>
-          <p><a id="footer-sms-link" href="#">Programmable SMS</a></p>
-              </div>
+          <p><a class="footer-products-item" href="/docs/api/voice-category.html">Programmable Voice</a></p>
+          <p><a class="footer-products-item" href="/docs/api/sms-category.html">Programmable SMS</a></p>
+      </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Turnkey Applications</h5>
+        <p><a class="footer-usecase-item" id="Smart2FA" href="/docs/turnkey-applications/Smart-2FA-Overview.html">Smart 2FA</a></p>
+          <p><a class="footer-usecase-item" id="CallQueuing" href="/docs/api/call-queue-api.html">Call Queue</a></p>
+          <p><a class="footer-usecase-item" id="AutoAttendant" href="/docs/solutions/auto-attendant-overview.html">Auto Attendant</a></p>
+          <p><a class="footer-usecase-item" id="NumberMasking" href="/docs/turnkey-applications/number-masking-overview.html">Number Masking</a></p>
+          <p><a class="footer-usecase-item" id="TaskRouter" href="/docs/turnkey-applications/task-router-overview.html">Task Router</a></p>
+          <p><a class="footer-usecase-item" id="CampaignManager" href="/docs/turnkey-applications/campaign-manager-overview.html">Campaign Manager</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" href="#">Terms and Conditions</a></p>
-              </div>
+          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html" data-default-link="/docs/terms.html">Terms And Conditions</a></p>
+      </div>
       <div class="footer-column">
     <h5 class="footer-column-title">About</h5>
         <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/about/" data-default-text="About Us" data-default-link="#">ABOUT</a></p>
+  <p><a class="sps-text sps-link" data-parm-text="Contact Us" data-parm-link="contact_link" href="https://www.telestax.com/contact/" data-default-text="Contact Us" data-default-link="#">CONTACT US</a></p>
       </div>
     </div>
+   <div class="footer-bottom-container">
+    <div class="footer-copyright">
+     <p class="footer-copyright-paragraph"><a class="sps-text" data-parm-text="copyright_text" data-default-text="© 2020, All rights reserved.">© 2020, All rights reserved.</a></p>
+    </div>
+   </div>
     <!---->
   </div>
 </footer>
