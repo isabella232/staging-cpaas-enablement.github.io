@@ -48,7 +48,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle icon-custom-font-right">
+      <button class="navigation-toggle icon-custom-font-right" style="visibility: hidden;">
       </button>
       <!--
       <span class="icon-custom-font-x"><span class="icon-custom-font-back-hamburger"><span class="icon-custom-font-left"><span class="icon-custom-font-right">
@@ -69,7 +69,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0" >
+<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
   <aside class="navigation">
     <div class="panels">
   <div class="navigation-menu is-active" data-panel="menu">
@@ -1437,7 +1437,24 @@
                           </li>
               </ul>
             </li>
-            <li id="Turnkey Apps" class="nav-item" data-depth="1">
+            <li id="Turnkey Apps APIs" class="nav-item" data-depth="1">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              icomoon3-font-reference-solutions
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="smart-2fa.html">Turnkey Apps APIs</a>
+                      <button class="nav-toggle"></button>
+            </span>
+              </div>
+                <ul class="nav-list">
+            <li id="Microsoft Teams" class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1449,11 +1466,81 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="smart-2fa.html">Turnkey Apps</a>
+              <a class="nav-link nav-flex-item-text" href="../api/microsoft-teams/microsoft-teams-api.html">Microsoft Teams</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
                 <ul class="nav-list">
+            <li id="Business Customer" class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/microsoft-teams/microsoft-teams-api.html#_business_customer">Business Customer</a>
+
+            </span>
+              </div>
+                          </li>
+            <li id="Manage Mappings" class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/microsoft-teams/microsoft-teams-api.html#_manage_mappings">Manage Mappings</a>
+
+            </span>
+              </div>
+                          </li>
+            <li id="Bot details" class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/microsoft-teams/microsoft-teams-api.html#_bot_details">Bot details</a>
+
+            </span>
+              </div>
+                          </li>
+            <li id="Messages" class="nav-item" data-depth="3">
+              <div class="nav-flex-container">
+            <span class="nav-flex-item-icon
+              
+              
+              
+              
+              
+              
+              
+            "></span>
+                  <span>
+              <a class="nav-link nav-flex-item-text" href="../api/microsoft-teams/microsoft-teams-api.html#_messages">Messages</a>
+
+            </span>
+              </div>
+                          </li>
+  </ul>
+            </li>
             <li id="Smart 2FA" class="nav-item" data-depth="2">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
@@ -1869,29 +1956,12 @@
               
             "></span>
                   <span>
-              <a class="nav-link nav-flex-item-text" href="auto-attendant-overview.html">Auto Attendant</a>
+              <a class="nav-link nav-flex-item-text" href="../api/auto-attendant/auto-attendant-api.html">Auto Attendant</a>
                       <button class="nav-toggle"></button>
             </span>
               </div>
                 <ul class="nav-list">
-            <li id="Auto Attendant Api" class="nav-item" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="../api/auto-attendant/auto-attendant-api.html">Auto Attendant Api</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li id="Enterprise" class="nav-item" data-depth="4">
+            <li id="Enterprise" class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1908,7 +1978,7 @@
             </span>
               </div>
                           </li>
-            <li id="User" class="nav-item" data-depth="4">
+            <li id="User" class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1925,7 +1995,7 @@
             </span>
               </div>
                           </li>
-            <li id="Announcement" class="nav-item" data-depth="4">
+            <li id="Announcement" class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1942,7 +2012,7 @@
             </span>
               </div>
                           </li>
-            <li id="Auto Attendant System" class="nav-item" data-depth="4">
+            <li id="Auto Attendant System" class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1959,7 +2029,7 @@
             </span>
               </div>
                           </li>
-            <li id="Menu" class="nav-item" data-depth="4">
+            <li id="Menu" class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1976,7 +2046,7 @@
             </span>
               </div>
                           </li>
-            <li id="Schedule" class="nav-item" data-depth="4">
+            <li id="Schedule" class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -1993,7 +2063,7 @@
             </span>
               </div>
                           </li>
-            <li id="Phone Number" class="nav-item" data-depth="4">
+            <li id="Phone Number" class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -2010,7 +2080,7 @@
             </span>
               </div>
                           </li>
-            <li id="HMAC Key" class="nav-item" data-depth="4">
+            <li id="HMAC Key" class="nav-item" data-depth="3">
               <div class="nav-flex-container">
             <span class="nav-flex-item-icon
               
@@ -2027,129 +2097,6 @@
             </span>
               </div>
                           </li>
-  </ul>
-            </li>
-            <li id="Auto Attendant Console" class="nav-item is-current-page" data-depth="3">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="auto-attendant-console.html">Auto Attendant Console</a>
-                      <button class="nav-toggle"></button>
-            </span>
-              </div>
-                <ul class="nav-list">
-            <li id=" Overview" class="nav-item" data-depth="4">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_overview"> Overview</a>
-
-            </span>
-              </div>
-                          </li>
-            <li id="Enterprise" class="nav-item" data-depth="4">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_enterprise">Enterprise</a>
-
-            </span>
-              </div>
-                          </li>
-            <li id=" Auto Attendant System" class="nav-item" data-depth="4">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_auto_attendant_system"> Auto Attendant System</a>
-
-            </span>
-              </div>
-                          </li>
-            <li id="Phone Numbers" class="nav-item" data-depth="4">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_phone_numbers">Phone Numbers</a>
-
-            </span>
-              </div>
-                          </li>
-            <li id=" Extensions" class="nav-item" data-depth="4">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_extensions"> Extensions</a>
-
-            </span>
-              </div>
-                          </li>
-            <li id=" User Management" class="nav-item" data-depth="4">
-              <div class="nav-flex-container">
-            <span class="nav-flex-item-icon
-              
-              
-              
-              
-              
-              
-              
-            "></span>
-                  <span>
-              <a class="nav-link nav-flex-item-text" href="#_user_management"> User Management</a>
-
-            </span>
-              </div>
-                          </li>
-  </ul>
-            </li>
   </ul>
             </li>
             <li id="Number Masking" class="nav-item" data-depth="2">
@@ -2724,9 +2671,7 @@
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="smart-2fa.html">CSP:Turnkey Apps</a></li>
-    <li class="crumb"><a href="auto-attendant-overview.html">CSP:Auto Attendant</a></li>
-    <li class="crumb"><a href="auto-attendant-console.html">CSP:Auto Attendant Console</a></li>
+    <li class="crumb"><a href="auto-attendant-console.html">Auto Attendant Console</a></li>
   </ul>
 </nav>
 </div>
@@ -2780,13 +2725,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p>â€œWork hour menuâ€� provides option to caller to reach to out Extension etc</p>
+<p>“Work hour menu” provides option to caller to reach to out Extension etc</p>
 </li>
 <li>
-<p>â€œNon work hours menuâ€� can request to call back during working hours</p>
+<p>“Non work hours menu” can request to call back during working hours</p>
 </li>
 <li>
-<p>â€œSpecial day menuâ€� can announce different greetings</p>
+<p>“Special day menu” can announce different greetings</p>
 </li>
 </ul>
 </div>
@@ -2864,13 +2809,13 @@ Only CSP Admins under Restcomm can have access to AA. This restriction is becaus
 <div class="ulist">
 <ul>
 <li>
-<p>Click on the â€œAdd Enterpriseâ€� button in the enterprise list page.</p>
+<p>Click on the “Add Enterprise” button in the enterprise list page.</p>
 </li>
 <li>
 <p>Enter the name of the new enterprise.</p>
 </li>
 <li>
-<p>An enterprise admin has to be assigned to this enterprise. Enter the email Id of the business group admin user youâ€™d want to be the admin of the enterprise. All the numbers will be provisioned under this RC account.</p>
+<p>An enterprise admin has to be assigned to this enterprise. Enter the email Id of the business group admin user you’d want to be the admin of the enterprise. All the numbers will be provisioned under this RC account.</p>
 </li>
 </ul>
 </div>
@@ -2905,9 +2850,9 @@ Never ever share this newly created Business Group Admin credentials with Enterp
 <td class="content">
 Enterprise name,Mail ID must be unique.
 NOTE: Password should meet below criteria:
- At least one Uppercase letter(A,B,C,Dâ€¦&#8230;&#8203;)
+ At least one Uppercase letter(A,B,C,D…&#8230;&#8203;)
  At least one Lowercase letter(a,b,c,d,&#8230;&#8203;&#8230;&#8203;.)
- At least one number(1,2,3,4,5â€¦.)
+ At least one number(1,2,3,4,5….)
  At least one special character(!,@,#,$,%,&amp;,&#8230;&#8203;&#8230;&#8203;.)
  Length of the password should be greater than equal to 8.
 </td>
@@ -3000,7 +2945,7 @@ Steps to follow while creating an AA system.</p>
 <p>Add the description to the AA system</p>
 </li>
 <li>
-<p>Click â€˜Save &amp; Continueâ€™ Button</p>
+<p>Click ‘Save &amp; Continue’ Button</p>
 </li>
 </ul>
 </div>
@@ -3031,7 +2976,7 @@ Users can view a list of all announcements that have been added under the enterp
 <div class="ulist">
 <ul>
 <li>
-<p>Click on â€œCreate Announcementâ€� button</p>
+<p>Click on “Create Announcement” button</p>
 </li>
 <li>
 <p>Enter the name of the announcement.</p>
@@ -3044,13 +2989,13 @@ Users can view a list of all announcements that have been added under the enterp
 <div class="ulist">
 <ul>
 <li>
-<p>Click on the â€œRecordâ€� button and record the announcement through the browser itself.</p>
+<p>Click on the “Record” button and record the announcement through the browser itself.</p>
 </li>
 <li>
 <p>Drop the wav file with 8 khz mono specification from the local files into the specified field.</p>
 </li>
 <li>
-<p>Click on â€œBrowseâ€� and select the audio file of announcement from the local files (wav file with 8khz mono specification)</p>
+<p>Click on “Browse” and select the audio file of announcement from the local files (wav file with 8khz mono specification)</p>
 </li>
 </ul>
 </div>
@@ -3098,7 +3043,7 @@ Menu can only be deleted if it is not used in schedule and there is no announcem
 </div>
 </div>
 <div class="paragraph">
-<p>To add a menu click on â€œAdd Menuâ€� button. A popup screen will appear:</p>
+<p>To add a menu click on “Add Menu” button. A popup screen will appear:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3115,7 +3060,7 @@ Menu can only be deleted if it is not used in schedule and there is no announcem
 <p>Set the timeout of the menu in seconds and set the action and respective action data (if needed) to be performed after the timeout.</p>
 </li>
 <li>
-<p>Menu will be created by clicking on the â€œDoneâ€� button.</p>
+<p>Menu will be created by clicking on the “Done” button.</p>
 </li>
 </ul>
 </div>
@@ -3126,7 +3071,7 @@ Menu can only be deleted if it is not used in schedule and there is no announcem
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-After series of DTMF pressed by caller, its expected that user presses # key to indicate to the system that the caller is done with input. If user doesnâ€™t press # key, System waits for timeout seconds and then carries necessary action depending on DTMF input.
+After series of DTMF pressed by caller, its expected that user presses # key to indicate to the system that the caller is done with input. If user doesn’t press # key, System waits for timeout seconds and then carries necessary action depending on DTMF input.
 </td>
 </tr>
 </table>
@@ -3245,7 +3190,7 @@ After series of DTMF pressed by caller, its expected that user presses # key to 
 </div>
 </div>
 <div class="paragraph">
-<p>To navigate to this page click on â€œError Handlingâ€� on the side navigation bar of the screen.</p>
+<p>To navigate to this page click on “Error Handling” on the side navigation bar of the screen.</p>
 </div>
 <div class="paragraph">
 <p>In each AA System that you create, you should always define the action to be taken if the menu times out or the user presses invalid key or the user presses invalid extension: For example,if the user does not press a key within the specified time. you could repeat the menu so that the caller has another chance to check the options and select the right key, or transfer the caller to an operator.</p>
@@ -3253,7 +3198,7 @@ After series of DTMF pressed by caller, its expected that user presses # key to 
 <div class="sect4">
 <h5 id="_timeout"><a class="anchor" href="#_timeout"></a>Timeout</h5>
 <div class="paragraph">
-<p>If the caller doesnâ€™t press any DTMF for configured timeout duration, system will perform the configured action.</p>
+<p>If the caller doesn’t press any DTMF for configured timeout duration, system will perform the configured action.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3355,7 +3300,7 @@ If timeout is defined at Menu Level, it will override the global timeout defined
 </div>
 </div>
 <div class="paragraph">
-<p>To add a phone number under the enterprise click on â€œAdd Phonenumbersâ€� button</p>
+<p>To add a phone number under the enterprise click on “Add Phonenumbers” button</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3401,7 +3346,7 @@ These numbers will be provisioned under main BG Admin Sub-Account under Restcomm
 <p>Users can view the list of Extensions that are configured under the enterprise.</p>
 </li>
 <li>
-<p>Users can edit the extension number and spoken name of the number by clicking on the pencil icon in the respective fields( â€œSpoken nameâ€�, â€œExtensionâ€�)</p>
+<p>Users can edit the extension number and spoken name of the number by clicking on the pencil icon in the respective fields( “Spoken name”, “Extension”)</p>
 </li>
 <li>
 <p>Users can delete the Extension by clicking on the delete icon that appears by hovering the mouse on a specific row.</p>
@@ -3417,7 +3362,7 @@ These numbers will be provisioned under main BG Admin Sub-Account under Restcomm
 </div>
 </div>
 <div class="paragraph">
-<p>To add an extension number under the enterprise click on â€œAdd Extensionsâ€� button. Ideally as CSP_ADMIN, you would want to only set up the â€œPhone Numberâ€� that will act as Extension and let Spoken Name, Extension Number to reach configured Phone Number be set up by BG_ADMIN.</p>
+<p>To add an extension number under the enterprise click on “Add Extensions” button. Ideally as CSP_ADMIN, you would want to only set up the “Phone Number” that will act as Extension and let Spoken Name, Extension Number to reach configured Phone Number be set up by BG_ADMIN.</p>
 </div>
 <div class="paragraph">
 <p>You have the option to set Phone Number for extension as either Restcomm Client or Phone/PSTN Number. More details about <a href="https://cloud.restcomm.com/docs/api/clients-api.html">Restcomm Client</a> .</p>
@@ -3436,7 +3381,7 @@ These numbers will be provisioned under main BG Admin Sub-Account under Restcomm
 </div>
 </div>
 <div class="paragraph">
-<p>To navigate to the page, click on the â€œUser Managementâ€� on the top header.</p>
+<p>To navigate to the page, click on the “User Management” on the top header.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3477,7 +3422,7 @@ All the users created are Sub-Accounts under that CSP Admin Account in Restcomm
 <div class="ulist">
 <ul>
 <li>
-<p>Click on the â€œAdd Userâ€� button in the User management page.</p>
+<p>Click on the “Add User” button in the User management page.</p>
 </li>
 <li>
 <p>Enter the name of the new user.</p>
@@ -3509,13 +3454,13 @@ All the users created are Sub-Accounts under that CSP Admin Account in Restcomm
 <div class="ulist">
 <ul>
 <li>
-<p>At least one Uppercase letter(A,B,C,Dâ€¦&#8230;&#8203;)</p>
+<p>At least one Uppercase letter(A,B,C,D…&#8230;&#8203;)</p>
 </li>
 <li>
 <p>At least one Lowercase letter(a,b,c,d,&#8230;&#8203;&#8230;&#8203;.)</p>
 </li>
 <li>
-<p>At least one number(1,2,3,4,5â€¦.)</p>
+<p>At least one number(1,2,3,4,5….)</p>
 </li>
 <li>
 <p>At least one special character(!,@,#,$,%,&amp;,&#8230;&#8203;&#8230;&#8203;.)</p>
