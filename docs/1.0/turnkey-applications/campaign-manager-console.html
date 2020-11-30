@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="enterprise-persona">
+<html lang="en" class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- In order to avoid flashing of wrong brand we keep the title empty at first and then fill it dynamically -->
-    <title data-custom-title="Microsoft Teams Overview - Restcomm Docs"></title>
+    <title data-custom-title="Untitled - Restcomm Docs"></title>
     <link rel="canonical" href="
-      https://cloud.restcomm.com/docs/1.0/turnkey-applications/microsoft-teams-overview.html
+      https://cloud.restcomm.com/docs/1.0/turnkey-applications/campaign-manager-console.html
     ">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="icon" type="image/png" href=""/>
@@ -18,7 +18,7 @@
     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
       </head>
-  <body class="article" style="display: none">
+  <body class="article" >
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -33,7 +33,7 @@
   <!-- TODO: need to improve the variable used to decide displaying this nav -->
   <nav class="navbar-enterprise">
     <div class="navbar-enterprise-button-container">
-      <button class="navigation-toggle icon-custom-font-right" style="visibility: hidden;">
+      <button class="navigation-toggle icon-custom-font-right">
       </button>
       <!--
       <span class="icon-custom-font-x"><span class="icon-custom-font-back-hamburger"><span class="icon-custom-font-left"><span class="icon-custom-font-right">
@@ -55,7 +55,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="docs" data-version="1.0"  style="display: none;">
+<div class="navigation-container" data-component="docs" data-version="1.0" >
   <aside class="navigation">
     <div class="panels">
   <div class="navigation-menu is-active" data-panel="menu">
@@ -1822,167 +1822,10 @@
   <button class="navigation-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
-  <ul>
-    <li class="crumb"><a href="../index.html">docs</a></li>
-    <li class="crumb"><a href="microsoft-teams-overview.html">Microsoft Teams Overview</a></li>
-  </ul>
 </nav>
 </div>
 <article class="doc fix-anchor-links-position">
-  <h1>Microsoft Teams Overview</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_introduction">Introduction</a></li>
-<li><a href="#_prerequisite">Prerequisite</a></li>
-<li><a href="#_terminology">Terminology</a></li>
-<li><a href="#_setting_up_your_first_mapping">Setting up your First Mapping</a>
-<ul class="sectlevel2">
-<li><a href="#_setting_up_a_new_mapping_via_console">Setting up a new mapping via Console</a></li>
-</ul>
-</li>
-<li><a href="#_links_for_console_and_api_doc">Links For Console and API Doc:</a></li>
-</ul>
-</div>
-<div class="sect1">
-<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Telestax MS Teams helps Communications Providers enable their Business Customers to send and receive SMS using Microsoft Teams and to manage and monitor their usage. Business Customers can send two-way SMS.</p>
-</div>
-<div class="paragraph">
-<p>To enable Business Customers on MS Teams, below steps need to be followed.<br></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Request Access Tokens from Business Customers MS Teams Admin as explained in Doc <a href="https://usstaging.restcomm.com/docs/turnkey-applications/microsoft-teams/microsoft-teams-setup-for-enterprise.html">here</a><br></p>
-</li>
-<li>
-<p>Create Business Customer and setup tokens received from previous step<br></p>
-</li>
-<li>
-<p>Create a mapping (via the API or the user interface of the Console) within the Business Customer<br></p>
-</li>
-<li>
-<p>Start sending messages</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_prerequisite"><a class="anchor" href="#_prerequisite"></a>Prerequisite</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In order to complete the aforementioned steps, you will need:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Microsoft Teams setup for your Enterprise Customers.</p>
-</li>
-<li>
-<p>Must have followed the steps mentioned in the document <a href="https://usstaging.restcomm.com/docs/turnkey-applications/microsoft-teams/microsoft-teams-setup-for-enterprise.html">here</a></p>
-</li>
-<li>
-<p>Working knowledge of cURL and a way to make HTTP API calls (either using cURL or Postman. We recommend Postman if you are not familiar with cURL) Or you can directly use the UI Console exposed by Restcomm.</p>
-</li>
-<li>
-<p>An understanding of Restcomm API for Microsoft Teams or Console on how to add mappings.</p>
-</li>
-<li>
-<p>An activated Restcomm Cloud account.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You need to reach out to your Technical Account Manager to make sure your Account has been correctly set up for Microsoft Teams SMS enablement.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_terminology"><a class="anchor" href="#_terminology"></a>Terminology</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As part of this documentation, the following terms will be used to describe specific individuals, concepts, and organizations.</p>
-</div>
-<div class="paragraph">
-<p><strong>Communications Provider</strong>: Communications Provider generally refers to any Telestax Partner providing communications products, applications, capabilities, or services. The term can refer to operators, carriers, providers, suppliers, or any other entity that delivers communications capabilities to enterprise or business customers.</p>
-</div>
-<div class="paragraph">
-<p><strong>Business Customer</strong>: An enterprise or business customer that relies on a Communications Provider to deliver communications products, capabilities, or services to customers or end users.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setting_up_your_first_mapping"><a class="anchor" href="#_setting_up_your_first_mapping"></a>Setting up your First Mapping</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You must have a valid, working <a href="https://www.restcomm.com/sign-up/">Restcomm account</a> in order to complete this step. If you do not have one, you can <a href="https://www.restcomm.com/contact/">contact us</a>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The purpose of  Microsoft Teams mapping is to associate a phone phone number with an existing Microsoft Teams Id. For example, imagine you have a user with the Microsoft Teams id of <a href="mailto:mac@myserver.com">mac@myserver.com</a> and Restcomm number is +1-919-555-1212.</p>
-</div>
-<div class="paragraph">
-<p>Mapping will tell the Restcomm service for Microsoft Teams to send all inbound SMS messages sent to phone number (+1-919-555-1212) to Microsoft Teams Space where <a href="mailto:mac@myserver.com">mac@myserver.com</a> is a part of. Additionally, any time Joe sends an outbound SMS from Microsoft Teams account, it will be sent from a mapped phone number.</p>
-</div>
-<div class="paragraph">
-<p>You can set up your mapping in two different ways, either via the Restcomm Message Exchange Console for Microsoft Teams or via the API.</p>
-</div>
-<div class="sect2">
-<h3 id="_setting_up_a_new_mapping_via_console"><a class="anchor" href="#_setting_up_a_new_mapping_via_console"></a>Setting up a new mapping via Console</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Log in to <a href="https://vpcpoc.restcomm.com/msteamsconsole/">Restcomm Microsoft Teans Console</a> via your Restcomm cloud account.</p>
-</li>
-<li>
-<p>Create new Mapping as explained in <strong>Add Mappings</strong> section of <a href="Microsoft-Teams-Console.html#_add_mapping">Microsoft  Teams console</a> Docs</p>
-</li>
-<li>
-<p>Before creating mapping, you need to create Enterprise. This is a very important step as Microsoft Teams Bot has one to one mapping with Enterprise.</p>
-</li>
-<li>
-<p>Add Bot Details(for each enterprise) as explained in section <a href="Microsoft-Teams-Console.html#_manage_bot_details_for_business_customer">Manage Bot details</a> in Docs :Microsoft Teams console</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_links_for_console_and_api_doc"><a class="anchor" href="#_links_for_console_and_api_doc"></a>Links For Console and API Doc:</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To learn more about Microsoft Teams Message Exchange view these related product documents:</p>
-</div>
-<div class="paragraph">
-<p><a href="microsoft-teams-console.html">Getting Started with the Microsoft Teams Console</a></p>
-</div>
-<div class="paragraph">
-<p><a href="../../api/microsoft-teams/microsoft-teams-api.html">Getting Started with the Microsoft Teams API</a></p>
-</div>
-</div>
-</div>
+
 </article>
   </main>
 </div>
@@ -1991,34 +1834,22 @@ You must have a valid, working <a href="https://www.restcomm.com/sign-up/">Restc
     <div class="footer-column-container">
       <div class="footer-column">
           <h5 class="footer-column-title">Platform</h5>
-          <p><a class="footer-products-item" href="/docs/api/voice-category.html">Programmable Voice</a></p>
-          <p><a class="footer-products-item" href="/docs/api/sms-category.html">Programmable SMS</a></p>
-      </div>
+          <p><a id="footer-voice-link" href="#">Programmable Voice</a></p>
+          <p><a id="footer-sms-link" href="#">Programmable SMS</a></p>
+              </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Turnkey Applications</h5>
-        <p><a class="footer-usecase-item" id="Smart2FA" href="/docs/turnkey-applications/Smart-2FA-Overview.html">Smart 2FA</a></p>
-          <p><a class="footer-usecase-item" id="CallQueuing" href="/docs/api/call-queue-api.html">Call Queue</a></p>
-          <p><a class="footer-usecase-item" id="AutoAttendant" href="/docs/solutions/auto-attendant-overview.html">Auto Attendant</a></p>
-          <p><a class="footer-usecase-item" id="NumberMasking" href="/docs/turnkey-applications/number-masking-overview.html">Number Masking</a></p>
-          <p><a class="footer-usecase-item" id="TaskRouter" href="/docs/turnkey-applications/task-router-overview.html">Task Router</a></p>
-          <p><a class="footer-usecase-item" id="CampaignManager" href="/docs/turnkey-applications/campaign-manager-overview.html">Campaign Manager</a></p>
       </div>
       <div class="footer-column">
         <h5 class="footer-column-title">Learn</h5>
 
-          <p><a id="terms-link" class="non-sps-text sps-link" data-parm-link="terms_link" href="/docs/terms.html" data-default-link="/docs/terms.html">Terms And Conditions</a></p>
-      </div>
+          <p><a id="terms-link" href="#">Terms and Conditions</a></p>
+              </div>
       <div class="footer-column">
     <h5 class="footer-column-title">About</h5>
         <p><a class="sps-text sps-link" data-parm-text="company_name" data-parm-link="company_link" href="https://www.telestax.com/about/" data-default-text="About Us" data-default-link="#">ABOUT</a></p>
-  <p><a class="sps-text sps-link" data-parm-text="Contact Us" data-parm-link="contact_link" href="https://www.telestax.com/contact/" data-default-text="Contact Us" data-default-link="#">CONTACT US</a></p>
       </div>
     </div>
-   <div class="footer-bottom-container">
-    <div class="footer-copyright">
-     <p class="footer-copyright-paragraph"><a class="sps-text" data-parm-text="copyright_text" data-default-text="© 2020, All rights reserved.">© 2020, All rights reserved.</a></p>
-    </div>
-   </div>
     <!---->
   </div>
 </footer>
